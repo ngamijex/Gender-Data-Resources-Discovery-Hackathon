@@ -182,92 +182,122 @@ server <- function(input, output, session) {
       local({
         id <- sid
         shiny::observeEvent(input[[paste0("detail_", id)]], {
-          s <- catalog |> dplyr::filter(study_id == id)
-          if (nrow(s) == 0) return()
-          s <- s[1, ]
 
-          study_res <- resources |> dplyr::filter(study_id == id)
+          tryCatch({
 
-          res_block <- if (nrow(study_res) > 0) {
-            shiny::tagList(
-              shiny::div(class = "res-list-title",
-                shiny::tags$i(class = "fas fa-paperclip fa-xs"),
-                paste0("\u00a0", nrow(study_res),
-                       " Available Resource", if (nrow(study_res) > 1) "s")
-              ),
-              lapply(seq_len(min(nrow(study_res), 18)), function(ri) {
-                r <- study_res[ri, ]
-                shiny::div(class = "res-row",
-                  shiny::tags$span(class = "res-type-badge", toupper(r$type)),
-                  shiny::tags$a(href = r$url, target = "_blank", r$name)
-                )
-              })
-            )
-          } else {
-            shiny::tags$p(class = "no-resources-note",
-              "No direct download resources listed for this study.")
-          }
+            s <- catalog |> dplyr::filter(study_id == id)
+            if (nrow(s) == 0) return()
+            s <- s[1, ]
 
-          shiny::showModal(shiny::modalDialog(
-            title = s$title,
-            shiny::div(class = "det-grid3",
-              shiny::div(
-                shiny::div(class = "det-field__lbl", "Year"),
-                shiny::div(class = "det-field__val",
-                           tidyr::replace_na(as.character(s$year), "Unknown"))
-              ),
-              shiny::div(
-                shiny::div(class = "det-field__lbl", "Survey Type"),
-                shiny::div(class = "det-field__val",
-                           tidyr::replace_na(s$study_type, tidyr::replace_na(s$collection, "\u2014")))
-              ),
-              shiny::div(
-                shiny::div(class = "det-field__lbl", "Gender Score"),
-                shiny::div(class = "det-field__val",
-                  paste0(s$gender_score, " / 10"),
-                  gender_bar_html(s$gender_score)
-                )
-              )
-            ),
-            shiny::div(class = "det-grid3",
-              shiny::div(
-                shiny::div(class = "det-field__lbl", "Organization"),
-                shiny::div(class = "det-field__val",
-                  stringr::str_trunc(tidyr::replace_na(s$organization, "NISR"), 60)
-                )
-              ),
-              shiny::div(
-                shiny::div(class = "det-field__lbl", "Data Access"),
-                shiny::div(class = "det-field__val", s$access_clean)
-              ),
-              shiny::div(
-                shiny::div(class = "det-field__lbl", "Quality"),
-                shiny::div(class = "det-field__val", quality_pill(s$quality_status))
-              )
-            ),
-            shiny::div(class = "det-field",
-              shiny::div(class = "det-field__lbl", "Geographic Coverage"),
-              shiny::div(class = "det-field__val",
-                         tidyr::replace_na(s$geographic_coverage, "National coverage"))
-            ),
-            shiny::div(class = "det-field det-field--abstract",
-              shiny::div(class = "det-field__lbl", "Abstract"),
-              shiny::div(class = "det-abstract",
-                tidyr::replace_na(s$abstract, "No abstract available for this study."))
-            ),
-            res_block,
-            footer = shiny::tagList(
-              if (!is.na(s$url) && nchar(s$url) > 4)
-                shiny::tags$a(href = s$url, target = "_blank",
-                  class = "btn btn--primary",
-                  shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
-                  "\u00a0 Open in NISR Catalog"
+            # Safe scalar extractor — always returns a plain character string
+            safe <- function(x, fallback = "\u2014") {
+              v <- tryCatch(as.character(x[[1]]), error = function(e) NA_character_)
+              if (is.null(v) || length(v) == 0 || is.na(v)) fallback else v
+            }
+
+            s_year    <- safe(s$year,               "Unknown")
+            s_type    <- safe(s$study_type,         safe(s$collection, "\u2014"))
+            s_score   <- max(0L, min(10L, as.integer(safe(s$gender_score, "0"))))
+            s_org     <- stringr::str_trunc(safe(s$organization, "NISR"), 60)
+            s_access  <- safe(s$access_clean,       "Other")
+            s_quality <- safe(s$quality_status,     "Unknown")
+            s_geo     <- safe(s$geographic_coverage,"National coverage")
+            s_abs     <- safe(s$abstract,           "No abstract available for this study.")
+            s_title   <- safe(s$title,              "Untitled Study")
+            s_url     <- safe(s$url,                "")
+
+            study_res <- resources |> dplyr::filter(study_id == id)
+
+            res_block <- if (nrow(study_res) > 0) {
+              shiny::tagList(
+                shiny::div(class = "res-list-title",
+                  shiny::tags$i(class = "fas fa-paperclip fa-xs"),
+                  paste0("\u00a0", nrow(study_res),
+                         " Available Resource", if (nrow(study_res) > 1) "s")
                 ),
-              shiny::modalButton("Close")
-            ),
-            easyClose = TRUE,
-            size      = "l"
-          ))
+                lapply(seq_len(min(nrow(study_res), 18)), function(ri) {
+                  r      <- study_res[ri, ]
+                  r_type <- toupper(safe(r$type, "FILE"))
+                  r_name <- safe(r$name, "Resource")
+                  r_url  <- safe(r$url,  "")
+                  shiny::div(class = "res-row",
+                    shiny::tags$span(class = "res-type-badge", r_type),
+                    if (nchar(r_url) > 4)
+                      shiny::tags$a(href = r_url, target = "_blank", r_name)
+                    else
+                      shiny::tags$span(r_name)
+                  )
+                })
+              )
+            } else {
+              shiny::tags$p(class = "no-resources-note",
+                "No direct download resources listed for this study.")
+            }
+
+            shiny::showModal(shiny::modalDialog(
+              title = s_title,
+              shiny::div(class = "det-grid3",
+                shiny::div(
+                  shiny::div(class = "det-field__lbl", "Year"),
+                  shiny::div(class = "det-field__val", s_year)
+                ),
+                shiny::div(
+                  shiny::div(class = "det-field__lbl", "Survey Type"),
+                  shiny::div(class = "det-field__val", s_type)
+                ),
+                shiny::div(
+                  shiny::div(class = "det-field__lbl", "Gender Score"),
+                  shiny::div(class = "det-field__val",
+                    paste0(s_score, " / 10"),
+                    gender_bar_html(s_score)
+                  )
+                )
+              ),
+              shiny::div(class = "det-grid3",
+                shiny::div(
+                  shiny::div(class = "det-field__lbl", "Organization"),
+                  shiny::div(class = "det-field__val", s_org)
+                ),
+                shiny::div(
+                  shiny::div(class = "det-field__lbl", "Data Access"),
+                  shiny::div(class = "det-field__val", s_access)
+                ),
+                shiny::div(
+                  shiny::div(class = "det-field__lbl", "Quality"),
+                  shiny::div(class = "det-field__val", quality_pill(s_quality))
+                )
+              ),
+              shiny::div(class = "det-field",
+                shiny::div(class = "det-field__lbl", "Geographic Coverage"),
+                shiny::div(class = "det-field__val", s_geo)
+              ),
+              shiny::div(class = "det-field det-field--abstract",
+                shiny::div(class = "det-field__lbl", "Abstract"),
+                shiny::div(class = "det-abstract", s_abs)
+              ),
+              res_block,
+              footer = shiny::tagList(
+                if (nchar(s_url) > 4)
+                  shiny::tags$a(href = s_url, target = "_blank",
+                    class = "btn btn--primary",
+                    shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
+                    "\u00a0 Open in NISR Catalog"
+                  ),
+                shiny::modalButton("Close")
+              ),
+              easyClose = TRUE,
+              size      = "l"
+            ))
+
+          }, error = function(e) {
+            shiny::showModal(shiny::modalDialog(
+              title = "Could not load study details",
+              shiny::tags$p(paste("Error:", conditionMessage(e))),
+              footer = shiny::modalButton("Close"),
+              easyClose = TRUE
+            ))
+          })
+
         }, ignoreInit = TRUE)
       })
     })
