@@ -10,8 +10,17 @@ server <- function(input, output, session) {
   shiny::observeEvent(input$btn_go_dash,
     shiny::updateNavbarPage(session, "main_nav", selected = "Dashboard"))
 
+  # ── Committed query — updated only when Search is explicitly triggered ───────
+  committed_query <- shiny::reactiveVal("")
+
+  # Search button commits the query
+  shiny::observeEvent(input$btn_do_search, {
+    committed_query(stringr::str_trim(tidyr::replace_na(input$srch_text, "")))
+  })
+
   # ── Reset all discovery filters ────────────────────────────────────────────
   shiny::observeEvent(input$btn_reset, {
+    committed_query("")
     shiny::updateTextInput(session, "srch_text", value = "")
     shiny::updateCheckboxGroupInput(session, "flt_collection",
       selected = c("DHS","EICV","Census","LFS","Agriculture","FinScope",
@@ -27,83 +36,35 @@ server <- function(input, output, session) {
     shiny::updateSelectInput(session, "sort_by", selected = "year_desc")
   })
 
+  # ── Quick topic tags — fill the bar AND commit immediately ─────────────────
+  shiny::observeEvent(input$qt_dhs, {
+    shiny::updateTextInput(session, "srch_text", value = "DHS")
+    committed_query("DHS")
+  })
+  shiny::observeEvent(input$qt_maternal, {
+    shiny::updateTextInput(session, "srch_text", value = "maternal health")
+    committed_query("maternal health")
+  })
+  shiny::observeEvent(input$qt_eicv, {
+    shiny::updateTextInput(session, "srch_text", value = "EICV household")
+    committed_query("EICV household")
+  })
+  shiny::observeEvent(input$qt_labor, {
+    shiny::updateTextInput(session, "srch_text", value = "labor force")
+    committed_query("labor force")
+  })
+  shiny::observeEvent(input$qt_census, {
+    shiny::updateTextInput(session, "srch_text", value = "population census")
+    committed_query("population census")
+  })
+  shiny::observeEvent(input$qt_gender, {
+    shiny::updateTextInput(session, "srch_text", value = "gender violence women")
+    committed_query("gender violence women")
+  })
+
   # ══════════════════════════════════════════════════════════════════════════
-  # HOME
+  # HOME — static content only; no server outputs needed for PMV section
   # ══════════════════════════════════════════════════════════════════════════
-
-  output$kpi_strip <- shiny::renderUI({
-    n_total  <- nrow(catalog)
-    yr_min   <- min(catalog$year, na.rm = TRUE)
-    yr_max   <- max(catalog$year, na.rm = TRUE)
-    n_res    <- nrow(resources)
-    n_high   <- sum(catalog$gender_score >= 6, na.rm = TRUE)
-    n_public <- sum(catalog$access_clean == "Public", na.rm = TRUE)
-
-    shiny::div(class = "kpi-strip",
-      shiny::div(class = "kpi-item",
-        shiny::div(class = "kpi-item__val", n_total),
-        shiny::div(class = "kpi-item__lbl", "National Surveys")),
-      shiny::div(class = "kpi-item",
-        shiny::div(class = "kpi-item__val", paste0(yr_min, "\u2013", yr_max)),
-        shiny::div(class = "kpi-item__lbl", "Years Covered")),
-      shiny::div(class = "kpi-item",
-        shiny::div(class = "kpi-item__val", n_res),
-        shiny::div(class = "kpi-item__lbl", "Downloadable Files")),
-      shiny::div(class = "kpi-item",
-        shiny::div(class = "kpi-item__val", n_high),
-        shiny::div(class = "kpi-item__lbl", "High Gender Relevance")),
-      shiny::div(class = "kpi-item",
-        shiny::div(class = "kpi-item__val", n_public),
-        shiny::div(class = "kpi-item__lbl", "Public Access Studies"))
-    )
-  })
-
-  output$featured_studies <- shiny::renderUI({
-    top3 <- catalog |>
-      dplyr::arrange(dplyr::desc(gender_score), dplyr::desc(year)) |>
-      head(3)
-
-    cols <- lapply(seq_len(nrow(top3)), function(i) {
-      s   <- top3[i, ]
-      yr  <- if (!is.na(s$year)) as.character(s$year) else "\u2014"
-      exc <- s$abstract_card
-      url <- if (!is.na(s$url) && nchar(s$url) > 4) s$url else NA_character_
-
-      shiny::column(4,
-        shiny::div(class = "featured-card",
-          shiny::div(class = "featured-card__year", yr),
-          shiny::div(class = "featured-card__title", s$title),
-          shiny::div(class = "featured-card__excerpt", exc),
-          shiny::div(class = "featured-card__footer",
-            collection_tag(s$collection),
-            shiny::tags$span(class = "qpill qpill--ok",
-                             paste0("Gender: ", s$gender_score, "/10")),
-            if (!is.na(url))
-              shiny::tags$a(
-                href = url, target = "_blank", class = "featured-card__link",
-                "View Source \u2192"
-              )
-          )
-        )
-      )
-    })
-    shiny::fluidRow(cols)
-  })
-
-  output$home_collection_chart <- plotly::renderPlotly({
-    df <- catalog |>
-      dplyr::count(collection, name = "n") |>
-      dplyr::arrange(dplyr::desc(n)) |>
-      dplyr::mutate(collection = factor(collection, levels = rev(collection)))
-
-    plotly::plot_ly(df, x = ~n, y = ~collection, type = "bar", orientation = "h",
-            marker = list(color = CLR["primary"],
-                          line  = list(color = CLR["primary_dark"], width = .8)),
-            text = ~n, textposition = "outside",
-            hovertemplate = "%{y}: %{x} studies<extra></extra>") |>
-      gddp_theme(xlab = "Number of Studies") |>
-      plotly::layout(yaxis = list(title = ""), margin = list(l = 130, r = 40))
-  })
 
   # ══════════════════════════════════════════════════════════════════════════
   # DATA DISCOVERY
@@ -112,7 +73,7 @@ server <- function(input, output, session) {
   filtered_catalog <- shiny::reactive({
     df <- catalog
 
-    q <- stringr::str_trim(tidyr::replace_na(input$srch_text, ""))
+    q <- committed_query()
     if (nchar(q) > 0) {
       ql <- tolower(q)
       df <- df |> dplyr::filter(
@@ -150,33 +111,69 @@ server <- function(input, output, session) {
     df
   })
 
-  output$results_hdr <- shiny::renderUI({
-    n <- nrow(filtered_catalog())
-    shiny::div(class = "results-hdr",
-      shiny::div(class = "results-count",
-        shiny::tags$span(n), paste0(" of ", nrow(catalog), " studies")
+  # ── Search engine meta bar ─────────────────────────────────────────────────
+  output$sep_meta_bar <- shiny::renderUI({
+    q <- committed_query()
+    if (nchar(q) == 0) return(NULL)
+
+    n   <- nrow(filtered_catalog())
+    tot <- nrow(catalog)
+
+    shiny::div(class = "sep-meta-bar",
+      shiny::div(class = "sep-meta-left",
+        shiny::tags$span(class = "sep-meta-count",
+          paste0("About ", n, " result", if (n != 1) "s")
+        ),
+        shiny::tags$span(class = "sep-meta-query",
+          paste0(' for \u201c', q, '\u201d')
+        )
       ),
-      shiny::div(class = "results-meta",
-        shiny::tags$i(class = "fas fa-filter fa-xs"), " Filtered results"
+      shiny::div(class = "sep-meta-right",
+        shiny::tags$span(class = "sep-meta-total",
+          paste0(tot, " surveys in catalog")
+        )
       )
     )
   })
 
-  output$disc_cards <- shiny::renderUI({
-    df <- filtered_catalog()
+  # ── Search result items ────────────────────────────────────────────────────
+  output$sep_result_items <- shiny::renderUI({
+    q  <- committed_query()
 
-    if (nrow(df) == 0) {
-      return(
-        shiny::div(class = "no-results",
-          shiny::tags$i(class = "fas fa-search no-results__icon"),
-          shiny::tags$p("No studies match the current filters."),
-          shiny::tags$small("Try broadening your search or resetting the filters.")
+    # ── Landing state (no query yet) ────────────────────────────────────────
+    if (nchar(q) == 0) {
+      return(shiny::div(class = "sep-landing-body",
+        shiny::div(class = "sep-landing-hint",
+          shiny::tags$i(class = "fas fa-lightbulb"),
+          " Type any keyword above \u2014 survey title, topic, year, or series name \u2014 then click Search."
         )
-      )
+      ))
     }
 
-    cards <- lapply(seq_len(min(nrow(df), 42)), function(i) build_study_card(df[i, ]))
-    shiny::div(class = "study-grid", cards)
+    df <- filtered_catalog()
+
+    # ── No results state ────────────────────────────────────────────────────
+    if (nrow(df) == 0) {
+      return(shiny::div(class = "sep-no-results",
+        shiny::tags$i(class = "fas fa-search-minus sep-no-results__icon"),
+        shiny::tags$h3(class = "sep-no-results__title",
+          "No results for ", shiny::tags$em(q)
+        ),
+        shiny::tags$p(class = "sep-no-results__sub",
+          "Try different keywords, or use the Advanced filters to broaden your search."
+        ),
+        shiny::div(class = "sep-no-results__tips",
+          shiny::tags$span("Suggestions: "),
+          shiny::tags$span(class = "sep-tip", "Check spelling"),
+          shiny::tags$span(class = "sep-tip", "Use broader terms"),
+          shiny::tags$span(class = "sep-tip", "Try a series name: DHS, EICV, Census")
+        )
+      ))
+    }
+
+    # ── Results list ────────────────────────────────────────────────────────
+    items <- lapply(seq_len(min(nrow(df), 50)), function(i) build_search_result(df[i, ], q))
+    shiny::div(class = "sep-result-list", items)
   })
 
   # Study detail modals — registered for every study_id at startup

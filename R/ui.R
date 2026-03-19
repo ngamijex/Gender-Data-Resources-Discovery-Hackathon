@@ -16,6 +16,99 @@ ui <- shiny::tagList(
         var femin = $('<div class=\"navbar-femin\"><img src=\"Femin.png\" alt=\"Feminism in Action\"/></div>');
         $('.navbar-collapse').append(femin);
       });
+    ")),
+
+    # Infinite typewriter — 4 phrases cycling one by one
+    shiny::tags$script(shiny::HTML("
+      $(document).ready(function() {
+        var el = document.getElementById('hero-typing');
+        if (!el) return;
+
+        // Each phrase is an array of segments { text, tag }
+        // tag: null = plain text, 'em' = italic red highlight
+        var phrases = [
+          [
+            { text: 'Discover Rwanda\u2019s ',  tag: null },
+            { text: 'Gender Data',              tag: 'em'  },
+            { text: ' with less friction.',     tag: null  }
+          ],
+          [
+            { text: 'Empowering ',              tag: null },
+            { text: 'CSOs & Advocates',         tag: 'em'  },
+            { text: ' with evidence-based tools.', tag: null }
+          ],
+          [
+            { text: 'Turning ',                 tag: null },
+            { text: 'National Surveys',         tag: 'em'  },
+            { text: ' into actionable insights.', tag: null }
+          ],
+          [
+            { text: 'Closing the gap between ', tag: null },
+            { text: 'data existence',           tag: 'em'  },
+            { text: ' and data use.',           tag: null  }
+          ]
+        ];
+
+        // Flatten a phrase into character array
+        function flatten(phrase) {
+          var chars = [];
+          phrase.forEach(function(seg) {
+            for (var i = 0; i < seg.text.length; i++) {
+              chars.push({
+                ch     : seg.text[i],
+                tag    : seg.tag,
+                isFirst: i === 0,
+                isLast : i === seg.text.length - 1
+              });
+            }
+          });
+          return chars;
+        }
+
+        function buildHTML(chars, count) {
+          var html = '';
+          for (var i = 0; i < count && i < chars.length; i++) {
+            var c = chars[i];
+            if (c.tag && c.isFirst) html += '<' + c.tag + '>';
+            html += c.ch === '&' ? '&amp;' : c.ch;
+            if (c.tag && c.isLast)  html += '</' + c.tag + '>';
+          }
+          return html;
+        }
+
+        var phraseIdx  = 0;
+        var charIdx    = 0;
+        var isDeleting = false;
+        var chars      = flatten(phrases[0]);
+
+        function tick() {
+          if (!isDeleting) {
+            charIdx++;
+            if (charIdx > chars.length) {
+              // Fully typed — pause then start deleting
+              isDeleting = true;
+              setTimeout(tick, 2000);
+              return;
+            }
+          } else {
+            charIdx--;
+            if (charIdx < 0) {
+              // Fully deleted — move to next phrase
+              isDeleting = false;
+              phraseIdx  = (phraseIdx + 1) % phrases.length;
+              chars      = flatten(phrases[phraseIdx]);
+              charIdx    = 0;
+              setTimeout(tick, 350);
+              return;
+            }
+          }
+          el.innerHTML = buildHTML(chars, charIdx) + '<span class=\"typing-cursor\"></span>';
+          setTimeout(tick, isDeleting ? 20 : 55);
+        }
+
+        el.innerHTML = '';
+        tick();
+      });
     "))
   ),
 
@@ -37,10 +130,10 @@ ui <- shiny::tagList(
       shiny::div(class = "hero",
         shiny::div(class = "hero__eyebrow",
           shiny::tags$i(class = "fas fa-globe-africa fa-xs"),
-          "\u00a0 Rwanda \u00b7 NISR Microdata Catalog \u00b7 GIZ Gender Data Challenge"
+          "\u00a0 Rwanda \u00b7 Feminism in Action for Structural Transformation"
         ),
-        shiny::tags$h1(class = "hero__title",
-          "Discover Rwanda\u2019s", shiny::tags$br(),
+        shiny::tags$h1(class = "hero__title", id = "hero-typing",
+          "Discover Rwanda\u2019s",
           shiny::tags$em("Gender Data"), " with less friction."
         ),
         shiny::tags$p(class = "hero__desc",
@@ -59,210 +152,344 @@ ui <- shiny::tagList(
         )
       ),
 
-      # ── KPI strip (server-rendered) ────────────────────────────────────────
-      shiny::uiOutput("kpi_strip"),
+      # ── Problem / Mission / Vision — staggered services layout ───────────
+      shiny::div(class = "home-pmv",
 
-      # ── Featured studies ───────────────────────────────────────────────────
-      shiny::div(class = "home-sec",
-        shiny::div(class = "sec-eyebrow",
-          shiny::tags$i(class = "fas fa-star fa-xs"),
-          "\u00a0 Featured Studies"
-        ),
-        shiny::tags$h2(class = "sec-title",
-          "Highest Gender Relevance in the Catalog"
-        ),
-        shiny::uiOutput("featured_studies")
-      ),
-
-      # ── How it works + collection chart ───────────────────────────────────
-      shiny::div(class = "home-sec home-sec--alt",
-        shiny::fluidRow(
-          shiny::column(5,
+        # ── Top header row: title left, intro right
+        shiny::div(class = "pmv-header",
+          shiny::div(class = "pmv-header__left",
             shiny::div(class = "sec-eyebrow",
-              shiny::tags$i(class = "fas fa-compass fa-xs"),
-              "\u00a0 Platform Guide"
+              shiny::tags$i(class = "fas fa-info-circle fa-xs"),
+              "\u00a0 About GDDP"
             ),
-            shiny::tags$h2(class = "sec-title", "How the Platform Works"),
-            shiny::div(class = "how-step",
-              shiny::div(class = "how-step__num", "1"),
-              shiny::div(class = "how-step__body",
-                shiny::tags$h4("Search the Catalog"),
-                shiny::tags$p("Use the Data Discovery tab to search 73 national surveys by keyword, year, survey series, quality status, and gender relevance score.")
-              )
-            ),
-            shiny::div(class = "how-step",
-              shiny::div(class = "how-step__num", "2"),
-              shiny::div(class = "how-step__body",
-                shiny::tags$h4("Review Metadata"),
-                shiny::tags$p("Each card shows the study\u2019s abstract, coverage, quality flags, gender relevance score, and available downloadable files.")
-              )
-            ),
-            shiny::div(class = "how-step",
-              shiny::div(class = "how-step__num", "3"),
-              shiny::div(class = "how-step__body",
-                shiny::tags$h4("Access the Source"),
-                shiny::tags$p("Link directly to NISR\u2019s microdata catalog to download questionnaires, reports, and raw data files.")
-              )
-            ),
-            shiny::div(class = "how-step",
-              shiny::div(class = "how-step__num", "4"),
-              shiny::div(class = "how-step__body",
-                shiny::tags$h4("Visualize Trends"),
-                shiny::tags$p("The Dashboard surfaces Rwanda gender indicator trends from DHS, EICV, RLFS, and Census rounds.")
-              )
+            shiny::tags$h2(class = "pmv-main-title",
+              "We built GDDP", shiny::tags$br(), "to close the gap."
             )
           ),
-          shiny::column(7,
-            shiny::div(class = "home-chart-panel",
-              shiny::div(class = "sec-eyebrow",
-                shiny::tags$i(class = "fas fa-layer-group fa-xs"),
-                "\u00a0 Catalog Coverage"
-              ),
-              shiny::tags$h2(class = "sec-title", "What\u2019s in the Catalog"),
-              plotly::plotlyOutput("home_collection_chart", height = "370px")
+          shiny::div(class = "pmv-header__right",
+            shiny::tags$p(class = "pmv-intro-text",
+              "Across Rwanda, critical gender-focused data is produced every year through national surveys ",
+              "\u2014 yet it remains invisible to those who need it most. CSOs, policy advocates, ",
+              "journalists, and researchers working under the FAST program (Feminism in Action for ",
+              "Structural Transformation) consistently face the same barriers: scattered repositories, ",
+              "PDF-heavy outputs, inaccessible disaggregated data, and advocacy cycles that move faster ",
+              "than current discovery workflows allow. GDDP exists to change that."
             )
+          )
+        ),
+
+        # ── Three staggered items
+        shiny::div(class = "pmv-items",
+
+          # Item 01 — The Problem
+          shiny::div(class = "pmv-item",
+            shiny::div(class = "pmv-item__num", "01"),
+            shiny::div(class = "pmv-item__title", "The Problem"),
+            shiny::tags$p(class = "pmv-item__text",
+              "Gender data exists but it\u2019s scattered, hard to find, and difficult to navigate. ",
+              "No unified discovery interface. No quality signal. No way to move fast enough for ",
+              "evidence-based advocacy."
+            ),
+            shiny::tags$img(src = "problem.png", class = "pmv-item__img", alt = "The Problem")
+          ),
+
+          # Item 02 — Our Mission (offset down)
+          shiny::div(class = "pmv-item pmv-item--offset",
+            shiny::div(class = "pmv-item__num", "02"),
+            shiny::div(class = "pmv-item__title", "Our Mission"),
+            shiny::tags$p(class = "pmv-item__text",
+              "Make Rwanda\u2019s gender data discoverable, interpretable, and actionable. ",
+              "Connect civil society and policy advocates directly to 73 national surveys, ",
+              "enriched with quality scores and gender relevance ratings."
+            ),
+            shiny::tags$img(src = "mission.png", class = "pmv-item__img", alt = "Our Mission")
+          ),
+
+          # Item 03 — Our Vision
+          shiny::div(class = "pmv-item",
+            shiny::div(class = "pmv-item__num", "03"),
+            shiny::div(class = "pmv-item__title", "Our Vision"),
+            shiny::tags$p(class = "pmv-item__text",
+              "A Rwanda where every gender advocate finds the data they need in under a minute, ",
+              "understands its quality at a glance, and uses it immediately to drive structural ",
+              "transformation."
+            ),
+            shiny::tags$img(src = "vision.png", class = "pmv-item__img", alt = "Our Vision")
           )
         )
       ),
 
       # ── Site footer ────────────────────────────────────────────────────────
       shiny::div(class = "site-footer",
-        shiny::fluidRow(
-          shiny::column(4,
-            shiny::div(class = "site-footer__brand", "GDDP"),
-            shiny::tags$p(
-              "Gender Data Discovery Platform \u2014 built for the GIZ Gender Data Challenge, March 2026."
+
+        # Glass overlay panel
+        shiny::div(class = "footer-glass",
+
+          # Top row — logos
+          shiny::div(class = "footer-logos",
+            shiny::tags$img(src = "logo.png",  class = "footer-logo", alt = "GIZ Logo"),
+            shiny::div(class = "footer-divider-v"),
+            shiny::tags$img(src = "Femin.png", class = "footer-femin", alt = "Feminism in Action")
+          ),
+
+          shiny::tags$hr(class = "footer-hr"),
+
+          # Middle row — event + team
+          shiny::div(class = "footer-body",
+
+            # Event block
+            shiny::div(class = "footer-block",
+              shiny::div(class = "footer-block__eyebrow", "The Event"),
+              shiny::tags$h3(class = "footer-block__title",
+                "GIZ Gender Data Resources", shiny::tags$br(),
+                "Discovery Hackathon 2026"
+              ),
+              shiny::tags$p(class = "footer-block__text",
+                "19\u201320 March 2026 \u00b7 GIZ Digital Technical Center, Kigali"
+              ),
+              shiny::tags$p(class = "footer-block__text",
+                "A two-day innovation sprint dedicated to building digital tools that make ",
+                "Rwanda\u2019s gender data more visible, accessible, and actionable for civil society."
+              )
             ),
-            shiny::tags$p(
-              shiny::tags$a(
-                href   = "https://microdata.statistics.gov.rw",
-                target = "_blank",
-                "NISR Microdata Catalog \u2192"
+
+            # Divider
+            shiny::div(class = "footer-divider-v footer-divider-v--tall"),
+
+            # Team block
+            shiny::div(class = "footer-block",
+              shiny::div(class = "footer-block__eyebrow", "The Team"),
+              shiny::tags$h3(class = "footer-block__title", "Built by"),
+              shiny::div(class = "footer-team",
+                shiny::div(class = "footer-member",
+                  shiny::div(class = "footer-member__role", "Data Science \u00b7 Team Lead"),
+                  shiny::div(class = "footer-member__name", "Ngamije Didier")
+                ),
+                shiny::div(class = "footer-member",
+                  shiny::div(class = "footer-member__role", "UI / UX Designer"),
+                  shiny::div(class = "footer-member__name", "Dan Munyaneza")
+                ),
+                shiny::div(class = "footer-member",
+                  shiny::div(class = "footer-member__role", "Front-End Developer"),
+                  shiny::div(class = "footer-member__name", "Gatete Bugingo Jimmy")
+                ),
+                shiny::div(class = "footer-member",
+                  shiny::div(class = "footer-member__role", "Back-End Developer"),
+                  shiny::div(class = "footer-member__name", "Ishimwe Sibomana Christian")
+                )
               )
             )
           ),
-          shiny::column(4,
-            shiny::tags$p(class = "footer-heading", "The Team"),
-            shiny::tags$p("Dan Munyaneza \u2014 UI/UX Designer"),
-            shiny::tags$p("Ngamije Didier \u2014 Data Science (Lead)"),
-            shiny::tags$p("Gatete Bugingo Jimmy \u2014 Front-End Developer"),
-            shiny::tags$p("Ishimwe Sibomana Christian \u2014 Back-End Developer")
-          ),
-          shiny::column(4,
-            shiny::tags$p(class = "footer-heading", "Data"),
-            shiny::tags$p("73 national surveys \u00b7 1978\u20132024"),
-            shiny::tags$p("Source: National Institute of Statistics of Rwanda (NISR)"),
-            shiny::tags$p(class = "footer-note",
-              "Prototype uses the NISR baseline CSV inventory. All links point to official NISR sources."
+
+          shiny::tags$hr(class = "footer-hr"),
+
+          # Bottom bar
+          shiny::div(class = "footer-bottom",
+            shiny::tags$span(
+              "\u00a9 2026 GDDP \u00b7 Gender Data Discovery Platform \u00b7 ",
+              "Built for the GIZ FAST Program"
+            ),
+            shiny::tags$a(
+              href = "https://microdata.statistics.gov.rw",
+              target = "_blank",
+              class = "footer-bottom__link",
+              "NISR Microdata Catalog \u2197"
             )
           )
-        )
-      )
+
+        ) # end footer-glass
+      ) # end site-footer
     ),
 
     # ══════════════════════════════════════════════════════════════════════════
-    # TAB 2 — DATA DISCOVERY
+    # TAB 2 — DATA DISCOVERY  (Google-search engine style)
     # ══════════════════════════════════════════════════════════════════════════
     shiny::tabPanel("Data Discovery",
-      shiny::div(class = "disc-layout",
+      shiny::div(class = "sep-page", id = "sep-page",
 
-        # ── Sidebar filters ─────────────────────────────────────────────────
-        shiny::div(class = "disc-sidebar",
+        # ── JS: active-state toggle, advanced panel, clear, quick topics ──
+        shiny::tags$script(shiny::HTML("
+          $(document).ready(function() {
 
-          shiny::div(class = "sb-section",
-            shiny::div(class = "sb-title",
-              shiny::tags$i(class = "fas fa-search fa-xs"), "\u00a0 Keyword Search"
-            ),
-            shiny::textInput("srch_text", NULL,
-              placeholder = "Title, abstract, keywords\u2026",
-              width = "100%"
+            // Toggle advanced filters panel
+            $(document).on('click', '#btn_adv_toggle', function(e) {
+              e.preventDefault();
+              $('#sep-adv-panel').toggleClass('sep-adv-panel--open');
+            });
+
+            // Search button — activate layout + show filters
+            $(document).on('click', '#btn_do_search', function() {
+              if (($('#srch_text').val() || '').trim().length > 0) {
+                $('#sep-page').addClass('sep-page--active sep-page--searched');
+              }
+            });
+
+            // Quick topic tags — activate layout + show filters
+            $(document).on('click', '.sep-qtag', function() {
+              $('#sep-page').addClass('sep-page--active sep-page--searched');
+            });
+
+            // Clear search — restore landing layout
+            $(document).on('click', '#btn_clear_search', function(e) {
+              e.preventDefault();
+              $('#sep-page').removeClass('sep-page--active sep-page--searched');
+              Shiny.setInputValue('srch_text', '', {priority: 'event'});
+              setTimeout(function() { $('#srch_text').val('').trigger('input'); }, 10);
+            });
+
+            // Reset button — restore landing layout
+            $(document).on('click', '#btn_reset', function() {
+              $('#sep-page').removeClass('sep-page--active sep-page--searched');
+            });
+
+            // Enter key submits the search
+            $(document).on('keydown', '#srch_text', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                $('#btn_do_search').click();
+              }
+            });
+          });
+        ")),
+
+        # ── Search section (hero → compact bar on activation) ─────────────
+        shiny::div(class = "sep-search-section",
+
+          # Brand: logo + subtitle (hidden in compact mode)
+          shiny::div(class = "sep-brand",
+            shiny::tags$img(src = "logo.png", class = "sep-brand__logo", alt = "GDDP"),
+            shiny::div(class = "sep-brand__text",
+              shiny::tags$h2(class = "sep-brand__title", "Rwanda Gender Data Discovery"),
+              shiny::tags$p(class = "sep-brand__sub",
+                "Search 73 NISR national surveys \u00b7 1978\u20132024")
             )
           ),
 
-          shiny::div(class = "sb-section",
-            shiny::div(class = "sb-title",
-              shiny::tags$i(class = "fas fa-layer-group fa-xs"), "\u00a0 Survey Series"
-            ),
-            shiny::checkboxGroupInput("flt_collection", NULL,
-              choices  = c("DHS","EICV","Census","LFS","Agriculture",
-                           "FinScope","Food Security","Business Census",
-                           "Child Labour","Social Protection","Enterprise",
-                           "Manpower","Health Services","Governance","Other"),
-              selected = c("DHS","EICV","Census","LFS","Agriculture",
-                           "FinScope","Food Security","Business Census",
-                           "Child Labour","Social Protection","Enterprise",
-                           "Manpower","Health Services","Governance","Other")
-            )
-          ),
-
-          shiny::div(class = "sb-section",
-            shiny::div(class = "sb-title",
-              shiny::tags$i(class = "fas fa-calendar-alt fa-xs"), "\u00a0 Year Range"
-            ),
-            shiny::sliderInput("flt_year", NULL,
-              min = 1978, max = 2024,
-              value = c(1978, 2024), sep = "", width = "100%"
-            )
-          ),
-
-          shiny::div(class = "sb-section",
-            shiny::div(class = "sb-title",
-              shiny::tags$i(class = "fas fa-venus fa-xs"), "\u00a0 Gender Relevance Score"
-            ),
-            shiny::sliderInput("flt_gender", NULL,
-              min = 0, max = 10, value = c(0, 10), step = 1, width = "100%"
-            )
-          ),
-
-          shiny::div(class = "sb-section",
-            shiny::div(class = "sb-title",
-              shiny::tags$i(class = "fas fa-check-circle fa-xs"), "\u00a0 Data Quality"
-            ),
-            shiny::checkboxGroupInput("flt_quality", NULL,
-              choices  = c("Complete","Minor Issues","Incomplete"),
-              selected = c("Complete","Minor Issues","Incomplete")
-            )
-          ),
-
-          shiny::div(class = "sb-section",
-            shiny::div(class = "sb-title",
-              shiny::tags$i(class = "fas fa-unlock-alt fa-xs"), "\u00a0 Data Access"
-            ),
-            shiny::checkboxGroupInput("flt_access", NULL,
-              choices  = c("Public","Licensed","Other"),
-              selected = c("Public","Licensed","Other")
-            )
-          ),
-
-          shiny::div(class = "sb-section",
-            shiny::div(class = "sb-title",
-              shiny::tags$i(class = "fas fa-sort fa-xs"), "\u00a0 Sort By"
-            ),
-            shiny::selectInput("sort_by", NULL,
-              choices = c(
-                "Year \u2014 Newest First"  = "year_desc",
-                "Year \u2014 Oldest First"  = "year_asc",
-                "Gender Relevance"          = "gender_desc",
-                "Most Viewed"               = "views_desc",
-                "Title A \u2013 Z"          = "title_asc"
+          # Search bar pill
+          shiny::div(class = "sep-searchbar-outer",
+            shiny::div(class = "sep-searchbar",
+              shiny::tags$i(class = "fas fa-search sep-searchbar__icon"),
+              shiny::textInput("srch_text", NULL,
+                placeholder = "Search studies, surveys, topics, keywords\u2026",
+                width = "100%"
               ),
-              selected = "year_desc",
-              width    = "100%"
+              shiny::div(class = "sep-searchbar__end",
+                shiny::actionButton("btn_clear_search", NULL,
+                  icon  = shiny::icon("times"),
+                  class = "sep-clear-btn"
+                ),
+                shiny::tags$span(class = "sep-bar-sep"),
+                shiny::actionButton("btn_do_search", "Search",
+                  class = "sep-search-btn"
+                )
+              )
             )
           ),
 
-          shiny::actionButton("btn_reset",
-            shiny::tagList(shiny::tags$i(class = "fas fa-undo fa-xs"), "\u00a0 Reset Filters"),
-            class = "btn btn--outline-sidebar"
+          # Quick topic tags (hidden in compact mode)
+          shiny::div(class = "sep-quick-wrap",
+            shiny::tags$span(class = "sep-quick-label", "Explore:"),
+            shiny::actionButton("qt_dhs",      "DHS Surveys",      class = "sep-qtag"),
+            shiny::actionButton("qt_maternal", "Maternal Health",   class = "sep-qtag"),
+            shiny::actionButton("qt_eicv",     "EICV / Poverty",    class = "sep-qtag"),
+            shiny::actionButton("qt_labor",    "Labor Force",       class = "sep-qtag"),
+            shiny::actionButton("qt_census",   "Population Census", class = "sep-qtag"),
+            shiny::actionButton("qt_gender",   "Gender Violence",   class = "sep-qtag")
           )
         ),
 
-        # ── Main results panel ───────────────────────────────────────────────
-        shiny::div(class = "disc-main",
-          shiny::uiOutput("results_hdr"),
-          shiny::uiOutput("disc_cards")
+        # ── Filter strip (appears below search bar in active mode) ────────
+        shiny::div(class = "sep-filters-strip",
+          shiny::div(class = "sep-fstrip__label",
+            shiny::tags$i(class = "fas fa-filter fa-xs"), " Filters"
+          ),
+          shiny::div(class = "sep-fstrip__controls",
+            shiny::div(class = "sep-fstrip__item",
+              shiny::selectInput("sort_by", NULL,
+                choices = c(
+                  "Newest First"     = "year_desc",
+                  "Oldest First"     = "year_asc",
+                  "Gender Relevance" = "gender_desc",
+                  "Most Viewed"      = "views_desc",
+                  "Title A\u2013Z"   = "title_asc"
+                ),
+                selected = "year_desc",
+                width = "165px"
+              )
+            ),
+            shiny::div(class = "sep-fstrip__item sep-fstrip__item--slide",
+              shiny::div(class = "sep-slide-lbl", "Year Range"),
+              shiny::sliderInput("flt_year", NULL,
+                min = 1978, max = 2024, value = c(1978, 2024), sep = "", width = "200px"
+              )
+            ),
+            shiny::div(class = "sep-fstrip__item sep-fstrip__item--slide",
+              shiny::div(class = "sep-slide-lbl", "Gender Score"),
+              shiny::sliderInput("flt_gender", NULL,
+                min = 0, max = 10, value = c(0, 10), step = 1, width = "150px"
+              )
+            ),
+            shiny::actionButton("btn_reset", NULL,
+              icon  = shiny::icon("undo"),
+              class = "sep-reset-btn",
+              title = "Reset all filters"
+            ),
+            shiny::actionButton("btn_adv_toggle",
+              shiny::tagList(shiny::tags$i(class = "fas fa-sliders-h fa-xs"), " Advanced"),
+              class = "sep-adv-btn"
+            )
+          )
+        ),
+
+        # ── Advanced filters panel (collapsible) ──────────────────────────
+        shiny::div(class = "sep-adv-panel", id = "sep-adv-panel",
+          shiny::div(class = "sep-adv-inner",
+            shiny::div(class = "sep-adv-group",
+              shiny::div(class = "sep-adv-lbl",
+                shiny::tags$i(class = "fas fa-layer-group fa-xs"), " Survey Series"
+              ),
+              shiny::checkboxGroupInput("flt_collection", NULL,
+                choices  = c("DHS","EICV","Census","LFS","Agriculture",
+                             "FinScope","Food Security","Business Census",
+                             "Child Labour","Social Protection","Enterprise",
+                             "Manpower","Health Services","Governance","Other"),
+                selected = c("DHS","EICV","Census","LFS","Agriculture",
+                             "FinScope","Food Security","Business Census",
+                             "Child Labour","Social Protection","Enterprise",
+                             "Manpower","Health Services","Governance","Other"),
+                inline = TRUE
+              )
+            ),
+            shiny::div(class = "sep-adv-row",
+              shiny::div(class = "sep-adv-group",
+                shiny::div(class = "sep-adv-lbl",
+                  shiny::tags$i(class = "fas fa-check-circle fa-xs"), " Data Quality"
+                ),
+                shiny::checkboxGroupInput("flt_quality", NULL,
+                  choices  = c("Complete","Minor Issues","Incomplete"),
+                  selected = c("Complete","Minor Issues","Incomplete")
+                )
+              ),
+              shiny::div(class = "sep-adv-group",
+                shiny::div(class = "sep-adv-lbl",
+                  shiny::tags$i(class = "fas fa-unlock-alt fa-xs"), " Data Access"
+                ),
+                shiny::checkboxGroupInput("flt_access", NULL,
+                  choices  = c("Public","Licensed","Other"),
+                  selected = c("Public","Licensed","Other")
+                )
+              )
+            )
+          )
+        ),
+
+        # ── Meta bar + result list ─────────────────────────────────────────
+        shiny::div(class = "sep-results-area",
+          shiny::uiOutput("sep_meta_bar"),
+          shiny::uiOutput("sep_result_items")
         )
-      )
+
+      ) # end sep-page
     ),
 
     # ══════════════════════════════════════════════════════════════════════════

@@ -72,6 +72,93 @@ gender_bar_html <- function(score) {
   )
 }
 
+# ── Google-style search result item ───────────────────────────────────────────
+build_search_result <- function(s, query = "") {
+
+  yr       <- if (!is.na(s$year)) as.character(s$year) else "\u2014"
+  abstract <- tidyr::replace_na(s$abstract, "No abstract available for this study.")
+
+  # Truncate to 280 chars for the snippet
+  snippet <- if (nchar(abstract) > 280) paste0(substr(abstract, 1, 280), "\u2026") else abstract
+
+  # Highlight query terms (words > 2 chars)
+  if (nchar(trimws(query)) > 0) {
+    terms <- strsplit(trimws(query), "\\s+")[[1]]
+    terms <- unique(terms[nchar(terms) > 2])
+    for (term in terms) {
+      snippet <- gsub(
+        paste0("(?i)(", gsub("([.+*?^${}()|\\[\\]\\\\])", "\\\\\\1", term), ")"),
+        "<mark class='sep-hl'>\\1</mark>",
+        snippet, perl = TRUE
+      )
+    }
+  }
+
+  n_res <- if (!is.na(s$n_resources) && s$n_resources > 0)
+    paste0(s$n_resources, " resource", if (s$n_resources > 1) "s" else "")
+  else "No resources"
+
+  # Chip modifiers
+  g_cls <- if (s$gender_score >= 7) "sep-chip--g-hi" else
+           if (s$gender_score >= 4) "sep-chip--g-mid" else "sep-chip--g-lo"
+  a_cls <- if (s$access_clean == "Public") "sep-chip--public" else "sep-chip--licensed"
+  q_cls <- switch(s$quality_status,
+    "Complete"     = "sep-chip--complete",
+    "Minor Issues" = "sep-chip--warn",
+    "sep-chip--bad"
+  )
+
+  shiny::div(class = "sep-result",
+
+    # Green URL path (Google-style)
+    shiny::div(class = "sep-result__path",
+      shiny::tags$i(class = "fas fa-database fa-xs"),
+      shiny::HTML(paste0(
+        " microdata.statistics.gov.rw",
+        " <span class='sep-result__sep'>\u203a</span> catalog",
+        " <span class='sep-result__sep'>\u203a</span> ",
+        gsub("<", "&lt;", tidyr::replace_na(s$collection, "survey"))
+      ))
+    ),
+
+    # Title — action link that triggers the modal
+    shiny::actionLink(
+      inputId = paste0("detail_", s$study_id),
+      label   = s$title,
+      class   = "sep-result__title"
+    ),
+
+    # Chips row: year · series · gender score · access · quality
+    shiny::div(class = "sep-result__chips",
+      shiny::tags$span(class = "sep-chip sep-chip--year", yr),
+      shiny::tags$span(class = "sep-chip sep-chip--series",
+        tidyr::replace_na(s$collection, "Other")),
+      shiny::tags$span(class = paste("sep-chip", g_cls),
+        paste0("Gender: ", s$gender_score, "/10")),
+      shiny::tags$span(class = paste("sep-chip", a_cls), s$access_clean),
+      shiny::tags$span(class = paste("sep-chip", q_cls), s$quality_status)
+    ),
+
+    # Abstract snippet with highlighted terms
+    shiny::div(class = "sep-result__snippet", shiny::HTML(snippet)),
+
+    # Footer: resource count + NISR external link
+    shiny::div(class = "sep-result__footer",
+      shiny::tags$span(class = "sep-result__res",
+        shiny::tags$i(class = "fas fa-file-alt fa-xs"), " ", n_res
+      ),
+      if (!is.na(s$url) && nchar(s$url) > 4)
+        shiny::tags$a(
+          href   = s$url,
+          target = "_blank",
+          class  = "sep-result__src",
+          shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
+          " View on NISR Microdata Catalog"
+        )
+    )
+  )
+}
+
 # ── Study result card ──────────────────────────────────────────────────────────
 build_study_card <- function(s) {
   yr    <- if (!is.na(s$year)) as.character(s$year) else "\u2014"
