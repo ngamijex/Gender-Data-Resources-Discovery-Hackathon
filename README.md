@@ -1,6 +1,19 @@
+
 # GDDP — Gender Data Discovery Platform
 
-> **Live App →** [https://didier-ngamije.shinyapps.io/GDRD/](https://didier-ngamije.shinyapps.io/GDRD/)
+<div align="center">
+
+## 🔴 LIVE APP
+
+# [▶ &nbsp; https://didier-ngamije.shinyapps.io/GDRD/](https://didier-ngamije.shinyapps.io/GDRD/)
+
+**Click the link above to open the deployed application**
+
+---
+
+*GIZ Gender Data Resources Discovery Hackathon 2026 &nbsp;·&nbsp; Kigali, Rwanda*
+
+</div>
 
 ---
 
@@ -55,28 +68,38 @@ for a 48-hour sprint.
 ## Our Solution
 
 GDDP is a **pure R Shiny application** — no dashboarding framework, fully
-custom-designed — combining three tools in one:
+custom-designed — combining four tools in one:
 
-### 1. Google-Style Search Engine
-A full-text search engine over 73 NISR national surveys. Type any keyword
-(topic, series name, year, organisation) and the engine matches against
-titles, abstracts, and scope notes. Results appear in a familiar
-Google-style layout:
+### 1. AI Overview (GPT-4o)
+Before showing any results, the platform calls **OpenAI GPT-4o** with the
+user's query and the full catalog as context. The AI independently selects the
+2–3 most relevant studies and explains exactly why each one answers the query —
+with direct links to NISR and a "Full Details" popup.
 
-- **Green URL breadcrumb** — `microdata.statistics.gov.rw › catalog › Series`
-- **Clickable study title** — opens a rich detail modal
-- **Colour-coded chips** — year, survey series, gender relevance score, access type, quality status
-- **Highlighted snippet** — abstract excerpt with matching keywords bolded
+### 2. Advanced Search Engine
+A full-text search engine with **30+ fields indexed** and **weighted relevance
+scoring** across all NISR survey metadata:
 
-### 2. Advanced Filters
+- **Multi-word AND logic** — all keywords must appear
+- **Quoted phrase matching** — `"demographic health survey"` → exact match
+- **Negative terms** — `-agriculture` excludes studies containing that word
+- **OR groups** — `DHS OR EICV` → either term scores
+- **Year detection** — `2010` → bonus score for exact year match
+- **Domain synonym expansion** — `women` also scores `female`, `gender`, `girl`…
+- **Relevance score badge** — every result shows its match strength in points
+
+Results display in a Google-style layout with green URL breadcrumbs,
+colour-coded chips, highlighted keyword snippets, and a rich detail popup.
+
+### 3. Advanced Filters
 A collapsible filter layer appears after search:
-- Sort by year, gender relevance, views, or title
+- Sort by **Best Match**, year, gender relevance, views, or title
 - Year range slider (1978–2024)
 - Gender relevance score slider (0–10)
 - Survey series checkboxes (DHS, EICV, Census, LFS, Agriculture, FinScope …)
 - Data quality and access type filters
 
-### 3. Gender Data Dashboard
+### 4. Gender Data Dashboard
 A comprehensive analytics layer visualising Rwanda's gender landscape:
 
 | Section | Charts |
@@ -115,6 +138,8 @@ each study with:
 | Layer | Technology |
 |-------|-----------|
 | Framework | R Shiny (pure — no shinydashboard) |
+| AI | OpenAI GPT-4o via `httr` + `jsonlite` |
+| Search Engine | Custom vectorised full-text engine (`R/search.R`) — 30+ fields, weighted scoring |
 | Data wrangling | dplyr, tidyr, readr, stringr |
 | Visualisations | Plotly (fully interactive, custom themed) |
 | Styling | Custom CSS design system (`www/styles.css`) with CSS variables |
@@ -136,6 +161,8 @@ GDRD/
 │   ├── constants.R        # CLR colour palette (mirrors CSS variables for Plotly)
 │   ├── reference_data.R   # Curated Rwanda gender indicator data frames
 │   ├── data_load.R        # CSV ingestion, merging, feature engineering
+│   ├── search.R           # Advanced vectorised search engine (30+ fields)
+│   ├── ai_overview.R      # GPT-4o API integration for AI overview
 │   ├── helpers.R          # build_search_result(), gender_bar_html(), gddp_theme() …
 │   ├── ui.R               # Full UI definition (zero inline CSS)
 │   └── server.R           # All reactive logic, outputs, modal observers
@@ -189,14 +216,18 @@ Key design principles:
 # 1. Install dependencies
 source("requirements.R")
 
-# 2. Launch the app
+# 2. Set your OpenAI API key (for AI Overview feature)
+# Create a .Renviron file in the project root with:
+# OPENAI_API_KEY=sk-your-key-here
+
+# 3. Launch the app
 shiny::runApp()
 ```
 
 Or open `app.R` in RStudio and click **Run App**.
 
 **R version:** 4.3+ recommended  
-**Required packages:** shiny, dplyr, tidyr, readr, stringr, plotly
+**Required packages:** shiny, dplyr, tidyr, readr, stringr, plotly, httr, jsonlite
 
 ---
 

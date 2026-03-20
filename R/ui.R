@@ -534,8 +534,7 @@ ui <- shiny::tagList(
         shiny::div(class = "sep-results-area",
           shiny::uiOutput("sep_meta_bar"),
           shiny::uiOutput("ai_overview_panel"),
-          shiny::uiOutput("sep_result_items"),
-          shiny::uiOutput("study_detail_panel")
+          shiny::uiOutput("sep_result_items")
         )
 
       ) # end sep-page

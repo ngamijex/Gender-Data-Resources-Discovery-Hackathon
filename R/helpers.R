@@ -153,10 +153,10 @@ build_search_result <- function(s, query = "") {
       shiny::tags$a(
         class   = "sep-result__title",
         href    = "#",
-        onclick = paste0(
-          "Shiny.setInputValue('study_click','", s$study_id,
-          "',{priority:'event'});return false;"
-        ),
+      onclick = paste0(
+        "Shiny.setInputValue('study_click','", s$study_id,
+        "|'+Date.now(),{priority:'event'});return false;"
+      ),
         s$title
       ),
       score_badge

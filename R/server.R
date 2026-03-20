@@ -262,10 +262,7 @@ server <- function(input, output, session) {
           href    = "#",
           onclick = paste0(
             "Shiny.setInputValue('study_click','", sid,
-            "',{priority:'event'});",
-            "document.getElementById('study_detail_panel')",
-            ".scrollIntoView({behavior:'smooth',block:'start'});",
-            "return false;"
+            "|'+Date.now(),{priority:'event'});return false;"
           ),
           shiny::tags$i(class = "fas fa-book-open fa-xs"), " ", s_title
         )
@@ -344,10 +341,7 @@ server <- function(input, output, session) {
               href    = "#",
               onclick = paste0(
                 "Shiny.setInputValue('study_click','", sid,
-                "',{priority:'event'});",
-                "document.getElementById('study_detail_panel')",
-                ".scrollIntoView({behavior:'smooth',block:'start'});",
-                "return false;"
+                "|'+Date.now(),{priority:'event'});return false;"
               ),
               shiny::tags$i(class = "fas fa-info-circle fa-xs"), " Full Details"
             ),
@@ -454,150 +448,169 @@ server <- function(input, output, session) {
   })
 
   # ── Study detail panel — pure renderUI, no modals, no observers ──────────────
-  output$study_detail_panel <- shiny::renderUI({
-    id <- input$study_click
-    if (is.null(id) || trimws(as.character(id)) == "") return(NULL)
+  # ── Study detail popup — fires on every study_click, shows a modal ───────────
+  shiny::observeEvent(input$study_click, {
+    # Value format: "study_id" or "study_id|timestamp" — strip the timestamp part
+    raw <- trimws(as.character(input$study_click))
+    id  <- trimws(strsplit(raw, "\\|")[[1]][1])
+    if (nchar(id) == 0) return()
 
-    s <- catalog |> dplyr::filter(as.character(study_id) == as.character(id))
-    if (nrow(s) == 0) return(NULL)
-    s <- s[1, ]
+    tryCatch({
+      s <- catalog |> dplyr::filter(as.character(study_id) == id)
+      if (nrow(s) == 0) return()
+      s <- s[1, ]
 
-    # Safe scalar extractor
-    safe <- function(x, fallback = "\u2014") {
-      v <- tryCatch(as.character(x[[1]]), error = function(e) NA_character_)
-      if (is.null(v) || length(v) == 0 || is.na(v) || v == "NA") fallback else v
-    }
+      # Safe scalar extractor
+      safe <- function(x, fallback = "\u2014") {
+        v <- tryCatch(as.character(x[[1]]), error = function(e) NA_character_)
+        if (is.null(v) || length(v) == 0 || is.na(v) || v == "NA") fallback else v
+      }
 
-    s_year    <- safe(s$year,                "Unknown")
-    s_type    <- safe(s$study_type,          safe(s$collection, "\u2014"))
-    s_score   <- max(0L, min(10L, suppressWarnings(as.integer(safe(s$gender_score, "0")))))
-    s_org     <- stringr::str_trunc(safe(s$organization, "NISR"), 80)
-    s_access  <- safe(s$access_clean,        "Other")
-    s_quality <- safe(s$quality_status,      "Unknown")
-    s_geo     <- safe(s$geographic_coverage, "National coverage")
-    s_abs     <- safe(s$abstract,            "No abstract available for this study.")
-    s_title   <- safe(s$title,               "Untitled Study")
-    s_url     <- safe(s$url,                 "")
-    s_coll    <- safe(s$collection,          "Survey")
+      s_year    <- safe(s$year,                "Unknown")
+      s_type    <- safe(s$study_type,          safe(s$collection, "\u2014"))
+      s_score   <- max(0L, min(10L, suppressWarnings(as.integer(safe(s$gender_score, "0")))))
+      s_org     <- stringr::str_trunc(safe(s$organization, "NISR"), 80)
+      s_access  <- safe(s$access_clean,        "Other")
+      s_quality <- safe(s$quality_status,      "Unknown")
+      s_geo     <- safe(s$geographic_coverage, "National coverage")
+      s_abs     <- safe(s$abstract,            "No abstract available for this study.")
+      s_title   <- safe(s$title,               "Untitled Study")
+      s_url     <- safe(s$url,                 "")
+      s_coll    <- safe(s$collection,          "Survey")
 
-    study_res <- resources |> dplyr::filter(as.character(study_id) == as.character(id))
+      study_res <- resources |> dplyr::filter(as.character(study_id) == id)
 
-    res_rows <- if (nrow(study_res) > 0) {
-      lapply(seq_len(min(nrow(study_res), 20)), function(ri) {
-        r      <- study_res[ri, ]
-        r_type <- toupper(safe(r$type, "FILE"))
-        r_name <- safe(r$name, "Resource")
-        r_url  <- safe(r$url,  "")
-        shiny::div(class = "dp-res-row",
-          shiny::tags$span(class = "dp-res-type", r_type),
-          if (nchar(r_url) > 4)
-            shiny::tags$a(class = "dp-res-name", href = r_url, target = "_blank", r_name)
-          else
-            shiny::tags$span(class = "dp-res-name", r_name)
-        )
-      })
-    } else {
-      list(shiny::tags$p(class = "dp-no-res", "No downloadable resources listed."))
-    }
+      res_rows <- if (nrow(study_res) > 0) {
+        lapply(seq_len(min(nrow(study_res), 20)), function(ri) {
+          r      <- study_res[ri, ]
+          r_type <- toupper(safe(r$type, "FILE"))
+          r_name <- safe(r$name, "Resource")
+          r_url  <- safe(r$url,  "")
+          shiny::div(class = "dp-res-row",
+            shiny::tags$span(class = "dp-res-type", r_type),
+            if (nchar(r_url) > 4)
+              shiny::tags$a(class = "dp-res-name", href = r_url, target = "_blank", r_name)
+            else
+              shiny::tags$span(class = "dp-res-name", r_name)
+          )
+        })
+      } else {
+        list(shiny::tags$p(class = "dp-no-res", "No downloadable resources listed."))
+      }
 
-    shiny::div(class = "study-detail-panel",
+      # ── Modal content ───────────────────────────────────────────────────────
+      modal_content <- shiny::div(class = "dp-modal-body",
 
-      # Header bar
-      shiny::div(class = "dp-header",
-        shiny::div(class = "dp-header__left",
-          shiny::div(class = "dp-breadcrumb",
-            shiny::tags$i(class = "fas fa-database fa-xs"),
-            paste0(" ", s_coll, " \u203a ", s_year)
-          ),
-          shiny::tags$h2(class = "dp-title", s_title)
+        # Chips
+        shiny::div(class = "dp-chips",
+          shiny::tags$span(class = "sep-chip sep-chip--year", s_year),
+          shiny::tags$span(class = "sep-chip sep-chip--series", s_coll),
+          shiny::tags$span(class = paste("sep-chip",
+            if (s_score >= 7) "sep-chip--g-hi"
+            else if (s_score >= 4) "sep-chip--g-mid"
+            else "sep-chip--g-lo"),
+            paste0("Gender: ", s_score, "/10")),
+          shiny::tags$span(class = paste("sep-chip",
+            if (s_access == "Public") "sep-chip--public" else "sep-chip--licensed"),
+            s_access),
+          shiny::tags$span(class = paste("sep-chip",
+            if (s_quality == "Complete") "sep-chip--complete" else "sep-chip--warn"),
+            s_quality)
         ),
-        shiny::div(class = "dp-header__right",
-          shiny::tags$a(
-            class  = "dp-close-btn",
-            href   = "#",
-            onclick = "Shiny.setInputValue('study_click','',{priority:'event'});return false;",
-            shiny::tags$i(class = "fas fa-times")
+
+        # Two-column body
+        shiny::div(class = "dp-body",
+
+          # Left — metadata + resources
+          shiny::div(class = "dp-col dp-col--meta",
+            shiny::div(class = "dp-field",
+              shiny::div(class = "dp-field__lbl",
+                shiny::tags$i(class = "fas fa-building fa-xs"), " Organization"),
+              shiny::div(class = "dp-field__val", s_org)
+            ),
+            shiny::div(class = "dp-field",
+              shiny::div(class = "dp-field__lbl",
+                shiny::tags$i(class = "fas fa-map-marker-alt fa-xs"), " Geographic Coverage"),
+              shiny::div(class = "dp-field__val", s_geo)
+            ),
+            shiny::div(class = "dp-field",
+              shiny::div(class = "dp-field__lbl",
+                shiny::tags$i(class = "fas fa-venus fa-xs"), " Gender Relevance Score"),
+              shiny::div(class = "dp-field__val", gender_bar_html(s_score))
+            ),
+            shiny::div(class = "dp-field",
+              shiny::div(class = "dp-field__lbl",
+                shiny::tags$i(class = "fas fa-unlock-alt fa-xs"), " Data Access"),
+              shiny::div(class = "dp-field__val", s_access)
+            ),
+            shiny::div(class = "dp-field",
+              shiny::div(class = "dp-field__lbl",
+                shiny::tags$i(class = "fas fa-layer-group fa-xs"), " Survey Type"),
+              shiny::div(class = "dp-field__val", s_type)
+            ),
+            shiny::div(class = "dp-field dp-field--res",
+              shiny::div(class = "dp-field__lbl",
+                shiny::tags$i(class = "fas fa-paperclip fa-xs"),
+                paste0(" ", nrow(study_res), " Available Resource",
+                       if (nrow(study_res) != 1) "s")
+              ),
+              shiny::div(class = "dp-res-list", res_rows)
+            ),
+            if (nchar(s_url) > 4)
+              shiny::tags$a(
+                href   = s_url, target = "_blank",
+                class  = "dp-nisr-btn",
+                shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
+                " Open in NISR Catalog"
+              )
+          ),
+
+          # Right — abstract
+          shiny::div(class = "dp-col dp-col--abstract",
+            shiny::div(class = "dp-field__lbl",
+              shiny::tags$i(class = "fas fa-align-left fa-xs"), " Abstract"),
+            shiny::tags$p(class = "dp-abstract", s_abs)
           )
         )
-      ),
+      )
 
-      # Metadata chips
-      shiny::div(class = "dp-chips",
-        shiny::tags$span(class = "sep-chip sep-chip--year", s_year),
-        shiny::tags$span(class = "sep-chip sep-chip--series", s_coll),
-        shiny::tags$span(class = paste("sep-chip",
-          if (s_score >= 7) "sep-chip--g-hi" else if (s_score >= 4) "sep-chip--g-mid" else "sep-chip--g-lo"),
-          paste0("Gender: ", s_score, "/10")),
-        shiny::tags$span(class = paste("sep-chip",
-          if (s_access == "Public") "sep-chip--public" else "sep-chip--licensed"), s_access),
-        shiny::tags$span(class = paste("sep-chip",
-          if (s_quality == "Complete") "sep-chip--complete" else "sep-chip--warn"), s_quality)
-      ),
-
-      # Two-column body
-      shiny::div(class = "dp-body",
-
-        # Left column — metadata fields
-        shiny::div(class = "dp-col dp-col--meta",
-
-          shiny::div(class = "dp-field",
-            shiny::div(class = "dp-field__lbl",
-              shiny::tags$i(class = "fas fa-building fa-xs"), " Organization"),
-            shiny::div(class = "dp-field__val", s_org)
-          ),
-          shiny::div(class = "dp-field",
-            shiny::div(class = "dp-field__lbl",
-              shiny::tags$i(class = "fas fa-map-marker-alt fa-xs"), " Geographic Coverage"),
-            shiny::div(class = "dp-field__val", s_geo)
-          ),
-          shiny::div(class = "dp-field",
-            shiny::div(class = "dp-field__lbl",
-              shiny::tags$i(class = "fas fa-venus fa-xs"), " Gender Relevance Score"),
-            shiny::div(class = "dp-field__val",
-              gender_bar_html(s_score)
-            )
-          ),
-          shiny::div(class = "dp-field",
-            shiny::div(class = "dp-field__lbl",
-              shiny::tags$i(class = "fas fa-unlock-alt fa-xs"), " Data Access"),
-            shiny::div(class = "dp-field__val", s_access)
-          ),
-          shiny::div(class = "dp-field",
-            shiny::div(class = "dp-field__lbl",
-              shiny::tags$i(class = "fas fa-layer-group fa-xs"), " Survey Type"),
-            shiny::div(class = "dp-field__val", s_type)
-          ),
-
-          # Resources
-          shiny::div(class = "dp-field dp-field--res",
-            shiny::div(class = "dp-field__lbl",
-              shiny::tags$i(class = "fas fa-paperclip fa-xs"),
-              paste0(" ", nrow(study_res), " Available Resource",
-                     if (nrow(study_res) != 1) "s")
-            ),
-            shiny::div(class = "dp-res-list", res_rows)
-          ),
-
-          # NISR button
-          if (nchar(s_url) > 4)
-            shiny::tags$a(
-              href   = s_url,
-              target = "_blank",
-              class  = "dp-nisr-btn",
-              shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
-              " Open in NISR Catalog"
-            )
+      # ── Custom modal header ─────────────────────────────────────────────────
+      modal_title <- shiny::div(class = "dp-modal-header",
+        shiny::div(class = "dp-breadcrumb",
+          shiny::tags$i(class = "fas fa-database fa-xs"),
+          paste0(" ", s_coll, " \u203a ", s_year)
         ),
+        shiny::tags$h4(class = "dp-title", s_title)
+      )
 
-        # Right column — abstract
-        shiny::div(class = "dp-col dp-col--abstract",
-          shiny::div(class = "dp-field__lbl",
-            shiny::tags$i(class = "fas fa-align-left fa-xs"), " Abstract"
-          ),
-          shiny::tags$p(class = "dp-abstract", s_abs)
+      shiny::showModal(
+        shiny::modalDialog(
+          title    = modal_title,
+          modal_content,
+          size     = "l",
+          easyClose = TRUE,
+          footer   = shiny::tagList(
+            if (nchar(s_url) > 4)
+              shiny::tags$a(
+                href   = s_url, target = "_blank",
+                class  = "btn dp-modal-nisr-btn",
+                shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
+                " Open in NISR Catalog"
+              ),
+            shiny::modalButton(
+              shiny::tagList(shiny::tags$i(class = "fas fa-times fa-xs"), " Close")
+            )
+          )
         )
       )
-    )
+    }, error = function(e) {
+      shiny::showModal(shiny::modalDialog(
+        title    = "Study Details",
+        shiny::tags$p("Could not load study details. Please try another study."),
+        easyClose = TRUE,
+        footer    = shiny::modalButton("Close")
+      ))
+    })
   })
 
   # ══════════════════════════════════════════════════════════════════════════
@@ -693,6 +706,7 @@ server <- function(input, output, session) {
       head(10) |>
       dplyr::mutate(
         short = paste0(stringr::str_sub(title, 1, 42), "\u2026"),
+        short = make.unique(short, sep = " "),
         short = factor(short, levels = rev(short))
       )
 
@@ -1030,10 +1044,13 @@ server <- function(input, output, session) {
   output$ch_missing_fields <- plotly::renderPlotly({
     df <- catalog |>
       dplyr::filter(!is.na(missing_field_count), missing_field_count > 0) |>
-      dplyr::mutate(short = paste0(stringr::str_sub(title, 1, 36), "\u2026")) |>
       dplyr::arrange(dplyr::desc(missing_field_count)) |>
       head(15) |>
-      dplyr::mutate(short = factor(short, levels = rev(short)))
+      dplyr::mutate(
+        short = paste0(stringr::str_sub(title, 1, 36), "\u2026"),
+        short = make.unique(short, sep = " "),
+        short = factor(short, levels = rev(short))
+      )
 
     if (nrow(df) == 0)
       return(
