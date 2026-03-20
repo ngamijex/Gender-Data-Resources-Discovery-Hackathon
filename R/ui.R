@@ -307,42 +307,82 @@ ui <- shiny::tagList(
     shiny::tabPanel("Data Discovery",
       shiny::div(class = "sep-page", id = "sep-page",
 
-        # ── JS: active-state toggle, advanced panel, clear, quick topics ──
+        # ── JS: loading indicators, state toggle, advanced panel, clear ────
         shiny::tags$script(shiny::HTML("
           $(document).ready(function() {
 
-            // Toggle advanced filters panel
+            // ── Skeleton / loading HTML injected immediately on search ────────
+            var aiLoaderHTML =
+              '<div class=\"ai-ov-loading\">' +
+                '<div class=\"ai-ov-loading__header\">' +
+                  '<span class=\"ai-ov-loading__dots\">' +
+                    '<span></span><span></span><span></span>' +
+                  '</span>' +
+                  '<span class=\"ai-ov-loading__label\">AI is analyzing the catalog\u2026</span>' +
+                '</div>' +
+                '<div class=\"ai-ov-loading__bars\">' +
+                  '<div class=\"ai-sk-bar ai-sk-bar--wide\"></div>' +
+                  '<div class=\"ai-sk-bar ai-sk-bar--med\"></div>' +
+                  '<div class=\"ai-sk-bar ai-sk-bar--short\"></div>' +
+                '</div>' +
+                '<div class=\"ai-ov-loading__cards\">' +
+                  '<div class=\"ai-sk-card\"><div class=\"ai-sk-chip\"></div><div class=\"ai-sk-line\"></div><div class=\"ai-sk-line ai-sk-line--sm\"></div></div>' +
+                  '<div class=\"ai-sk-card\"><div class=\"ai-sk-chip\"></div><div class=\"ai-sk-line\"></div><div class=\"ai-sk-line ai-sk-line--sm\"></div></div>' +
+                  '<div class=\"ai-sk-card\"><div class=\"ai-sk-chip\"></div><div class=\"ai-sk-line\"></div><div class=\"ai-sk-line ai-sk-line--sm\"></div></div>' +
+                '</div>' +
+              '</div>';
+
+            var resultsLoaderHTML =
+              '<div class=\"sep-results-loading\">' +
+                '<div class=\"sep-sk-result\"><div class=\"sep-sk-path\"></div><div class=\"sep-sk-title\"></div><div class=\"sep-sk-text\"></div><div class=\"sep-sk-text sep-sk-text--s\"></div></div>' +
+                '<div class=\"sep-sk-result\"><div class=\"sep-sk-path\"></div><div class=\"sep-sk-title\"></div><div class=\"sep-sk-text\"></div><div class=\"sep-sk-text sep-sk-text--s\"></div></div>' +
+                '<div class=\"sep-sk-result\"><div class=\"sep-sk-path\"></div><div class=\"sep-sk-title\"></div><div class=\"sep-sk-text\"></div><div class=\"sep-sk-text sep-sk-text--s\"></div></div>' +
+                '<div class=\"sep-sk-result\"><div class=\"sep-sk-path\"></div><div class=\"sep-sk-title\"></div><div class=\"sep-sk-text\"></div></div>' +
+              '</div>';
+
+            function showSearchLoaders() {
+              $('#ai_overview_panel').html(aiLoaderHTML);
+              $('#sep_result_items').html(resultsLoaderHTML);
+            }
+
+            // ── Toggle advanced filters panel ─────────────────────────────────
             $(document).on('click', '#btn_adv_toggle', function(e) {
               e.preventDefault();
               $('#sep-adv-panel').toggleClass('sep-adv-panel--open');
             });
 
-            // Search button — activate layout + show filters
+            // ── Search button ─────────────────────────────────────────────────
             $(document).on('click', '#btn_do_search', function() {
               if (($('#srch_text').val() || '').trim().length > 0) {
-                $('#sep-page').addClass('sep-page--active sep-page--searched');
+                $('#sep-page').addClass('sep-page--searched');
+                showSearchLoaders();
               }
             });
 
-            // Quick topic tags — activate layout + show filters
+            // ── Quick topic tags ──────────────────────────────────────────────
             $(document).on('click', '.sep-qtag', function() {
-              $('#sep-page').addClass('sep-page--active sep-page--searched');
+              $('#sep-page').addClass('sep-page--searched');
+              showSearchLoaders();
             });
 
-            // Clear search — restore landing layout
+            // ── Clear search ──────────────────────────────────────────────────
             $(document).on('click', '#btn_clear_search', function(e) {
               e.preventDefault();
-              $('#sep-page').removeClass('sep-page--active sep-page--searched');
+              $('#sep-page').removeClass('sep-page--searched');
+              $('#ai_overview_panel').empty();
+              $('#sep_result_items').empty();
               Shiny.setInputValue('srch_text', '', {priority: 'event'});
               setTimeout(function() { $('#srch_text').val('').trigger('input'); }, 10);
             });
 
-            // Reset button — restore landing layout
+            // ── Reset button ──────────────────────────────────────────────────
             $(document).on('click', '#btn_reset', function() {
-              $('#sep-page').removeClass('sep-page--active sep-page--searched');
+              $('#sep-page').removeClass('sep-page--searched');
+              $('#ai_overview_panel').empty();
+              $('#sep_result_items').empty();
             });
 
-            // Enter key submits the search
+            // ── Enter key ─────────────────────────────────────────────────────
             $(document).on('keydown', '#srch_text', function(e) {
               if (e.key === 'Enter') {
                 e.preventDefault();
@@ -386,6 +426,12 @@ ui <- shiny::tagList(
             )
           ),
 
+          # Hint text
+          shiny::tags$p(class = "sep-hint-text",
+            shiny::tags$i(class = "fas fa-lightbulb fa-xs"),
+            " Type any keyword \u2014 survey title, topic, year, or series name \u2014 then click Search."
+          ),
+
           # Quick topic tags (hidden in compact mode)
           shiny::div(class = "sep-quick-wrap",
             shiny::tags$span(class = "sep-quick-label", "Explore:"),
@@ -407,13 +453,14 @@ ui <- shiny::tagList(
             shiny::div(class = "sep-fstrip__item",
               shiny::selectInput("sort_by", NULL,
                 choices = c(
+                  "Best Match"       = "relevance",
                   "Newest First"     = "year_desc",
                   "Oldest First"     = "year_asc",
                   "Gender Relevance" = "gender_desc",
                   "Most Viewed"      = "views_desc",
                   "Title A\u2013Z"   = "title_asc"
                 ),
-                selected = "year_desc",
+                selected = "relevance",
                 width = "165px"
               )
             ),
@@ -483,10 +530,12 @@ ui <- shiny::tagList(
           )
         ),
 
-        # ── Meta bar + result list ─────────────────────────────────────────
+        # ── Meta bar + result list + detail panel ─────────────────────────
         shiny::div(class = "sep-results-area",
           shiny::uiOutput("sep_meta_bar"),
-          shiny::uiOutput("sep_result_items")
+          shiny::uiOutput("ai_overview_panel"),
+          shiny::uiOutput("sep_result_items"),
+          shiny::uiOutput("study_detail_panel")
         )
 
       ) # end sep-page

@@ -132,3 +132,8 @@ message("[GDDP] Catalog ready: ", nrow(catalog), " studies | ",
         nrow(resources), " resources | ",
         min(catalog$year, na.rm = TRUE), "\u2013",
         max(catalog$year, na.rm = TRUE))
+
+# Pre-compute search corpus (runs once at startup, reused on every query)
+# Note: build_search_corpus is defined in R/search.R which is sourced after this.
+# We defer corpus build to first search call via .catalog_corpus_cache below.
+.catalog_corpus_cache <- NULL

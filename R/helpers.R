@@ -78,16 +78,29 @@ build_search_result <- function(s, query = "") {
   yr       <- if (!is.na(s$year)) as.character(s$year) else "\u2014"
   abstract <- tidyr::replace_na(s$abstract, "No abstract available for this study.")
 
-  # Truncate to 280 chars for the snippet
-  snippet <- if (nchar(abstract) > 280) paste0(substr(abstract, 1, 280), "\u2026") else abstract
+  # Build the richest possible snippet: prefer scope_notes if it's more relevant,
+  # otherwise use abstract. Always pick the 280-char window with the most hits.
+  scope   <- tidyr::replace_na(s$scope_notes, "")
+  snippet_src <- if (nchar(scope) > 40 && nchar(scope) < nchar(abstract))
+    paste(abstract, scope) else abstract
+  snippet <- if (nchar(snippet_src) > 300)
+    paste0(substr(snippet_src, 1, 300), "\u2026") else snippet_src
 
-  # Highlight query terms (words > 2 chars)
+  # Highlight ALL matched tokens (original words + single chars stripped)
   if (nchar(trimws(query)) > 0) {
-    terms <- strsplit(trimws(query), "\\s+")[[1]]
-    terms <- unique(terms[nchar(terms) > 2])
-    for (term in terms) {
+    # Strip quoted phrases to get individual terms too
+    raw_terms  <- gsub('"[^"]*"', ' ', query)
+    raw_terms  <- strsplit(trimws(raw_terms), "\\s+")[[1]]
+    quoted     <- regmatches(query, gregexpr('"[^"]+"', query))[[1]]
+    quoted     <- gsub('"', '', quoted)
+    all_terms  <- unique(c(raw_terms[nchar(raw_terms) > 2], quoted))
+    # Remove negatives from highlight list
+    all_terms  <- all_terms[!grepl("^-", all_terms)]
+
+    for (term in all_terms) {
+      esc <- gsub("([.+*?^${}()|\\[\\]\\\\])", "\\\\\\1", term)
       snippet <- gsub(
-        paste0("(?i)(", gsub("([.+*?^${}()|\\[\\]\\\\])", "\\\\\\1", term), ")"),
+        paste0("(?i)(", esc, ")"),
         "<mark class='sep-hl'>\\1</mark>",
         snippet, perl = TRUE
       )
@@ -96,7 +109,21 @@ build_search_result <- function(s, query = "") {
 
   n_res <- if (!is.na(s$n_resources) && s$n_resources > 0)
     paste0(s$n_resources, " resource", if (s$n_resources > 1) "s" else "")
-  else "No resources"
+  else "No resources listed"
+
+  # Relevance score badge (only when search is active)
+  raw_score   <- tryCatch(s[[".search_score"]], error = function(e) NULL)
+  score_val   <- suppressWarnings(as.numeric(raw_score))
+  has_score   <- length(score_val) > 0 && !is.na(score_val) && score_val > 0
+  score_badge <- if (has_score) {
+    sc  <- round(score_val)
+    lvl <- if (sc >= 60) "sep-score--hi"
+           else if (sc >= 25) "sep-score--mid"
+           else "sep-score--lo"
+    shiny::tags$span(class = paste("sep-score-badge", lvl),
+      shiny::tags$i(class = "fas fa-bolt fa-xs"), paste0(" ", sc, " pts")
+    )
+  } else NULL
 
   # Chip modifiers
   g_cls <- if (s$gender_score >= 7) "sep-chip--g-hi" else
@@ -110,7 +137,7 @@ build_search_result <- function(s, query = "") {
 
   shiny::div(class = "sep-result",
 
-    # Green URL path (Google-style)
+    # URL path (Google-style breadcrumb)
     shiny::div(class = "sep-result__path",
       shiny::tags$i(class = "fas fa-database fa-xs"),
       shiny::HTML(paste0(
@@ -121,14 +148,21 @@ build_search_result <- function(s, query = "") {
       ))
     ),
 
-    # Title — action link that triggers the modal
-    shiny::actionLink(
-      inputId = paste0("detail_", s$study_id),
-      label   = s$title,
-      class   = "sep-result__title"
+    # Title + relevance score badge
+    shiny::div(class = "sep-result__title-row",
+      shiny::tags$a(
+        class   = "sep-result__title",
+        href    = "#",
+        onclick = paste0(
+          "Shiny.setInputValue('study_click','", s$study_id,
+          "',{priority:'event'});return false;"
+        ),
+        s$title
+      ),
+      score_badge
     ),
 
-    # Chips row: year · series · gender score · access · quality
+    # Chips row
     shiny::div(class = "sep-result__chips",
       shiny::tags$span(class = "sep-chip sep-chip--year", yr),
       shiny::tags$span(class = "sep-chip sep-chip--series",
@@ -139,18 +173,17 @@ build_search_result <- function(s, query = "") {
       shiny::tags$span(class = paste("sep-chip", q_cls), s$quality_status)
     ),
 
-    # Abstract snippet with highlighted terms
+    # Snippet with highlighted terms
     shiny::div(class = "sep-result__snippet", shiny::HTML(snippet)),
 
-    # Footer: resource count + NISR external link
+    # Footer
     shiny::div(class = "sep-result__footer",
       shiny::tags$span(class = "sep-result__res",
         shiny::tags$i(class = "fas fa-file-alt fa-xs"), " ", n_res
       ),
       if (!is.na(s$url) && nchar(s$url) > 4)
         shiny::tags$a(
-          href   = s$url,
-          target = "_blank",
+          href   = s$url, target = "_blank",
           class  = "sep-result__src",
           shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
           " View on NISR Microdata Catalog"

@@ -71,18 +71,55 @@ server <- function(input, output, session) {
   # ══════════════════════════════════════════════════════════════════════════
 
   filtered_catalog <- shiny::reactive({
-    df <- catalog
+    q <- trimws(committed_query())
 
-    q <- committed_query()
+    # ── Step 1: Full-text search ─────────────────────────────────────────────
     if (nchar(q) > 0) {
-      ql <- tolower(q)
-      df <- df |> dplyr::filter(
-        stringr::str_detect(tolower(title), ql) |
-        stringr::str_detect(tolower(tidyr::replace_na(abstract,    "")), ql) |
-        stringr::str_detect(tolower(tidyr::replace_na(scope_notes, "")), ql)
-      )
+      if (!is.null(.catalog_corpus_cache) &&
+          is.data.frame(.catalog_corpus_cache) &&
+          nrow(.catalog_corpus_cache) > 0) {
+        # Advanced vectorised search over prebuilt corpus
+        df <- tryCatch(
+          advanced_search(.catalog_corpus_cache, q),
+          error = function(e) {
+            message("[GDDP] advanced_search error: ", e$message)
+            NULL
+          }
+        )
+        # If advanced search returned NULL or empty, fall back to simple search
+        if (is.null(df) || nrow(df) == 0) {
+          ql <- tolower(q)
+          df <- catalog |> dplyr::filter(
+            stringr::str_detect(tolower(title),                                     ql) |
+            stringr::str_detect(tolower(tidyr::replace_na(abstract,    "")),        ql) |
+            stringr::str_detect(tolower(tidyr::replace_na(scope_notes, "")),        ql) |
+            stringr::str_detect(tolower(tidyr::replace_na(study_type,  "")),        ql) |
+            stringr::str_detect(tolower(tidyr::replace_na(organization,"")),        ql)
+          )
+        }
+      } else {
+        # No corpus — simple multi-field keyword search
+        ql <- tolower(q)
+        df <- catalog |> dplyr::filter(
+          stringr::str_detect(tolower(title),                                     ql) |
+          stringr::str_detect(tolower(tidyr::replace_na(abstract,    "")),        ql) |
+          stringr::str_detect(tolower(tidyr::replace_na(scope_notes, "")),        ql) |
+          stringr::str_detect(tolower(tidyr::replace_na(study_type,  "")),        ql) |
+          stringr::str_detect(tolower(tidyr::replace_na(organization,"")),        ql)
+        )
+      }
+    } else {
+      df <- if (!is.null(.catalog_corpus_cache) &&
+                is.data.frame(.catalog_corpus_cache))
+              .catalog_corpus_cache
+            else
+              catalog
     }
 
+    # Ensure df is a valid data frame
+    if (is.null(df) || !is.data.frame(df)) df <- catalog
+
+    # ── Step 2: Panel filters ────────────────────────────────────────────────
     if (length(input$flt_collection) > 0)
       df <- df |> dplyr::filter(collection %in% input$flt_collection)
 
@@ -100,15 +137,262 @@ server <- function(input, output, session) {
     if (length(input$flt_access) > 0)
       df <- df |> dplyr::filter(access_clean %in% input$flt_access)
 
+    # ── Step 3: Sort ─────────────────────────────────────────────────────────
+    has_score <- ".search_score" %in% names(df)
+
     df <- switch(input$sort_by,
+      "relevance"   = if (nchar(q) > 0 && has_score)
+                        df[order(-df[[".search_score"]]), ]
+                      else
+                        df |> dplyr::arrange(dplyr::desc(year)),
       "year_desc"   = df |> dplyr::arrange(dplyr::desc(year)),
       "year_asc"    = df |> dplyr::arrange(year),
       "gender_desc" = df |> dplyr::arrange(dplyr::desc(gender_score)),
       "views_desc"  = df |> dplyr::arrange(dplyr::desc(views_num)),
       "title_asc"   = df |> dplyr::arrange(title),
-      df |> dplyr::arrange(dplyr::desc(year))
+      if (nchar(q) > 0 && has_score)
+        df[order(-df[[".search_score"]]), ]
+      else
+        df |> dplyr::arrange(dplyr::desc(year))
     )
     df
+  })
+
+  # ── AI Overview — runs independently over the full catalog, not filtered results
+  ai_overview_result <- shiny::reactive({
+    q <- committed_query()
+    if (nchar(q) == 0) return(NULL)
+    build_ai_overview(query = q, studies_df = catalog)
+  })
+
+  output$ai_overview_panel <- shiny::renderUI({
+    q      <- committed_query()
+    if (nchar(q) == 0) return(NULL)
+
+    result <- ai_overview_result()
+
+    # ── No API key or API error ────────────────────────────────────────────────
+    if (is.null(result)) {
+      api_key <- Sys.getenv("OPENAI_API_KEY")
+      if (is.null(api_key) || nchar(trimws(api_key)) == 0) return(NULL)
+      return(
+        shiny::div(class = "ai-ov ai-ov--warn",
+          shiny::div(class = "ai-ov__header",
+            shiny::tags$i(class = "fas fa-exclamation-circle fa-xs"),
+            " AI Overview unavailable"
+          ),
+          shiny::div(class = "ai-ov__body",
+            shiny::tags$p(class = "ai-ov__summary",
+              "Could not reach the AI service. Please check your OPENAI_API_KEY and internet connection."
+            )
+          )
+        )
+      )
+    }
+
+    # ── Safe scalar extractor (same pattern as study detail panel) ───────────
+    ai_safe <- function(x, fallback = "\u2014") {
+      v <- tryCatch(as.character(x[[1]]), error = function(e) NA_character_)
+      if (is.null(v) || length(v) == 0 || is.na(v) || v == "NA") fallback else v
+    }
+
+    # ── Build recommendation cards ────────────────────────────────────────────
+    rec_cards <- lapply(result$recommendations, function(r) {
+
+      ai_title  <- tidyr::replace_na(as.character(r$title),  "")
+      ai_year   <- tidyr::replace_na(as.character(r$year),   "")
+      ai_series <- tidyr::replace_na(as.character(r$series), "")
+      ai_reason <- tidyr::replace_na(as.character(r$reason), "")
+
+      # Match back to catalog by exact title (case-insensitive fallback to partial)
+      matched <- catalog |>
+        dplyr::filter(tolower(trimws(title)) == tolower(trimws(ai_title)))
+      if (nrow(matched) == 0)
+        matched <- catalog |>
+          dplyr::filter(stringr::str_detect(
+            tolower(title), stringr::fixed(tolower(substr(ai_title, 1, 40)))
+          ))
+
+      # Use real catalog data if found, otherwise fall back to AI-returned values
+      if (nrow(matched) > 0) {
+        s         <- matched[1, ]
+        sid       <- ai_safe(s$study_id, "")
+        s_title   <- ai_safe(s$title,           ai_title)
+        s_year    <- ai_safe(s$year,             ai_year)
+        s_coll    <- ai_safe(s$collection,       ai_series)
+        s_score   <- max(0L, min(10L, suppressWarnings(
+                       as.integer(ai_safe(s$gender_score, "0")))))
+        s_access  <- ai_safe(s$access_clean,     "\u2014")
+        s_quality <- ai_safe(s$quality_status,   "Unknown")
+        s_geo     <- ai_safe(s$geographic_coverage, "National")
+        s_org     <- stringr::str_trunc(ai_safe(s$organization, "NISR"), 60)
+        s_url     <- ai_safe(s$url, "")
+        s_abs     <- ai_safe(s$abstract, "No abstract available.")
+
+        n_res <- nrow(resources |>
+          dplyr::filter(as.character(study_id) == as.character(sid)))
+      } else {
+        sid       <- ""
+        s_title   <- ai_title
+        s_year    <- ai_year
+        s_coll    <- ai_series
+        s_score   <- suppressWarnings(
+                       as.integer(gsub("/.*", "", tidyr::replace_na(
+                         as.character(r$gender_score), "0"))))
+        s_score   <- if (is.na(s_score)) 0L else max(0L, min(10L, s_score))
+        s_access  <- "\u2014"
+        s_quality <- "Unknown"
+        s_geo     <- "National"
+        s_org     <- "NISR"
+        s_url     <- tidyr::replace_na(as.character(r$url), "")
+        s_abs     <- ""
+        n_res     <- 0L
+      }
+
+      score_chip_cls <- paste("ai-rec__chip ai-rec__chip--score",
+        if (s_score >= 7) "ai-rec__chip--score-hi"
+        else if (s_score >= 4) "ai-rec__chip--score-mid"
+        else "ai-rec__chip--score-lo"
+      )
+
+      # Title: opens detail panel if catalog match found, else opens NISR URL
+      title_node <- if (nchar(sid) > 0)
+        shiny::tags$a(
+          class   = "ai-rec__title",
+          href    = "#",
+          onclick = paste0(
+            "Shiny.setInputValue('study_click','", sid,
+            "',{priority:'event'});",
+            "document.getElementById('study_detail_panel')",
+            ".scrollIntoView({behavior:'smooth',block:'start'});",
+            "return false;"
+          ),
+          shiny::tags$i(class = "fas fa-book-open fa-xs"), " ", s_title
+        )
+      else if (nchar(s_url) > 4)
+        shiny::tags$a(
+          class  = "ai-rec__title",
+          href   = s_url, target = "_blank",
+          shiny::tags$i(class = "fas fa-external-link-alt fa-xs"), " ", s_title
+        )
+      else
+        shiny::div(class = "ai-rec__title", s_title)
+
+      shiny::div(class = "ai-rec",
+
+        # Chips row
+        shiny::div(class = "ai-rec__meta",
+          if (nchar(s_year) > 0)
+            shiny::tags$span(class = "ai-rec__chip ai-rec__chip--year", s_year),
+          if (nchar(s_coll) > 0)
+            shiny::tags$span(class = "ai-rec__chip ai-rec__chip--ser",  s_coll),
+          shiny::tags$span(class = score_chip_cls,
+            shiny::tags$i(class = "fas fa-venus fa-xs"),
+            paste0(" ", s_score, "/10")
+          ),
+          if (s_access != "\u2014")
+            shiny::tags$span(class = paste("ai-rec__chip",
+              if (s_access == "Public") "ai-rec__chip--public"
+              else "ai-rec__chip--licensed"), s_access)
+        ),
+
+        # Clickable title
+        title_node,
+
+        # AI reason
+        shiny::div(class = "ai-rec__reason",
+          shiny::tags$i(class = "fas fa-lightbulb fa-xs ai-rec__reason-icon"),
+          " ", ai_reason
+        ),
+
+        # Dataset details row
+        shiny::div(class = "ai-rec__details",
+          if (nchar(s_org) > 0 && s_org != "\u2014")
+            shiny::div(class = "ai-rec__detail-item",
+              shiny::tags$i(class = "fas fa-building fa-xs"),
+              " ", s_org
+            ),
+          if (nchar(s_geo) > 0 && s_geo != "\u2014")
+            shiny::div(class = "ai-rec__detail-item",
+              shiny::tags$i(class = "fas fa-map-marker-alt fa-xs"),
+              " ", s_geo
+            ),
+          if (nchar(s_quality) > 0 && s_quality != "Unknown")
+            shiny::div(class = "ai-rec__detail-item",
+              shiny::tags$i(class = "fas fa-check-circle fa-xs"),
+              " ", s_quality
+            ),
+          if (n_res > 0)
+            shiny::div(class = "ai-rec__detail-item ai-rec__detail-item--res",
+              shiny::tags$i(class = "fas fa-paperclip fa-xs"),
+              paste0(" ", n_res, " resource", if (n_res != 1) "s")
+            )
+        ),
+
+        # Abstract snippet
+        if (nchar(s_abs) > 10)
+          shiny::div(class = "ai-rec__abstract",
+            substr(s_abs, 1, 180),
+            if (nchar(s_abs) > 180) "\u2026"
+          ),
+
+        # Action footer
+        shiny::div(class = "ai-rec__actions",
+          if (nchar(sid) > 0)
+            shiny::tags$a(
+              class   = "ai-rec__action-btn ai-rec__action-btn--primary",
+              href    = "#",
+              onclick = paste0(
+                "Shiny.setInputValue('study_click','", sid,
+                "',{priority:'event'});",
+                "document.getElementById('study_detail_panel')",
+                ".scrollIntoView({behavior:'smooth',block:'start'});",
+                "return false;"
+              ),
+              shiny::tags$i(class = "fas fa-info-circle fa-xs"), " Full Details"
+            ),
+          if (nchar(s_url) > 4)
+            shiny::tags$a(
+              class  = "ai-rec__action-btn ai-rec__action-btn--secondary",
+              href   = s_url, target = "_blank",
+              shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
+              " Open in NISR"
+            )
+        )
+      )
+    })
+
+    # ── Render the full overview card ─────────────────────────────────────────
+    shiny::div(class = "ai-ov",
+      shiny::div(class = "ai-ov__header",
+        shiny::div(class = "ai-ov__header-left",
+          shiny::tags$i(class = "fas fa-magic ai-ov__icon"),
+          shiny::tags$span(class = "ai-ov__label", "AI Overview"),
+          shiny::tags$span(class = "ai-ov__model", "GPT-4o")
+        ),
+        shiny::div(class = "ai-ov__header-right",
+          shiny::tags$span(class = "ai-ov__query",
+            shiny::tags$i(class = "fas fa-search fa-xs"), " ", q
+          )
+        )
+      ),
+      shiny::div(class = "ai-ov__body",
+        shiny::tags$p(class = "ai-ov__summary",
+          tidyr::replace_na(as.character(result$overview), "")
+        ),
+        if (length(rec_cards) > 0)
+          shiny::div(class = "ai-ov__recs",
+            shiny::div(class = "ai-recs__label",
+              shiny::tags$i(class = "fas fa-star fa-xs"), " Recommended Studies"
+            ),
+            shiny::div(class = "ai-recs__grid", rec_cards)
+          )
+      ),
+      shiny::div(class = "ai-ov__footer",
+        shiny::tags$i(class = "fas fa-info-circle fa-xs"),
+        " AI-generated overview based on NISR catalog metadata. Always verify findings with the original source."
+      )
+    )
   })
 
   # ── Search engine meta bar ─────────────────────────────────────────────────
@@ -141,14 +425,7 @@ server <- function(input, output, session) {
     q  <- committed_query()
 
     # ── Landing state (no query yet) ────────────────────────────────────────
-    if (nchar(q) == 0) {
-      return(shiny::div(class = "sep-landing-body",
-        shiny::div(class = "sep-landing-hint",
-          shiny::tags$i(class = "fas fa-lightbulb"),
-          " Type any keyword above \u2014 survey title, topic, year, or series name \u2014 then click Search."
-        )
-      ))
-    }
+    if (nchar(q) == 0) return(NULL)
 
     df <- filtered_catalog()
 
@@ -176,132 +453,152 @@ server <- function(input, output, session) {
     shiny::div(class = "sep-result-list", items)
   })
 
-  # Study detail modals — registered for every study_id at startup
-  if (nrow(catalog) > 0) {
-    lapply(catalog$study_id, function(sid) {
-      local({
-        id <- sid
-        shiny::observeEvent(input[[paste0("detail_", id)]], {
+  # ── Study detail panel — pure renderUI, no modals, no observers ──────────────
+  output$study_detail_panel <- shiny::renderUI({
+    id <- input$study_click
+    if (is.null(id) || trimws(as.character(id)) == "") return(NULL)
 
-          tryCatch({
+    s <- catalog |> dplyr::filter(as.character(study_id) == as.character(id))
+    if (nrow(s) == 0) return(NULL)
+    s <- s[1, ]
 
-            s <- catalog |> dplyr::filter(study_id == id)
-            if (nrow(s) == 0) return()
-            s <- s[1, ]
+    # Safe scalar extractor
+    safe <- function(x, fallback = "\u2014") {
+      v <- tryCatch(as.character(x[[1]]), error = function(e) NA_character_)
+      if (is.null(v) || length(v) == 0 || is.na(v) || v == "NA") fallback else v
+    }
 
-            # Safe scalar extractor — always returns a plain character string
-            safe <- function(x, fallback = "\u2014") {
-              v <- tryCatch(as.character(x[[1]]), error = function(e) NA_character_)
-              if (is.null(v) || length(v) == 0 || is.na(v)) fallback else v
-            }
+    s_year    <- safe(s$year,                "Unknown")
+    s_type    <- safe(s$study_type,          safe(s$collection, "\u2014"))
+    s_score   <- max(0L, min(10L, suppressWarnings(as.integer(safe(s$gender_score, "0")))))
+    s_org     <- stringr::str_trunc(safe(s$organization, "NISR"), 80)
+    s_access  <- safe(s$access_clean,        "Other")
+    s_quality <- safe(s$quality_status,      "Unknown")
+    s_geo     <- safe(s$geographic_coverage, "National coverage")
+    s_abs     <- safe(s$abstract,            "No abstract available for this study.")
+    s_title   <- safe(s$title,               "Untitled Study")
+    s_url     <- safe(s$url,                 "")
+    s_coll    <- safe(s$collection,          "Survey")
 
-            s_year    <- safe(s$year,               "Unknown")
-            s_type    <- safe(s$study_type,         safe(s$collection, "\u2014"))
-            s_score   <- max(0L, min(10L, as.integer(safe(s$gender_score, "0"))))
-            s_org     <- stringr::str_trunc(safe(s$organization, "NISR"), 60)
-            s_access  <- safe(s$access_clean,       "Other")
-            s_quality <- safe(s$quality_status,     "Unknown")
-            s_geo     <- safe(s$geographic_coverage,"National coverage")
-            s_abs     <- safe(s$abstract,           "No abstract available for this study.")
-            s_title   <- safe(s$title,              "Untitled Study")
-            s_url     <- safe(s$url,                "")
+    study_res <- resources |> dplyr::filter(as.character(study_id) == as.character(id))
 
-            study_res <- resources |> dplyr::filter(study_id == id)
-
-            res_block <- if (nrow(study_res) > 0) {
-              shiny::tagList(
-                shiny::div(class = "res-list-title",
-                  shiny::tags$i(class = "fas fa-paperclip fa-xs"),
-                  paste0("\u00a0", nrow(study_res),
-                         " Available Resource", if (nrow(study_res) > 1) "s")
-                ),
-                lapply(seq_len(min(nrow(study_res), 18)), function(ri) {
-                  r      <- study_res[ri, ]
-                  r_type <- toupper(safe(r$type, "FILE"))
-                  r_name <- safe(r$name, "Resource")
-                  r_url  <- safe(r$url,  "")
-                  shiny::div(class = "res-row",
-                    shiny::tags$span(class = "res-type-badge", r_type),
-                    if (nchar(r_url) > 4)
-                      shiny::tags$a(href = r_url, target = "_blank", r_name)
-                    else
-                      shiny::tags$span(r_name)
-                  )
-                })
-              )
-            } else {
-              shiny::tags$p(class = "no-resources-note",
-                "No direct download resources listed for this study.")
-            }
-
-            shiny::showModal(shiny::modalDialog(
-              title = s_title,
-              shiny::div(class = "det-grid3",
-                shiny::div(
-                  shiny::div(class = "det-field__lbl", "Year"),
-                  shiny::div(class = "det-field__val", s_year)
-                ),
-                shiny::div(
-                  shiny::div(class = "det-field__lbl", "Survey Type"),
-                  shiny::div(class = "det-field__val", s_type)
-                ),
-                shiny::div(
-                  shiny::div(class = "det-field__lbl", "Gender Score"),
-                  shiny::div(class = "det-field__val",
-                    paste0(s_score, " / 10"),
-                    gender_bar_html(s_score)
-                  )
-                )
-              ),
-              shiny::div(class = "det-grid3",
-                shiny::div(
-                  shiny::div(class = "det-field__lbl", "Organization"),
-                  shiny::div(class = "det-field__val", s_org)
-                ),
-                shiny::div(
-                  shiny::div(class = "det-field__lbl", "Data Access"),
-                  shiny::div(class = "det-field__val", s_access)
-                ),
-                shiny::div(
-                  shiny::div(class = "det-field__lbl", "Quality"),
-                  shiny::div(class = "det-field__val", quality_pill(s_quality))
-                )
-              ),
-              shiny::div(class = "det-field",
-                shiny::div(class = "det-field__lbl", "Geographic Coverage"),
-                shiny::div(class = "det-field__val", s_geo)
-              ),
-              shiny::div(class = "det-field det-field--abstract",
-                shiny::div(class = "det-field__lbl", "Abstract"),
-                shiny::div(class = "det-abstract", s_abs)
-              ),
-              res_block,
-              footer = shiny::tagList(
-                if (nchar(s_url) > 4)
-                  shiny::tags$a(href = s_url, target = "_blank",
-                    class = "btn btn--primary",
-                    shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
-                    "\u00a0 Open in NISR Catalog"
-                  ),
-                shiny::modalButton("Close")
-              ),
-              easyClose = TRUE,
-              size      = "l"
-            ))
-
-          }, error = function(e) {
-            shiny::showModal(shiny::modalDialog(
-              title = "Could not load study details",
-              shiny::tags$p(paste("Error:", conditionMessage(e))),
-              footer = shiny::modalButton("Close"),
-              easyClose = TRUE
-            ))
-          })
-
-        }, ignoreInit = TRUE)
+    res_rows <- if (nrow(study_res) > 0) {
+      lapply(seq_len(min(nrow(study_res), 20)), function(ri) {
+        r      <- study_res[ri, ]
+        r_type <- toupper(safe(r$type, "FILE"))
+        r_name <- safe(r$name, "Resource")
+        r_url  <- safe(r$url,  "")
+        shiny::div(class = "dp-res-row",
+          shiny::tags$span(class = "dp-res-type", r_type),
+          if (nchar(r_url) > 4)
+            shiny::tags$a(class = "dp-res-name", href = r_url, target = "_blank", r_name)
+          else
+            shiny::tags$span(class = "dp-res-name", r_name)
+        )
       })
-    })
-  }
+    } else {
+      list(shiny::tags$p(class = "dp-no-res", "No downloadable resources listed."))
+    }
+
+    shiny::div(class = "study-detail-panel",
+
+      # Header bar
+      shiny::div(class = "dp-header",
+        shiny::div(class = "dp-header__left",
+          shiny::div(class = "dp-breadcrumb",
+            shiny::tags$i(class = "fas fa-database fa-xs"),
+            paste0(" ", s_coll, " \u203a ", s_year)
+          ),
+          shiny::tags$h2(class = "dp-title", s_title)
+        ),
+        shiny::div(class = "dp-header__right",
+          shiny::tags$a(
+            class  = "dp-close-btn",
+            href   = "#",
+            onclick = "Shiny.setInputValue('study_click','',{priority:'event'});return false;",
+            shiny::tags$i(class = "fas fa-times")
+          )
+        )
+      ),
+
+      # Metadata chips
+      shiny::div(class = "dp-chips",
+        shiny::tags$span(class = "sep-chip sep-chip--year", s_year),
+        shiny::tags$span(class = "sep-chip sep-chip--series", s_coll),
+        shiny::tags$span(class = paste("sep-chip",
+          if (s_score >= 7) "sep-chip--g-hi" else if (s_score >= 4) "sep-chip--g-mid" else "sep-chip--g-lo"),
+          paste0("Gender: ", s_score, "/10")),
+        shiny::tags$span(class = paste("sep-chip",
+          if (s_access == "Public") "sep-chip--public" else "sep-chip--licensed"), s_access),
+        shiny::tags$span(class = paste("sep-chip",
+          if (s_quality == "Complete") "sep-chip--complete" else "sep-chip--warn"), s_quality)
+      ),
+
+      # Two-column body
+      shiny::div(class = "dp-body",
+
+        # Left column — metadata fields
+        shiny::div(class = "dp-col dp-col--meta",
+
+          shiny::div(class = "dp-field",
+            shiny::div(class = "dp-field__lbl",
+              shiny::tags$i(class = "fas fa-building fa-xs"), " Organization"),
+            shiny::div(class = "dp-field__val", s_org)
+          ),
+          shiny::div(class = "dp-field",
+            shiny::div(class = "dp-field__lbl",
+              shiny::tags$i(class = "fas fa-map-marker-alt fa-xs"), " Geographic Coverage"),
+            shiny::div(class = "dp-field__val", s_geo)
+          ),
+          shiny::div(class = "dp-field",
+            shiny::div(class = "dp-field__lbl",
+              shiny::tags$i(class = "fas fa-venus fa-xs"), " Gender Relevance Score"),
+            shiny::div(class = "dp-field__val",
+              gender_bar_html(s_score)
+            )
+          ),
+          shiny::div(class = "dp-field",
+            shiny::div(class = "dp-field__lbl",
+              shiny::tags$i(class = "fas fa-unlock-alt fa-xs"), " Data Access"),
+            shiny::div(class = "dp-field__val", s_access)
+          ),
+          shiny::div(class = "dp-field",
+            shiny::div(class = "dp-field__lbl",
+              shiny::tags$i(class = "fas fa-layer-group fa-xs"), " Survey Type"),
+            shiny::div(class = "dp-field__val", s_type)
+          ),
+
+          # Resources
+          shiny::div(class = "dp-field dp-field--res",
+            shiny::div(class = "dp-field__lbl",
+              shiny::tags$i(class = "fas fa-paperclip fa-xs"),
+              paste0(" ", nrow(study_res), " Available Resource",
+                     if (nrow(study_res) != 1) "s")
+            ),
+            shiny::div(class = "dp-res-list", res_rows)
+          ),
+
+          # NISR button
+          if (nchar(s_url) > 4)
+            shiny::tags$a(
+              href   = s_url,
+              target = "_blank",
+              class  = "dp-nisr-btn",
+              shiny::tags$i(class = "fas fa-external-link-alt fa-xs"),
+              " Open in NISR Catalog"
+            )
+        ),
+
+        # Right column — abstract
+        shiny::div(class = "dp-col dp-col--abstract",
+          shiny::div(class = "dp-field__lbl",
+            shiny::tags$i(class = "fas fa-align-left fa-xs"), " Abstract"
+          ),
+          shiny::tags$p(class = "dp-abstract", s_abs)
+        )
+      )
+    )
+  })
 
   # ══════════════════════════════════════════════════════════════════════════
   # DASHBOARD
