@@ -16,6 +16,7 @@ source("R/ai_overview.R")
 source("R/finscope_data.R")
 source("R/governance_data.R")
 source("R/demography_data.R")
+source("R/employment_data.R")
 source("R/ui.R")
 source("R/server.R")
 
@@ -74,6 +75,20 @@ if (!is.null(.demography_data)) {
   message("[DEMO] Demography ready.")
 } else {
   message("[DEMO] Demography data unavailable — Demography dashboard will show a notice.")
+}
+
+# ── Load Employment dashboard tables once at startup ──────────────────────────
+.employment_data <- tryCatch(
+  load_employment_data(),
+  error = function(e) {
+    message("[EMP] Startup load failed: ", e$message)
+    NULL
+  }
+)
+if (!is.null(.employment_data)) {
+  message("[EMP] Employment ready.")
+} else {
+  message("[EMP] Employment data unavailable — Employment dashboard will show a notice.")
 }
 
 shinyApp(ui = ui, server = server)

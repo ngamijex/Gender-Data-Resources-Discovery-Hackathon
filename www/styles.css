@@ -3560,6 +3560,24 @@ body.panel-open {
 .gov-sb__tabtn .fa-fw        { font-size: 0.82em; opacity: 0.7; }
 .gov-sb__tabtn--active .fa-fw { opacity: 1; }
 
+/* Governance: multiple nav items — compact spacing */
+.fi-sb__tabnav--gov {
+  padding-top    : 10px;
+  padding-bottom : 8px;
+  gap            : 2px;
+}
+.fi-sb__tabnav--gov .gov-sb__tabtn {
+  padding   : 8px 11px;
+  font-size : 12.5px;
+}
+.gov-overview-viz-hint {
+  margin-top : var(--space-5, 1.25rem);
+  max-width  : 52rem;
+}
+.gov-local-chart-note {
+  margin-top : var(--space-4, 1rem);
+}
+
 /* Demography sidebar buttons */
 .demo-sb__tabtn {
   display        : flex;
@@ -3903,6 +3921,7 @@ body.panel-open {
     border-bottom      : 1px solid #E9ECF0;
   }
   .fi-sb__tabnav       { flex-direction: row; flex-wrap: wrap; padding: 6px 8px 6px; gap: 4px; }
+  .fi-sb__tabnav--gov .gov-sb__tabtn { width: auto; padding: 7px 10px; font-size: 11.5px; }
   .fi-sb__tabtn        { width: auto; padding: 7px 11px; font-size: 12px; }
   .fi-charts-grid      { grid-template-columns: 1fr; }
   .fi-charts           { padding: 18px 16px 32px; }
@@ -3992,4 +4011,98 @@ body.panel-open {
 }
 @media (max-width: 560px) {
   .fi-kpis-row--demo-overview { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   EMPLOYMENT DASHBOARD — sidebar tabs, KPI cards, chart overrides
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Employment sidebar tab buttons */
+.emp-sb__tabtn {
+  display        : flex;
+  align-items    : center;
+  gap            : 9px;
+  width          : 100%;
+  font-size      : 13px;
+  font-weight    : 500;
+  color          : #6B7280;
+  background     : none;
+  border         : none;
+  border-radius  : 8px;
+  padding        : 10px 13px;
+  cursor         : pointer;
+  text-align     : left;
+  transition     : background .15s, color .15s;
+  white-space    : nowrap;
+  line-height    : 1.3;
+}
+.emp-sb__tabtn:hover           { background: #F0F2F5; color: #1F2937; }
+.emp-sb__tabtn--active         { background: #EFF6FF; color: #2563EB; font-weight: 700; }
+.emp-sb__tabtn .fa-fw          { font-size: 0.82em; opacity: 0.7; }
+.emp-sb__tabtn--active .fa-fw  { opacity: 1; }
+
+/* Tighter spacing for 8 employment tabs */
+.fi-sb__tabnav--emp {
+  gap       : 3px;
+  padding   : 6px 10px;
+}
+.fi-sb__tabnav--emp .emp-sb__tabtn {
+  padding   : 8px 11px;
+  font-size : 12.5px;
+}
+
+/* Employment KPI cards */
+.fi-kpi--emp {
+  display        : flex;
+  align-items    : flex-start;
+  gap            : 12px;
+  background     : #fff;
+  border         : 1px solid #E5E7EB;
+  border-radius  : 12px;
+  padding        : 16px 18px;
+  box-shadow     : 0 1px 3px rgba(0,0,0,.05);
+}
+.fi-kpi--emp .fi-kpi__icon {
+  width          : 40px;
+  height         : 40px;
+  border-radius  : 10px;
+  background     : #EFF6FF;
+  color          : #2563EB;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  flex-shrink    : 0;
+}
+.fi-kpi--emp .fi-kpi__body    { flex: 1; min-width: 0; }
+.fi-kpi--emp .fi-kpi__label   { font-size: 12px; font-weight: 600; color: #6B7280;
+                                  text-transform: uppercase; letter-spacing: .04em;
+                                  margin-bottom: 6px; }
+.fi-kpi--emp .fi-kpi__values  { display: flex; align-items: center; gap: 6px;
+                                  flex-wrap: wrap; margin-bottom: 5px; }
+.fi-kpi__val--female          { font-size: 16px; font-weight: 700; color: #E85A4F; }
+.fi-kpi__val--male            { font-size: 16px; font-weight: 700; color: #3B82F6; }
+.fi-kpi__sep                  { color: #D1D5DB; font-size: 14px; }
+.fi-kpi__delta                { font-size: 12px; font-weight: 600; display: inline-flex;
+                                  align-items: center; gap: 3px; }
+.fi-kpi__delta--up            { color: #059669; }
+.fi-kpi__delta--down          { color: #DC2626; }
+.fi-kpi__delta-lbl            { font-weight: 400; color: #9CA3AF; }
+.fi-kpi__note                 { font-size: 11px; color: #9CA3AF; margin-top: 4px; }
+
+/* Employment KPI row — 4-up grid */
+.fi-kpi-row {
+  display               : grid;
+  grid-template-columns : repeat(auto-fill, minmax(230px, 1fr));
+  gap                   : 14px;
+  padding               : 16px 20px 4px;
+}
+
+@media (max-width: 1100px) {
+  .fi-sb__tabnav--emp .emp-sb__tabtn { font-size: 11.5px; padding: 7px 10px; }
+}
+@media (max-width: 900px) {
+  .fi-kpi-row { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .fi-kpi-row { grid-template-columns: 1fr; }
 }

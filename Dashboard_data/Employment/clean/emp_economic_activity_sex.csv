@@ -1,0 +1,1831 @@
+year,quarter,sex,sector,value
+2019,Q1,All,_n_employed,3186050.5463436944
+2019,Q2,All,_n_employed,3258934.8794283685
+2019,Q3,All,_n_employed,3152832.1150640203
+2019,Q4,All,_n_employed,3405877.03832
+2020,Q1,All,_n_employed,3568934.161134829
+2020,Q2,All,_n_employed,3199104.165283203
+2020,Q3,All,_n_employed,3667611.013645172
+2020,Q4,All,_n_employed,3407788.902974966
+2021,Q1,All,_n_employed,3204924.141860962
+2021,Q2,All,_n_employed,3133606.658269882
+2021,Q3,All,_n_employed,3179124.018924713
+2021,Q4,All,_n_employed,3633131.595502615
+2022,Q1,All,_n_employed,3585650.7928733826
+2022,Q2,All,_n_employed,3317267.515346527
+2022,Q3,All,_n_employed,3711253.65624364
+2022,Q4,All,_n_employed,3571236.125681067
+2023,Q1,All,_n_employed,3803942.11794281
+2023,Q2,All,_n_employed,3984501.733938217
+2023,Q3,All,_n_employed,3972193.0716018677
+2023,Q4,All,_n_employed,4074629.1306991577
+2024,Q1,All,_n_employed,4365565.9443359375
+2024,Q2,All,_n_employed,4304439.991333008
+2024,Q3,All,_n_employed,4523412.98210144
+2024,Q4,All,_n_employed,4585316.174636841
+2025,Q1,All,_n_employed,4730124.006851196
+2025,Q2,All,_n_employed,4581575.010360718
+2025,Q3,All,_n_employed,4888920.7785720825
+2025,Q4,All,_n_employed,4890198.40511322
+2019,Q1,All,Agriculture,39.80557408177122
+2019,Q2,All,Agriculture,37.774750018873185
+2019,Q3,All,Agriculture,35.20606808640169
+2019,Q4,All,Agriculture,37.13266322978672
+2020,Q1,All,Agriculture,43.93108369934384
+2020,Q2,All,Agriculture,42.82073099447224
+2020,Q3,All,Agriculture,32.505407321054676
+2020,Q4,All,Agriculture,43.12786057123315
+2021,Q1,All,Agriculture,52.303964332274134
+2021,Q2,All,Agriculture,46.859185356290325
+2021,Q3,All,Agriculture,44.639744171937316
+2021,Q4,All,Agriculture,46.91885694366194
+2022,Q1,All,Agriculture,52.460223735474976
+2022,Q2,All,Agriculture,43.77834845602558
+2022,Q3,All,Agriculture,45.56175859246261
+2022,Q4,All,Agriculture,45.26567213126007
+2023,Q1,All,Agriculture,46.28369881266847
+2023,Q2,All,Agriculture,43.952369082935164
+2023,Q3,All,Agriculture,37.38123385782207
+2023,Q4,All,Agriculture,46.226715134940925
+2024,Q1,All,Agriculture,46.93336205225279
+2024,Q2,All,Agriculture,39.315653215804204
+2024,Q3,All,Agriculture,32.628101233593085
+2024,Q4,All,Agriculture,41.07176722057769
+2025,Q1,All,Agriculture,43.68460110734084
+2025,Q2,All,Agriculture,37.998208268145916
+2025,Q3,All,Agriculture,35.06513420103376
+2025,Q4,All,Agriculture,39.60903811823765
+2019,Q1,All,Mining and quarrying,3.0944658684037565
+2019,Q2,All,Mining and quarrying,1.8957603277485995
+2019,Q3,All,Mining and quarrying,2.3575246713256903
+2019,Q4,All,Mining and quarrying,1.5121149445666293
+2020,Q1,All,Mining and quarrying,1.8543829091704787
+2020,Q2,All,Mining and quarrying,1.295996834886942
+2020,Q3,All,Mining and quarrying,1.8468498892393839
+2020,Q4,All,Mining and quarrying,1.5887265960264023
+2021,Q1,All,Mining and quarrying,0.9478648238500254
+2021,Q2,All,Mining and quarrying,0.8168463448350396
+2021,Q3,All,Mining and quarrying,0.9743442808649709
+2021,Q4,All,Mining and quarrying,0.9017309508709744
+2022,Q1,All,Mining and quarrying,0.7628576679075445
+2022,Q2,All,Mining and quarrying,1.4860656185908387
+2022,Q3,All,Mining and quarrying,1.3894971204698114
+2022,Q4,All,Mining and quarrying,1.8286080948124024
+2023,Q1,All,Mining and quarrying,1.0651814739142984
+2023,Q2,All,Mining and quarrying,1.092952567055361
+2023,Q3,All,Mining and quarrying,1.3423319135118494
+2023,Q4,All,Mining and quarrying,1.5335391102930316
+2024,Q1,All,Mining and quarrying,1.3780404633513645
+2024,Q2,All,Mining and quarrying,2.1810445458907624
+2024,Q3,All,Mining and quarrying,1.783774026395943
+2024,Q4,All,Mining and quarrying,1.5862383029486344
+2025,Q1,All,Mining and quarrying,1.4308414650395556
+2025,Q2,All,Mining and quarrying,2.154454353973095
+2025,Q3,All,Mining and quarrying,1.889446243195216
+2025,Q4,All,Mining and quarrying,1.7019578948237413
+2019,Q1,All,Manufacturing,6.374441247211227
+2019,Q2,All,Manufacturing,5.922924687263511
+2019,Q3,All,Manufacturing,7.134931452753205
+2019,Q4,All,Manufacturing,6.185878075149849
+2020,Q1,All,Manufacturing,5.46384639867518
+2020,Q2,All,Manufacturing,5.143477234415005
+2020,Q3,All,Manufacturing,8.124452370437538
+2020,Q4,All,Manufacturing,4.363481569535805
+2021,Q1,All,Manufacturing,4.4693157215349615
+2021,Q2,All,Manufacturing,4.74658657707333
+2021,Q3,All,Manufacturing,5.572346014649159
+2021,Q4,All,Manufacturing,4.480613022911652
+2022,Q1,All,Manufacturing,4.419537794846972
+2022,Q2,All,Manufacturing,5.379910349054553
+2022,Q3,All,Manufacturing,6.466606575206802
+2022,Q4,All,Manufacturing,4.82350597617151
+2023,Q1,All,Manufacturing,5.131271128753566
+2023,Q2,All,Manufacturing,5.508848857173163
+2023,Q3,All,Manufacturing,6.206729861064586
+2023,Q4,All,Manufacturing,5.152909953760614
+2024,Q1,All,Manufacturing,4.607662248506097
+2024,Q2,All,Manufacturing,5.561710953098715
+2024,Q3,All,Manufacturing,6.888754587264258
+2024,Q4,All,Manufacturing,5.6392727515991075
+2025,Q1,All,Manufacturing,4.907475972954968
+2025,Q2,All,Manufacturing,5.742799823201701
+2025,Q3,All,Manufacturing,6.444213979943974
+2025,Q4,All,Manufacturing,5.266067191677018
+2019,Q1,All,Electricity gas stream and air conditioning supply,0.15702486301793905
+2019,Q2,All,Electricity gas stream and air conditioning supply,0.3150099888615765
+2019,Q3,All,Electricity gas stream and air conditioning supply,0.23446581054658555
+2019,Q4,All,Electricity gas stream and air conditioning supply,0.37661421876601614
+2020,Q1,All,Electricity gas stream and air conditioning supply,0.2660818051665095
+2020,Q2,All,Electricity gas stream and air conditioning supply,0.20526934645221265
+2020,Q3,All,Electricity gas stream and air conditioning supply,0.20747635825284372
+2020,Q4,All,Electricity gas stream and air conditioning supply,0.1382123169627145
+2021,Q1,All,Electricity gas stream and air conditioning supply,0.21112127331586716
+2021,Q2,All,Electricity gas stream and air conditioning supply,0.19066070654021675
+2021,Q3,All,Electricity gas stream and air conditioning supply,0.2578525806029081
+2021,Q4,All,Electricity gas stream and air conditioning supply,0.198785490799477
+2022,Q1,All,Electricity gas stream and air conditioning supply,0.12043464445211237
+2022,Q2,All,Electricity gas stream and air conditioning supply,0.14119727840174875
+2022,Q3,All,Electricity gas stream and air conditioning supply,0.04327330847676771
+2022,Q4,All,Electricity gas stream and air conditioning supply,0.13030564676159653
+2023,Q1,All,Electricity gas stream and air conditioning supply,0.17604235696951517
+2023,Q2,All,Electricity gas stream and air conditioning supply,0.18369938231430716
+2023,Q3,All,Electricity gas stream and air conditioning supply,0.054619482342031
+2023,Q4,All,Electricity gas stream and air conditioning supply,0.13065639244622199
+2024,Q1,All,Electricity gas stream and air conditioning supply,0.17765172915354713
+2024,Q2,All,Electricity gas stream and air conditioning supply,0.04182611604629254
+2024,Q3,All,Electricity gas stream and air conditioning supply,0.07147902854079115
+2024,Q4,All,Electricity gas stream and air conditioning supply,0.15109819858188694
+2025,Q1,All,Electricity gas stream and air conditioning supply,0.0976491197069087
+2025,Q2,All,Electricity gas stream and air conditioning supply,0.061760875085378426
+2025,Q3,All,Electricity gas stream and air conditioning supply,0.025305219416713286
+2025,Q4,All,Electricity gas stream and air conditioning supply,0.09481903918248791
+2019,Q1,All,"water supply, gas and remediation services",0.236142984330755
+2019,Q2,All,"water supply, gas and remediation services",0.27483072451373813
+2019,Q3,All,"water supply, gas and remediation services",0.20941706401324456
+2019,Q4,All,"water supply, gas and remediation services",0.20040123067292936
+2020,Q1,All,"water supply, gas and remediation services",0.2596376036390891
+2020,Q2,All,"water supply, gas and remediation services",0.22403472542612918
+2020,Q3,All,"water supply, gas and remediation services",0.20919352810764738
+2020,Q4,All,"water supply, gas and remediation services",0.1197547593525324
+2021,Q1,All,"water supply, gas and remediation services",0.06952101742033495
+2021,Q2,All,"water supply, gas and remediation services",0.21178834102849367
+2021,Q3,All,"water supply, gas and remediation services",0.23108883079645354
+2021,Q4,All,"water supply, gas and remediation services",0.1804215884573467
+2022,Q1,All,"water supply, gas and remediation services",0.1447828251247145
+2022,Q2,All,"water supply, gas and remediation services",0.2648366920090448
+2022,Q3,All,"water supply, gas and remediation services",0.11726567540910507
+2022,Q4,All,"water supply, gas and remediation services",0.15587937986303704
+2023,Q1,All,"water supply, gas and remediation services",0.13878628810455637
+2023,Q2,All,"water supply, gas and remediation services",0.049304011561188146
+2023,Q3,All,"water supply, gas and remediation services",0.03561034578971236
+2023,Q4,All,"water supply, gas and remediation services",0.05187638946988592
+2024,Q1,All,"water supply, gas and remediation services",0.10107385309236713
+2024,Q2,All,"water supply, gas and remediation services",0.08344308965113398
+2024,Q3,All,"water supply, gas and remediation services",0.14033826403357197
+2024,Q4,All,"water supply, gas and remediation services",0.17730827515237074
+2025,Q1,All,"water supply, gas and remediation services",0.200551963085615
+2025,Q2,All,"water supply, gas and remediation services",0.1669390848080356
+2025,Q3,All,"water supply, gas and remediation services",0.21378852798716236
+2025,Q4,All,"water supply, gas and remediation services",0.26838534480967674
+2019,Q1,All,Construction,9.14686908570257
+2019,Q2,All,Construction,9.076589447258824
+2019,Q3,All,Construction,11.47302542747922
+2019,Q4,All,Construction,8.913446402919638
+2020,Q1,All,Construction,8.68283939038968
+2020,Q2,All,Construction,12.594453962029007
+2020,Q3,All,Construction,15.712638550107119
+2020,Q4,All,Construction,13.316766615908247
+2021,Q1,All,Construction,8.754190909618558
+2021,Q2,All,Construction,10.847709216822848
+2021,Q3,All,Construction,13.570398384160857
+2021,Q4,All,Construction,11.258243338563494
+2022,Q1,All,Construction,9.165919185967002
+2022,Q2,All,Construction,9.713917731740304
+2022,Q3,All,Construction,12.528862364413868
+2022,Q4,All,Construction,9.79849865216767
+2023,Q1,All,Construction,8.076599299741137
+2023,Q2,All,Construction,9.522173775358626
+2023,Q3,All,Construction,13.958113283910315
+2023,Q4,All,Construction,7.47006318722897
+2024,Q1,All,Construction,7.398908982173939
+2024,Q2,All,Construction,8.844265872529625
+2024,Q3,All,Construction,13.129374793707719
+2024,Q4,All,Construction,8.70821234181057
+2025,Q1,All,Construction,7.638080481706868
+2025,Q2,All,Construction,8.253553264004134
+2025,Q3,All,Construction,11.332937045836555
+2025,Q4,All,Construction,8.116146778382527
+2019,Q1,All,Trade & Retail,14.411457155331817
+2019,Q2,All,Trade & Retail,14.368449558097701
+2019,Q3,All,Trade & Retail,14.712319085166328
+2019,Q4,All,Trade & Retail,15.676404235760804
+2020,Q1,All,Trade & Retail,11.849899202804611
+2020,Q2,All,Trade & Retail,13.625402384761703
+2020,Q3,All,Trade & Retail,16.595446044479417
+2020,Q4,All,Trade & Retail,11.581024442167339
+2021,Q1,All,Trade & Retail,10.48918697912172
+2021,Q2,All,Trade & Retail,9.618463223448595
+2021,Q3,All,Trade & Retail,12.16630136190819
+2021,Q4,All,Trade & Retail,10.444882500784425
+2022,Q1,All,Trade & Retail,10.046216975518924
+2022,Q2,All,Trade & Retail,11.714416702103755
+2022,Q3,All,Trade & Retail,9.806134928813055
+2022,Q4,All,Trade & Retail,10.553209741051834
+2023,Q1,All,Trade & Retail,12.953042605835385
+2023,Q2,All,Trade & Retail,13.431745654845056
+2023,Q3,All,Trade & Retail,13.709503717790408
+2023,Q4,All,Trade & Retail,12.057812671365644
+2024,Q1,All,Trade & Retail,11.58026337432434
+2024,Q2,All,Trade & Retail,13.868296237172068
+2024,Q3,All,Trade & Retail,15.143024704460176
+2024,Q4,All,Trade & Retail,14.461608146263893
+2025,Q1,All,Trade & Retail,13.500539679782761
+2025,Q2,All,Trade & Retail,15.592244023680498
+2025,Q3,All,Trade & Retail,15.616483395289011
+2025,Q4,All,Trade & Retail,15.148826192683472
+2019,Q1,All,Transport & Storage,4.8908501665557305
+2019,Q2,All,Transport & Storage,5.3463081908587045
+2019,Q3,All,Transport & Storage,4.761506410921877
+2019,Q4,All,Transport & Storage,5.845990360773936
+2020,Q1,All,Transport & Storage,4.383795206133884
+2020,Q2,All,Transport & Storage,3.7942026070337214
+2020,Q3,All,Transport & Storage,4.094527837157434
+2020,Q4,All,Transport & Storage,4.608009555049384
+2021,Q1,All,Transport & Storage,4.107987818300965
+2021,Q2,All,Transport & Storage,5.244141894749073
+2021,Q3,All,Transport & Storage,4.670072621928538
+2021,Q4,All,Transport & Storage,5.030839147376779
+2022,Q1,All,Transport & Storage,4.650185888078841
+2022,Q2,All,Transport & Storage,6.419425409422896
+2022,Q3,All,Transport & Storage,5.425868488948455
+2022,Q4,All,Transport & Storage,5.893940239289038
+2023,Q1,All,Transport & Storage,5.351959945637601
+2023,Q2,All,Transport & Storage,6.394706594089689
+2023,Q3,All,Transport & Storage,6.7019354550151915
+2023,Q4,All,Transport & Storage,4.941817199997767
+2024,Q1,All,Transport & Storage,6.243771655272081
+2024,Q2,All,Transport & Storage,6.764359094717594
+2024,Q3,All,Transport & Storage,7.229198124162389
+2024,Q4,All,Transport & Storage,6.750957988403533
+2025,Q1,All,Transport & Storage,6.533899438927258
+2025,Q2,All,Transport & Storage,6.716944879131488
+2025,Q3,All,Transport & Storage,6.958131596153221
+2025,Q4,All,Transport & Storage,7.588092600127238
+2019,Q1,All,Accommodation & Food,2.3602070342424097
+2019,Q2,All,Accommodation & Food,3.2148068139950325
+2019,Q3,All,Accommodation & Food,3.059636152209017
+2019,Q4,All,Accommodation & Food,3.1478187002571087
+2020,Q1,All,Accommodation & Food,3.2761082718980887
+2020,Q2,All,Accommodation & Food,1.5579931515718686
+2020,Q3,All,Accommodation & Food,3.34868863151516
+2020,Q4,All,Accommodation & Food,2.2419265821102647
+2021,Q1,All,Accommodation & Food,1.6555918865189465
+2021,Q2,All,Accommodation & Food,1.8378805207469353
+2021,Q3,All,Accommodation & Food,1.1083112173651428
+2021,Q4,All,Accommodation & Food,1.9734362122927631
+2022,Q1,All,Accommodation & Food,1.6504927755105616
+2022,Q2,All,Accommodation & Food,2.046435019625835
+2022,Q3,All,Accommodation & Food,1.9660256129478817
+2022,Q4,All,Accommodation & Food,2.633399764720419
+2023,Q1,All,Accommodation & Food,2.9059364642607037
+2023,Q2,All,Accommodation & Food,2.9084401709709327
+2023,Q3,All,Accommodation & Food,3.031586988085689
+2023,Q4,All,Accommodation & Food,3.480086873612399
+2024,Q1,All,Accommodation & Food,3.1013390294548873
+2024,Q2,All,Accommodation & Food,3.9196534342112725
+2024,Q3,All,Accommodation & Food,3.786175198163723
+2024,Q4,All,Accommodation & Food,2.994591281138231
+2025,Q1,All,Accommodation & Food,3.54283811238678
+2025,Q2,All,Accommodation & Food,3.954852688665309
+2025,Q3,All,Accommodation & Food,4.099823961181334
+2025,Q4,All,Accommodation & Food,3.993094569259952
+2019,Q1,All,ICT,0.21761585732301358
+2019,Q2,All,ICT,0.3809179839492112
+2019,Q3,All,ICT,0.27815270711467727
+2019,Q4,All,ICT,0.5053697537034457
+2020,Q1,All,ICT,0.1955674225133743
+2020,Q2,All,ICT,0.22717403486602183
+2020,Q3,All,ICT,0.36103430348255916
+2020,Q4,All,ICT,0.3758931047289117
+2021,Q1,All,ICT,0.37254501621203656
+2021,Q2,All,ICT,0.46260375401924586
+2021,Q3,All,ICT,0.3644526936658216
+2021,Q4,All,ICT,0.2774788432251434
+2022,Q1,All,ICT,0.27623674806205506
+2022,Q2,All,ICT,0.23939227064021346
+2022,Q3,All,ICT,0.2907282984206473
+2022,Q4,All,ICT,0.11970209187517537
+2023,Q1,All,ICT,0.41248479737929516
+2023,Q2,All,ICT,0.2342103947758117
+2023,Q3,All,ICT,0.3014448670130637
+2023,Q4,All,ICT,0.19926180905265417
+2024,Q1,All,ICT,0.2871163850637871
+2024,Q2,All,ICT,0.12213221158045061
+2024,Q3,All,ICT,0.2922759412458299
+2024,Q4,All,ICT,0.36856194746829596
+2025,Q1,All,ICT,0.3669980040315142
+2025,Q2,All,ICT,0.2579004997074382
+2025,Q3,All,ICT,0.3829228707014107
+2025,Q4,All,ICT,0.45135928981513557
+2019,Q1,All,Finance & Insurance,1.1560739367759922
+2019,Q2,All,Finance & Insurance,0.960371005793308
+2019,Q3,All,Finance & Insurance,1.1215142616144378
+2019,Q4,All,Finance & Insurance,1.011124982567982
+2020,Q1,All,Finance & Insurance,1.146336228378136
+2020,Q2,All,Finance & Insurance,0.8927411083758061
+2020,Q3,All,Finance & Insurance,1.0476451215806042
+2020,Q4,All,Finance & Insurance,1.0197209862284438
+2021,Q1,All,Finance & Insurance,1.050279148351608
+2021,Q2,All,Finance & Insurance,1.3222840221880154
+2021,Q3,All,Finance & Insurance,0.8991329774527314
+2021,Q4,All,Finance & Insurance,0.934443139483068
+2022,Q1,All,Finance & Insurance,0.8286904475325537
+2022,Q2,All,Finance & Insurance,0.8304804984431513
+2022,Q3,All,Finance & Insurance,0.6757060931327514
+2022,Q4,All,Finance & Insurance,0.7217465513113116
+2023,Q1,All,Finance & Insurance,0.7651796114330234
+2023,Q2,All,Finance & Insurance,0.8957410665644557
+2023,Q3,All,Finance & Insurance,0.9626558742925386
+2023,Q4,All,Finance & Insurance,1.0813883081240874
+2024,Q1,All,Finance & Insurance,0.8658055511775448
+2024,Q2,All,Finance & Insurance,0.8259557300052336
+2024,Q3,All,Finance & Insurance,0.8548740207923514
+2024,Q4,All,Finance & Insurance,0.8182201050459127
+2025,Q1,All,Finance & Insurance,0.8832784846190138
+2025,Q2,All,Finance & Insurance,0.8863594887440155
+2025,Q3,All,Finance & Insurance,0.7712613409956752
+2025,Q4,All,Finance & Insurance,0.9609524671713754
+2019,Q1,All,Real estate activities,0.07526929801184386
+2019,Q2,All,Real estate activities,0.19497624619369555
+2019,Q3,All,Real estate activities,0.10838840933759654
+2019,Q4,All,Real estate activities,0.14086550823826982
+2020,Q1,All,Real estate activities,0.06019835498877291
+2020,Q2,All,Real estate activities,0.07511203663065935
+2020,Q3,All,Real estate activities,0.3021285894105808
+2020,Q4,All,Real estate activities,0.03488721965618556
+2021,Q1,All,Real estate activities,0.06013662241514686
+2021,Q2,All,Real estate activities,0.11127132499548734
+2021,Q3,All,Real estate activities,0.11979565105397576
+2021,Q4,All,Real estate activities,0.04536623063830342
+2022,Q1,All,Real estate activities,0.04104688023825133
+2022,Q2,All,Real estate activities,0.0927206354306863
+2022,Q3,All,Real estate activities,0.13781723107511307
+2022,Q4,All,Real estate activities,0.13872465005622936
+2023,Q1,All,Real estate activities,0.15281503993145937
+2023,Q2,All,Real estate activities,0.1460214254912796
+2023,Q3,All,Real estate activities,0.07546824079648357
+2023,Q4,All,Real estate activities,0.12954211223080783
+2024,Q1,All,Real estate activities,0.11081427235739359
+2024,Q2,All,Real estate activities,0.09865993767019285
+2024,Q3,All,Real estate activities,0.16866160205602834
+2024,Q4,All,Real estate activities,0.19672179630948256
+2025,Q1,All,Real estate activities,0.16819861628422722
+2025,Q2,All,Real estate activities,0.23809667292509243
+2025,Q3,All,Real estate activities,0.20246652185140065
+2025,Q4,All,Real estate activities,0.2093529675907026
+2019,Q1,All,Professional Services,0.6276831135419024
+2019,Q2,All,Professional Services,0.9482400369603526
+2019,Q3,All,Professional Services,0.8021246177015235
+2019,Q4,All,Professional Services,0.8804597101600509
+2020,Q1,All,Professional Services,0.7059359919408433
+2020,Q2,All,Professional Services,0.37377988959322356
+2020,Q3,All,Professional Services,0.674535877514355
+2020,Q4,All,Professional Services,0.6693607285969679
+2021,Q1,All,Professional Services,0.45812132859366483
+2021,Q2,All,Professional Services,0.6352003555077533
+2021,Q3,All,Professional Services,0.48828837450334456
+2021,Q4,All,Professional Services,0.555019564625642
+2022,Q1,All,Professional Services,0.7002535126897244
+2022,Q2,All,Professional Services,0.668073106264343
+2022,Q3,All,Professional Services,0.8212275107315363
+2022,Q4,All,Professional Services,0.7594268623911168
+2023,Q1,All,Professional Services,0.8452747677111097
+2023,Q2,All,Professional Services,0.5012176448337872
+2023,Q3,All,Professional Services,0.4218893720525027
+2023,Q4,All,Professional Services,0.7879367100277124
+2024,Q1,All,Professional Services,0.4719240765456516
+2024,Q2,All,Professional Services,0.6698960402303229
+2024,Q3,All,Professional Services,0.7817266801676459
+2024,Q4,All,Professional Services,0.6625586644380033
+2025,Q1,All,Professional Services,0.6740488498797081
+2025,Q2,All,Professional Services,0.662402513304889
+2025,Q3,All,Professional Services,0.882381588543821
+2025,Q4,All,Professional Services,0.7596870732344047
+2019,Q1,All,Administrative and support activities,1.712092911455299
+2019,Q2,All,Administrative and support activities,2.0215346275942814
+2019,Q3,All,Administrative and support activities,1.3931597696882398
+2019,Q4,All,Administrative and support activities,2.1686364894850416
+2020,Q1,All,Administrative and support activities,2.0359373009753337
+2020,Q2,All,Administrative and support activities,1.6962092240644853
+2020,Q3,All,Administrative and support activities,2.0914916255031755
+2020,Q4,All,Administrative and support activities,2.148649911855688
+2021,Q1,All,Administrative and support activities,1.7600814530708158
+2021,Q2,All,Administrative and support activities,1.7871438654990472
+2021,Q3,All,Administrative and support activities,1.6066964394401493
+2021,Q4,All,Administrative and support activities,1.303650719252164
+2022,Q1,All,Administrative and support activities,1.1627377414664257
+2022,Q2,All,Administrative and support activities,2.0628414864722155
+2022,Q3,All,Administrative and support activities,1.5418031705459534
+2022,Q4,All,Administrative and support activities,1.921467370253933
+2023,Q1,All,Administrative and support activities,2.6641759641771254
+2023,Q2,All,Administrative and support activities,1.8176692756750303
+2023,Q3,All,Administrative and support activities,1.667953019103166
+2023,Q4,All,Administrative and support activities,1.7220352184692989
+2024,Q1,All,Administrative and support activities,1.741467350000572
+2024,Q2,All,Administrative and support activities,2.080987828016992
+2024,Q3,All,Administrative and support activities,2.1515228879187376
+2024,Q4,All,Administrative and support activities,2.4773544147873925
+2025,Q1,All,Administrative and support activities,2.189124673191691
+2025,Q2,All,Administrative and support activities,2.341512173970737
+2025,Q3,All,Administrative and support activities,1.9546833372545165
+2025,Q4,All,Administrative and support activities,2.2411700440660547
+2019,Q1,All,Public Admin.,1.786168343230263
+2019,Q2,All,Public Admin.,2.16815433029115
+2019,Q3,All,Public Admin.,2.0716187232273144
+2019,Q4,All,Public Admin.,2.189538546781602
+2020,Q1,All,Public Admin.,1.9481999013857658
+2020,Q2,All,Public Admin.,2.2277916229389896
+2020,Q3,All,Public Admin.,1.765254339927404
+2020,Q4,All,Public Admin.,1.6389839412071692
+2021,Q1,All,Public Admin.,1.9067449011647748
+2021,Q2,All,Public Admin.,2.4224046848525638
+2021,Q3,All,Public Admin.,1.7722264454195735
+2021,Q4,All,Public Admin.,2.1082425554080553
+2022,Q1,All,Public Admin.,1.6501395702511703
+2022,Q2,All,Public Admin.,1.8265711264310287
+2022,Q3,All,Public Admin.,1.8033048447566031
+2022,Q4,All,Public Admin.,1.5590170897692877
+2023,Q1,All,Public Admin.,1.0167302673067147
+2023,Q2,All,Public Admin.,1.5051521742105434
+2023,Q3,All,Public Admin.,1.5368388610523498
+2023,Q4,All,Public Admin.,1.5872682880494007
+2024,Q1,All,Public Admin.,2.3035597118778983
+2024,Q2,All,Public Admin.,1.7203001907805164
+2024,Q3,All,Public Admin.,1.7253175631101811
+2024,Q4,All,Public Admin.,1.8299347724178703
+2025,Q1,All,Public Admin.,1.7987187939016023
+2025,Q2,All,Public Admin.,1.6069855034533465
+2025,Q3,All,Public Admin.,1.7058102167313447
+2025,Q4,All,Public Admin.,1.7586904523891622
+2019,Q1,All,Education,3.424587813334877
+2019,Q2,All,Education,3.5357965921778893
+2019,Q3,All,Education,3.728916245491414
+2019,Q4,All,Education,3.6334837781179097
+2020,Q1,All,Education,3.55959593195124
+2020,Q2,All,Education,3.17673433276595
+2020,Q3,All,Education,2.5184172842635832
+2020,Q4,All,Education,3.21217241491802
+2021,Q1,All,Education,3.0281619285181662
+2021,Q2,All,Education,4.397779087834358
+2021,Q3,All,Education,3.297309490028155
+2021,Q4,All,Education,4.339891343380351
+2022,Q1,All,Education,3.7463096775582696
+2022,Q2,All,Education,4.276264755874019
+2022,Q3,All,Education,3.252840700667269
+2022,Q4,All,Education,5.01435302501666
+2023,Q1,All,Education,3.8029187288057056
+2023,Q2,All,Education,4.063120280347988
+2023,Q3,All,Education,4.119926971674408
+2023,Q4,All,Education,4.657581344857673
+2024,Q1,All,Education,4.598650435461655
+2024,Q2,All,Education,4.889061020903029
+2024,Q3,All,Education,4.124807514172259
+2024,Q4,All,Education,4.171438472735636
+2025,Q1,All,Education,4.24514748557
+2025,Q2,All,Education,4.24948612148744
+2025,Q3,All,Education,4.002177243421927
+2025,Q4,All,Education,4.480060518628752
+2019,Q1,All,Health & Social Work,1.4295403658759394
+2019,Q2,All,Health & Social Work,1.4012188294060668
+2019,Q3,All,Health & Social Work,1.4046550373359636
+2019,Q4,All,Health & Social Work,1.222429014070831
+2020,Q1,All,Health & Social Work,1.902413583792131
+2020,Q2,All,Health & Social Work,1.8137187682828133
+2020,Q3,All,Health & Social Work,1.2491257929676882
+2020,Q4,All,Health & Social Work,1.563509590147611
+2021,Q1,All,Health & Social Work,1.3298238959034423
+2021,Q2,All,Health & Social Work,1.561293058416425
+2021,Q3,All,Health & Social Work,1.3931984041131062
+2021,Q4,All,Health & Social Work,1.6212925295567702
+2022,Q1,All,Health & Social Work,1.2996227518483146
+2022,Q2,All,Health & Social Work,1.4861874634432528
+2022,Q3,All,Health & Social Work,1.2593404368442953
+2022,Q4,All,Health & Social Work,1.432287085653274
+2023,Q1,All,Health & Social Work,1.2235588304268534
+2023,Q2,All,Health & Social Work,0.8145522224503923
+2023,Q3,All,Health & Social Work,0.9530166194635915
+2023,Q4,All,Health & Social Work,1.442230082491533
+2024,Q1,All,Health & Social Work,1.276592021122113
+2024,Q2,All,Health & Social Work,1.4307149406544135
+2024,Q3,All,Health & Social Work,1.446581387879854
+2024,Q4,All,Health & Social Work,1.1717653885108363
+2025,Q1,All,Health & Social Work,1.026872641808598
+2025,Q2,All,Health & Social Work,1.1514939538328217
+2025,Q3,All,Health & Social Work,1.0241604427713815
+2025,Q4,All,Health & Social Work,0.8892699271981837
+2019,Q1,All,"Arts, entertainment and recreation",0.3260228827599015
+2019,Q2,All,"Arts, entertainment and recreation",0.45530020156856355
+2019,Q3,All,"Arts, entertainment and recreation",0.3285397224157591
+2019,Q4,All,"Arts, entertainment and recreation",0.24887122772291964
+2020,Q1,All,"Arts, entertainment and recreation",0.40849730542211005
+2020,Q2,All,"Arts, entertainment and recreation",0.1271863219056118
+2020,Q3,All,"Arts, entertainment and recreation",0.2370125784886203
+2020,Q4,All,"Arts, entertainment and recreation",0.3380407891446365
+2021,Q1,All,"Arts, entertainment and recreation",0.11474816839075676
+2021,Q2,All,"Arts, entertainment and recreation",0.31038589156711777
+2021,Q3,All,"Arts, entertainment and recreation",0.04894853292911421
+2021,Q4,All,"Arts, entertainment and recreation",0.2685793750121082
+2022,Q1,All,"Arts, entertainment and recreation",0.24686598423262174
+2022,Q2,All,"Arts, entertainment and recreation",0.2602907793727331
+2022,Q3,All,"Arts, entertainment and recreation",0.2053580979230417
+2022,Q4,All,"Arts, entertainment and recreation",0.13938631125862655
+2023,Q1,All,"Arts, entertainment and recreation",0.28485896302941704
+2023,Q2,All,"Arts, entertainment and recreation",0.2047292003443295
+2023,Q3,All,"Arts, entertainment and recreation",0.20948925826189657
+2023,Q4,All,"Arts, entertainment and recreation",0.2575230663198922
+2024,Q1,All,"Arts, entertainment and recreation",0.20106586721684597
+2024,Q2,All,"Arts, entertainment and recreation",0.22526062801786592
+2024,Q3,All,"Arts, entertainment and recreation",0.1353686626694868
+2024,Q4,All,"Arts, entertainment and recreation",0.1777228083969319
+2025,Q1,All,"Arts, entertainment and recreation",0.2666519572888811
+2025,Q2,All,"Arts, entertainment and recreation",0.19612862641751067
+2025,Q3,All,"Arts, entertainment and recreation",0.1458993116677038
+2025,Q4,All,"Arts, entertainment and recreation",0.25830895637853846
+2019,Q1,All,Other Services,2.4524907195612053
+2019,Q2,All,Other Services,1.6876830785033274
+2019,Q3,All,Other Services,2.3882978954182517
+2019,Q4,All,Other Services,2.2267986893446463
+2020,Q1,All,Other Services,2.717965462451773
+2020,Q2,All,Other Services,3.071569566273746
+2020,Q3,All,Other Services,2.3392294911372447
+2020,Q4,All,Other Services,3.0446375353069075
+2021,Q1,All,Other Services,2.777623132757318
+2021,Q2,All,Other Services,2.2538925383429875
+2021,Q3,All,Other Services,3.0289485042334143
+2021,Q4,All,Other Services,2.7942944484913057
+2022,Q1,All,Other Services,2.872607249012984
+2022,Q2,All,Other Services,3.0757599517662695
+2022,Q3,All,Other Services,2.570310127378221
+2022,Q4,All,Other Services,2.9512406210608457
+2023,Q1,All,Other Services,2.7756328980705463
+2023,Q2,All,Other Services,2.789801472699139
+2023,Q3,All,Other Services,2.935511804204989
+2023,Q4,All,Other Services,2.5978494125446607
+2024,Q1,All,Other Services,2.50127422361391
+2024,Q2,All,Other Services,3.172459496237592
+2024,Q3,All,Other Services,3.6828459986755346
+2024,Q4,All,Other Services,2.8978628230642096
+2025,Q1,All,Other Services,3.2355431052167254
+2025,Q2,All,Other Services,3.584728769128134
+2025,Q3,All,Other Services,3.7577819542104582
+2025,Q4,All,Other Services,2.7996313307957146
+2019,Q1,All,Households as Employers,5.907594449535101
+2019,Q2,All,Households as Employers,7.3192903893075005
+2019,Q3,All,Households as Employers,6.540738420152517
+2019,Q4,All,Households as Employers,6.180740111329337
+2020,Q1,All,Households as Employers,5.106762950274951
+2020,Q2,All,Households as Employers,4.759920952999288
+2020,Q3,All,Households as Employers,4.670197528365065
+2020,Q4,All,Households as Employers,4.710715320126104
+2021,Q1,All,Households as Employers,4.0503532097060875
+2021,Q2,All,Households as Employers,4.176970480422948
+2021,Q3,All,Households as Employers,3.7411389239798956
+2021,Q4,All,Households as Employers,4.338281850249045
+2022,Q1,All,Households as Employers,3.649975717734535
+2022,Q2,All,Households as Employers,4.194734988118279
+2022,Q3,All,Households as Employers,4.010410690647856
+2022,Q4,All,Households as Employers,4.03421320269878
+2023,Q1,All,Households as Employers,3.8663622626422076
+2023,Q2,All,Households as Employers,3.9022642372897836
+2023,Q3,All,Households as Employers,4.281660487349896
+2023,Q4,All,Households as Employers,4.363295357400902
+2024,Q1,All,Households as Employers,4.061865806980012
+2024,Q2,All,Households as Employers,4.114691040736218
+2024,Q3,All,Households as Employers,3.770899293973446
+2024,Q4,All,Households as Employers,3.629528407211253
+2025,Q1,All,Households as Employers,3.5662729178955273
+2025,Q2,All,Households as Employers,4.095552222889447
+2025,Q3,All,Households as Employers,3.469172533292366
+2025,Q4,All,Households as Employers,3.3470469614907556
+2019,Q1,All,Activities of extraterritorial organizations and bodies,0.4078278220265365
+2019,Q2,All,Activities of extraterritorial organizations and bodies,0.7370869207844912
+2019,Q3,All,Activities of extraterritorial organizations and bodies,0.685000029685482
+2019,Q4,All,Activities of extraterritorial organizations and bodies,0.600350789824341
+2020,Q1,All,Activities of extraterritorial organizations and bodies,0.24491507870473625
+2020,Q2,All,Activities of extraterritorial organizations and bodies,0.29650090025458065
+2020,Q3,All,Activities of extraterritorial organizations and bodies,0.0992469370079
+2020,Q4,All,Activities of extraterritorial organizations and bodies,0.15766544973808302
+2021,Q1,All,Activities of extraterritorial organizations and bodies,0.08263643296066804
+2021,Q2,All,Activities of extraterritorial organizations and bodies,0.18550875481919957
+2021,Q3,All,Activities of extraterritorial organizations and bodies,0.049404098967185214
+2021,Q4,All,Activities of extraterritorial organizations and bodies,0.025650204959192287
+2022,Q1,All,Activities of extraterritorial organizations and bodies,0.10486222649144653
+2022,Q2,All,Activities of extraterritorial organizations and bodies,0.042129680769250485
+2022,Q3,All,Activities of extraterritorial organizations and bodies,0.1258601307286994
+2022,Q4,All,Activities of extraterritorial organizations and bodies,0.12541551255659084
+2023,Q1,All,Activities of extraterritorial organizations and bodies,0.10748949320131375
+2023,Q2,All,Activities of extraterritorial organizations and bodies,0.08128050901397454
+2023,Q3,All,Activities of extraterritorial organizations and bodies,0.11247971940326591
+2023,Q4,All,Activities of extraterritorial organizations and bodies,0.12861137731591823
+2024,Q1,All,Activities of extraterritorial organizations and bodies,0.057790911001199215
+2024,Q2,All,Activities of extraterritorial organizations and bodies,0.0696283760455029
+2024,Q3,All,Activities of extraterritorial organizations and bodies,0.06489848701699262
+2024,Q4,All,Activities of extraterritorial organizations and bodies,0.057275893138259565
+2025,Q1,All,Activities of extraterritorial organizations and bodies,0.042667129380954995
+2025,Q2,All,Activities of extraterritorial organizations and bodies,0.08759619344357118
+2025,Q3,All,Activities of extraterritorial organizations and bodies,0.05601846852104604
+2025,Q4,All,Activities of extraterritorial organizations and bodies,0.05804228205745219
+2019,Q1,Male,_n_employed,1778662.6736539423
+2019,Q2,Male,_n_employed,1841887.959665396
+2019,Q3,Male,_n_employed,1792066.6859785204
+2019,Q4,Male,_n_employed,1898636.1830800013
+2020,Q1,Male,_n_employed,1945486.6441105523
+2020,Q2,Male,_n_employed,1808329.9189567566
+2020,Q3,Male,_n_employed,2113800.9512634277
+2020,Q4,Male,_n_employed,1885454.2991530148
+2021,Q1,Male,_n_employed,1748038.1011924744
+2021,Q2,Male,_n_employed,1776461.1348571777
+2021,Q3,Male,_n_employed,1813058.2206611633
+2021,Q4,Male,_n_employed,2002299.1304745674
+2022,Q1,Male,_n_employed,1949118.9244995117
+2022,Q2,Male,_n_employed,1875695.9197235107
+2022,Q3,Male,_n_employed,2095381.0767530845
+2022,Q4,Male,_n_employed,1990619.8827268207
+2023,Q1,Male,_n_employed,2059803.1013069153
+2023,Q2,Male,_n_employed,2175512.2425308228
+2023,Q3,Male,_n_employed,2248639.8181419373
+2023,Q4,Male,_n_employed,2222880.141635895
+2024,Q1,Male,_n_employed,2346249.8633270264
+2024,Q2,Male,_n_employed,2347795.0636138916
+2024,Q3,Male,_n_employed,2519344.8046875
+2024,Q4,Male,_n_employed,2489254.5567474365
+2025,Q1,Male,_n_employed,2502420.954284668
+2025,Q2,Male,_n_employed,2470663.182373047
+2025,Q3,Male,_n_employed,2666343.2031784058
+2025,Q4,Male,_n_employed,2588345.9426498413
+2019,Q1,Male,Agriculture,33.12458924954932
+2019,Q2,Male,Agriculture,31.1283093622091
+2019,Q3,Male,Agriculture,28.080110325413425
+2019,Q4,Male,Agriculture,30.324772481476497
+2020,Q1,Male,Agriculture,37.09114272360323
+2020,Q2,Male,Agriculture,36.47518985946439
+2020,Q3,Male,Agriculture,25.55398554617185
+2020,Q4,Male,Agriculture,36.070285146954205
+2021,Q1,Male,Agriculture,44.78837132223033
+2021,Q2,Male,Agriculture,39.71345645482318
+2021,Q3,Male,Agriculture,38.24155623100945
+2021,Q4,Male,Agriculture,39.784519696016766
+2022,Q1,Male,Agriculture,45.539905972753466
+2022,Q2,Male,Agriculture,36.725188736131074
+2022,Q3,Male,Agriculture,38.51201522492958
+2022,Q4,Male,Agriculture,38.610377972040695
+2023,Q1,Male,Agriculture,39.25548286490629
+2023,Q2,Male,Agriculture,35.11172627554673
+2023,Q3,Male,Agriculture,28.693945294080752
+2023,Q4,Male,Agriculture,40.839851509985294
+2024,Q1,Male,Agriculture,39.53818749091818
+2024,Q2,Male,Agriculture,33.87657230027724
+2024,Q3,Male,Agriculture,26.51008274236809
+2024,Q4,Male,Agriculture,33.87442775691923
+2025,Q1,Male,Agriculture,36.31979694193069
+2025,Q2,Male,Agriculture,31.652847909010095
+2025,Q3,Male,Agriculture,27.89794797127769
+2025,Q4,Male,Agriculture,31.147857060539742
+2019,Q1,Male,Mining and quarrying,5.09003316765532
+2019,Q2,Male,Mining and quarrying,3.0848175208585427
+2019,Q3,Male,Mining and quarrying,3.55396113401045
+2019,Q4,Male,Mining and quarrying,2.5226608876852836
+2020,Q1,Male,Mining and quarrying,3.1279559187359807
+2020,Q2,Male,Mining and quarrying,2.0401375148272196
+2020,Q3,Male,Mining and quarrying,2.629437185373753
+2020,Q4,Male,Mining and quarrying,2.6540430264726798
+2021,Q1,Male,Mining and quarrying,1.547092306027084
+2021,Q2,Male,Mining and quarrying,1.4144712195407538
+2021,Q3,Male,Mining and quarrying,1.4652010076843196
+2021,Q4,Male,Mining and quarrying,1.2823459524443361
+2022,Q1,Male,Mining and quarrying,1.3725063256315233
+2022,Q2,Male,Mining and quarrying,1.945822591936203
+2022,Q3,Male,Mining and quarrying,1.8766877581014838
+2022,Q4,Male,Mining and quarrying,2.5832415966340787
+2023,Q1,Male,Mining and quarrying,1.7373965400981826
+2023,Q2,Male,Mining and quarrying,1.6749779894038437
+2023,Q3,Male,Mining and quarrying,2.1853915798594077
+2023,Q4,Male,Mining and quarrying,2.584262737604398
+2024,Q1,Male,Mining and quarrying,2.0965012058645343
+2024,Q2,Male,Mining and quarrying,3.5180188940659654
+2024,Q3,Male,Mining and quarrying,2.7084908474118556
+2024,Q4,Male,Mining and quarrying,2.2210010757452587
+2025,Q1,Male,Mining and quarrying,2.0766337847276035
+2025,Q2,Male,Mining and quarrying,3.2766435178125226
+2025,Q3,Male,Mining and quarrying,2.962807613677487
+2025,Q4,Male,Mining and quarrying,2.6252461630225965
+2019,Q1,Male,Manufacturing,5.6867138050904655
+2019,Q2,Male,Manufacturing,5.560088104987368
+2019,Q3,Male,Manufacturing,6.549627797027552
+2019,Q4,Male,Manufacturing,6.094101227561221
+2020,Q1,Male,Manufacturing,5.413053759448629
+2020,Q2,Male,Manufacturing,5.717434685570981
+2020,Q3,Male,Manufacturing,8.892906021841855
+2020,Q4,Male,Manufacturing,4.335801271700059
+2021,Q1,Male,Manufacturing,4.686366961523869
+2021,Q2,Male,Manufacturing,4.4397047212672796
+2021,Q3,Male,Manufacturing,4.819061484937592
+2021,Q4,Male,Manufacturing,3.6954948747180514
+2022,Q1,Male,Manufacturing,3.7203053558113717
+2022,Q2,Male,Manufacturing,5.123472164565676
+2022,Q3,Male,Manufacturing,6.217220869331813
+2022,Q4,Male,Manufacturing,4.788841153323695
+2023,Q1,Male,Manufacturing,5.450777892180296
+2023,Q2,Male,Manufacturing,5.963906367710301
+2023,Q3,Male,Manufacturing,6.154142990695982
+2023,Q4,Male,Manufacturing,4.9660413857385155
+2024,Q1,Male,Manufacturing,4.596342991755696
+2024,Q2,Male,Manufacturing,5.450492495545027
+2024,Q3,Male,Manufacturing,6.8484362937334105
+2024,Q4,Male,Manufacturing,5.470030149291775
+2025,Q1,Male,Manufacturing,5.417841861891227
+2025,Q2,Male,Manufacturing,5.7456460947558625
+2025,Q3,Male,Manufacturing,7.103606805790141
+2025,Q4,Male,Manufacturing,5.934664317877302
+2019,Q1,Male,Electricity gas stream and air conditioning supply,0.2812726426535372
+2019,Q2,Male,Electricity gas stream and air conditioning supply,0.47476327861515744
+2019,Q3,Male,Electricity gas stream and air conditioning supply,0.4125021368678329
+2019,Q4,Male,Electricity gas stream and air conditioning supply,0.620634084876885
+2020,Q1,Male,Electricity gas stream and air conditioning supply,0.4396216570258933
+2020,Q2,Male,Electricity gas stream and air conditioning supply,0.3452277701220377
+2020,Q3,Male,Electricity gas stream and air conditioning supply,0.3017714571041109
+2020,Q4,Male,Electricity gas stream and air conditioning supply,0.19848010114491194
+2021,Q1,Male,Electricity gas stream and air conditioning supply,0.35936183295341995
+2021,Q2,Male,Electricity gas stream and air conditioning supply,0.24244789173594816
+2021,Q3,Male,Electricity gas stream and air conditioning supply,0.42483537777843733
+2021,Q4,Male,Electricity gas stream and air conditioning supply,0.2453457857043141
+2022,Q1,Male,Electricity gas stream and air conditioning supply,0.2019725962694788
+2022,Q2,Male,Electricity gas stream and air conditioning supply,0.24971486048042607
+2022,Q3,Male,Electricity gas stream and air conditioning supply,0.038270710807442924
+2022,Q4,Male,Electricity gas stream and air conditioning supply,0.23377252338994733
+2023,Q1,Male,Electricity gas stream and air conditioning supply,0.18166986676097077
+2023,Q2,Male,Electricity gas stream and air conditioning supply,0.276516102857179
+2023,Q3,Male,Electricity gas stream and air conditioning supply,0.0777168249920966
+2023,Q4,Male,Electricity gas stream and air conditioning supply,0.15706251392013373
+2024,Q1,Male,Electricity gas stream and air conditioning supply,0.28252028910395466
+2024,Q2,Male,Electricity gas stream and air conditioning supply,0.07668386793294883
+2024,Q3,Male,Electricity gas stream and air conditioning supply,0.1078872847734143
+2024,Q4,Male,Electricity gas stream and air conditioning supply,0.1952542765619467
+2025,Q1,Male,Electricity gas stream and air conditioning supply,0.12316885846431558
+2025,Q2,Male,Electricity gas stream and air conditioning supply,0.11452879693516034
+2025,Q3,Male,Electricity gas stream and air conditioning supply,0.046398833002901124
+2025,Q4,Male,Electricity gas stream and air conditioning supply,0.11675601318328599
+2019,Q1,Male,"water supply, gas and remediation services",0.3316144018080767
+2019,Q2,Male,"water supply, gas and remediation services",0.3107406666337042
+2019,Q3,Male,"water supply, gas and remediation services",0.28001692477627094
+2019,Q4,Male,"water supply, gas and remediation services",0.1857223111738946
+2020,Q1,Male,"water supply, gas and remediation services",0.18876011738593715
+2020,Q2,Male,"water supply, gas and remediation services",0.174899146882381
+2020,Q3,Male,"water supply, gas and remediation services",0.2686103032834003
+2020,Q4,Male,"water supply, gas and remediation services",0.030704780288764576
+2021,Q1,Male,"water supply, gas and remediation services",0.06858164659972014
+2021,Q2,Male,"water supply, gas and remediation services",0.17570204794948382
+2021,Q3,Male,"water supply, gas and remediation services",0.2948382692084593
+2021,Q4,Male,"water supply, gas and remediation services",0.0872643400151586
+2022,Q1,Male,"water supply, gas and remediation services",0.22507493015018576
+2022,Q2,Male,"water supply, gas and remediation services",0.397593528937491
+2022,Q3,Male,"water supply, gas and remediation services",0.16801023269544
+2022,Q4,Male,"water supply, gas and remediation services",0.2695326898098515
+2023,Q1,Male,"water supply, gas and remediation services",0.12347479450199216
+2023,Q2,Male,"water supply, gas and remediation services",0.02457657426068759
+2023,Q3,Male,"water supply, gas and remediation services",0.05392938919485348
+2023,Q4,Male,"water supply, gas and remediation services",0.07911488597226984
+2024,Q1,Male,"water supply, gas and remediation services",0.14171126364500125
+2024,Q2,Male,"water supply, gas and remediation services",0.08688623759090651
+2024,Q3,Male,"water supply, gas and remediation services",0.2069698131014408
+2024,Q4,Male,"water supply, gas and remediation services",0.21883738900742236
+2025,Q1,Male,"water supply, gas and remediation services",0.3414377984313338
+2025,Q2,Male,"water supply, gas and remediation services",0.2228059932978788
+2025,Q3,Male,"water supply, gas and remediation services",0.28082445692905134
+2025,Q4,Male,"water supply, gas and remediation services",0.33648785144045157
+2019,Q1,Male,Construction,12.763919851253206
+2019,Q2,Male,Construction,13.265619810425234
+2019,Q3,Male,Construction,17.82932301375769
+2019,Q4,Male,Construction,12.999989586188104
+2020,Q1,Male,Construction,12.333280752433076
+2020,Q2,Male,Construction,18.05452065206606
+2020,Q3,Male,Construction,22.706079177377212
+2020,Q4,Male,Construction,19.08532996019307
+2021,Q1,Male,Construction,13.517984235722025
+2021,Q2,Male,Construction,16.533525445385905
+2021,Q3,Male,Construction,20.51191196254131
+2021,Q4,Male,Construction,17.718584485797077
+2022,Q1,Male,Construction,14.053103930013302
+2022,Q2,Male,Construction,15.580722405245684
+2022,Q3,Male,Construction,19.483835272485596
+2022,Q4,Male,Construction,14.850152980922168
+2023,Q1,Male,Construction,12.885197404127972
+2023,Q2,Male,Construction,15.299048849592396
+2023,Q3,Male,Construction,21.73427043477158
+2023,Q4,Male,Construction,12.09195435718632
+2024,Q1,Male,Construction,11.960320156732477
+2024,Q2,Male,Construction,13.478446716247344
+2024,Q3,Male,Construction,19.86183039560431
+2024,Q4,Male,Construction,13.983849450274455
+2025,Q1,Male,Construction,12.438256129220855
+2025,Q2,Male,Construction,13.467323965813973
+2025,Q3,Male,Construction,17.782817601672598
+2025,Q4,Male,Construction,13.458652281763882
+2019,Q1,Male,Trade & Retail,12.268085151796942
+2019,Q2,Male,Trade & Retail,12.103115568294522
+2019,Q3,Male,Trade & Retail,12.619265396414283
+2019,Q4,Male,Trade & Retail,12.968582051384217
+2020,Q1,Male,Trade & Retail,10.41636472971135
+2020,Q2,Male,Trade & Retail,11.183111120908116
+2020,Q3,Male,Trade & Retail,13.192057848266186
+2020,Q4,Male,Trade & Retail,8.659144038725382
+2021,Q1,Male,Trade & Retail,8.432127628976035
+2021,Q2,Male,Trade & Retail,7.768656080862953
+2021,Q3,Male,Trade & Retail,9.5620692874654
+2021,Q4,Male,Trade & Retail,8.045092555802642
+2022,Q1,Male,Trade & Retail,8.026624521261152
+2022,Q2,Male,Trade & Retail,8.850399795169873
+2022,Q3,Male,Trade & Retail,7.674353975160099
+2022,Q4,Male,Trade & Retail,8.018823965828616
+2023,Q1,Male,Trade & Retail,10.61418605567667
+2023,Q2,Male,Trade & Retail,9.967813485923234
+2023,Q3,Male,Trade & Retail,9.742265973544832
+2023,Q4,Male,Trade & Retail,9.540032482724058
+2024,Q1,Male,Trade & Retail,9.663835398224794
+2024,Q2,Male,Trade & Retail,10.179053272609666
+2024,Q3,Male,Trade & Retail,11.006526307074632
+2024,Q4,Male,Trade & Retail,11.717003866990721
+2025,Q1,Male,Trade & Retail,10.717028825380584
+2025,Q2,Male,Trade & Retail,11.776203133840287
+2025,Q3,Male,Trade & Retail,11.27130147468569
+2025,Q4,Male,Trade & Retail,11.91541773490097
+2019,Q1,Male,Transport & Storage,8.457291798864821
+2019,Q2,Male,Transport & Storage,9.218740353475289
+2019,Q3,Male,Transport & Storage,8.119927192250808
+2019,Q4,Male,Transport & Storage,10.11930060283194
+2020,Q1,Male,Transport & Storage,7.882080137651773
+2020,Q2,Male,Transport & Storage,6.11361187829771
+2020,Q3,Male,Transport & Storage,6.7676366956502605
+2020,Q4,Male,Transport & Storage,7.977784178198884
+2021,Q1,Male,Transport & Storage,7.333387604309582
+2021,Q2,Male,Transport & Storage,8.940042703942023
+2021,Q3,Male,Transport & Storage,8.0020516523629
+2021,Q4,Male,Transport & Storage,8.736834325461595
+2022,Q1,Male,Transport & Storage,8.321722795984892
+2022,Q2,Male,Transport & Storage,10.881958654463613
+2022,Q3,Male,Transport & Storage,9.014408538158634
+2022,Q4,Male,Transport & Storage,10.285218741068634
+2023,Q1,Male,Transport & Storage,9.37596380766311
+2023,Q2,Male,Transport & Storage,11.395886238383822
+2023,Q3,Male,Transport & Storage,11.2648006394946
+2023,Q4,Male,Transport & Storage,8.71307784447569
+2024,Q1,Male,Transport & Storage,11.158304398777583
+2024,Q2,Male,Transport & Storage,11.682628764233128
+2024,Q3,Male,Transport & Storage,12.092880986322834
+2024,Q4,Male,Transport & Storage,11.672487095104078
+2025,Q1,Male,Transport & Storage,11.549159278659436
+2025,Q2,Male,Transport & Storage,11.671950992667208
+2025,Q3,Male,Transport & Storage,11.938771756215363
+2025,Q4,Male,Transport & Storage,13.504717164652028
+2019,Q1,Male,Accommodation & Food,2.092401865054525
+2019,Q2,Male,Accommodation & Food,2.8822482934985674
+2019,Q3,Male,Accommodation & Food,2.655271667239821
+2019,Q4,Male,Accommodation & Food,2.985823685717215
+2020,Q1,Male,Accommodation & Food,2.8554692625969214
+2020,Q2,Male,Accommodation & Food,1.1583588276497732
+2020,Q3,Male,Accommodation & Food,2.9927153284835777
+2020,Q4,Male,Accommodation & Food,2.14146183644641
+2021,Q1,Male,Accommodation & Food,1.6995311284988108
+2021,Q2,Male,Accommodation & Food,1.980660866219165
+2021,Q3,Male,Accommodation & Food,0.9959973930017532
+2021,Q4,Male,Accommodation & Food,2.134633404331536
+2022,Q1,Male,Accommodation & Food,1.8080984216589637
+2022,Q2,Male,Accommodation & Food,2.3220225449364027
+2022,Q3,Male,Accommodation & Food,1.7759889161880278
+2022,Q4,Male,Accommodation & Food,2.977341931115449
+2023,Q1,Male,Accommodation & Food,2.6459958913929706
+2023,Q2,Male,Accommodation & Food,3.0662077036453548
+2023,Q3,Male,Accommodation & Food,3.203803957950525
+2023,Q4,Male,Accommodation & Food,3.147964424887613
+2024,Q1,Male,Accommodation & Food,2.9271874741084654
+2024,Q2,Male,Accommodation & Food,3.837779285908368
+2024,Q3,Male,Accommodation & Food,3.3035765740414793
+2024,Q4,Male,Accommodation & Food,2.696462767516454
+2025,Q1,Male,Accommodation & Food,3.0899427919141567
+2025,Q2,Male,Accommodation & Food,3.809216703991982
+2025,Q3,Male,Accommodation & Food,3.562783309211325
+2025,Q4,Male,Accommodation & Food,3.7195796097854767
+2019,Q1,Male,ICT,0.3142722207971783
+2019,Q2,Male,ICT,0.4901738645278588
+2019,Q3,Male,ICT,0.28577691593990867
+2019,Q4,Male,ICT,0.5858530454189335
+2020,Q1,Male,ICT,0.2896556812789165
+2020,Q2,Male,ICT,0.34292899812926725
+2020,Q3,Male,ICT,0.4618385994798351
+2020,Q4,Male,ICT,0.5259760692399135
+2021,Q1,Male,ICT,0.40993169134798363
+2021,Q2,Male,ICT,0.6613121327381574
+2021,Q3,Male,ICT,0.437221411881611
+2021,Q4,Male,ICT,0.41403153656679276
+2022,Q1,Male,ICT,0.3282831293999794
+2022,Q2,Male,ICT,0.29788202683582266
+2022,Q3,Male,ICT,0.41789334314658416
+2022,Q4,Male,ICT,0.1511250344682822
+2023,Q1,Male,ICT,0.47599934752447254
+2023,Q2,Male,ICT,0.3221175334306483
+2023,Q3,Male,ICT,0.3790830365994748
+2023,Q4,Male,ICT,0.291993791095439
+2024,Q1,Male,ICT,0.36842766088572293
+2024,Q2,Male,ICT,0.14925791101840635
+2024,Q3,Male,ICT,0.3945599920130524
+2024,Q4,Male,ICT,0.5024778308478343
+2025,Q1,Male,ICT,0.49541277818026286
+2025,Q2,Male,ICT,0.3615784146281152
+2025,Q3,Male,ICT,0.46139268684959367
+2025,Q4,Male,ICT,0.5627643029683704
+2019,Q1,Male,Finance & Insurance,0.9594039705941974
+2019,Q2,Male,Finance & Insurance,1.0175659495462686
+2019,Q3,Male,Finance & Insurance,0.9565984994692032
+2019,Q4,Male,Finance & Insurance,1.1351958817637156
+2020,Q1,Male,Finance & Insurance,1.1504664311472936
+2020,Q2,Male,Finance & Insurance,0.9390929834947732
+2020,Q3,Male,Finance & Insurance,0.9947273985406208
+2020,Q4,Male,Finance & Insurance,1.1325152097079316
+2021,Q1,Male,Finance & Insurance,1.1008106039749692
+2021,Q2,Male,Finance & Insurance,1.573182581592523
+2021,Q3,Male,Finance & Insurance,0.8899940781823193
+2021,Q4,Male,Finance & Insurance,0.8847283270908777
+2022,Q1,Male,Finance & Insurance,0.7050148681964725
+2022,Q2,Male,Finance & Insurance,0.855406555933881
+2022,Q3,Male,Finance & Insurance,0.6372407571072083
+2022,Q4,Male,Finance & Insurance,0.8095511815101042
+2023,Q1,Male,Finance & Insurance,0.7354883138893691
+2023,Q2,Male,Finance & Insurance,0.6980476538110422
+2023,Q3,Male,Finance & Insurance,0.9347435554434594
+2023,Q4,Male,Finance & Insurance,0.9300607926673645
+2024,Q1,Male,Finance & Insurance,0.6963866298964376
+2024,Q2,Male,Finance & Insurance,0.6889025319426872
+2024,Q3,Male,Finance & Insurance,0.683142589857851
+2024,Q4,Male,Finance & Insurance,0.6698210432954479
+2025,Q1,Male,Finance & Insurance,0.7735532781975665
+2025,Q2,Male,Finance & Insurance,0.7210486368243307
+2025,Q3,Male,Finance & Insurance,0.6868672448585427
+2025,Q4,Male,Finance & Insurance,0.7869949222263368
+2019,Q1,Male,Real estate activities,0.13482702010094594
+2019,Q2,Male,Real estate activities,0.32045061696587923
+2019,Q3,Male,Real estate activities,0.19069070394201676
+2019,Q4,Male,Real estate activities,0.14744946530296033
+2020,Q1,Male,Real estate activities,0.08873986543072467
+2020,Q2,Male,Real estate activities,0.11534025869679193
+2020,Q3,Male,Real estate activities,0.3552962675021161
+2020,Q4,Male,Real estate activities,0.041264797579527945
+2021,Q1,Male,Real estate activities,0.05329093786926151
+2021,Q2,Male,Real estate activities,0.09018294349203712
+2021,Q3,Male,Real estate activities,0.18910017295687506
+2021,Q4,Male,Real estate activities,0.08231611520593048
+2022,Q1,Male,Real estate activities,0.06349106450366764
+2022,Q2,Male,Real estate activities,0.14200456042577342
+2022,Q3,Male,Real estate activities,0.2440962688817666
+2022,Q4,Male,Real estate activities,0.23568583609925461
+2023,Q1,Male,Real estate activities,0.26502383226568116
+2023,Q2,Male,Real estate activities,0.22571232930087592
+2023,Q3,Male,Real estate activities,0.08538537819825778
+2023,Q4,Male,Real estate activities,0.18726804648384854
+2024,Q1,Male,Real estate activities,0.166270335660734
+2024,Q2,Male,Real estate activities,0.14905380755015188
+2024,Q3,Male,Real estate activities,0.25539376347958276
+2024,Q4,Male,Real estate activities,0.2957620482692507
+2025,Q1,Male,Real estate activities,0.24369535935754855
+2025,Q2,Male,Real estate activities,0.25435109813353857
+2025,Q3,Male,Real estate activities,0.2704863745094294
+2025,Q4,Male,Real estate activities,0.37548779102535884
+2019,Q1,Male,Professional Services,0.8485857768340679
+2019,Q2,Male,Professional Services,1.019064281893749
+2019,Q3,Male,Professional Services,0.9703272600053887
+2019,Q4,Male,Professional Services,1.0853705087706984
+2020,Q1,Male,Professional Services,0.7979093117154344
+2020,Q2,Male,Professional Services,0.5736206461624769
+2020,Q3,Male,Professional Services,1.0045960559891725
+2020,Q4,Male,Professional Services,0.815047191910369
+2021,Q1,Male,Professional Services,0.7245072395848804
+2021,Q2,Male,Professional Services,0.7773330333615446
+2021,Q3,Male,Professional Services,0.7261958546873728
+2021,Q4,Male,Professional Services,0.9027201702333879
+2022,Q1,Male,Professional Services,0.7723755871724769
+2022,Q2,Male,Professional Services,0.9021057584269316
+2022,Q3,Male,Professional Services,1.1255089895103492
+2022,Q4,Male,Professional Services,1.0340934947980671
+2023,Q1,Male,Professional Services,0.9786873421916826
+2023,Q2,Male,Professional Services,0.6959234518993911
+2023,Q3,Male,Professional Services,0.5897959576392433
+2023,Q4,Male,Professional Services,0.7414698493855068
+2024,Q1,Male,Professional Services,0.5905168477143873
+2024,Q2,Male,Professional Services,0.7827887885046083
+2024,Q3,Male,Professional Services,0.7900977707718588
+2024,Q4,Male,Professional Services,0.8407868073131639
+2025,Q1,Male,Professional Services,0.9375381653652717
+2025,Q2,Male,Professional Services,0.7746355802128558
+2025,Q3,Male,Professional Services,1.021738679870457
+2025,Q4,Male,Professional Services,0.9628580413166962
+2019,Q1,Male,Administrative and support activities,1.968431258082664
+2019,Q2,Male,Administrative and support activities,2.661407869655487
+2019,Q3,Male,Administrative and support activities,1.5838971803175985
+2019,Q4,Male,Administrative and support activities,2.7529809958223854
+2020,Q1,Male,Administrative and support activities,2.6819093711974573
+2020,Q2,Male,Administrative and support activities,2.492532674683197
+2020,Q3,Male,Administrative and support activities,2.582751810083682
+2020,Q4,Male,Administrative and support activities,2.845350249226386
+2021,Q1,Male,Administrative and support activities,2.347796691983981
+2021,Q2,Male,Administrative and support activities,1.8550691361089846
+2021,Q3,Male,Administrative and support activities,1.7915139636708477
+2021,Q4,Male,Administrative and support activities,1.3689720788315527
+2022,Q1,Male,Administrative and support activities,1.6918335125508814
+2022,Q2,Male,Administrative and support activities,2.6494710625563194
+2022,Q3,Male,Administrative and support activities,1.898830863558142
+2022,Q4,Male,Administrative and support activities,2.117198780201565
+2023,Q1,Male,Administrative and support activities,3.3488763090089746
+2023,Q2,Male,Administrative and support activities,2.0555351723024815
+2023,Q3,Male,Administrative and support activities,1.7844753010766152
+2023,Q4,Male,Administrative and support activities,2.3459755614918363
+2024,Q1,Male,Administrative and support activities,2.1012020753414262
+2024,Q2,Male,Administrative and support activities,2.2552606673898867
+2024,Q3,Male,Administrative and support activities,2.5340492820015195
+2024,Q4,Male,Administrative and support activities,2.732249334158666
+2025,Q1,Male,Administrative and support activities,2.45568738936607
+2025,Q2,Male,Administrative and support activities,2.792153063014019
+2025,Q3,Male,Administrative and support activities,2.4200862900174096
+2025,Q4,Male,Administrative and support activities,2.8496630817550916
+2019,Q1,Male,Public Admin.,2.4211765820210465
+2019,Q2,Male,Public Admin.,2.765661497202046
+2019,Q3,Male,Public Admin.,2.4081754939846927
+2019,Q4,Male,Public Admin.,3.039786588622497
+2020,Q1,Male,Public Admin.,2.54221104459032
+2020,Q2,Male,Public Admin.,2.7454926945758213
+2020,Q3,Male,Public Admin.,2.2522968082340444
+2020,Q4,Male,Public Admin.,2.3314207026787503
+2021,Q1,Male,Public Admin.,2.72701993136472
+2021,Q2,Male,Public Admin.,3.345034533424529
+2021,Q3,Male,Public Admin.,2.539809749166182
+2021,Q4,Male,Public Admin.,3.112419667835104
+2022,Q1,Male,Public Admin.,2.4422398369672216
+2022,Q2,Male,Public Admin.,2.377345979345133
+2022,Q3,Male,Public Admin.,2.386779287816129
+2022,Q4,Male,Public Admin.,1.9060659632092765
+2023,Q1,Male,Public Admin.,1.4269555046778464
+2023,Q2,Male,Public Admin.,2.0677380010508446
+2023,Q3,Male,Public Admin.,1.8923309244150255
+2023,Q4,Male,Public Admin.,2.067259533610929
+2024,Q1,Male,Public Admin.,3.2266371404420497
+2024,Q2,Male,Public Admin.,2.447711955705011
+2024,Q3,Male,Public Admin.,2.3411363139758
+2024,Q4,Male,Public Admin.,2.6608262170080734
+2025,Q1,Male,Public Admin.,2.6195644287011364
+2025,Q2,Male,Public Admin.,2.2279008666720643
+2025,Q3,Male,Public Admin.,2.299025410065282
+2025,Q4,Male,Public Admin.,2.3480885268199083
+2019,Q1,Male,Education,3.0955912597716106
+2019,Q2,Male,Education,3.004991705593655
+2019,Q3,Male,Education,3.2819762728550326
+2019,Q4,Male,Education,3.658363098680774
+2020,Q1,Male,Education,3.506913235347135
+2020,Q2,Male,Education,2.7691528537310863
+2020,Q3,Male,Education,2.35236503881056
+2020,Q4,Male,Education,2.7967373021816475
+2021,Q1,Male,Education,3.1122404555607543
+2021,Q2,Male,Education,3.8444742885474565
+2021,Q3,Male,Education,2.7985819297223857
+2021,Q4,Male,Education,4.003351457603607
+2022,Q1,Male,Education,3.625225134780253
+2022,Q2,Male,Education,3.8024687689932444
+2022,Q3,Male,Education,2.887536899777859
+2022,Q4,Male,Education,4.356681355277793
+2023,Q1,Male,Education,3.8272313379998724
+2023,Q2,Male,Education,3.827820812571127
+2023,Q3,Male,Education,3.867457437999252
+2023,Q4,Male,Education,3.89753427872817
+2024,Q1,Male,Education,3.792512696545145
+2024,Q2,Male,Education,4.089029230055147
+2024,Q3,Male,Education,3.599116166839563
+2024,Q4,Male,Education,3.7775256375470025
+2025,Q1,Male,Education,3.7529409049805644
+2025,Q2,Male,Education,3.4417126649111207
+2025,Q3,Male,Education,3.6402685681043727
+2025,Q4,Male,Education,3.8009403808303097
+2019,Q1,Male,Health & Social Work,1.3600356061951
+2019,Q2,Male,Health & Social Work,1.1916576146135842
+2019,Q3,Male,Health & Social Work,1.2746544452490283
+2019,Q4,Male,Health & Social Work,0.9543737584630486
+2020,Q1,Male,Health & Social Work,1.4665365254589666
+2020,Q2,Male,Health & Social Work,1.5482481405493396
+2020,Q3,Male,Health & Social Work,0.8208660979739929
+2020,Q4,Male,Health & Social Work,1.3455036020441424
+2021,Q1,Male,Health & Social Work,0.9271280974937836
+2021,Q2,Male,Health & Social Work,1.1768555952598652
+2021,Q3,Male,Health & Social Work,1.0125433696437978
+2021,Q4,Male,Health & Social Work,1.3862550787850145
+2022,Q1,Male,Health & Social Work,1.1028389662401579
+2022,Q2,Male,Health & Social Work,1.2201209254960512
+2022,Q3,Male,Health & Social Work,0.7544964168877051
+2022,Q4,Male,Health & Social Work,1.169772375473268
+2023,Q1,Male,Health & Social Work,1.1363189694027953
+2023,Q2,Male,Health & Social Work,0.7422836191220371
+2023,Q3,Male,Health & Social Work,0.7601847830145277
+2023,Q4,Male,Health & Social Work,1.356066480995413
+2024,Q1,Male,Health & Social Work,1.2178623745894568
+2024,Q2,Male,Health & Social Work,1.274620855252407
+2024,Q3,Male,Health & Social Work,1.0789924617212372
+2024,Q4,Male,Health & Social Work,0.9710385554967974
+2025,Q1,Male,Health & Social Work,0.8335335598681197
+2025,Q2,Male,Health & Social Work,1.1080481677095335
+2025,Q3,Male,Health & Social Work,0.8565555784958447
+2025,Q4,Male,Health & Social Work,0.8007401804554193
+2019,Q1,Male,"Arts, entertainment and recreation",0.4774136458803703
+2019,Q2,Male,"Arts, entertainment and recreation",0.44390258396134163
+2019,Q3,Male,"Arts, entertainment and recreation",0.3072129103943552
+2019,Q4,Male,"Arts, entertainment and recreation",0.3340178996121435
+2020,Q1,Male,"Arts, entertainment and recreation",0.6304464736116723
+2020,Q2,Male,"Arts, entertainment and recreation",0.07853998118710424
+2020,Q3,Male,"Arts, entertainment and recreation",0.39770328505762154
+2020,Q4,Male,"Arts, entertainment and recreation",0.5180693854201587
+2021,Q1,Male,"Arts, entertainment and recreation",0.16522650231564365
+2021,Q2,Male,"Arts, entertainment and recreation",0.5182306949887832
+2021,Q3,Male,"Arts, entertainment and recreation",0.07581975471670595
+2021,Q4,Male,"Arts, entertainment and recreation",0.37967606887031574
+2022,Q1,Male,"Arts, entertainment and recreation",0.25390052494734694
+2022,Q2,Male,"Arts, entertainment and recreation",0.22499337604353067
+2022,Q3,Male,"Arts, entertainment and recreation",0.2255202614166289
+2022,Q4,Male,"Arts, entertainment and recreation",0.18287798328279964
+2023,Q1,Male,"Arts, entertainment and recreation",0.3314552639197515
+2023,Q2,Male,"Arts, entertainment and recreation",0.32675812976282814
+2023,Q3,Male,"Arts, entertainment and recreation",0.2847870616915787
+2023,Q4,Male,"Arts, entertainment and recreation",0.26842417153355735
+2024,Q1,Male,"Arts, entertainment and recreation",0.1655742005600804
+2024,Q2,Male,"Arts, entertainment and recreation",0.2886785618220609
+2024,Q3,Male,"Arts, entertainment and recreation",0.154407968098554
+2024,Q4,Male,"Arts, entertainment and recreation",0.2365596586559546
+2025,Q1,Male,"Arts, entertainment and recreation",0.3298832088759768
+2025,Q2,Male,"Arts, entertainment and recreation",0.23946167017060752
+2025,Q3,Male,"Arts, entertainment and recreation",0.2675162655510087
+2025,Q4,Male,"Arts, entertainment and recreation",0.3694739080798865
+2019,Q1,Male,Other Services,2.9820140268397353
+2019,Q2,Male,Other Services,2.208649861535876
+2019,Q3,Male,Other Services,2.503185115954164
+2019,Q4,Male,Other Services,2.112343467769572
+2020,Q1,Male,Other Services,3.3977516970367945
+2020,Q2,Male,Other Services,3.000039377190188
+2020,Q3,Male,Other Services,2.4517805101551797
+2020,Q4,Male,Other Services,3.0284936685896247
+2021,Q1,Male,Other Services,2.767583483425234
+2021,Q2,Male,Other Services,1.804778498427197
+2021,Q3,Male,Other Services,2.8198297314465166
+2021,Q4,Male,Other Services,2.727324938611138
+2022,Q1,Male,Other Services,3.167545519181049
+2022,Q2,Male,Other Services,2.7168851673034755
+2022,Q3,Male,Other Services,1.7915339670559032
+2022,Q4,Male,Other Services,2.977540504228727
+2023,Q1,Male,Other Services,2.870902046161789
+2023,Q2,Male,Other Services,3.3632839312345397
+2023,Q3,Male,Other Services,2.982103048602868
+2023,Q4,Male,Other Services,2.8058685934482774
+2024,Q1,Male,Other Services,2.616907169719731
+2024,Q2,Male,Other Services,2.7349675229437795
+2024,Q3,Male,Other Services,3.0491679567427528
+2024,Q4,Male,Other Services,2.9394641672624675
+2025,Q1,Male,Other Services,3.2567724364778505
+2025,Q2,Male,Other Services,3.472644831230989
+2025,Q3,Male,Other Services,3.0453949917719467
+2025,Q4,Male,Other Services,2.511505418856319
+2019,Q1,Male,Households as Employers,4.873893541012297
+2019,Q2,Male,Households as Employers,6.076152695580491
+2019,Q3,Male,Households as Employers,5.47868697317719
+2019,Q4,Male,Households as Employers,4.847713436109188
+2020,Q1,Male,Households as Employers,3.4560877617354637
+2020,Q2,Male,Households as Employers,3.7695953709638395
+2020,Q3,Male,Households as Employers,2.8913053013962453
+2020,Q4,Male,Households as Employers,3.2861994972688318
+2021,Q1,Male,Households as Employers,3.156171434395634
+2021,Q2,Male,Households as Employers,2.930736399201302
+2021,Q3,Male,Households as Employers,2.378025224963504
+2021,Q4,Male,Households as Employers,3.0010991225774104
+2022,Q1,Male,Households as Employers,2.49907816613079
+2022,Q2,Male,Households as Employers,2.6599119663925674
+2022,Q3,Male,Households as Employers,2.64685310743903
+2022,Q4,Male,Households as Employers,2.2779066081779216
+2023,Q1,Male,Households as Employers,2.2524321893380455
+2023,Q2,Male,Households as Employers,2.7602145387266304
+2023,Q3,Male,Households as Employers,3.1818972399527357
+2023,Q4,Male,Households as Employers,2.7700888700405093
+2024,Q1,Male,Households as Employers,2.5852631435076154
+2024,Q2,Male,Households as Employers,2.8802272289706763
+2024,Q3,Male,Households as Employers,2.377650235119337
+2024,Q4,Male,Households as Employers,2.2578185001990705
+2025,Q1,Male,Households as Employers,2.164229590265177
+2025,Q2,Male,Households as Employers,2.7068603254331562
+2025,Q3,Male,Households as Employers,2.080694432873864
+2025,Q4,Male,Households as Employers,1.7624451484074952
+2019,Q1,Male,Activities of extraterritorial organizations and bodies,0.46843315814511016
+2019,Q2,Male,Activities of extraterritorial organizations and bodies,0.771878499926197
+2019,Q3,Male,Activities of extraterritorial organizations and bodies,0.6588126409533169
+2019,Q4,Male,Activities of extraterritorial organizations and bodies,0.5249649347686537
+2020,Q1,Male,Activities of extraterritorial organizations and bodies,0.24364354285707585
+2020,Q2,Male,Activities of extraterritorial organizations and bodies,0.3629245648474405
+2020,Q3,Male,Activities of extraterritorial organizations and bodies,0.1292732632247215
+2020,Q4,Male,Activities of extraterritorial organizations and bodies,0.1803879840273962
+2021,Q1,Male,Activities of extraterritorial organizations and bodies,0.07548826384227114
+2021,Q2,Male,Activities of extraterritorial organizations and bodies,0.2141427311309257
+2021,Q3,Male,Activities of extraterritorial organizations and bodies,0.023842092972265003
+2021,Q4,Male,Activities of extraterritorial organizations and bodies,0.006990017497392618
+2022,Q1,Male,Activities of extraterritorial organizations and bodies,0.07885884039537447
+2022,Q2,Male,Activities of extraterritorial organizations and bodies,0.07450857038082949
+2022,Q3,Male,Activities of extraterritorial organizations and bodies,0.2229183395442244
+2022,Q4,Male,Activities of extraterritorial organizations and bodies,0.16419732913984952
+2023,Q1,Male,Activities of extraterritorial organizations and bodies,0.08048442631126501
+2023,Q2,Male,Activities of extraterritorial organizations and bodies,0.13390523946400704
+2023,Q3,Male,Activities of extraterritorial organizations and bodies,0.14748919078232636
+2023,Q4,Male,Activities of extraterritorial organizations and bodies,0.2186278880248532
+2024,Q1,Male,Activities of extraterritorial organizations and bodies,0.10752905600652113
+2024,Q2,Male,Activities of extraterritorial organizations and bodies,0.0729391044345853
+2024,Q3,Male,Activities of extraterritorial organizations and bodies,0.09560425494742425
+2024,Q4,Male,Activities of extraterritorial organizations and bodies,0.06631637253492847
+2025,Q1,Male,Activities of extraterritorial organizations and bodies,0.06392262974425336
+2025,Q2,Male,Activities of extraterritorial organizations and bodies,0.16243757293469566
+2025,Q3,Male,Activities of extraterritorial organizations and bodies,0.10271365456999774
+2025,Q4,Male,Activities of extraterritorial organizations and bodies,0.10966010009307431
+2019,Q1,Female,_n_employed,1407387.8726897282
+2019,Q2,Female,_n_employed,1417046.919762993
+2019,Q3,Female,_n_employed,1360765.4290855124
+2019,Q4,Female,_n_employed,1507240.8552400034
+2020,Q1,Female,_n_employed,1623447.5170242905
+2020,Q2,Female,_n_employed,1390774.2463264465
+2020,Q3,Female,_n_employed,1553810.0623817444
+2020,Q4,Female,_n_employed,1522334.6038220068
+2021,Q1,Female,_n_employed,1456886.0406684875
+2021,Q2,Female,_n_employed,1357145.5234127045
+2021,Q3,Female,_n_employed,1366065.7982635498
+2021,Q4,Female,_n_employed,1630832.4650280476
+2022,Q1,Female,_n_employed,1636531.8683738708
+2022,Q2,Female,_n_employed,1441571.5956230164
+2022,Q3,Female,_n_employed,1615872.579490564
+2022,Q4,Female,_n_employed,1580616.2429542248
+2023,Q1,Female,_n_employed,1744139.0166358948
+2023,Q2,Female,_n_employed,1808989.4914073944
+2023,Q3,Female,_n_employed,1723553.2534599304
+2023,Q4,Female,_n_employed,1851748.989063263
+2024,Q1,Female,_n_employed,2019316.0810089111
+2024,Q2,Female,_n_employed,1956644.9277191162
+2024,Q3,Female,_n_employed,2004068.1774139404
+2024,Q4,Female,_n_employed,2096061.6178894043
+2025,Q1,Female,_n_employed,2227703.0525665283
+2025,Q2,Female,_n_employed,2110911.827987671
+2025,Q3,Female,_n_employed,2222577.5753936768
+2025,Q4,Female,_n_employed,2301852.462463379
+2019,Q1,Female,Agriculture,48.249030626278774
+2019,Q2,Female,Agriculture,46.41384223904248
+2019,Q3,Female,Agriculture,44.590633005675905
+2019,Q4,Female,Agriculture,45.70840456552641
+2020,Q1,Female,Agriculture,52.12784625265273
+2020,Q2,Female,Agriculture,51.07141000777351
+2020,Q3,Female,Agriculture,41.96211140357114
+2020,Q4,Female,Agriculture,51.86886658390135
+2021,Q1,Female,Agriculture,61.32151448230802
+2021,Q2,Female,Agriculture,56.21272147654454
+2021,Q3,Female,Agriculture,53.13149270877931
+2021,Q4,Female,Agriculture,55.67823448476735
+2022,Q1,Female,Agriculture,60.7023622330732
+2022,Q2,Female,Agriculture,52.95554294843428
+2022,Q3,Female,Agriculture,54.70350592810346
+2022,Q4,Female,Agriculture,53.64731501124056
+2023,Q1,Female,Agriculture,54.583920794846286
+2023,Q2,Female,Agriculture,54.584231097983334
+2023,Q3,Female,Agriculture,48.71513545726687
+2023,Q4,Female,Agriculture,52.69322449897306
+2024,Q1,Female,Agriculture,55.52583921171848
+2024,Q2,Female,Agriculture,45.842053148241966
+2024,Q3,Female,Agriculture,40.31915599638028
+2024,Q4,Female,Agriculture,49.61923066509713
+2025,Q1,Female,Agriculture,51.957624859987064
+2025,Q2,Female,Agriculture,45.42497428004106
+2025,Q3,Female,Agriculture,43.66333950157948
+2025,Q4,Female,Agriculture,49.12331586533566
+2019,Q1,Female,Mining and quarrying,0.5724595780130769
+2019,Q2,Female,Mining and quarrying,0.3502150837639634
+2019,Q3,Female,Mining and quarrying,0.7818718212174656
+2019,Q4,Female,Mining and quarrying,0.239153768123279
+2020,Q1,Female,Mining and quarrying,0.32817448270348903
+2020,Q2,Female,Mining and quarrying,0.3284409148638356
+2020,Q3,Female,Mining and quarrying,0.7822192686345559
+2020,Q4,Female,Mining and quarrying,0.2693021812489349
+2021,Q1,Female,Mining and quarrying,0.22888445003403124
+2021,Q2,Female,Mining and quarrying,0.03457403517960368
+2021,Q3,Female,Mining and quarrying,0.322873594125066
+2021,Q4,Female,Mining and quarrying,0.43442048027471275
+2022,Q1,Female,Mining and quarrying,0.03676258902206156
+2022,Q2,Female,Mining and quarrying,0.8878544152162086
+2022,Q3,Female,Mining and quarrying,0.7577331708726576
+2022,Q4,Female,Mining and quarrying,0.8782265840604226
+2023,Q1,Female,Mining and quarrying,0.2713051459014766
+2023,Q2,Female,Mining and quarrying,0.39300188309744033
+2023,Q3,Female,Mining and quarrying,0.2424311526778017
+2023,Q4,Female,Mining and quarrying,0.2722273994225486
+2024,Q1,Female,Mining and quarrying,0.5432586108317049
+2024,Q2,Female,Mining and quarrying,0.5767975359423383
+2024,Q3,Female,Mining and quarrying,0.6212983456335188
+2024,Q4,Female,Mining and quarrying,0.8324025802046262
+2025,Q1,Female,Mining and quarrying,0.7054107434531948
+2025,Q2,Female,Mining and quarrying,0.8410165239339606
+2025,Q3,Female,Mining and quarrying,0.6017747457300548
+2025,Q4,Female,Mining and quarrying,0.6637551942339658
+2019,Q1,Female,Manufacturing,7.2435940619289845
+2019,Q2,Female,Manufacturing,6.394542333016709
+2019,Q3,Female,Manufacturing,7.905749964296607
+2019,Q4,Female,Manufacturing,6.301487231440281
+2020,Q1,Female,Manufacturing,5.524714643689606
+2020,Q2,Female,Manufacturing,4.397199084762029
+2020,Q3,Female,Manufacturing,7.079049139588066
+2020,Q4,Female,Manufacturing,4.397764398307511
+2021,Q1,Female,Manufacturing,4.2088877767126
+2021,Q2,Female,Manufacturing,5.148285348816991
+2021,Q3,Female,Manufacturing,6.57211389612784
+2021,Q4,Female,Manufacturing,5.444563287061447
+2022,Q1,Female,Manufacturing,5.252327675622388
+2022,Q2,Female,Manufacturing,5.713574010136341
+2022,Q3,Female,Manufacturing,6.789997228365725
+2022,Q4,Female,Manufacturing,4.867162673930858
+2023,Q1,Female,Manufacturing,4.753938235034864
+2023,Q2,Female,Manufacturing,4.961591291592207
+2023,Q3,Female,Manufacturing,6.275337506569553
+2023,Q4,Female,Manufacturing,5.377231085515295
+2024,Q1,Female,Manufacturing,4.620814129409418
+2024,Q2,Female,Manufacturing,5.695162936096821
+2024,Q3,Female,Manufacturing,6.939439331668451
+2024,Q4,Female,Manufacturing,5.840262987474679
+2025,Q1,Female,Manufacturing,4.3341723213058785
+2025,Q2,Female,Manufacturing,5.739468476888385
+2025,Q3,Female,Manufacturing,5.653165064988502
+2025,Q4,Female,Manufacturing,4.514255037297735
+2019,Q2,Female,Electricity gas stream and air conditioning supply,0.10736149338107565
+2019,Q4,Female,Electricity gas stream and air conditioning supply,0.06922807966440452
+2020,Q1,Female,Electricity gas stream and air conditioning supply,0.05811729724561291
+2020,Q2,Female,Electricity gas stream and air conditioning supply,0.023290850948231398
+2020,Q3,Female,Electricity gas stream and air conditioning supply,0.07919744278118054
+2020,Q4,Female,Electricity gas stream and air conditioning supply,0.06356896818678291
+2021,Q1,Female,Electricity gas stream and air conditioning supply,0.033255510891761285
+2021,Q2,Female,Electricity gas stream and air conditioning supply,0.12287289735043427
+2021,Q3,Female,Electricity gas stream and air conditioning supply,0.03623109391249862
+2021,Q4,Female,Electricity gas stream and air conditioning supply,0.14161981621193348
+2022,Q1,Female,Electricity gas stream and air conditioning supply,0.02332247204444931
+2022,Q3,Female,Electricity gas stream and air conditioning supply,0.04976042177020347
+2023,Q1,Female,Electricity gas stream and air conditioning supply,0.1693963488184945
+2023,Q2,Female,Electricity gas stream and air conditioning supply,0.0720768920722644
+2023,Q3,Female,Electricity gas stream and air conditioning supply,0.024485452962930653
+2023,Q4,Female,Electricity gas stream and air conditioning supply,0.09895790448232321
+2024,Q1,Female,Electricity gas stream and air conditioning supply,0.055804611327390445
+2024,Q3,Female,Electricity gas stream and air conditioning supply,0.025709651919206943
+2024,Q4,Female,Electricity gas stream and air conditioning supply,0.09865903487512688
+2025,Q1,Female,Electricity gas stream and air conditioning supply,0.06898231470305898
+2025,Q4,Female,Electricity gas stream and air conditioning supply,0.07015174248345626
+2019,Q1,Female,"water supply, gas and remediation services",0.11548580803776791
+2019,Q2,Female,"water supply, gas and remediation services",0.2281547188708799
+2019,Q3,Female,"water supply, gas and remediation services",0.11644023214798566
+2019,Q4,Female,"water supply, gas and remediation services",0.2188919235124274
+2020,Q1,Female,"water supply, gas and remediation services",0.34457487535722925
+2020,Q2,Female,"water supply, gas and remediation services",0.28792240309962963
+2020,Q3,Female,"water supply, gas and remediation services",0.12836303348786474
+2020,Q4,Female,"water supply, gas and remediation services",0.23004566743787044
+2021,Q1,Female,"water supply, gas and remediation services",0.07064811723442174
+2021,Q2,Female,"water supply, gas and remediation services",0.2590241724481963
+2021,Q3,Female,"water supply, gas and remediation services",0.14647984378986947
+2021,Q4,Female,"water supply, gas and remediation services",0.29479794627040296
+2022,Q1,Female,"water supply, gas and remediation services",0.04915446345489107
+2022,Q2,Female,"water supply, gas and remediation services",0.09210059059157162
+2022,Q3,Female,"water supply, gas and remediation services",0.05146272384251334
+2022,Q4,Female,"water supply, gas and remediation services",0.012744991913822907
+2023,Q1,Female,"water supply, gas and remediation services",0.1568689418995702
+2023,Q2,Female,"water supply, gas and remediation services",0.0790415212754098
+2023,Q3,Female,"water supply, gas and remediation services",0.011710341337643109
+2023,Q4,Female,"water supply, gas and remediation services",0.019178700247008486
+2024,Q1,Female,"water supply, gas and remediation services",0.053857114785878464
+2024,Q2,Female,"water supply, gas and remediation services",0.07931162684877788
+2024,Q3,Female,"water supply, gas and remediation services",0.056574723020195276
+2024,Q4,Female,"water supply, gas and remediation services",0.12798885867192217
+2025,Q1,Female,"water supply, gas and remediation services",0.04229224075644354
+2025,Q2,Female,"water supply, gas and remediation services",0.10155107944997095
+2025,Q3,Female,"water supply, gas and remediation services",0.13336803086624793
+2025,Q4,Female,"water supply, gas and remediation services",0.19180665456060333
+2019,Q1,Female,Construction,4.575625215950699
+2019,Q2,Female,Construction,3.6316571158158735
+2019,Q3,Female,Construction,3.1020682389280485
+2019,Q4,Female,Construction,3.765723181048075
+2020,Q1,Female,Construction,4.308269322376815
+2020,Q2,Female,Construction,5.495097627833816
+2020,Q3,Female,Construction,6.198772081854092
+2020,Q4,Female,Construction,6.172238382685157
+2021,Q1,Female,Construction,3.03837511635697
+2021,Q2,Female,Construction,3.405153222839799
+2021,Q3,Female,Construction,4.35754181962975
+2021,Q4,Female,Construction,3.3263829304176413
+2022,Q1,Female,Construction,3.3452538776824157
+2022,Q2,Female,Construction,2.080345024480473
+2022,Q3,Female,Construction,3.510008522919412
+2022,Q4,Female,Construction,3.4364714413839788
+2023,Q1,Female,Construction,2.3977140767851566
+2023,Q2,Female,Construction,2.5748352157581085
+2023,Q3,Female,Construction,3.8129224889904862
+2023,Q4,Female,Construction,1.9218435531533435
+2024,Q1,Female,Construction,2.0989906357904475
+2024,Q2,Female,Construction,3.2836724533354853
+2024,Q3,Female,Construction,4.6659017269807705
+2024,Q4,Female,Construction,2.442936741175769
+2025,Q1,Female,Construction,2.2459524282183523
+2025,Q2,Female,Construction,2.1512276512016615
+2025,Q3,Female,Construction,3.595256538410464
+2025,Q4,Female,Construction,2.1087016146455926
+2019,Q1,Female,Trade & Retail,17.120259648532922
+2019,Q2,Female,Trade & Retail,17.312947261206084
+2019,Q3,Female,Trade & Retail,17.468776375603017
+2019,Q4,Female,Trade & Retail,19.08738474277822
+2020,Q1,Female,Trade & Retail,13.567800238735087
+2020,Q2,Female,Trade & Retail,16.8009489372656
+2020,Q3,Female,Trade & Retail,21.225410401671734
+2020,Q4,Female,Trade & Retail,15.199855646850589
+2021,Q1,Female,Trade & Retail,12.95734030072192
+2021,Q2,Female,Trade & Retail,12.03980304227752
+2021,Q3,Female,Trade & Retail,15.622668088225314
+2021,Q4,Female,Trade & Retail,13.391290193297461
+2022,Q1,Female,Trade & Retail,12.451563274263256
+2022,Q2,Female,Trade & Retail,15.440922442551116
+2022,Q3,Female,Trade & Retail,12.57051964996177
+2022,Q4,Female,Trade & Retail,13.745002016468638
+2023,Q1,Female,Trade & Retail,15.715198563346785
+2023,Q2,Female,Trade & Retail,17.597511612348157
+2023,Q3,Female,Trade & Retail,18.88537440344404
+2023,Q4,Female,Trade & Retail,15.08021128769585
+2024,Q1,Female,Trade & Retail,13.806967216920944
+2024,Q2,Female,Trade & Retail,18.29505057464341
+2024,Q3,Female,Trade & Retail,20.343080203819035
+2024,Q4,Female,Trade & Retail,17.721063235913718
+2025,Q1,Female,Trade & Retail,16.62731004556822
+2025,Q2,Female,Trade & Retail,20.05863224698499
+2025,Q3,Female,Trade & Retail,20.82923565592595
+2025,Q4,Female,Trade & Retail,18.78467158204199
+2019,Q1,Female,Transport & Storage,0.38356633084236214
+2019,Q2,Female,Transport & Storage,0.31289251811756436
+2019,Q3,Female,Transport & Storage,0.3386177402696565
+2019,Q4,Female,Transport & Storage,0.4630010270580671
+2020,Q1,Female,Transport & Storage,0.19156445017069304
+2020,Q2,Female,Transport & Storage,0.7784312188224749
+2020,Q3,Female,Transport & Storage,0.4580344299441786
+2020,Q4,Female,Transport & Storage,0.4344487396788678
+2021,Q1,Female,Transport & Storage,0.23800652934985192
+2021,Q2,Female,Transport & Storage,0.4063230812526201
+2021,Q3,Female,Transport & Storage,0.24783177534659995
+2021,Q4,Female,Transport & Storage,0.48070228062354875
+2022,Q1,Female,Transport & Storage,0.27736418659320156
+2022,Q2,Female,Transport & Storage,0.613015637776485
+2022,Q3,Female,Transport & Storage,0.7724329348552509
+2022,Q4,Female,Transport & Storage,0.36358691336391574
+2023,Q1,Female,Transport & Storage,0.5996692419651648
+2023,Q2,Female,Transport & Storage,0.38022856923776427
+2023,Q3,Female,Transport & Storage,0.7489773331601609
+2023,Q4,Female,Transport & Storage,0.414713124307864
+2024,Q1,Female,Transport & Storage,0.5335602197226319
+2024,Q2,Female,Transport & Storage,0.8628850520709938
+2024,Q3,Female,Transport & Storage,1.1149878949259484
+2024,Q4,Female,Transport & Storage,0.906216283073628
+2025,Q1,Female,Transport & Storage,0.9001632460944551
+2025,Q2,Female,Transport & Storage,0.9174837122401686
+2025,Q3,Female,Transport & Storage,0.9830438488079571
+2025,Q4,Female,Transport & Storage,0.9350722890942683
+2019,Q1,Female,Accommodation & Food,2.6986603259677415
+2019,Q2,Female,Accommodation & Food,3.6470688133993767
+2019,Q3,Female,Accommodation & Food,3.592165938031959
+2019,Q4,Female,Accommodation & Food,3.351880045207203
+2020,Q1,Female,Accommodation & Food,3.7801883644207335
+2020,Q2,Female,Accommodation & Food,2.07761070021373
+2020,Q3,Female,Accommodation & Food,3.8329541957496613
+2020,Q4,Female,Accommodation & Food,2.366355000244868
+2021,Q1,Female,Accommodation & Food,1.602871586526865
+2021,Q2,Female,Accommodation & Food,1.6509855045698345
+2021,Q3,Female,Accommodation & Food,1.2573754153084482
+2021,Q4,Female,Accommodation & Food,1.775521954160414
+2022,Q1,Female,Accommodation & Food,1.4627835390133446
+2022,Q2,Female,Accommodation & Food,1.6878552596463585
+2022,Q3,Female,Accommodation & Food,2.2124555006341815
+2022,Q4,Female,Accommodation & Food,2.2002407876531094
+2023,Q1,Female,Accommodation & Food,3.2129225433756505
+2023,Q2,Female,Accommodation & Food,2.7187070628255348
+2023,Q3,Female,Accommodation & Food,2.8069035122369277
+2023,Q4,Female,Accommodation & Food,3.878773952812738
+2024,Q1,Female,Accommodation & Food,3.303686282949536
+2024,Q2,Female,Accommodation & Food,4.01789492836281
+2024,Q3,Female,Accommodation & Food,4.392857321124542
+2024,Q4,Female,Accommodation & Food,3.3486446900149285
+2025,Q1,Female,Accommodation & Food,4.051583987983823
+2025,Q2,Female,Accommodation & Food,4.125308631253896
+2025,Q3,Female,Accommodation & Food,4.74409154853747
+2025,Q4,Female,Accommodation & Food,4.300651785525744
+2019,Q1,Female,ICT,0.09546114132844224
+2019,Q2,Female,ICT,0.23890639057577764
+2019,Q3,Female,ICT,0.26811196801990084
+2019,Q4,Female,ICT,0.40398682657991164
+2020,Q1,Female,ICT,0.08281511677114722
+2020,Q2,Female,ICT,0.07666566595599388
+2020,Q3,Female,ICT,0.22390028567097184
+2020,Q4,Female,ICT,0.19001112454106733
+2021,Q1,Female,ICT,0.3276867837969922
+2021,Q2,Female,ICT,0.20250068778580863
+2021,Q3,Female,ICT,0.2678732148912136
+2021,Q4,Female,ICT,0.10982254191571211
+2022,Q1,Female,ICT,0.21424920673891162
+2022,Q2,Female,ICT,0.16328852568933347
+2022,Q3,Female,ICT,0.12582715972615943
+2022,Q4,Female,ICT,0.08012820126229078
+2023,Q1,Female,ICT,0.3374750268740229
+2023,Q2,Female,ICT,0.12849222600930085
+2023,Q3,Female,ICT,0.2001539558159768
+2023,Q4,Female,ICT,0.0879443018770634
+2024,Q1,Female,ICT,0.19264055159801027
+2024,Q2,Female,ICT,0.08958385171438865
+2024,Q3,Female,ICT,0.16369309421149522
+2024,Q4,Female,ICT,0.20952524736449077
+2025,Q1,Female,ICT,0.22274726051372892
+2025,Q2,Female,ICT,0.13655331512895583
+2025,Q3,Female,ICT,0.288785566673088
+2025,Q4,Female,ICT,0.3260885704757048
+2019,Q1,Female,Finance & Insurance,1.4046262617351666
+2019,Q2,Female,Finance & Insurance,0.8860285992130408
+2019,Q3,Female,Finance & Insurance,1.338700881009855
+2019,Q4,Female,Finance & Insurance,0.854835761995609
+2020,Q1,Female,Finance & Insurance,1.1413867278611056
+2020,Q2,Female,Finance & Insurance,0.8324728924530755
+2020,Q3,Female,Finance & Insurance,1.1196343151176518
+2020,Q4,Female,Finance & Insurance,0.8800221624316679
+2021,Q1,Female,Finance & Insurance,0.9896492107500219
+2021,Q2,Female,Finance & Insurance,0.9938656382456893
+2021,Q3,Female,Finance & Insurance,0.9112622295510391
+2021,Q4,Female,Finance & Insurance,0.9954818591303846
+2022,Q1,Female,Finance & Insurance,0.9759887781308589
+2022,Q2,Female,Finance & Insurance,0.7980480445351305
+2022,Q3,Female,Finance & Insurance,0.7255859773772573
+2022,Q4,Female,Finance & Insurance,0.6111658563144691
+2023,Q1,Female,Finance & Insurance,0.8002446069287424
+2023,Q2,Female,Finance & Insurance,1.133489512177672
+2023,Q3,Female,Finance & Insurance,0.9990717793159061
+2023,Q4,Female,Finance & Insurance,1.2630451800751894
+2024,Q1,Female,Finance & Insurance,1.062653941897143
+2024,Q2,Female,Finance & Insurance,0.9904070401562468
+2024,Q3,Female,Finance & Insurance,1.070760233248795
+2024,Q4,Female,Finance & Insurance,0.9944568327864611
+2025,Q1,Female,Finance & Insurance,1.0065348833773222
+2025,Q2,Female,Finance & Insurance,1.079843380429838
+2025,Q3,Female,Finance & Insurance,0.8725057821863369
+2025,Q4,Female,Finance & Insurance,1.1565611401833547
+2019,Q2,Female,Real estate activities,0.03188374054078872
+2019,Q4,Female,Real estate activities,0.1325718509456026
+2020,Q1,Female,Real estate activities,0.025995138201488913
+2020,Q2,Female,Real estate activities,0.02280599361845017
+2020,Q3,Female,Real estate activities,0.22979935738457277
+2020,Q4,Female,Real estate activities,0.026988409707596528
+2021,Q1,Female,Real estate activities,0.06835038593604745
+2021,Q2,Female,Real estate activities,0.1388753582341012
+2021,Q3,Female,Real estate activities,0.027813893422121577
+2022,Q1,Female,Real estate activities,0.014315726912074188
+2022,Q2,Female,Real estate activities,0.02859502605969066
+2022,Q4,Female,Real estate activities,0.0166122362110638
+2023,Q1,Female,Real estate activities,0.020298069529791102
+2023,Q2,Female,Real estate activities,0.050184198310240444
+2023,Q3,Female,Real estate activities,0.06252981258206772
+2023,Q4,Female,Real estate activities,0.060246633380094325
+2024,Q1,Female,Real estate activities,0.04637969365532699
+2024,Q2,Female,Real estate activities,0.038191900130806936
+2024,Q3,Female,Real estate activities,0.05962927334368209
+2024,Q4,Female,Real estate activities,0.07910292652620164
+2025,Q1,Female,Real estate activities,0.08339169750334853
+2025,Q2,Female,Real estate activities,0.21907209341367442
+2025,Q3,Female,Real estate activities,0.1208656482423851
+2025,Q4,Female,Real estate activities,0.022540648737846655
+2019,Q1,Female,Professional Services,0.3485054047290599
+2019,Q2,Female,Professional Services,0.8561821649337494
+2019,Q3,Female,Professional Services,0.5806093254083562
+2019,Q4,Female,Professional Services,0.6223383520549791
+2020,Q1,Female,Professional Services,0.5957181602218597
+2020,Q2,Female,Professional Services,0.11394043679513736
+2020,Q3,Female,Professional Services,0.22552249027652818
+2020,Q4,Female,Professional Services,0.48892393901533127
+2021,Q1,Female,Professional Services,0.13849940276352327
+2021,Q2,Female,Professional Services,0.44915311603006536
+2021,Q3,Female,Professional Services,0.1725348337495055
+2021,Q4,Female,Professional Services,0.12812064324447078
+2022,Q1,Female,Professional Services,0.6143557046695376
+2022,Q2,Female,Professional Services,0.36356232644856584
+2022,Q3,Female,Professional Services,0.42665082149741596
+2022,Q4,Female,Professional Services,0.4135131328390468
+2023,Q1,Female,Professional Services,0.6877164354639091
+2023,Q2,Female,Professional Services,0.2670621292959292
+2023,Q3,Female,Professional Services,0.20282945422247933
+2023,Q4,Female,Professional Services,0.8437165497229252
+2024,Q1,Female,Professional Services,0.33413075346806875
+2024,Q2,Female,Professional Services,0.5344350614082003
+2024,Q3,Female,Professional Services,0.7712032539384515
+2024,Q4,Female,Professional Services,0.45089732156233053
+2025,Q1,Female,Professional Services,0.3780663204570588
+2025,Q2,Female,Professional Services,0.5310421681792167
+2025,Q3,Female,Professional Services,0.7152000973836425
+2025,Q4,Female,Professional Services,0.5312290119661073
+2019,Q1,Female,Administrative and support activities,1.3881314379911018
+2019,Q2,Female,Administrative and support activities,1.1898227034317703
+2019,Q3,Female,Administrative and support activities,1.1419672040537765
+2019,Q4,Female,Administrative and support activities,1.4325513314567004
+2020,Q1,Female,Administrative and support activities,1.2618254052060462
+2020,Q2,Female,Administrative and support activities,0.6608035680248237
+2020,Q3,Female,Administrative and support activities,1.4231819841739264
+2020,Q4,Female,Administrative and support activities,1.2857669142419728
+2021,Q1,Female,Administrative and support activities,1.0549139920659352
+2021,Q2,Female,Administrative and support activities,1.6982318061571873
+2021,Q3,Female,Administrative and support activities,1.3614044981188396
+2021,Q4,Female,Administrative and support activities,1.22345063476036
+2022,Q1,Female,Administrative and support activities,0.532581616662031
+2022,Q2,Female,Administrative and support activities,1.2995504327423846
+2022,Q3,Female,Administrative and support activities,1.0788278831935127
+2022,Q4,Female,Administrative and support activities,1.6749642496813881
+2023,Q1,Female,Administrative and support activities,1.8555547015951759
+2023,Q2,Female,Administrative and support activities,1.531608923941869
+2023,Q3,Female,Administrative and support activities,1.515931813828378
+2023,Q4,Female,Administrative and support activities,0.9730435320896588
+2024,Q1,Female,Administrative and support activities,1.3234904131045595
+2024,Q2,Female,Administrative and support activities,1.8718763504027989
+2024,Q3,Female,Administrative and support activities,1.6706430982741143
+2024,Q4,Female,Administrative and support activities,2.1746446403602406
+2025,Q1,Female,Administrative and support activities,1.8896897346718133
+2025,Q2,Female,Administrative and support activities,1.8140709808951931
+2025,Q3,Female,Administrative and support activities,1.3963568187217714
+2025,Q4,Female,Administrative and support activities,1.5569426615918607
+2019,Q1,Female,Public Admin.,0.9836422779450349
+2019,Q2,Female,Public Admin.,1.3915101407458437
+2019,Q3,Female,Public Admin.,1.6283886382154371
+2019,Q4,Female,Public Admin.,1.1185009012587828
+2020,Q1,Female,Public Admin.,1.236356288679662
+2020,Q2,Female,Public Admin.,1.5546598480376037
+2020,Q3,Female,Public Admin.,1.1026824736890122
+2020,Q4,Female,Public Admin.,0.7813815024722904
+2021,Q1,Female,Public Admin.,0.9225416304762981
+2021,Q2,Female,Public Admin.,1.2147110075188625
+2021,Q3,Female,Public Admin.,0.7534810667789229
+2021,Q4,Female,Public Admin.,0.87533666092026
+2022,Q1,Female,Public Admin.,0.7067435693584714
+2022,Q2,Female,Public Admin.,1.1099323223410902
+2022,Q3,Female,Public Admin.,1.0466849712134454
+2022,Q4,Female,Public Admin.,1.1219455419935025
+2023,Q1,Female,Public Admin.,0.5322601602155776
+2023,Q2,Female,Public Admin.,0.8285797786389157
+2023,Q3,Female,Public Admin.,1.0730448894381546
+2023,Q4,Female,Public Admin.,1.0110762586655797
+2024,Q1,Female,Public Admin.,1.2310330723005918
+2024,Q2,Female,Public Admin.,0.8474725628801307
+2024,Q3,Female,Public Admin.,0.9511623781181944
+2024,Q4,Female,Public Admin.,0.8431792796612855
+2025,Q1,Female,Public Admin.,0.876647374019616
+2025,Q2,Female,Public Admin.,0.8802508729800769
+2025,Q3,Female,Public Admin.,0.9941521327664037
+2025,Q4,Female,Public Admin.,1.0959346331365967
+2019,Q1,Female,Education,3.8403750322950128
+2019,Q2,Female,Education,4.225740669466809
+2019,Q3,Female,Education,4.3175160279918385
+2019,Q4,Female,Education,3.6021438777516965
+2020,Q1,Female,Education,3.6227291601857026
+2020,Q2,Female,Education,3.7066850310177992
+2020,Q3,Female,Education,2.744314517713082
+2020,Q4,Female,Education,3.726700507074148
+2021,Q1,Female,Education,2.9272806895880796
+2021,Q2,Female,Education,5.122037801956223
+2021,Q3,Female,Education,3.9592264373904618
+2021,Q4,Female,Education,4.753087385960479
+2022,Q1,Female,Education,3.890522068623718
+2022,Q2,Female,Education,4.892742773387652
+2022,Q3,Female,Education,3.726548022250094
+2022,Q4,Female,Education,5.842621308304419
+2023,Q1,Female,Education,3.7742058869156123
+2023,Q2,Female,Education,4.3460942142713375
+2023,Q3,Female,Education,4.4493122373457945
+2023,Q4,Female,Education,5.569958529879144
+2024,Q1,Female,Education,5.535304472709068
+2024,Q2,Female,Education,5.849026041984503
+2024,Q3,Female,Education,4.7856621595869715
+2024,Q4,Female,Education,4.639244052297727
+2025,Q1,Female,Education,4.798052442846404
+2025,Q2,Female,Education,5.194924065602735
+2025,Q3,Female,Education,4.436345547506134
+2025,Q4,Female,Education,5.243705401134061
+2019,Q1,Female,Health & Social Work,1.5173807715555583
+2019,Q2,Female,Health & Social Work,1.6736080304662941
+2019,Q3,Female,Health & Social Work,1.5758599527878872
+2019,Q4,Female,Health & Social Work,1.560091973240452
+2020,Q1,Female,Health & Social Work,2.424754458115974
+2020,Q2,Female,Health & Social Work,2.1588923146025603
+2020,Q3,Female,Health & Social Work,1.8317296597992916
+2020,Q4,Female,Health & Social Work,1.8335161488100487
+2021,Q1,Female,Health & Social Work,1.8129966212644546
+2021,Q2,Female,Health & Social Work,2.0645096997412167
+2021,Q3,Female,Health & Social Work,1.8984081387817506
+2021,Q4,Female,Health & Social Work,1.9098661834428858
+2022,Q1,Female,Health & Social Work,1.533993379133825
+2022,Q2,Female,Health & Social Work,1.8323790234863346
+2022,Q3,Female,Health & Social Work,1.9139963915003748
+2022,Q4,Female,Health & Social Work,1.7628967475000523
+2023,Q1,Female,Health & Social Work,1.3265878519560774
+2023,Q2,Female,Health & Social Work,0.9014633029393796
+2023,Q3,Female,Health & Social Work,1.2045953535551281
+2023,Q4,Female,Health & Social Work,1.5456627614500578
+2024,Q1,Female,Health & Social Work,1.3448301867299668
+2024,Q2,Female,Health & Social Work,1.618013575155954
+2024,Q3,Female,Health & Social Work,1.9086830577808207
+2024,Q4,Female,Health & Social Work,1.4101458728807579
+2025,Q1,Female,Health & Social Work,1.2440540876806638
+2025,Q2,Female,Health & Social Work,1.20234397171651
+2025,Q3,Female,Health & Social Work,1.2252297308035711
+2025,Q4,Female,Health & Social Work,0.9888182755489839
+2019,Q1,Female,"Arts, entertainment and recreation",0.13469460380881776
+2019,Q2,Female,"Arts, entertainment and recreation",0.47011490836960196
+2019,Q3,Female,"Arts, entertainment and recreation",0.35662617179548073
+2019,Q4,Female,"Arts, entertainment and recreation",0.14161394926228463
+2020,Q1,Female,"Arts, entertainment and recreation",0.14252064904352021
+2020,Q2,Female,"Arts, entertainment and recreation",0.19043787664312545
+2020,Q3,Female,"Arts, entertainment and recreation",0.018409174746923773
+2020,Q4,Female,"Arts, entertainment and recreation",0.11507030028759799
+2021,Q1,Female,"Arts, entertainment and recreation",0.05418196861789656
+2021,Q2,Female,"Arts, entertainment and recreation",0.03832353053736593
+2021,Q3,Female,"Arts, entertainment and recreation",0.013284738679136677
+2021,Q4,Female,"Arts, entertainment and recreation",0.13217737279475456
+2022,Q1,Female,"Arts, entertainment and recreation",0.23848780553827256
+2022,Q2,Female,"Arts, entertainment and recreation",0.30621787422008045
+2022,Q3,Female,"Arts, entertainment and recreation",0.17921283350857473
+2022,Q4,Female,"Arts, entertainment and recreation",0.08461312551523742
+2023,Q1,Female,"Arts, entertainment and recreation",0.22982940164246618
+2023,Q2,Female,"Arts, entertainment and recreation",0.05797576083908759
+2023,Q3,Female,"Arts, entertainment and recreation",0.11125171400806362
+2023,Q4,Female,"Arts, entertainment and recreation",0.24443714028755348
+2024,Q1,Female,"Arts, entertainment and recreation",0.24230374910459837
+2024,Q2,Female,"Arts, entertainment and recreation",0.14916490425072998
+2024,Q3,Female,"Arts, entertainment and recreation",0.11143406016535673
+2024,Q4,Female,"Arts, entertainment and recreation",0.1078489571885813
+2025,Q1,Female,"Arts, entertainment and recreation",0.1956230969769574
+2025,Q2,Female,"Arts, entertainment and recreation",0.14541056498005206
+2025,Q4,Female,"Arts, entertainment and recreation",0.13330817705268816
+2019,Q1,Female,Other Services,1.7832769514433786
+2019,Q2,Female,Other Services,1.0105266402297193
+2019,Q3,Female,Other Services,2.236996608534863
+2019,Q4,Female,Other Services,2.370975264886224
+2020,Q1,Female,Other Services,1.9033317731166768
+2020,Q2,Female,Other Services,3.1645754450999415
+2020,Q3,Female,Other Services,2.1861152483956956
+2020,Q4,Female,Other Services,3.0646321690953804
+2021,Q1,Female,Other Services,2.7896691604253725
+2021,Q2,Female,Other Services,2.8417688001478743
+2021,Q3,Female,Other Services,3.306493341808444
+2021,Q4,Female,Other Services,2.8765180945597337
+2022,Q1,Female,Other Services,2.5213340626772105
+2022,Q2,Female,Other Services,3.5427086423150733
+2022,Q3,Female,Other Services,3.5801872984360035
+2022,Q4,Female,Other Services,2.9181186848662266
+2023,Q1,Female,Other Services,2.6631214039605693
+2023,Q2,Female,Other Services,2.100124658463036
+2023,Q3,Female,Other Services,2.8747263732242287
+2023,Q4,Female,Other Services,2.3481386207251247
+2024,Q1,Female,Other Services,2.3669199308172466
+2024,Q2,Female,Other Services,3.697409874673021
+2024,Q3,Female,Other Services,4.479452372041521
+2024,Q4,Female,Other Services,2.848457626800654
+2025,Q1,Female,Other Services,3.2116957960647783
+2025,Q2,Female,Other Services,3.715914569987401
+2025,Q3,Female,Other Services,4.6124059531025505
+2025,Q4,Female,Other Services,3.123618009916982
+2019,Q1,Female,Households as Employers,7.213989976589041
+2019,Q2,Female,Households as Employers,8.935129863885212
+2019,Q3,Female,Households as Employers,7.939412266679375
+2019,Q4,Female,Households as Employers,7.8599227514394885
+2020,Q1,Female,Households as Employers,7.084878349382159
+2020,Q2,Female,Households as Employers,6.047574491474872
+2020,Q3,Female,Households as Employers,7.090199929300726
+2020,Q4,Female,Households as Employers,6.475018302975198
+2021,Q1,Female,Households as Employers,5.123233152956415
+2021,Q2,Female,Households as Employers,5.808251998898296
+2021,Q3,Female,Households as Employers,5.550279084606856
+2021,Q4,Female,Households as Employers,5.980044490077581
+2022,Q1,Female,Households as Employers,5.02070136099377
+2022,Q2,Female,Households as Employers,6.191764679941835
+2022,Q3,Female,Households as Employers,5.778602559971911
+2022,Q4,Female,Households as Employers,6.246096601216274
+2023,Q1,Female,Households as Employers,5.772390474026694
+2023,Q2,Female,Households as Employers,5.275706765620779
+2023,Q3,Female,Households as Employers,5.716470478664058
+2023,Q4,Female,Households as Employers,6.2758154036899105
+2024,Q1,Female,Households as Employers,5.777535201158994
+2024,Q2,Female,Households as Employers,5.595934777100623
+2024,Q3,Female,Households as Employers,5.52237402802629
+2024,Q4,Female,Households as Employers,5.25855262454504
+2025,Q1,Female,Households as Employers,5.141214693836024
+2025,Q2,Female,Households as Employers,5.720911414692252
+2025,Q3,Female,Households as Employers,5.134877787767989
+2025,Q4,Female,Households as Employers,5.128871705036799
+2019,Q1,Female,Activities of extraterritorial organizations and bodies,0.331234545027262
+2019,Q2,Female,Activities of extraterritorial organizations and bodies,0.6918645715276397
+2019,Q3,Female,Activities of extraterritorial organizations and bodies,0.7194876393326672
+2019,Q4,Female,Activities of extraterritorial organizations and bodies,0.6953125947698147
+2020,Q1,Female,Activities of extraterritorial organizations and bodies,0.24643884586270495
+2020,Q2,Female,Activities of extraterritorial organizations and bodies,0.2101346906937637
+2020,Q3,Female,Activities of extraterritorial organizations and bodies,0.05839916644913923
+2020,Q4,Female,Activities of extraterritorial organizations and bodies,0.1295229508052712
+2021,Q1,Female,Activities of extraterritorial organizations and bodies,0.09121313122252508
+2021,Q2,Female,Activities of extraterritorial organizations and bodies,0.14802777346777377
+2021,Q3,Female,Activities of extraterritorial organizations and bodies,0.0833302869770096
+2021,Q4,Female,Activities of extraterritorial organizations and bodies,0.04856076010846774
+2022,Q1,Female,Activities of extraterritorial organizations and bodies,0.13583240979211333
+2022,Q4,Female,Activities of extraterritorial organizations and bodies,0.07657389428079264
+2023,Q1,Female,Activities of extraterritorial organizations and bodies,0.1393820889179173
+2023,Q2,Female,Activities of extraterritorial organizations and bodies,0.017993383302226905
+2023,Q3,Female,Activities of extraterritorial organizations and bodies,0.06680448935335431
+2023,Q4,Female,Activities of extraterritorial organizations and bodies,0.020553581547676374
+2024,Q2,Female,Activities of extraterritorial organizations and bodies,0.06565580459999541
+2024,Q3,Female,Activities of extraterritorial organizations and bodies,0.02629779579235743
+2024,Q4,Female,Activities of extraterritorial organizations and bodies,0.04653954152470371
+2025,Q1,Female,Activities of extraterritorial organizations and bodies,0.018790423981802733

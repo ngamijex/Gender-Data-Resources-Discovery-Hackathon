@@ -587,6 +587,17 @@ ui <- shiny::tagList(
             setTimeout(function() { $(window).trigger('resize'); }, 150);
           }
 
+          /* ── Employment inner tab switching ── */
+          function switchEmpTab(tab) {
+            var inp = document.getElementById('emp_tab');
+            if (inp) { inp.value = tab; $(inp).trigger('change'); }
+            document.querySelectorAll('.emp-sb__tabtn').forEach(function(b) {
+              b.classList.remove('emp-sb__tabtn--active');
+              if (b.getAttribute('data-tab') === tab) b.classList.add('emp-sb__tabtn--active');
+            });
+            setTimeout(function() { $(window).trigger('resize'); }, 150);
+          }
+
           /* ── Fullscreen sector panel ── */
           function openSectorPanel(sector) {
             var panel = document.getElementById('fi-fullscreen-panel');
@@ -598,6 +609,8 @@ ui <- shiny::tagList(
               switchGovTab('overview');
             } else if (sector === 'demo') {
               switchDemoTab('overview');
+            } else if (sector === 'emp') {
+              switchEmpTab('overview');
             } else {
               switchFiTab('overview');
             }
@@ -683,8 +696,12 @@ ui <- shiny::tagList(
               shiny::span(class = "vizc-word vizc-word--s2 vizc-word--red vizc-word--vert vizc-word--soon", "GBV"),
               shiny::span(class = "vizc-word vizc-word--s4 vizc-word--dark vizc-word--soon", "Gender Violence"),
               shiny::span(class = "vizc-word vizc-word--s2 vizc-word--gray", "census"),
-              shiny::span(class = "vizc-word vizc-word--s3 vizc-word--red vizc-word--soon", "Water"),
-              shiny::span(class = "vizc-word vizc-word--s1 vizc-word--gray", "employment")
+              shiny::tags$span(
+                class         = "vizc-word vizc-word--s5 vizc-word--dark vizc-word--live",
+                `data-sector` = "emp",
+                "Employment"
+              ),
+              shiny::span(class = "vizc-word vizc-word--s3 vizc-word--red vizc-word--soon", "Water")
             )
           ),
 
@@ -694,8 +711,10 @@ ui <- shiny::tagList(
             shiny::tags$strong("Financial Inclusion"),
             ", ",
             shiny::tags$strong("Governance"),
-            ", or ",
+            ", ",
             shiny::tags$strong("Demography"),
+            ", or ",
+            shiny::tags$strong("Employment"),
             " to open the dashboard"
           )
         ),
@@ -723,6 +742,11 @@ ui <- shiny::tagList(
                     shiny::tags$i(class = "fas fa-users fa-xs"), " Demography"
                   )
                 ),
+                shiny::conditionalPanel("input.active_sector == 'emp'",
+                  shiny::tags$span(class = "vizc-panel__sector-badge",
+                    shiny::tags$i(class = "fas fa-briefcase fa-xs"), " Employment"
+                  )
+                ),
 
                 shiny::conditionalPanel("input.active_sector == 'finc'",
                   shiny::tags$span(class = "vizc-panel__bar-title",
@@ -737,6 +761,11 @@ ui <- shiny::tagList(
                 shiny::conditionalPanel("input.active_sector == 'demo'",
                   shiny::tags$span(class = "vizc-panel__bar-title",
                     "Rwanda \u00b7 Gender demography (Census 2022)"
+                  )
+                ),
+                shiny::conditionalPanel("input.active_sector == 'emp'",
+                  shiny::tags$span(class = "vizc-panel__bar-title",
+                    "Rwanda Labour Force Survey (LFS) 2025 Q4 \u00b7 Gender & Employment"
                   )
                 )
               ),
@@ -790,7 +819,7 @@ ui <- shiny::tagList(
                 )
               ),
               shiny::conditionalPanel("input.active_sector == 'gov'",
-                shiny::div(class = "fi-sb__tabnav",
+                shiny::div(class = "fi-sb__tabnav fi-sb__tabnav--gov",
                   shiny::tags$button(
                     class = "gov-sb__tabtn gov-sb__tabtn--active",
                     `data-tab` = "overview",
@@ -799,22 +828,34 @@ ui <- shiny::tagList(
                     " Overview"
                   ),
                   shiny::tags$button(
-                    class = "gov-sb__tabtn", `data-tab` = "justice",
-                    onclick = "switchGovTab('justice')",
+                    class = "gov-sb__tabtn", `data-tab` = "ministers",
+                    onclick = "switchGovTab('ministers')",
+                    shiny::tags$i(class = "fas fa-user-tie fa-fw"),
+                    " Cabinet"
+                  ),
+                  shiny::tags$button(
+                    class = "gov-sb__tabtn", `data-tab` = "parliament",
+                    onclick = "switchGovTab('parliament')",
+                    shiny::tags$i(class = "fas fa-landmark fa-fw"),
+                    " Parliament"
+                  ),
+                  shiny::tags$button(
+                    class = "gov-sb__tabtn", `data-tab` = "prosecutors",
+                    onclick = "switchGovTab('prosecutors')",
                     shiny::tags$i(class = "fas fa-gavel fa-fw"),
-                    " Justice & Institutions"
+                    " Prosecutors"
+                  ),
+                  shiny::tags$button(
+                    class = "gov-sb__tabtn", `data-tab` = "judiciary",
+                    onclick = "switchGovTab('judiciary')",
+                    shiny::tags$i(class = "fas fa-scale-balanced fa-fw"),
+                    " Judiciary"
                   ),
                   shiny::tags$button(
                     class = "gov-sb__tabtn", `data-tab` = "local",
                     onclick = "switchGovTab('local')",
                     shiny::tags$i(class = "fas fa-city fa-fw"),
-                    " Local Government"
-                  ),
-                  shiny::tags$button(
-                    class = "gov-sb__tabtn", `data-tab` = "library",
-                    onclick = "switchGovTab('library')",
-                    shiny::tags$i(class = "fas fa-table fa-fw"),
-                    " Data library"
+                    " Local leaders"
                   )
                 )
               ),
@@ -884,12 +925,58 @@ ui <- shiny::tagList(
                 )
               ),
 
+              shiny::conditionalPanel("input.active_sector == 'emp'",
+                shiny::div(class = "fi-sb__tabnav fi-sb__tabnav--emp",
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn emp-sb__tabtn--active", `data-tab` = "overview",
+                    onclick = "switchEmpTab('overview')",
+                    shiny::tags$i(class = "fas fa-tachometer-alt fa-fw"), " Overview"
+                  ),
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn", `data-tab` = "labourforce",
+                    onclick = "switchEmpTab('labourforce')",
+                    shiny::tags$i(class = "fas fa-chart-line fa-fw"), " Labour Force"
+                  ),
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn", `data-tab` = "youth",
+                    onclick = "switchEmpTab('youth')",
+                    shiny::tags$i(class = "fas fa-user-graduate fa-fw"), " Youth & NEET"
+                  ),
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn", `data-tab` = "occupations",
+                    onclick = "switchEmpTab('occupations')",
+                    shiny::tags$i(class = "fas fa-briefcase fa-fw"), " Occupations"
+                  ),
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn", `data-tab` = "status",
+                    onclick = "switchEmpTab('status')",
+                    shiny::tags$i(class = "fas fa-id-badge fa-fw"), " Employment Status"
+                  ),
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn", `data-tab` = "education",
+                    onclick = "switchEmpTab('education')",
+                    shiny::tags$i(class = "fas fa-graduation-cap fa-fw"), " Education"
+                  ),
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn", `data-tab` = "agriculture",
+                    onclick = "switchEmpTab('agriculture')",
+                    shiny::tags$i(class = "fas fa-seedling fa-fw"), " Agriculture"
+                  ),
+                  shiny::tags$button(
+                    class = "emp-sb__tabtn", `data-tab` = "sectors",
+                    onclick = "switchEmpTab('sectors')",
+                    shiny::tags$i(class = "fas fa-industry fa-fw"), " Economic Sectors"
+                  )
+                )
+              ),
+
                 # Hidden inputs for sector + tab switching
                 shiny::div(style = "display:none",
                   shiny::textInput("active_sector", NULL, value = "finc"),
                   shiny::textInput("fi_tab", NULL, value = "overview"),
                   shiny::textInput("gov_tab", NULL, value = "overview"),
-                  shiny::textInput("demo_tab", NULL, value = "overview")
+                  shiny::textInput("demo_tab", NULL, value = "overview"),
+                  shiny::textInput("emp_tab", NULL, value = "overview")
                 )
 
               ), # end fi-sb
@@ -1153,37 +1240,7 @@ ui <- shiny::tagList(
                 # ── Governance filters ───────────────────────────────
                 shiny::div(class = "fi-gbar",
                   shiny::div(class = "fi-gbar__inner",
-                    shiny::conditionalPanel(
-                      "input.gov_tab == 'library'",
-                      shiny::div(class = "fi-gbar__filters",
-                        shiny::div(class = "fi-gbar__item fi-gbar__item--grow",
-                          shiny::tags$label(class = "fi-gbar__lbl",
-                            shiny::tags$i(class = "fas fa-database fa-xs"),
-                            " NISR governance workbook"
-                          ),
-                          shiny::tags$p(
-                            class = "fi-gbar__hint",
-                            "All Excel sheets are listed below (run ",
-                            shiny::tags$code("preprocess_governance.py"),
-                            " to refresh exports)."
-                          )
-                        ),
-                        shiny::div(class = "fi-gbar__item",
-                          shiny::tags$label(class = "fi-gbar__lbl",
-                            shiny::tags$i(class = "fas fa-file-excel fa-xs"),
-                            " Sheet"
-                          ),
-                          shiny::selectInput("gov_wb_sheet", NULL,
-                            choices = c("…" = ""),
-                            selected = "",
-                            width = "280px"
-                          )
-                        )
-                      )
-                    ),
-                    shiny::conditionalPanel(
-                      "input.gov_tab != 'library'",
-                      shiny::div(class = "fi-gbar__filters",
+                    shiny::div(class = "fi-gbar__filters",
                       shiny::div(class = "fi-gbar__item",
                         shiny::tags$label(class = "fi-gbar__lbl",
                           shiny::tags$i(class = "fas fa-calendar-alt fa-xs"),
@@ -1205,11 +1262,11 @@ ui <- shiny::tagList(
                           inline = TRUE, width = "160px"
                         )
                       ),
-                      shiny::conditionalPanel("input.gov_tab == 'justice'",
+                      shiny::conditionalPanel("input.gov_tab == 'judiciary'",
                         shiny::div(class = "fi-gbar__item",
                           shiny::tags$label(class = "fi-gbar__lbl",
                             shiny::tags$i(class = "fas fa-landmark fa-xs"),
-                            " Entity"
+                            " Institution"
                           ),
                           shiny::selectInput("gov_entity", NULL,
                             choices = c("All" = "all"),
@@ -1231,7 +1288,6 @@ ui <- shiny::tagList(
                           )
                         )
                       )
-                    )
                     ),
                     shiny::div(class = "fi-gbar__right",
                       shiny::div(class = "fi-gbar__count",
@@ -1248,63 +1304,105 @@ ui <- shiny::tagList(
                 # ── Charts area (Governance) ────────────────────────
                 shiny::div(class = "fi-charts",
 
-                  # Overview
+                  # Overview — KPI snapshot only (charts live in dedicated tabs)
                   shiny::conditionalPanel("input.gov_tab == 'overview'",
                     shiny::div(class = "fi-tab-hdr",
                       shiny::tags$span(class = "fi-tab-hdr__eyebrow",
                         shiny::tags$i(class = "fas fa-balance-scale fa-xs"),
                         " Governance Overview"
                       ),
-                      shiny::tags$h3(class = "fi-tab-hdr__title", "Gender representation trends")
+                      shiny::tags$h3(class = "fi-tab-hdr__title", "Gender balance at a glance")
                     ),
                     shiny::uiOutput("gov_overview_kpis"),
+                    shiny::div(class = "fi-data-note gov-overview-viz-hint",
+                      shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                      shiny::tags$strong(" Visualisations: "),
+                      "Open ",
+                      shiny::tags$strong("Cabinet"), ", ",
+                      shiny::tags$strong("Parliament"), ", ",
+                      shiny::tags$strong("Prosecutors"), ", ",
+                      shiny::tags$strong("Judiciary"), ", or ",
+                      shiny::tags$strong("Local leaders"),
+                      " in the sidebar for the full time series and charts."
+                    )
+                  ),
+
+                  # Cabinet / ministers
+                  shiny::conditionalPanel("input.gov_tab == 'ministers'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-user-tie fa-xs"),
+                        " Executive"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title", "Gender equality in ministerial roles")
+                    ),
                     shiny::div(class = "fi-chart-card fi-chart-card--full",
                       shiny::div(class = "fi-chart-title",
                         shiny::tags$i(class = "fas fa-users fa-xs"),
-                        " Equality in ministers roles (%)"
+                        " Share of ministerial roles by sex (%)"
                       ),
                       shinycssloaders::withSpinner(
-                        plotly::plotlyOutput("gov_ministers_gender", height = "420px")
-                      )
-                    ),
-                    shiny::div(class = "fi-chart-card fi-chart-card--full",
-                      shiny::div(class = "fi-chart-title",
-                        shiny::tags$i(class = "fas fa-landmark fa-xs"),
-                        " Women share in Senate / Parliament seats (%)"
-                      ),
-                      shinycssloaders::withSpinner(
-                        plotly::plotlyOutput("gov_parliament_gender", height = "420px")
+                        plotly::plotlyOutput("gov_ministers_gender", height = "440px")
                       )
                     )
                   ),
 
-                  # Justice / institutions
-                  shiny::conditionalPanel("input.gov_tab == 'justice'",
+                  # Parliament / Senate
+                  shiny::conditionalPanel("input.gov_tab == 'parliament'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-landmark fa-xs"),
+                        " Legislature"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title", "Women’s share of Senate and Parliament seats")
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-landmark fa-xs"),
+                        " Seat share by sex (%)"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("gov_parliament_gender", height = "440px")
+                      )
+                    )
+                  ),
+
+                  # National prosecutors
+                  shiny::conditionalPanel("input.gov_tab == 'prosecutors'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-gavel fa-xs"),
+                        " Prosecution service"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title", "National prosecutors by sex")
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-gavel fa-xs"),
+                        " Prosecutor posts — female vs male share (%)"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("gov_prosecutors_gender", height = "440px")
+                      )
+                    )
+                  ),
+
+                  # Judiciary & related institutions
+                  shiny::conditionalPanel("input.gov_tab == 'judiciary'",
                     shiny::div(class = "fi-tab-hdr",
                       shiny::tags$span(class = "fi-tab-hdr__eyebrow",
                         shiny::tags$i(class = "fas fa-scale-balanced fa-xs"),
-                        " Justice & Institutions"
+                        " Judiciary & institutions"
                       ),
-                      shiny::tags$h3(class = "fi-tab-hdr__title", "Judiciary, prosecutors, and rights bodies")
+                      shiny::tags$h3(class = "fi-tab-hdr__title", "Representation across institutions")
                     ),
-                    shiny::div(class = "fi-charts-grid",
-                      shiny::div(class = "fi-chart-card",
-                        shiny::div(class = "fi-chart-title",
-                          shiny::tags$i(class = "fas fa-gavel fa-xs"),
-                          " National prosecutors (%)"
-                        ),
-                        shinycssloaders::withSpinner(
-                          plotly::plotlyOutput("gov_prosecutors_gender", height = "380px")
-                        )
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-landmark fa-xs"),
+                        " Women’s and men’s shares by institution (%)"
                       ),
-                      shiny::div(class = "fi-chart-card",
-                        shiny::div(class = "fi-chart-title",
-                          shiny::tags$i(class = "fas fa-landmark fa-xs"),
-                          " Women representation in institutions (%)"
-                        ),
-                        shinycssloaders::withSpinner(
-                          plotly::plotlyOutput("gov_judiciary_gender", height = "380px")
-                        )
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("gov_judiciary_gender", height = "460px")
                       )
                     )
                   ),
@@ -1316,39 +1414,28 @@ ui <- shiny::tagList(
                         shiny::tags$i(class = "fas fa-city fa-xs"),
                         " Local Government"
                       ),
-                      shiny::tags$h3(class = "fi-tab-hdr__title", "Leadership gender distribution (%)")
+                      shiny::tags$h3(class = "fi-tab-hdr__title", "Local leaders by position and year")
                     ),
                     shiny::div(class = "fi-chart-card fi-chart-card--full",
                       shiny::div(class = "fi-chart-title",
-                        shiny::tags$i(class = "fas fa-chart-pie fa-xs"),
-                        " Local leaders by position and year"
+                        shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                        " Share of posts by sex — trends across survey years"
                       ),
                       shinycssloaders::withSpinner(
-                        plotly::plotlyOutput("gov_local_heatmap", height = "480px")
+                        plotly::plotlyOutput("gov_local_heatmap", height = "520px")
+                      ),
+                      shiny::div(class = "fi-data-note gov-local-chart-note",
+                        shiny::tags$i(class = "fas fa-info-circle fa-xs"),
+                        shiny::tags$strong(" How to read: "),
+                        "With ",
+                        shiny::tags$strong("Position = All"),
+                        ", each line is ",
+                        shiny::tags$strong("women’s share"),
+                        " of posts in that role (men’s share is the remainder to 100%). ",
+                        "Choose a single position to compare ",
+                        shiny::tags$strong("Male vs Female"),
+                        " lines for that role."
                       )
-                    )
-                  ),
-
-                  # Full workbook (all sheets from Excel / preprocess export)
-                  shiny::conditionalPanel("input.gov_tab == 'library'",
-                    shiny::div(class = "fi-tab-hdr",
-                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
-                        shiny::tags$i(class = "fas fa-table fa-xs"),
-                        " Data library"
-                      ),
-                      shiny::tags$h3(class = "fi-tab-hdr__title", "Raw workbook tables")
-                    ),
-                    shiny::div(class = "fi-chart-card fi-chart-card--full",
-                      shiny::div(class = "fi-chart-title",
-                        shiny::tags$i(class = "fas fa-eye fa-xs"),
-                        " Sheet preview (first columns & rows)"
-                      ),
-                      shiny::tableOutput("gov_workbook_preview")
-                    ),
-                    shiny::div(class = "fi-data-note",
-                      shiny::tags$i(class = "fas fa-info-circle fa-xs"),
-                      " Source: NISR governance tables. Charts use curated series; this tab shows every sheet ",
-                      "as exported from the workbook for verification and traceability."
                     )
                   )
 
@@ -1815,6 +1902,338 @@ ui <- shiny::tagList(
                   )
                 )
               )
+
+              ) # end conditionalPanel demo
+
+              # ─────────────────────────────────────────────────────────────
+              # Employment sector
+              # ─────────────────────────────────────────────────────────────
+              ,shiny::conditionalPanel("input.active_sector == 'emp'",
+
+                # ── Filter bar ──────────────────────────────────────────────
+                shiny::div(class = "fi-gbar",
+                  shiny::div(class = "fi-gbar__inner",
+                    shiny::div(class = "fi-gbar__filters",
+
+                      shiny::div(class = "fi-gbar__item fi-gbar__item--slider",
+                        shiny::tags$label(class = "fi-gbar__lbl",
+                          shiny::tags$i(class = "fas fa-calendar-alt fa-xs"), " Year Range"
+                        ),
+                        shiny::sliderInput("emp_year", NULL,
+                          min = 2019L, max = 2025L, value = c(2019L, 2025L),
+                          step = 1L, sep = "", width = "200px"
+                        )
+                      ),
+                      shiny::div(class = "fi-gbar__item",
+                        shiny::tags$label(class = "fi-gbar__lbl",
+                          shiny::tags$i(class = "fas fa-calendar-check fa-xs"), " Quarter"
+                        ),
+                        shiny::selectInput("emp_quarter", NULL,
+                          choices  = c("Annual average" = "all", "Q1", "Q2", "Q3", "Q4"),
+                          selected = "all", width = "140px"
+                        )
+                      ),
+                      shiny::div(class = "fi-gbar__item",
+                        shiny::tags$label(class = "fi-gbar__lbl",
+                          shiny::tags$i(class = "fas fa-venus-mars fa-xs"), " Sex"
+                        ),
+                        shiny::checkboxGroupInput("emp_sex", NULL,
+                          choices  = c("Female", "Male"),
+                          selected = c("Female", "Male"),
+                          inline   = TRUE
+                        )
+                      )
+                    ),
+                    shiny::div(class = "fi-gbar__count",
+                      shiny::uiOutput("emp_sample_n")
+                    )
+                  )
+                ),
+
+                # ── Charts area ─────────────────────────────────────────────
+                shiny::div(class = "fi-charts",
+
+                  # ── OVERVIEW tab ─────────────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'overview'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-briefcase fa-xs"), " Rwanda LFS"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Employment overview — gender at a glance"
+                      )
+                    ),
+                    shiny::uiOutput("emp_overview_kpis"),
+                    shiny::div(class = "fi-charts-grid",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                          " Labour Force Participation Rate by sex (quarterly trend)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_lfpr_trend", height = "340px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                          " Unemployment Rate by sex (quarterly trend)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_unemp_trend", height = "340px")
+                        )
+                      )
+                    )
+                  ),
+
+                  # ── LABOUR FORCE tab ─────────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'labourforce'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-chart-line fa-xs"), " Labour Market"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Labour Force indicators — Male vs Female quarterly trends"
+                      )
+                    ),
+                    shiny::div(class = "fi-charts-grid",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-users fa-xs"),
+                          " Labour Force Participation Rate (%)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_lf_lfpr", height = "360px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-hard-hat fa-xs"),
+                          " Employment-to-Population Ratio (%)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_lf_emppop", height = "360px")
+                        )
+                      )
+                    ),
+                    shiny::div(class = "fi-charts-grid",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-user-times fa-xs"),
+                          " Unemployment Rate — LU1 (%)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_lf_unemp", height = "360px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                          " Monthly earnings at main job (Rwf median)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_lf_earnings", height = "360px")
+                        )
+                      )
+                    )
+                  ),
+
+                  # ── YOUTH tab ─────────────────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'youth'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-user-graduate fa-xs"), " Youth Labour Market"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Youth (16-30) vs Adult (31-64) — key indicators"
+                      )
+                    ),
+                    shiny::div(class = "fi-charts-grid",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                          " Labour Force Participation Rate — Youth vs Adult"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_youth_lfpr", height = "360px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-user-times fa-xs"),
+                          " Unemployment Rate — Youth vs Adult"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_youth_unemp", height = "360px")
+                        )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-exclamation-circle fa-xs"),
+                        " NEET Rate — Youth not in Employment, Education or Training (%)"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("emp_youth_neet", height = "340px")
+                      ),
+                      shiny::div(class = "fi-data-note",
+                        shiny::tags$i(class = "fas fa-info-circle fa-xs"),
+                        " NEET rate shown for Youth (16-30 years) across all available quarters."
+                      )
+                    )
+                  ),
+
+                  # ── OCCUPATIONS tab ───────────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'occupations'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-briefcase fa-xs"), " Occupation Structure"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Employed population by occupation group — Male vs Female"
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-bars fa-xs"),
+                        " Share of employed by occupation — averaged over selected period"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("emp_occupations_bar", height = "480px")
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-arrows-alt-h fa-xs"),
+                        " Gender gap by occupation (Female % minus Male %, percentage points)"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("emp_occupations_gap", height = "380px")
+                      )
+                    )
+                  ),
+
+                  # ── STATUS tab ────────────────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'status'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-id-badge fa-xs"), " Employment Relationship"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Status in employment — Male vs Female"
+                      )
+                    ),
+                    shiny::div(class = "fi-charts-grid",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                          " Share by employment status — period average"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_status_bar", height = "420px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                          " Wage employment (Employee %) trend — Male vs Female"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_status_wage_trend", height = "420px")
+                        )
+                      )
+                    )
+                  ),
+
+                  # ── EDUCATION tab ─────────────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'education'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-graduation-cap fa-xs"), " Human Capital"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Educational attainment of employed — Male vs Female"
+                      )
+                    ),
+                    shiny::div(class = "fi-charts-grid",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                          " Education distribution — % of employed by sex"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_edu_bar", height = "420px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                          " University-educated employed (%) — trend by sex"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("emp_edu_uni_trend", height = "420px")
+                        )
+                      )
+                    )
+                  ),
+
+                  # ── AGRICULTURE tab ───────────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'agriculture'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-seedling fa-xs"), " Agricultural Employment"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Share of workers in agriculture — Male vs Female"
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                        " Agriculture share of total workforce (%) — quarterly trend by sex"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("emp_agri_trend", height = "420px")
+                      ),
+                      shiny::div(class = "fi-data-note",
+                        shiny::tags$i(class = "fas fa-info-circle fa-xs"),
+                        " Women consistently have a higher share of employment in agriculture than men."
+                      )
+                    )
+                  ),
+
+                  # ── ECONOMIC SECTORS tab ──────────────────────────────────
+                  shiny::conditionalPanel("input.emp_tab == 'sectors'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-industry fa-xs"), " Sectoral Distribution"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Economic activity of employed — Male vs Female"
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-bars fa-xs"),
+                        " % of employed in each sector — Male vs Female (period average)"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("emp_sectors_bar", height = "540px")
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-arrows-alt-h fa-xs"),
+                        " Gender gap by sector (Female % minus Male %, percentage points)"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("emp_sectors_gap", height = "380px")
+                      )
+                    )
+                  )
+
+                ) # end emp fi-charts
+              ) # end conditionalPanel emp
 
               ) # end fi-main
 

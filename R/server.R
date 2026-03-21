@@ -995,8 +995,8 @@ server <- function(input, output, session) {
   })
 
   output$ch_sba_anc <- plotly::renderPlotly({
-    plotly::plot_ly(dhs_maternal, x = ~year) |>
-      plotly::add_trace(y = ~skilled_birth_pct, name = "Skilled Birth Attendance",
+    plotly::plot_ly() |>
+      plotly::add_trace(data = dhs_maternal, x = ~year, y = ~skilled_birth_pct, name = "Skilled Birth Attendance",
                 type = "scatter", mode = "lines+markers",
                 line   = list(color = CLR["primary"], width = 2),
                 marker = list(color = CLR["primary"], size = 7),
@@ -1062,13 +1062,13 @@ server <- function(input, output, session) {
 
   # Education plots
   output$ch_gpi <- plotly::renderPlotly({
-    plotly::plot_ly(education_df, x = ~year) |>
-      plotly::add_trace(y = ~gpi_primary, name = "Primary GPI",
+    plotly::plot_ly() |>
+      plotly::add_trace(data = education_df, x = ~year, y = ~gpi_primary, name = "Primary GPI",
                 type = "scatter", mode = "lines+markers",
                 line   = list(color = CLR["primary"], width = 2.5),
                 marker = list(color = CLR["primary"], size = 8),
                 hovertemplate = "Primary GPI: %{y:.2f}<extra></extra>") |>
-      plotly::add_trace(y = ~gpi_secondary, name = "Secondary GPI",
+      plotly::add_trace(data = education_df, x = ~year, y = ~gpi_secondary, name = "Secondary GPI",
                 type = "scatter", mode = "lines+markers",
                 line   = list(color = CLR["accent"], width = 2.5, dash = "dash"),
                 marker = list(color = CLR["accent"], size = 8, symbol = "square"),
@@ -1085,11 +1085,11 @@ server <- function(input, output, session) {
   })
 
   output$ch_edu_comp <- plotly::renderPlotly({
-    plotly::plot_ly(education_df, x = ~year) |>
-      plotly::add_bars(y = ~female_secondary_completion, name = "Female",
+    plotly::plot_ly() |>
+      plotly::add_bars(data = education_df, x = ~year, y = ~female_secondary_completion, name = "Female",
                marker = list(color = CLR["primary"]),
                hovertemplate = "%{x} Female: %{y}%<extra></extra>") |>
-      plotly::add_bars(y = ~male_secondary_completion, name = "Male",
+      plotly::add_bars(data = education_df, x = ~year, y = ~male_secondary_completion, name = "Male",
                marker = list(color = CLR["ink_300"]),
                hovertemplate = "%{x} Male: %{y}%<extra></extra>") |>
       gddp_theme(xlab = "Year", ylab = "Completion Rate (%)") |>
@@ -1099,13 +1099,13 @@ server <- function(input, output, session) {
 
   # Labor plot
   output$ch_lfp <- plotly::renderPlotly({
-    plotly::plot_ly(labor_df, x = ~year) |>
-      plotly::add_trace(y = ~female, name = "Female",
+    plotly::plot_ly() |>
+      plotly::add_trace(data = labor_df, x = ~year, y = ~female, name = "Female",
                 type = "scatter", mode = "lines+markers",
                 line   = list(color = CLR["primary"], width = 2.5),
                 marker = list(color = CLR["primary"], size = 9),
                 hovertemplate = "%{x} Female: %{y}%<extra></extra>") |>
-      plotly::add_trace(y = ~male, name = "Male",
+      plotly::add_trace(data = labor_df, x = ~year, y = ~male, name = "Male",
                 type = "scatter", mode = "lines+markers",
                 line   = list(color = CLR["ink_500"], width = 2.5, dash = "dash"),
                 marker = list(color = CLR["ink_500"], size = 9, symbol = "square"),
@@ -1137,11 +1137,11 @@ server <- function(input, output, session) {
   })
 
   output$ch_prov_land <- plotly::renderPlotly({
-    plotly::plot_ly(province_df, x = ~province) |>
-      plotly::add_bars(y = ~female_land_pct, name = "Land Ownership (%)",
+    plotly::plot_ly() |>
+      plotly::add_bars(data = province_df, x = ~province, y = ~female_land_pct, name = "Land Ownership (%)",
                marker = list(color = CLR["accent"]),
                hovertemplate = "%{x} \u2014 Land: %{y}%<extra></extra>") |>
-      plotly::add_bars(y = ~female_literacy_pct, name = "Literacy (%)",
+      plotly::add_bars(data = province_df, x = ~province, y = ~female_literacy_pct, name = "Literacy (%)",
                marker = list(color = CLR["primary_light"]),
                hovertemplate = "%{x} \u2014 Literacy: %{y}%<extra></extra>") |>
       gddp_theme(xlab = "Province", ylab = "Percentage (%)") |>
@@ -1871,10 +1871,14 @@ server <- function(input, output, session) {
       error = function(e) NULL
     )
   }
+  # shinyapps.io / some hosts: globals from app.R may not be visible here — load directly.
   if (is.null(gov_data_once)) {
-    message("[GOV] .governance_data not available in server (init).")
+    gov_data_once <- tryCatch(load_governance_data(), error = function(e) NULL)
+  }
+  if (is.null(gov_data_once)) {
+    message("[GOV] Governance data not available in server (init).")
   } else {
-    message("[GOV] .governance_data available in server (init): ",
+    message("[GOV] Governance data ready in server (init): ",
             paste(names(gov_data_once), collapse = ", "))
   }
 
@@ -1903,67 +1907,54 @@ server <- function(input, output, session) {
     list(yr = yr, sex = sex, entity = entity, pos = pos)
   })
 
-  # Workbook sheet list (Data library tab)
-  shiny::observe({
-    d <- gov_tbls()
-    if (is.null(d)) return()
-    if (is.null(input$gov_tab) || input$gov_tab != "library") return()
-
-    sheets <- character(0)
-    if (!is.null(d$sheet_manifest) && nrow(d$sheet_manifest) > 0) {
-      sheets <- as.character(d$sheet_manifest$sheet_name)
-    } else if (!is.null(d$excel_source) && nzchar(d$excel_source) && file.exists(d$excel_source)) {
-      sheets <- tryCatch(
-        readxl::excel_sheets(d$excel_source),
-        error = function(e) character(0)
-      )
-    }
-
-    if (length(sheets) == 0) {
-      shiny::updateSelectInput(session, "gov_wb_sheet",
-        choices = c("No sheets found" = ""),
-        selected = ""
-      )
-      return()
-    }
-
-    cur <- input$gov_wb_sheet
-    sel <- if (!is.null(cur) && cur %in% sheets) cur else sheets[[1]]
-    shiny::updateSelectInput(session, "gov_wb_sheet",
-      choices = stats::setNames(sheets, sheets),
-      selected = sel
-    )
-  })
-
   output$gov_sample_n <- shiny::renderText({
-    if (!is.null(input$gov_tab) && input$gov_tab == "library") {
-      d <- gov_tbls()
-      if (is.null(d)) return("No data")
-      m <- d$sheet_manifest
-      if (!is.null(m) && nrow(m) > 0) {
-        return(paste0(format(nrow(m), big.mark = ","), " sheets"))
-      }
-      if (!is.null(d$excel_source) && file.exists(d$excel_source)) {
-        ns <- tryCatch(
-          length(readxl::excel_sheets(d$excel_source)),
-          error = function(e) 0L
-        )
-        if (ns > 0) return(paste0(ns, " sheets"))
-      }
-      return("Workbook")
-    }
-
+    tab <- input$gov_tab
     d <- gov_tbls()
     if (is.null(d)) return("No data")
-    f <- gov_filters()
 
-    ds <- d$ministers
-    if (is.null(ds)) return("No data")
-    ds <- ds[
-      ds$year >= f$yr[1] & ds$year <= f$yr[2] &
-        ds$sex %in% f$sex,
-    , drop = FALSE]
-    paste0(format(nrow(ds), big.mark = ","), " records")
+    f <- gov_filters()
+    gov_count_rows <- function(df, use_entity_pos = TRUE) {
+      if (is.null(df)) return(NA_integer_)
+      df <- df[
+        df$year >= f$yr[1] & df$year <= f$yr[2] & df$sex %in% f$sex,
+        , drop = FALSE
+      ]
+      if (isTRUE(use_entity_pos)) {
+        if (!is.null(f$entity) && isTRUE(f$entity != "all") && "entity" %in% names(df)) {
+          df <- df[df$entity == f$entity, , drop = FALSE]
+        }
+        if (!is.null(f$pos) && isTRUE(f$pos != "all") && "entity" %in% names(df)) {
+          df <- df[df$entity == f$pos, , drop = FALSE]
+        }
+      }
+      as.integer(nrow(df))
+    }
+
+    n <- NA_integer_
+    if (is.null(tab) || tab == "overview") {
+      parts <- c(
+        gov_count_rows(d$ministers, use_entity_pos = FALSE),
+        gov_count_rows(d$parliament, use_entity_pos = FALSE),
+        gov_count_rows(d$prosecutors, use_entity_pos = FALSE),
+        gov_count_rows(d$judiciary, use_entity_pos = FALSE),
+        gov_count_rows(d$local_leaders, use_entity_pos = FALSE)
+      )
+      parts <- parts[!is.na(parts)]
+      n <- if (length(parts)) sum(parts) else NA_integer_
+      if (!is.na(n) && n >= 0) {
+        return(paste0(format(n, big.mark = ","), " points (all series)"))
+      }
+      return("—")
+    }
+
+    if (tab == "ministers") n <- gov_count_rows(d$ministers)
+    else if (tab == "parliament") n <- gov_count_rows(d$parliament)
+    else if (tab == "prosecutors") n <- gov_count_rows(d$prosecutors)
+    else if (tab == "judiciary") n <- gov_count_rows(d$judiciary)
+    else if (tab == "local") n <- gov_count_rows(d$local_leaders)
+
+    if (is.na(n)) return("No data")
+    paste0(format(n, big.mark = ","), " records")
   })
 
   # ── Governance Overview: latest-year gender KPI strip ─────────────────────
@@ -2109,79 +2100,18 @@ server <- function(input, output, session) {
         class = "demo-overview-lead",
         shiny::tags$strong("Latest year snapshot"),
         " — Male vs female shares (%) at the most recent year in each series. ",
-        "Use the charts below for full time series."
+        "Use the other sidebar tabs for full time series and charts."
       ),
       kpi_row
     )
   })
 
-  output$gov_workbook_preview <- shiny::renderTable({
-    shiny::req(!is.null(input$gov_tab) && input$gov_tab == "library")
-    sn <- input$gov_wb_sheet
-    if (is.null(sn) || !nzchar(as.character(sn))) {
-      return(data.frame(Message = "Select a sheet above."))
-    }
-    d <- gov_tbls()
-    if (is.null(d)) return(data.frame(Message = "No governance data loaded."))
-
-    df <- NULL
-    msg <- NULL
-
-    res <- tryCatch({
-      if (!is.null(d$sheet_manifest) && nrow(d$sheet_manifest) > 0) {
-        row <- d$sheet_manifest[d$sheet_manifest$sheet_name == sn, , drop = FALSE]
-        if (nrow(row) < 1) {
-          list(df = NULL, msg = "Sheet not listed in manifest (re-run preprocess).")
-        } else {
-          rel <- as.character(row$file[[1]])
-          if (!nzchar(rel)) {
-            list(df = NULL, msg = "No export file for this sheet.")
-          } else if (is.null(d$clean_dir_path)) {
-            list(df = NULL, msg = "Clean folder path unavailable.")
-          } else {
-            fp <- file.path(d$clean_dir_path, rel)
-            if (!file.exists(fp)) {
-              list(df = NULL, msg = paste0("Missing file: ", rel))
-            } else {
-              list(
-                df = readr::read_csv(fp,
-                  show_col_types = FALSE, n_max = 500,
-                  col_types = readr::cols(.default = readr::col_character())
-                ),
-                msg = NULL
-              )
-            }
-          }
-        }
-      } else if (!is.null(d$excel_source) && file.exists(d$excel_source)) {
-        raw <- readxl::read_excel(d$excel_source, sheet = sn, col_names = FALSE, n_max = 120)
-        list(df = as.data.frame(raw, stringsAsFactors = FALSE), msg = NULL)
-      } else {
-        list(df = NULL, msg = "No workbook manifest or Excel source. Run dashboard_data/Governance_data/preprocess_governance.py")
-      }
-    }, error = function(e) {
-      list(df = NULL, msg = paste0("Read error: ", conditionMessage(e)))
-    })
-
-    df <- res$df
-    msg <- res$msg
-
-    if (!is.null(msg) && nzchar(msg)) return(data.frame(Message = msg))
-    if (is.null(df) || nrow(df) == 0) {
-      return(data.frame(Message = "Empty or unreadable sheet."))
-    }
-    nc <- min(18L, ncol(df))
-    df <- df[, seq_len(nc), drop = FALSE]
-    nr <- min(60L, nrow(df))
-    head(df, nr)
-  }, striped = TRUE, bordered = TRUE, spacing = "s", width = "100%", align = "l", na = "")
-
-  # Update choice lists for justice/local tabs
+  # Update choice lists for judiciary/local tabs
   shiny::observeEvent(input$gov_tab, {
     d <- gov_tbls()
     if (is.null(d)) return()
 
-    if (!is.null(input$gov_tab) && input$gov_tab == "justice") {
+    if (!is.null(input$gov_tab) && input$gov_tab == "judiciary") {
       if (is.null(d$judiciary) || nrow(d$judiciary) == 0) return()
       ents <- sort(unique(as.character(d$judiciary$entity)))
       shiny::updateSelectInput(session, "gov_entity",
@@ -2344,25 +2274,88 @@ server <- function(input, output, session) {
     }
     if (nrow(ds) == 0) return(gov_plot_no_data("No local leadership data for selected filters"))
 
-    z_sex <- if ("Female" %in% f$sex) "Female" else "Male"
-    ds <- ds[ds$sex == z_sex, , drop = FALSE]
+    ds$pct <- suppressWarnings(as.numeric(ds$pct))
+    ds <- ds[!is.na(ds$pct), , drop = FALSE]
+    if (nrow(ds) == 0) {
+      return(gov_plot_no_data("No complete percentage values for local leadership (check source data)."))
+    }
 
-    # Heatmap: year (x) vs position/entity (y)
-    ds$entity <- factor(ds$entity, levels = sort(unique(ds$entity)))
+    single_pos <- !is.null(f$pos) && length(f$pos) == 1L && f$pos != "all"
+
+    # One position: classic Male vs Female lines over time (same as other governance charts).
+    if (single_pos) {
+      ds$sex <- factor(ds$sex, levels = c("Female", "Male"))
+      return(
+        plotly::plot_ly(
+          data = ds, x = ~year, y = ~pct, color = ~sex,
+          type = "scatter", mode = "lines+markers",
+          colors = c("Female" = FI_FEMALE, "Male" = FI_MALE),
+          line = list(width = 2.5),
+          hovertemplate = "<b>Year %{x}</b><br>%{y:.1f}% of posts<br>%{fullData.name}<extra></extra>"
+        ) |>
+          plotly::layout(
+            title = list(
+              text = paste0("Men vs women — ", as.character(f$pos)),
+              font = list(size = 13)
+            ),
+            xaxis = list(title = "Year", tickfont = list(size = 11), dtick = 1),
+            yaxis = list(title = "% of posts in this role", range = c(0, 100), ticksuffix = "%"),
+            legend = list(orientation = "h", x = 0, y = -0.22, font = list(size = 10)),
+            margin = list(l = 55, r = 20, t = 45, b = 55)
+          ) |>
+          plotly::config(displayModeBar = FALSE)
+      )
+    }
+
+    # All positions: one line per role = women’s share (parity metric; interpretable at a glance).
+    metric_sex <- if ("Female" %in% f$sex) "Female" else "Male"
+    ds_line <- ds[ds$sex == metric_sex, , drop = FALSE]
+    if (nrow(ds_line) == 0) {
+      return(gov_plot_no_data(paste0("No ", metric_sex, " rows for selected years.")))
+    }
+
+    ents <- sort(unique(as.character(ds_line$entity)))
+    ds_line$entity <- factor(ds_line$entity, levels = ents)
+
+    ht <- if (metric_sex == "Female") {
+      "<b>%{fullData.name}</b><br>Year %{x}<br>Women’s share: %{y:.1f}%<extra></extra>"
+    } else {
+      "<b>%{fullData.name}</b><br>Year %{x}<br>Men’s share: %{y:.1f}%<extra></extra>"
+    }
 
     plotly::plot_ly(
-      data = ds, x = ~year, y = ~entity, z = ~pct,
-      type = "heatmap",
-      # Plotly expects a palette vector for `colors` in R.
-      colors = c("#EEF2FF", FI_FEMALE),
-      zmin = 0, zmax = 100,
-      hovertemplate = "<b>%{x}</b><br>%{y}<br>%{z}%<extra></extra>",
-      showscale = TRUE
+      data = ds_line,
+      x = ~year,
+      y = ~pct,
+      color = ~entity,
+      type = "scatter",
+      mode = "lines+markers",
+      line = list(width = 2),
+      hovertemplate = ht
     ) |>
       plotly::layout(
-        xaxis = list(title = "Year", tickfont = list(size = 11)),
-        yaxis = list(title = ""),
-        margin = list(l = 90, r = 20, t = 10, b = 40)
+        title = list(
+          text = if (metric_sex == "Female") {
+            "Women’s share of local leadership posts by position"
+          } else {
+            "Men’s share of local leadership posts by position"
+          },
+          font = list(size = 13)
+        ),
+        xaxis = list(title = "Year", tickfont = list(size = 11), dtick = 1),
+        yaxis = list(
+          title = if (metric_sex == "Female") "Women’s share of posts (%)" else "Men’s share of posts (%)",
+          range = c(0, 100),
+          ticksuffix = "%"
+        ),
+        legend = list(
+          title = list(text = "Position"),
+          orientation = "h",
+          x = 0,
+          y = -0.32,
+          font = list(size = 10)
+        ),
+        margin = list(l = 58, r = 24, t = 48, b = 110)
       ) |>
       plotly::config(displayModeBar = FALSE)
   })
@@ -2374,6 +2367,15 @@ server <- function(input, output, session) {
       get(".demography_data", envir = globalenv(), inherits = FALSE),
       error = function(e) NULL
     )
+  }
+  # shinyapps.io: globals from app.R are not always visible — load like Governance.
+  if (is.null(demo_data_once)) {
+    demo_data_once <- tryCatch(load_demography_data(), error = function(e) NULL)
+  }
+  if (is.null(demo_data_once)) {
+    message("[DEMO] Demography data not available in server (init).")
+  } else {
+    message("[DEMO] Demography data ready in server (init).")
   }
 
   demo_tbls <- shiny::reactive({
@@ -2689,120 +2691,157 @@ server <- function(input, output, session) {
 
   # Live sample count (based on active demography tab)
   output$demo_sample_n <- shiny::renderText({
-    d <- demo_tbls()
-    if (is.null(d)) return("No data")
-    f <- demo_filters()
-
-    tab <- input$demo_tab
-    if (is.null(tab)) tab <- "overview"
-
-    if (tab %in% c("population", "overview")) {
-      ds <- d$population_geo
-      ds$sex <- as.character(ds$sex)
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      if (!is.null(f$district) && f$district != "all") {
-        ds <- ds[ds$geo == f$district, , drop = FALSE]
-      } else if (!is.null(f$province) && f$province != "all") {
-        ds <- ds[ds$geo_type == "District" & ds$province == f$province, , drop = FALSE]
-      } else {
-        ds <- ds[ds$geo_type == "Province", , drop = FALSE]
+    .demo_df <- function(x) {
+      if (is.null(x)) return(NULL)
+      if (!inherits(x, "data.frame")) {
+        x <- tryCatch(as.data.frame(x, stringsAsFactors = FALSE), error = function(e) NULL)
       }
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark=","), " records"))
+      if (is.null(x) || nrow(x) == 0L) return(NULL)
+      normalize_df_for_indexing(x)
     }
+    tryCatch(
+      {
+        d <- demo_tbls()
+        if (is.null(d)) return("No data")
+        f <- demo_filters()
 
-    if (tab == "age") {
-      ds <- d$age_distribution
-      ds <- ds[ds$residence %in% f$residence, , drop = FALSE]
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      ds <- ds[ds$age_group %in% f$age_groups, , drop = FALSE]
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark=","), " records"))
-    }
+        tab <- input$demo_tab
+        if (is.null(tab) || !nzchar(as.character(tab))) tab <- "overview"
 
-    if (tab == "internet") {
-      ds <- d$internet_use
-      ds <- ds[ds$residence %in% f$residence, , drop = FALSE]
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      ds <- ds[ds$age_group %in% f$internet_age_group, , drop = FALSE]
-      if (!is.null(f$province) && f$province != "all") ds <- ds[ds$province == f$province, , drop = FALSE]
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark=","), " records"))
-    }
+        if (tab %in% c("population", "overview")) {
+          ds <- .demo_df(d$population_geo)
+          if (is.null(ds)) return("0 records")
+          if (!"sex" %in% names(ds)) return("0 records")
+          ds$sex <- as.character(ds$sex)
+          n <- nrow(ds)
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, n), , drop = FALSE]
+          if (!is.null(f$district) && length(f$district) == 1L && f$district != "all") {
+            ds <- ds[demo_align_lgl(ds$geo == f$district, nrow(ds)), , drop = FALSE]
+          } else if (!is.null(f$province) && length(f$province) == 1L && f$province != "all") {
+            ds <- ds[demo_align_lgl(ds$geo_type == "District" & ds$province == f$province, nrow(ds)), , drop = FALSE]
+          } else {
+            ds <- ds[demo_align_lgl(ds$geo_type == "Province", nrow(ds)), , drop = FALSE]
+          }
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
 
-    if (tab == "education") {
-      ds <- d$education_attendance
-      if (is.null(ds)) return("0 records")
-      ds <- ds[ds$residence %in% f$education_residence, , drop = FALSE]
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      ds <- ds[ds$education_level %in% f$education_levels, , drop = FALSE]
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark=","), " records"))
-    }
+        if (tab == "age") {
+          ds <- .demo_df(d$age_distribution)
+          if (is.null(ds)) return("0 records")
+          n <- nrow(ds)
+          ds <- ds[demo_align_lgl(ds$residence %in% f$residence, n), , drop = FALSE]
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+          ds <- ds[demo_align_lgl(ds$age_group %in% f$age_groups, nrow(ds)), , drop = FALSE]
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
 
-    if (tab == "intervention") {
-      ds <- d$intervention_age_groups
-      if (is.null(ds)) return("0 records")
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
-    }
+        if (tab == "internet") {
+          ds <- .demo_df(d$internet_use)
+          if (is.null(ds)) return("0 records")
+          n <- nrow(ds)
+          ds <- ds[demo_align_lgl(ds$residence %in% f$residence, n), , drop = FALSE]
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+          iag <- f$internet_age_group
+          if (length(iag) == 1L) {
+            ds <- ds[demo_align_lgl(ds$age_group == iag, nrow(ds)), , drop = FALSE]
+          } else {
+            ds <- ds[demo_align_lgl(ds$age_group %in% iag, nrow(ds)), , drop = FALSE]
+          }
+          if (!is.null(f$province) && length(f$province) == 1L && f$province != "all") {
+            ds <- ds[demo_align_lgl(ds$province == f$province, nrow(ds)), , drop = FALSE]
+          }
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
 
-    if (tab == "school718") {
-      ds <- d$school_7_18_attendance
-      if (is.null(ds)) return("0 records")
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
-    }
+        if (tab == "education") {
+          ds <- .demo_df(d$education_attendance)
+          if (is.null(ds)) return("0 records")
+          n <- nrow(ds)
+          ds <- ds[demo_align_lgl(ds$residence %in% f$education_residence, n), , drop = FALSE]
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+          ds <- ds[demo_align_lgl(ds$education_level %in% f$education_levels, nrow(ds)), , drop = FALSE]
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
 
-    if (tab == "school1318") {
-      ds <- d$school_13_18_by_geo
-      if (is.null(ds)) return("0 records")
-      ds$sex <- as.character(ds$sex)
-      ds <- ds[ds$residence == f$residence, , drop = FALSE]
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      if (!is.null(f$district) && f$district != "all") {
-        ds <- ds[ds$geo == f$district, , drop = FALSE]
-      } else if (!is.null(f$province) && f$province != "all") {
-        ds <- ds[ds$geo_type == "District" & ds$province == f$province, , drop = FALSE]
-      } else {
-        nat <- ds[ds$geo == "Rwanda" & ds$geo_type == "National", , drop = FALSE]
-        prov <- ds[ds$geo_type == "Province", , drop = FALSE]
-        ds <- rbind(nat, prov)
+        if (tab == "intervention") {
+          ds <- .demo_df(d$intervention_age_groups)
+          if (is.null(ds)) return("0 records")
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
+
+        if (tab == "school718") {
+          ds <- .demo_df(d$school_7_18_attendance)
+          if (is.null(ds)) return("0 records")
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
+
+        if (tab == "school1318") {
+          ds <- .demo_df(d$school_13_18_by_geo)
+          if (is.null(ds)) return("0 records")
+          ds$sex <- as.character(ds$sex)
+          n <- nrow(ds)
+          ds <- ds[demo_align_lgl(ds$residence == f$residence, n), , drop = FALSE]
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+          if (!is.null(f$district) && length(f$district) == 1L && f$district != "all") {
+            ds <- ds[demo_align_lgl(ds$geo == f$district, nrow(ds)), , drop = FALSE]
+          } else if (!is.null(f$province) && length(f$province) == 1L && f$province != "all") {
+            ds <- ds[demo_align_lgl(ds$geo_type == "District" & ds$province == f$province, nrow(ds)), , drop = FALSE]
+          } else {
+            n2 <- nrow(ds)
+            nat <- ds[demo_align_lgl(ds$geo == "Rwanda" & ds$geo_type == "National", n2), , drop = FALSE]
+            prov <- ds[demo_align_lgl(ds$geo_type == "Province", n2), , drop = FALSE]
+            ds <- dplyr::bind_rows(nat, prov)
+          }
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
+
+        if (tab == "youth") {
+          ds <- .demo_df(d$youth_share_by_geo)
+          if (is.null(ds)) return("0 records")
+          ds$sex <- as.character(ds$sex)
+          n <- nrow(ds)
+          ds <- ds[demo_align_lgl(ds$residence == f$residence, n), , drop = FALSE]
+          ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+          if (!is.null(f$district) && length(f$district) == 1L && f$district != "all") {
+            ds <- ds[demo_align_lgl(ds$geo == f$district, nrow(ds)), , drop = FALSE]
+          } else if (!is.null(f$province) && length(f$province) == 1L && f$province != "all") {
+            ds <- ds[demo_align_lgl(ds$geo_type == "District" & ds$province == f$province, nrow(ds)), , drop = FALSE]
+          } else {
+            n2 <- nrow(ds)
+            nat <- ds[demo_align_lgl(ds$geo == "Rwanda" & ds$geo_type == "National", n2), , drop = FALSE]
+            prov <- ds[demo_align_lgl(ds$geo_type == "Province", n2), , drop = FALSE]
+            ds <- dplyr::bind_rows(nat, prov)
+          }
+          return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
+        }
+
+        if (tab != "elderly") {
+          return("—")
+        }
+
+        ds <- .demo_df(d$elderly_share)
+        if (is.null(ds)) return("0 records")
+        ds$sex <- as.character(ds$sex)
+        n <- nrow(ds)
+        ds <- ds[demo_align_lgl(ds$residence %in% f$residence, n), , drop = FALSE]
+        ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
+        if (!is.null(f$district) && length(f$district) == 1L && f$district != "all") {
+          ds <- ds[demo_align_lgl(ds$geo == f$district, nrow(ds)), , drop = FALSE]
+        } else if (!is.null(f$province) && length(f$province) == 1L && f$province != "all") {
+          ds <- ds[demo_align_lgl(ds$geo_type == "District" & ds$province == f$province, nrow(ds)), , drop = FALSE]
+        } else {
+          ds <- ds[demo_align_lgl(ds$geo_type == "Province", nrow(ds)), , drop = FALSE]
+        }
+        if (nrow(ds) == 0) return("0 records")
+        paste0(format(nrow(ds), big.mark = ","), " records")
+      },
+      error = function(e) {
+        message("[DEMO] demo_sample_n: ", conditionMessage(e))
+        "—"
       }
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
-    }
-
-    if (tab == "youth") {
-      ds <- d$youth_share_by_geo
-      if (is.null(ds)) return("0 records")
-      ds$sex <- as.character(ds$sex)
-      ds <- ds[ds$residence == f$residence, , drop = FALSE]
-      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-      if (!is.null(f$district) && f$district != "all") {
-        ds <- ds[ds$geo == f$district, , drop = FALSE]
-      } else if (!is.null(f$province) && f$province != "all") {
-        ds <- ds[ds$geo_type == "District" & ds$province == f$province, , drop = FALSE]
-      } else {
-        nat <- ds[ds$geo == "Rwanda" & ds$geo_type == "National", , drop = FALSE]
-        prov <- ds[ds$geo_type == "Province", , drop = FALSE]
-        ds <- rbind(nat, prov)
-      }
-      return(if (nrow(ds) == 0) "0 records" else paste0(format(nrow(ds), big.mark = ","), " records"))
-    }
-
-    if (tab != "elderly") {
-      return("—")
-    }
-
-    ds <- d$elderly_share
-    ds$sex <- as.character(ds$sex)
-    ds <- ds[ds$residence %in% f$residence, , drop = FALSE]
-    ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-    if (!is.null(f$district) && f$district != "all") {
-      ds <- ds[ds$geo == f$district, , drop = FALSE]
-    } else if (!is.null(f$province) && f$province != "all") {
-      ds <- ds[ds$geo_type == "District" & ds$province == f$province, , drop = FALSE]
-    } else {
-      ds <- ds[ds$geo_type == "Province", , drop = FALSE]
-    }
-    if (nrow(ds) == 0) return("0 records")
-    paste0(format(nrow(ds), big.mark=","), " records")
+    )
   })
 
   # Reset filters
@@ -2841,16 +2880,23 @@ server <- function(input, output, session) {
     if (is.null(d) || is.null(d$population_geo)) return(demo_plot_no_data("Population data unavailable"))
     f <- demo_filters()
 
-    ds <- d$population_geo
-    ds$sex <- as.character(ds$sex)
-    ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
+    ds <- normalize_df_for_indexing(d$population_geo)
+    ds$sex <- trimws(as.character(ds$sex))
+    ds$value <- suppressWarnings(as.numeric(ds$value))
+    ds <- ds[demo_align_lgl(ds$sex %in% trimws(f$sex), nrow(ds)), , drop = FALSE]
 
-    if (!is.null(f$district) && f$district != "all") {
-      ds <- ds[ds$geo == f$district, , drop = FALSE]
-    } else if (!is.null(f$province) && f$province != "all") {
-      ds <- ds[ds$geo_type == "District" & ds$province == f$province, , drop = FALSE]
+    if (!is.null(f$district) && length(f$district) == 1L && f$district != "all") {
+      ds <- ds[demo_align_lgl(trimws(as.character(ds$geo)) == trimws(f$district), nrow(ds)), , drop = FALSE]
+    } else if (!is.null(f$province) && length(f$province) == 1L && f$province != "all") {
+      gt <- tolower(trimws(as.character(ds$geo_type)))
+      ds <- ds[
+        demo_align_lgl(gt == "district" & trimws(as.character(ds$province)) == trimws(f$province), nrow(ds)),
+        ,
+        drop = FALSE
+      ]
     } else {
-      ds <- ds[ds$geo_type == "Province", , drop = FALSE]
+      gt <- tolower(trimws(as.character(ds$geo_type)))
+      ds <- ds[demo_align_lgl(!is.na(gt) & gt == "province", nrow(ds)), , drop = FALSE]
     }
 
     if (nrow(ds) == 0) return(demo_plot_no_data("No population rows for selected filters"))
@@ -2900,9 +2946,15 @@ server <- function(input, output, session) {
     if (is.null(d) || is.null(d$population_change)) return(demo_plot_no_data("Population change data unavailable"))
     f <- demo_filters()
 
-    ds <- d$population_change
-    ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-    ds <- ds[ds$year >= f$years[1] & ds$year <= f$years[2], , drop = FALSE]
+    ds <- normalize_df_for_indexing(d$population_change)
+    ds$sex <- trimws(as.character(ds$sex))
+    ds$year <- suppressWarnings(as.integer(as.numeric(ds$year)))
+    ds$value <- suppressWarnings(as.numeric(ds$value))
+    ds <- ds[!is.na(ds$year), , drop = FALSE]
+    ds <- ds[demo_align_lgl(ds$sex %in% trimws(f$sex), nrow(ds)), , drop = FALSE]
+    yr1 <- as.numeric(f$years[[1]])
+    yr2 <- as.numeric(f$years[[2]])
+    ds <- ds[demo_align_lgl(!is.na(ds$year) & ds$year >= yr1 & ds$year <= yr2, nrow(ds)), , drop = FALSE]
     if (nrow(ds) == 0) return(demo_plot_no_data("No population change rows for selected filters"))
 
     ds$sex <- factor(ds$sex, levels = c("Female", "Male"))
@@ -2974,12 +3026,22 @@ server <- function(input, output, session) {
     if (is.null(d) || is.null(d$internet_use)) return(demo_plot_no_data("Internet use data unavailable"))
     f <- demo_filters()
 
-    ds <- d$internet_use
-    ds <- ds[ds$residence == f$residence, , drop = FALSE]
-    ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
-    ds <- ds[ds$age_group == f$internet_age_group, , drop = FALSE]
-    if (!is.null(f$province) && f$province != "all") {
-      ds <- ds[ds$province == f$province, , drop = FALSE]
+    ds <- normalize_df_for_indexing(d$internet_use)
+    ds$value <- suppressWarnings(as.numeric(ds$value))
+    for (nm in c("age_group", "province", "residence", "sex")) {
+      if (nm %in% names(ds)) ds[[nm]] <- trimws(as.character(ds[[nm]]))
+    }
+    res <- trimws(as.character(f$residence))
+    ds <- ds[demo_align_lgl(ds$residence == res, nrow(ds)), , drop = FALSE]
+    ds <- ds[demo_align_lgl(ds$sex %in% trimws(f$sex), nrow(ds)), , drop = FALSE]
+    iag <- f$internet_age_group
+    if (length(iag) == 1L) {
+      ds <- ds[demo_align_lgl(ds$age_group == trimws(as.character(iag)), nrow(ds)), , drop = FALSE]
+    } else {
+      ds <- ds[demo_align_lgl(ds$age_group %in% trimws(as.character(iag)), nrow(ds)), , drop = FALSE]
+    }
+    if (!is.null(f$province) && length(f$province) == 1L && f$province != "all") {
+      ds <- ds[demo_align_lgl(ds$province == trimws(as.character(f$province)), nrow(ds)), , drop = FALSE]
     }
     if (nrow(ds) == 0) return(demo_plot_no_data("No internet rows for selected filters"))
 
@@ -3143,17 +3205,19 @@ server <- function(input, output, session) {
 
   demo_triplet_geo_filter <- function(ds, f) {
     if (is.null(ds) || nrow(ds) == 0) return(ds)
+    ds <- normalize_df_for_indexing(ds)
     ds$sex <- as.character(ds$sex)
-    ds <- ds[ds$residence == f$residence, , drop = FALSE]
-    ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
+    n <- nrow(ds)
+    ds <- ds[demo_align_lgl(ds$residence == f$residence, n), , drop = FALSE]
+    ds <- ds[demo_align_lgl(ds$sex %in% f$sex, nrow(ds)), , drop = FALSE]
     if (!is.null(f$district) && f$district != "all") {
-      ds <- ds[ds$geo == f$district, , drop = FALSE]
+      ds <- ds[demo_align_lgl(ds$geo == f$district, nrow(ds)), , drop = FALSE]
     } else if (!is.null(f$province) && f$province != "all") {
-      ds <- ds[ds$geo_type == "District" & ds$province == f$province, , drop = FALSE]
+      ds <- ds[demo_align_lgl(ds$geo_type == "District" & ds$province == f$province, nrow(ds)), , drop = FALSE]
     } else {
-      nat <- ds[ds$geo == "Rwanda" & ds$geo_type == "National", , drop = FALSE]
-      prov <- ds[ds$geo_type == "Province", , drop = FALSE]
-      ds <- rbind(nat, prov)
+      nat <- ds[demo_align_lgl(ds$geo == "Rwanda" & ds$geo_type == "National", nrow(ds)), , drop = FALSE]
+      prov <- ds[demo_align_lgl(ds$geo_type == "Province", nrow(ds)), , drop = FALSE]
+      ds <- dplyr::bind_rows(nat, prov)
     }
     ds
   }
@@ -3603,6 +3667,642 @@ server <- function(input, output, session) {
         margin = list(l = 150, r = 20, t = 50, b = 40)
       ) |>
       demo_plotly_interactive()
+  })
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # Employment Dashboard (Rwanda LFS 2025 Q4)
+  # ════════════════════════════════════════════════════════════════════════════
+
+  EMP_MALE    <- "#3B82F6"   # blue
+  EMP_FEMALE  <- "#E85A4F"   # brand red
+  EMP_YOUTH   <- "#8B5CF6"   # purple
+  EMP_ADULT   <- "#F59E0B"   # amber
+  EMP_FONT    <- "Inter, system-ui, -apple-system, sans-serif"
+
+  `%||%` <- function(a, b) if (!is.null(a)) a else b
+
+  emp_plotly_theme <- function(p, xlab = "", ylab = "") {
+    p |>
+      plotly::layout(
+        font          = list(family = EMP_FONT, size = 12),
+        paper_bgcolor = "rgba(0,0,0,0)",
+        plot_bgcolor  = "rgba(0,0,0,0)",
+        xaxis = list(
+          title     = list(text = xlab, font = list(size = 11)),
+          gridcolor = "#F0F0F0", zerolinecolor = "#E5E5E5",
+          tickfont  = list(size = 11)
+        ),
+        yaxis = list(
+          title     = list(text = ylab, font = list(size = 11)),
+          gridcolor = "#F0F0F0",
+          tickfont  = list(size = 11)
+        ),
+        legend = list(orientation = "h", x = 0, y = -0.18, font = list(size = 11)),
+        margin = list(t = 20, b = 10, l = 10, r = 10)
+      ) |>
+      plotly::config(displayModeBar = FALSE)
+  }
+
+  emp_no_data <- function(msg = "Employment data not available") {
+    plotly::plot_ly() |>
+      plotly::layout(
+        paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
+        xaxis = list(visible = FALSE), yaxis = list(visible = FALSE),
+        annotations = list(list(
+          x = 0.5, y = 0.5, xref = "paper", yref = "paper",
+          text = msg, showarrow = FALSE,
+          font = list(size = 12, color = "#6B7280")
+        )),
+        margin = list(l = 40, r = 20, t = 40, b = 40)
+      ) |>
+      plotly::config(displayModeBar = FALSE)
+  }
+
+  # ── Load employment tables once ───────────────────────────────────────────
+  emp_data_once <- NULL
+  if (exists(".employment_data", envir = globalenv(), inherits = FALSE)) {
+    emp_data_once <- tryCatch(
+      get(".employment_data", envir = globalenv(), inherits = FALSE),
+      error = function(e) NULL
+    )
+  }
+  if (is.null(emp_data_once)) {
+    emp_data_once <- tryCatch(load_employment_data(), error = function(e) NULL)
+  }
+  if (is.null(emp_data_once)) {
+    message("[EMP] Employment data not available in server (init).")
+  } else {
+    message("[EMP] Employment data ready in server (init).")
+  }
+
+  emp_tbls <- shiny::reactive({
+    if (!is.null(emp_data_once)) return(emp_data_once)
+    tryCatch(load_employment_data(), error = function(e) NULL)
+  })
+
+  # ── Reactive: employment filters ──────────────────────────────────────────
+  emp_filters <- shiny::reactive({
+    list(
+      yr      = input$emp_year %||% c(2019L, 2025L),
+      quarter = input$emp_quarter %||% "all",
+      sex     = input$emp_sex %||% c("Female", "Male")
+    )
+  })
+
+  # Null-coalescing operator shortcut (defined above with EMP_MALE etc.)
+
+  # ── Helper: average over year+quarter range ───────────────────────────────
+  emp_period_avg <- function(df, val_col, yr_range, quarter) {
+    if (is.null(df) || nrow(df) == 0) return(df)
+    df <- df[df$year >= yr_range[1] & df$year <= yr_range[2], , drop = FALSE]
+    if (quarter != "all") df <- df[df$quarter == quarter, , drop = FALSE]
+    if (nrow(df) == 0) return(df)
+    df
+  }
+
+  # ── sample count display ──────────────────────────────────────────────────
+  output$emp_sample_n <- shiny::renderUI({
+    d <- emp_tbls()
+    if (is.null(d) || is.null(d$lf_sex)) return(shiny::tags$span("No data"))
+    f  <- emp_filters()
+    ds <- d$lf_sex
+    ds <- ds[ds$year >= f$yr[1] & ds$year <= f$yr[2], , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    n_qtr <- length(unique(paste(ds$year, ds$quarter)))
+    shiny::tags$span(
+      class = "fi-gbar__count-inner",
+      shiny::tags$strong(n_qtr), " quarters shown \u00b7 LFS 2019\u2013Q4 2025"
+    )
+  })
+
+  # ── KPI card builder for Employment overview ──────────────────────────────
+  emp_kpi_card <- function(label, male_val, female_val, fmt = "%.1f%%",
+                            icon = "fas fa-chart-bar", note = NULL) {
+    if (is.null(male_val) || is.null(female_val)) return(NULL)
+    if (is.na(male_val) || is.na(female_val)) return(NULL)
+    gap  <- female_val - male_val
+    gap_cls <- if (gap >= 0) "fi-kpi__delta--up" else "fi-kpi__delta--down"
+    gap_lbl <- sprintf("%+.1f pp", gap)
+
+    shiny::div(class = "fi-kpi fi-kpi--emp",
+      shiny::div(class = "fi-kpi__icon",
+        shiny::tags$i(class = paste(icon, "fa-lg"))
+      ),
+      shiny::div(class = "fi-kpi__body",
+        shiny::div(class = "fi-kpi__label", label),
+        shiny::div(class = "fi-kpi__values",
+          shiny::tags$span(class = "fi-kpi__val fi-kpi__val--female",
+            shiny::tags$i(class = "fas fa-venus fa-xs"),
+            " ", sprintf(fmt, female_val)
+          ),
+          shiny::tags$span(class = "fi-kpi__sep", " \u00b7 "),
+          shiny::tags$span(class = "fi-kpi__val fi-kpi__val--male",
+            shiny::tags$i(class = "fas fa-mars fa-xs"),
+            " ", sprintf(fmt, male_val)
+          )
+        ),
+        shiny::div(class = paste("fi-kpi__delta", gap_cls), gap_lbl,
+          shiny::tags$span(class = "fi-kpi__delta-lbl", " F\u2212M gap")
+        ),
+        if (!is.null(note)) shiny::div(class = "fi-kpi__note", note)
+      )
+    )
+  }
+
+  # ── Overview KPIs ─────────────────────────────────────────────────────────
+  output$emp_overview_kpis <- shiny::renderUI({
+    d <- emp_tbls()
+    if (is.null(d) || is.null(d$lf_sex)) {
+      return(shiny::div(class = "fi-kpi-row",
+        shiny::div(class = "fi-alert", "Employment data not loaded.")))
+    }
+    f  <- emp_filters()
+    ds <- d$lf_sex
+    ds <- ds[ds$year >= f$yr[1] & ds$year <= f$yr[2], , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
+
+    get_mean <- function(sex_v, ind) {
+      x <- ds$value[ds$sex == sex_v & ds$indicator == ind]
+      if (length(x) == 0) return(NA_real_)
+      mean(x, na.rm = TRUE)
+    }
+
+    agri_ds <- if (!is.null(d$agri)) {
+      a <- d$agri[d$agri$year >= f$yr[1] & d$agri$year <= f$yr[2], , drop = FALSE]
+      if (f$quarter != "all") a <- a[a$quarter == f$quarter, , drop = FALSE]
+      a
+    } else NULL
+    get_agri <- function(grp) {
+      if (is.null(agri_ds)) return(NA_real_)
+      x <- agri_ds$pct_agri[agri_ds$group == grp]
+      if (length(x) == 0) return(NA_real_)
+      mean(x, na.rm = TRUE)
+    }
+
+    cards <- list(
+      emp_kpi_card("Labour Force Participation Rate",
+        get_mean("Male",   "Labour force participation rate(%)"),
+        get_mean("Female", "Labour force participation rate(%)"),
+        icon = "fas fa-users"),
+      emp_kpi_card("Employment-to-Population Ratio",
+        get_mean("Male",   "Employment-to-population ratio(%)"),
+        get_mean("Female", "Employment-to-population ratio(%)"),
+        icon = "fas fa-hard-hat"),
+      emp_kpi_card("Unemployment Rate (LU1)",
+        get_mean("Male",   "LU1-Unemployment rate (%)"),
+        get_mean("Female", "LU1-Unemployment rate (%)"),
+        icon = "fas fa-user-times"),
+      emp_kpi_card("Agriculture Share of Workforce",
+        get_agri("Male"), get_agri("Female"),
+        icon = "fas fa-seedling")
+    )
+    cards <- Filter(Negate(is.null), cards)
+    if (length(cards) == 0) {
+      return(shiny::div(class = "fi-kpi-row",
+        shiny::div(class = "fi-alert", "No KPI data for selected filters.")))
+    }
+    shiny::div(class = "fi-kpi-row", cards)
+  })
+
+  # ── Shared line chart helper ──────────────────────────────────────────────
+  emp_line_chart <- function(ds, x_col, y_col, color_col,
+                              color_map, ylab = "", pct_suffix = TRUE,
+                              title_text = NULL) {
+    if (is.null(ds) || nrow(ds) == 0) return(emp_no_data())
+    ds[[x_col]]     <- as.numeric(ds[[x_col]])
+    ds[[y_col]]     <- as.numeric(ds[[y_col]])
+    ds[[color_col]] <- as.character(ds[[color_col]])
+    grps <- unique(ds[[color_col]])
+
+    p <- plotly::plot_ly()
+    for (g in grps) {
+      sub  <- ds[ds[[color_col]] == g, , drop = FALSE]
+      sub  <- sub[order(sub[[x_col]]), , drop = FALSE]
+      clr  <- color_map[[g]] %||% "#999999"
+      ht   <- if (pct_suffix)
+        paste0("<b>", g, "</b><br>", sub[[x_col]], " \u00b7 %{y:.1f}%<extra></extra>")
+      else
+        paste0("<b>", g, "</b><br>", sub[[x_col]], " \u00b7 %{y:,.0f}<extra></extra>")
+
+      p <- plotly::add_trace(p,
+        x    = sub[[x_col]], y = sub[[y_col]],
+        type = "scatter", mode = "lines+markers",
+        name = g,
+        line   = list(color = clr, width = 2.5),
+        marker = list(color = clr, size = 7),
+        hovertemplate = ht
+      )
+    }
+    tick_sfx <- if (pct_suffix) "%" else ""
+    emp_plotly_theme(p, ylab = ylab) |>
+      plotly::layout(
+        title  = list(text = title_text, font = list(size = 12)),
+        yaxis  = list(ticksuffix = tick_sfx)
+      )
+  }
+
+  # ── Build x-axis as "YYYY Qn" string ─────────────────────────────────────
+  emp_mk_time_label <- function(ds) {
+    paste(ds$year, ds$quarter)
+  }
+
+  # ── Overview trend charts ─────────────────────────────────────────────────
+  output$emp_lfpr_trend <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$lf_sex)) return(emp_no_data())
+    ds <- d$lf_sex
+    ds <- ds[ds$sex %in% f$sex &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$indicator == "Labour force participation rate(%)", , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No LFPR data for selected filters"))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "sex",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
+      ylab = "LFPR (%)")
+  })
+
+  output$emp_unemp_trend <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$lf_sex)) return(emp_no_data())
+    ds <- d$lf_sex
+    ds <- ds[ds$sex %in% f$sex &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$indicator == "LU1-Unemployment rate (%)", , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No unemployment data for selected filters"))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "sex",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
+      ylab = "Unemployment Rate (%)")
+  })
+
+  # ── Labour Force tab charts ───────────────────────────────────────────────
+  emp_lf_chart <- function(indicator, ylab) {
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$lf_sex)) return(emp_no_data())
+    ds <- d$lf_sex
+    ds <- ds[ds$sex %in% f$sex &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$indicator == indicator, , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data(paste("No data for:", indicator)))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "sex",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
+      ylab = ylab)
+  }
+
+  output$emp_lf_lfpr     <- plotly::renderPlotly(emp_lf_chart("Labour force participation rate(%)", "LFPR (%)"))
+  output$emp_lf_emppop   <- plotly::renderPlotly(emp_lf_chart("Employment-to-population ratio(%)", "Emp/Pop ratio (%)"))
+  output$emp_lf_unemp    <- plotly::renderPlotly(emp_lf_chart("LU1-Unemployment rate (%)", "Unemployment rate (%)"))
+
+  output$emp_lf_earnings <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$lf_sex)) return(emp_no_data())
+    ds <- d$lf_sex
+    ds <- ds[ds$sex %in% f$sex &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$indicator == "Median monthly earnings at main job", , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No earnings data for selected filters"))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "sex",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
+      ylab = "Median monthly earnings (Rwf)", pct_suffix = FALSE)
+  })
+
+  # ── Youth tab charts ──────────────────────────────────────────────────────
+  emp_youth_chart <- function(indicator, ylab) {
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$lf_youth)) return(emp_no_data())
+    ds <- d$lf_youth
+    ds <- ds[ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$indicator == indicator, , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data(paste("No youth data for:", indicator)))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "group",
+      color_map = list("Youth (16-30)" = EMP_YOUTH, "Adult (31-64)" = EMP_ADULT),
+      ylab = ylab)
+  }
+
+  output$emp_youth_lfpr  <- plotly::renderPlotly(
+    emp_youth_chart("Labour force participation rate(%)", "LFPR (%)"))
+  output$emp_youth_unemp <- plotly::renderPlotly(
+    emp_youth_chart("LU1-Unemployment rate (%)", "Unemployment rate (%)"))
+
+  output$emp_youth_neet  <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$lf_youth)) return(emp_no_data())
+    ds <- d$lf_youth
+    neet_ind <- "NEET rate-Youth  not in employment nor currently in education or training(%)"
+    ds <- ds[ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$indicator == neet_ind, , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No NEET data for selected filters"))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "group",
+      color_map = list("Youth (16-30)" = EMP_YOUTH, "Adult (31-64)" = EMP_ADULT),
+      ylab = "NEET rate (%)")
+  })
+
+  # ── Occupations charts ────────────────────────────────────────────────────
+  output$emp_occupations_bar <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$occupations)) return(emp_no_data())
+    ds <- d$occupations
+    ds <- ds[ds$sex %in% c("Male", "Female") &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             !(ds$occupation %in% c("_n_employed", "Total", "Employed population aged 16+")), , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No occupation data for selected filters"))
+
+    # Average over the selected period
+    ds_avg <- ds |>
+      dplyr::group_by(occupation, sex) |>
+      dplyr::summarise(value = mean(value, na.rm = TRUE), .groups = "drop")
+
+    # Order by Female value descending
+    occ_order <- ds_avg |>
+      dplyr::filter(sex == "Female") |>
+      dplyr::arrange(value) |>
+      dplyr::pull(occupation)
+    ds_avg$occupation <- factor(ds_avg$occupation, levels = occ_order)
+    ds_avg$sex        <- factor(ds_avg$sex, levels = c("Female", "Male"))
+
+    plotly::plot_ly(
+      data = ds_avg[ds_avg$sex == "Male", , drop = FALSE],
+      y = ~occupation, x = ~value,
+      type = "bar", orientation = "h", name = "Male",
+      marker = list(color = EMP_MALE),
+      hovertemplate = "<b>%{y}</b><br>Male: %{x:.1f}%<extra></extra>"
+    ) |>
+      plotly::add_trace(
+        data = ds_avg[ds_avg$sex == "Female", , drop = FALSE],
+        y = ~occupation, x = ~value,
+        type = "bar", orientation = "h", name = "Female",
+        marker = list(color = EMP_FEMALE),
+        hovertemplate = "<b>%{y}</b><br>Female: %{x:.1f}%<extra></extra>"
+      ) |>
+      emp_plotly_theme(xlab = "% of employed population") |>
+      plotly::layout(
+        barmode = "group",
+        yaxis   = list(tickfont = list(size = 10)),
+        margin  = list(l = 250, r = 20, t = 20, b = 40)
+      )
+  })
+
+  output$emp_occupations_gap <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$occupations)) return(emp_no_data())
+    ds <- d$occupations
+    ds <- ds[ds$sex %in% c("Male", "Female") &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             !(ds$occupation %in% c("_n_employed", "Total", "Employed population aged 16+")), , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data())
+
+    ds_avg <- ds |>
+      dplyr::group_by(occupation, sex) |>
+      dplyr::summarise(value = mean(value, na.rm = TRUE), .groups = "drop") |>
+      tidyr::pivot_wider(names_from = sex, values_from = value)
+
+    if (!("Female" %in% names(ds_avg)) || !("Male" %in% names(ds_avg))) return(emp_no_data())
+
+    ds_avg$gap <- ds_avg$Female - ds_avg$Male
+    ds_avg <- ds_avg[!is.na(ds_avg$gap), , drop = FALSE]
+    ds_avg <- ds_avg[order(ds_avg$gap), , drop = FALSE]
+    ds_avg$occupation <- factor(ds_avg$occupation, levels = ds_avg$occupation)
+    ds_avg$bar_col    <- ifelse(ds_avg$gap >= 0, EMP_FEMALE, EMP_MALE)
+
+    plotly::plot_ly(
+      data = ds_avg, y = ~occupation, x = ~gap,
+      type = "bar", orientation = "h",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{y}</b><br>F\u2212M: %{x:+.1f} pp<extra></extra>"
+    ) |>
+      emp_plotly_theme(xlab = "Gender gap (Female % \u2212 Male %, pp)") |>
+      plotly::layout(
+        xaxis  = list(zeroline = TRUE, zerolinewidth = 1.5, zerolinecolor = "#9CA3AF"),
+        yaxis  = list(tickfont = list(size = 10)),
+        margin = list(l = 250, r = 20, t = 20, b = 40)
+      )
+  })
+
+  # ── Employment Status charts ──────────────────────────────────────────────
+  output$emp_status_bar <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$status)) return(emp_no_data())
+    ds <- d$status
+    ds <- ds[ds$sex %in% c("Male", "Female") &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             !(ds$status %in% c("_n_employed", "Total", "Employed population aged 16+")), , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No employment status data for selected filters"))
+
+    ds_avg <- ds |>
+      dplyr::group_by(status, sex) |>
+      dplyr::summarise(value = mean(value, na.rm = TRUE), .groups = "drop")
+
+    # Sort by Female descending
+    st_order <- ds_avg |>
+      dplyr::filter(sex == "Female") |>
+      dplyr::arrange(value) |>
+      dplyr::pull(status)
+    ds_avg$status <- factor(ds_avg$status, levels = st_order)
+    ds_avg$sex    <- factor(ds_avg$sex, levels = c("Female", "Male"))
+
+    plotly::plot_ly(
+      data = ds_avg[ds_avg$sex == "Male", ],
+      y = ~status, x = ~value, type = "bar", orientation = "h",
+      name = "Male", marker = list(color = EMP_MALE),
+      hovertemplate = "<b>%{y}</b><br>Male: %{x:.1f}%<extra></extra>"
+    ) |>
+      plotly::add_trace(
+        data = ds_avg[ds_avg$sex == "Female", ],
+        y = ~status, x = ~value, type = "bar", orientation = "h",
+        name = "Female", marker = list(color = EMP_FEMALE),
+        hovertemplate = "<b>%{y}</b><br>Female: %{x:.1f}%<extra></extra>"
+      ) |>
+      emp_plotly_theme(xlab = "% of employed") |>
+      plotly::layout(
+        barmode = "group",
+        yaxis   = list(tickfont = list(size = 10)),
+        margin  = list(l = 220, r = 20, t = 20, b = 40)
+      )
+  })
+
+  output$emp_status_wage_trend <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$status)) return(emp_no_data())
+    ds <- d$status
+    ds <- ds[ds$sex %in% f$sex &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$status == "Employee", , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No wage employment data"))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "sex",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
+      ylab = "% in wage employment (Employee)")
+  })
+
+  # ── Education charts ──────────────────────────────────────────────────────
+  EDU_ORDER <- c("No schooling", "Primary", "Lower secondary",
+                 "Upper secondary", "University/Higher")
+
+  output$emp_edu_bar <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$education)) return(emp_no_data())
+    ds <- d$education
+    ds <- ds[ds$sex %in% c("Male", "Female") &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$education %in% EDU_ORDER, , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No education data for selected filters"))
+
+    ds_avg <- ds |>
+      dplyr::group_by(education, sex) |>
+      dplyr::summarise(value = mean(value, na.rm = TRUE), .groups = "drop")
+    ds_avg$education <- factor(ds_avg$education, levels = EDU_ORDER)
+
+    plotly::plot_ly(
+      data = ds_avg[ds_avg$sex == "Male", ],
+      x = ~education, y = ~value, type = "bar", name = "Male",
+      marker = list(color = EMP_MALE),
+      hovertemplate = "<b>%{x}</b><br>Male: %{y:.1f}%<extra></extra>"
+    ) |>
+      plotly::add_trace(
+        data = ds_avg[ds_avg$sex == "Female", ],
+        x = ~education, y = ~value, type = "bar", name = "Female",
+        marker = list(color = EMP_FEMALE),
+        hovertemplate = "<b>%{x}</b><br>Female: %{y:.1f}%<extra></extra>"
+      ) |>
+      emp_plotly_theme(ylab = "% of employed") |>
+      plotly::layout(
+        barmode = "group",
+        yaxis   = list(ticksuffix = "%"),
+        margin  = list(l = 50, r = 20, t = 20, b = 80)
+      )
+  })
+
+  output$emp_edu_uni_trend <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$education)) return(emp_no_data())
+    ds <- d$education
+    ds <- ds[ds$sex %in% f$sex &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             ds$education == "University/Higher", , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No university-level data"))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "value", "sex",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
+      ylab = "% employed with university education")
+  })
+
+  # ── Agriculture chart ─────────────────────────────────────────────────────
+  output$emp_agri_trend <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$agri)) return(emp_no_data())
+    ds <- d$agri
+    ds <- ds[ds$group %in% c("Male", "Female") &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2], , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No agriculture data for selected filters"))
+    ds$time_lbl <- emp_mk_time_label(ds)
+    ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
+    emp_line_chart(ds, "time_lbl", "pct_agri", "group",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
+      ylab = "Agriculture share of workforce (%)")
+  })
+
+  # ── Economic Sectors charts ───────────────────────────────────────────────
+  output$emp_sectors_bar <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$economic)) return(emp_no_data())
+    ds <- d$economic
+    ds <- ds[ds$sex %in% c("Male", "Female") &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             !(ds$sector %in% c("_n_employed", "Total", "Employed population aged 16+")), , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data("No economic sector data for selected filters"))
+
+    ds_avg <- ds |>
+      dplyr::group_by(sector, sex) |>
+      dplyr::summarise(value = mean(value, na.rm = TRUE), .groups = "drop")
+
+    sect_order <- ds_avg |>
+      dplyr::filter(sex == "Female") |>
+      dplyr::arrange(value) |>
+      dplyr::pull(sector)
+    ds_avg$sector <- factor(ds_avg$sector, levels = sect_order)
+
+    plotly::plot_ly(
+      data = ds_avg[ds_avg$sex == "Male", ],
+      y = ~sector, x = ~value, type = "bar", orientation = "h",
+      name = "Male", marker = list(color = EMP_MALE),
+      hovertemplate = "<b>%{y}</b><br>Male: %{x:.1f}%<extra></extra>"
+    ) |>
+      plotly::add_trace(
+        data = ds_avg[ds_avg$sex == "Female", ],
+        y = ~sector, x = ~value, type = "bar", orientation = "h",
+        name = "Female", marker = list(color = EMP_FEMALE),
+        hovertemplate = "<b>%{y}</b><br>Female: %{x:.1f}%<extra></extra>"
+      ) |>
+      emp_plotly_theme(xlab = "% of employed") |>
+      plotly::layout(
+        barmode = "group",
+        yaxis   = list(tickfont = list(size = 10)),
+        margin  = list(l = 190, r = 20, t = 20, b = 40)
+      )
+  })
+
+  output$emp_sectors_gap <- plotly::renderPlotly({
+    d <- emp_tbls(); f <- emp_filters()
+    if (is.null(d) || is.null(d$economic)) return(emp_no_data())
+    ds <- d$economic
+    ds <- ds[ds$sex %in% c("Male", "Female") &
+             ds$year >= f$yr[1] & ds$year <= f$yr[2] &
+             !(ds$sector %in% c("_n_employed", "Total", "Employed population aged 16+")), , drop = FALSE]
+    if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (nrow(ds) == 0) return(emp_no_data())
+
+    ds_avg <- ds |>
+      dplyr::group_by(sector, sex) |>
+      dplyr::summarise(value = mean(value, na.rm = TRUE), .groups = "drop") |>
+      tidyr::pivot_wider(names_from = sex, values_from = value)
+
+    if (!("Female" %in% names(ds_avg)) || !("Male" %in% names(ds_avg))) return(emp_no_data())
+
+    ds_avg$gap <- ds_avg$Female - ds_avg$Male
+    ds_avg <- ds_avg[!is.na(ds_avg$gap), , drop = FALSE]
+    ds_avg <- ds_avg[order(ds_avg$gap), , drop = FALSE]
+    ds_avg$sector  <- factor(ds_avg$sector, levels = ds_avg$sector)
+    ds_avg$bar_col <- ifelse(ds_avg$gap >= 0, EMP_FEMALE, EMP_MALE)
+
+    plotly::plot_ly(
+      data = ds_avg, y = ~sector, x = ~gap,
+      type = "bar", orientation = "h",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{y}</b><br>F\u2212M: %{x:+.1f} pp<extra></extra>"
+    ) |>
+      emp_plotly_theme(xlab = "Gender gap (Female % \u2212 Male %, pp)") |>
+      plotly::layout(
+        xaxis  = list(zeroline = TRUE, zerolinewidth = 1.5, zerolinecolor = "#9CA3AF"),
+        yaxis  = list(tickfont = list(size = 10)),
+        margin = list(l = 190, r = 20, t = 20, b = 40)
+      )
   })
 
 }

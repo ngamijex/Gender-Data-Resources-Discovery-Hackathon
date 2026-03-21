@@ -1,0 +1,893 @@
+year,quarter,sex,occupation,value
+2019,Q1,All,Employed population aged 16+,3186050.546343698
+2019,Q2,All,Employed population aged 16+,3258934.879428366
+2019,Q3,All,Employed population aged 16+,3152832.1150640263
+2019,Q4,All,Employed population aged 16+,3405877.0383200003
+2020,Q1,All,Employed population aged 16+,3568934.161134825
+2020,Q2,All,Employed population aged 16+,3199104.165283203
+2020,Q3,All,Employed population aged 16+,3667611.013645172
+2020,Q4,All,Employed population aged 16+,3407788.9029749744
+2021,Q1,All,Employed population aged 16+,3204924.141860962
+2021,Q2,All,Employed population aged 16+,3133606.658269882
+2021,Q3,All,Employed population aged 16+,3179124.018924713
+2021,Q4,All,Employed population aged 16+,3633131.595502615
+2022,Q1,All,Employed population aged 16+,3585650.7928733826
+2022,Q2,All,Employed population aged 16+,3317267.515346527
+2022,Q3,All,Employed population aged 16+,3711253.6562436423
+2022,Q4,All,Employed population aged 16+,3571236.125681062
+2023,Q1,All,Employed population aged 16+,3803942.11794281
+2023,Q2,All,Employed population aged 16+,3984501.733938217
+2023,Q3,All,Employed population aged 16+,3972193.0716018677
+2023,Q4,All,Employed population aged 16+,4074629.1306991577
+2024,Q1,All,Employed population aged 16+,4365565.9443359375
+2024,Q2,All,Employed population aged 16+,4304439.991333008
+2024,Q3,All,Employed population aged 16+,4523412.98210144
+2024,Q4,All,Employed population aged 16+,4585316.174636841
+2025,Q1,All,Employed population aged 16+,4730124.006851196
+2025,Q2,All,Employed population aged 16+,4581575.010360718
+2025,Q3,All,Employed population aged 16+,4888920.7785720825
+2025,Q4,All,Employed population aged 16+,4890198.40511322
+2019,Q1,All,Total,100.0
+2019,Q2,All,Total,100.0
+2019,Q3,All,Total,100.0
+2019,Q4,All,Total,100.0
+2020,Q1,All,Total,100.0
+2020,Q3,All,Total,100.0
+2020,Q4,All,Total,100.0
+2021,Q1,All,Total,100.0
+2021,Q2,All,Total,100.0
+2021,Q3,All,Total,100.0
+2021,Q4,All,Total,100.0
+2022,Q1,All,Total,100.0
+2022,Q2,All,Total,100.0
+2022,Q3,All,Total,100.0
+2022,Q4,All,Total,100.0
+2023,Q1,All,Total,100.0
+2023,Q2,All,Total,100.0
+2023,Q3,All,Total,100.0
+2023,Q4,All,Total,100.0
+2024,Q1,All,Total,100.0
+2024,Q2,All,Total,100.0
+2024,Q3,All,Total,100.0
+2024,Q4,All,Total,100.0
+2025,Q1,All,Total,100.0
+2025,Q2,All,Total,100.0
+2025,Q3,All,Total,100.0
+2025,Q4,All,Total,100.0
+2019,Q1,All,Managers,1.2380257347560122
+2019,Q2,All,Managers,1.2658172404454875
+2019,Q3,All,Managers,1.510132290540567
+2019,Q4,All,Managers,1.3837852109672084
+2020,Q1,All,Managers,1.7210525058926014
+2020,Q3,All,Managers,1.0453165518030412
+2020,Q4,All,Managers,1.6581473092617496
+2021,Q1,All,Managers,1.1030349132557415
+2021,Q2,All,Managers,1.2221754038353791
+2021,Q3,All,Managers,1.0176942652257819
+2021,Q4,All,Managers,0.8566656607008323
+2022,Q1,All,Managers,1.2282969849154501
+2022,Q2,All,Managers,0.8370674247364229
+2022,Q3,All,Managers,1.030466758562793
+2022,Q4,All,Managers,1.1489731253254747
+2023,Q1,All,Managers,0.8112323774834544
+2023,Q2,All,Managers,0.7872379876620754
+2023,Q3,All,Managers,0.9518788269268237
+2023,Q4,All,Managers,1.420735625161362
+2024,Q1,All,Managers,1.3986746510775714
+2024,Q2,All,Managers,1.206231278887392
+2024,Q3,All,Managers,0.9566764832029786
+2024,Q4,All,Managers,1.0222723557650166
+2025,Q1,All,Managers,0.9834667431670946
+2025,Q2,All,Managers,1.1244321616504478
+2025,Q3,All,Managers,1.1174676141967237
+2025,Q4,All,Managers,1.0953447649599475
+2019,Q1,All,Professionals,5.68148759924653
+2019,Q2,All,Professionals,6.347471527551544
+2019,Q3,All,Professionals,6.034230795516693
+2019,Q4,All,Professionals,5.763757607257344
+2020,Q1,All,Professionals,6.015890120792255
+2020,Q3,All,Professionals,4.738488580107517
+2020,Q4,All,Professionals,5.8381679315968205
+2021,Q1,All,Professionals,5.380352369328599
+2021,Q2,All,Professionals,7.37651281566979
+2021,Q3,All,Professionals,5.633358816009979
+2021,Q4,All,Professionals,6.573579271331107
+2022,Q1,All,Professionals,5.892528872680485
+2022,Q2,All,Professionals,7.3077450410354725
+2022,Q3,All,Professionals,5.819893069990816
+2022,Q4,All,Professionals,6.996550533566643
+2023,Q1,All,Professionals,5.30140813408984
+2023,Q2,All,Professionals,5.414846098681421
+2023,Q3,All,Professionals,6.511861845698936
+2023,Q4,All,Professionals,7.300069750699325
+2024,Q1,All,Professionals,6.494112527269229
+2024,Q2,All,Professionals,6.631355826831678
+2024,Q3,All,Professionals,6.304209867619064
+2024,Q4,All,Professionals,6.056239249128421
+2025,Q1,All,Professionals,5.6536516868304485
+2025,Q2,All,Professionals,5.898537932244703
+2025,Q3,All,Professionals,5.52137404894962
+2025,Q4,All,Professionals,6.397699310300007
+2019,Q1,All,Technicians_and_associate_professionals,1.390418273580436
+2019,Q2,All,Technicians_and_associate_professionals,1.4141614530010405
+2019,Q3,All,Technicians_and_associate_professionals,1.684157672974102
+2019,Q4,All,Technicians_and_associate_professionals,1.542049727547021
+2020,Q1,All,Technicians_and_associate_professionals,1.6082884558098753
+2020,Q3,All,Technicians_and_associate_professionals,1.528594221100322
+2020,Q4,All,Technicians_and_associate_professionals,1.3705702497952823
+2021,Q1,All,Technicians_and_associate_professionals,0.9249421269045752
+2021,Q2,All,Technicians_and_associate_professionals,1.320150548444062
+2021,Q3,All,Technicians_and_associate_professionals,1.2983294856861771
+2021,Q4,All,Technicians_and_associate_professionals,1.5839308171794302
+2022,Q1,All,Technicians_and_associate_professionals,0.6907364587085768
+2022,Q2,All,Technicians_and_associate_professionals,1.2660052013032739
+2022,Q3,All,Technicians_and_associate_professionals,1.2595376231483664
+2022,Q4,All,Technicians_and_associate_professionals,0.9867737287777625
+2023,Q1,All,Technicians_and_associate_professionals,0.719964110766467
+2023,Q2,All,Technicians_and_associate_professionals,0.8011170493026034
+2023,Q3,All,Technicians_and_associate_professionals,0.7270891248702888
+2023,Q4,All,Technicians_and_associate_professionals,1.1049413166432254
+2024,Q1,All,Technicians_and_associate_professionals,1.5374879439498557
+2024,Q2,All,Technicians_and_associate_professionals,1.3340832878507174
+2024,Q3,All,Technicians_and_associate_professionals,1.6062653398072488
+2024,Q4,All,Technicians_and_associate_professionals,1.677504307516274
+2025,Q1,All,Technicians_and_associate_professionals,1.6624933908502024
+2025,Q2,All,Technicians_and_associate_professionals,1.6817072631961854
+2025,Q3,All,Technicians_and_associate_professionals,1.8742992356360868
+2025,Q4,All,Technicians_and_associate_professionals,1.6289027197379717
+2019,Q1,All,Clerical_support_workers,0.9101385830255163
+2019,Q2,All,Clerical_support_workers,1.243784868279806
+2019,Q3,All,Clerical_support_workers,0.9207643448524458
+2019,Q4,All,Clerical_support_workers,0.9724971608586908
+2020,Q1,All,Clerical_support_workers,0.9218855093044124
+2020,Q3,All,Clerical_support_workers,1.0071725924703032
+2020,Q4,All,Clerical_support_workers,0.8164109371831096
+2021,Q1,All,Clerical_support_workers,0.8619888807949099
+2021,Q2,All,Clerical_support_workers,1.1399305579990835
+2021,Q3,All,Clerical_support_workers,0.7798661696846184
+2021,Q4,All,Clerical_support_workers,1.0938739190311983
+2022,Q1,All,Clerical_support_workers,0.6773141874470815
+2022,Q2,All,Clerical_support_workers,0.8779767671509854
+2022,Q3,All,Clerical_support_workers,1.021480063293509
+2022,Q4,All,Clerical_support_workers,0.7947701117647022
+2023,Q1,All,Clerical_support_workers,0.8992684838558603
+2023,Q2,All,Clerical_support_workers,0.7801252816286152
+2023,Q3,All,Clerical_support_workers,0.7450528166619418
+2023,Q4,All,Clerical_support_workers,0.9008592453308382
+2024,Q1,All,Clerical_support_workers,1.061712225189221
+2024,Q2,All,Clerical_support_workers,1.0557752174407016
+2024,Q3,All,Clerical_support_workers,0.9208915995156877
+2024,Q4,All,Clerical_support_workers,0.9113888588894928
+2025,Q1,All,Clerical_support_workers,0.9340545783970908
+2025,Q2,All,Clerical_support_workers,0.8948936232137689
+2025,Q3,All,Clerical_support_workers,0.8862218554017541
+2025,Q4,All,Clerical_support_workers,1.1345427899069847
+2019,Q1,All,Service_and_sales_workers,18.918136250280824
+2019,Q2,All,Service_and_sales_workers,19.490477025017768
+2019,Q3,All,Service_and_sales_workers,19.413735134952447
+2019,Q4,All,Service_and_sales_workers,21.129130473100414
+2020,Q1,All,Service_and_sales_workers,17.516405205843135
+2020,Q3,All,Service_and_sales_workers,20.50121753587813
+2020,Q4,All,Service_and_sales_workers,15.65938968256329
+2021,Q1,All,Service_and_sales_workers,14.537905980615818
+2021,Q2,All,Service_and_sales_workers,13.33462282947144
+2021,Q3,All,Service_and_sales_workers,15.033587161936135
+2021,Q4,All,Service_and_sales_workers,14.008841526931851
+2022,Q1,All,Service_and_sales_workers,14.146834348723427
+2022,Q2,All,Service_and_sales_workers,14.349811423174765
+2022,Q3,All,Service_and_sales_workers,12.628165532142082
+2022,Q4,All,Service_and_sales_workers,14.365949480130697
+2023,Q1,All,Service_and_sales_workers,17.74747425843421
+2023,Q2,All,Service_and_sales_workers,17.97810859680516
+2023,Q3,All,Service_and_sales_workers,18.14475162467056
+2023,Q4,All,Service_and_sales_workers,17.59389670977655
+2024,Q1,All,Service_and_sales_workers,16.03759105987309
+2024,Q2,All,Service_and_sales_workers,19.538365381162134
+2024,Q3,All,Service_and_sales_workers,19.94392607877315
+2024,Q4,All,Service_and_sales_workers,18.488169883607302
+2025,Q1,All,Service_and_sales_workers,18.928668350829778
+2025,Q2,All,Service_and_sales_workers,20.94140101077676
+2025,Q3,All,Service_and_sales_workers,21.282961088766395
+2025,Q4,All,Service_and_sales_workers,20.3065385272516
+2019,Q1,All,"Skilled_agricultural,_forestry_and_fishery workers",7.468508722557653
+2019,Q2,All,"Skilled_agricultural,_forestry_and_fishery workers",7.221592278908756
+2019,Q3,All,"Skilled_agricultural,_forestry_and_fishery workers",6.3332685606799375
+2019,Q4,All,"Skilled_agricultural,_forestry_and_fishery workers",5.91412402191001
+2020,Q1,All,"Skilled_agricultural,_forestry_and_fishery workers",7.47489989648111
+2020,Q3,All,"Skilled_agricultural,_forestry_and_fishery workers",7.945110769836675
+2020,Q4,All,"Skilled_agricultural,_forestry_and_fishery workers",4.403371997572995
+2021,Q1,All,"Skilled_agricultural,_forestry_and_fishery workers",3.78813695133002
+2021,Q2,All,"Skilled_agricultural,_forestry_and_fishery workers",3.7090279420152563
+2021,Q3,All,"Skilled_agricultural,_forestry_and_fishery workers",6.418892708741246
+2021,Q4,All,"Skilled_agricultural,_forestry_and_fishery workers",3.7883365158213547
+2022,Q1,All,"Skilled_agricultural,_forestry_and_fishery workers",4.462518673987984
+2022,Q2,All,"Skilled_agricultural,_forestry_and_fishery workers",4.61591586504473
+2022,Q3,All,"Skilled_agricultural,_forestry_and_fishery workers",6.679185120556089
+2022,Q4,All,"Skilled_agricultural,_forestry_and_fishery workers",4.85536956640114
+2023,Q1,All,"Skilled_agricultural,_forestry_and_fishery workers",5.555902231495033
+2023,Q2,All,"Skilled_agricultural,_forestry_and_fishery workers",5.8864082317117
+2023,Q3,All,"Skilled_agricultural,_forestry_and_fishery workers",4.642859728577999
+2023,Q4,All,"Skilled_agricultural,_forestry_and_fishery workers",6.567418409896711
+2024,Q1,All,"Skilled_agricultural,_forestry_and_fishery workers",6.616533193279526
+2024,Q2,All,"Skilled_agricultural,_forestry_and_fishery workers",7.196670919143762
+2024,Q3,All,"Skilled_agricultural,_forestry_and_fishery workers",6.18320664469773
+2024,Q4,All,"Skilled_agricultural,_forestry_and_fishery workers",8.154949587920592
+2025,Q1,All,"Skilled_agricultural,_forestry_and_fishery workers",7.396754249175104
+2025,Q2,All,"Skilled_agricultural,_forestry_and_fishery workers",8.547136711163507
+2025,Q3,All,"Skilled_agricultural,_forestry_and_fishery workers",7.407159609381608
+2025,Q4,All,"Skilled_agricultural,_forestry_and_fishery workers",6.712293518353782
+2019,Q1,All,Craft_and_related_trades_workers,8.186231029883944
+2019,Q2,All,Craft_and_related_trades_workers,8.433093710771752
+2019,Q3,All,Craft_and_related_trades_workers,8.756654042704378
+2019,Q4,All,Craft_and_related_trades_workers,7.876072800981625
+2020,Q1,All,Craft_and_related_trades_workers,8.369749441417925
+2020,Q3,All,Craft_and_related_trades_workers,11.53579683851685
+2020,Q4,All,Craft_and_related_trades_workers,7.46376512831986
+2021,Q1,All,Craft_and_related_trades_workers,6.800787963165002
+2021,Q2,All,Craft_and_related_trades_workers,7.686432608122264
+2021,Q3,All,Craft_and_related_trades_workers,8.70341506646676
+2021,Q4,All,Craft_and_related_trades_workers,7.645423558712523
+2022,Q1,All,Craft_and_related_trades_workers,7.077801184635692
+2022,Q2,All,Craft_and_related_trades_workers,7.605981149555441
+2022,Q3,All,Craft_and_related_trades_workers,10.02317395018744
+2022,Q4,All,Craft_and_related_trades_workers,8.148658512474768
+2023,Q1,All,Craft_and_related_trades_workers,7.48283070238135
+2023,Q2,All,Craft_and_related_trades_workers,7.64047648988275
+2023,Q3,All,Craft_and_related_trades_workers,9.213055187479958
+2023,Q4,All,Craft_and_related_trades_workers,7.134147015682987
+2024,Q1,All,Craft_and_related_trades_workers,7.31340367389336
+2024,Q2,All,Craft_and_related_trades_workers,8.090291336473491
+2024,Q3,All,Craft_and_related_trades_workers,10.086965886048214
+2024,Q4,All,Craft_and_related_trades_workers,8.427713273814673
+2025,Q1,All,Craft_and_related_trades_workers,7.671913610302869
+2025,Q2,All,Craft_and_related_trades_workers,8.490011539163444
+2025,Q3,All,Craft_and_related_trades_workers,9.214185297105923
+2025,Q4,All,Craft_and_related_trades_workers,8.300061235113567
+2019,Q1,All,Plant_and_machine_operators_and_assemblers,2.934521433218318
+2019,Q2,All,Plant_and_machine_operators_and_assemblers,2.868354597471407
+2019,Q3,All,Plant_and_machine_operators_and_assemblers,2.9453891635825102
+2019,Q4,All,Plant_and_machine_operators_and_assemblers,3.1840486106771544
+2020,Q1,All,Plant_and_machine_operators_and_assemblers,2.4556627076197253
+2020,Q3,All,Plant_and_machine_operators_and_assemblers,2.7016372580171737
+2020,Q4,All,Plant_and_machine_operators_and_assemblers,2.5522522142457573
+2021,Q1,All,Plant_and_machine_operators_and_assemblers,2.41028293401128
+2021,Q2,All,Plant_and_machine_operators_and_assemblers,2.5867795542110046
+2021,Q3,All,Plant_and_machine_operators_and_assemblers,2.637505792642204
+2021,Q4,All,Plant_and_machine_operators_and_assemblers,2.408270714236613
+2022,Q1,All,Plant_and_machine_operators_and_assemblers,2.7622059837376023
+2022,Q2,All,Plant_and_machine_operators_and_assemblers,3.049505654636133
+2022,Q3,All,Plant_and_machine_operators_and_assemblers,2.1091521469810086
+2022,Q4,All,Plant_and_machine_operators_and_assemblers,2.8899886467064917
+2023,Q1,All,Plant_and_machine_operators_and_assemblers,2.784355314027714
+2023,Q2,All,Plant_and_machine_operators_and_assemblers,2.70416783210016
+2023,Q3,All,Plant_and_machine_operators_and_assemblers,2.7679557283302443
+2023,Q4,All,Plant_and_machine_operators_and_assemblers,2.567776526063903
+2024,Q1,All,Plant_and_machine_operators_and_assemblers,2.8231268873064503
+2024,Q2,All,Plant_and_machine_operators_and_assemblers,3.4412566661055153
+2024,Q3,All,Plant_and_machine_operators_and_assemblers,3.46623918383815
+2024,Q4,All,Plant_and_machine_operators_and_assemblers,2.8919466141125376
+2025,Q1,All,Plant_and_machine_operators_and_assemblers,2.991949188004181
+2025,Q2,All,Plant_and_machine_operators_and_assemblers,3.340168101390638
+2025,Q3,All,Plant_and_machine_operators_and_assemblers,3.3512192551040614
+2025,Q4,All,Plant_and_machine_operators_and_assemblers,3.649996298496284
+2019,Q1,All,Elementary_occupations,53.27253237345043
+2019,Q2,All,Elementary_occupations,51.715247298552924
+2019,Q3,All,Elementary_occupations,52.401667994197
+2019,Q4,All,Elementary_occupations,52.23453438670076
+2020,Q1,All,Elementary_occupations,53.91616615683964
+2020,Q3,All,Elementary_occupations,48.99666565226999
+2020,Q4,All,Elementary_occupations,60.23792454946238
+2021,Q1,All,Elementary_occupations,64.19256788059405
+2021,Q2,All,Elementary_occupations,61.62436774023172
+2021,Q3,All,Elementary_occupations,58.477350533607094
+2021,Q4,All,Elementary_occupations,62.04107801605508
+2022,Q1,All,Elementary_occupations,63.0617633051637
+2022,Q2,All,Elementary_occupations,60.08999147336278
+2022,Q3,All,Elementary_occupations,59.42894573513783
+2022,Q4,All,Elementary_occupations,59.812966294852075
+2023,Q1,All,Elementary_occupations,58.69756438746607
+2023,Q2,All,Elementary_occupations,58.00751243222552
+2023,Q3,All,Elementary_occupations,56.29549511678326
+2023,Q4,All,Elementary_occupations,55.4101554007451
+2024,Q1,All,Elementary_occupations,56.717357838161696
+2024,Q2,All,Elementary_occupations,51.505970086104604
+2024,Q3,All,Elementary_occupations,50.53161891649778
+2024,Q4,All,Elementary_occupations,52.3698158692457
+2025,Q1,All,Elementary_occupations,53.77704820244323
+2025,Q2,All,Elementary_occupations,49.08171165720054
+2025,Q3,All,Elementary_occupations,49.34511199545783
+2025,Q4,All,Elementary_occupations,50.77462083587986
+2019,Q1,Male,Employed population aged 16+,1778662.673653942
+2019,Q2,Male,Employed population aged 16+,1841887.9596653879
+2019,Q3,Male,Employed population aged 16+,1792066.6859785167
+2019,Q4,Male,Employed population aged 16+,1898636.1830799992
+2020,Q1,Male,Employed population aged 16+,1945486.6441105506
+2020,Q2,Male,Employed population aged 16+,1808329.9189567566
+2020,Q3,Male,Employed population aged 16+,2113800.9512634277
+2020,Q4,Male,Employed population aged 16+,1885454.2991530155
+2021,Q1,Male,Employed population aged 16+,1748038.1011924744
+2021,Q2,Male,Employed population aged 16+,1776461.1348571777
+2021,Q3,Male,Employed population aged 16+,1813058.2206611633
+2021,Q4,Male,Employed population aged 16+,2002299.1304745674
+2022,Q1,Male,Employed population aged 16+,1949118.9244995117
+2022,Q2,Male,Employed population aged 16+,1875695.9197235107
+2022,Q3,Male,Employed population aged 16+,2095381.0767530869
+2022,Q4,Male,Employed population aged 16+,1990619.8827268204
+2023,Q1,Male,Employed population aged 16+,2059803.1013069153
+2023,Q2,Male,Employed population aged 16+,2175512.2425308228
+2023,Q3,Male,Employed population aged 16+,2248639.8181419373
+2023,Q4,Male,Employed population aged 16+,2222880.141635895
+2024,Q1,Male,Employed population aged 16+,2346249.8633270264
+2024,Q2,Male,Employed population aged 16+,2347795.0636138916
+2024,Q3,Male,Employed population aged 16+,2519344.8046875
+2024,Q4,Male,Employed population aged 16+,2489254.5567474365
+2025,Q1,Male,Employed population aged 16+,2502420.954284668
+2025,Q2,Male,Employed population aged 16+,2470663.182373047
+2025,Q3,Male,Employed population aged 16+,2666343.2031784058
+2025,Q4,Male,Employed population aged 16+,2588345.9426498413
+2019,Q1,Male,Total,100.0
+2019,Q2,Male,Total,100.0
+2019,Q3,Male,Total,100.0
+2019,Q4,Male,Total,100.0
+2020,Q1,Male,Total,100.0
+2020,Q3,Male,Total,100.0
+2020,Q4,Male,Total,100.0
+2021,Q1,Male,Total,100.0
+2021,Q2,Male,Total,100.0
+2021,Q3,Male,Total,100.0
+2021,Q4,Male,Total,100.0
+2022,Q1,Male,Total,100.0
+2022,Q2,Male,Total,100.0
+2022,Q3,Male,Total,100.0
+2022,Q4,Male,Total,100.0
+2023,Q1,Male,Total,100.0
+2023,Q2,Male,Total,100.0
+2023,Q3,Male,Total,100.0
+2023,Q4,Male,Total,100.0
+2024,Q1,Male,Total,100.0
+2024,Q2,Male,Total,100.0
+2024,Q3,Male,Total,100.0
+2024,Q4,Male,Total,100.0
+2025,Q1,Male,Total,100.0
+2025,Q2,Male,Total,100.0
+2025,Q3,Male,Total,100.0
+2025,Q4,Male,Total,100.0
+2019,Q1,Male,Managers,1.5917449803804804
+2019,Q2,Male,Managers,1.618707475424382
+2019,Q3,Male,Managers,1.7483278253062093
+2019,Q4,Male,Managers,1.838493523460318
+2020,Q1,Male,Managers,2.008269806923856
+2020,Q3,Male,Managers,1.3405866751968734
+2020,Q4,Male,Managers,1.9467837600990336
+2021,Q1,Male,Managers,1.354486447538809
+2021,Q2,Male,Managers,1.3986001925072358
+2021,Q3,Male,Managers,1.246465782072275
+2021,Q4,Male,Managers,0.8987110136853034
+2022,Q1,Male,Managers,1.7434695254850696
+2022,Q2,Male,Managers,1.2219848459119023
+2022,Q3,Male,Managers,1.3282133189136573
+2022,Q4,Male,Managers,1.5384163189054942
+2023,Q1,Male,Managers,1.1459858984929525
+2023,Q2,Male,Managers,0.8573176351407745
+2023,Q3,Male,Managers,0.9367953010109632
+2023,Q4,Male,Managers,1.568551459376712
+2024,Q1,Male,Managers,1.734514014062357
+2024,Q2,Male,Managers,1.359452448186597
+2024,Q3,Male,Managers,1.289184041213042
+2024,Q4,Male,Managers,1.2297581759530223
+2025,Q1,Male,Managers,1.1698152649401965
+2025,Q2,Male,Managers,1.4659198302187573
+2025,Q3,Male,Managers,1.3759692185659618
+2025,Q4,Male,Managers,1.531360852920905
+2019,Q1,Male,Professionals,5.623293391905096
+2019,Q2,Male,Professionals,6.503789241868649
+2019,Q3,Male,Professionals,6.255038386609357
+2019,Q4,Male,Professionals,6.274909277602236
+2020,Q1,Male,Professionals,6.465793232647128
+2020,Q3,Male,Professionals,5.291009172050353
+2020,Q4,Male,Professionals,6.024643093233693
+2021,Q1,Male,Professionals,5.8424954273859235
+2021,Q2,Male,Professionals,7.359878955951246
+2021,Q3,Male,Professionals,5.704312192205845
+2021,Q4,Male,Professionals,7.007965403042794
+2022,Q1,Male,Professionals,6.297300274151042
+2022,Q2,Male,Professionals,7.62384833099942
+2022,Q3,Male,Professionals,6.082117962479991
+2022,Q4,Male,Professionals,6.721336766377899
+2023,Q1,Male,Professionals,5.674834621005854
+2023,Q2,Male,Professionals,5.476686143777889
+2023,Q3,Male,Professionals,7.084557533132026
+2023,Q4,Male,Professionals,7.581248007463605
+2024,Q1,Male,Professionals,6.381724172348345
+2024,Q2,Male,Professionals,6.258382682404752
+2024,Q3,Male,Professionals,6.2126787510667265
+2024,Q4,Male,Professionals,6.4436566820112215
+2025,Q1,Male,Professionals,5.994426610791241
+2025,Q2,Male,Professionals,5.732222929380669
+2025,Q3,Male,Professionals,5.9105770118837535
+2025,Q4,Male,Professionals,6.229169197673732
+2019,Q1,Male,Technicians_and_associate_professionals,1.9474448708055863
+2019,Q2,Male,Technicians_and_associate_professionals,1.3887963401805896
+2019,Q3,Male,Technicians_and_associate_professionals,1.8553387570853317
+2019,Q4,Male,Technicians_and_associate_professionals,1.9613263157974348
+2020,Q1,Male,Technicians_and_associate_professionals,2.034241379234357
+2020,Q3,Male,Technicians_and_associate_professionals,1.7850561097106155
+2020,Q4,Male,Technicians_and_associate_professionals,1.7356302608183334
+2021,Q1,Male,Technicians_and_associate_professionals,1.181676420995439
+2021,Q2,Male,Technicians_and_associate_professionals,1.6680275749408235
+2021,Q3,Male,Technicians_and_associate_professionals,1.6498264273272656
+2021,Q4,Male,Technicians_and_associate_professionals,1.99350685600433
+2022,Q1,Male,Technicians_and_associate_professionals,1.0293941841931804
+2022,Q2,Male,Technicians_and_associate_professionals,1.639994052022088
+2022,Q3,Male,Technicians_and_associate_professionals,1.4902399089141065
+2022,Q4,Male,Technicians_and_associate_professionals,1.3895346214751412
+2023,Q1,Male,Technicians_and_associate_professionals,1.0223267576063968
+2023,Q2,Male,Technicians_and_associate_professionals,1.2221078292401488
+2023,Q3,Male,Technicians_and_associate_professionals,0.893875167626194
+2023,Q4,Male,Technicians_and_associate_professionals,1.385958654718937
+2024,Q1,Male,Technicians_and_associate_professionals,1.8815994713288018
+2024,Q2,Male,Technicians_and_associate_professionals,1.7117783054157893
+2024,Q3,Male,Technicians_and_associate_professionals,1.923162425453592
+2024,Q4,Male,Technicians_and_associate_professionals,2.198721644143773
+2025,Q1,Male,Technicians_and_associate_professionals,2.43507087270057
+2025,Q2,Male,Technicians_and_associate_professionals,2.1940459548555777
+2025,Q3,Male,Technicians_and_associate_professionals,2.3739393365509605
+2025,Q4,Male,Technicians_and_associate_professionals,2.3498790820697493
+2019,Q1,Male,Clerical_support_workers,0.7676487374569958
+2019,Q2,Male,Clerical_support_workers,0.9316611669358099
+2019,Q3,Male,Clerical_support_workers,0.5982458303672116
+2019,Q4,Male,Clerical_support_workers,0.660638868666893
+2020,Q1,Male,Clerical_support_workers,0.7569336448032138
+2020,Q3,Male,Clerical_support_workers,0.8574365017648914
+2020,Q4,Male,Clerical_support_workers,0.7057833969233763
+2021,Q1,Male,Clerical_support_workers,0.5788438574577754
+2021,Q2,Male,Clerical_support_workers,1.0326190011077774
+2021,Q3,Male,Clerical_support_workers,0.6621209465562887
+2021,Q4,Male,Clerical_support_workers,0.9618283388623217
+2022,Q1,Male,Clerical_support_workers,0.5121197930757918
+2022,Q2,Male,Clerical_support_workers,0.7705342967102471
+2022,Q3,Male,Clerical_support_workers,0.7045351884520525
+2022,Q4,Male,Clerical_support_workers,0.5425611001806068
+2023,Q1,Male,Clerical_support_workers,0.6262488032588551
+2023,Q2,Male,Clerical_support_workers,0.9047872205543462
+2023,Q3,Male,Clerical_support_workers,0.49381588257830694
+2023,Q4,Male,Clerical_support_workers,0.736556357517102
+2024,Q1,Male,Clerical_support_workers,0.7607874765248671
+2024,Q2,Male,Clerical_support_workers,0.9319596121962844
+2024,Q3,Male,Clerical_support_workers,0.6976821287197733
+2024,Q4,Male,Clerical_support_workers,0.8217728284428124
+2025,Q1,Male,Clerical_support_workers,0.8852627588602817
+2025,Q2,Male,Clerical_support_workers,0.6953763103548671
+2025,Q3,Male,Clerical_support_workers,0.7828959224034704
+2025,Q4,Male,Clerical_support_workers,0.9576076401986603
+2019,Q1,Male,Service_and_sales_workers,16.984393710796525
+2019,Q2,Male,Service_and_sales_workers,17.588392658734893
+2019,Q3,Male,Service_and_sales_workers,17.02145736986128
+2019,Q4,Male,Service_and_sales_workers,19.11911795292614
+2020,Q1,Male,Service_and_sales_workers,16.002684720314626
+2020,Q3,Male,Service_and_sales_workers,16.511533828772585
+2020,Q4,Male,Service_and_sales_workers,13.150112945478401
+2021,Q1,Male,Service_and_sales_workers,13.172811107015361
+2021,Q2,Male,Service_and_sales_workers,11.64655788711828
+2021,Q3,Male,Service_and_sales_workers,12.115324054971673
+2021,Q4,Male,Service_and_sales_workers,11.385001063235372
+2022,Q1,Male,Service_and_sales_workers,12.329066185675677
+2022,Q2,Male,Service_and_sales_workers,11.799204524120286
+2022,Q3,Male,Service_and_sales_workers,10.425832918710642
+2022,Q4,Male,Service_and_sales_workers,12.207951992418845
+2023,Q1,Male,Service_and_sales_workers,15.737569784011788
+2023,Q2,Male,Service_and_sales_workers,14.926841272568039
+2023,Q3,Male,Service_and_sales_workers,14.431411111523898
+2023,Q4,Male,Service_and_sales_workers,14.45624534516266
+2024,Q1,Male,Service_and_sales_workers,13.769840441917038
+2024,Q2,Male,Service_and_sales_workers,15.808669476426449
+2024,Q3,Male,Service_and_sales_workers,14.77500764986357
+2024,Q4,Male,Service_and_sales_workers,15.65833229699578
+2025,Q1,Male,Service_and_sales_workers,15.725532557075045
+2025,Q2,Male,Service_and_sales_workers,17.10933917598181
+2025,Q3,Male,Service_and_sales_workers,15.97807366215777
+2025,Q4,Male,Service_and_sales_workers,16.716174641835675
+2019,Q1,Male,"Skilled_agricultural,_forestry_and_fishery workers",7.33218669307535
+2019,Q2,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.738495431383843
+2019,Q3,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.335850371012441
+2019,Q4,Male,"Skilled_agricultural,_forestry_and_fishery workers",5.736756734684574
+2020,Q1,Male,"Skilled_agricultural,_forestry_and_fishery workers",7.865833133883998
+2020,Q3,Male,"Skilled_agricultural,_forestry_and_fishery workers",7.099815491248915
+2020,Q4,Male,"Skilled_agricultural,_forestry_and_fishery workers",4.457852432050848
+2021,Q1,Male,"Skilled_agricultural,_forestry_and_fishery workers",3.759926445169745
+2021,Q2,Male,"Skilled_agricultural,_forestry_and_fishery workers",3.7308959649642905
+2021,Q3,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.280163367828454
+2021,Q4,Male,"Skilled_agricultural,_forestry_and_fishery workers",3.693343020104821
+2022,Q1,Male,"Skilled_agricultural,_forestry_and_fishery workers",4.449168950541224
+2022,Q2,Male,"Skilled_agricultural,_forestry_and_fishery workers",4.504738532783758
+2022,Q3,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.621696585495555
+2022,Q4,Male,"Skilled_agricultural,_forestry_and_fishery workers",4.618498025928616
+2023,Q1,Male,"Skilled_agricultural,_forestry_and_fishery workers",5.438253020944131
+2023,Q2,Male,"Skilled_agricultural,_forestry_and_fishery workers",5.1958053551530305
+2023,Q3,Male,"Skilled_agricultural,_forestry_and_fishery workers",4.437155064387824
+2023,Q4,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.522862831103891
+2024,Q1,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.262088867509617
+2024,Q2,Male,"Skilled_agricultural,_forestry_and_fishery workers",7.175954829613822
+2024,Q3,Male,"Skilled_agricultural,_forestry_and_fishery workers",5.866722547109959
+2024,Q4,Male,"Skilled_agricultural,_forestry_and_fishery workers",8.064072347140131
+2025,Q1,Male,"Skilled_agricultural,_forestry_and_fishery workers",7.190494056748806
+2025,Q2,Male,"Skilled_agricultural,_forestry_and_fishery workers",8.03567132359258
+2025,Q3,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.8867715067725825
+2025,Q4,Male,"Skilled_agricultural,_forestry_and_fishery workers",6.696324068487231
+2019,Q1,Male,Craft_and_related_trades_workers,10.066126813736268
+2019,Q2,Male,Craft_and_related_trades_workers,10.947087071006713
+2019,Q3,Male,Craft_and_related_trades_workers,10.732133623015336
+2019,Q4,Male,Craft_and_related_trades_workers,9.924697197875956
+2020,Q1,Male,Craft_and_related_trades_workers,11.552045104427968
+2020,Q3,Male,Craft_and_related_trades_workers,16.062080800414474
+2020,Q4,Male,Craft_and_related_trades_workers,10.442813414541464
+2021,Q1,Male,Craft_and_related_trades_workers,9.682883220890998
+2021,Q2,Male,Craft_and_related_trades_workers,10.261458443878997
+2021,Q3,Male,Craft_and_related_trades_workers,11.416423183427147
+2021,Q4,Male,Craft_and_related_trades_workers,10.192229293953009
+2022,Q1,Male,Craft_and_related_trades_workers,9.34008485636824
+2022,Q2,Male,Craft_and_related_trades_workers,9.586238104392201
+2022,Q3,Male,Craft_and_related_trades_workers,13.07646292925444
+2022,Q4,Male,Craft_and_related_trades_workers,11.222812968062515
+2023,Q1,Male,Craft_and_related_trades_workers,10.198674482798447
+2023,Q2,Male,Craft_and_related_trades_workers,10.744520748395479
+2023,Q3,Male,Craft_and_related_trades_workers,12.183460780972903
+2023,Q4,Male,Craft_and_related_trades_workers,9.32308776574967
+2024,Q1,Male,Craft_and_related_trades_workers,10.238479963859286
+2024,Q2,Male,Craft_and_related_trades_workers,10.816260285944516
+2024,Q3,Male,Craft_and_related_trades_workers,13.83031934297731
+2024,Q4,Male,Craft_and_related_trades_workers,11.524083348139834
+2025,Q1,Male,Craft_and_related_trades_workers,11.166195940847972
+2025,Q2,Male,Craft_and_related_trades_workers,11.683828156640866
+2025,Q3,Male,Craft_and_related_trades_workers,13.258904585728724
+2025,Q4,Male,Craft_and_related_trades_workers,12.17589445927207
+2019,Q1,Male,Plant_and_machine_operators_and_assemblers,5.150900828323288
+2019,Q2,Male,Plant_and_machine_operators_and_assemblers,4.995950738392063
+2019,Q3,Male,Plant_and_machine_operators_and_assemblers,4.991539923671201
+2019,Q4,Male,Plant_and_machine_operators_and_assemblers,5.568306295969564
+2020,Q1,Male,Plant_and_machine_operators_and_assemblers,4.4115261064413405
+2020,Q3,Male,Plant_and_machine_operators_and_assemblers,4.508198079305199
+2020,Q4,Male,Plant_and_machine_operators_and_assemblers,4.261263169788425
+2021,Q1,Male,Plant_and_machine_operators_and_assemblers,4.342603847750507
+2021,Q2,Male,Plant_and_machine_operators_and_assemblers,4.532570621837471
+2021,Q3,Male,Plant_and_machine_operators_and_assemblers,4.5734134984681285
+2021,Q4,Male,Plant_and_machine_operators_and_assemblers,4.3348490141322475
+2022,Q1,Male,Plant_and_machine_operators_and_assemblers,4.863544794140348
+2022,Q2,Male,Plant_and_machine_operators_and_assemblers,5.334114230645037
+2022,Q3,Male,Plant_and_machine_operators_and_assemblers,3.670471128102786
+2022,Q4,Male,Plant_and_machine_operators_and_assemblers,5.184732629008244
+2023,Q1,Male,Plant_and_machine_operators_and_assemblers,5.090356182844025
+2023,Q2,Male,Plant_and_machine_operators_and_assemblers,4.901995899750413
+2023,Q3,Male,Plant_and_machine_operators_and_assemblers,4.709649235325021
+2023,Q4,Male,Plant_and_machine_operators_and_assemblers,4.706838141315875
+2024,Q1,Male,Plant_and_machine_operators_and_assemblers,5.16771671927053
+2024,Q2,Male,Plant_and_machine_operators_and_assemblers,6.061834489651216
+2024,Q3,Male,Plant_and_machine_operators_and_assemblers,5.9714264155935135
+2024,Q4,Male,Plant_and_machine_operators_and_assemblers,5.131189505300936
+2025,Q1,Male,Plant_and_machine_operators_and_assemblers,5.382202110858398
+2025,Q2,Male,Plant_and_machine_operators_and_assemblers,6.009437498668179
+2025,Q3,Male,Plant_and_machine_operators_and_assemblers,6.063629260620591
+2025,Q4,Male,Plant_and_machine_operators_and_assemblers,6.795256143350516
+2019,Q1,Male,Elementary_occupations,50.5362599735208
+2019,Q2,Male,Elementary_occupations,49.28711987607318
+2019,Q3,Male,Elementary_occupations,50.46206791307163
+2019,Q4,Male,Elementary_occupations,48.915753833016815
+2020,Q1,Male,Elementary_occupations,48.902672871323496
+2020,Q3,Male,Elementary_occupations,46.544283341536094
+2020,Q4,Male,Elementary_occupations,57.2751175270656
+2021,Q1,Male,Elementary_occupations,60.084273225795435
+2021,Q2,Male,Elementary_occupations,58.36939135769388
+2021,Q3,Male,Elementary_occupations,56.35195054714293
+2021,Q4,Male,Elementary_occupations,59.532565996979805
+2022,Q1,Male,Elementary_occupations,59.435851436369425
+2022,Q2,Male,Elementary_occupations,57.51934308241506
+2022,Q3,Male,Elementary_occupations,56.60043005967649
+2022,Q4,Male,Elementary_occupations,56.57415557764245
+2023,Q1,Male,Elementary_occupations,55.06575044903755
+2023,Q2,Male,Elementary_occupations,55.769937895419886
+2023,Q3,Male,Elementary_occupations,54.82927992344286
+2023,Q4,Male,Elementary_occupations,53.71865143759155
+2024,Q1,Male,Elementary_occupations,53.80324887317916
+2024,Q2,Male,Elementary_occupations,49.875707870160575
+2024,Q3,Male,Elementary_occupations,49.433816698002516
+2024,Q4,Male,Elementary_occupations,48.928413171872485
+2025,Q1,Male,Elementary_occupations,50.05099982717749
+2025,Q2,Male,Elementary_occupations,47.0741588203067
+2025,Q3,Male,Elementary_occupations,47.36923949531619
+2025,Q4,Male,Elementary_occupations,46.54833391419146
+2019,Q1,Female,Employed population aged 16+,1407387.8726897268
+2019,Q2,Female,Employed population aged 16+,1417046.919762995
+2019,Q3,Female,Employed population aged 16+,1360765.4290855117
+2019,Q4,Female,Employed population aged 16+,1507240.8552400058
+2020,Q1,Female,Employed population aged 16+,1623447.5170242912
+2020,Q2,Female,Employed population aged 16+,1390774.2463264465
+2020,Q3,Female,Employed population aged 16+,1553810.0623817444
+2020,Q4,Female,Employed population aged 16+,1522334.6038220073
+2021,Q1,Female,Employed population aged 16+,1456886.0406684875
+2021,Q2,Female,Employed population aged 16+,1357145.5234127045
+2021,Q3,Female,Employed population aged 16+,1366065.7982635498
+2021,Q4,Female,Employed population aged 16+,1630832.4650280476
+2022,Q1,Female,Employed population aged 16+,1636531.8683738708
+2022,Q2,Female,Employed population aged 16+,1441571.5956230164
+2022,Q3,Female,Employed population aged 16+,1615872.5794905617
+2022,Q4,Female,Employed population aged 16+,1580616.2429542232
+2023,Q1,Female,Employed population aged 16+,1744139.0166358948
+2023,Q2,Female,Employed population aged 16+,1808989.4914073944
+2023,Q3,Female,Employed population aged 16+,1723553.2534599304
+2023,Q4,Female,Employed population aged 16+,1851748.989063263
+2024,Q1,Female,Employed population aged 16+,2019316.0810089111
+2024,Q2,Female,Employed population aged 16+,1956644.9277191162
+2024,Q3,Female,Employed population aged 16+,2004068.1774139404
+2024,Q4,Female,Employed population aged 16+,2096061.6178894043
+2025,Q1,Female,Employed population aged 16+,2227703.0525665283
+2025,Q2,Female,Employed population aged 16+,2110911.827987671
+2025,Q3,Female,Employed population aged 16+,2222577.5753936768
+2025,Q4,Female,Employed population aged 16+,2301852.462463379
+2019,Q1,Female,Total,100.0
+2019,Q2,Female,Total,100.0
+2019,Q3,Female,Total,100.0
+2019,Q4,Female,Total,100.0
+2020,Q1,Female,Total,100.0
+2020,Q3,Female,Total,100.0
+2020,Q4,Female,Total,100.0
+2021,Q1,Female,Total,100.0
+2021,Q2,Female,Total,100.0
+2021,Q3,Female,Total,100.0
+2021,Q4,Female,Total,100.0
+2022,Q1,Female,Total,100.0
+2022,Q2,Female,Total,100.0
+2022,Q3,Female,Total,100.0
+2022,Q4,Female,Total,100.0
+2023,Q1,Female,Total,100.0
+2023,Q2,Female,Total,100.0
+2023,Q3,Female,Total,100.0
+2023,Q4,Female,Total,100.0
+2024,Q1,Female,Total,100.0
+2024,Q2,Female,Total,100.0
+2024,Q3,Female,Total,100.0
+2024,Q4,Female,Total,100.0
+2025,Q1,Female,Total,100.0
+2025,Q2,Female,Total,100.0
+2025,Q3,Female,Total,100.0
+2025,Q4,Female,Total,100.0
+2019,Q1,Female,Managers,0.7909938742761764
+2019,Q2,Female,Managers,0.8071279297204482
+2019,Q3,Female,Managers,1.196439516254538
+2019,Q4,Female,Managers,0.8109997454954576
+2020,Q1,Female,Managers,1.376860644280698
+2020,Q3,Female,Managers,0.6436315049493472
+2020,Q4,Female,Managers,1.3006629324649477
+2021,Q1,Female,Managers,0.8013319315122805
+2021,Q2,Female,Managers,0.9912408615227521
+2021,Q3,Female,Managers,0.714066079966409
+2021,Q4,Female,Managers,0.8050433294518312
+2022,Q1,Female,Managers,0.6147235082165289
+2022,Q2,Female,Managers,0.3362334470682417
+2022,Q3,Female,Managers,0.6443642179625791
+2022,Q4,Female,Managers,0.6585103910667935
+2023,Q1,Female,Managers,0.41589328227833966
+2023,Q2,Female,Managers,0.702959371469816
+2023,Q3,Female,Managers,0.9715576020991558
+2023,Q4,Female,Managers,1.2432942524713946
+2024,Q1,Female,Managers,1.0084618127243012
+2024,Q2,Female,Managers,1.0223798811066174
+2024,Q3,Female,Managers,0.5386761385874802
+2024,Q4,Female,Managers,0.7758649892279876
+2025,Q1,Female,Managers,0.7741379256894984
+2025,Q2,Female,Managers,0.7247465855975479
+2025,Q3,Female,Managers,0.8073529061876923
+2025,Q4,Female,Managers,0.605061182233691
+2019,Q1,Female,Professionals,5.755033681623509
+2019,Q2,Female,Professionals,6.144288618173135
+2019,Q3,Female,Professionals,5.74343715867785
+2019,Q4,Female,Professionals,5.119871759163013
+2020,Q1,Female,Professionals,5.476740880623469
+2020,Q3,Female,Professionals,3.986840369610562
+2020,Q4,Female,Professionals,5.607213189905277
+2021,Q1,Female,Professionals,4.825852119387888
+2021,Q2,Female,Professionals,7.398286018913577
+2021,Q3,Female,Professionals,5.539188680018653
+2021,Q4,Female,Professionals,6.040249826113346
+2022,Q1,Female,Professionals,5.410443791449292
+2022,Q2,Female,Professionals,6.89644833333341
+2022,Q3,Female,Professionals,5.479853215023617
+2022,Q4,Female,Professionals,7.343153321819745
+2023,Q1,Female,Professionals,4.860396822191458
+2023,Q2,Female,Professionals,5.340476526152087
+2023,Q3,Female,Professionals,5.764692401496932
+2023,Q4,Female,Professionals,6.962537198008531
+2024,Q1,Female,Professionals,6.624696919109918
+2024,Q2,Female,Professionals,7.078889508053471
+2024,Q3,Female,Professionals,6.419275036335502
+2024,Q4,Female,Professionals,5.596147521892857
+2025,Q1,Female,Professionals,5.270852772301967
+2025,Q2,Female,Professionals,6.093197106921911
+2025,Q3,Female,Professionals,5.054461808690688
+2025,Q4,Female,Professionals,6.587205041159802
+2019,Q1,Female,Technicians_and_associate_professionals,0.6864457327176793
+2019,Q2,Female,Technicians_and_associate_professionals,1.4471312123279514
+2019,Q3,Female,Technicians_and_associate_professionals,1.4587199071781334
+2019,Q4,Female,Technicians_and_associate_professionals,1.013896779461077
+2020,Q1,Female,Technicians_and_associate_professionals,1.0978403416255966
+2020,Q3,Female,Technicians_and_associate_professionals,1.17970384045992
+2020,Q4,Female,Technicians_and_associate_professionals,0.9184331404474018
+2021,Q1,Female,Technicians_and_associate_professionals,0.6169006497910583
+2021,Q2,Female,Technicians_and_associate_professionals,0.8647903776886312
+2021,Q3,Female,Technicians_and_associate_professionals,0.831818706783942
+2021,Q4,Female,Technicians_and_associate_professionals,1.081062641576726
+2022,Q1,Female,Technicians_and_associate_professionals,0.28739314812221484
+2022,Q2,Female,Technicians_and_associate_professionals,0.7793908954684005
+2022,Q3,Female,Technicians_and_associate_professionals,0.9603746754674155
+2022,Q4,Female,Technicians_and_associate_professionals,0.4795387534559127
+2023,Q1,Female,Technicians_and_associate_professionals,0.36287817223759367
+2023,Q2,Female,Technicians_and_associate_professionals,0.2948285384532773
+2023,Q3,Female,Technicians_and_associate_professionals,0.5094911271882454
+2023,Q4,Female,Technicians_and_associate_professionals,0.767601934279162
+2024,Q1,Female,Technicians_and_associate_professionals,1.1376636511235838
+2024,Q2,Female,Technicians_and_associate_professionals,0.8808837904720418
+2024,Q3,Female,Technicians_and_associate_professionals,1.207889159125637
+2024,Q4,Female,Technicians_and_associate_professionals,1.0585136160297313
+2025,Q1,Female,Technicians_and_associate_professionals,0.7946424996986736
+2025,Q2,Female,Technicians_and_associate_professionals,1.0820534426978006
+2025,Q3,Female,Technicians_and_associate_professionals,1.2748996907748567
+2025,Q4,Female,Technicians_and_associate_professionals,0.8181920974807964
+2019,Q1,Female,Clerical_support_workers,1.0902178451859146
+2019,Q2,Female,Clerical_support_workers,1.6494855401586461
+2019,Q3,Female,Clerical_support_workers,1.3455066796196407
+2019,Q4,Female,Clerical_support_workers,1.3653377844991552
+2020,Q1,Female,Clerical_support_workers,1.1195584528045617
+2020,Q3,Female,Clerical_support_workers,1.2108733527076279
+2020,Q4,Female,Clerical_support_workers,0.9534262627650945
+2021,Q1,Female,Clerical_support_workers,1.2017191514818593
+2021,Q2,Female,Clerical_support_workers,1.280398036872717
+2021,Q3,Female,Clerical_support_workers,0.9361389824640329
+2021,Q4,Female,Clerical_support_workers,1.2559964889609085
+2022,Q1,Female,Clerical_support_workers,0.8740616669876131
+2022,Q2,Female,Clerical_support_workers,1.0177751677455877
+2022,Q3,Female,Clerical_support_workers,1.4324779981220324
+2022,Q4,Female,Clerical_support_workers,1.112400830353188
+2023,Q1,Female,Clerical_support_workers,1.221700801146847
+2023,Q2,Female,Clerical_support_workers,0.6302053536252957
+2023,Q3,Female,Clerical_support_workers,1.0728299669381378
+2023,Q4,Female,Clerical_support_workers,1.0980920391337063
+2024,Q1,Female,Clerical_support_workers,1.411357660624321
+2024,Q2,Female,Clerical_support_workers,1.2043426262091768
+2024,Q3,Female,Clerical_support_workers,1.2014916444365051
+2024,Q4,Female,Clerical_support_workers,1.0178156500883317
+2025,Q1,Female,Clerical_support_workers,0.9888633517055073
+2025,Q2,Female,Clerical_support_workers,1.1284135990795596
+2025,Q3,Female,Clerical_support_workers,1.0101781133124563
+2025,Q4,Female,Clerical_support_workers,1.3334996667389505
+2019,Q1,Female,Service_and_sales_workers,21.362008150970635
+2019,Q2,Female,Service_and_sales_workers,21.962820208340105
+2019,Q3,Female,Service_and_sales_workers,22.564257035929934
+2019,Q4,Female,Service_and_sales_workers,23.66109640673272
+2020,Q1,Female,Service_and_sales_workers,19.33039854817789
+2020,Q3,Female,Service_and_sales_workers,25.92877745423317
+2020,Q4,Female,Service_and_sales_workers,18.767199621207805
+2021,Q1,Female,Service_and_sales_workers,16.175808866761397
+2021,Q2,Female,Service_and_sales_workers,15.544247156024507
+2021,Q3,Female,Service_and_sales_workers,18.906739482168174
+2021,Q4,Female,Service_and_sales_workers,17.230333367219135
+2022,Q1,Female,Service_and_sales_workers,16.31180674884516
+2022,Q2,Female,Service_and_sales_workers,17.668524810634032
+2022,Q3,Female,Service_and_sales_workers,15.484038044289816
+2022,Q4,Female,Service_and_sales_workers,17.083720302151946
+2023,Q1,Female,Service_and_sales_workers,20.12114254419461
+2023,Q2,Female,Service_and_sales_workers,21.64759891205718
+2023,Q3,Female,Service_and_sales_workers,22.98937439418414
+2023,Q4,Female,Service_and_sales_workers,21.3604022950207
+2024,Q1,Female,Service_and_sales_workers,18.672497812450814
+2024,Q2,Female,Service_and_sales_workers,24.013659549188333
+2024,Q3,Female,Service_and_sales_workers,26.44185261465121
+2024,Q4,Female,Service_and_sales_workers,21.848846901499993
+2025,Q1,Female,Service_and_sales_workers,22.526811344114435
+2025,Q2,Female,Service_and_sales_workers,25.426540542554537
+2025,Q3,Female,Service_and_sales_workers,27.647036156454007
+2025,Q4,Female,Service_and_sales_workers,24.343766780146492
+2019,Q1,Female,"Skilled_agricultural,_forestry_and_fishery workers",7.640793072978881
+2019,Q2,Female,"Skilled_agricultural,_forestry_and_fishery workers",7.849525097786188
+2019,Q3,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.3298684329374595
+2019,Q4,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.137549460551855
+2020,Q1,Female,"Skilled_agricultural,_forestry_and_fishery workers",7.006418233765934
+2020,Q3,Female,"Skilled_agricultural,_forestry_and_fishery workers",9.095049238659842
+2020,Q4,Female,"Skilled_agricultural,_forestry_and_fishery workers",4.335896444466388
+2021,Q1,Female,"Skilled_agricultural,_forestry_and_fishery workers",3.8219851990621887
+2021,Q2,Female,"Skilled_agricultural,_forestry_and_fishery workers",3.68040338245628
+2021,Q3,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.603015883707316
+2021,Q4,Female,"Skilled_agricultural,_forestry_and_fishery workers",3.9049673764111232
+2022,Q1,Female,"Skilled_agricultural,_forestry_and_fishery workers",4.478418271856963
+2022,Q2,Female,"Skilled_agricultural,_forestry_and_fishery workers",4.760573868241252
+2022,Q3,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.753733318245078
+2022,Q4,Female,"Skilled_agricultural,_forestry_and_fishery workers",5.153684353572681
+2023,Q1,Female,"Skilled_agricultural,_forestry_and_fishery workers",5.694844257587924
+2023,Q2,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.716935451364871
+2023,Q3,Female,"Skilled_agricultural,_forestry_and_fishery workers",4.911233042687668
+2023,Q4,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.620903904897711
+2024,Q1,Female,"Skilled_agricultural,_forestry_and_fishery workers",7.028363197861667
+2024,Q2,Female,"Skilled_agricultural,_forestry_and_fishery workers",7.221528332998853
+2024,Q3,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.581063651764649
+2024,Q4,Female,"Skilled_agricultural,_forestry_and_fishery workers",8.262874175531323
+2025,Q1,Female,"Skilled_agricultural,_forestry_and_fishery workers",7.628450222733028
+2025,Q2,Female,"Skilled_agricultural,_forestry_and_fishery workers",9.145768395052595
+2025,Q3,Female,"Skilled_agricultural,_forestry_and_fishery workers",8.031449755996949
+2025,Q4,Female,"Skilled_agricultural,_forestry_and_fishery workers",6.730250560102757
+2019,Q1,Female,Craft_and_related_trades_workers,5.810410883937187
+2019,Q2,Female,Craft_and_related_trades_workers,5.165386737688549
+2019,Q3,Female,Craft_and_related_trades_workers,6.155036549316625
+2019,Q4,Female,Craft_and_related_trades_workers,5.295468385992674
+2020,Q1,Female,Craft_and_related_trades_workers,4.556189936060379
+2020,Q3,Female,Craft_and_related_trades_workers,5.3782467131933664
+2020,Q4,Female,Craft_and_related_trades_workers,3.7741298900880507
+2021,Q1,Female,Craft_and_related_trades_workers,3.342719053767318
+2021,Q2,Female,Craft_and_related_trades_workers,4.315804153354938
+2021,Q3,Female,Craft_and_related_trades_workers,5.102679526913696
+2021,Q4,Female,Craft_and_related_trades_workers,4.518513211688027
+2022,Q1,Female,Craft_and_related_trades_workers,4.383408241624092
+2022,Q2,Female,Craft_and_related_trades_workers,5.029376628857912
+2022,Q3,Female,Craft_and_related_trades_workers,6.063824661264651
+2022,Q4,Female,Craft_and_related_trades_workers,4.277084365907295
+2023,Q1,Female,Craft_and_related_trades_workers,4.275458246280821
+2023,Q2,Female,Craft_and_related_trades_workers,3.9075160067910524
+2023,Q3,Female,Craft_and_related_trades_workers,5.3377050756390085
+2023,Q4,Female,Craft_and_related_trades_workers,4.506494481090689
+2024,Q1,Female,Craft_and_related_trades_workers,3.914748104268647
+2024,Q2,Female,Craft_and_related_trades_workers,4.819377767810121
+2024,Q3,Female,Craft_and_related_trades_workers,5.3811389136380905
+2024,Q4,Female,Craft_and_related_trades_workers,4.7505058620156815
+2025,Q1,Female,Craft_and_related_trades_workers,3.7467202080365247
+2025,Q2,Female,Craft_and_related_trades_workers,4.7518899258249006
+2025,Q3,Female,Craft_and_related_trades_workers,4.361886820156803
+2025,Q4,Female,Craft_and_related_trades_workers,3.9418335190756117
+2019,Q1,Female,Plant_and_machine_operators_and_assemblers,0.1334518935222498
+2019,Q2,Female,Plant_and_machine_operators_and_assemblers,0.10288955863715027
+2019,Q3,Female,Plant_and_machine_operators_and_assemblers,0.2507009144043678
+2019,Q4,Female,Plant_and_machine_operators_and_assemblers,0.18065476334015773
+2020,Q1,Female,Plant_and_machine_operators_and_assemblers,0.11181969439638904
+2020,Q3,Female,Plant_and_machine_operators_and_assemblers,0.24399454157061512
+2020,Q4,Female,Plant_and_machine_operators_and_assemblers,0.4355939938139457
+2021,Q1,Female,Plant_and_machine_operators_and_assemblers,0.0917964589831118
+2021,Q2,Female,Plant_and_machine_operators_and_assemblers,0.03979977307553565
+2021,Q3,Female,Plant_and_machine_operators_and_assemblers,0.06814684598637712
+2021,Q4,Female,Plant_and_machine_operators_and_assemblers,0.04286155210918626
+2022,Q1,Female,Plant_and_machine_operators_and_assemblers,0.25949930182556125
+2022,Q2,Female,Plant_and_machine_operators_and_assemblers,0.07689506963549292
+2022,Q3,Female,Plant_and_machine_operators_and_assemblers,0.08451339183274363
+2023,Q1,Female,Plant_and_machine_operators_and_assemblers,0.06100144378064576
+2023,Q2,Female,Plant_and_machine_operators_and_assemblers,0.06103370066247245
+2023,Q3,Female,Plant_and_machine_operators_and_assemblers,0.2347184606732735
+2024,Q1,Female,Plant_and_machine_operators_and_assemblers,0.09894040429919647
+2024,Q2,Female,Plant_and_machine_operators_and_assemblers,0.2968028151409633
+2024,Q3,Female,Plant_and_machine_operators_and_assemblers,0.31692993966032057
+2024,Q4,Female,Plant_and_machine_operators_and_assemblers,0.23265190493899626
+2025,Q1,Female,Plant_and_machine_operators_and_assemblers,0.30693289137550944
+2025,Q2,Female,Plant_and_machine_operators_and_assemblers,0.21598947097593751
+2025,Q3,Female,Plant_and_machine_operators_and_assemblers,0.09724240295252931
+2025,Q4,Female,Plant_and_machine_operators_and_assemblers,0.1132706869444361
+2019,Q1,Female,Elementary_occupations,56.73064486478793
+2019,Q2,Female,Elementary_occupations,54.871345097167804
+2019,Q3,Female,Elementary_occupations,54.95603380568143
+2019,Q4,Female,Elementary_occupations,56.41512491476377
+2020,Q1,Female,Elementary_occupations,59.92417326826538
+2020,Q3,Female,Elementary_occupations,52.332882984615544
+2020,Q4,Female,Elementary_occupations,63.90744452484051
+2021,Q1,Female,Elementary_occupations,69.1218865692529
+2021,Q2,Female,Elementary_occupations,65.88503024009106
+2021,Q3,Female,Elementary_occupations,61.2982058119914
+2021,Q4,Female,Elementary_occupations,65.12097220646972
+2022,Q1,Female,Elementary_occupations,67.38024532107258
+2022,Q2,Female,Elementary_occupations,63.43478177901567
+2022,Q3,Female,Elementary_occupations,63.09682047779217
+2022,Q4,Female,Elementary_occupations,63.891907681672286
+2023,Q1,Female,Elementary_occupations,62.986684430301764
+2023,Q2,Female,Elementary_occupations,60.69844613942394
+2023,Q3,Female,Elementary_occupations,58.20839792909344
+2023,Q4,Female,Elementary_occupations,57.4406738950981
+2024,Q1,Female,Elementary_occupations,60.103270437537546
+2024,Q2,Female,Elementary_occupations,53.462135729020424
+2024,Q3,Female,Elementary_occupations,51.9116829018006
+2024,Q4,Female,Elementary_occupations,56.4567793787751
+2025,Q1,Female,Elementary_occupations,57.96258878434486
+2025,Q2,Female,Elementary_occupations,51.431400931295215
+2025,Q3,Female,Elementary_occupations,51.715492345474026
+2025,Q4,Female,Elementary_occupations,55.52692046611747

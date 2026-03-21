@@ -1,0 +1,567 @@
+year,quarter,sex,status,value
+2019,Q1,All,Employed population aged 16+,3186050.5463436916
+2019,Q2,All,Employed population aged 16+,3258934.879428369
+2019,Q3,All,Employed population aged 16+,3152832.115064032
+2019,Q4,All,Employed population aged 16+,3405877.0383200026
+2020,Q1,All,Employed population aged 16+,3568934.1611348246
+2020,Q2,All,Employed population aged 16+,3199104.165283203
+2020,Q3,All,Employed population aged 16+,3667611.013645172
+2020,Q4,All,Employed population aged 16+,3407788.9029749664
+2021,Q1,All,Employed population aged 16+,3204924.141860962
+2021,Q2,All,Employed population aged 16+,3133606.658269882
+2021,Q3,All,Employed population aged 16+,3179124.018924713
+2021,Q4,All,Employed population aged 16+,3633131.595502615
+2022,Q1,All,Employed population aged 16+,3585650.7928733826
+2022,Q2,All,Employed population aged 16+,3317267.515346527
+2022,Q3,All,Employed population aged 16+,3711253.6562436465
+2022,Q4,All,Employed population aged 16+,3571236.125681078
+2023,Q1,All,Employed population aged 16+,3803942.11794281
+2023,Q2,All,Employed population aged 16+,3984501.733938217
+2023,Q3,All,Employed population aged 16+,3972193.0716018677
+2023,Q4,All,Employed population aged 16+,4074629.1306991577
+2024,Q1,All,Employed population aged 16+,4365565.9443359375
+2024,Q2,All,Employed population aged 16+,4304439.991333008
+2024,Q3,All,Employed population aged 16+,4523412.98210144
+2024,Q4,All,Employed population aged 16+,4585316.174636841
+2025,Q1,All,Employed population aged 16+,4730124.006851196
+2025,Q2,All,Employed population aged 16+,4581575.010360718
+2025,Q3,All,Employed population aged 16+,4888920.7785720825
+2025,Q4,All,Employed population aged 16+,4890198.40511322
+2019,Q1,All,Total,100.0
+2019,Q2,All,Total,100.0
+2019,Q3,All,Total,100.0
+2019,Q4,All,Total,100.0
+2020,Q1,All,Total,100.0
+2020,Q3,All,Total,100.0
+2020,Q4,All,Total,100.0
+2021,Q1,All,Total,100.0
+2021,Q2,All,Total,100.0
+2021,Q3,All,Total,100.0
+2021,Q4,All,Total,100.0
+2022,Q1,All,Total,100.0
+2022,Q2,All,Total,100.0
+2022,Q3,All,Total,100.0
+2022,Q4,All,Total,100.0
+2023,Q1,All,Total,100.0
+2023,Q2,All,Total,100.0
+2023,Q3,All,Total,100.0
+2023,Q4,All,Total,100.0
+2024,Q1,All,Total,100.0
+2024,Q2,All,Total,100.0
+2024,Q3,All,Total,100.0
+2024,Q4,All,Total,100.0
+2025,Q1,All,Total,100.0
+2025,Q2,All,Total,100.0
+2025,Q3,All,Total,100.0
+2025,Q4,All,Total,100.0
+2019,Q1,All,Employee,66.62782259796242
+2019,Q2,All,Employee,67.52966765578216
+2019,Q3,All,Employee,67.28443146524032
+2019,Q4,All,Employee,67.20020222952515
+2020,Q1,All,Employee,68.61058934347274
+2020,Q3,All,Employee,62.39226498728719
+2020,Q4,All,Employee,74.10938626422163
+2021,Q1,All,Employee,74.87244211695614
+2021,Q2,All,Employee,75.87097786294039
+2021,Q3,All,Employee,70.70411286226638
+2021,Q4,All,Employee,74.70487826838298
+2022,Q1,All,Employee,75.19943217114779
+2022,Q2,All,Employee,71.82405906416133
+2022,Q3,All,Employee,70.87435461264752
+2022,Q4,All,Employee,72.00480459169957
+2023,Q1,All,Employee,70.0308306813238
+2023,Q2,All,Employee,68.93289555991167
+2023,Q3,All,Employee,67.07765324124541
+2023,Q4,All,Employee,69.46337567934374
+2024,Q1,All,Employee,69.54604341335693
+2024,Q2,All,Employee,66.81151510043428
+2024,Q3,All,Employee,64.35242073176879
+2024,Q4,All,Employee,65.30623250662549
+2025,Q1,All,Employee,67.15370098320308
+2025,Q2,All,Employee,63.517526676834436
+2025,Q3,All,Employee,63.104349882566346
+2025,Q4,All,Employee,65.4038735597602
+2019,Q1,All,Employer (with regular employees),1.132467589047167
+2019,Q2,All,Employer (with regular employees),1.1102486262589661
+2019,Q3,All,Employer (with regular employees),1.4308663913354371
+2019,Q4,All,Employer (with regular employees),1.245225199348939
+2020,Q1,All,Employer (with regular employees),1.2893526934658797
+2020,Q3,All,Employer (with regular employees),1.0090123529471502
+2020,Q4,All,Employer (with regular employees),1.1238025332662844
+2021,Q1,All,Employer (with regular employees),0.9796679486800368
+2021,Q2,All,Employer (with regular employees),0.8460434618234423
+2021,Q3,All,Employer (with regular employees),1.2601371702871138
+2021,Q4,All,Employer (with regular employees),0.7830922105406245
+2022,Q1,All,Employer (with regular employees),1.5798371857307572
+2022,Q2,All,Employer (with regular employees),1.3257518035541231
+2022,Q3,All,Employer (with regular employees),1.0442274222211758
+2022,Q4,All,Employer (with regular employees),0.8634839412969495
+2023,Q1,All,Employer (with regular employees),1.671502037956741
+2023,Q2,All,Employer (with regular employees),0.7861633851335705
+2023,Q3,All,Employer (with regular employees),1.4130351825007426
+2023,Q4,All,Employer (with regular employees),1.2636905604306963
+2024,Q1,All,Employer (with regular employees),1.7568277199087792
+2024,Q2,All,Employer (with regular employees),1.4234838154484133
+2024,Q3,All,Employer (with regular employees),1.773295745090099
+2024,Q4,All,Employer (with regular employees),1.590092510120136
+2025,Q1,All,Employer (with regular employees),2.128681627365047
+2025,Q2,All,Employer (with regular employees),1.9830953364453934
+2025,Q3,All,Employer (with regular employees),2.203463565702144
+2025,Q4,All,Employer (with regular employees),2.282139821813188
+2019,Q1,All,Own account worker( without regular employees),27.751131225502444
+2019,Q2,All,Own account worker( without regular employees),27.85512221675017
+2019,Q3,All,Own account worker( without regular employees),27.483867562205795
+2019,Q4,All,Own account worker( without regular employees),27.670600808150898
+2020,Q1,All,Own account worker( without regular employees),25.848681708283728
+2020,Q3,All,Own account worker( without regular employees),30.71338991162298
+2020,Q4,All,Own account worker( without regular employees),22.770526743384405
+2021,Q1,All,Own account worker( without regular employees),22.44422817919986
+2021,Q2,All,Own account worker( without regular employees),21.74697604814044
+2021,Q3,All,Own account worker( without regular employees),24.091303046125855
+2021,Q4,All,Own account worker( without regular employees),22.44738297281545
+2022,Q1,All,Own account worker( without regular employees),21.458261631831835
+2022,Q2,All,Own account worker( without regular employees),24.50878127909954
+2022,Q3,All,Own account worker( without regular employees),23.69162165222462
+2022,Q4,All,Own account worker( without regular employees),24.38439498661119
+2023,Q1,All,Own account worker( without regular employees),25.374686889354397
+2023,Q2,All,Own account worker( without regular employees),27.254265463182254
+2023,Q3,All,Own account worker( without regular employees),28.83115292631246
+2023,Q4,All,Own account worker( without regular employees),26.355452577766137
+2024,Q1,All,Own account worker( without regular employees),25.727510159403376
+2024,Q2,All,Own account worker( without regular employees),28.670789409087703
+2024,Q3,All,Own account worker( without regular employees),29.515948428302817
+2024,Q4,All,Own account worker( without regular employees),29.254990948789818
+2025,Q1,All,Own account worker( without regular employees),26.309192223203958
+2025,Q2,All,Own account worker( without regular employees),29.607460478443386
+2025,Q3,All,Own account worker( without regular employees),29.397237737403014
+2025,Q4,All,Own account worker( without regular employees),27.96139493103421
+2019,Q1,All,Member of cooperative,0.5591662870911441
+2019,Q2,All,Member of cooperative,0.203471770400604
+2019,Q3,All,Member of cooperative,0.31804188590023885
+2019,Q4,All,Member of cooperative,0.31196286537816315
+2020,Q1,All,Member of cooperative,0.24442345201134813
+2020,Q3,All,Member of cooperative,0.16349225702277623
+2020,Q4,All,Member of cooperative,0.06535290369822415
+2021,Q1,All,Member of cooperative,0.14309665624608475
+2021,Q2,All,Member of cooperative,0.045592362365070305
+2021,Q3,All,Member of cooperative,0.1779831326481925
+2021,Q4,All,Member of cooperative,0.04504424951157088
+2022,Q1,All,Member of cooperative,0.028245137680076124
+2022,Q2,All,Member of cooperative,0.0178191857880283
+2022,Q3,All,Member of cooperative,0.14980030693760074
+2022,Q4,All,Member of cooperative,0.14065344499758936
+2023,Q1,All,Member of cooperative,0.18731576478658704
+2023,Q2,All,Member of cooperative,0.25425300213415775
+2023,Q3,All,Member of cooperative,0.1317759050788323
+2023,Q4,All,Member of cooperative,0.06178435169661386
+2024,Q1,All,Member of cooperative,0.04334533877788831
+2024,Q2,All,Member of cooperative,0.04265742412401421
+2024,Q3,All,Member of cooperative,0.05608417974262074
+2024,Q4,All,Member of cooperative,0.034890051687140544
+2025,Q1,All,Member of cooperative,0.07308159430099782
+2025,Q2,All,Member of cooperative,0.060662348850339574
+2025,Q3,All,Member of cooperative,0.05460307102356959
+2025,Q4,All,Member of cooperative,0.04279996122553592
+2019,Q1,All,Contributing family worker,3.929412300396193
+2019,Q2,All,Contributing family worker,3.3014897308084197
+2019,Q3,All,Contributing family worker,3.482792695317859
+2019,Q4,All,Contributing family worker,3.5720088975968913
+2020,Q1,All,Contributing family worker,4.006952802766797
+2020,Q3,All,Contributing family worker,5.7218404911199
+2020,Q4,All,Contributing family worker,1.9309315554304267
+2021,Q1,All,Contributing family worker,1.5605650989178723
+2021,Q2,All,Contributing family worker,1.4904102647306585
+2021,Q3,All,Contributing family worker,3.76646378867245
+2021,Q4,All,Contributing family worker,2.019602298749367
+2022,Q1,All,Contributing family worker,1.734223873609535
+2022,Q2,All,Contributing family worker,2.323588667396972
+2022,Q3,All,Contributing family worker,4.239996005969467
+2022,Q4,All,Contributing family worker,2.6066630353945186
+2023,Q1,All,Contributing family worker,2.7356646265784597
+2023,Q2,All,Contributing family worker,2.7724225896383468
+2023,Q3,All,Contributing family worker,2.546382744862546
+2023,Q4,All,Contributing family worker,2.8556968307628106
+2024,Q1,All,Contributing family worker,2.926273368553019
+2024,Q2,All,Contributing family worker,3.051554250905602
+2024,Q3,All,Contributing family worker,4.302250915095671
+2024,Q4,All,Contributing family worker,3.8137939827774097
+2025,Q1,All,Contributing family worker,4.335343571926918
+2025,Q2,All,Contributing family worker,4.831255159426447
+2025,Q3,All,Contributing family worker,5.240345743304926
+2025,Q4,All,Contributing family worker,4.309791726166871
+2019,Q1,Male,Employed population aged 16+,1778662.6736539418
+2019,Q2,Male,Employed population aged 16+,1841887.9596653956
+2019,Q3,Male,Employed population aged 16+,1792066.6859785162
+2019,Q4,Male,Employed population aged 16+,1898636.1830800022
+2020,Q1,Male,Employed population aged 16+,1945486.6441105518
+2020,Q2,Male,Employed population aged 16+,1808329.9189567566
+2020,Q3,Male,Employed population aged 16+,2113800.9512634277
+2020,Q4,Male,Employed population aged 16+,1885454.2991530162
+2021,Q1,Male,Employed population aged 16+,1748038.1011924744
+2021,Q2,Male,Employed population aged 16+,1776461.1348571777
+2021,Q3,Male,Employed population aged 16+,1813058.2206611633
+2021,Q4,Male,Employed population aged 16+,2002299.1304745674
+2022,Q1,Male,Employed population aged 16+,1949118.9244995117
+2022,Q2,Male,Employed population aged 16+,1875695.9197235107
+2022,Q3,Male,Employed population aged 16+,2095381.076753091
+2022,Q4,Male,Employed population aged 16+,1990619.8827268237
+2023,Q1,Male,Employed population aged 16+,2059803.1013069153
+2023,Q2,Male,Employed population aged 16+,2175512.2425308228
+2023,Q3,Male,Employed population aged 16+,2248639.8181419373
+2023,Q4,Male,Employed population aged 16+,2222880.141635895
+2024,Q1,Male,Employed population aged 16+,2346249.8633270264
+2024,Q2,Male,Employed population aged 16+,2347795.0636138916
+2024,Q3,Male,Employed population aged 16+,2519344.8046875
+2024,Q4,Male,Employed population aged 16+,2489254.5567474365
+2025,Q1,Male,Employed population aged 16+,2502420.954284668
+2025,Q2,Male,Employed population aged 16+,2470663.182373047
+2025,Q3,Male,Employed population aged 16+,2666343.2031784058
+2025,Q4,Male,Employed population aged 16+,2588345.9426498413
+2019,Q1,Male,Total,100.0
+2019,Q2,Male,Total,100.0
+2019,Q3,Male,Total,100.0
+2019,Q4,Male,Total,100.0
+2020,Q1,Male,Total,100.0
+2020,Q3,Male,Total,100.0
+2020,Q4,Male,Total,100.0
+2021,Q1,Male,Total,100.0
+2021,Q2,Male,Total,100.0
+2021,Q3,Male,Total,100.0
+2021,Q4,Male,Total,100.0
+2022,Q1,Male,Total,100.0
+2022,Q2,Male,Total,100.0
+2022,Q3,Male,Total,100.0
+2022,Q4,Male,Total,100.0
+2023,Q1,Male,Total,100.0
+2023,Q2,Male,Total,100.0
+2023,Q3,Male,Total,100.0
+2023,Q4,Male,Total,100.0
+2024,Q1,Male,Total,100.0
+2024,Q2,Male,Total,100.0
+2024,Q3,Male,Total,100.0
+2024,Q4,Male,Total,100.0
+2025,Q1,Male,Total,100.0
+2025,Q2,Male,Total,100.0
+2025,Q3,Male,Total,100.0
+2025,Q4,Male,Total,100.0
+2019,Q1,Male,Employee,66.9840885296574
+2019,Q2,Male,Employee,68.27923456167107
+2019,Q3,Male,Employee,68.22903948582952
+2019,Q4,Male,Employee,68.3444219963718
+2020,Q1,Male,Employee,68.56693659824488
+2020,Q3,Male,Employee,65.75670995139436
+2020,Q4,Male,Employee,75.29102688257763
+2021,Q1,Male,Employee,75.47058673146158
+2021,Q2,Male,Employee,76.17118096559831
+2021,Q3,Male,Employee,72.26486255801761
+2021,Q4,Male,Employee,75.51365581039835
+2022,Q1,Male,Employee,75.6502148908164
+2022,Q2,Male,Employee,72.94970236494326
+2022,Q3,Male,Employee,72.35378240507806
+2022,Q4,Male,Employee,71.18459976825434
+2023,Q1,Male,Employee,70.1770417599058
+2023,Q2,Male,Employee,69.15567819032391
+2023,Q3,Male,Employee,68.46946810418102
+2023,Q4,Male,Employee,70.63587795271519
+2024,Q1,Male,Employee,69.51510101104888
+2024,Q2,Male,Employee,68.59945070372106
+2024,Q3,Male,Employee,67.39364743574842
+2024,Q4,Male,Employee,66.05343254557454
+2025,Q1,Male,Employee,66.99602382408885
+2025,Q2,Male,Employee,66.04867625616886
+2025,Q3,Male,Employee,66.15799292548674
+2025,Q4,Male,Employee,66.29737260911733
+2019,Q1,Male,Employer (with regular employees),1.7374319262536884
+2019,Q2,Male,Employer (with regular employees),1.407595882994309
+2019,Q3,Male,Employer (with regular employees),1.860231948235509
+2019,Q4,Male,Employer (with regular employees),1.7383918274673111
+2020,Q1,Male,Employer (with regular employees),1.4270114010793225
+2020,Q3,Male,Employer (with regular employees),1.3130733057259696
+2020,Q4,Male,Employer (with regular employees),0.9493967691522033
+2021,Q1,Male,Employer (with regular employees),1.0745901928214867
+2021,Q2,Male,Employer (with regular employees),0.888630695604185
+2021,Q3,Male,Employer (with regular employees),1.6586739019701104
+2021,Q4,Male,Employer (with regular employees),0.8221898306073637
+2022,Q1,Male,Employer (with regular employees),1.7261796927890445
+2022,Q2,Male,Employer (with regular employees),1.4266832641370386
+2022,Q3,Male,Employer (with regular employees),1.1951398768912704
+2022,Q4,Male,Employer (with regular employees),1.0453319626503395
+2023,Q1,Male,Employer (with regular employees),1.6701711155356938
+2023,Q2,Male,Employer (with regular employees),1.004979534430867
+2023,Q3,Male,Employer (with regular employees),1.3440531994806344
+2023,Q4,Male,Employer (with regular employees),1.45080592204988
+2024,Q1,Male,Employer (with regular employees),2.2617701148636438
+2024,Q2,Male,Employer (with regular employees),1.5335900146138568
+2024,Q3,Male,Employer (with regular employees),2.2055530686063403
+2024,Q4,Male,Employer (with regular employees),2.1761435441691095
+2025,Q1,Male,Employer (with regular employees),2.6597550754641333
+2025,Q2,Male,Employer (with regular employees),2.251181929186712
+2025,Q3,Male,Employer (with regular employees),2.620439195758377
+2025,Q4,Male,Employer (with regular employees),2.7508204351435053
+2019,Q1,Male,Own account worker( without regular employees),29.063327500478803
+2019,Q2,Male,Own account worker( without regular employees),29.133005816158374
+2019,Q3,Male,Own account worker( without regular employees),28.22383092718253
+2019,Q4,Male,Own account worker( without regular employees),28.47079299432188
+2020,Q1,Male,Own account worker( without regular employees),28.21127270026693
+2020,Q3,Male,Own account worker( without regular employees),30.126495028216492
+2020,Q4,Male,Own account worker( without regular employees),23.153548209315282
+2021,Q1,Male,Own account worker( without regular employees),22.982477694705132
+2021,Q2,Male,Own account worker( without regular employees),22.65845178654831
+2021,Q3,Male,Own account worker( without regular employees),24.341615514589485
+2021,Q4,Male,Own account worker( without regular employees),22.648251651079963
+2022,Q1,Male,Own account worker( without regular employees),22.03058221252544
+2022,Q2,Male,Own account worker( without regular employees),24.82120874226913
+2022,Q3,Male,Own account worker( without regular employees),24.902890325408585
+2022,Q4,Male,Own account worker( without regular employees),26.725384975079358
+2023,Q1,Male,Own account worker( without regular employees),26.598533822392312
+2023,Q2,Male,Own account worker( without regular employees),28.802565002012372
+2023,Q3,Male,Own account worker( without regular employees),29.04580568408989
+2023,Q4,Male,Own account worker( without regular employees),26.980852132477395
+2024,Q1,Male,Own account worker( without regular employees),26.87927923663785
+2024,Q2,Male,Own account worker( without regular employees),28.690675094484845
+2024,Q3,Male,Own account worker( without regular employees),27.940016192496692
+2024,Q4,Male,Own account worker( without regular employees),30.11641277038101
+2025,Q1,Male,Own account worker( without regular employees),28.42898601955562
+2025,Q2,Male,Own account worker( without regular employees),29.64538000814192
+2025,Q3,Male,Own account worker( without regular employees),28.419038439996896
+2025,Q4,Male,Own account worker( without regular employees),28.637090259076587
+2019,Q1,Male,Member of cooperative,0.6116341148936569
+2019,Q2,Male,Member of cooperative,0.22867435999152094
+2019,Q3,Male,Member of cooperative,0.4370457780374084
+2019,Q4,Male,Member of cooperative,0.46503888310380803
+2020,Q1,Male,Member of cooperative,0.25588339834352
+2020,Q3,Male,Member of cooperative,0.22848559797087106
+2020,Q4,Male,Member of cooperative,0.11811948987575355
+2021,Q1,Male,Member of cooperative,0.23087507640735558
+2021,Q2,Male,Member of cooperative,0.08042311057085057
+2021,Q3,Male,Member of cooperative,0.17272735318197777
+2021,Q4,Male,Member of cooperative,0.035217124413183525
+2022,Q1,Male,Member of cooperative,0.051960503304532044
+2022,Q2,Male,Member of cooperative,0.007871524228000259
+2022,Q3,Male,Member of cooperative,0.15364101012904358
+2022,Q4,Male,Member of cooperative,0.11932292529813297
+2023,Q1,Male,Member of cooperative,0.2717319093405625
+2023,Q2,Male,Member of cooperative,0.2454673621903776
+2023,Q3,Male,Member of cooperative,0.19759252638982494
+2023,Q4,Male,Member of cooperative,0.028145374107454203
+2024,Q1,Male,Member of cooperative,0.06473191993516686
+2024,Q2,Male,Member of cooperative,0.019607633265479266
+2024,Q3,Male,Member of cooperative,0.05760780827820018
+2024,Q4,Male,Member of cooperative,0.032571049612913676
+2025,Q1,Male,Member of cooperative,0.10032191991147643
+2025,Q2,Male,Member of cooperative,0.11249170002021561
+2025,Q3,Male,Member of cooperative,0.017516546199188646
+2025,Q4,Male,Member of cooperative,0.04259591598320947
+2019,Q1,Male,Contributing family worker,1.603517928716772
+2019,Q2,Male,Contributing family worker,0.9514893791848886
+2019,Q3,Male,Contributing family worker,1.2498518607147537
+2019,Q4,Male,Contributing family worker,0.9813542987353322
+2020,Q1,Male,Contributing family worker,1.5388959020653346
+2020,Q3,Male,Contributing family worker,2.575236116692309
+2020,Q4,Male,Contributing family worker,0.48790864907903286
+2021,Q1,Male,Contributing family worker,0.24147030460444757
+2021,Q2,Male,Contributing family worker,0.20131344167834553
+2021,Q3,Male,Contributing family worker,1.562120672240812
+2021,Q4,Male,Contributing family worker,0.9806855835011424
+2022,Q1,Male,Contributing family worker,0.5410627005645774
+2022,Q2,Male,Contributing family worker,0.7945341044225667
+2022,Q3,Male,Contributing family worker,1.394546382493035
+2022,Q4,Male,Contributing family worker,0.9253603687177944
+2023,Q1,Male,Contributing family worker,1.2825213928256276
+2023,Q2,Male,Contributing family worker,0.7913099110424778
+2023,Q3,Male,Contributing family worker,0.9430804858586281
+2023,Q4,Male,Contributing family worker,0.9043186186500891
+2024,Q1,Male,Contributing family worker,1.279117717514452
+2024,Q2,Male,Contributing family worker,1.1566765539147614
+2024,Q3,Male,Contributing family worker,2.403175494870341
+2024,Q4,Male,Contributing family worker,1.6214400902624229
+2025,Q1,Male,Contributing family worker,1.8149131609799158
+2025,Q2,Male,Contributing family worker,1.9422701064822898
+2025,Q3,Male,Contributing family worker,2.7850128925587967
+2025,Q4,Male,Contributing family worker,2.2721207806793693
+2019,Q1,Female,Employed population aged 16+,1407387.8726897254
+2019,Q2,Female,Employed population aged 16+,1417046.9197629935
+2019,Q3,Female,Employed population aged 16+,1360765.4290855078
+2019,Q4,Female,Employed population aged 16+,1507240.855239998
+2020,Q1,Female,Employed population aged 16+,1623447.5170242938
+2020,Q2,Female,Employed population aged 16+,1390774.2463264465
+2020,Q3,Female,Employed population aged 16+,1553810.0623817444
+2020,Q4,Female,Employed population aged 16+,1522334.6038220073
+2021,Q1,Female,Employed population aged 16+,1456886.0406684875
+2021,Q2,Female,Employed population aged 16+,1357145.5234127045
+2021,Q3,Female,Employed population aged 16+,1366065.7982635498
+2021,Q4,Female,Employed population aged 16+,1630832.4650280476
+2022,Q1,Female,Employed population aged 16+,1636531.8683738708
+2022,Q2,Female,Employed population aged 16+,1441571.5956230164
+2022,Q3,Female,Employed population aged 16+,1615872.5794905648
+2022,Q4,Female,Employed population aged 16+,1580616.2429542234
+2023,Q1,Female,Employed population aged 16+,1744139.0166358948
+2023,Q2,Female,Employed population aged 16+,1808989.4914073944
+2023,Q3,Female,Employed population aged 16+,1723553.2534599304
+2023,Q4,Female,Employed population aged 16+,1851748.989063263
+2024,Q1,Female,Employed population aged 16+,2019316.0810089111
+2024,Q2,Female,Employed population aged 16+,1956644.9277191162
+2024,Q3,Female,Employed population aged 16+,2004068.1774139404
+2024,Q4,Female,Employed population aged 16+,2096061.6178894043
+2025,Q1,Female,Employed population aged 16+,2227703.0525665283
+2025,Q2,Female,Employed population aged 16+,2110911.827987671
+2025,Q3,Female,Employed population aged 16+,2222577.5753936768
+2025,Q4,Female,Employed population aged 16+,2301852.462463379
+2019,Q1,Female,Total,100.0
+2019,Q2,Female,Total,100.0
+2019,Q3,Female,Total,100.0
+2019,Q4,Female,Total,100.0
+2020,Q1,Female,Total,100.0
+2020,Q3,Female,Total,100.0
+2020,Q4,Female,Total,100.0
+2021,Q1,Female,Total,100.0
+2021,Q2,Female,Total,100.0
+2021,Q3,Female,Total,100.0
+2021,Q4,Female,Total,100.0
+2022,Q1,Female,Total,100.0
+2022,Q2,Female,Total,100.0
+2022,Q3,Female,Total,100.0
+2022,Q4,Female,Total,100.0
+2023,Q1,Female,Total,100.0
+2023,Q2,Female,Total,100.0
+2023,Q3,Female,Total,100.0
+2023,Q4,Female,Total,100.0
+2024,Q1,Female,Total,100.0
+2024,Q2,Female,Total,100.0
+2024,Q3,Female,Total,100.0
+2024,Q4,Female,Total,100.0
+2025,Q1,Female,Total,100.0
+2025,Q2,Female,Total,100.0
+2025,Q3,Female,Total,100.0
+2025,Q4,Female,Total,100.0
+2019,Q1,Female,Employee,66.17757222498774
+2019,Q2,Female,Employee,66.55537510437432
+2019,Q3,Female,Employee,66.04042531339141
+2019,Q4,Female,Employee,65.75885525224675
+2020,Q1,Female,Employee,68.6629013719974
+2020,Q3,Female,Employee,57.815278946469604
+2020,Q4,Female,Employee,72.64589106524102
+2021,Q1,Female,Employee,74.1547610169994
+2021,Q2,Female,Employee,75.47802137062976
+2021,Q3,Female,Employee,68.6326679363535
+2021,Q4,Female,Employee,73.71187953684445
+2022,Q1,Female,Employee,74.662547343713
+2022,Q2,Female,Employee,70.35943215783811
+2022,Q3,Female,Employee,68.9559081707504
+2022,Q4,Female,Employee,73.03776628416414
+2023,Q1,Female,Employee,69.85815749975053
+2023,Q2,Female,Employee,68.66497452322949
+2023,Q3,Female,Employee,65.26181708184849
+2023,Q4,Female,Employee,68.05587820809157
+2024,Q1,Female,Employee,69.58199549033439
+2024,Q2,Female,Employee,64.66615580504613
+2024,Q3,Female,Employee,60.52924805585966
+2024,Q4,Female,Employee,64.41886780041584
+2025,Q1,Female,Employee,67.33082271696598
+2025,Q2,Female,Employee,60.55500688238988
+2025,Q3,Female,Employee,59.44100851596337
+2025,Q4,Female,Employee,64.39916770789597
+2019,Q1,Female,Employer (with regular employees),0.3679111321092737
+2019,Q2,Female,Employer (with regular employees),0.7237544852519929
+2019,Q3,Female,Employer (with regular employees),0.8654113215778756
+2019,Q4,Female,Employer (with regular employees),0.6239946898534934
+2020,Q1,Female,Employer (with regular employees),1.1243869805006728
+2020,Q3,Female,Employer (with regular employees),0.5953682745707124
+2020,Q4,Female,Employer (with regular employees),1.339808986066032
+2021,Q1,Female,Employer (with regular employees),0.8657759250226384
+2021,Q2,Female,Employer (with regular employees),0.7902981019136784
+2021,Q3,Female,Employer (with regular employees),0.7311946416535945
+2021,Q4,Female,Employer (with regular employees),0.7350890389445094
+2022,Q1,Female,Employer (with regular employees),1.4055424130604046
+2022,Q2,Female,Employer (with regular employees),1.1944251810249864
+2022,Q3,Female,Employer (with regular employees),0.8485318545287109
+2022,Q4,Female,Employer (with regular employees),0.6344654881751419
+2023,Q1,Female,Employer (with regular employees),1.6730738381999117
+2023,Q2,Female,Employer (with regular employees),0.5230124857387021
+2023,Q3,Female,Employer (with regular employees),1.5030327694288061
+2023,Q4,Female,Employer (with regular employees),1.0390731722237179
+2024,Q1,Female,Employer (with regular employees),1.1701335236445916
+2024,Q2,Female,Employer (with regular employees),1.2913664408487917
+2024,Q3,Female,Employer (with regular employees),1.229898442262795
+2024,Q4,Female,Employer (with regular employees),0.8941061924746172
+2025,Q1,Female,Employer (with regular employees),1.5321167830262719
+2025,Q2,Female,Employer (with regular employees),1.6693201869616596
+2025,Q3,Female,Employer (with regular employees),1.7032334952648769
+2025,Q4,Female,Employer (with regular employees),1.7551262170342217
+2019,Q1,Female,Own account worker( without regular employees),26.09277209075517
+2019,Q2,Female,Own account worker( without regular employees),26.19411975961367
+2019,Q3,Female,Own account worker( without regular employees),26.50936919027841
+2019,Q4,Female,Own account worker( without regular employees),26.66261735759603
+2020,Q1,Female,Own account worker( without regular employees),23.01742959067617
+2020,Q3,Female,Own account worker( without regular employees),31.511800858283117
+2020,Q4,Female,Own account worker( without regular employees),22.296143866061975
+2021,Q1,Female,Own account worker( without regular employees),21.798411941836584
+2021,Q2,Female,Own account worker( without regular employees),20.553882752901806
+2021,Q3,Female,Own account worker( without regular employees),23.75908546242026
+2021,Q4,Female,Own account worker( without regular employees),22.2007609632262
+2022,Q1,Female,Own account worker( without regular employees),20.776624508676463
+2022,Q2,Female,Own account worker( without regular employees),24.102267360778686
+2022,Q3,Female,Own account worker( without regular employees),22.120910267633878
+2022,Q4,Female,Own account worker( without regular employees),21.43616436005564
+2023,Q1,Female,Own account worker( without regular employees),23.929341257984518
+2023,Q2,Female,Own account worker( without regular employees),25.392262053085503
+2023,Q3,Female,Own account worker( without regular employees),28.55110545041152
+2023,Q4,Female,Own account worker( without regular employees),25.604709221638345
+2024,Q1,Female,Own account worker( without regular employees),24.389265956100896
+2024,Q2,Female,Own account worker( without regular employees),28.646928404287813
+2024,Q3,Female,Own account worker( without regular employees),31.497076982492544
+2024,Q4,Female,Own account worker( without regular employees),28.231977991357432
+2025,Q1,Female,Own account worker( without regular employees),23.927987776479515
+2025,Q2,Female,Own account worker( without regular employees),29.56307852715726
+2025,Q3,Female,Own account worker( without regular employees),30.570746854415816
+2025,Q4,Female,Own account worker( without regular employees),27.201601117431455
+2019,Q1,Female,Member of cooperative,0.49285722710068774
+2019,Q2,Female,Member of cooperative,0.17071325995716402
+2019,Q3,Female,Member of cooperative,0.16131912822103894
+2019,Q4,Female,Member of cooperative,0.1191365728813175
+2020,Q1,Female,Member of cooperative,0.23069022546865314
+2020,Q3,Female,Member of cooperative,0.07507541042874356
+2021,Q1,Female,Member of cooperative,0.03777611735618123
+2021,Q3,Female,Member of cooperative,0.1849586635335389
+2021,Q4,Female,Member of cooperative,0.05710977093177844
+2022,Q2,Female,Member of cooperative,0.030762551386787254
+2022,Q3,Female,Member of cooperative,0.14481987909265615
+2022,Q4,Female,Member of cooperative,0.16751699066334488
+2023,Q1,Female,Member of cooperative,0.08762151180895829
+2023,Q2,Female,Member of cooperative,0.26481871705231985
+2023,Q3,Female,Member of cooperative,0.045908018445001746
+2023,Q4,Female,Member of cooperative,0.102165318938672
+2024,Q1,Female,Member of cooperative,0.01849620119650157
+2024,Q2,Female,Member of cooperative,0.07031506625844317
+2024,Q3,Female,Member of cooperative,0.054168802971188236
+2024,Q4,Female,Member of cooperative,0.03764406732824017
+2025,Q1,Female,Member of cooperative,0.042482021556926625
+2025,Q3,Female,Member of cooperative,0.09909438799255331
+2025,Q4,Female,Member of cooperative,0.04302940237509052
+2019,Q1,Female,Contributing family worker,6.868887325047105
+2019,Q2,Female,Contributing family worker,6.356037390803139
+2019,Q3,Female,Contributing family worker,6.423475046531442
+2019,Q4,Female,Contributing family worker,6.835396127422171
+2020,Q1,Female,Contributing family worker,6.964591831357346
+2020,Q3,Female,Contributing family worker,10.002476510247826
+2020,Q4,Female,Contributing family worker,3.7181560826307027
+2021,Q1,Female,Contributing family worker,3.1432749987851913
+2021,Q2,Female,Contributing family worker,3.177797774554763
+2021,Q3,Female,Contributing family worker,6.692093296039106
+2021,Q4,Female,Contributing family worker,3.2951606900530597
+2022,Q1,Female,Contributing family worker,3.155285734550131
+2022,Q2,Female,Contributing family worker,4.31311274897143
+2022,Q3,Female,Contributing family worker,7.9298298279942
+2022,Q4,Female,Contributing family worker,4.724086876941916
+2023,Q1,Female,Contributing family worker,4.45180589225608
+2023,Q2,Female,Contributing family worker,5.154932220893977
+2023,Q3,Female,Contributing family worker,4.6381366798661805
+2023,Q4,Female,Contributing family worker,5.198174079107691
+2024,Q1,Female,Contributing family worker,4.840108828723617
+2024,Q2,Female,Contributing family worker,5.325234283558821
+2024,Q3,Female,Contributing family worker,6.689607716413811
+2024,Q4,Female,Contributing family worker,6.417403948423877
+2025,Q1,Female,Contributing family worker,7.166590701971301
+2025,Q2,Female,Contributing family worker,8.212594403491199
+2025,Q3,Female,Contributing family worker,8.18591674636339
+2025,Q4,Female,Contributing family worker,6.60107555526326
