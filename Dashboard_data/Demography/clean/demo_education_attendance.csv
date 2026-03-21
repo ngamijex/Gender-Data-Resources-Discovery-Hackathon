@@ -1,0 +1,55 @@
+residence,education_level,sex,count,pct
+Rwanda,Never attended School,Male,880393.0,14.9
+Rwanda,Never attended School,Female,1123937.0,17.8
+Rwanda,Pre-nursery/ECD,Male,120357.0,2.0
+Rwanda,Pre-nursery/ECD,Female,125542.0,2.0
+Rwanda,Nursery,Male,155968.0,2.6
+Rwanda,Nursery,Female,162564.0,2.6
+Rwanda,Primary,Male,3543088.0,59.8
+Rwanda,Primary,Female,3596437.0,56.9
+Rwanda,INGOBOKA/Vocational,Male,51720.0,0.9
+Rwanda,INGOBOKA/Vocational,Female,44637.0,0.7
+Rwanda,Lower secondary,Male,520274.0,8.8
+Rwanda,Lower secondary,Female,634075.0,10.0
+Rwanda,Upper secondary,Male,408754.0,6.9
+Rwanda,Upper secondary,Female,441580.0,7.0
+Rwanda,University,Male,245384.0,4.1
+Rwanda,University,Female,189092.0,3.0
+Rwanda,Not Stated,Male,1373.0,0.0
+Rwanda,Not Stated,Female,415.0,0.0
+Urban,Never attended School,Male,182717.0,10.7
+Urban,Never attended School,Female,206432.0,12.1
+Urban,Pre-nursery/ECD,Male,13095.0,0.8
+Urban,Pre-nursery/ECD,Female,13714.0,0.8
+Urban,Nursery,Male,61556.0,3.6
+Urban,Nursery,Female,62026.0,3.6
+Urban,Primary,Male,836815.0,48.9
+Urban,Primary,Female,818996.0,48.0
+Urban,INGOBOKA/Vocational,Male,18483.0,1.1
+Urban,INGOBOKA/Vocational,Female,14575.0,0.9
+Urban,Lower secondary,Male,198759.0,11.6
+Urban,Lower secondary,Female,218950.0,12.8
+Urban,Upper secondary,Male,219581.0,12.8
+Urban,Upper secondary,Female,224759.0,13.2
+Urban,University,Male,179938.0,10.5
+Urban,University,Female,145106.0,8.5
+Urban,Not Stated,Male,901.0,0.1
+Urban,Not Stated,Female,238.0,0.0
+Rural,Never attended School,Male,697676.0,16.6
+Rural,Never attended School,Female,917505.0,19.9
+Rural,Pre-nursery/ECD,Male,107262.0,2.5
+Rural,Pre-nursery/ECD,Female,111828.0,2.4
+Rural,Nursery,Male,94412.0,2.2
+Rural,Nursery,Female,100538.0,2.2
+Rural,Primary,Male,2706273.0,64.2
+Rural,Primary,Female,2777441.0,60.2
+Rural,INGOBOKA/Vocational,Male,33237.0,0.8
+Rural,INGOBOKA/Vocational,Female,30062.0,0.7
+Rural,Lower secondary,Male,321515.0,7.6
+Rural,Lower secondary,Female,415125.0,9.0
+Rural,Upper secondary,Male,189173.0,4.5
+Rural,Upper secondary,Female,216821.0,4.7
+Rural,University,Male,65446.0,1.6
+Rural,University,Female,43986.0,1.0
+Rural,Not Stated,Male,472.0,0.0
+Rural,Not Stated,Female,177.0,0.0

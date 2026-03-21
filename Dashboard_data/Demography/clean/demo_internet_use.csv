@@ -1,0 +1,217 @@
+age_group,province,residence,sex,value
+Population 10 years and above,Total,Rwanda,Male,737338.0
+Population 10 years and above,Total,Rwanda,Female,553910.0
+Population 10 years and above,Total,Urban,Male,481380.0
+Population 10 years and above,Total,Urban,Female,389533.0
+Population 10 years and above,Total,Rural,Male,255958.0
+Population 10 years and above,Total,Rural,Female,164377.0
+Population 10 years and above,City of Kigali,Rwanda,Male,291315.0
+Population 10 years and above,City of Kigali,Rwanda,Female,231754.0
+Population 10 years and above,City of Kigali,Urban,Male,281446.0
+Population 10 years and above,City of Kigali,Urban,Female,225332.0
+Population 10 years and above,City of Kigali,Rural,Male,9869.0
+Population 10 years and above,City of Kigali,Rural,Female,6422.0
+Population 10 years and above,Southern Province,Rwanda,Male,107750.0
+Population 10 years and above,Southern Province,Rwanda,Female,86578.0
+Population 10 years and above,Southern Province,Urban,Male,46237.0
+Population 10 years and above,Southern Province,Urban,Female,41429.0
+Population 10 years and above,Southern Province,Rural,Male,61513.0
+Population 10 years and above,Southern Province,Rural,Female,45149.0
+Population 10 years and above,Western Province,Rwanda,Male,109470.0
+Population 10 years and above,Western Province,Rwanda,Female,75123.0
+Population 10 years and above,Western Province,Urban,Male,55086.0
+Population 10 years and above,Western Province,Urban,Female,42402.0
+Population 10 years and above,Western Province,Rural,Male,54384.0
+Population 10 years and above,Western Province,Rural,Female,32721.0
+Population 10 years and above,Northern Province,Rwanda,Male,80538.0
+Population 10 years and above,Northern Province,Rwanda,Female,56955.0
+Population 10 years and above,Northern Province,Urban,Male,34068.0
+Population 10 years and above,Northern Province,Urban,Female,28186.0
+Population 10 years and above,Northern Province,Rural,Male,46470.0
+Population 10 years and above,Northern Province,Rural,Female,28769.0
+Population 10 years and above,Eastern Province,Rwanda,Male,148265.0
+Population 10 years and above,Eastern Province,Rwanda,Female,103500.0
+Population 10 years and above,Eastern Province,Urban,Male,64543.0
+Population 10 years and above,Eastern Province,Urban,Female,52184.0
+Population 10 years and above,Eastern Province,Rural,Male,83722.0
+Population 10 years and above,Eastern Province,Rural,Female,51316.0
+Population 16 years and above,Total,Rwanda,Male,706320.0
+Population 16 years and above,Total,Rwanda,Female,521362.0
+Population 16 years and above,Total,Urban,Male,460966.0
+Population 16 years and above,Total,Urban,Female,369220.0
+Population 16 years and above,Total,Rural,Male,245354.0
+Population 16 years and above,Total,Rural,Female,152142.0
+Population 16 years and above,City of Kigali,Rwanda,Male,279225.0
+Population 16 years and above,City of Kigali,Rwanda,Female,219886.0
+Population 16 years and above,City of Kigali,Urban,Male,269742.0
+Population 16 years and above,City of Kigali,Urban,Female,213841.0
+Population 16 years and above,City of Kigali,Rural,Male,9483.0
+Population 16 years and above,City of Kigali,Rural,Female,6045.0
+Population 16 years and above,Southern Province,Rwanda,Male,102395.0
+Population 16 years and above,Southern Province,Rwanda,Female,80615.0
+Population 16 years and above,Southern Province,Urban,Male,44030.0
+Population 16 years and above,Southern Province,Urban,Female,39224.0
+Population 16 years and above,Southern Province,Rural,Male,58365.0
+Population 16 years and above,Southern Province,Rural,Female,41391.0
+Population 16 years and above,Western Province,Rwanda,Male,105121.0
+Population 16 years and above,Western Province,Rwanda,Female,70421.0
+Population 16 years and above,Western Province,Urban,Male,52694.0
+Population 16 years and above,Western Province,Urban,Female,40003.0
+Population 16 years and above,Western Province,Rural,Male,52427.0
+Population 16 years and above,Western Province,Rural,Female,30418.0
+Population 16 years and above,Northern Province,Rwanda,Male,77199.0
+Population 16 years and above,Northern Province,Rwanda,Female,53200.0
+Population 16 years and above,Northern Province,Urban,Male,32634.0
+Population 16 years and above,Northern Province,Urban,Female,26705.0
+Population 16 years and above,Northern Province,Rural,Male,44565.0
+Population 16 years and above,Northern Province,Rural,Female,26495.0
+Population 16 years and above,Eastern Province,Rwanda,Male,142380.0
+Population 16 years and above,Eastern Province,Rwanda,Female,97240.0
+Population 16 years and above,Eastern Province,Urban,Male,61866.0
+Population 16 years and above,Eastern Province,Urban,Female,49447.0
+Population 16 years and above,Eastern Province,Rural,Male,80514.0
+Population 16 years and above,Eastern Province,Rural,Female,47793.0
+Population 21 years and above,Total,Rwanda,Male,605234.0
+Population 21 years and above,Total,Rwanda,Female,433920.0
+Population 21 years and above,Total,Urban,Male,405301.0
+Population 21 years and above,Total,Urban,Female,317791.0
+Population 21 years and above,Total,Rural,Male,199933.0
+Population 21 years and above,Total,Rural,Female,116129.0
+Population 21 years and above,City of Kigali,Rwanda,Male,248070.0
+Population 21 years and above,City of Kigali,Rwanda,Female,191152.0
+Population 21 years and above,City of Kigali,Urban,Male,240061.0
+Population 21 years and above,City of Kigali,Urban,Female,186253.0
+Population 21 years and above,City of Kigali,Rural,Male,8009.0
+Population 21 years and above,City of Kigali,Rural,Female,4899.0
+Population 21 years and above,Southern Province,Rwanda,Male,85523.0
+Population 21 years and above,Southern Province,Rwanda,Female,65088.0
+Population 21 years and above,Southern Province,Urban,Male,38428.0
+Population 21 years and above,Southern Province,Urban,Female,33742.0
+Population 21 years and above,Southern Province,Rural,Male,47095.0
+Population 21 years and above,Southern Province,Rural,Female,31346.0
+Population 21 years and above,Western Province,Rwanda,Male,88515.0
+Population 21 years and above,Western Province,Rwanda,Female,56698.0
+Population 21 years and above,Western Province,Urban,Male,45014.0
+Population 21 years and above,Western Province,Urban,Female,33173.0
+Population 21 years and above,Western Province,Rural,Male,43501.0
+Population 21 years and above,Western Province,Rural,Female,23525.0
+Population 21 years and above,Northern Province,Rwanda,Male,65276.0
+Population 21 years and above,Northern Province,Rwanda,Female,43108.0
+Population 21 years and above,Northern Province,Urban,Male,28386.0
+Population 21 years and above,Northern Province,Urban,Female,22747.0
+Population 21 years and above,Northern Province,Rural,Male,36890.0
+Population 21 years and above,Northern Province,Rural,Female,20361.0
+Population 21 years and above,Eastern Province,Rwanda,Male,117850.0
+Population 21 years and above,Eastern Province,Rwanda,Female,77874.0
+Population 21 years and above,Eastern Province,Urban,Male,53412.0
+Population 21 years and above,Eastern Province,Urban,Female,41876.0
+Population 21 years and above,Eastern Province,Rural,Male,64438.0
+Population 21 years and above,Eastern Province,Rural,Female,35998.0
+Population 10 years and above,Total,Rwanda,Male,16.6
+Population 10 years and above,Total,Rwanda,Female,11.2
+Population 10 years and above,Total,Urban,Male,37.2
+Population 10 years and above,Total,Urban,Female,28.6
+Population 10 years and above,Total,Rural,Male,8.1
+Population 10 years and above,Total,Rural,Female,4.6
+Population 10 years and above,City of Kigali,Rwanda,Male,44.6
+Population 10 years and above,City of Kigali,Rwanda,Female,36.2
+Population 10 years and above,City of Kigali,Urban,Male,48.6
+Population 10 years and above,City of Kigali,Urban,Female,40.0
+Population 10 years and above,City of Kigali,Rural,Male,13.3
+Population 10 years and above,City of Kigali,Rural,Female,8.3
+Population 10 years and above,Southern Province,Rwanda,Male,10.7
+Population 10 years and above,Southern Province,Rwanda,Female,7.6
+Population 10 years and above,Southern Province,Urban,Male,31.9
+Population 10 years and above,Southern Province,Urban,Female,25.6
+Population 10 years and above,Southern Province,Rural,Male,7.1
+Population 10 years and above,Southern Province,Rural,Female,4.6
+Population 10 years and above,Western Province,Rwanda,Male,11.7
+Population 10 years and above,Western Province,Rwanda,Female,6.9
+Population 10 years and above,Western Province,Urban,Male,26.0
+Population 10 years and above,Western Province,Urban,Female,18.0
+Population 10 years and above,Western Province,Rural,Male,7.5
+Population 10 years and above,Western Province,Rural,Female,3.9
+Population 10 years and above,Northern Province,Rwanda,Male,11.8
+Population 10 years and above,Northern Province,Rwanda,Female,7.3
+Population 10 years and above,Northern Province,Urban,Male,28.9
+Population 10 years and above,Northern Province,Urban,Female,21.0
+Population 10 years and above,Northern Province,Rural,Male,8.2
+Population 10 years and above,Northern Province,Rural,Female,4.5
+Population 10 years and above,Eastern Province,Rwanda,Male,12.6
+Population 10 years and above,Eastern Province,Rwanda,Female,7.9
+Population 10 years and above,Eastern Province,Urban,Male,26.7
+Population 10 years and above,Eastern Province,Urban,Female,19.7
+Population 10 years and above,Eastern Province,Rural,Male,9.0
+Population 10 years and above,Eastern Province,Rural,Female,4.9
+Population 16 years and above,Total,Rwanda,Male,19.9
+Population 16 years and above,Total,Rwanda,Female,12.9
+Population 16 years and above,Total,Urban,Male,42.5
+Population 16 years and above,Total,Urban,Female,32.3
+Population 16 years and above,Total,Rural,Male,10.0
+Population 16 years and above,Total,Rural,Female,5.2
+Population 16 years and above,City of Kigali,Rwanda,Male,49.5
+Population 16 years and above,City of Kigali,Rwanda,Female,40.1
+Population 16 years and above,City of Kigali,Urban,Male,53.4
+Population 16 years and above,City of Kigali,Urban,Female,44.0
+Population 16 years and above,City of Kigali,Rural,Male,16.2
+Population 16 years and above,City of Kigali,Rural,Female,9.7
+Population 16 years and above,Southern Province,Rwanda,Male,12.9
+Population 16 years and above,Southern Province,Rwanda,Female,8.7
+Population 16 years and above,Southern Province,Urban,Male,36.8
+Population 16 years and above,Southern Province,Urban,Female,28.9
+Population 16 years and above,Southern Province,Rural,Male,8.7
+Population 16 years and above,Southern Province,Rural,Female,5.2
+Population 16 years and above,Western Province,Rwanda,Male,14.5
+Population 16 years and above,Western Province,Rwanda,Female,8.1
+Population 16 years and above,Western Province,Urban,Male,31.4
+Population 16 years and above,Western Province,Urban,Female,21.0
+Population 16 years and above,Western Province,Rural,Male,9.4
+Population 16 years and above,Western Province,Rural,Female,4.5
+Population 16 years and above,Northern Province,Rwanda,Male,14.1
+Population 16 years and above,Northern Province,Rwanda,Female,8.2
+Population 16 years and above,Northern Province,Urban,Male,33.7
+Population 16 years and above,Northern Province,Urban,Female,23.7
+Population 16 years and above,Northern Province,Rural,Male,9.9
+Population 16 years and above,Northern Province,Rural,Female,5.0
+Population 16 years and above,Eastern Province,Rwanda,Male,15.5
+Population 16 years and above,Eastern Province,Rwanda,Female,9.3
+Population 16 years and above,Eastern Province,Urban,Male,31.6
+Population 16 years and above,Eastern Province,Urban,Female,22.7
+Population 16 years and above,Eastern Province,Rural,Male,11.1
+Population 16 years and above,Eastern Province,Rural,Female,5.7
+Population 21 years and above,Total,Rwanda,Male,21.3
+Population 21 years and above,Total,Rwanda,Female,13.1
+Population 21 years and above,Total,Urban,Male,44.9
+Population 21 years and above,Total,Urban,Female,34.2
+Population 21 years and above,Total,Rural,Male,10.3
+Population 21 years and above,Total,Rural,Female,4.9
+Population 21 years and above,City of Kigali,Rwanda,Male,51.5
+Population 21 years and above,City of Kigali,Rwanda,Female,42.5
+Population 21 years and above,City of Kigali,Urban,Male,55.3
+Population 21 years and above,City of Kigali,Urban,Female,46.7
+Population 21 years and above,City of Kigali,Rural,Male,16.9
+Population 21 years and above,City of Kigali,Rural,Female,9.5
+Population 21 years and above,Southern Province,Rwanda,Male,13.6
+Population 21 years and above,Southern Province,Rwanda,Female,8.4
+Population 21 years and above,Southern Province,Urban,Male,39.4
+Population 21 years and above,Southern Province,Urban,Female,30.6
+Population 21 years and above,Southern Province,Rural,Male,8.9
+Population 21 years and above,Southern Province,Rural,Female,4.7
+Population 21 years and above,Western Province,Rwanda,Male,15.5
+Population 21 years and above,Western Province,Rwanda,Female,8.0
+Population 21 years and above,Western Province,Urban,Male,33.8
+Population 21 years and above,Western Province,Urban,Female,21.6
+Population 21 years and above,Western Province,Rural,Male,10.0
+Population 21 years and above,Western Province,Rural,Female,4.2
+Population 21 years and above,Northern Province,Rwanda,Male,15.0
+Population 21 years and above,Northern Province,Rwanda,Female,8.2
+Population 21 years and above,Northern Province,Urban,Male,36.2
+Population 21 years and above,Northern Province,Urban,Female,24.9
+Population 21 years and above,Northern Province,Rural,Male,10.4
+Population 21 years and above,Northern Province,Rural,Female,4.7
+Population 21 years and above,Eastern Province,Rwanda,Male,16.2
+Population 21 years and above,Eastern Province,Rwanda,Female,9.1
+Population 21 years and above,Eastern Province,Urban,Male,33.5
+Population 21 years and above,Eastern Province,Urban,Female,23.7
+Population 21 years and above,Eastern Province,Rural,Male,11.4
+Population 21 years and above,Eastern Province,Rural,Female,5.3

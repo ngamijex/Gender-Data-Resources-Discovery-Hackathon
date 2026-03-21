@@ -1,0 +1,51 @@
+indicator,year,entity,sex,pct
+local_government_leaders_gender,2014,Mayor,Male,93.0
+local_government_leaders_gender,2014,Mayor,Female,7.0
+local_government_leaders_gender,2016,Mayor,Male,84.0
+local_government_leaders_gender,2016,Mayor,Female,16.0
+local_government_leaders_gender,2018,Mayor,Male,73.0
+local_government_leaders_gender,2018,Mayor,Female,27.0
+local_government_leaders_gender,2021,Mayor,Male,70.0
+local_government_leaders_gender,2021,Mayor,Female,30.0
+local_government_leaders_gender,2023,Mayor,Male,67.0
+local_government_leaders_gender,2023,Mayor,Female,33.0
+local_government_leaders_gender,2014,Sector Executive Secretary,Male,91.0
+local_government_leaders_gender,2014,Sector Executive Secretary,Female,9.0
+local_government_leaders_gender,2016,Sector Executive Secretary,Male,89.0
+local_government_leaders_gender,2016,Sector Executive Secretary,Female,11.0
+local_government_leaders_gender,2018,Sector Executive Secretary,Male,83.0
+local_government_leaders_gender,2018,Sector Executive Secretary,Female,17.0
+local_government_leaders_gender,2021,Sector Executive Secretary,Male,84.0
+local_government_leaders_gender,2021,Sector Executive Secretary,Female,16.0
+local_government_leaders_gender,2023,Sector Executive Secretary,Male,83.0
+local_government_leaders_gender,2023,Sector Executive Secretary,Female,17.0
+local_government_leaders_gender,2014,Cell Executive Secretary,Male,62.0
+local_government_leaders_gender,2014,Cell Executive Secretary,Female,38.0
+local_government_leaders_gender,2016,Cell Executive Secretary,Male,65.0
+local_government_leaders_gender,2016,Cell Executive Secretary,Female,35.0
+local_government_leaders_gender,2018,Cell Executive Secretary,Male,64.0
+local_government_leaders_gender,2018,Cell Executive Secretary,Female,36.0
+local_government_leaders_gender,2021,Cell Executive Secretary,Male,64.0
+local_government_leaders_gender,2021,Cell Executive Secretary,Female,36.0
+local_government_leaders_gender,2023,Cell Executive Secretary,Male,72.0
+local_government_leaders_gender,2023,Cell Executive Secretary,Female,28.0
+local_government_leaders_gender,2014,District Executive Secretaries,Male,
+local_government_leaders_gender,2014,District Executive Secretaries,Female,
+local_government_leaders_gender,2016,District Executive Secretaries,Male,
+local_government_leaders_gender,2016,District Executive Secretaries,Female,
+local_government_leaders_gender,2018,District Executive Secretaries,Male,
+local_government_leaders_gender,2018,District Executive Secretaries,Female,
+local_government_leaders_gender,2021,District Executive Secretaries,Male,
+local_government_leaders_gender,2021,District Executive Secretaries,Female,
+local_government_leaders_gender,2023,District Executive Secretaries,Male,87.0
+local_government_leaders_gender,2023,District Executive Secretaries,Female,13.0
+local_government_leaders_gender,2014,Directors at the Decentralized level,Male,
+local_government_leaders_gender,2014,Directors at the Decentralized level,Female,
+local_government_leaders_gender,2016,Directors at the Decentralized level,Male,
+local_government_leaders_gender,2016,Directors at the Decentralized level,Female,
+local_government_leaders_gender,2018,Directors at the Decentralized level,Male,
+local_government_leaders_gender,2018,Directors at the Decentralized level,Female,
+local_government_leaders_gender,2021,Directors at the Decentralized level,Male,
+local_government_leaders_gender,2021,Directors at the Decentralized level,Female,
+local_government_leaders_gender,2023,Directors at the Decentralized level,Male,80.0
+local_government_leaders_gender,2023,Directors at the Decentralized level,Female,20.0

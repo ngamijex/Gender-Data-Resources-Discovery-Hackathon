@@ -1,0 +1,325 @@
+indicator,geo,geo_type,province,residence,sex,value
+Youth share of population (%),Rwanda,National,Rwanda,Rwanda,Both sexes,27.1
+Youth share of population (%),Rwanda,National,Rwanda,Rwanda,Male,27.5
+Youth share of population (%),Rwanda,National,Rwanda,Rwanda,Female,26.8
+Youth share of population (%),Rwanda,National,Rwanda,Urban,Both sexes,31.4
+Youth share of population (%),Rwanda,National,Rwanda,Urban,Male,30.8
+Youth share of population (%),Rwanda,National,Rwanda,Urban,Female,32.1
+Youth share of population (%),Rwanda,National,Rwanda,Rural,Both sexes,25.5
+Youth share of population (%),Rwanda,National,Rwanda,Rural,Male,26.1
+Youth share of population (%),Rwanda,National,Rwanda,Rural,Female,24.9
+Youth share of population (%),City of Kigali,Province,City of Kigali,Rwanda,Both sexes,33.5
+Youth share of population (%),City of Kigali,Province,City of Kigali,Rwanda,Male,32.5
+Youth share of population (%),City of Kigali,Province,City of Kigali,Rwanda,Female,34.5
+Youth share of population (%),City of Kigali,Province,City of Kigali,Urban,Both sexes,34.7
+Youth share of population (%),City of Kigali,Province,City of Kigali,Urban,Male,33.4
+Youth share of population (%),City of Kigali,Province,City of Kigali,Urban,Female,36.0
+Youth share of population (%),City of Kigali,Province,City of Kigali,Rural,Both sexes,25.4
+Youth share of population (%),City of Kigali,Province,City of Kigali,Rural,Male,26.3
+Youth share of population (%),City of Kigali,Province,City of Kigali,Rural,Female,24.4
+Youth share of population (%),Nyarugenge,District,City of Kigali,Rwanda,Both sexes,33.7
+Youth share of population (%),Nyarugenge,District,City of Kigali,Rwanda,Male,33.4
+Youth share of population (%),Nyarugenge,District,City of Kigali,Rwanda,Female,34.0
+Youth share of population (%),Nyarugenge,District,City of Kigali,Urban,Both sexes,34.6
+Youth share of population (%),Nyarugenge,District,City of Kigali,Urban,Male,34.0
+Youth share of population (%),Nyarugenge,District,City of Kigali,Urban,Female,35.3
+Youth share of population (%),Nyarugenge,District,City of Kigali,Rural,Both sexes,28.5
+Youth share of population (%),Nyarugenge,District,City of Kigali,Rural,Male,30.7
+Youth share of population (%),Nyarugenge,District,City of Kigali,Rural,Female,25.5
+Youth share of population (%),Gasabo,District,City of Kigali,Rwanda,Both sexes,32.2
+Youth share of population (%),Gasabo,District,City of Kigali,Rwanda,Male,31.0
+Youth share of population (%),Gasabo,District,City of Kigali,Rwanda,Female,33.4
+Youth share of population (%),Gasabo,District,City of Kigali,Urban,Both sexes,34.0
+Youth share of population (%),Gasabo,District,City of Kigali,Urban,Male,32.4
+Youth share of population (%),Gasabo,District,City of Kigali,Urban,Female,35.6
+Youth share of population (%),Gasabo,District,City of Kigali,Rural,Both sexes,24.3
+Youth share of population (%),Gasabo,District,City of Kigali,Rural,Male,24.5
+Youth share of population (%),Gasabo,District,City of Kigali,Rural,Female,24.1
+Youth share of population (%),Kicukiro,District,City of Kigali,Rwanda,Both sexes,35.6
+Youth share of population (%),Kicukiro,District,City of Kigali,Rwanda,Male,34.3
+Youth share of population (%),Kicukiro,District,City of Kigali,Rwanda,Female,37.0
+Youth share of population (%),Kicukiro,District,City of Kigali,Urban,Both sexes,35.8
+Youth share of population (%),Kicukiro,District,City of Kigali,Urban,Male,34.4
+Youth share of population (%),Kicukiro,District,City of Kigali,Urban,Female,37.1
+Youth share of population (%),Kicukiro,District,City of Kigali,Rural,Both sexes,24.6
+Youth share of population (%),Kicukiro,District,City of Kigali,Rural,Male,24.7
+Youth share of population (%),Kicukiro,District,City of Kigali,Rural,Female,24.5
+Youth share of population (%),Southern Province,Province,Southern Province,Rwanda,Both sexes,24.9
+Youth share of population (%),Southern Province,Province,Southern Province,Rwanda,Male,25.6
+Youth share of population (%),Southern Province,Province,Southern Province,Rwanda,Female,24.2
+Youth share of population (%),Southern Province,Province,Southern Province,Urban,Both sexes,28.9
+Youth share of population (%),Southern Province,Province,Southern Province,Urban,Male,28.4
+Youth share of population (%),Southern Province,Province,Southern Province,Urban,Female,29.4
+Youth share of population (%),Southern Province,Province,Southern Province,Rural,Both sexes,24.2
+Youth share of population (%),Southern Province,Province,Southern Province,Rural,Male,25.1
+Youth share of population (%),Southern Province,Province,Southern Province,Rural,Female,23.3
+Youth share of population (%),Nyanza,District,Southern Province,Rwanda,Both sexes,23.9
+Youth share of population (%),Nyanza,District,Southern Province,Rwanda,Male,24.4
+Youth share of population (%),Nyanza,District,Southern Province,Rwanda,Female,23.3
+Youth share of population (%),Nyanza,District,Southern Province,Urban,Both sexes,28.3
+Youth share of population (%),Nyanza,District,Southern Province,Urban,Male,27.8
+Youth share of population (%),Nyanza,District,Southern Province,Urban,Female,28.9
+Youth share of population (%),Nyanza,District,Southern Province,Rural,Both sexes,23.4
+Youth share of population (%),Nyanza,District,Southern Province,Rural,Male,24.1
+Youth share of population (%),Nyanza,District,Southern Province,Rural,Female,22.8
+Youth share of population (%),Gisagara,District,Southern Province,Rwanda,Both sexes,24.4
+Youth share of population (%),Gisagara,District,Southern Province,Rwanda,Male,25.5
+Youth share of population (%),Gisagara,District,Southern Province,Rwanda,Female,23.5
+Youth share of population (%),Gisagara,District,Southern Province,Urban,Both sexes,27.0
+Youth share of population (%),Gisagara,District,Southern Province,Urban,Male,28.7
+Youth share of population (%),Gisagara,District,Southern Province,Urban,Female,25.5
+Youth share of population (%),Gisagara,District,Southern Province,Rural,Both sexes,24.3
+Youth share of population (%),Gisagara,District,Southern Province,Rural,Male,25.4
+Youth share of population (%),Gisagara,District,Southern Province,Rural,Female,23.4
+Youth share of population (%),Nyaruguru,District,Southern Province,Rwanda,Both sexes,25.3
+Youth share of population (%),Nyaruguru,District,Southern Province,Rwanda,Male,26.4
+Youth share of population (%),Nyaruguru,District,Southern Province,Rwanda,Female,24.2
+Youth share of population (%),Nyaruguru,District,Southern Province,Urban,Both sexes,29.6
+Youth share of population (%),Nyaruguru,District,Southern Province,Urban,Male,30.6
+Youth share of population (%),Nyaruguru,District,Southern Province,Urban,Female,28.6
+Youth share of population (%),Nyaruguru,District,Southern Province,Rural,Both sexes,25.2
+Youth share of population (%),Nyaruguru,District,Southern Province,Rural,Male,26.3
+Youth share of population (%),Nyaruguru,District,Southern Province,Rural,Female,24.1
+Youth share of population (%),Huye,District,Southern Province,Rwanda,Both sexes,24.7
+Youth share of population (%),Huye,District,Southern Province,Rwanda,Male,25.6
+Youth share of population (%),Huye,District,Southern Province,Rwanda,Female,23.7
+Youth share of population (%),Huye,District,Southern Province,Urban,Both sexes,29.9
+Youth share of population (%),Huye,District,Southern Province,Urban,Male,29.1
+Youth share of population (%),Huye,District,Southern Province,Urban,Female,30.8
+Youth share of population (%),Huye,District,Southern Province,Rural,Both sexes,23.3
+Youth share of population (%),Huye,District,Southern Province,Rural,Male,24.5
+Youth share of population (%),Huye,District,Southern Province,Rural,Female,22.2
+Youth share of population (%),Nyamagabe,District,Southern Province,Rwanda,Both sexes,26.8
+Youth share of population (%),Nyamagabe,District,Southern Province,Rwanda,Male,27.8
+Youth share of population (%),Nyamagabe,District,Southern Province,Rwanda,Female,26.0
+Youth share of population (%),Nyamagabe,District,Southern Province,Urban,Both sexes,29.7
+Youth share of population (%),Nyamagabe,District,Southern Province,Urban,Male,29.8
+Youth share of population (%),Nyamagabe,District,Southern Province,Urban,Female,29.6
+Youth share of population (%),Nyamagabe,District,Southern Province,Rural,Both sexes,26.5
+Youth share of population (%),Nyamagabe,District,Southern Province,Rural,Male,27.6
+Youth share of population (%),Nyamagabe,District,Southern Province,Rural,Female,25.5
+Youth share of population (%),Ruhango,District,Southern Province,Rwanda,Both sexes,23.9
+Youth share of population (%),Ruhango,District,Southern Province,Rwanda,Male,24.5
+Youth share of population (%),Ruhango,District,Southern Province,Rwanda,Female,23.3
+Youth share of population (%),Ruhango,District,Southern Province,Urban,Both sexes,27.3
+Youth share of population (%),Ruhango,District,Southern Province,Urban,Male,26.3
+Youth share of population (%),Ruhango,District,Southern Province,Urban,Female,28.2
+Youth share of population (%),Ruhango,District,Southern Province,Rural,Both sexes,23.4
+Youth share of population (%),Ruhango,District,Southern Province,Rural,Male,24.3
+Youth share of population (%),Ruhango,District,Southern Province,Rural,Female,22.7
+Youth share of population (%),Muhanga,District,Southern Province,Rwanda,Both sexes,25.3
+Youth share of population (%),Muhanga,District,Southern Province,Rwanda,Male,25.8
+Youth share of population (%),Muhanga,District,Southern Province,Rwanda,Female,24.9
+Youth share of population (%),Muhanga,District,Southern Province,Urban,Both sexes,30.6
+Youth share of population (%),Muhanga,District,Southern Province,Urban,Male,30.1
+Youth share of population (%),Muhanga,District,Southern Province,Urban,Female,31.1
+Youth share of population (%),Muhanga,District,Southern Province,Rural,Both sexes,23.7
+Youth share of population (%),Muhanga,District,Southern Province,Rural,Male,24.4
+Youth share of population (%),Muhanga,District,Southern Province,Rural,Female,23.0
+Youth share of population (%),Kamonyi,District,Southern Province,Rwanda,Both sexes,24.8
+Youth share of population (%),Kamonyi,District,Southern Province,Rwanda,Male,25.0
+Youth share of population (%),Kamonyi,District,Southern Province,Rwanda,Female,24.7
+Youth share of population (%),Kamonyi,District,Southern Province,Urban,Both sexes,27.8
+Youth share of population (%),Kamonyi,District,Southern Province,Urban,Male,27.0
+Youth share of population (%),Kamonyi,District,Southern Province,Urban,Female,28.7
+Youth share of population (%),Kamonyi,District,Southern Province,Rural,Both sexes,23.4
+Youth share of population (%),Kamonyi,District,Southern Province,Rural,Male,24.1
+Youth share of population (%),Kamonyi,District,Southern Province,Rural,Female,22.8
+Youth share of population (%),Western Province,Province,Western Province,Rwanda,Both sexes,26.2
+Youth share of population (%),Western Province,Province,Western Province,Rwanda,Male,26.6
+Youth share of population (%),Western Province,Province,Western Province,Rwanda,Female,25.7
+Youth share of population (%),Western Province,Province,Western Province,Urban,Both sexes,28.4
+Youth share of population (%),Western Province,Province,Western Province,Urban,Male,28.2
+Youth share of population (%),Western Province,Province,Western Province,Urban,Female,28.7
+Youth share of population (%),Western Province,Province,Western Province,Rural,Both sexes,25.5
+Youth share of population (%),Western Province,Province,Western Province,Rural,Male,26.2
+Youth share of population (%),Western Province,Province,Western Province,Rural,Female,24.9
+Youth share of population (%),Karongi,District,Western Province,Rwanda,Both sexes,25.4
+Youth share of population (%),Karongi,District,Western Province,Rwanda,Male,26.1
+Youth share of population (%),Karongi,District,Western Province,Rwanda,Female,24.7
+Youth share of population (%),Karongi,District,Western Province,Urban,Both sexes,29.2
+Youth share of population (%),Karongi,District,Western Province,Urban,Male,28.4
+Youth share of population (%),Karongi,District,Western Province,Urban,Female,29.9
+Youth share of population (%),Karongi,District,Western Province,Rural,Both sexes,25.0
+Youth share of population (%),Karongi,District,Western Province,Rural,Male,25.8
+Youth share of population (%),Karongi,District,Western Province,Rural,Female,24.2
+Youth share of population (%),Rutsiro,District,Western Province,Rwanda,Both sexes,27.0
+Youth share of population (%),Rutsiro,District,Western Province,Rwanda,Male,27.8
+Youth share of population (%),Rutsiro,District,Western Province,Rwanda,Female,26.2
+Youth share of population (%),Rutsiro,District,Western Province,Urban,Both sexes,27.4
+Youth share of population (%),Rutsiro,District,Western Province,Urban,Male,27.5
+Youth share of population (%),Rutsiro,District,Western Province,Urban,Female,27.2
+Youth share of population (%),Rutsiro,District,Western Province,Rural,Both sexes,27.0
+Youth share of population (%),Rutsiro,District,Western Province,Rural,Male,27.8
+Youth share of population (%),Rutsiro,District,Western Province,Rural,Female,26.2
+Youth share of population (%),Rubavu,District,Western Province,Rwanda,Both sexes,28.1
+Youth share of population (%),Rubavu,District,Western Province,Rwanda,Male,28.3
+Youth share of population (%),Rubavu,District,Western Province,Rwanda,Female,27.9
+Youth share of population (%),Rubavu,District,Western Province,Urban,Both sexes,29.1
+Youth share of population (%),Rubavu,District,Western Province,Urban,Male,28.5
+Youth share of population (%),Rubavu,District,Western Province,Urban,Female,29.6
+Youth share of population (%),Rubavu,District,Western Province,Rural,Both sexes,26.9
+Youth share of population (%),Rubavu,District,Western Province,Rural,Male,28.1
+Youth share of population (%),Rubavu,District,Western Province,Rural,Female,25.8
+Youth share of population (%),Nyabihu,District,Western Province,Rwanda,Both sexes,28.1
+Youth share of population (%),Nyabihu,District,Western Province,Rwanda,Male,28.6
+Youth share of population (%),Nyabihu,District,Western Province,Rwanda,Female,27.6
+Youth share of population (%),Nyabihu,District,Western Province,Urban,Both sexes,29.1
+Youth share of population (%),Nyabihu,District,Western Province,Urban,Male,29.0
+Youth share of population (%),Nyabihu,District,Western Province,Urban,Female,29.2
+Youth share of population (%),Nyabihu,District,Western Province,Rural,Both sexes,27.8
+Youth share of population (%),Nyabihu,District,Western Province,Rural,Male,28.5
+Youth share of population (%),Nyabihu,District,Western Province,Rural,Female,27.1
+Youth share of population (%),Ngororero,District,Western Province,Rwanda,Both sexes,25.2
+Youth share of population (%),Ngororero,District,Western Province,Rwanda,Male,25.5
+Youth share of population (%),Ngororero,District,Western Province,Rwanda,Female,24.8
+Youth share of population (%),Ngororero,District,Western Province,Urban,Both sexes,30.0
+Youth share of population (%),Ngororero,District,Western Province,Urban,Male,30.0
+Youth share of population (%),Ngororero,District,Western Province,Urban,Female,30.1
+Youth share of population (%),Ngororero,District,Western Province,Rural,Both sexes,24.9
+Youth share of population (%),Ngororero,District,Western Province,Rural,Male,25.3
+Youth share of population (%),Ngororero,District,Western Province,Rural,Female,24.6
+Youth share of population (%),Rusizi,District,Western Province,Rwanda,Both sexes,25.3
+Youth share of population (%),Rusizi,District,Western Province,Rwanda,Male,25.8
+Youth share of population (%),Rusizi,District,Western Province,Rwanda,Female,24.8
+Youth share of population (%),Rusizi,District,Western Province,Urban,Both sexes,27.3
+Youth share of population (%),Rusizi,District,Western Province,Urban,Male,27.8
+Youth share of population (%),Rusizi,District,Western Province,Urban,Female,26.9
+Youth share of population (%),Rusizi,District,Western Province,Rural,Both sexes,24.3
+Youth share of population (%),Rusizi,District,Western Province,Rural,Male,24.7
+Youth share of population (%),Rusizi,District,Western Province,Rural,Female,23.8
+Youth share of population (%),Nyamasheke,District,Western Province,Rwanda,Both sexes,24.1
+Youth share of population (%),Nyamasheke,District,Western Province,Rwanda,Male,24.4
+Youth share of population (%),Nyamasheke,District,Western Province,Rwanda,Female,23.8
+Youth share of population (%),Nyamasheke,District,Western Province,Urban,Both sexes,25.5
+Youth share of population (%),Nyamasheke,District,Western Province,Urban,Male,24.7
+Youth share of population (%),Nyamasheke,District,Western Province,Urban,Female,26.2
+Youth share of population (%),Nyamasheke,District,Western Province,Rural,Both sexes,24.0
+Youth share of population (%),Nyamasheke,District,Western Province,Rural,Male,24.4
+Youth share of population (%),Nyamasheke,District,Western Province,Rural,Female,23.6
+Youth share of population (%),Northern Province,Province,Northern Province,Rwanda,Both sexes,27.7
+Youth share of population (%),Northern Province,Province,Northern Province,Rwanda,Male,28.2
+Youth share of population (%),Northern Province,Province,Northern Province,Rwanda,Female,27.2
+Youth share of population (%),Northern Province,Province,Northern Province,Urban,Both sexes,30.5
+Youth share of population (%),Northern Province,Province,Northern Province,Urban,Male,30.1
+Youth share of population (%),Northern Province,Province,Northern Province,Urban,Female,30.9
+Youth share of population (%),Northern Province,Province,Northern Province,Rural,Both sexes,27.1
+Youth share of population (%),Northern Province,Province,Northern Province,Rural,Male,27.8
+Youth share of population (%),Northern Province,Province,Northern Province,Rural,Female,26.5
+Youth share of population (%),Rulindo,District,Northern Province,Rwanda,Both sexes,25.7
+Youth share of population (%),Rulindo,District,Northern Province,Rwanda,Male,26.3
+Youth share of population (%),Rulindo,District,Northern Province,Rwanda,Female,25.3
+Youth share of population (%),Rulindo,District,Northern Province,Urban,Both sexes,26.2
+Youth share of population (%),Rulindo,District,Northern Province,Urban,Male,24.4
+Youth share of population (%),Rulindo,District,Northern Province,Urban,Female,27.9
+Youth share of population (%),Rulindo,District,Northern Province,Rural,Both sexes,25.7
+Youth share of population (%),Rulindo,District,Northern Province,Rural,Male,26.5
+Youth share of population (%),Rulindo,District,Northern Province,Rural,Female,25.0
+Youth share of population (%),Gakenke,District,Northern Province,Rwanda,Both sexes,26.0
+Youth share of population (%),Gakenke,District,Northern Province,Rwanda,Male,26.5
+Youth share of population (%),Gakenke,District,Northern Province,Rwanda,Female,25.6
+Youth share of population (%),Gakenke,District,Northern Province,Urban,Both sexes,29.1
+Youth share of population (%),Gakenke,District,Northern Province,Urban,Male,28.7
+Youth share of population (%),Gakenke,District,Northern Province,Urban,Female,29.5
+Youth share of population (%),Gakenke,District,Northern Province,Rural,Both sexes,25.9
+Youth share of population (%),Gakenke,District,Northern Province,Rural,Male,26.4
+Youth share of population (%),Gakenke,District,Northern Province,Rural,Female,25.4
+Youth share of population (%),Musanze,District,Northern Province,Rwanda,Both sexes,29.3
+Youth share of population (%),Musanze,District,Northern Province,Rwanda,Male,29.6
+Youth share of population (%),Musanze,District,Northern Province,Rwanda,Female,29.0
+Youth share of population (%),Musanze,District,Northern Province,Urban,Both sexes,31.3
+Youth share of population (%),Musanze,District,Northern Province,Urban,Male,31.0
+Youth share of population (%),Musanze,District,Northern Province,Urban,Female,31.7
+Youth share of population (%),Musanze,District,Northern Province,Rural,Both sexes,27.3
+Youth share of population (%),Musanze,District,Northern Province,Rural,Male,28.2
+Youth share of population (%),Musanze,District,Northern Province,Rural,Female,26.5
+Youth share of population (%),Burera,District,Northern Province,Rwanda,Both sexes,29.1
+Youth share of population (%),Burera,District,Northern Province,Rwanda,Male,29.7
+Youth share of population (%),Burera,District,Northern Province,Rwanda,Female,28.5
+Youth share of population (%),Burera,District,Northern Province,Urban,Both sexes,30.1
+Youth share of population (%),Burera,District,Northern Province,Urban,Male,30.7
+Youth share of population (%),Burera,District,Northern Province,Urban,Female,29.7
+Youth share of population (%),Burera,District,Northern Province,Rural,Both sexes,29.0
+Youth share of population (%),Burera,District,Northern Province,Rural,Male,29.6
+Youth share of population (%),Burera,District,Northern Province,Rural,Female,28.3
+Youth share of population (%),Gicumbi,District,Northern Province,Rwanda,Both sexes,27.7
+Youth share of population (%),Gicumbi,District,Northern Province,Rwanda,Male,28.2
+Youth share of population (%),Gicumbi,District,Northern Province,Rwanda,Female,27.2
+Youth share of population (%),Gicumbi,District,Northern Province,Urban,Both sexes,30.4
+Youth share of population (%),Gicumbi,District,Northern Province,Urban,Male,29.8
+Youth share of population (%),Gicumbi,District,Northern Province,Urban,Female,30.9
+Youth share of population (%),Gicumbi,District,Northern Province,Rural,Both sexes,27.5
+Youth share of population (%),Gicumbi,District,Northern Province,Rural,Male,28.1
+Youth share of population (%),Gicumbi,District,Northern Province,Rural,Female,26.9
+Youth share of population (%),Eastern Province,Province,Eastern Province,Rwanda,Both sexes,26.4
+Youth share of population (%),Eastern Province,Province,Eastern Province,Rwanda,Male,26.8
+Youth share of population (%),Eastern Province,Province,Eastern Province,Rwanda,Female,26.1
+Youth share of population (%),Eastern Province,Province,Eastern Province,Urban,Both sexes,29.4
+Youth share of population (%),Eastern Province,Province,Eastern Province,Urban,Male,29.3
+Youth share of population (%),Eastern Province,Province,Eastern Province,Urban,Female,29.5
+Youth share of population (%),Eastern Province,Province,Eastern Province,Rural,Both sexes,25.7
+Youth share of population (%),Eastern Province,Province,Eastern Province,Rural,Male,26.1
+Youth share of population (%),Eastern Province,Province,Eastern Province,Rural,Female,25.3
+Youth share of population (%),Rwamagana,District,Eastern Province,Rwanda,Both sexes,27.0
+Youth share of population (%),Rwamagana,District,Eastern Province,Rwanda,Male,27.6
+Youth share of population (%),Rwamagana,District,Eastern Province,Rwanda,Female,26.3
+Youth share of population (%),Rwamagana,District,Eastern Province,Urban,Both sexes,30.7
+Youth share of population (%),Rwamagana,District,Eastern Province,Urban,Male,31.1
+Youth share of population (%),Rwamagana,District,Eastern Province,Urban,Female,30.4
+Youth share of population (%),Rwamagana,District,Eastern Province,Rural,Both sexes,24.7
+Youth share of population (%),Rwamagana,District,Eastern Province,Rural,Male,25.3
+Youth share of population (%),Rwamagana,District,Eastern Province,Rural,Female,24.2
+Youth share of population (%),Nyagatare,District,Eastern Province,Rwanda,Both sexes,27.2
+Youth share of population (%),Nyagatare,District,Eastern Province,Rwanda,Male,27.6
+Youth share of population (%),Nyagatare,District,Eastern Province,Rwanda,Female,26.9
+Youth share of population (%),Nyagatare,District,Eastern Province,Urban,Both sexes,28.4
+Youth share of population (%),Nyagatare,District,Eastern Province,Urban,Male,28.6
+Youth share of population (%),Nyagatare,District,Eastern Province,Urban,Female,28.2
+Youth share of population (%),Nyagatare,District,Eastern Province,Rural,Both sexes,26.8
+Youth share of population (%),Nyagatare,District,Eastern Province,Rural,Male,27.2
+Youth share of population (%),Nyagatare,District,Eastern Province,Rural,Female,26.5
+Youth share of population (%),Gatsibo,District,Eastern Province,Rwanda,Both sexes,26.4
+Youth share of population (%),Gatsibo,District,Eastern Province,Rwanda,Male,26.9
+Youth share of population (%),Gatsibo,District,Eastern Province,Rwanda,Female,25.9
+Youth share of population (%),Gatsibo,District,Eastern Province,Urban,Both sexes,29.1
+Youth share of population (%),Gatsibo,District,Eastern Province,Urban,Male,29.0
+Youth share of population (%),Gatsibo,District,Eastern Province,Urban,Female,29.1
+Youth share of population (%),Gatsibo,District,Eastern Province,Rural,Both sexes,26.1
+Youth share of population (%),Gatsibo,District,Eastern Province,Rural,Male,26.7
+Youth share of population (%),Gatsibo,District,Eastern Province,Rural,Female,25.5
+Youth share of population (%),Kayonza,District,Eastern Province,Rwanda,Both sexes,26.4
+Youth share of population (%),Kayonza,District,Eastern Province,Rwanda,Male,26.7
+Youth share of population (%),Kayonza,District,Eastern Province,Rwanda,Female,26.1
+Youth share of population (%),Kayonza,District,Eastern Province,Urban,Both sexes,29.8
+Youth share of population (%),Kayonza,District,Eastern Province,Urban,Male,29.0
+Youth share of population (%),Kayonza,District,Eastern Province,Urban,Female,30.6
+Youth share of population (%),Kayonza,District,Eastern Province,Rural,Both sexes,25.8
+Youth share of population (%),Kayonza,District,Eastern Province,Rural,Male,26.3
+Youth share of population (%),Kayonza,District,Eastern Province,Rural,Female,25.4
+Youth share of population (%),Kirehe,District,Eastern Province,Rwanda,Both sexes,26.7
+Youth share of population (%),Kirehe,District,Eastern Province,Rwanda,Male,27.0
+Youth share of population (%),Kirehe,District,Eastern Province,Rwanda,Female,26.5
+Youth share of population (%),Kirehe,District,Eastern Province,Urban,Both sexes,29.3
+Youth share of population (%),Kirehe,District,Eastern Province,Urban,Male,29.1
+Youth share of population (%),Kirehe,District,Eastern Province,Urban,Female,29.5
+Youth share of population (%),Kirehe,District,Eastern Province,Rural,Both sexes,26.5
+Youth share of population (%),Kirehe,District,Eastern Province,Rural,Male,26.8
+Youth share of population (%),Kirehe,District,Eastern Province,Rural,Female,26.3
+Youth share of population (%),Ngoma,District,Eastern Province,Rwanda,Both sexes,24.7
+Youth share of population (%),Ngoma,District,Eastern Province,Rwanda,Male,24.9
+Youth share of population (%),Ngoma,District,Eastern Province,Rwanda,Female,24.5
+Youth share of population (%),Ngoma,District,Eastern Province,Urban,Both sexes,27.4
+Youth share of population (%),Ngoma,District,Eastern Province,Urban,Male,26.8
+Youth share of population (%),Ngoma,District,Eastern Province,Urban,Female,28.0
+Youth share of population (%),Ngoma,District,Eastern Province,Rural,Both sexes,24.4
+Youth share of population (%),Ngoma,District,Eastern Province,Rural,Male,24.7
+Youth share of population (%),Ngoma,District,Eastern Province,Rural,Female,24.1
+Youth share of population (%),Bugesera,District,Eastern Province,Rwanda,Both sexes,26.3
+Youth share of population (%),Bugesera,District,Eastern Province,Rwanda,Male,26.4
+Youth share of population (%),Bugesera,District,Eastern Province,Rwanda,Female,26.2
+Youth share of population (%),Bugesera,District,Eastern Province,Urban,Both sexes,29.3
+Youth share of population (%),Bugesera,District,Eastern Province,Urban,Male,28.8
+Youth share of population (%),Bugesera,District,Eastern Province,Urban,Female,29.8
+Youth share of population (%),Bugesera,District,Eastern Province,Rural,Both sexes,24.2
+Youth share of population (%),Bugesera,District,Eastern Province,Rural,Male,24.7
+Youth share of population (%),Bugesera,District,Eastern Province,Rural,Female,23.8

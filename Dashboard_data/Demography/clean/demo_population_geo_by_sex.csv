@@ -1,0 +1,71 @@
+geo,geo_type,province,sex,value
+City of Kigali,Province,City of Kigali,Male,888882.0
+City of Kigali,Province,City of Kigali,Female,856673.0
+Nyarugenge,District,City of Kigali,Male,195780.0
+Nyarugenge,District,City of Kigali,Female,178539.0
+Gasabo,District,City of Kigali,Male,443987.0
+Gasabo,District,City of Kigali,Female,435518.0
+Kicukiro,District,City of Kigali,Male,249115.0
+Kicukiro,District,City of Kigali,Female,242616.0
+Southern Province,Province,Southern Province,Male,1448455.0
+Southern Province,Province,Southern Province,Female,1554244.0
+Nyanza,District,Southern Province,Male,178645.0
+Nyanza,District,Southern Province,Female,187073.0
+Gisagara,District,Southern Province,Male,188965.0
+Gisagara,District,Southern Province,Female,208086.0
+Nyaruguru,District,Southern Province,Male,151980.0
+Nyaruguru,District,Southern Province,Female,166146.0
+Huye,District,Southern Province,Male,188859.0
+Huye,District,Southern Province,Female,193041.0
+Nyamagabe,District,Southern Province,Male,176725.0
+Nyamagabe,District,Southern Province,Female,194776.0
+Ruhango,District,Southern Province,Male,172096.0
+Ruhango,District,Southern Province,Female,187025.0
+Muhanga,District,Southern Province,Male,173615.0
+Muhanga,District,Southern Province,Female,184818.0
+Kamonyi,District,Southern Province,Male,217570.0
+Kamonyi,District,Southern Province,Female,233279.0
+Western Province,Province,Western Province,Male,1384635.0
+Western Province,Province,Western Province,Female,1511849.0
+Karongi,District,Western Province,Male,178417.0
+Karongi,District,Western Province,Female,195452.0
+Rutsiro,District,Western Province,Male,176498.0
+Rutsiro,District,Western Province,Female,192682.0
+Rubavu,District,Western Province,Male,267299.0
+Rubavu,District,Western Province,Female,279384.0
+Nyabihu,District,Western Province,Male,150072.0
+Nyabihu,District,Western Province,Female,168975.0
+Ngororero,District,Western Province,Male,171065.0
+Ngororero,District,Western Province,Female,196890.0
+Rusizi,District,Western Province,Male,236426.0
+Rusizi,District,Western Province,Female,249103.0
+Nyamasheke,District,Western Province,Male,204858.0
+Nyamasheke,District,Western Province,Female,229363.0
+Northern Province,Province,Northern Province,Male,972960.0
+Northern Province,Province,Northern Province,Female,1065551.0
+Rulindo,District,Northern Province,Male,171849.0
+Rulindo,District,Northern Province,Female,188295.0
+Gakenke,District,Northern Province,Male,172600.0
+Gakenke,District,Northern Province,Female,192692.0
+Musanze,District,Northern Province,Male,227340.0
+Musanze,District,Northern Province,Female,249182.0
+Burera,District,Northern Province,Male,184782.0
+Burera,District,Northern Province,Female,202947.0
+Gicumbi,District,Northern Province,Male,216389.0
+Gicumbi,District,Northern Province,Female,232435.0
+Eastern Province,Province,Eastern Province,Male,1734394.0
+Eastern Province,Province,Eastern Province,Female,1828751.0
+Rwamagana,District,Eastern Province,Male,243794.0
+Rwamagana,District,Eastern Province,Female,241159.0
+Nyagatare,District,Eastern Province,Male,318740.0
+Nyagatare,District,Eastern Province,Female,335121.0
+Gatsibo,District,Eastern Province,Male,264461.0
+Gatsibo,District,Eastern Province,Female,286703.0
+Kayonza,District,Eastern Province,Male,221448.0
+Kayonza,District,Eastern Province,Female,235708.0
+Kirehe,District,Eastern Province,Male,221763.0
+Kirehe,District,Eastern Province,Female,239097.0
+Ngoma,District,Eastern Province,Male,192720.0
+Ngoma,District,Eastern Province,Female,211328.0
+Bugesera,District,Eastern Province,Male,271468.0
+Bugesera,District,Eastern Province,Female,279635.0

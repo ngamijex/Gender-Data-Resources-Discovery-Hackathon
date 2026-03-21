@@ -1,0 +1,211 @@
+geo,geo_type,province,residence,sex,value
+City of Kigali,Province,City of Kigali,Rwanda,Male,2.7
+City of Kigali,Province,City of Kigali,Rwanda,Female,3.6
+City of Kigali,Province,City of Kigali,Urban,Male,2.4
+City of Kigali,Province,City of Kigali,Urban,Female,3.1
+City of Kigali,Province,City of Kigali,Rural,Male,4.8
+City of Kigali,Province,City of Kigali,Rural,Female,6.7
+Nyarugenge,District,City of Kigali,Rwanda,Male,3.0
+Nyarugenge,District,City of Kigali,Rwanda,Female,3.8
+Nyarugenge,District,City of Kigali,Urban,Male,2.6
+Nyarugenge,District,City of Kigali,Urban,Female,3.4
+Nyarugenge,District,City of Kigali,Rural,Male,4.7
+Nyarugenge,District,City of Kigali,Rural,Female,6.1
+Gasabo,District,City of Kigali,Rwanda,Male,2.7
+Gasabo,District,City of Kigali,Rwanda,Female,3.7
+Gasabo,District,City of Kigali,Urban,Male,2.2
+Gasabo,District,City of Kigali,Urban,Female,2.9
+Gasabo,District,City of Kigali,Rural,Male,4.8
+Gasabo,District,City of Kigali,Rural,Female,6.9
+Kicukiro,District,City of Kigali,Rwanda,Male,2.5
+Kicukiro,District,City of Kigali,Rwanda,Female,3.3
+Kicukiro,District,City of Kigali,Urban,Male,2.5
+Kicukiro,District,City of Kigali,Urban,Female,3.3
+Kicukiro,District,City of Kigali,Rural,Male,6.5
+Kicukiro,District,City of Kigali,Rural,Female,7.0
+Southern Province,Province,Southern Province,Rwanda,Male,6.9
+Southern Province,Province,Southern Province,Rwanda,Female,9.3
+Southern Province,Province,Southern Province,Urban,Male,5.7
+Southern Province,Province,Southern Province,Urban,Female,6.6
+Southern Province,Province,Southern Province,Rural,Male,7.1
+Southern Province,Province,Southern Province,Rural,Female,9.7
+Nyanza,District,Southern Province,Rwanda,Male,7.3
+Nyanza,District,Southern Province,Rwanda,Female,9.1
+Nyanza,District,Southern Province,Urban,Male,4.5
+Nyanza,District,Southern Province,Urban,Female,7.3
+Nyanza,District,Southern Province,Rural,Male,7.6
+Nyanza,District,Southern Province,Rural,Female,9.3
+Gisagara,District,Southern Province,Rwanda,Male,5.9
+Gisagara,District,Southern Province,Rwanda,Female,9.1
+Gisagara,District,Southern Province,Urban,Male,5.5
+Gisagara,District,Southern Province,Urban,Female,9.3
+Gisagara,District,Southern Province,Rural,Male,5.9
+Gisagara,District,Southern Province,Rural,Female,9.1
+Nyaruguru,District,Southern Province,Rwanda,Male,7.0
+Nyaruguru,District,Southern Province,Rwanda,Female,9.3
+Nyaruguru,District,Southern Province,Urban,Male,5.5
+Nyaruguru,District,Southern Province,Urban,Female,7.1
+Nyaruguru,District,Southern Province,Rural,Male,7.0
+Nyaruguru,District,Southern Province,Rural,Female,9.4
+Huye,District,Southern Province,Rwanda,Male,7.4
+Huye,District,Southern Province,Rwanda,Female,9.7
+Huye,District,Southern Province,Urban,Male,9.6
+Huye,District,Southern Province,Urban,Female,6.1
+Huye,District,Southern Province,Rural,Male,6.7
+Huye,District,Southern Province,Rural,Female,10.4
+Nyamagabe,District,Southern Province,Rwanda,Male,7.2
+Nyamagabe,District,Southern Province,Rwanda,Female,9.5
+Nyamagabe,District,Southern Province,Urban,Male,6.0
+Nyamagabe,District,Southern Province,Urban,Female,8.8
+Nyamagabe,District,Southern Province,Rural,Male,7.4
+Nyamagabe,District,Southern Province,Rural,Female,9.6
+Ruhango,District,Southern Province,Rwanda,Male,6.9
+Ruhango,District,Southern Province,Rwanda,Female,9.8
+Ruhango,District,Southern Province,Urban,Male,5.3
+Ruhango,District,Southern Province,Urban,Female,7.6
+Ruhango,District,Southern Province,Rural,Male,7.1
+Ruhango,District,Southern Province,Rural,Female,10.1
+Muhanga,District,Southern Province,Rwanda,Male,7.4
+Muhanga,District,Southern Province,Rwanda,Female,9.4
+Muhanga,District,Southern Province,Urban,Male,4.5
+Muhanga,District,Southern Province,Urban,Female,5.4
+Muhanga,District,Southern Province,Rural,Male,8.4
+Muhanga,District,Southern Province,Rural,Female,10.6
+Kamonyi,District,Southern Province,Rwanda,Male,6.1
+Kamonyi,District,Southern Province,Rwanda,Female,8.4
+Kamonyi,District,Southern Province,Urban,Male,4.1
+Kamonyi,District,Southern Province,Urban,Female,6.0
+Kamonyi,District,Southern Province,Rural,Male,7.1
+Kamonyi,District,Southern Province,Rural,Female,9.5
+Western Province,Province,Western Province,Rwanda,Male,5.9
+Western Province,Province,Western Province,Rwanda,Female,7.8
+Western Province,Province,Western Province,Urban,Male,4.2
+Western Province,Province,Western Province,Urban,Female,5.7
+Western Province,Province,Western Province,Rural,Male,6.3
+Western Province,Province,Western Province,Rural,Female,8.4
+Karongi,District,Western Province,Rwanda,Male,6.6
+Karongi,District,Western Province,Rwanda,Female,9.1
+Karongi,District,Western Province,Urban,Male,3.6
+Karongi,District,Western Province,Urban,Female,5.6
+Karongi,District,Western Province,Rural,Male,7.0
+Karongi,District,Western Province,Rural,Female,9.4
+Rutsiro,District,Western Province,Rwanda,Male,5.9
+Rutsiro,District,Western Province,Rwanda,Female,7.9
+Rutsiro,District,Western Province,Urban,Male,5.9
+Rutsiro,District,Western Province,Urban,Female,7.5
+Rutsiro,District,Western Province,Rural,Male,5.9
+Rutsiro,District,Western Province,Rural,Female,7.9
+Rubavu,District,Western Province,Rwanda,Male,4.1
+Rubavu,District,Western Province,Rwanda,Female,5.5
+Rubavu,District,Western Province,Urban,Male,3.4
+Rubavu,District,Western Province,Urban,Female,4.9
+Rubavu,District,Western Province,Rural,Male,4.9
+Rubavu,District,Western Province,Rural,Female,6.3
+Nyabihu,District,Western Province,Rwanda,Male,4.9
+Nyabihu,District,Western Province,Rwanda,Female,7.5
+Nyabihu,District,Western Province,Urban,Male,4.4
+Nyabihu,District,Western Province,Urban,Female,6.6
+Nyabihu,District,Western Province,Rural,Male,5.1
+Nyabihu,District,Western Province,Rural,Female,7.7
+Ngororero,District,Western Province,Rwanda,Male,6.0
+Ngororero,District,Western Province,Rwanda,Female,8.3
+Ngororero,District,Western Province,Urban,Male,4.1
+Ngororero,District,Western Province,Urban,Female,6.1
+Ngororero,District,Western Province,Rural,Male,6.1
+Ngororero,District,Western Province,Rural,Female,8.4
+Rusizi,District,Western Province,Rwanda,Male,6.6
+Rusizi,District,Western Province,Rwanda,Female,8.1
+Rusizi,District,Western Province,Urban,Male,5.4
+Rusizi,District,Western Province,Urban,Female,6.1
+Rusizi,District,Western Province,Rural,Male,7.3
+Rusizi,District,Western Province,Rural,Female,9.1
+Nyamasheke,District,Western Province,Rwanda,Male,7.2
+Nyamasheke,District,Western Province,Rwanda,Female,9.0
+Nyamasheke,District,Western Province,Urban,Male,5.2
+Nyamasheke,District,Western Province,Urban,Female,6.9
+Nyamasheke,District,Western Province,Rural,Male,7.4
+Nyamasheke,District,Western Province,Rural,Female,9.1
+Northern Province,Province,Northern Province,Rwanda,Male,6.2
+Northern Province,Province,Northern Province,Rwanda,Female,8.3
+Northern Province,Province,Northern Province,Urban,Male,4.0
+Northern Province,Province,Northern Province,Urban,Female,5.9
+Northern Province,Province,Northern Province,Rural,Male,6.7
+Northern Province,Province,Northern Province,Rural,Female,8.8
+Rulindo,District,Northern Province,Rwanda,Male,6.6
+Rulindo,District,Northern Province,Rwanda,Female,8.5
+Rulindo,District,Northern Province,Urban,Male,3.3
+Rulindo,District,Northern Province,Urban,Female,4.6
+Rulindo,District,Northern Province,Rural,Male,6.9
+Rulindo,District,Northern Province,Rural,Female,8.9
+Gakenke,District,Northern Province,Rwanda,Male,7.6
+Gakenke,District,Northern Province,Rwanda,Female,9.4
+Gakenke,District,Northern Province,Urban,Male,5.6
+Gakenke,District,Northern Province,Urban,Female,6.8
+Gakenke,District,Northern Province,Rural,Male,7.7
+Gakenke,District,Northern Province,Rural,Female,9.5
+Musanze,District,Northern Province,Rwanda,Male,4.8
+Musanze,District,Northern Province,Rwanda,Female,7.3
+Musanze,District,Northern Province,Urban,Male,3.7
+Musanze,District,Northern Province,Urban,Female,5.7
+Musanze,District,Northern Province,Rural,Male,5.8
+Musanze,District,Northern Province,Rural,Female,8.7
+Burera,District,Northern Province,Rwanda,Male,5.7
+Burera,District,Northern Province,Rwanda,Female,8.3
+Burera,District,Northern Province,Urban,Male,5.3
+Burera,District,Northern Province,Urban,Female,7.7
+Burera,District,Northern Province,Rural,Male,5.7
+Burera,District,Northern Province,Rural,Female,8.4
+Gicumbi,District,Northern Province,Rwanda,Male,6.7
+Gicumbi,District,Northern Province,Rwanda,Female,8.5
+Gicumbi,District,Northern Province,Urban,Male,4.2
+Gicumbi,District,Northern Province,Urban,Female,5.8
+Gicumbi,District,Northern Province,Rural,Male,6.8
+Gicumbi,District,Northern Province,Rural,Female,8.7
+Eastern Province,Province,Eastern Province,Rwanda,Male,5.3
+Eastern Province,Province,Eastern Province,Rwanda,Female,6.8
+Eastern Province,Province,Eastern Province,Urban,Male,4.3
+Eastern Province,Province,Eastern Province,Urban,Female,5.3
+Eastern Province,Province,Eastern Province,Rural,Male,5.5
+Eastern Province,Province,Eastern Province,Rural,Female,7.2
+Rwamagana,District,Eastern Province,Rwanda,Male,5.0
+Rwamagana,District,Eastern Province,Rwanda,Female,6.7
+Rwamagana,District,Eastern Province,Urban,Male,4.5
+Rwamagana,District,Eastern Province,Urban,Female,4.8
+Rwamagana,District,Eastern Province,Rural,Male,5.3
+Rwamagana,District,Eastern Province,Rural,Female,7.7
+Nyagatare,District,Eastern Province,Rwanda,Male,5.1
+Nyagatare,District,Eastern Province,Rwanda,Female,6.1
+Nyagatare,District,Eastern Province,Urban,Male,4.1
+Nyagatare,District,Eastern Province,Urban,Female,5.3
+Nyagatare,District,Eastern Province,Rural,Male,5.4
+Nyagatare,District,Eastern Province,Rural,Female,6.3
+Gatsibo,District,Eastern Province,Rwanda,Male,5.5
+Gatsibo,District,Eastern Province,Rwanda,Female,7.3
+Gatsibo,District,Eastern Province,Urban,Male,4.0
+Gatsibo,District,Eastern Province,Urban,Female,5.7
+Gatsibo,District,Eastern Province,Rural,Male,5.7
+Gatsibo,District,Eastern Province,Rural,Female,7.5
+Kayonza,District,Eastern Province,Rwanda,Male,5.3
+Kayonza,District,Eastern Province,Rwanda,Female,6.8
+Kayonza,District,Eastern Province,Urban,Male,3.6
+Kayonza,District,Eastern Province,Urban,Female,5.5
+Kayonza,District,Eastern Province,Rural,Male,5.6
+Kayonza,District,Eastern Province,Rural,Female,7.0
+Kirehe,District,Eastern Province,Rwanda,Male,5.6
+Kirehe,District,Eastern Province,Rwanda,Female,7.1
+Kirehe,District,Eastern Province,Urban,Male,4.8
+Kirehe,District,Eastern Province,Urban,Female,6.1
+Kirehe,District,Eastern Province,Rural,Male,5.7
+Kirehe,District,Eastern Province,Rural,Female,7.1
+Ngoma,District,Eastern Province,Rwanda,Male,6.0
+Ngoma,District,Eastern Province,Rwanda,Female,7.9
+Ngoma,District,Eastern Province,Urban,Male,5.3
+Ngoma,District,Eastern Province,Urban,Female,7.0
+Ngoma,District,Eastern Province,Rural,Male,6.1
+Ngoma,District,Eastern Province,Rural,Female,7.9
+Bugesera,District,Eastern Province,Rwanda,Male,4.8
+Bugesera,District,Eastern Province,Rwanda,Female,6.3
+Bugesera,District,Eastern Province,Urban,Male,4.4
+Bugesera,District,Eastern Province,Urban,Female,5.1
+Bugesera,District,Eastern Province,Rural,Male,5.0
+Bugesera,District,Eastern Province,Rural,Female,7.2

@@ -1535,10 +1535,11 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   align-items     : center;
   flex-wrap       : wrap;
   gap             : var(--space-2);
+  row-gap         : var(--space-2);
   margin-top      : var(--space-6);
   transition      : opacity 0.3s, max-height 0.38s;
   overflow        : hidden;
-  max-height      : 80px;
+  max-height      : 160px;
 }
 
 .sep-page--active .sep-quick-wrap {
@@ -3203,4 +3204,792 @@ mark.sep-hl {
   .hero         { padding: var(--space-12) var(--space-6); }
   .home-sec     { padding: var(--space-10) var(--space-6); }
   .dash-page    { padding: var(--space-8) var(--space-6); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   VISUALIZATION CENTER — Word Cloud + Full-Screen Sector Panel
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Outer page wrapper ─────────────────────────────────────────────────────── */
+.vizc-page {
+  min-height    : 100vh;
+    background    : #fff;
+}
+
+/* ── Hero / cloud section ───────────────────────────────────────────────────── */
+.vizc-hero {
+  background    : #fff;
+  padding       : var(--space-14) var(--space-8) var(--space-10);
+  text-align    : center;
+  border-bottom : 2px solid #F5F5F5;
+}
+.vizc-hero__top {
+  margin-bottom : var(--space-8);
+}
+.vizc-hero .sec-eyebrow {
+  color         : var(--color-text-muted);
+  font-size     : var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  font-weight   : var(--weight-semibold);
+  margin-bottom : var(--space-3);
+}
+.vizc-hero__title {
+  font-family   : var(--font-display);
+  font-size     : clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight   : var(--weight-extrabold);
+  color         : #111;
+  line-height   : 1.15;
+  margin        : 0 0 var(--space-3);
+  letter-spacing: var(--tracking-tight);
+}
+.vizc-hero__sub {
+  font-size     : var(--text-sm);
+  color         : #777;
+  max-width     : 520px;
+  margin        : 0 auto;
+  line-height   : 1.65;
+}
+
+/* ── Word cloud ─────────────────────────────────────────────────────────────── */
+.vizc-cloud {
+  max-width      : 860px;
+  margin         : 0 auto var(--space-6);
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  gap            : 0.6rem 0;
+}
+.vizc-row {
+  display        : flex;
+  flex-wrap      : wrap;
+  align-items    : center;
+  justify-content: center;
+  gap            : 0.3rem 1.2rem;
+}
+.vizc-row--center {
+  gap            : 0.3rem 1.6rem;
+  margin         : 0.4rem 0;
+}
+
+/* ── Individual word ────────────────────────────────────────────────────────── */
+.vizc-word {
+  font-family    : var(--font-display);
+  font-weight    : var(--weight-bold);
+  line-height    : 1.1;
+  user-select    : none;
+  cursor         : default;
+  padding        : 0.1em 0.05em;
+  transition     : color 0.18s, transform 0.18s, opacity 0.18s;
+}
+
+/* Sizes — S1 (tiny) to S7 (giant) */
+.vizc-word--s1 { font-size: 0.72rem;  font-weight: var(--weight-medium); }
+.vizc-word--s2 { font-size: 0.90rem;  }
+.vizc-word--s3 { font-size: 1.15rem;  }
+.vizc-word--s4 { font-size: 1.45rem;  }
+.vizc-word--s5 { font-size: 1.80rem;  }
+.vizc-word--s6 { font-size: 2.40rem;  }
+.vizc-word--s7 { font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: var(--weight-extrabold); }
+
+/* Colors */
+.vizc-word--dark { color: #111; }
+.vizc-word--red  { color: var(--color-primary-500); }
+.vizc-word--gray { color: #AAAAAA; }
+
+/* Vertical (rotated) words — like "graphics", "website" in the reference */
+.vizc-word--vert {
+  writing-mode   : vertical-rl;
+  transform      : rotate(180deg);
+  align-self     : center;
+  margin         : 0 0.3rem;
+}
+
+/* The dominant "Financial Inclusion" hero word */
+.vizc-word--main {
+  color          : #111 !important;
+  letter-spacing : -0.02em;
+  position       : relative;
+}
+.vizc-word--main::after {
+  content        : "";
+  position       : absolute;
+  bottom         : 2px;
+  left           : 0; right: 0;
+  height         : 5px;
+  background     : var(--color-primary-500);
+  border-radius  : 3px;
+  opacity        : 0;
+  transform      : scaleX(0);
+  transition     : transform 0.25s, opacity 0.25s;
+  transform-origin: left;
+}
+
+/* Live (clickable) words */
+.vizc-word--live {
+  cursor         : pointer;
+}
+.vizc-word--live:hover {
+  color          : var(--color-primary-500) !important;
+  transform      : scale(1.06);
+}
+.vizc-word--live:hover::after,
+.vizc-word--live.vizc-word--active::after {
+  opacity        : 1;
+  transform      : scaleX(1);
+}
+.vizc-word--live.vizc-word--active {
+  color          : var(--color-primary-500) !important;
+}
+
+/* Coming soon — muted, not clickable */
+.vizc-word--soon {
+  opacity        : 0.42;
+  pointer-events : none;
+  cursor         : default;
+}
+
+/* Hint text below cloud */
+.vizc-cloud__hint {
+  font-size      : var(--text-xs);
+  color          : #999;
+  margin         : var(--space-4) 0 0;
+  letter-spacing : 0.01em;
+}
+.vizc-cloud__hint strong {
+  color          : #333;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   FULL-SCREEN SECTOR PANEL
+   ══════════════════════════════════════════════════════════════════════════════ */
+body.panel-open {
+  overflow       : hidden;
+}
+
+/* Backdrop */
+.vizc-panel__backdrop {
+  position       : fixed;
+  inset          : 0;
+  background     : rgba(0,0,0,.45);
+  z-index        : 9000;
+  opacity        : 0;
+  transition     : opacity 0.35s;
+  pointer-events : none;
+}
+
+/* Full-page navigation panel */
+.vizc-panel {
+  position       : fixed;
+  inset          : 0;
+  z-index        : 9001;
+  pointer-events : none;
+}
+.vizc-panel.is-open {
+  pointer-events : auto;
+}
+
+/* Backdrop hidden — this IS the page, no overlay needed */
+.vizc-panel__backdrop {
+  display        : none !important;
+}
+
+/* Page content — slides in from the right */
+.vizc-panel__content {
+  position       : absolute;
+  inset          : 0;
+  background     : #F4F6F9;
+  border-radius  : 0;
+  overflow       : hidden;
+  display        : flex;
+  flex-direction : column;
+  transform      : translateX(100%);
+  transition     : transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow     : none;
+  pointer-events : auto;
+}
+.vizc-panel.is-open .vizc-panel__content {
+  transform      : translateX(0);
+}
+
+/* Panel top bar */
+/* Page top bar — looks like a real browser page header */
+.vizc-panel__bar {
+  flex-shrink    : 0;
+  z-index        : 10;
+  display        : flex;
+  align-items    : center;
+  gap            : var(--space-4);
+  padding        : 10px 20px;
+  background     : #fff;
+  border-bottom  : 1px solid #E9ECF0;
+  box-shadow     : 0 1px 6px rgba(0,0,0,.06);
+}
+.vizc-panel__bar-left {
+  display        : flex;
+  align-items    : center;
+  gap            : var(--space-3);
+  flex           : 1;
+  min-width      : 0;
+}
+.vizc-panel__sector-badge {
+  display        : inline-flex;
+  align-items    : center;
+  gap            : 5px;
+  background     : #FEF2F0;
+  color          : var(--color-primary-500);
+  border         : 1px solid #FECACA;
+  border-radius  : 20px;
+  padding        : 3px 12px;
+  font-size      : var(--text-xs);
+  font-weight    : var(--weight-semibold);
+  font-family    : var(--font-ui);
+  letter-spacing : 0.02em;
+  white-space    : nowrap;
+}
+.vizc-panel__bar-title {
+  font-family    : var(--font-ui);
+  font-size      : var(--text-sm);
+  font-weight    : var(--weight-semibold);
+  color          : var(--color-text-heading);
+  opacity        : .65;
+  overflow       : hidden;
+  text-overflow  : ellipsis;
+  white-space    : nowrap;
+}
+
+/* ← Back button (replaces the old × close button) */
+.vizc-panel__close {
+  display        : flex;
+  align-items    : center;
+  gap            : 7px;
+  padding        : 7px 16px;
+  border-radius  : 8px;
+  border         : 1px solid #E5E7EB;
+  background     : #fff;
+  color          : #444;
+  font-size      : 13px;
+  font-weight    : 600;
+  font-family    : var(--font-ui);
+  cursor         : pointer;
+  flex-shrink    : 0;
+  transition     : background .18s, border-color .18s, color .18s;
+  order          : -1;              /* always first in the bar */
+}
+.vizc-panel__close:hover {
+  background     : #F3F4F6;
+  border-color   : #D1D5DB;
+  color          : #111;
+  transform      : none;            /* cancel the old rotate effect */
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   FINANCIAL INCLUSION DASHBOARD
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ━━━ Outer container: flex ROW — sidebar | main ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.fi-dash {
+  flex           : 1;
+  display        : flex;
+  flex-direction : row;
+  overflow       : hidden;
+  min-height     : 0;
+}
+
+/* ━━━ LEFT SIDEBAR — tabs only, no content ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.fi-sb {
+  width          : 190px;
+  min-width      : 190px;
+  background     : #FAFAFA;
+  border-right   : 1px solid #E9ECF0;
+  overflow-y     : auto;
+  display        : flex;
+  flex-direction : column;
+  flex-shrink    : 0;
+}
+.fi-sb__tabnav {
+  padding        : 14px 8px 10px;
+  display        : flex;
+  flex-direction : column;
+  gap            : 3px;
+}
+.fi-sb__tabtn {
+  display        : flex;
+  align-items    : center;
+  gap            : 9px;
+  width          : 100%;
+  font-size      : 13px;
+  font-weight    : 500;
+  color          : #6B7280;
+  background     : none;
+  border         : none;
+  border-radius  : 8px;
+  padding        : 10px 13px;
+  cursor         : pointer;
+  text-align     : left;
+  transition     : background .15s, color .15s;
+  white-space    : nowrap;
+  line-height    : 1.3;
+}
+.fi-sb__tabtn:hover         { background: #F0F2F5; color: var(--color-text-heading); }
+.fi-sb__tabtn--active       { background: #EEF2FF; color: var(--color-primary-500); font-weight: 700; }
+.fi-sb__tabtn .fa-fw        { font-size: 0.82em; opacity: 0.7; }
+.fi-sb__tabtn--active .fa-fw { opacity: 1; }
+
+/* Governance sidebar buttons */
+.gov-sb__tabtn {
+  display        : flex;
+  align-items    : center;
+  gap            : 9px;
+  width          : 100%;
+  font-size      : 13px;
+  font-weight    : 500;
+  color          : #6B7280;
+  background     : none;
+  border         : none;
+  border-radius  : 8px;
+  padding        : 10px 13px;
+  cursor         : pointer;
+  text-align     : left;
+  transition     : background .15s, color .15s;
+  white-space    : nowrap;
+  line-height    : 1.3;
+}
+.gov-sb__tabtn:hover          { background: #F0F2F5; color: var(--color-text-heading); }
+.gov-sb__tabtn--active      { background: #EEF2FF; color: var(--color-primary-500); font-weight: 700; }
+.gov-sb__tabtn .fa-fw        { font-size: 0.82em; opacity: 0.7; }
+.gov-sb__tabtn--active .fa-fw { opacity: 1; }
+
+/* Demography sidebar buttons */
+.demo-sb__tabtn {
+  display        : flex;
+  align-items    : center;
+  gap            : 9px;
+  width          : 100%;
+  font-size      : 13px;
+  font-weight    : 500;
+  color          : #6B7280;
+  background     : none;
+  border         : none;
+  border-radius  : 8px;
+  padding        : 10px 13px;
+  cursor         : pointer;
+  text-align     : left;
+  transition     : background .15s, color .15s;
+  white-space    : nowrap;
+  line-height    : 1.3;
+}
+.demo-sb__tabtn:hover          { background: #F0F2F5; color: var(--color-text-heading); }
+.demo-sb__tabtn--active      { background: #EEF2FF; color: var(--color-primary-500); font-weight: 700; }
+.demo-sb__tabtn .fa-fw        { font-size: 0.82em; opacity: 0.7; }
+.demo-sb__tabtn--active .fa-fw { opacity: 1; }
+
+/* ━━━ RIGHT: FLEX COLUMN — filter bar on top, charts below ━━━━━━━━━━━━━━━━━ */
+.fi-main {
+  flex           : 1;
+  display        : flex;
+  flex-direction : column;
+  overflow-y     : auto;
+  overflow-x     : hidden;
+  min-width      : 0;
+  background     : #F4F6F9;
+}
+
+/* ── All Filters bar ─────────────────────────────────────────────────────── */
+.fi-gbar {
+  flex-shrink    : 0;
+  background     : #fff;
+  border-bottom  : 1px solid #E9ECF0;
+  padding        : 10px 22px 12px;
+  box-shadow     : 0 2px 6px rgba(0,0,0,.04);
+  z-index        : 2;
+}
+.fi-gbar__inner {
+  display        : flex;
+  align-items    : flex-end;
+  flex-wrap      : wrap;
+  gap            : 14px;
+}
+.fi-gbar__filters {
+  display        : flex;
+  align-items    : flex-end;
+  gap            : 12px;
+  flex-wrap      : wrap;
+  flex           : 1;
+}
+.fi-gbar__item {
+  display        : flex;
+  flex-direction : column;
+  gap            : 3px;
+}
+.fi-gbar__item--slider { min-width: 185px; }
+.fi-gbar__item--grow {
+  flex           : 1 1 260px;
+  min-width      : 200px;
+}
+.fi-gbar__hint {
+  margin         : 0;
+  font-size      : 12px;
+  line-height    : 1.45;
+  color          : #6B7280;
+  max-width      : 560px;
+}
+.fi-gbar__hint code {
+  font-size      : 11px;
+  background     : #F3F4F6;
+  padding        : 1px 5px;
+  border-radius  : 4px;
+}
+.fi-gbar__lbl {
+  font-size      : 10px;
+  font-weight    : 700;
+  text-transform : uppercase;
+  letter-spacing : .06em;
+  color          : #9CA3AF;
+  line-height    : 1;
+}
+.fi-gbar .form-group  { margin-bottom: 0; }
+.fi-gbar .selectize-control .selectize-input {
+  font-size      : 12px;
+  padding        : 4px 8px;
+  min-height     : 28px;
+}
+.fi-gbar .irs { font-size: 11px; margin-top: 2px; }
+.fi-gbar .irs--shiny .irs-bar    { background: var(--color-primary-500); }
+.fi-gbar .irs--shiny .irs-handle { border-color: var(--color-primary-500); box-shadow: none; }
+.fi-gbar__right {
+  display        : flex;
+  align-items    : center;
+  gap            : 10px;
+  flex-shrink    : 0;
+}
+.fi-gbar__count {
+  font-size      : 12px;
+  font-weight    : 600;
+  color          : #555;
+  background     : #EEF2FF;
+  border-radius  : 6px;
+  padding        : 4px 12px;
+  white-space    : nowrap;
+}
+.fi-gbar__reset {
+  font-size      : 11px !important;
+  font-weight    : 600 !important;
+  color          : var(--color-primary-500) !important;
+  background     : transparent !important;
+  border         : 1px solid var(--color-primary-500) !important;
+  border-radius  : 5px !important;
+  padding        : 4px 12px !important;
+  height         : auto !important;
+  line-height    : 1.5 !important;
+  cursor         : pointer;
+  transition     : background .18s, color .18s;
+  box-shadow     : none !important;
+}
+.fi-gbar__reset:hover {
+  background     : var(--color-primary-500) !important;
+  color          : #fff !important;
+}
+
+/* ── Scrollable charts area ──────────────────────────────────────────────── */
+.fi-charts {
+  flex           : 1;
+  overflow-y     : auto;
+  padding        : 24px 28px 40px;
+  min-height     : 0;
+}
+
+/* ── Tab section header (compact) ────────────────────────────────────────── */
+.fi-tab-hdr {
+  display        : flex;
+  align-items    : baseline;
+  gap            : 12px;
+  margin-bottom  : 18px;
+  padding-bottom : 12px;
+  border-bottom  : 2px solid #EEECEB;
+}
+.fi-tab-hdr__eyebrow {
+  font-size      : 10.5px;
+  font-weight    : 700;
+  text-transform : uppercase;
+  letter-spacing : .07em;
+  color          : var(--color-primary-500);
+  background     : #EEF2FF;
+  padding        : 3px 10px;
+  border-radius  : 20px;
+  flex-shrink    : 0;
+}
+.fi-tab-hdr__title {
+  font-family    : var(--font-display);
+  font-size      : clamp(1.1rem, 1.8vw, 1.45rem);
+  font-weight    : var(--weight-bold);
+  color          : var(--color-text-heading);
+  margin         : 0;
+  line-height    : 1.2;
+}
+
+/* ── 2-column chart grid ─────────────────────────────────────────────────── */
+.fi-charts-grid {
+  display              : grid;
+  grid-template-columns: 1fr 1fr;
+  gap                  : 22px;
+  margin-bottom        : 22px;
+}
+.fi-chart-card--full {
+  grid-column    : 1 / -1;
+  margin-bottom  : 22px;
+}
+
+/* ── Chart card ─────────────────────────────────────────────────────────────── */
+.fi-chart-card {
+  background     : #fff;
+  border         : 1px solid #F0EAE8;
+  border-radius  : var(--radius-xl);
+  padding        : var(--space-5) var(--space-5) var(--space-4);
+  box-shadow     : 0 1px 4px rgba(0,0,0,.05), 0 4px 16px rgba(0,0,0,.04);
+  margin-bottom  : var(--space-6);
+  transition     : box-shadow 0.2s;
+}
+.fi-chart-card:hover {
+  box-shadow     : 0 2px 8px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.06);
+}
+.fi-chart-title {
+  font-family    : var(--font-ui);
+  font-size      : var(--text-sm);
+  font-weight    : var(--weight-semibold);
+  color          : var(--color-text-heading);
+  margin-bottom  : var(--space-4);
+  display        : flex;
+  align-items    : center;
+  gap            : var(--space-2);
+  padding-bottom : var(--space-3);
+  border-bottom  : 1px solid #F5F5F5;
+}
+
+/* ── KPI Cards ──────────────────────────────────────────────────────────────── */
+.fi-kpis-row {
+  display        : grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap            : var(--space-4);
+  margin-bottom  : var(--space-8);
+}
+.fi-kpi {
+  background     : #fff;
+  border         : 1px solid #F0EAE8;
+  border-radius  : var(--radius-xl);
+  padding        : var(--space-4) var(--space-5);
+  display        : flex;
+  gap            : var(--space-3);
+  align-items    : flex-start;
+  box-shadow     : 0 1px 3px rgba(0,0,0,.05);
+  transition     : box-shadow 0.2s, transform 0.18s;
+}
+.fi-kpi:hover {
+  box-shadow     : 0 4px 16px rgba(0,0,0,.08);
+  transform      : translateY(-2px);
+}
+.fi-kpi__icon {
+  width          : 36px;
+  height         : 36px;
+  border-radius  : 10px;
+  background     : linear-gradient(135deg, #FEE2E0 0%, #FECDD3 100%);
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  color          : var(--color-primary-500);
+  font-size      : 0.9rem;
+  flex-shrink    : 0;
+  margin-top     : 2px;
+}
+.fi-kpi__body {
+  flex           : 1;
+  min-width      : 0;
+}
+.fi-kpi__label {
+  font-size      : var(--text-xs);
+  font-weight    : var(--weight-semibold);
+  color          : var(--color-text-muted);
+  text-transform : uppercase;
+  letter-spacing : var(--tracking-wider);
+  margin-bottom  : var(--space-2);
+  line-height    : 1.3;
+}
+.fi-kpi__bars {
+  display        : flex;
+  flex-direction : column;
+  gap            : 5px;
+}
+.fi-kpi__bar-row {
+  display        : flex;
+  align-items    : center;
+  gap            : 6px;
+}
+.fi-kpi__bar-lbl {
+  font-size      : 0.68rem;
+  font-weight    : var(--weight-semibold);
+  width          : 36px;
+  flex-shrink    : 0;
+  letter-spacing : 0.03em;
+}
+.fi-kpi__bar-lbl--m { color: #3B82F6; }
+.fi-kpi__bar-lbl--f { color: #E85A4F; }
+.fi-kpi__bar-track {
+  flex           : 1;
+  height         : 7px;
+  background     : #F3F4F6;
+  border-radius  : 4px;
+  overflow       : hidden;
+}
+.fi-kpi__bar {
+  height         : 100%;
+  border-radius  : 4px;
+  transition     : width 0.6s cubic-bezier(.4,0,.2,1);
+}
+.fi-kpi__bar--m { background: #3B82F6; }
+.fi-kpi__bar--f { background: #E85A4F; }
+.fi-kpi__val {
+  font-size      : 0.72rem;
+  font-weight    : var(--weight-bold);
+  color          : var(--color-text-body);
+  width          : 34px;
+  text-align     : right;
+  flex-shrink    : 0;
+}
+.fi-kpi__gap {
+  font-size      : 0.68rem;
+  font-weight    : var(--weight-semibold);
+  margin-top     : var(--space-2);
+  padding        : 2px 8px;
+  border-radius  : 10px;
+  display        : inline-block;
+}
+.fi-kpi__gap--warn    { background: #FEF3C7; color: #92400E; }
+.fi-kpi__gap--ok      { background: #D1FAE5; color: #065F46; }
+.fi-kpi__gap--neutral { background: #F3F4F6; color: #6B7280; }
+
+/* ── No data notice ─────────────────────────────────────────────────────────── */
+.fi-nodata {
+  text-align     : center;
+  padding        : var(--space-16) var(--space-8);
+  color          : var(--color-text-muted);
+  font-size      : var(--text-base);
+}
+
+/* ── Data source footnote ───────────────────────────────────────────────────── */
+.fi-data-note {
+  font-size      : var(--text-xs);
+  color          : var(--color-text-muted);
+  background     : #FAFAFA;
+  border          : 1px solid #F0F0F0;
+  border-radius  : var(--radius-lg);
+  padding        : var(--space-3) var(--space-5);
+  margin-top     : var(--space-4);
+  line-height    : 1.6;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .vizc-hero           { padding: var(--space-10) var(--space-4) var(--space-8); }
+  .vizc-word--s7       { font-size: 2.2rem; }
+  .vizc-word--s5       { font-size: 1.45rem; }
+  .vizc-word--s4       { font-size: 1.15rem; }
+
+  /* Sidebar collapses to horizontal tabs on small screens */
+  .fi-dash             { flex-direction: column; }
+  .fi-sb {
+    width              : 100%;
+    min-width          : 0;
+    border-right       : none;
+    border-bottom      : 1px solid #E9ECF0;
+  }
+  .fi-sb__tabnav       { flex-direction: row; flex-wrap: wrap; padding: 6px 8px 6px; gap: 4px; }
+  .fi-sb__tabtn        { width: auto; padding: 7px 11px; font-size: 12px; }
+  .fi-charts-grid      { grid-template-columns: 1fr; }
+  .fi-charts           { padding: 18px 16px 32px; }
+  .fi-gbar__filters    { gap: 8px; }
+  .fi-gbar__item--slider { min-width: 160px; }
+  .fi-kpis-row         { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .vizc-word--vert         { display: none; }
+  .vizc-word--s7           { font-size: 1.9rem; }
+  .fi-kpis-row             { grid-template-columns: 1fr; }
+  .vizc-panel__bar-title   { display: none; }
+  .vizc-panel__close       { padding: 6px 12px; font-size: 12px; }
+  .fi-gbar__item--slider   { display: none; }
+  .fi-charts-grid          { grid-template-columns: 1fr; }
+}
+
+/* ── Demography overview: Rwanda gender snapshot cards ─────────────────────── */
+.demo-overview-kpis {
+  margin-bottom            : var(--space-8);
+}
+.demo-overview-kpis--empty {
+  margin-bottom            : var(--space-4);
+}
+.demo-overview-lead {
+  font-family              : var(--font-ui);
+  font-size                : var(--text-sm);
+  color                    : var(--color-text-secondary);
+  line-height              : 1.55;
+  margin                   : 0 0 var(--space-5);
+  max-width                : 52rem;
+}
+.demo-overview-lead strong {
+  color                    : var(--color-text-heading);
+  font-weight              : var(--weight-semibold);
+}
+.demo-overview-hero {
+  display                  : grid;
+  grid-template-columns    : repeat(3, minmax(0, 1fr));
+  gap                      : var(--space-4);
+  margin-bottom            : var(--space-6);
+}
+.demo-stat-tile {
+  background               : #fff;
+  border                   : 1px solid #F0EAE8;
+  border-radius            : var(--radius-xl);
+  padding                  : var(--space-5) var(--space-6);
+  box-shadow               : 0 1px 3px rgba(0,0,0,.05);
+  transition               : box-shadow 0.2s, transform 0.18s;
+}
+.demo-stat-tile:hover {
+  box-shadow               : 0 4px 16px rgba(0,0,0,.07);
+  transform                : translateY(-2px);
+}
+.demo-stat-tile--total { border-left: 4px solid var(--color-primary-500); }
+.demo-stat-tile--m     { border-left: 4px solid #3B82F6; }
+.demo-stat-tile--f     { border-left: 4px solid #E85A4F; }
+.demo-stat-tile__eyebrow {
+  font-family              : var(--font-ui);
+  font-size                : 0.65rem;
+  font-weight              : var(--weight-semibold);
+  text-transform           : uppercase;
+  letter-spacing           : var(--tracking-wider);
+  color                    : var(--color-text-muted);
+  margin-bottom            : var(--space-2);
+}
+.demo-stat-tile__value {
+  font-family              : var(--font-ui);
+  font-size                : clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight              : var(--weight-bold);
+  color                    : var(--color-text-heading);
+  line-height              : 1.15;
+  letter-spacing           : -0.02em;
+}
+.demo-stat-tile__sub {
+  font-family              : var(--font-ui);
+  font-size                : var(--text-sm);
+  color                    : var(--color-text-secondary);
+  margin-top               : var(--space-2);
+  line-height              : 1.45;
+}
+.fi-kpis-row--demo-overview {
+  grid-template-columns    : repeat(auto-fill, minmax(220px, 1fr));
+}
+@media (max-width: 900px) {
+  .demo-overview-hero { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .fi-kpis-row--demo-overview { grid-template-columns: 1fr; }
 }

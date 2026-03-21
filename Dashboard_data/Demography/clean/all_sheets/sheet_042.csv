@@ -1,0 +1,14 @@
+﻿Table 42: Children by survivorship of biological parents by residence,,,,,,,
+, Survivorship,Count,,,Percentage,,
+,,Total,Urban,Rural,Total,Urban,Rural
+,All,5891663,1497064,4394599,100,100,100
+,"Father alive, Mother alive",5377007,1372155,4004852,91.3,91.7,91.1
+,"Father Alive, Mother died",105050,29001,76049,1.8,1.9,1.7
+,"Father died, Mother alive",266727,62462,204265,4.5,4.2,4.6
+,"Father died, Mother died",30471,9488,20983,0.5,0.6,0.5
+,"Father survivorship unknown, Mother alive",89322,17930,71392,1.5,1.2,1.6
+,"Father survivorship unknown, Mother died",5646,1235,4411,0.1,0.1,0.1
+,"Father survivorship unknown, Mother survivorship unknown",8117,2484,5633,0.1,0.2,0.1
+,"Father alive, Mother survivorship unknown",7615,1920,5695,0.1,0.1,0.1
+,"Father died, Mother survivorship unknown",1403,304,1099,0,0,0
+,Missing,305,85,220,0,0,0

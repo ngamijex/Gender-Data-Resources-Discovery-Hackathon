@@ -1,0 +1,28 @@
+residence,sex,attendance_status,value_pct,population_count
+Rwanda,Both sexes,No longer attending,16.9,3762315.0
+Rwanda,Both sexes,Currently attending,78.5,3762315.0
+Rwanda,Both sexes,Never attended,4.6,3762315.0
+Rwanda,Male,No longer attending,17.8,1879573.0
+Rwanda,Male,Currently attending,76.9,1879573.0
+Rwanda,Male,Never attended,5.3,1879573.0
+Rwanda,Female,No longer attending,16.0,1882742.0
+Rwanda,Female,Currently attending,80.0,1882742.0
+Rwanda,Female,Never attended,4.0,1882742.0
+Urban,Both sexes,No longer attending,14.5,917811.0
+Urban,Both sexes,Currently attending,82.0,917811.0
+Urban,Both sexes,Never attended,3.5,917811.0
+Urban,Male,No longer attending,13.4,446373.0
+Urban,Male,Currently attending,82.8,446373.0
+Urban,Male,Never attended,3.8,446373.0
+Urban,Female,No longer attending,15.5,471438.0
+Urban,Female,Currently attending,81.3,471438.0
+Urban,Female,Never attended,3.2,471438.0
+Rural,Both sexes,No longer attending,17.7,2844504.0
+Rural,Both sexes,Currently attending,77.3,2844504.0
+Rural,Both sexes,Never attended,5.0,2844504.0
+Rural,Male,No longer attending,19.2,1433200.0
+Rural,Male,Currently attending,75.0,1433200.0
+Rural,Male,Never attended,5.7,1433200.0
+Rural,Female,No longer attending,16.1,1411304.0
+Rural,Female,Currently attending,79.6,1411304.0
+Rural,Female,Never attended,4.3,1411304.0

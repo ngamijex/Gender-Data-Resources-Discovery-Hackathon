@@ -1,0 +1,33 @@
+indicator,year,entity,sex,pct
+judiciary_representation_gender,2015,Judiciary ( in general),Female,50.3
+judiciary_representation_gender,2015,Judiciary ( in general),Male,49.7
+judiciary_representation_gender,2017,Judiciary ( in general),Female,47.4
+judiciary_representation_gender,2017,Judiciary ( in general),Male,52.6
+judiciary_representation_gender,2021,Judiciary ( in general),Female,46.8
+judiciary_representation_gender,2021,Judiciary ( in general),Male,53.2
+judiciary_representation_gender,2023,Judiciary ( in general),Female,47.0
+judiciary_representation_gender,2023,Judiciary ( in general),Male,53.0
+judiciary_representation_gender,2015,National Commission for Human Rights,Female,47.9
+judiciary_representation_gender,2015,National Commission for Human Rights,Male,52.1
+judiciary_representation_gender,2017,National Commission for Human Rights,Female,45.1
+judiciary_representation_gender,2017,National Commission for Human Rights,Male,54.9
+judiciary_representation_gender,2021,National Commission for Human Rights,Female,45.1
+judiciary_representation_gender,2021,National Commission for Human Rights,Male,54.9
+judiciary_representation_gender,2023,National Commission for Human Rights,Female,45.1
+judiciary_representation_gender,2023,National Commission for Human Rights,Male,54.9
+judiciary_representation_gender,2015,Rwanda National Police,Female,16.0
+judiciary_representation_gender,2015,Rwanda National Police,Male,84.0
+judiciary_representation_gender,2017,Rwanda National Police,Female,21.0
+judiciary_representation_gender,2017,Rwanda National Police,Male,79.0
+judiciary_representation_gender,2021,Rwanda National Police,Female,18.0
+judiciary_representation_gender,2021,Rwanda National Police,Male,82.0
+judiciary_representation_gender,2023,Rwanda National Police,Female,18.6
+judiciary_representation_gender,2023,Rwanda National Police,Male,82.4
+judiciary_representation_gender,2015,Participation in peace andsecurity process of UN mission,Female,16.0
+judiciary_representation_gender,2015,Participation in peace andsecurity process of UN mission,Male,84.0
+judiciary_representation_gender,2017,Participation in peace andsecurity process of UN mission,Female,21.0
+judiciary_representation_gender,2017,Participation in peace andsecurity process of UN mission,Male,79.0
+judiciary_representation_gender,2021,Participation in peace andsecurity process of UN mission,Female,25.0
+judiciary_representation_gender,2021,Participation in peace andsecurity process of UN mission,Male,75.0
+judiciary_representation_gender,2023,Participation in peace andsecurity process of UN mission,Female,25.7
+judiciary_representation_gender,2023,Participation in peace andsecurity process of UN mission,Male,74.3

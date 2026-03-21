@@ -7,3 +7,16 @@
 .Renviron
 .env
 *.env
+
+# Large Stata microdata (exceeds GitHub 100 MB file limit)
+*.dta
+**/PHC5_Public_microdata.dta
+
+# Local / generated noise
+__pycache__/
+*.pyc
+logs/
+.tmp_*
+tmp_demography_loader_test.R
+Dashboard_data/Demography/_*.xlsx
+Dashboard_data/Demography/tmp_*.xlsx

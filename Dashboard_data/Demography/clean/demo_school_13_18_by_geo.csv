@@ -1,0 +1,325 @@
+indicator,geo,geo_type,province,residence,sex,value
+School attendance 13-18 (%),Rwanda,National,Rwanda,Rwanda,Both sexes,65.4
+School attendance 13-18 (%),Rwanda,National,Rwanda,Rwanda,Male,63.2
+School attendance 13-18 (%),Rwanda,National,Rwanda,Rwanda,Female,67.5
+School attendance 13-18 (%),Rwanda,National,Rwanda,Urban,Both sexes,70.5
+School attendance 13-18 (%),Rwanda,National,Rwanda,Urban,Male,72.0
+School attendance 13-18 (%),Rwanda,National,Rwanda,Urban,Female,69.1
+School attendance 13-18 (%),Rwanda,National,Rwanda,Rural,Both sexes,63.7
+School attendance 13-18 (%),Rwanda,National,Rwanda,Rural,Male,60.6
+School attendance 13-18 (%),Rwanda,National,Rwanda,Rural,Female,66.9
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Rwanda,Both sexes,69.2
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Rwanda,Male,71.5
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Rwanda,Female,67.3
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Urban,Both sexes,70.3
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Urban,Male,74.1
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Urban,Female,67.2
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Rural,Both sexes,63.2
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Rural,Male,58.6
+School attendance 13-18 (%),City of Kigali,Province,City of Kigali,Rural,Female,68.0
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Rwanda,Both sexes,71.5
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Rwanda,Male,74.0
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Rwanda,Female,69.2
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Urban,Both sexes,72.1
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Urban,Male,75.6
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Urban,Female,69.0
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Rural,Both sexes,68.1
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Rural,Male,65.2
+School attendance 13-18 (%),Nyarugenge,District,City of Kigali,Rural,Female,71.1
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Rwanda,Both sexes,67.6
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Rwanda,Male,69.0
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Rwanda,Female,66.3
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Urban,Both sexes,69.2
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Urban,Male,73.2
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Urban,Female,66.0
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Rural,Both sexes,62.0
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Rural,Male,56.8
+School attendance 13-18 (%),Gasabo,District,City of Kigali,Rural,Female,67.5
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Rwanda,Both sexes,70.5
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Rwanda,Male,74.0
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Rwanda,Female,67.5
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Urban,Both sexes,70.6
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Urban,Male,74.2
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Urban,Female,67.6
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Rural,Both sexes,58.3
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Rural,Male,58.4
+School attendance 13-18 (%),Kicukiro,District,City of Kigali,Rural,Female,58.2
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Rwanda,Both sexes,66.8
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Rwanda,Male,63.0
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Rwanda,Female,70.7
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Urban,Both sexes,72.2
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Urban,Male,73.1
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Urban,Female,71.3
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Rural,Both sexes,66.0
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Rural,Male,61.6
+School attendance 13-18 (%),Southern Province,Province,Southern Province,Rural,Female,70.6
+School attendance 13-18 (%),Nyanza,District,Southern Province,Rwanda,Both sexes,66.0
+School attendance 13-18 (%),Nyanza,District,Southern Province,Rwanda,Male,61.1
+School attendance 13-18 (%),Nyanza,District,Southern Province,Rwanda,Female,71.2
+School attendance 13-18 (%),Nyanza,District,Southern Province,Urban,Both sexes,72.9
+School attendance 13-18 (%),Nyanza,District,Southern Province,Urban,Male,72.3
+School attendance 13-18 (%),Nyanza,District,Southern Province,Urban,Female,73.5
+School attendance 13-18 (%),Nyanza,District,Southern Province,Rural,Both sexes,65.3
+School attendance 13-18 (%),Nyanza,District,Southern Province,Rural,Male,60.1
+School attendance 13-18 (%),Nyanza,District,Southern Province,Rural,Female,70.9
+School attendance 13-18 (%),Gisagara,District,Southern Province,Rwanda,Both sexes,59.5
+School attendance 13-18 (%),Gisagara,District,Southern Province,Rwanda,Male,57.0
+School attendance 13-18 (%),Gisagara,District,Southern Province,Rwanda,Female,62.1
+School attendance 13-18 (%),Gisagara,District,Southern Province,Urban,Both sexes,66.1
+School attendance 13-18 (%),Gisagara,District,Southern Province,Urban,Male,64.7
+School attendance 13-18 (%),Gisagara,District,Southern Province,Urban,Female,67.7
+School attendance 13-18 (%),Gisagara,District,Southern Province,Rural,Both sexes,59.3
+School attendance 13-18 (%),Gisagara,District,Southern Province,Rural,Male,56.7
+School attendance 13-18 (%),Gisagara,District,Southern Province,Rural,Female,62.0
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Rwanda,Both sexes,68.5
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Rwanda,Male,64.4
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Rwanda,Female,72.9
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Urban,Both sexes,78.9
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Urban,Male,75.5
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Urban,Female,82.7
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Rural,Both sexes,68.2
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Rural,Male,64.1
+School attendance 13-18 (%),Nyaruguru,District,Southern Province,Rural,Female,72.6
+School attendance 13-18 (%),Huye,District,Southern Province,Rwanda,Both sexes,67.8
+School attendance 13-18 (%),Huye,District,Southern Province,Rwanda,Male,64.5
+School attendance 13-18 (%),Huye,District,Southern Province,Rwanda,Female,71.2
+School attendance 13-18 (%),Huye,District,Southern Province,Urban,Both sexes,72.0
+School attendance 13-18 (%),Huye,District,Southern Province,Urban,Male,76.6
+School attendance 13-18 (%),Huye,District,Southern Province,Urban,Female,68.2
+School attendance 13-18 (%),Huye,District,Southern Province,Rural,Both sexes,67.0
+School attendance 13-18 (%),Huye,District,Southern Province,Rural,Male,62.6
+School attendance 13-18 (%),Huye,District,Southern Province,Rural,Female,71.8
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Rwanda,Both sexes,68.9
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Rwanda,Male,65.7
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Rwanda,Female,72.2
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Urban,Both sexes,76.8
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Urban,Male,76.6
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Urban,Female,76.9
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Rural,Both sexes,68.0
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Rural,Male,64.5
+School attendance 13-18 (%),Nyamagabe,District,Southern Province,Rural,Female,71.7
+School attendance 13-18 (%),Ruhango,District,Southern Province,Rwanda,Both sexes,67.5
+School attendance 13-18 (%),Ruhango,District,Southern Province,Rwanda,Male,63.8
+School attendance 13-18 (%),Ruhango,District,Southern Province,Rwanda,Female,71.4
+School attendance 13-18 (%),Ruhango,District,Southern Province,Urban,Both sexes,75.9
+School attendance 13-18 (%),Ruhango,District,Southern Province,Urban,Male,76.2
+School attendance 13-18 (%),Ruhango,District,Southern Province,Urban,Female,75.6
+School attendance 13-18 (%),Ruhango,District,Southern Province,Rural,Both sexes,66.6
+School attendance 13-18 (%),Ruhango,District,Southern Province,Rural,Male,62.6
+School attendance 13-18 (%),Ruhango,District,Southern Province,Rural,Female,70.9
+School attendance 13-18 (%),Muhanga,District,Southern Province,Rwanda,Both sexes,68.0
+School attendance 13-18 (%),Muhanga,District,Southern Province,Rwanda,Male,63.9
+School attendance 13-18 (%),Muhanga,District,Southern Province,Rwanda,Female,72.2
+School attendance 13-18 (%),Muhanga,District,Southern Province,Urban,Both sexes,71.5
+School attendance 13-18 (%),Muhanga,District,Southern Province,Urban,Male,75.5
+School attendance 13-18 (%),Muhanga,District,Southern Province,Urban,Female,68.3
+School attendance 13-18 (%),Muhanga,District,Southern Province,Rural,Both sexes,67.1
+School attendance 13-18 (%),Muhanga,District,Southern Province,Rural,Male,61.1
+School attendance 13-18 (%),Muhanga,District,Southern Province,Rural,Female,73.4
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Rwanda,Both sexes,68.8
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Rwanda,Male,64.4
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Rwanda,Female,73.2
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Urban,Both sexes,70.2
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Urban,Male,69.5
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Urban,Female,70.8
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Rural,Both sexes,68.2
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Rural,Male,62.4
+School attendance 13-18 (%),Kamonyi,District,Southern Province,Rural,Female,74.2
+School attendance 13-18 (%),Western Province,Province,Western Province,Rwanda,Both sexes,65.3
+School attendance 13-18 (%),Western Province,Province,Western Province,Rwanda,Male,63.3
+School attendance 13-18 (%),Western Province,Province,Western Province,Rwanda,Female,67.3
+School attendance 13-18 (%),Western Province,Province,Western Province,Urban,Both sexes,71.4
+School attendance 13-18 (%),Western Province,Province,Western Province,Urban,Male,71.7
+School attendance 13-18 (%),Western Province,Province,Western Province,Urban,Female,71.0
+School attendance 13-18 (%),Western Province,Province,Western Province,Rural,Both sexes,63.7
+School attendance 13-18 (%),Western Province,Province,Western Province,Rural,Male,61.1
+School attendance 13-18 (%),Western Province,Province,Western Province,Rural,Female,66.2
+School attendance 13-18 (%),Karongi,District,Western Province,Rwanda,Both sexes,70.4
+School attendance 13-18 (%),Karongi,District,Western Province,Rwanda,Male,67.3
+School attendance 13-18 (%),Karongi,District,Western Province,Rwanda,Female,73.7
+School attendance 13-18 (%),Karongi,District,Western Province,Urban,Both sexes,75.7
+School attendance 13-18 (%),Karongi,District,Western Province,Urban,Male,76.2
+School attendance 13-18 (%),Karongi,District,Western Province,Urban,Female,75.3
+School attendance 13-18 (%),Karongi,District,Western Province,Rural,Both sexes,69.9
+School attendance 13-18 (%),Karongi,District,Western Province,Rural,Male,66.6
+School attendance 13-18 (%),Karongi,District,Western Province,Rural,Female,73.5
+School attendance 13-18 (%),Rutsiro,District,Western Province,Rwanda,Both sexes,61.0
+School attendance 13-18 (%),Rutsiro,District,Western Province,Rwanda,Male,58.6
+School attendance 13-18 (%),Rutsiro,District,Western Province,Rwanda,Female,63.3
+School attendance 13-18 (%),Rutsiro,District,Western Province,Urban,Both sexes,73.1
+School attendance 13-18 (%),Rutsiro,District,Western Province,Urban,Male,71.4
+School attendance 13-18 (%),Rutsiro,District,Western Province,Urban,Female,74.8
+School attendance 13-18 (%),Rutsiro,District,Western Province,Rural,Both sexes,60.3
+School attendance 13-18 (%),Rutsiro,District,Western Province,Rural,Male,57.9
+School attendance 13-18 (%),Rutsiro,District,Western Province,Rural,Female,62.6
+School attendance 13-18 (%),Rubavu,District,Western Province,Rwanda,Both sexes,60.7
+School attendance 13-18 (%),Rubavu,District,Western Province,Rwanda,Male,61.2
+School attendance 13-18 (%),Rubavu,District,Western Province,Rwanda,Female,60.1
+School attendance 13-18 (%),Rubavu,District,Western Province,Urban,Both sexes,69.9
+School attendance 13-18 (%),Rubavu,District,Western Province,Urban,Male,71.6
+School attendance 13-18 (%),Rubavu,District,Western Province,Urban,Female,68.3
+School attendance 13-18 (%),Rubavu,District,Western Province,Rural,Both sexes,50.6
+School attendance 13-18 (%),Rubavu,District,Western Province,Rural,Male,50.3
+School attendance 13-18 (%),Rubavu,District,Western Province,Rural,Female,50.9
+School attendance 13-18 (%),Nyabihu,District,Western Province,Rwanda,Both sexes,64.6
+School attendance 13-18 (%),Nyabihu,District,Western Province,Rwanda,Male,61.6
+School attendance 13-18 (%),Nyabihu,District,Western Province,Rwanda,Female,67.7
+School attendance 13-18 (%),Nyabihu,District,Western Province,Urban,Both sexes,71.9
+School attendance 13-18 (%),Nyabihu,District,Western Province,Urban,Male,69.6
+School attendance 13-18 (%),Nyabihu,District,Western Province,Urban,Female,74.2
+School attendance 13-18 (%),Nyabihu,District,Western Province,Rural,Both sexes,62.3
+School attendance 13-18 (%),Nyabihu,District,Western Province,Rural,Male,59.1
+School attendance 13-18 (%),Nyabihu,District,Western Province,Rural,Female,65.6
+School attendance 13-18 (%),Ngororero,District,Western Province,Rwanda,Both sexes,58.5
+School attendance 13-18 (%),Ngororero,District,Western Province,Rwanda,Male,55.7
+School attendance 13-18 (%),Ngororero,District,Western Province,Rwanda,Female,61.3
+School attendance 13-18 (%),Ngororero,District,Western Province,Urban,Both sexes,75.7
+School attendance 13-18 (%),Ngororero,District,Western Province,Urban,Male,74.9
+School attendance 13-18 (%),Ngororero,District,Western Province,Urban,Female,76.5
+School attendance 13-18 (%),Ngororero,District,Western Province,Rural,Both sexes,57.7
+School attendance 13-18 (%),Ngororero,District,Western Province,Rural,Male,54.7
+School attendance 13-18 (%),Ngororero,District,Western Province,Rural,Female,60.5
+School attendance 13-18 (%),Rusizi,District,Western Province,Rwanda,Both sexes,69.9
+School attendance 13-18 (%),Rusizi,District,Western Province,Rwanda,Male,68.2
+School attendance 13-18 (%),Rusizi,District,Western Province,Rwanda,Female,71.7
+School attendance 13-18 (%),Rusizi,District,Western Province,Urban,Both sexes,70.8
+School attendance 13-18 (%),Rusizi,District,Western Province,Urban,Male,70.9
+School attendance 13-18 (%),Rusizi,District,Western Province,Urban,Female,70.7
+School attendance 13-18 (%),Rusizi,District,Western Province,Rural,Both sexes,69.4
+School attendance 13-18 (%),Rusizi,District,Western Province,Rural,Male,66.7
+School attendance 13-18 (%),Rusizi,District,Western Province,Rural,Female,72.2
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Rwanda,Both sexes,72.4
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Rwanda,Male,69.6
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Rwanda,Female,75.1
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Urban,Both sexes,77.4
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Urban,Male,76.4
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Urban,Female,78.4
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Rural,Both sexes,71.9
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Rural,Male,69.1
+School attendance 13-18 (%),Nyamasheke,District,Western Province,Rural,Female,74.8
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Rwanda,Both sexes,63.4
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Rwanda,Male,60.3
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Rwanda,Female,66.5
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Urban,Both sexes,69.7
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Urban,Male,69.4
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Urban,Female,70.0
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Rural,Both sexes,62.2
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Rural,Male,58.7
+School attendance 13-18 (%),Northern Province,Province,Northern Province,Rural,Female,65.8
+School attendance 13-18 (%),Rulindo,District,Northern Province,Rwanda,Both sexes,64.2
+School attendance 13-18 (%),Rulindo,District,Northern Province,Rwanda,Male,60.4
+School attendance 13-18 (%),Rulindo,District,Northern Province,Rwanda,Female,68.0
+School attendance 13-18 (%),Rulindo,District,Northern Province,Urban,Both sexes,68.5
+School attendance 13-18 (%),Rulindo,District,Northern Province,Urban,Male,70.5
+School attendance 13-18 (%),Rulindo,District,Northern Province,Urban,Female,66.7
+School attendance 13-18 (%),Rulindo,District,Northern Province,Rural,Both sexes,63.7
+School attendance 13-18 (%),Rulindo,District,Northern Province,Rural,Male,59.3
+School attendance 13-18 (%),Rulindo,District,Northern Province,Rural,Female,68.1
+School attendance 13-18 (%),Gakenke,District,Northern Province,Rwanda,Both sexes,62.5
+School attendance 13-18 (%),Gakenke,District,Northern Province,Rwanda,Male,59.0
+School attendance 13-18 (%),Gakenke,District,Northern Province,Rwanda,Female,65.9
+School attendance 13-18 (%),Gakenke,District,Northern Province,Urban,Both sexes,72.3
+School attendance 13-18 (%),Gakenke,District,Northern Province,Urban,Male,68.9
+School attendance 13-18 (%),Gakenke,District,Northern Province,Urban,Female,75.2
+School attendance 13-18 (%),Gakenke,District,Northern Province,Rural,Both sexes,62.1
+School attendance 13-18 (%),Gakenke,District,Northern Province,Rural,Male,58.7
+School attendance 13-18 (%),Gakenke,District,Northern Province,Rural,Female,65.6
+School attendance 13-18 (%),Musanze,District,Northern Province,Rwanda,Both sexes,62.4
+School attendance 13-18 (%),Musanze,District,Northern Province,Rwanda,Male,60.8
+School attendance 13-18 (%),Musanze,District,Northern Province,Rwanda,Female,64.0
+School attendance 13-18 (%),Musanze,District,Northern Province,Urban,Both sexes,69.0
+School attendance 13-18 (%),Musanze,District,Northern Province,Urban,Male,68.9
+School attendance 13-18 (%),Musanze,District,Northern Province,Urban,Female,69.2
+School attendance 13-18 (%),Musanze,District,Northern Province,Rural,Both sexes,56.7
+School attendance 13-18 (%),Musanze,District,Northern Province,Rural,Male,54.1
+School attendance 13-18 (%),Musanze,District,Northern Province,Rural,Female,59.3
+School attendance 13-18 (%),Burera,District,Northern Province,Rwanda,Both sexes,64.3
+School attendance 13-18 (%),Burera,District,Northern Province,Rwanda,Male,61.7
+School attendance 13-18 (%),Burera,District,Northern Province,Rwanda,Female,66.8
+School attendance 13-18 (%),Burera,District,Northern Province,Urban,Both sexes,72.3
+School attendance 13-18 (%),Burera,District,Northern Province,Urban,Male,71.1
+School attendance 13-18 (%),Burera,District,Northern Province,Urban,Female,73.6
+School attendance 13-18 (%),Burera,District,Northern Province,Rural,Both sexes,63.4
+School attendance 13-18 (%),Burera,District,Northern Province,Rural,Male,60.7
+School attendance 13-18 (%),Burera,District,Northern Province,Rural,Female,66.0
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Rwanda,Both sexes,64.0
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Rwanda,Male,59.8
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Rwanda,Female,68.2
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Urban,Both sexes,72.0
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Urban,Male,70.3
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Urban,Female,73.5
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Rural,Both sexes,63.5
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Rural,Male,59.2
+School attendance 13-18 (%),Gicumbi,District,Northern Province,Rural,Female,67.9
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Rwanda,Both sexes,63.9
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Rwanda,Male,62.1
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Rwanda,Female,65.6
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Urban,Both sexes,69.4
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Urban,Male,69.6
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Urban,Female,69.3
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Rural,Both sexes,62.6
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Rural,Male,60.5
+School attendance 13-18 (%),Eastern Province,Province,Eastern Province,Rural,Female,64.8
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Rwanda,Both sexes,65.4
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Rwanda,Male,61.6
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Rwanda,Female,69.2
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Urban,Both sexes,69.9
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Urban,Male,69.3
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Urban,Female,70.5
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Rural,Both sexes,63.3
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Rural,Male,58.1
+School attendance 13-18 (%),Rwamagana,District,Eastern Province,Rural,Female,68.6
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Rwanda,Both sexes,62.6
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Rwanda,Male,61.8
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Rwanda,Female,63.5
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Urban,Both sexes,68.3
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Urban,Male,68.1
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Urban,Female,68.5
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Rural,Both sexes,61.0
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Rural,Male,60.0
+School attendance 13-18 (%),Nyagatare,District,Eastern Province,Rural,Female,62.1
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Rwanda,Both sexes,64.0
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Rwanda,Male,61.6
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Rwanda,Female,66.5
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Urban,Both sexes,71.1
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Urban,Male,70.6
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Urban,Female,71.7
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Rural,Both sexes,63.3
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Rural,Male,60.7
+School attendance 13-18 (%),Gatsibo,District,Eastern Province,Rural,Female,65.9
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Rwanda,Both sexes,62.8
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Rwanda,Male,60.7
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Rwanda,Female,64.9
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Urban,Both sexes,69.0
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Urban,Male,70.0
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Urban,Female,68.0
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Rural,Both sexes,61.8
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Rural,Male,59.4
+School attendance 13-18 (%),Kayonza,District,Eastern Province,Rural,Female,64.4
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Rwanda,Both sexes,66.9
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Rwanda,Male,66.0
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Rwanda,Female,67.8
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Urban,Both sexes,69.0
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Urban,Male,69.4
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Urban,Female,68.7
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Rural,Both sexes,66.7
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Rural,Male,65.8
+School attendance 13-18 (%),Kirehe,District,Eastern Province,Rural,Female,67.7
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Rwanda,Both sexes,59.2
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Rwanda,Male,57.8
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Rwanda,Female,60.6
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Urban,Both sexes,70.7
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Urban,Male,70.5
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Urban,Female,71.0
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Rural,Both sexes,58.1
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Rural,Male,56.7
+School attendance 13-18 (%),Ngoma,District,Eastern Province,Rural,Female,59.5
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Rwanda,Both sexes,65.9
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Rwanda,Male,64.6
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Rwanda,Female,67.1
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Urban,Both sexes,69.4
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Urban,Male,70.4
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Urban,Female,68.4
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Rural,Both sexes,63.8
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Rural,Male,61.5
+School attendance 13-18 (%),Bugesera,District,Eastern Province,Rural,Female,66.2

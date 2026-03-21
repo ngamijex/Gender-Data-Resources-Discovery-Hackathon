@@ -1,0 +1,15 @@
+0,1,2,3,4,5,6,7
+Table 41: Children by survivorship of biological parents and sex,,,,,,,
+, Survivorship,Counts,,,Percentage,,
+,,Total,Male,Female,Total,Male,Female
+,All,5891663,2946585,2945078,100,100,100
+,"Father alive, Mother alive",5377007,2689543,2687464,91.3,91.3,91.3
+,"Father Alive, Mother died",105050,52573,52477,1.8,1.8,1.8
+,"Father died, Mother alive",266727,132226,134501,4.5,4.5,4.6
+,"Father died, Mother died",30471,15258,15213,0.5,0.5,0.5
+,"Father survivorship unknown, Mother alive",89322,44866,44456,1.5,1.5,1.5
+,"Father survivorship unknown, Mother died",5646,2790,2856,0.1,0.1,0.1
+,"Father survivorship unknown, Mother survivorship unknown",8117,4357,3760,0.1,0.1,0.1
+,"Father alive, Mother survivorship unknown",7615,4041,3574,0.1,0.1,0.1
+,"Father died, Mother survivorship unknown",1403,771,632,0,0,0
+,Missing,305,160,145,0,0,0
