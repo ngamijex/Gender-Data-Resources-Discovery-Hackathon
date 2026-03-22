@@ -2,6 +2,71 @@
 # Reusable HTML component builders and the plotly chart theme.
 # All class names here correspond to rules in www/styles.css.
 
+# ── Data.frame safety (Shinyapps / odd CSV reads) ─────────────────────────────
+# Matrix-like columns make `df$col %in% x` return a matrix; then `df[mask, ]`
+# throws "incorrect number of dimensions". Flatten those columns to atomic vectors.
+normalize_df_for_indexing <- function(x) {
+  if (is.null(x)) return(NULL)
+  if (!is.data.frame(x)) {
+    x <- tryCatch(as.data.frame(x, stringsAsFactors = FALSE), error = function(e) NULL)
+  }
+  if (is.null(x) || ncol(x) < 1L) return(x)
+  nr <- nrow(x)
+  for (j in seq_len(ncol(x))) {
+    col <- x[[j]]
+    if (is.matrix(col) || is.data.frame(col)) {
+      mm <- as.matrix(col)
+      x[[j]] <- if (nrow(mm) == nr) {
+        as.vector(mm[, 1L])
+      } else {
+        rep(NA, nr)
+      }
+    }
+  }
+  x
+}
+
+# Logical row mask aligned to nrow(ds) (handles length-1 recycling safely).
+demo_align_lgl <- function(ok, n) {
+  ok <- as.vector(ok)
+  if (!length(ok)) return(rep(FALSE, n))
+  if (length(ok) == n) return(as.logical(ok) & !is.na(ok))
+  if (length(ok) == 1L) return(rep(as.logical(ok) & !is.na(ok), n))
+  as.logical(rep_len(ok, n)) & !is.na(rep_len(ok, n))
+}
+
+# ── Dashboard_data path (Linux / shinyapps.io is case-sensitive) ─────────────
+# Repository folder is `Dashboard_data/`; older code used `dashboard_data/`.
+.walk_data_path <- function(roots, rel, is_dir, max_up = 6L) {
+  for (r in roots) {
+    r0 <- suppressWarnings(normalizePath(r, winslash = "/", mustWork = FALSE))
+    if (is.na(r0) || r0 == "") next
+    cur <- r0
+    for (i in seq_len(max_up + 1L)) {
+      cand <- file.path(cur, rel)
+      ok <- if (is_dir) dir.exists(cand) else file.exists(cand)
+      if (ok) return(cand)
+      parent <- dirname(cur)
+      if (identical(parent, cur)) break
+      cur <- parent
+    }
+  }
+  NULL
+}
+
+#' Resolve `Dashboard_data/...` or `dashboard_data/...` under candidate roots.
+find_dashboard_path <- function(roots, path_segments, is_dir = TRUE, max_up = 6L) {
+  roots <- unique(roots[!is.na(roots) & nzchar(as.character(roots))])
+  if (!length(roots) || !length(path_segments)) return(NULL)
+  rel_upper <- do.call(file.path, c(list("Dashboard_data"), as.list(path_segments)))
+  rel_lower <- do.call(file.path, c(list("dashboard_data"), as.list(path_segments)))
+  for (rel in list(rel_upper, rel_lower)) {
+    hit <- .walk_data_path(roots, rel, is_dir, max_up)
+    if (!is.null(hit)) return(hit)
+  }
+  NULL
+}
+
 # ── Plotly chart theme ─────────────────────────────────────────────────────────
 gddp_theme <- function(p, xlab = NULL, ylab = NULL) {
   p |>

@@ -1,0 +1,73 @@
+year,sex,level,pct
+1978,Both sexes,No Education,100.0
+1978,Both sexes,Primary,61.3
+1978,Both sexes,Post-Primary,36.1
+1978,Both sexes,University,2.4
+1991,Both sexes,No Education,100.0
+1991,Both sexes,Primary,40.1
+1991,Both sexes,Post-Primary,53.5
+1991,Both sexes,Secondary,2.2
+1991,Both sexes,University,2.4
+2002,Both sexes,No Education,100.0
+2002,Both sexes,Primary,31.9
+2002,Both sexes,Post-Primary,60.7
+2002,Both sexes,Secondary,1.5
+2002,Both sexes,University,6.1
+2012,Both sexes,No Education,100.0
+2012,Both sexes,Primary,18.7
+2012,Both sexes,Post-Primary,64.1
+2012,Both sexes,Secondary,0.9
+2012,Both sexes,University,12.4
+2022,Both sexes,No Education,100.0
+2022,Both sexes,Primary,13.2
+2022,Both sexes,Post-Primary,63.1
+2022,Both sexes,Secondary,0.9
+2022,Both sexes,University,18.6
+1978,Male,No Education,100.0
+1978,Male,Primary,52.7
+1978,Male,Post-Primary,45.3
+1978,Male,University,2.9
+1991,Male,No Education,100.0
+1991,Male,Primary,33.8
+1991,Male,Post-Primary,59.0
+1991,Male,Secondary,2.2
+1991,Male,University,3.0
+2002,Male,No Education,100.0
+2002,Male,Primary,27.0
+2002,Male,Post-Primary,63.7
+2002,Male,Secondary,1.6
+2002,Male,University,7.0
+2012,Male,No Education,100.0
+2012,Male,Primary,15.1
+2012,Male,Post-Primary,66.2
+2012,Male,Secondary,0.9
+2012,Male,University,13.2
+2022,Male,No Education,100.0
+2022,Male,Primary,11.2
+2022,Male,Post-Primary,65.1
+2022,Male,Secondary,1.0
+2022,Male,University,17.8
+1978,Female,No Education,100.0
+1978,Female,Primary,70.1
+1978,Female,Post-Primary,27.8
+1978,Female,University,2.1
+1991,Female,No Education,100.0
+1991,Female,Primary,46.1
+1991,Female,Post-Primary,48.3
+1991,Female,Secondary,2.3
+1991,Female,University,1.8
+2002,Female,No Education,100.0
+2002,Female,Primary,35.0
+2002,Female,Post-Primary,58.1
+2002,Female,Secondary,1.4
+2002,Female,University,5.3
+2012,Female,No Education,100.0
+2012,Female,Primary,21.9
+2012,Female,Post-Primary,62.2
+2012,Female,Secondary,0.8
+2012,Female,University,11.7
+2022,Female,No Education,100.0
+2022,Female,Primary,15.1
+2022,Female,Post-Primary,61.3
+2022,Female,Secondary,0.8
+2022,Female,University,19.2

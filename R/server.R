@@ -3727,7 +3727,10 @@ server <- function(input, output, session) {
     )
   }
   if (is.null(emp_data_once)) {
-    emp_data_once <- tryCatch(load_employment_data(), error = function(e) NULL)
+    emp_data_once <- tryCatch(load_employment_data(), error = function(e) {
+      message("[EMP] load_employment_data() error: ", conditionMessage(e))
+      NULL
+    })
   }
   if (is.null(emp_data_once)) {
     message("[EMP] Employment data not available in server (init).")
@@ -3870,8 +3873,8 @@ server <- function(input, output, session) {
                               color_map, ylab = "", pct_suffix = TRUE,
                               title_text = NULL) {
     if (is.null(ds) || nrow(ds) == 0) return(emp_no_data())
-    ds[[x_col]]     <- as.numeric(ds[[x_col]])
     ds[[y_col]]     <- as.numeric(ds[[y_col]])
+    ds[[x_col]]     <- as.character(ds[[x_col]])   # keep as label, NOT numeric
     ds[[color_col]] <- as.character(ds[[color_col]])
     grps <- unique(ds[[color_col]])
 
@@ -3898,6 +3901,9 @@ server <- function(input, output, session) {
     emp_plotly_theme(p, ylab = ylab) |>
       plotly::layout(
         title  = list(text = title_text, font = list(size = 12)),
+        xaxis  = list(categoryorder = "array",
+                      categoryarray = sort(unique(ds[[x_col]])),
+                      tickangle = -45, tickfont = list(size = 10)),
         yaxis  = list(ticksuffix = tick_sfx)
       )
   }
@@ -3989,7 +3995,7 @@ server <- function(input, output, session) {
     ds$time_lbl <- emp_mk_time_label(ds)
     ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
     emp_line_chart(ds, "time_lbl", "value", "group",
-      color_map = list("Youth (16-30)" = EMP_YOUTH, "Adult (31-64)" = EMP_ADULT),
+      color_map = list("Youth (16-30)" = EMP_YOUTH, "Adult (31+)" = EMP_ADULT),
       ylab = ylab)
   }
 
@@ -4000,17 +4006,19 @@ server <- function(input, output, session) {
 
   output$emp_youth_neet  <- plotly::renderPlotly({
     d <- emp_tbls(); f <- emp_filters()
-    if (is.null(d) || is.null(d$lf_youth)) return(emp_no_data())
-    ds <- d$lf_youth
+    if (is.null(d) || is.null(d$lf_sex)) return(emp_no_data())
+    ds <- d$lf_sex
     neet_ind <- "NEET rate-Youth  not in employment nor currently in education or training(%)"
     ds <- ds[ds$year >= f$yr[1] & ds$year <= f$yr[2] &
              ds$indicator == neet_ind, , drop = FALSE]
     if (f$quarter != "all") ds <- ds[ds$quarter == f$quarter, , drop = FALSE]
+    if (!is.null(f$sex) && length(f$sex) > 0)
+      ds <- ds[ds$sex %in% f$sex, , drop = FALSE]
     if (nrow(ds) == 0) return(emp_no_data("No NEET data for selected filters"))
     ds$time_lbl <- emp_mk_time_label(ds)
     ds <- ds[order(ds$year, ds$quarter), , drop = FALSE]
-    emp_line_chart(ds, "time_lbl", "value", "group",
-      color_map = list("Youth (16-30)" = EMP_YOUTH, "Adult (31-64)" = EMP_ADULT),
+    emp_line_chart(ds, "time_lbl", "value", "sex",
+      color_map = list(Male = EMP_MALE, Female = EMP_FEMALE),
       ylab = "NEET rate (%)")
   })
 
@@ -4303,6 +4311,574 @@ server <- function(input, output, session) {
         yaxis  = list(tickfont = list(size = 10)),
         margin = list(l = 190, r = 20, t = 20, b = 40)
       )
+  })
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # EDUCATION DASHBOARD
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # ── Education color guide (aligned with Demography & Employment) ─────────────
+  EDU_MALE    <- "#3B82F6"   # blue  — same as FI_MALE / EMP_MALE
+  EDU_FEMALE  <- "#E85A4F"   # red   — same as FI_FEMALE / EMP_FEMALE
+  EDU_BOTH    <- "#8B5CF6"   # purple — combined / both sexes
+  EDU_NOEDUC  <- "#F59E0B"   # amber  — no education
+  EDU_UNIV    <- "#2d6e44"   # green  — university / higher (CLR success)
+
+  EDU_LEVEL_ORDER <- c(
+    "No Education","No Primary Schooling","Some Primary","Primary","Primary Completed",
+    "Vocational/INGOBOKA","Lower Secondary","Upper Secondary",
+    "Short Cycle Tertiary","Bachelor","Masters","Doctoral","University/Higher"
+  )
+
+  edu_plotly_theme <- function(p, xlab = "", ylab = "", title = "") {
+    p |>
+      plotly::layout(
+        paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor  = "rgba(0,0,0,0)",
+        font    = list(family = "Inter, sans-serif", size = 11, color = "#374151"),
+        xaxis   = list(title = xlab, gridcolor = "#F3F4F6", zerolinecolor = "#E5E7EB"),
+        yaxis   = list(title = ylab, gridcolor = "#F3F4F6"),
+        legend  = list(orientation = "h", x = 0.01, y = -0.15, bgcolor = "rgba(0,0,0,0)"),
+        margin  = list(l = 10, r = 10, t = 30, b = 10),
+        hoverlabel = list(bgcolor = "#1E293B", font = list(color = "#F8FAFC", size = 12))
+      )
+  }
+
+  edu_no_data <- function(msg = "Education data not available.") {
+    plotly::plotly_empty() |>
+      plotly::layout(
+        paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
+        annotations  = list(list(
+          text = msg, x = 0.5, y = 0.5, xref = "paper", yref = "paper",
+          showarrow = FALSE, font = list(size = 13, color = "#9CA3AF")
+        ))
+      )
+  }
+
+  # ── load education tables once (same safe pattern as Employment) ────────────
+  edu_data_once <- NULL
+  if (exists(".education_data", envir = globalenv(), inherits = FALSE)) {
+    edu_data_once <- tryCatch(
+      get(".education_data", envir = globalenv(), inherits = FALSE),
+      error = function(e) NULL
+    )
+  }
+  if (is.null(edu_data_once)) {
+    edu_data_once <- tryCatch(load_education_data(), error = function(e) {
+      message("[EDU] load_education_data() error: ", conditionMessage(e))
+      NULL
+    })
+  }
+  if (is.null(edu_data_once)) {
+    message("[EDU] Education data not available in server (init).")
+  } else {
+    message("[EDU] Education data ready in server: ",
+            length(edu_data_once), " tables loaded.")
+  }
+
+  edu_tbls <- reactive({ edu_data_once })
+
+  # ── KPI card helper ─────────────────────────────────────────────────────────
+  edu_kpi_card <- function(title, icon_cls, male_val, female_val, suffix = "%", note = NULL) {
+    gap   <- if (!is.na(male_val) && !is.na(female_val)) female_val - male_val else NA
+    gap_lbl <- if (!is.na(gap)) sprintf("%+.1f pp", gap) else "N/A"
+    gap_cls <- if (!is.na(gap) && gap >= 0) "fi-kpi__gap--pos" else "fi-kpi__gap--neg"
+    shiny::div(class = "fi-kpi fi-kpi--edu",
+      shiny::div(class = "fi-kpi__icon", shiny::tags$i(class = icon_cls)),
+      shiny::div(class = "fi-kpi__body",
+        shiny::div(class = "fi-kpi__title", title),
+        shiny::div(class = "fi-kpi__vals",
+          shiny::span(class = "fi-kpi__val fi-kpi__val--male",
+            shiny::tags$i(class = "fas fa-mars fa-xs"),
+            sprintf(" %.1f%s", male_val, suffix)
+          ),
+          shiny::span(class = "fi-kpi__val fi-kpi__val--female",
+            shiny::tags$i(class = "fas fa-venus fa-xs"),
+            sprintf(" %.1f%s", female_val, suffix)
+          )
+        ),
+        shiny::div(class = paste("fi-kpi__gap", gap_cls), "Gap (F\u2212M): ", gap_lbl),
+        if (!is.null(note)) shiny::div(class = "fi-kpi__note", note)
+      )
+    )
+  }
+
+  output$edu_overview_kpis <- renderUI({
+    d <- edu_tbls()
+    if (is.null(d)) return(shiny::div(class = "fi-kpi-row"))
+
+    # Literacy rate national
+    lit <- if (!is.null(d$literacy_sex))
+      d$literacy_sex[d$literacy_sex$area == "Rwanda", ] else NULL
+    lit_m <- if (!is.null(lit)) lit$pct_literate[lit$sex == "Male"]   else NA
+    lit_f <- if (!is.null(lit)) lit$pct_literate[lit$sex == "Female"] else NA
+    lit_m <- if (length(lit_m) == 1) lit_m else NA
+    lit_f <- if (length(lit_f) == 1) lit_f else NA
+
+    # School attendance (age 6-11)
+    att <- if (!is.null(d$attendance_agegroup))
+      d$attendance_agegroup[d$attendance_agegroup$age_group == "6-11 years", ] else NULL
+    att_m <- if (!is.null(att)) att$pct[att$sex == "Male"]   else NA
+    att_f <- if (!is.null(att)) att$pct[att$sex == "Female"] else NA
+    att_m <- if (length(att_m) == 1) att_m else NA
+    att_f <- if (length(att_f) == 1) att_f else NA
+
+    # University/Higher (Rwanda)
+    uni <- if (!is.null(d$attainment_area))
+      d$attainment_area[d$attainment_area$area == "Rwanda" &
+                        d$attainment_area$level == "University/Higher", ] else NULL
+    uni_m <- if (!is.null(uni)) uni$pct[uni$sex == "Male"]   else NA
+    uni_f <- if (!is.null(uni)) uni$pct[uni$sex == "Female"] else NA
+    uni_m <- if (length(uni_m) == 1) uni_m else NA
+    uni_f <- if (length(uni_f) == 1) uni_f else NA
+
+    # No Education (Rwanda)
+    noed <- if (!is.null(d$attainment_area))
+      d$attainment_area[d$attainment_area$area == "Rwanda" &
+                        d$attainment_area$level == "No Education", ] else NULL
+    noed_m <- if (!is.null(noed)) noed$pct[noed$sex == "Male"]   else NA
+    noed_f <- if (!is.null(noed)) noed$pct[noed$sex == "Female"] else NA
+    noed_m <- if (length(noed_m) == 1) noed_m else NA
+    noed_f <- if (length(noed_f) == 1) noed_f else NA
+
+    shiny::div(class = "fi-kpi-row",
+      if (!any(is.na(c(lit_m, lit_f))))
+        edu_kpi_card("Literacy Rate (National)", "fas fa-book fa-lg", lit_m, lit_f),
+      if (!any(is.na(c(att_m, att_f))))
+        edu_kpi_card("School Attendance (6-11 yrs)", "fas fa-school fa-lg", att_m, att_f),
+      if (!any(is.na(c(uni_m, uni_f))))
+        edu_kpi_card("University/Higher (%)", "fas fa-graduation-cap fa-lg", uni_m, uni_f),
+      if (!any(is.na(c(noed_m, noed_f))))
+        edu_kpi_card("Never Attended School (%)", "fas fa-times-circle fa-lg", noed_m, noed_f)
+    )
+  })
+
+  # ── helpers ──────────────────────────────────────────────────────────────────
+  edu_ordered_levels <- function(ds, col = "level") {
+    lvls <- intersect(EDU_LEVEL_ORDER, unique(ds[[col]]))
+    extra <- setdiff(unique(ds[[col]]), lvls)
+    c(lvls, extra)
+  }
+
+  # ── OVERVIEW charts ──────────────────────────────────────────────────────────
+  output$edu_literacy_overview <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$literacy_sex)) return(edu_no_data())
+    ds <- d$literacy_sex[d$literacy_sex$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    ds$area <- factor(ds$area, levels = c("Rwanda","Urban","Rural"))
+    plotly::plot_ly(ds, x = ~area, y = ~pct_literate, color = ~sex, type = "bar",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>Literacy: %{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "Literacy rate (%)") |>
+      plotly::layout(barmode = "group", yaxis = list(range = c(0,100)))
+  })
+
+  output$edu_attendance_overview <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attendance_agegroup)) return(edu_no_data())
+    ds <- d$attendance_agegroup[d$attendance_agegroup$sex %in% c("Male","Female") &
+                                d$attendance_agegroup$age_group != "3-17 years (total)", ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    plotly::plot_ly(ds, x = ~age_group, y = ~pct, color = ~sex, type = "bar",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>Attendance: %{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "Attendance rate (%)") |>
+      plotly::layout(barmode = "group")
+  })
+
+  output$edu_attainment_overview <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attainment_area)) return(edu_no_data())
+    ds <- d$attainment_area[d$attainment_area$area == "Rwanda" &
+                            d$attainment_area$sex %in% c("Male","Female") &
+                            !d$attainment_area$level %in% c("Not stated","Pre-Nursery/ECD","Pre-primary"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    lvls <- edu_ordered_levels(ds)
+    ds$level <- factor(ds$level, levels = rev(lvls))
+    plotly::plot_ly(ds, y = ~level, x = ~pct, color = ~sex, type = "bar", orientation = "h",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{y}</b> \u00b7 %{fullData.name}<br>%{x:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(xlab = "% of population") |>
+      plotly::layout(barmode = "group",
+        margin = list(l = 160, r = 20, t = 20, b = 40))
+  })
+
+  # ── ATTAINMENT tab charts ────────────────────────────────────────────────────
+  output$edu_attainment_bar <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attainment_area)) return(edu_no_data())
+    area_sel <- input$edu_area %||% "Rwanda"
+    ds <- d$attainment_area[d$attainment_area$area == area_sel &
+                            d$attainment_area$sex %in% c("Male","Female") &
+                            !d$attainment_area$level %in% c("Not stated","Pre-Nursery/ECD","Pre-primary"), ]
+    if (nrow(ds) == 0) return(edu_no_data("No data for selected area"))
+    lvls <- edu_ordered_levels(ds)
+    ds$level <- factor(ds$level, levels = rev(lvls))
+    plotly::plot_ly(ds, y = ~level, x = ~pct, color = ~sex, type = "bar", orientation = "h",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{y}</b> \u00b7 %{fullData.name}<br>%{x:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(xlab = "% of population") |>
+      plotly::layout(barmode = "group",
+        margin = list(l = 170, r = 20, t = 20, b = 40))
+  })
+
+  edu_donut_chart <- function(d, sex_sel, title_text) {
+    if (is.null(d) || is.null(d$attainment_area)) return(edu_no_data())
+    area_sel <- isolate(input$edu_area %||% "Rwanda")
+    ds <- d$attainment_area[d$attainment_area$area == area_sel &
+                            d$attainment_area$sex == sex_sel &
+                            !d$attainment_area$level %in% c("Not stated"), ]
+    ds <- ds[!is.na(ds$pct) & ds$pct > 0, ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    lvls <- edu_ordered_levels(ds)
+    ds$level <- factor(ds$level, levels = lvls)
+    ds <- ds[order(ds$level), ]
+    pal <- c("#EF4444","#F97316","#EAB308","#22C55E","#06B6D4","#3B82F6","#8B5CF6","#EC4899","#6B7280")
+    plotly::plot_ly(ds, labels = ~level, values = ~pct, type = "pie",
+      hole = 0.52,
+      marker = list(colors = pal[seq_len(nrow(ds))],
+                    line = list(color = "#FFFFFF", width = 1.5)),
+      textinfo = "label+percent",
+      hovertemplate = "<b>%{label}</b><br>%{value:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme() |>
+      plotly::layout(
+        title  = list(text = title_text, font = list(size = 12)),
+        showlegend = FALSE,
+        margin = list(l = 10, r = 10, t = 40, b = 10)
+      )
+  }
+
+  output$edu_attainment_donut_m <- plotly::renderPlotly({
+    edu_donut_chart(edu_tbls(), "Male", "Male education distribution")
+  })
+  output$edu_attainment_donut_f <- plotly::renderPlotly({
+    edu_donut_chart(edu_tbls(), "Female", "Female education distribution")
+  })
+
+  output$edu_attainment_gap <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attainment_area)) return(edu_no_data())
+    area_sel <- input$edu_area %||% "Rwanda"
+    ds <- d$attainment_area[d$attainment_area$area == area_sel &
+                            d$attainment_area$sex %in% c("Male","Female") &
+                            !d$attainment_area$level %in% c("Not stated","Pre-Nursery/ECD","Pre-primary"), ]
+    ds_wide <- tidyr::pivot_wider(ds, names_from = sex, values_from = pct, id_cols = level)
+    if (!all(c("Male","Female") %in% names(ds_wide))) return(edu_no_data())
+    ds_wide$gap     <- ds_wide$Female - ds_wide$Male
+    ds_wide         <- ds_wide[!is.na(ds_wide$gap), ]
+    lvls            <- edu_ordered_levels(ds_wide)
+    ds_wide$level   <- factor(ds_wide$level, levels = lvls)
+    ds_wide         <- ds_wide[order(ds_wide$level), ]
+    ds_wide$bar_col <- ifelse(ds_wide$gap >= 0, EDU_FEMALE, EDU_MALE)
+    plotly::plot_ly(ds_wide, y = ~level, x = ~gap, type = "bar", orientation = "h",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{y}</b><br>F\u2212M: %{x:+.1f} pp<extra></extra>"
+    ) |> edu_plotly_theme(xlab = "Gender gap (Female % \u2212 Male %, pp)") |>
+      plotly::layout(
+        xaxis  = list(zeroline = TRUE, zerolinewidth = 1.5, zerolinecolor = "#9CA3AF"),
+        margin = list(l = 170, r = 20, t = 20, b = 40)
+      )
+  })
+
+  # ── TREND tab charts ─────────────────────────────────────────────────────────
+  output$edu_trend_line <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attainment_trend)) return(edu_no_data())
+    lv_sel <- input$edu_trend_level %||% "No Education"
+    ds <- d$attainment_trend[d$attainment_trend$level == lv_sel &
+                             d$attainment_trend$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data("No trend data for selected level"))
+    ds$year <- as.integer(ds$year)
+    plotly::plot_ly(ds, x = ~year, y = ~pct, color = ~sex, type = "scatter", mode = "lines+markers",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      line = list(width = 2.5),
+      marker = list(size = 8),
+      hovertemplate = "<b>%{fullData.name}</b> %{x}<br>%{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = paste0(lv_sel, " (%)")) |>
+      plotly::layout(
+        xaxis = list(tickvals = c(1978,1991,2002,2012,2022),
+                     ticktext = c("1978","1991","2002","2012","2022"))
+      )
+  })
+
+  output$edu_trend_heatmap <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attainment_trend)) return(edu_no_data())
+    ds <- d$attainment_trend[d$attainment_trend$sex == "Both sexes" &
+                             d$attainment_trend$level != "No Education", ]
+    if (nrow(ds) == 0) {
+      ds <- d$attainment_trend[d$attainment_trend$sex %in% c("Male","Female"), ]
+    }
+    if (nrow(ds) == 0) return(edu_no_data())
+    lvls <- c("University","Secondary","Post-Primary","Primary","No Education")
+    lvls_present <- intersect(lvls, unique(ds$level))
+    pal  <- c("#10B981","#3B82F6","#F59E0B","#6B7280","#EF4444")
+    names(pal) <- lvls
+    p <- plotly::plot_ly()
+    for (lv in lvls_present) {
+      sub <- ds[ds$level == lv, ]
+      sub <- sub[order(sub$year), ]
+      p <- plotly::add_trace(p, x = ~year, y = ~pct, data = sub,
+        type = "scatter", mode = "lines+markers",
+        fill = "tonexty", fillcolor = paste0(pal[[lv]], "40"),
+        line = list(color = pal[[lv]], width = 2),
+        marker = list(color = pal[[lv]], size = 6),
+        name = lv,
+        hovertemplate = paste0("<b>", lv, "</b> %{x}<br>%{y:.1f}%<extra></extra>")
+      )
+    }
+    p |> edu_plotly_theme(ylab = "% of population") |>
+      plotly::layout(
+        xaxis  = list(tickvals = c(1978,1991,2002,2012,2022)),
+        legend = list(orientation = "h", x = 0, y = -0.2)
+      )
+  })
+
+  # ── ATTENDANCE tab charts ────────────────────────────────────────────────────
+  output$edu_attendance_agegroup <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attendance_agegroup)) return(edu_no_data())
+    ds <- d$attendance_agegroup[d$attendance_agegroup$sex %in% c("Male","Female"), ]
+    ds <- ds[ds$age_group != "3-17 years (total)", ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    plotly::plot_ly(ds, x = ~age_group, y = ~pct, color = ~sex, type = "bar",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "Attendance rate (%)") |>
+      plotly::layout(barmode = "group", yaxis = list(range = c(0, 100)))
+  })
+
+  output$edu_attendance_preprimary <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attendance_3to5)) return(edu_no_data())
+    ds <- d$attendance_3to5[d$attendance_3to5$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    ds$area <- factor(ds$area, levels = c("Rwanda","Urban","Rural"))
+    plotly::plot_ly(ds, x = ~area, y = ~pct_attending, color = ~sex, type = "bar",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "Attendance rate (%)") |>
+      plotly::layout(barmode = "group")
+  })
+
+  output$edu_attendance_6to17 <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attendance_6to17)) return(edu_no_data())
+    ds <- d$attendance_6to17[d$attendance_6to17$sex %in% c("Male","Female") &
+                             d$attendance_6to17$area == "Rwanda", ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    ds_long <- tidyr::pivot_longer(ds, cols = c("pct_currently","pct_previously","pct_never"),
+                                   names_to = "status", values_to = "pct")
+    ds_long$status <- dplyr::recode(ds_long$status,
+      "pct_currently" = "Currently attending",
+      "pct_previously" = "Previously attended",
+      "pct_never" = "Never attended"
+    )
+    pal <- c("Currently attending" = "#10B981",
+             "Previously attended" = "#F59E0B",
+             "Never attended"      = "#EF4444")
+    plotly::plot_ly(ds_long, x = ~sex, y = ~pct, color = ~status, type = "bar",
+      colors = pal,
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "% of 6-17 yr population") |>
+      plotly::layout(barmode = "stack")
+  })
+
+  output$edu_attendance_status <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attendance_status)) return(edu_no_data())
+    ds <- d$attendance_status[d$attendance_status$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    ds$area <- factor(ds$area, levels = c("Rwanda","Urban","Rural"))
+    # Stacked: currently + no_longer + never
+    ds_long <- tidyr::pivot_longer(ds, cols = c("pct_currently","pct_no_longer","pct_never"),
+                                   names_to = "status", values_to = "pct")
+    ds_long$status <- dplyr::recode(ds_long$status,
+      "pct_currently" = "Currently attending",
+      "pct_no_longer" = "No longer attending",
+      "pct_never"     = "Never attended"
+    )
+    ds_long$xlab <- paste(ds_long$area, ds_long$sex, sep = " \u00b7 ")
+    pal <- c("Currently attending" = "#10B981",
+             "No longer attending" = "#F59E0B",
+             "Never attended"      = "#EF4444")
+    plotly::plot_ly(ds_long, x = ~xlab, y = ~pct, color = ~status, type = "bar",
+      colors = pal,
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "% of 3-17 yr population") |>
+      plotly::layout(barmode = "stack",
+        xaxis = list(tickangle = -30, tickfont = list(size = 9)))
+  })
+
+  # ── LITERACY tab charts ──────────────────────────────────────────────────────
+  output$edu_literacy_area <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$literacy_sex)) return(edu_no_data())
+    ds <- d$literacy_sex[d$literacy_sex$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    ds$area <- factor(ds$area, levels = c("Rwanda","Urban","Rural"))
+    plotly::plot_ly(ds, x = ~area, y = ~pct_literate, color = ~sex, type = "bar",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>Literacy: %{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "Literacy rate (%)") |>
+      plotly::layout(barmode = "group", yaxis = list(range = c(0,100)))
+  })
+
+  output$edu_literacy_gap_area <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$literacy_sex)) return(edu_no_data())
+    ds <- d$literacy_sex[d$literacy_sex$sex %in% c("Male","Female"), ]
+    ds_wide <- tidyr::pivot_wider(ds, names_from = sex, values_from = pct_literate, id_cols = area)
+    if (!all(c("Male","Female") %in% names(ds_wide))) return(edu_no_data())
+    ds_wide$gap <- ds_wide$Female - ds_wide$Male
+    ds_wide$area <- factor(ds_wide$area, levels = c("Rwanda","Urban","Rural"))
+    ds_wide$bar_col <- ifelse(ds_wide$gap >= 0, EDU_FEMALE, EDU_MALE)
+    plotly::plot_ly(ds_wide, x = ~area, y = ~gap, type = "bar",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{x}</b><br>F\u2212M gap: %{y:+.1f} pp<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "Literacy gap (F \u2212 M pp)") |>
+      plotly::layout(
+        shapes = list(list(type="line", x0=0, x1=1, xref="paper", y0=0, y1=0,
+                          line = list(color="#9CA3AF", width=1, dash="dot")))
+      )
+  })
+
+  output$edu_literacy_age <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$literacy_age)) return(edu_no_data())
+    ds <- d$literacy_age[d$literacy_age$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    # Order age groups sensibly
+    age_ord <- c("15-19","20-24","25-29","30-34","35-39","40-44","45-49",
+                 "50-54","55-59","60-64","65-69","70-74","75-79","80-84","85+")
+    ds$age_group <- factor(ds$age_group, levels = age_ord)
+    dm <- ds[ds$sex == "Male",   ]
+    df <- ds[ds$sex == "Female", ]
+    plotly::plot_ly(type = "scatter", mode = "lines+markers") |>
+      plotly::add_trace(data = dm, x = ~age_group, y = ~pct_literate,
+        name = "Male", fill = "tozeroy",
+        fillcolor = paste0(EDU_MALE, "25"), line = list(color = EDU_MALE, width = 2.5),
+        marker = list(color = EDU_MALE, size = 7),
+        hovertemplate = "<b>%{x}</b> \u00b7 Male<br>%{y:.1f}%<extra></extra>"
+      ) |>
+      plotly::add_trace(data = df, x = ~age_group, y = ~pct_literate,
+        name = "Female", fill = "tozeroy",
+        fillcolor = paste0(EDU_FEMALE, "25"), line = list(color = EDU_FEMALE, width = 2.5),
+        marker = list(color = EDU_FEMALE, size = 7),
+        hovertemplate = "<b>%{x}</b> \u00b7 Female<br>%{y:.1f}%<extra></extra>"
+      ) |>
+      edu_plotly_theme(ylab = "Literacy rate (%)") |>
+      plotly::layout(
+        xaxis = list(tickangle = -45, tickfont = list(size = 9)),
+        yaxis = list(range = c(0, 100))
+      )
+  })
+
+  # ── DIGITAL ACCESS tab charts ────────────────────────────────────────────────
+  output$edu_ict_province <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$ict_province)) return(edu_no_data())
+    age_sel <- input$edu_ict_age %||% "10+"
+    ds <- d$ict_province[d$ict_province$age_group == age_sel &
+                         d$ict_province$sex %in% c("Male","Female") &
+                         d$ict_province$province != "Rwanda", ]
+    if (nrow(ds) == 0) ds <- d$ict_province[d$ict_province$age_group == age_sel &
+                                             d$ict_province$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    prov_ord <- c("City of Kigali","Southern Province","Western Province",
+                  "Northern Province","Eastern Province","Rwanda")
+    ds$province <- factor(ds$province, levels = intersect(prov_ord, unique(ds$province)))
+    plotly::plot_ly(ds, x = ~pct_nat, y = ~province, color = ~sex, type = "bar",
+      orientation = "h",
+      colors = c(Male = EDU_MALE, Female = EDU_FEMALE),
+      hovertemplate = "<b>%{y}</b> \u00b7 %{fullData.name}<br>ICT: %{x:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(xlab = "ICT literate (%)") |>
+      plotly::layout(barmode = "group",
+        margin = list(l = 160, r = 20, t = 20, b = 40))
+  })
+
+  output$edu_mobile_sex <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$mobile_phone)) return(edu_no_data())
+    ds <- d$mobile_phone[d$mobile_phone$area == "Rwanda" &
+                         d$mobile_phone$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    # total per sex for pct
+    totals <- tapply(ds$count, ds$sex, sum, na.rm = TRUE)
+    ds$pct  <- ds$count / totals[ds$sex] * 100
+    pal <- c("Smartphone" = "#10B981",
+             "Basic Phone (with radio)" = "#3B82F6",
+             "Basic Phone (no radio)"   = "#F59E0B")
+    plotly::plot_ly(ds, x = ~sex, y = ~pct, color = ~phone_type, type = "bar",
+      colors = pal,
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "% of mobile owners") |>
+      plotly::layout(barmode = "stack")
+  })
+
+  output$edu_ict_urban_rural <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$ict_province)) return(edu_no_data())
+    age_sel <- input$edu_ict_age %||% "10+"
+    ds <- d$ict_province[d$ict_province$age_group == age_sel &
+                         d$ict_province$sex %in% c("Male","Female") &
+                         d$ict_province$province == "Rwanda", ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    ds_long <- tidyr::pivot_longer(ds, cols = c("pct_nat","pct_urb","pct_rur"),
+                                   names_to = "area_type", values_to = "pct")
+    ds_long$area_type <- dplyr::recode(ds_long$area_type,
+      "pct_nat" = "National", "pct_urb" = "Urban", "pct_rur" = "Rural")
+    ds_long$xlab <- paste(ds_long$area_type, ds_long$sex, sep = " \u00b7 ")
+    ds_long$bar_col <- ifelse(ds_long$sex == "Male", EDU_MALE, EDU_FEMALE)
+    plotly::plot_ly(ds_long, x = ~xlab, y = ~pct, type = "bar",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{x}</b><br>ICT: %{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "ICT literate (%)") |>
+      plotly::layout(xaxis = list(tickangle = -30, tickfont = list(size = 9)))
+  })
+
+  # ── DISABILITY tab charts ────────────────────────────────────────────────────
+  output$edu_disability_bar <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attainment_disability)) return(edu_no_data())
+    ds <- d$attainment_disability[
+      d$attainment_disability$sex %in% c("Male","Female") &
+      d$attainment_disability$disability %in% c("With disability","Without disability") &
+      !d$attainment_disability$level %in% c("Not stated","Pre-Nursery/ECD","Pre-primary"), ]
+    if (nrow(ds) == 0) return(edu_no_data())
+    ds$grp <- paste(ds$sex, "-", ds$disability)
+    lvls <- edu_ordered_levels(ds)
+    ds$level <- factor(ds$level, levels = rev(lvls))
+    grp_pal <- c(
+      "Male - With disability"      = "#93C5FD",
+      "Male - Without disability"   = EDU_MALE,
+      "Female - With disability"    = "#FBCFE8",
+      "Female - Without disability" = EDU_FEMALE
+    )
+    plotly::plot_ly(ds, y = ~level, x = ~pct, color = ~grp, type = "bar",
+      orientation = "h",
+      colors = grp_pal,
+      hovertemplate = "<b>%{y}</b> \u00b7 %{fullData.name}<br>%{x:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(xlab = "% of group") |>
+      plotly::layout(barmode = "group",
+        margin = list(l = 170, r = 20, t = 20, b = 40))
+  })
+
+  output$edu_disability_noedu <- plotly::renderPlotly({
+    d <- edu_tbls()
+    if (is.null(d) || is.null(d$attainment_disability)) return(edu_no_data())
+    ds <- d$attainment_disability[
+      d$attainment_disability$level == "No Education" &
+      d$attainment_disability$sex %in% c("Male","Female"), ]
+    if (nrow(ds) == 0) return(edu_no_data("No 'No Education' data for disability analysis"))
+    ds$xlab     <- paste(ds$sex, "-", ds$disability)
+    ds$bar_col  <- ifelse(ds$sex == "Male", EDU_MALE, EDU_FEMALE)
+    ds$alpha    <- ifelse(ds$disability == "With disability", 1, 0.55)
+    plotly::plot_ly(ds, x = ~xlab, y = ~pct, type = "bar",
+      marker = list(color = ~bar_col, opacity = ~alpha),
+      hovertemplate = "<b>%{x}</b><br>Never attended: %{y:.1f}%<extra></extra>"
+    ) |> edu_plotly_theme(ylab = "Never attended school (%)") |>
+      plotly::layout(xaxis = list(tickangle = -20, tickfont = list(size = 9)))
   })
 
 }

@@ -1,0 +1,55 @@
+area,sex,phone_type,count
+Rwanda,Both sexes,Smartphone,1126276.0
+Rwanda,Male,Smartphone,649234.0
+Rwanda,Female,Smartphone,477042.0
+Rwanda,Both sexes,Basic Phone (with radio),3458247.0
+Rwanda,Male,Basic Phone (with radio),1763043.0
+Rwanda,Female,Basic Phone (with radio),1695204.0
+Rwanda,Both sexes,Basic Phone (no radio),46987.0
+Rwanda,Male,Basic Phone (no radio),18789.0
+Rwanda,Female,Basic Phone (no radio),28198.0
+Urban,Both sexes,Smartphone,791671.0
+Urban,Male,Smartphone,435953.0
+Urban,Female,Smartphone,355718.0
+Urban,Both sexes,Basic Phone (with radio),980533.0
+Urban,Male,Basic Phone (with radio),468635.0
+Urban,Female,Basic Phone (with radio),511898.0
+Urban,Both sexes,Basic Phone (no radio),9516.0
+Urban,Male,Basic Phone (no radio),4307.0
+Urban,Female,Basic Phone (no radio),5209.0
+Rural,Both sexes,Smartphone,334605.0
+Rural,Male,Smartphone,213281.0
+Rural,Female,Smartphone,121324.0
+Rural,Both sexes,Basic Phone (with radio),2477714.0
+Rural,Male,Basic Phone (with radio),1294408.0
+Rural,Female,Basic Phone (with radio),1183306.0
+Rural,Both sexes,Basic Phone (no radio),37471.0
+Rural,Male,Basic Phone (no radio),14482.0
+Rural,Female,Basic Phone (no radio),22989.0
+Rwanda,Both sexes,Smartphone,24.3
+Rwanda,Male,Smartphone,26.7
+Rwanda,Female,Smartphone,21.7
+Rwanda,Both sexes,Basic Phone (with radio),74.7
+Rwanda,Male,Basic Phone (with radio),72.5
+Rwanda,Female,Basic Phone (with radio),77.0
+Rwanda,Both sexes,Basic Phone (no radio),1.0
+Rwanda,Male,Basic Phone (no radio),0.8
+Rwanda,Female,Basic Phone (no radio),1.3
+Urban,Both sexes,Smartphone,44.4
+Urban,Male,Smartphone,48.0
+Urban,Female,Smartphone,40.8
+Urban,Both sexes,Basic Phone (with radio),55.0
+Urban,Male,Basic Phone (with radio),51.6
+Urban,Female,Basic Phone (with radio),58.6
+Urban,Both sexes,Basic Phone (no radio),0.5
+Urban,Male,Basic Phone (no radio),0.5
+Urban,Female,Basic Phone (no radio),0.6
+Rural,Both sexes,Smartphone,11.7
+Rural,Male,Smartphone,14.0
+Rural,Female,Smartphone,9.1
+Rural,Both sexes,Basic Phone (with radio),86.9
+Rural,Male,Basic Phone (with radio),85.0
+Rural,Female,Basic Phone (with radio),89.1
+Rural,Both sexes,Basic Phone (no radio),1.3
+Rural,Male,Basic Phone (no radio),1.0
+Rural,Female,Basic Phone (no radio),1.7

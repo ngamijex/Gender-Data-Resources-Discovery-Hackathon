@@ -1,0 +1,73 @@
+area,sex,level,count,pct
+Rwanda,Both sexes,No Education,2004330.0,16.4
+Rwanda,Male,No Education,880393.0,14.9
+Rwanda,Female,No Education,1123937.0,17.8
+Rwanda,Both sexes,Pre-Nursery/ECD,245899.0,2.0
+Rwanda,Male,Pre-Nursery/ECD,120357.0,2.0
+Rwanda,Female,Pre-Nursery/ECD,125542.0,2.0
+Rwanda,Both sexes,Pre-primary,318532.0,2.6
+Rwanda,Male,Pre-primary,155968.0,2.6
+Rwanda,Female,Pre-primary,162564.0,2.6
+Rwanda,Both sexes,Primary,7139525.0,58.3
+Rwanda,Male,Primary,3543088.0,59.8
+Rwanda,Female,Primary,3596437.0,56.9
+Rwanda,Both sexes,Vocational/INGOBOKA,96357.0,0.8
+Rwanda,Male,Vocational/INGOBOKA,51720.0,0.9
+Rwanda,Female,Vocational/INGOBOKA,44637.0,0.7
+Rwanda,Both sexes,Lower Secondary,1154349.0,9.4
+Rwanda,Male,Lower Secondary,520274.0,8.8
+Rwanda,Female,Lower Secondary,634075.0,10.0
+Rwanda,Both sexes,Upper Secondary,850334.0,6.9
+Rwanda,Male,Upper Secondary,408754.0,6.9
+Rwanda,Female,Upper Secondary,441580.0,7.0
+Rwanda,Both sexes,University/Higher,434476.0,3.5
+Rwanda,Male,University/Higher,245384.0,4.1
+Rwanda,Female,University/Higher,189092.0,3.0
+Urban,Both sexes,No Education,389149.0,11.4
+Urban,Male,No Education,182717.0,10.7
+Urban,Female,No Education,206432.0,12.1
+Urban,Both sexes,Pre-Nursery/ECD,26809.0,0.8
+Urban,Male,Pre-Nursery/ECD,13095.0,0.8
+Urban,Female,Pre-Nursery/ECD,13714.0,0.8
+Urban,Both sexes,Pre-primary,123582.0,3.6
+Urban,Male,Pre-primary,61556.0,3.6
+Urban,Female,Pre-primary,62026.0,3.6
+Urban,Both sexes,Primary,1655811.0,48.5
+Urban,Male,Primary,836815.0,48.9
+Urban,Female,Primary,818996.0,48.0
+Urban,Both sexes,Vocational/INGOBOKA,33058.0,1.0
+Urban,Male,Vocational/INGOBOKA,18483.0,1.1
+Urban,Female,Vocational/INGOBOKA,14575.0,0.9
+Urban,Both sexes,Lower Secondary,417709.0,12.2
+Urban,Male,Lower Secondary,198759.0,11.6
+Urban,Female,Lower Secondary,218950.0,12.8
+Urban,Both sexes,Upper Secondary,444340.0,13.0
+Urban,Male,Upper Secondary,219581.0,12.8
+Urban,Female,Upper Secondary,224759.0,13.2
+Urban,Both sexes,University/Higher,325044.0,9.5
+Urban,Male,University/Higher,179938.0,10.5
+Urban,Female,University/Higher,145106.0,8.5
+Rural,Both sexes,No Education,1615181.0,18.3
+Rural,Male,No Education,697676.0,16.6
+Rural,Female,No Education,917505.0,19.9
+Rural,Both sexes,Pre-Nursery/ECD,219090.0,2.5
+Rural,Male,Pre-Nursery/ECD,107262.0,2.5
+Rural,Female,Pre-Nursery/ECD,111828.0,2.4
+Rural,Both sexes,Pre-primary,194950.0,2.2
+Rural,Male,Pre-primary,94412.0,2.2
+Rural,Female,Pre-primary,100538.0,2.2
+Rural,Both sexes,Primary,5483714.0,62.1
+Rural,Male,Primary,2706273.0,64.2
+Rural,Female,Primary,2777441.0,60.2
+Rural,Both sexes,Vocational/INGOBOKA,63299.0,0.7
+Rural,Male,Vocational/INGOBOKA,33237.0,0.8
+Rural,Female,Vocational/INGOBOKA,30062.0,0.7
+Rural,Both sexes,Lower Secondary,736640.0,8.3
+Rural,Male,Lower Secondary,321515.0,7.6
+Rural,Female,Lower Secondary,415125.0,9.0
+Rural,Both sexes,Upper Secondary,405994.0,4.6
+Rural,Male,Upper Secondary,189173.0,4.5
+Rural,Female,Upper Secondary,216821.0,4.7
+Rural,Both sexes,University/Higher,109432.0,1.2
+Rural,Male,University/Higher,65446.0,1.6
+Rural,Female,University/Higher,43986.0,1.0

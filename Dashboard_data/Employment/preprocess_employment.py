@@ -60,7 +60,8 @@ def parse_lf_indicators_sex():
     cur_start = None
     for i, row in df.iterrows():
         val = str(row[0]).strip()
-        if val in ("Male", "Female"):
+        col1 = str(row[1]).strip() if len(row) > 1 else ""
+        if val in ("Male", "Female") and col1 == "Period: Year/Quarter":
             if cur_sex and cur_start is not None:
                 sex_blocks[cur_sex] = (cur_start, i - 1)
             cur_sex = val
@@ -99,10 +100,13 @@ def parse_lf_indicators_youth():
     cur_start = None
     for i, row in df.iterrows():
         val = str(row[0]).strip()
-        if "Youth" in val or "Adult" in val:
+        # Only match the section header rows (col 1 has "Period: Year/Quarter")
+        col1 = str(row[1]).strip() if len(row) > 1 else ""
+        is_header = col1 == "Period: Year/Quarter"
+        if is_header and ("Youth" in val or "Adult" in val):
             if cur_grp and cur_start is not None:
                 group_blocks[cur_grp] = (cur_start, i - 1)
-            label = "Youth (16-30)" if "Youth" in val else "Adult (31-64)"
+            label = "Youth (16-30)" if "Youth" in val else "Adult (31+)"
             cur_grp = label
             cur_start = i + 1
     if cur_grp and cur_start is not None:

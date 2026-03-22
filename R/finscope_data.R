@@ -16,13 +16,12 @@ load_finscope_data <- function() {
     app_path <- tryCatch(getwd(), error = function(e) ".")
   }
 
-  rel <- file.path("dashboard_data", "Financial_Inclusion", "finscope_2024_clean.csv")
-
   # Search for the CSV:
-  #  1) Try a few parent-folder walkups from candidate roots.
-  #  2) If still not found, do a targeted recursive filename search inside roots
-  #     (useful for some deployed layouts where the relative path differs).
+  #  1) Dashboard_data/ vs dashboard_data/ (Linux case-sensitive deploys)
+  #  2) Parent-folder walkups from candidate roots.
+  #  3) Recursive filename search inside roots
   search_roots <- unique(c(app_path, getwd()))
+  path <- find_dashboard_path(search_roots, c("Financial_Inclusion", "finscope_2024_clean.csv"), is_dir = FALSE)
   find_csv <- function(roots, rel_path, max_up = 6) {
     for (r in roots) {
       r0 <- suppressWarnings(normalizePath(r, winslash = "/", mustWork = FALSE))
@@ -53,7 +52,7 @@ load_finscope_data <- function() {
       )
       if (length(matches) > 0) {
         # Prefer the expected folder if present
-        preferred <- matches[grepl("dashboard_data/.*/Financial_Inclusion", gsub("\\\\", "/", matches))]
+        preferred <- matches[grepl("(dashboard_data|Dashboard_data)/.*/Financial_Inclusion", gsub("\\\\", "/", matches))]
         if (length(preferred) > 0) return(preferred[[1]])
         return(matches[[1]])
       }
@@ -62,11 +61,17 @@ load_finscope_data <- function() {
     NULL
   }
 
-  path <- find_csv(search_roots, rel)
+  if (is.null(path)) {
+    path <- find_csv(search_roots, file.path("dashboard_data", "Financial_Inclusion", "finscope_2024_clean.csv"))
+  }
+  if (is.null(path)) {
+    path <- find_csv(search_roots, file.path("Dashboard_data", "Financial_Inclusion", "finscope_2024_clean.csv"))
+  }
 
   if (is.null(path)) {
     tried <- paste(search_roots, collapse = ", ")
-    message("[FI] Clean CSV not found. Tried roots: ", tried, " | rel: ", rel)
+    message("[FI] Clean CSV not found. Tried roots: ", tried,
+            " | Dashboard_data/.../Financial_Inclusion/finscope_2024_clean.csv")
     return(NULL)
   }
 

@@ -1,0 +1,82 @@
+area,sex,level,count,pct
+Rwanda,Both sexes,No Primary Schooling,1348326.0,16.3
+Rwanda,Male,No Primary Schooling,533327.0,13.5
+Rwanda,Female,No Primary Schooling,814999.0,18.8
+Rwanda,Both sexes,Some Primary,2810456.0,33.9
+Rwanda,Male,Some Primary,1411105.0,35.7
+Rwanda,Female,Some Primary,1399351.0,32.2
+Rwanda,Both sexes,Primary Completed,2493514.0,30.1
+Rwanda,Male,Primary Completed,1185562.0,30.0
+Rwanda,Female,Primary Completed,1307952.0,30.1
+Rwanda,Both sexes,Lower Secondary,629077.0,7.6
+Rwanda,Male,Lower Secondary,291741.0,7.4
+Rwanda,Female,Lower Secondary,337336.0,7.8
+Rwanda,Both sexes,Upper Secondary,665848.0,8.0
+Rwanda,Male,Upper Secondary,332287.0,8.4
+Rwanda,Female,Upper Secondary,333561.0,7.7
+Rwanda,Both sexes,Short Cycle Tertiary,69536.0,0.8
+Rwanda,Male,Short Cycle Tertiary,40441.0,1.0
+Rwanda,Female,Short Cycle Tertiary,29095.0,0.7
+Rwanda,Both sexes,Bachelor,229680.0,2.8
+Rwanda,Male,Bachelor,127431.0,3.2
+Rwanda,Female,Bachelor,102249.0,2.4
+Rwanda,Both sexes,Masters,33518.0,0.4
+Rwanda,Male,Masters,20133.0,0.5
+Rwanda,Female,Masters,13385.0,0.3
+Rwanda,Both sexes,Doctoral,5005.0,0.1
+Rwanda,Male,Doctoral,3197.0,0.1
+Rwanda,Female,Doctoral,1808.0,0.0
+Urban,Both sexes,No Primary Schooling,232991.0,9.6
+Urban,Male,No Primary Schooling,101355.0,8.3
+Urban,Female,No Primary Schooling,131636.0,10.9
+Urban,Both sexes,Some Primary,557506.0,22.9
+Urban,Male,Some Primary,283117.0,23.2
+Urban,Female,Some Primary,274389.0,22.6
+Urban,Both sexes,Primary Completed,717016.0,29.5
+Urban,Male,Primary Completed,359290.0,29.4
+Urban,Female,Primary Completed,357726.0,29.5
+Urban,Both sexes,Lower Secondary,278234.0,11.4
+Urban,Male,Lower Secondary,135892.0,11.1
+Urban,Female,Lower Secondary,142342.0,11.7
+Urban,Both sexes,Upper Secondary,386429.0,15.9
+Urban,Male,Upper Secondary,196264.0,16.1
+Urban,Female,Upper Secondary,190165.0,15.7
+Urban,Both sexes,Short Cycle Tertiary,49704.0,2.0
+Urban,Male,Short Cycle Tertiary,28140.0,2.3
+Urban,Female,Short Cycle Tertiary,21564.0,1.8
+Urban,Both sexes,Bachelor,178806.0,7.3
+Urban,Male,Bachelor,96782.0,7.9
+Urban,Female,Bachelor,82024.0,6.8
+Urban,Both sexes,Masters,26691.0,1.1
+Urban,Male,Masters,16221.0,1.3
+Urban,Female,Masters,10470.0,0.9
+Urban,Both sexes,Doctoral,3977.0,0.2
+Urban,Male,Doctoral,2529.0,0.2
+Urban,Female,Doctoral,1448.0,0.1
+Rural,Both sexes,No Primary Schooling,1115335.0,19.0
+Rural,Male,No Primary Schooling,431972.0,15.8
+Rural,Female,No Primary Schooling,683363.0,21.8
+Rural,Both sexes,Some Primary,2252950.0,38.5
+Rural,Male,Some Primary,1127988.0,41.4
+Rural,Female,Some Primary,1124962.0,35.9
+Rural,Both sexes,Primary Completed,1776498.0,30.3
+Rural,Male,Primary Completed,826272.0,30.3
+Rural,Female,Primary Completed,950226.0,30.4
+Rural,Both sexes,Lower Secondary,350843.0,6.0
+Rural,Male,Lower Secondary,155849.0,5.7
+Rural,Female,Lower Secondary,194994.0,6.2
+Rural,Both sexes,Upper Secondary,279419.0,4.8
+Rural,Male,Upper Secondary,136023.0,5.0
+Rural,Female,Upper Secondary,143396.0,4.6
+Rural,Both sexes,Short Cycle Tertiary,19832.0,0.3
+Rural,Male,Short Cycle Tertiary,12301.0,0.5
+Rural,Female,Short Cycle Tertiary,7531.0,0.2
+Rural,Both sexes,Bachelor,50874.0,0.9
+Rural,Male,Bachelor,30649.0,1.1
+Rural,Female,Bachelor,20225.0,0.6
+Rural,Both sexes,Masters,6827.0,0.1
+Rural,Male,Masters,3912.0,0.1
+Rural,Female,Masters,2915.0,0.1
+Rural,Both sexes,Doctoral,1028.0,0.0
+Rural,Male,Doctoral,668.0,0.0
+Rural,Female,Doctoral,360.0,0.0

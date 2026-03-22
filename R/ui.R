@@ -598,6 +598,17 @@ ui <- shiny::tagList(
             setTimeout(function() { $(window).trigger('resize'); }, 150);
           }
 
+          /* ── Education inner tab switching ── */
+          function switchEduTab(tab) {
+            var inp = document.getElementById('edu_tab');
+            if (inp) { inp.value = tab; $(inp).trigger('change'); }
+            document.querySelectorAll('.edu-sb__tabtn').forEach(function(b) {
+              b.classList.remove('edu-sb__tabtn--active');
+              if (b.getAttribute('data-tab') === tab) b.classList.add('edu-sb__tabtn--active');
+            });
+            setTimeout(function() { $(window).trigger('resize'); }, 150);
+          }
+
           /* ── Fullscreen sector panel ── */
           function openSectorPanel(sector) {
             var panel = document.getElementById('fi-fullscreen-panel');
@@ -611,6 +622,8 @@ ui <- shiny::tagList(
               switchDemoTab('overview');
             } else if (sector === 'emp') {
               switchEmpTab('overview');
+            } else if (sector === 'edu') {
+              switchEduTab('overview');
             } else {
               switchFiTab('overview');
             }
@@ -701,7 +714,12 @@ ui <- shiny::tagList(
                 `data-sector` = "emp",
                 "Employment"
               ),
-              shiny::span(class = "vizc-word vizc-word--s3 vizc-word--red vizc-word--soon", "Water")
+              shiny::span(class = "vizc-word vizc-word--s3 vizc-word--red vizc-word--soon", "Water"),
+              shiny::tags$span(
+                class         = "vizc-word vizc-word--s4 vizc-word--dark vizc-word--live",
+                `data-sector` = "edu",
+                "Education"
+              )
             )
           ),
 
@@ -713,8 +731,10 @@ ui <- shiny::tagList(
             shiny::tags$strong("Governance"),
             ", ",
             shiny::tags$strong("Demography"),
-            ", or ",
+            ", ",
             shiny::tags$strong("Employment"),
+            ", or ",
+            shiny::tags$strong("Education"),
             " to open the dashboard"
           )
         ),
@@ -747,6 +767,11 @@ ui <- shiny::tagList(
                     shiny::tags$i(class = "fas fa-briefcase fa-xs"), " Employment"
                   )
                 ),
+                shiny::conditionalPanel("input.active_sector == 'edu'",
+                  shiny::tags$span(class = "vizc-panel__sector-badge",
+                    shiny::tags$i(class = "fas fa-graduation-cap fa-xs"), " Education"
+                  )
+                ),
 
                 shiny::conditionalPanel("input.active_sector == 'finc'",
                   shiny::tags$span(class = "vizc-panel__bar-title",
@@ -766,6 +791,11 @@ ui <- shiny::tagList(
                 shiny::conditionalPanel("input.active_sector == 'emp'",
                   shiny::tags$span(class = "vizc-panel__bar-title",
                     "Rwanda Labour Force Survey (LFS) 2025 Q4 \u00b7 Gender & Employment"
+                  )
+                ),
+                shiny::conditionalPanel("input.active_sector == 'edu'",
+                  shiny::tags$span(class = "vizc-panel__bar-title",
+                    "Rwanda PHC 2022 \u00b7 Gender & Education"
                   )
                 )
               ),
@@ -976,8 +1006,49 @@ ui <- shiny::tagList(
                   shiny::textInput("fi_tab", NULL, value = "overview"),
                   shiny::textInput("gov_tab", NULL, value = "overview"),
                   shiny::textInput("demo_tab", NULL, value = "overview"),
-                  shiny::textInput("emp_tab", NULL, value = "overview")
+                  shiny::textInput("emp_tab", NULL, value = "overview"),
+                  shiny::textInput("edu_tab", NULL, value = "overview")
+                ),
+
+              shiny::conditionalPanel("input.active_sector == 'edu'",
+                shiny::div(class = "fi-sb__tabnav fi-sb__tabnav--edu",
+                  shiny::tags$button(
+                    class = "edu-sb__tabtn edu-sb__tabtn--active", `data-tab` = "overview",
+                    onclick = "switchEduTab('overview')",
+                    shiny::tags$i(class = "fas fa-tachometer-alt fa-fw"), " Overview"
+                  ),
+                  shiny::tags$button(
+                    class = "edu-sb__tabtn", `data-tab` = "attainment",
+                    onclick = "switchEduTab('attainment')",
+                    shiny::tags$i(class = "fas fa-certificate fa-fw"), " Attainment"
+                  ),
+                  shiny::tags$button(
+                    class = "edu-sb__tabtn", `data-tab` = "trend",
+                    onclick = "switchEduTab('trend')",
+                    shiny::tags$i(class = "fas fa-history fa-fw"), " Historical Trend"
+                  ),
+                  shiny::tags$button(
+                    class = "edu-sb__tabtn", `data-tab` = "attendance",
+                    onclick = "switchEduTab('attendance')",
+                    shiny::tags$i(class = "fas fa-school fa-fw"), " School Attendance"
+                  ),
+                  shiny::tags$button(
+                    class = "edu-sb__tabtn", `data-tab` = "literacy",
+                    onclick = "switchEduTab('literacy')",
+                    shiny::tags$i(class = "fas fa-book-open fa-fw"), " Literacy"
+                  ),
+                  shiny::tags$button(
+                    class = "edu-sb__tabtn", `data-tab` = "digital",
+                    onclick = "switchEduTab('digital')",
+                    shiny::tags$i(class = "fas fa-laptop fa-fw"), " Digital Access"
+                  ),
+                  shiny::tags$button(
+                    class = "edu-sb__tabtn", `data-tab` = "disability",
+                    onclick = "switchEduTab('disability')",
+                    shiny::tags$i(class = "fas fa-wheelchair fa-fw"), " Disability"
+                  )
                 )
+              )
 
               ), # end fi-sb
 
@@ -1901,8 +1972,6 @@ ui <- shiny::tagList(
                     )
                   )
                 )
-              )
-
               ) # end conditionalPanel demo
 
               # ─────────────────────────────────────────────────────────────
@@ -2234,6 +2303,345 @@ ui <- shiny::tagList(
 
                 ) # end emp fi-charts
               ) # end conditionalPanel emp
+
+              # ── EDUCATION DASHBOARD ──────────────────────────────────────────
+              ,shiny::conditionalPanel("input.active_sector == 'edu'",
+                shiny::div(class = "fi-charts",
+
+                  # ── OVERVIEW tab ────────────────────────────────────────────
+                  shiny::conditionalPanel("input.edu_tab == 'overview'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-tachometer-alt fa-xs"), " Overview"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Education Gender Dashboard \u00b7 Rwanda PHC 2022"
+                      )
+                    ),
+                    shiny::uiOutput("edu_overview_kpis"),
+                    shiny::div(class = "fi-chart-row",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-graduation-cap fa-xs"),
+                          " Literacy rate (%) by sex \u00b7 National, Urban, Rural"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_literacy_overview", height = "320px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-school fa-xs"),
+                          " School attendance rate (%) by age group \u00b7 Male vs Female"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_attendance_overview", height = "320px")
+                        )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                        " Education level attained (%) \u00b7 Male vs Female (Rwanda)"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_attainment_overview", height = "380px")
+                      )
+                    )
+                  ),
+
+                  # ── ATTAINMENT tab ──────────────────────────────────────────
+                  shiny::conditionalPanel("input.edu_tab == 'attainment'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-certificate fa-xs"), " Education Attainment"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Highest level of education attained \u00b7 by sex & area"
+                      )
+                    ),
+                    shiny::div(class = "fi-gbar",
+                      shiny::div(class = "fi-gbar__inner",
+                      shiny::div(class = "fi-gbar__filters",
+                      shiny::div(class = "fi-gbar__item",
+                        shiny::tags$label(class = "fi-gbar__lbl",
+                          shiny::tags$i(class = "fas fa-map-marker-alt fa-xs"), " Area"
+                        ),
+                        shiny::selectInput("edu_area", NULL,
+                          choices  = c("Rwanda", "Urban", "Rural"),
+                          selected = "Rwanda", width = "140px"
+                        )
+                      )
+                      )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                        " Education level (%) \u00b7 Male vs Female"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_attainment_bar", height = "400px")
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-row",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-pie fa-xs"),
+                          " Education distribution \u00b7 Male (donut)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_attainment_donut_m", height = "340px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-pie fa-xs"),
+                          " Education distribution \u00b7 Female (donut)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_attainment_donut_f", height = "340px")
+                        )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-arrows-alt-h fa-xs"),
+                        " Gender gap (Female % minus Male %) by education level"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_attainment_gap", height = "340px")
+                      )
+                    )
+                  ),
+
+                  # ── HISTORICAL TREND tab ────────────────────────────────────
+                  shiny::conditionalPanel("input.edu_tab == 'trend'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-history fa-xs"), " Historical Trend"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Education attainment progress 1978 \u2013 2022 \u00b7 by sex"
+                      )
+                    ),
+                    shiny::div(class = "fi-gbar",
+                      shiny::div(class = "fi-gbar__inner",
+                      shiny::div(class = "fi-gbar__filters",
+                      shiny::div(class = "fi-gbar__item",
+                        shiny::tags$label(class = "fi-gbar__lbl",
+                          shiny::tags$i(class = "fas fa-layer-group fa-xs"), " Level"
+                        ),
+                        shiny::selectInput("edu_trend_level", NULL,
+                          choices  = c("No Education","Primary","Post-Primary","Secondary","University"),
+                          selected = "No Education", width = "180px"
+                        )
+                      )
+                      )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                        " % of population at selected level \u00b7 1978-2022 \u00b7 Male vs Female"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_trend_line", height = "420px")
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-th fa-xs"),
+                        " All levels \u00b7 stacked area by sex over census years"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_trend_heatmap", height = "400px")
+                      )
+                    )
+                  ),
+
+                  # ── SCHOOL ATTENDANCE tab ───────────────────────────────────
+                  shiny::conditionalPanel("input.edu_tab == 'attendance'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-school fa-xs"), " School Attendance"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "School-age population attendance \u00b7 by sex, age group & area"
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                        " Current school attendance rate (%) by age group \u00b7 Male vs Female"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_attendance_agegroup", height = "380px")
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-row",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                          " Age 3-5 (pre-primary) attendance \u00b7 National/Urban/Rural"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_attendance_preprimary", height = "340px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                          " Age 6-17 attendance status \u00b7 Male vs Female"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_attendance_6to17", height = "340px")
+                        )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                        " Attendance status (3-17 yrs) breakdown \u00b7 Male vs Female by area"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_attendance_status", height = "380px")
+                      )
+                    )
+                  ),
+
+                  # ── LITERACY tab ────────────────────────────────────────────
+                  shiny::conditionalPanel("input.edu_tab == 'literacy'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-book-open fa-xs"), " Literacy"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Language literacy rates \u00b7 by sex, age group & area"
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-row",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                          " Literacy rate (%) by area \u00b7 Male vs Female"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_literacy_area", height = "320px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-balance-scale fa-xs"),
+                          " Literacy gender gap (Female \u2212 Male pp)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_literacy_gap_area", height = "320px")
+                        )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-area fa-xs"),
+                        " Literacy rate (%) by age group \u00b7 Male vs Female"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_literacy_age", height = "420px")
+                      ),
+                      shiny::div(class = "fi-data-note",
+                        shiny::tags$i(class = "fas fa-info-circle fa-xs"),
+                        " Older cohorts show the largest gender literacy gaps, reflecting historical inequalities in access to education."
+                      )
+                    )
+                  ),
+
+                  # ── DIGITAL ACCESS tab ──────────────────────────────────────
+                  shiny::conditionalPanel("input.edu_tab == 'digital'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-laptop fa-xs"), " Digital Access"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "ICT literacy & mobile access \u00b7 by sex & province"
+                      )
+                    ),
+                    shiny::div(class = "fi-gbar",
+                      shiny::div(class = "fi-gbar__inner",
+                      shiny::div(class = "fi-gbar__filters",
+                      shiny::div(class = "fi-gbar__item",
+                        shiny::tags$label(class = "fi-gbar__lbl",
+                          shiny::tags$i(class = "fas fa-users fa-xs"), " Age group"
+                        ),
+                        shiny::selectInput("edu_ict_age", NULL,
+                          choices = c("10+","16+","21+"), selected = "10+", width = "90px"
+                        )
+                      )
+                      )
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-map fa-xs"),
+                        " ICT literacy (%) by province \u00b7 Male vs Female"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_ict_province", height = "420px")
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-row",
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-mobile-alt fa-xs"),
+                          " Mobile phone type by sex (Rwanda)"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_mobile_sex", height = "360px")
+                        )
+                      ),
+                      shiny::div(class = "fi-chart-card",
+                        shiny::div(class = "fi-chart-title",
+                          shiny::tags$i(class = "fas fa-city fa-xs"),
+                          " ICT literacy Urban vs Rural \u00b7 Male vs Female"
+                        ),
+                        shinycssloaders::withSpinner(
+                          plotly::plotlyOutput("edu_ict_urban_rural", height = "360px")
+                        )
+                      )
+                    )
+                  ),
+
+                  # ── DISABILITY tab ──────────────────────────────────────────
+                  shiny::conditionalPanel("input.edu_tab == 'disability'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-wheelchair fa-xs"), " Disability & Education"
+                      ),
+                      shiny::tags$h3(class = "fi-tab-hdr__title",
+                        "Education attainment by disability status \u00b7 by sex"
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-chart-bar fa-xs"),
+                        " Education level (%) \u00b7 With vs Without disability by sex"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_disability_bar", height = "440px")
+                      )
+                    ),
+                    shiny::div(class = "fi-chart-card fi-chart-card--full",
+                      shiny::div(class = "fi-chart-title",
+                        shiny::tags$i(class = "fas fa-arrows-alt-h fa-xs"),
+                        " Never attended school (%) \u00b7 With vs Without disability \u00b7 by sex"
+                      ),
+                      shinycssloaders::withSpinner(
+                        plotly::plotlyOutput("edu_disability_noedu", height = "340px")
+                      )
+                    )
+                  )
+
+                ) # end edu fi-charts
+              ) # end conditionalPanel edu
 
               ) # end fi-main
 

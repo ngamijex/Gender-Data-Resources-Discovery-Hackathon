@@ -1,0 +1,19 @@
+province,sex,count_nat,count_urb,count_rur
+Rwanda,Both sexes,4631510.0,1781720.0,2849790.0
+Rwanda,Male,2431066.0,908895.0,1522171.0
+Rwanda,Female,2200444.0,872825.0,1327619.0
+City of Kigali,Both sexes,960818.0,881281.0,79537.0
+City of Kigali,Male,501304.0,459227.0,42077.0
+City of Kigali,Female,459514.0,422054.0,3746.0
+Southern Province,Both sexes,91963.0,191224.0,728406.0
+Southern Province,Male,469583.0,92972.0,376611.0
+Southern Province,Female,450047.0,98252.0,351795.0
+Western Province,Both sexes,912654.0,252366.0,660288.0
+Western Province,Male,480619.0,127201.0,353418.0
+Western Province,Female,432035.0,125165.0,30687.0
+Northern Province,Both sexes,691311.0,153658.0,537653.0
+Northern Province,Male,370719.0,75955.0,294764.0
+Northern Province,Female,320592.0,77703.0,242889.0
+Eastern Province,Both sexes,1147097.0,303191.0,843906.0
+Eastern Province,Male,608841.0,15354.0,455301.0
+Eastern Province,Female,538256.0,149651.0,388605.0

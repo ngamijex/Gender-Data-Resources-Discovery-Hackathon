@@ -14,7 +14,7 @@ norm_text <- function(x) {
   z
 }
 
-#' Add workbook metadata (full-sheet manifest, paths) for the Data library tab.
+#' Add workbook metadata (full-sheet manifest, paths) for loaders / optional tooling.
 attach_governance_meta <- function(obj, clean_dir, excel_source = NULL) {
   manifest <- NULL
   if (!is.null(clean_dir)) {
@@ -41,8 +41,6 @@ load_governance_data <- function() {
     cat(format(Sys.time(), "%Y-%m-%d %H:%M:%S"), " | ", msg, "\n", file = debug_path, append = TRUE)
   }
 
-  rel_dir <- file.path("dashboard_data", "Governance_data", "clean")
-
   # Robust base roots (deployed Shiny working directory can differ).
   app_path <- tryCatch(shiny::getCurrentAppPath(), error = function(e) NULL)
   if (is.null(app_path) || !dir.exists(app_path)) {
@@ -60,29 +58,7 @@ load_governance_data <- function() {
   search_roots <- unique(c(app_path, getwd(), project_root))
   logf("[GOV] app_path=", app_path, " | wd=", getwd(), " | project_root=", project_root)
 
-  find_dir <- function(roots, dir_rel, max_up = 6) {
-    for (r in roots) {
-      r0 <- suppressWarnings(normalizePath(r, winslash = "/", mustWork = FALSE))
-      if (is.na(r0) || r0 == "") next
-      cur <- r0
-      for (i in seq_len(max_up + 1)) {
-        cand <- file.path(cur, dir_rel)
-        if (dir.exists(cand)) return(cand)
-        parent <- dirname(cur)
-        if (identical(parent, cur)) break
-        cur <- parent
-      }
-    }
-    NULL
-  }
-
-  # Prefer direct path from project root (reliable in local + deployed).
-  clean_dir <- NULL
-  if (!is.null(project_root)) {
-    cand <- file.path(project_root, rel_dir)
-    if (dir.exists(cand)) clean_dir <- cand
-  }
-  if (is.null(clean_dir)) clean_dir <- find_dir(search_roots, rel_dir)
+  clean_dir <- find_dashboard_path(search_roots, c("Governance_data", "clean"), is_dir = TRUE)
   logf("[GOV] clean_dir=", ifelse(is.null(clean_dir), "NULL", clean_dir))
 
   # If not found, try to locate by filename within roots.
@@ -105,8 +81,7 @@ load_governance_data <- function() {
   }
 
   if (is.null(clean_dir)) {
-    message("[GOV] Governance clean CSV dir not found: rel=", rel_dir,
-            " — falling back to Excel extraction.")
+    message("[GOV] Governance clean CSV dir not found (Dashboard_data/.../Governance_data/clean) — falling back to Excel extraction.")
   }
 
   read_csv_rel <- function(fname) {
@@ -145,26 +120,11 @@ load_governance_data <- function() {
   }
 
   # ── Fallback: read from the original Excel ────────────────────────────────
-  rel_excel <- file.path("dashboard_data", "Governance_data", "Governace data -nisr.xlsx")
-
-  find_excel <- function(roots, rel_path, max_up = 6) {
-    for (r in roots) {
-      r0 <- suppressWarnings(normalizePath(r, winslash = "/", mustWork = FALSE))
-      if (is.na(r0) || r0 == "") next
-      cur <- r0
-      for (i in seq_len(max_up + 1)) {
-        cand <- file.path(cur, rel_path)
-        if (file.exists(cand)) return(cand)
-        parent <- dirname(cur)
-        if (identical(parent, cur)) break
-        cur <- parent
-      }
-    }
-    NULL
-  }
-
-  search_roots <- unique(c(app_path, getwd(), project_root))
-  excel_path <- find_excel(search_roots, rel_excel)
+  excel_path <- find_dashboard_path(
+    search_roots,
+    c("Governance_data", "Governace data -nisr.xlsx"),
+    is_dir = FALSE
+  )
   if (is.null(excel_path)) {
     # Last attempt: filename search
     for (r in search_roots) {
@@ -185,8 +145,8 @@ load_governance_data <- function() {
   }
 
   if (is.null(excel_path)) {
-    message("[GOV] Excel not found for fallback: ", rel_excel)
-    logf("[GOV] Excel not found for fallback: ", rel_excel)
+    message("[GOV] Excel not found for fallback: Governance_data/Governace data -nisr.xlsx")
+    logf("[GOV] Excel not found for fallback: Governance_data/Governace data -nisr.xlsx")
     return(NULL)
   }
   message("[GOV] Using Excel fallback at: ", excel_path)

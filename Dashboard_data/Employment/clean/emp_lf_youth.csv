@@ -1,251 +1,528 @@
 year,quarter,group,indicator,value
-2019,Q1,Adult (31-64),Labour force participation rate(%),54.23230600752464
-2019,Q2,Adult (31-64),Labour force participation rate(%),55.9455258814332
-2019,Q3,Adult (31-64),Labour force participation rate(%),53.953333228040975
-2019,Q4,Adult (31-64),Labour force participation rate(%),56.69131918670861
-2020,Q1,Adult (31-64),Labour force participation rate(%),57.598108195844155
-2020,Q2,Adult (31-64),Labour force participation rate(%),56.79906986503717
-2020,Q3,Adult (31-64),Labour force participation rate(%),57.9815785326147
-2020,Q4,Adult (31-64),Labour force participation rate(%),57.95578643975947
-2021,Q1,Adult (31-64),Labour force participation rate(%),54.42283420955795
-2021,Q2,Adult (31-64),Labour force participation rate(%),55.35081887605973
-2021,Q3,Adult (31-64),Labour force participation rate(%),54.215510643079426
-2021,Q4,Adult (31-64),Labour force participation rate(%),64.18960064618946
-2022,Q1,Adult (31-64),Labour force participation rate(%),58.54387516595906
-2022,Q2,Adult (31-64),Labour force participation rate(%),58.927622468910215
-2022,Q3,Adult (31-64),Labour force participation rate(%),59.61247976028706
-2022,Q4,Adult (31-64),Labour force participation rate(%),62.49881478819003
-2023,Q1,Adult (31-64),Labour force participation rate(%),60.41685803236045
-2023,Q2,Adult (31-64),Labour force participation rate(%),63.18273603274424
-2023,Q3,Adult (31-64),Labour force participation rate(%),60.708685154932056
-2023,Q4,Adult (31-64),Labour force participation rate(%),62.13563331860019
-2024,Q1,Adult (31-64),Labour force participation rate(%),64.00617245052288
-2024,Q2,Adult (31-64),Labour force participation rate(%),65.01130939117493
-2024,Q3,Adult (31-64),Labour force participation rate(%),63.45255123422555
-2024,Q4,Adult (31-64),Labour force participation rate(%),66.5610449440266
-2025,Q1,Adult (31-64),Labour force participation rate(%),66.42830884396669
-2025,Q2,Adult (31-64),Labour force participation rate(%),65.33187556700811
-2025,Q3,Adult (31-64),Labour force participation rate(%),64.90657847065883
-2025,Q4,Adult (31-64),Labour force participation rate(%),66.68030457503511
-2019,Q1,Adult (31-64),Employment-to-population ratio(%),48.33189747983378
-2019,Q2,Adult (31-64),Employment-to-population ratio(%),48.92910327087232
-2019,Q3,Adult (31-64),Employment-to-population ratio(%),47.25910050361406
-2019,Q4,Adult (31-64),Employment-to-population ratio(%),49.80567498344522
-2020,Q1,Adult (31-64),Employment-to-population ratio(%),51.93235304111616
-2020,Q2,Adult (31-64),Employment-to-population ratio(%),46.75734518471829
-2020,Q3,Adult (31-64),Employment-to-population ratio(%),51.00971843673598
-2020,Q4,Adult (31-64),Employment-to-population ratio(%),48.202467133182694
-2021,Q1,Adult (31-64),Employment-to-population ratio(%),46.97993049317912
-2021,Q2,Adult (31-64),Employment-to-population ratio(%),44.29987245357185
-2021,Q3,Adult (31-64),Employment-to-population ratio(%),46.11757532894339
-2021,Q4,Adult (31-64),Employment-to-population ratio(%),51.7800391640895
-2022,Q1,Adult (31-64),Employment-to-population ratio(%),50.88892526585593
-2022,Q2,Adult (31-64),Employment-to-population ratio(%),47.50613287007511
-2022,Q3,Adult (31-64),Employment-to-population ratio(%),50.6970741621804
-2022,Q4,Adult (31-64),Employment-to-population ratio(%),49.66713127046332
-2023,Q1,Adult (31-64),Employment-to-population ratio(%),51.29027125479445
-2023,Q2,Adult (31-64),Employment-to-population ratio(%),54.50571043282332
-2023,Q3,Adult (31-64),Employment-to-population ratio(%),51.077346152611085
-2023,Q4,Adult (31-64),Employment-to-population ratio(%),53.21554019663155
-2024,Q1,Adult (31-64),Employment-to-population ratio(%),57.396889781145305
-2024,Q2,Adult (31-64),Employment-to-population ratio(%),55.829436647024146
-2024,Q3,Adult (31-64),Employment-to-population ratio(%),55.61538265174464
-2024,Q4,Adult (31-64),Employment-to-population ratio(%),58.385194451571664
-2025,Q1,Adult (31-64),Employment-to-population ratio(%),60.093482289386976
-2025,Q2,Adult (31-64),Employment-to-population ratio(%),57.43803051848521
-2025,Q3,Adult (31-64),Employment-to-population ratio(%),57.33507160368712
-2025,Q4,Adult (31-64),Employment-to-population ratio(%),60.02006941048411
-2019,Q1,Adult (31-64),Out of labour force (Inactivity rate(%)),45.76769399247536
-2019,Q2,Adult (31-64),Out of labour force (Inactivity rate(%)),44.05447411856681
-2019,Q3,Adult (31-64),Out of labour force (Inactivity rate(%)),46.04666677195903
-2019,Q4,Adult (31-64),Out of labour force (Inactivity rate(%)),43.30868081329138
-2020,Q1,Adult (31-64),Out of labour force (Inactivity rate(%)),42.401891804155845
-2020,Q2,Adult (31-64),Out of labour force (Inactivity rate(%)),43.20093013496283
-2020,Q3,Adult (31-64),Out of labour force (Inactivity rate(%)),42.0184214673853
-2020,Q4,Adult (31-64),Out of labour force (Inactivity rate(%)),42.04421356024053
-2021,Q1,Adult (31-64),Out of labour force (Inactivity rate(%)),45.57716579044205
-2021,Q2,Adult (31-64),Out of labour force (Inactivity rate(%)),44.64918112394027
-2021,Q3,Adult (31-64),Out of labour force (Inactivity rate(%)),45.784489356920574
-2021,Q4,Adult (31-64),Out of labour force (Inactivity rate(%)),35.81039935381053
-2022,Q1,Adult (31-64),Out of labour force (Inactivity rate(%)),41.45612483404094
-2022,Q2,Adult (31-64),Out of labour force (Inactivity rate(%)),41.072377531089785
-2022,Q3,Adult (31-64),Out of labour force (Inactivity rate(%)),40.387520239712934
-2022,Q4,Adult (31-64),Out of labour force (Inactivity rate(%)),37.501185211809975
-2023,Q1,Adult (31-64),Out of labour force (Inactivity rate(%)),39.58314196763955
-2023,Q2,Adult (31-64),Out of labour force (Inactivity rate(%)),36.81726396725576
-2023,Q3,Adult (31-64),Out of labour force (Inactivity rate(%)),39.291314845067944
-2023,Q4,Adult (31-64),Out of labour force (Inactivity rate(%)),37.86436668139981
-2024,Q1,Adult (31-64),Out of labour force (Inactivity rate(%)),35.99382754947711
-2024,Q2,Adult (31-64),Out of labour force (Inactivity rate(%)),34.98869060882506
-2024,Q3,Adult (31-64),Out of labour force (Inactivity rate(%)),36.54744876577445
-2024,Q4,Adult (31-64),Out of labour force (Inactivity rate(%)),33.43895505597339
-2025,Q1,Adult (31-64),Out of labour force (Inactivity rate(%)),33.57169115603331
-2025,Q2,Adult (31-64),Out of labour force (Inactivity rate(%)),34.66812443299188
-2025,Q3,Adult (31-64),Out of labour force (Inactivity rate(%)),35.09342152934117
-2025,Q4,Adult (31-64),Out of labour force (Inactivity rate(%)),33.31969542496489
-2019,Q1,Adult (31-64),Time related underemployment rate(%),27.789085640059817
-2019,Q2,Adult (31-64),Time related underemployment rate(%),26.375045734652787
-2019,Q3,Adult (31-64),Time related underemployment rate(%),26.699346156304493
-2019,Q4,Adult (31-64),Time related underemployment rate(%),25.917858765845224
-2020,Q1,Adult (31-64),Time related underemployment rate(%),30.868805376483024
-2020,Q2,Adult (31-64),Time related underemployment rate(%),0.0
-2020,Q3,Adult (31-64),Time related underemployment rate(%),26.84654597894493
-2020,Q4,Adult (31-64),Time related underemployment rate(%),31.27821968578202
-2021,Q1,Adult (31-64),Time related underemployment rate(%),31.38411078894902
-2021,Q2,Adult (31-64),Time related underemployment rate(%),29.84543994967755
-2021,Q3,Adult (31-64),Time related underemployment rate(%),29.37644425906855
-2021,Q4,Adult (31-64),Time related underemployment rate(%),30.464270849611555
-2022,Q1,Adult (31-64),Time related underemployment rate(%),27.07060122577585
-2022,Q2,Adult (31-64),Time related underemployment rate(%),33.41436854655733
-2022,Q3,Adult (31-64),Time related underemployment rate(%),32.16983195670443
-2022,Q4,Adult (31-64),Time related underemployment rate(%),32.78576193202982
-2023,Q1,Adult (31-64),Time related underemployment rate(%),27.779088995268538
-2023,Q2,Adult (31-64),Time related underemployment rate(%),28.84007006805542
-2023,Q3,Adult (31-64),Time related underemployment rate(%),28.984473761686463
-2023,Q4,Adult (31-64),Time related underemployment rate(%),30.581978605264347
-2024,Q1,Adult (31-64),Time related underemployment rate(%),27.18637612634075
-2024,Q2,Adult (31-64),Time related underemployment rate(%),31.724260769487188
-2024,Q3,Adult (31-64),Time related underemployment rate(%),35.45832952603771
-2024,Q4,Adult (31-64),Time related underemployment rate(%),34.50430549587581
-2025,Q1,Adult (31-64),Time related underemployment rate(%),34.95308470756267
-2025,Q2,Adult (31-64),Time related underemployment rate(%),37.283667553433126
-2025,Q3,Adult (31-64),Time related underemployment rate(%),35.04594006543046
-2025,Q4,Adult (31-64),Time related underemployment rate(%),37.437670125483194
-2019,Q1,Adult (31-64),LU1-Unemployment rate (%),10.879877626579617
-2019,Q2,Adult (31-64),LU1-Unemployment rate (%),12.54152588614676
-2019,Q3,Adult (31-64),LU1-Unemployment rate (%),12.40744977911346
-2019,Q4,Adult (31-64),LU1-Unemployment rate (%),12.14585284315936
-2020,Q1,Adult (31-64),LU1-Unemployment rate (%),9.836703551900335
-2020,Q2,Adult (31-64),LU1-Unemployment rate (%),17.679382257807166
-2020,Q3,Adult (31-64),LU1-Unemployment rate (%),12.024267486882993
-2020,Q4,Adult (31-64),LU1-Unemployment rate (%),16.828896484244233
-2021,Q1,Adult (31-64),LU1-Unemployment rate (%),13.676067820576094
-2021,Q2,Adult (31-64),LU1-Unemployment rate (%),19.965280815868162
-2021,Q3,Adult (31-64),LU1-Unemployment rate (%),14.93656560287279
-2021,Q4,Adult (31-64),LU1-Unemployment rate (%),19.332666595794812
-2022,Q1,Adult (31-64),LU1-Unemployment rate (%),13.075577724233359
-2022,Q2,Adult (31-64),LU1-Unemployment rate (%),19.382233866402796
-2022,Q3,Adult (31-64),LU1-Unemployment rate (%),14.955602642193664
-2022,Q4,Adult (31-64),LU1-Unemployment rate (%),20.531082967274806
-2023,Q1,Adult (31-64),LU1-Unemployment rate (%),15.106026819000787
-2023,Q2,Adult (31-64),LU1-Unemployment rate (%),13.733222308423104
-2023,Q3,Adult (31-64),LU1-Unemployment rate (%),15.864845331011939
-2023,Q4,Adult (31-64),LU1-Unemployment rate (%),14.35584164118985
-2024,Q1,Adult (31-64),LU1-Unemployment rate (%),10.326008283789495
-2024,Q2,Adult (31-64),LU1-Unemployment rate (%),14.123500711088896
-2024,Q3,Adult (31-64),LU1-Unemployment rate (%),12.351226908987764
-2024,Q4,Adult (31-64),LU1-Unemployment rate (%),12.283236387485037
-2025,Q1,Adult (31-64),LU1-Unemployment rate (%),9.53633573520526
-2025,Q2,Adult (31-64),LU1-Unemployment rate (%),12.082685488535418
-2025,Q3,Adult (31-64),LU1-Unemployment rate (%),11.665238016504631
-2025,Q4,Adult (31-64),LU1-Unemployment rate (%),9.988309452090546
-2019,Q1,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),35.64554475545551
-2019,Q2,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),35.608738432505014
-2019,Q3,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),35.79408796972282
-2019,Q4,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),34.91576662320715
-2020,Q1,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),37.669036053485655
-2020,Q2,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),0.0
-2020,Q3,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),35.642712966330556
-2020,Q4,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),42.84333695699149
-2021,Q1,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),40.76806633314371
-2021,Q2,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),43.85199486886129
-2021,Q3,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),39.92517799339421
-2021,Q4,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),43.90738153121106
-2022,Q1,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),36.60654144631562
-2022,Q2,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),46.32015135628465
-2022,Q3,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),42.314242360791944
-2022,Q4,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),46.58557291558638
-2023,Q1,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),38.688799180569966
-2023,Q2,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),38.612621440127484
-2023,Q3,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),40.25097716039911
-2023,Q4,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),40.54751982713989
-2024,Q1,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),34.70511695926213
-2024,Q2,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),41.367185285209864
-2024,Q3,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),43.43001769712795
-2024,Q4,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),42.54929647544243
-2025,Q1,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),41.15617693524406
-2025,Q2,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),44.86148475289609
-2025,Q3,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),42.622985758181066
-2025,Q4,Adult (31-64),LU2-Combined rate of unemployment and time-related underemployment(%),43.68658923378763
-2019,Q1,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),36.49594811495055
-2019,Q2,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),36.8548243707045
-2019,Q3,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),38.63844856642995
-2019,Q4,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),35.78892364939677
-2020,Q1,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),34.14001028398669
-2020,Q2,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),17.679382257807166
-2020,Q3,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),35.681361765265564
-2020,Q4,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),37.933931826490685
-2021,Q1,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),36.134411607129664
-2021,Q2,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),40.40250368270174
-2021,Q3,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),37.666867139745364
-2021,Q4,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),33.22262467952929
-2022,Q1,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),29.972433686858366
-2022,Q2,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),37.135064381246224
-2022,Q3,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),33.2685156520609
-2022,Q4,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),35.811057096620004
-2023,Q1,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),33.7845609056691
-2023,Q2,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),30.632323290692888
-2023,Q3,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),34.584817951659986
-2023,Q4,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),32.467787665841065
-2024,Q1,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),27.774081434932857
-2024,Q2,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),31.286395671664774
-2024,Q3,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),32.63591546024855
-2024,Q4,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),29.489719792284554
-2025,Q1,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),27.952948507313963
-2025,Q2,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),31.427389366068226
-2025,Q3,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),31.993286750867604
-2025,Q4,Adult (31-64),LU3-Combined rate of unemployment and potential labour force(%),29.754620020909773
-2019,Q1,Adult (31-64),LU4 - Composite measure of labour underutilization(%),54.14314347819497
-2019,Q2,Adult (31-64),LU4 - Composite measure of labour underutilization(%),53.50939332215801
-2019,Q3,Adult (31-64),LU4 - Composite measure of labour underutilization(%),55.021581590557645
-2019,Q4,Adult (31-64),LU4 - Composite measure of labour underutilization(%),52.43105972997515
-2020,Q1,Adult (31-64),LU4 - Composite measure of labour underutilization(%),54.47020233039458
-2020,Q3,Adult (31-64),LU4 - Composite measure of labour underutilization(%),52.9486945519848
-2020,Q4,Adult (31-64),LU4 - Composite measure of labour underutilization(%),57.34709298012816
-2021,Q1,Adult (31-64),LU4 - Composite measure of labour underutilization(%),56.17805862436225
-2021,Q2,Adult (31-64),LU4 - Composite measure of labour underutilization(%),58.18963865759228
-2021,Q3,Adult (31-64),LU4 - Composite measure of labour underutilization(%),55.97812516936921
-2021,Q4,Adult (31-64),LU4 - Composite measure of labour underutilization(%),53.56586516341915
-2022,Q1,Adult (31-64),LU4 - Composite measure of labour underutilization(%),48.92931691160468
-2022,Q2,Adult (31-64),LU4 - Composite measure of labour underutilization(%),58.1409856554526
-2022,Q3,Adult (31-64),LU4 - Composite measure of labour underutilization(%),54.735922029007426
-2022,Q4,Adult (31-64),LU4 - Composite measure of labour underutilization(%),56.85589110360872
-2023,Q1,Adult (31-64),LU4 - Composite measure of labour underutilization(%),52.178606660291116
-2023,Q2,Adult (31-64),LU4 - Composite measure of labour underutilization(%),50.63800985823922
-2023,Q3,Adult (31-64),LU4 - Composite measure of labour underutilization(%),53.54506422862053
-2023,Q4,Adult (31-64),LU4 - Composite measure of labour underutilization(%),53.12047439353524
-2024,Q1,Adult (31-64),LU4 - Composite measure of labour underutilization(%),47.409691316736584
-2024,Q2,Adult (31-64),LU4 - Composite measure of labour underutilization(%),53.08527869289948
-2024,Q3,Adult (31-64),LU4 - Composite measure of labour underutilization(%),56.52209453855224
-2024,Q4,Adult (31-64),LU4 - Composite measure of labour underutilization(%),53.81880228115275
-2025,Q1,Adult (31-64),LU4 - Composite measure of labour underutilization(%),53.135615444853805
-2025,Q2,Adult (31-64),LU4 - Composite measure of labour underutilization(%),56.99377354753348
-2025,Q3,Adult (31-64),LU4 - Composite measure of labour underutilization(%),55.8268787166277
-2025,Q4,Adult (31-64),LU4 - Composite measure of labour underutilization(%),56.05285365587379
-2019,Q1,Adult (31-64),Median monthly earnings at main job,24000.0
-2019,Q2,Adult (31-64),Median monthly earnings at main job,26000.0
-2019,Q3,Adult (31-64),Median monthly earnings at main job,26000.0
-2019,Q4,Adult (31-64),Median monthly earnings at main job,26000.0
-2020,Q1,Adult (31-64),Median monthly earnings at main job,26000.0
-2020,Q3,Adult (31-64),Median monthly earnings at main job,26000.0
-2020,Q4,Adult (31-64),Median monthly earnings at main job,26000.0
-2021,Q1,Adult (31-64),Median monthly earnings at main job,26000.0
-2021,Q2,Adult (31-64),Median monthly earnings at main job,26000.0
-2021,Q3,Adult (31-64),Median monthly earnings at main job,26000.0
-2021,Q4,Adult (31-64),Median monthly earnings at main job,26000.0
-2022,Q1,Adult (31-64),Median monthly earnings at main job,26000.0
-2022,Q2,Adult (31-64),Median monthly earnings at main job,26000.0
-2022,Q3,Adult (31-64),Median monthly earnings at main job,26000.0
-2022,Q4,Adult (31-64),Median monthly earnings at main job,26000.0
-2023,Q1,Adult (31-64),Median monthly earnings at main job,26000.0
-2023,Q2,Adult (31-64),Median monthly earnings at main job,26000.0
-2023,Q3,Adult (31-64),Median monthly earnings at main job,31200.0
-2023,Q4,Adult (31-64),Median monthly earnings at main job,31200.0
-2024,Q1,Adult (31-64),Median monthly earnings at main job,31200.0
-2024,Q2,Adult (31-64),Median monthly earnings at main job,39000.0
-2024,Q3,Adult (31-64),Median monthly earnings at main job,39000.0
-2024,Q4,Adult (31-64),Median monthly earnings at main job,39000.0
-2025,Q1,Adult (31-64),Median monthly earnings at main job,39000.0
-2025,Q2,Adult (31-64),Median monthly earnings at main job,39000.0
-2025,Q3,Adult (31-64),Median monthly earnings at main job,39000.0
-2025,Q4,Adult (31-64),Median monthly earnings at main job,39000.0
+2019,Q1,Youth (16-30),Labour force participation rate(%),50.40470732172081
+2019,Q2,Youth (16-30),Labour force participation rate(%),51.093979542476006
+2019,Q3,Youth (16-30),Labour force participation rate(%),50.28731675830737
+2019,Q4,Youth (16-30),Labour force participation rate(%),52.96566594276734
+2020,Q1,Youth (16-30),Labour force participation rate(%),53.239634606960124
+2020,Q2,Youth (16-30),Labour force participation rate(%),53.345008465626044
+2020,Q3,Youth (16-30),Labour force participation rate(%),58.40458238910456
+2020,Q4,Youth (16-30),Labour force participation rate(%),54.92642647882702
+2021,Q1,Youth (16-30),Labour force participation rate(%),46.0738521114093
+2021,Q2,Youth (16-30),Labour force participation rate(%),50.74683208102733
+2021,Q3,Youth (16-30),Labour force participation rate(%),46.90493019929901
+2021,Q4,Youth (16-30),Labour force participation rate(%),57.298729831575855
+2022,Q1,Youth (16-30),Labour force participation rate(%),49.49834904732855
+2022,Q2,Youth (16-30),Labour force participation rate(%),48.7170080559549
+2022,Q3,Youth (16-30),Labour force participation rate(%),52.85844528667665
+2022,Q4,Youth (16-30),Labour force participation rate(%),53.986644059945384
+2023,Q1,Youth (16-30),Labour force participation rate(%),53.876057033722226
+2023,Q2,Youth (16-30),Labour force participation rate(%),54.68418124609209
+2023,Q3,Youth (16-30),Labour force participation rate(%),58.708961034260646
+2023,Q4,Youth (16-30),Labour force participation rate(%),57.32679012207392
+2024,Q1,Youth (16-30),Labour force participation rate(%),57.24134581612831
+2024,Q2,Youth (16-30),Labour force participation rate(%),59.38050347515533
+2024,Q3,Youth (16-30),Labour force participation rate(%),64.82862231146018
+2024,Q4,Youth (16-30),Labour force participation rate(%),60.859025489259935
+2025,Q1,Youth (16-30),Labour force participation rate(%),58.45069623274518
+2025,Q2,Youth (16-30),Labour force participation rate(%),58.01282764895702
+2025,Q3,Youth (16-30),Labour force participation rate(%),67.07089020866792
+2025,Q4,Youth (16-30),Labour force participation rate(%),60.80735947871586
+2019,Q1,Youth (16-30),Employment-to-population ratio(%),40.6788988692949
+2019,Q2,Youth (16-30),Employment-to-population ratio(%),41.795229863904886
+2019,Q3,Youth (16-30),Employment-to-population ratio(%),39.94368457134724
+2019,Q4,Youth (16-30),Employment-to-population ratio(%),42.60481432539285
+2020,Q1,Youth (16-30),Employment-to-population ratio(%),44.03974614089713
+2020,Q2,Youth (16-30),Employment-to-population ratio(%),38.85789931539595
+2020,Q3,Youth (16-30),Employment-to-population ratio(%),46.398570765922706
+2020,Q4,Youth (16-30),Employment-to-population ratio(%),41.4340947541167
+2021,Q1,Youth (16-30),Employment-to-population ratio(%),36.08831051408791
+2021,Q2,Youth (16-30),Employment-to-population ratio(%),36.54675071949736
+2021,Q3,Youth (16-30),Employment-to-population ratio(%),34.92861717612378
+2021,Q4,Youth (16-30),Employment-to-population ratio(%),40.243801814866025
+2022,Q1,Youth (16-30),Employment-to-population ratio(%),38.83949516501712
+2022,Q2,Youth (16-30),Employment-to-population ratio(%),34.90365368127048
+2022,Q3,Youth (16-30),Employment-to-population ratio(%),40.92042955556921
+2022,Q4,Youth (16-30),Employment-to-population ratio(%),37.9618460080441
+2023,Q1,Youth (16-30),Employment-to-population ratio(%),42.867231526817385
+2023,Q2,Youth (16-30),Employment-to-population ratio(%),42.90579410879307
+2023,Q3,Youth (16-30),Employment-to-population ratio(%),46.39518762638017
+2023,Q4,Youth (16-30),Employment-to-population ratio(%),45.68458269221201
+2024,Q1,Youth (16-30),Employment-to-population ratio(%),47.73524029396841
+2024,Q2,Youth (16-30),Employment-to-population ratio(%),47.208410049724165
+2024,Q3,Youth (16-30),Employment-to-population ratio(%),52.62345474344789
+2024,Q4,Youth (16-30),Employment-to-population ratio(%),49.9137911771997
+2025,Q1,Youth (16-30),Employment-to-population ratio(%),50.51777492391241
+2025,Q2,Youth (16-30),Employment-to-population ratio(%),49.054327011366624
+2025,Q3,Youth (16-30),Employment-to-population ratio(%),56.64638476668646
+2025,Q4,Youth (16-30),Employment-to-population ratio(%),52.21821511930438
+2019,Q1,Youth (16-30),Out of labour force (Inactivity rate(%)),49.59529267827919
+2019,Q2,Youth (16-30),Out of labour force (Inactivity rate(%)),48.906020457524
+2019,Q3,Youth (16-30),Out of labour force (Inactivity rate(%)),49.71268324169263
+2019,Q4,Youth (16-30),Out of labour force (Inactivity rate(%)),47.03433405723266
+2020,Q1,Youth (16-30),Out of labour force (Inactivity rate(%)),46.76036539303987
+2020,Q2,Youth (16-30),Out of labour force (Inactivity rate(%)),46.654991534373956
+2020,Q3,Youth (16-30),Out of labour force (Inactivity rate(%)),41.59541761089544
+2020,Q4,Youth (16-30),Out of labour force (Inactivity rate(%)),45.073573521172975
+2021,Q1,Youth (16-30),Out of labour force (Inactivity rate(%)),53.9261478885907
+2021,Q2,Youth (16-30),Out of labour force (Inactivity rate(%)),49.25316791897267
+2021,Q3,Youth (16-30),Out of labour force (Inactivity rate(%)),53.09506980070099
+2021,Q4,Youth (16-30),Out of labour force (Inactivity rate(%)),42.701270168424145
+2022,Q1,Youth (16-30),Out of labour force (Inactivity rate(%)),50.50165095267145
+2022,Q2,Youth (16-30),Out of labour force (Inactivity rate(%)),51.2829919440451
+2022,Q3,Youth (16-30),Out of labour force (Inactivity rate(%)),47.14155471332335
+2022,Q4,Youth (16-30),Out of labour force (Inactivity rate(%)),46.013355940054616
+2023,Q1,Youth (16-30),Out of labour force (Inactivity rate(%)),46.123942966277774
+2023,Q2,Youth (16-30),Out of labour force (Inactivity rate(%)),45.31581875390791
+2023,Q3,Youth (16-30),Out of labour force (Inactivity rate(%)),41.291038965739354
+2023,Q4,Youth (16-30),Out of labour force (Inactivity rate(%)),42.67320987792608
+2024,Q1,Youth (16-30),Out of labour force (Inactivity rate(%)),42.75865418387169
+2024,Q2,Youth (16-30),Out of labour force (Inactivity rate(%)),40.61949652484467
+2024,Q3,Youth (16-30),Out of labour force (Inactivity rate(%)),35.17137768853983
+2024,Q4,Youth (16-30),Out of labour force (Inactivity rate(%)),39.140974510740065
+2025,Q1,Youth (16-30),Out of labour force (Inactivity rate(%)),41.54930376725482
+2025,Q2,Youth (16-30),Out of labour force (Inactivity rate(%)),41.98717235104298
+2025,Q3,Youth (16-30),Out of labour force (Inactivity rate(%)),32.92910979133209
+2025,Q4,Youth (16-30),Out of labour force (Inactivity rate(%)),39.19264052128414
+2019,Q1,Youth (16-30),Time related underemployment rate(%),30.463431901594845
+2019,Q2,Youth (16-30),Time related underemployment rate(%),26.620051068391465
+2019,Q3,Youth (16-30),Time related underemployment rate(%),27.542863734547076
+2019,Q4,Youth (16-30),Time related underemployment rate(%),24.780444820003442
+2020,Q1,Youth (16-30),Time related underemployment rate(%),34.46287346538933
+2020,Q2,Youth (16-30),Time related underemployment rate(%),0.0
+2020,Q3,Youth (16-30),Time related underemployment rate(%),28.85274392973059
+2020,Q4,Youth (16-30),Time related underemployment rate(%),33.892924009177236
+2021,Q1,Youth (16-30),Time related underemployment rate(%),33.46730324054937
+2021,Q2,Youth (16-30),Time related underemployment rate(%),33.49969754453448
+2021,Q3,Youth (16-30),Time related underemployment rate(%),31.390391204540773
+2021,Q4,Youth (16-30),Time related underemployment rate(%),31.721554062842866
+2022,Q1,Youth (16-30),Time related underemployment rate(%),30.544615715621074
+2022,Q2,Youth (16-30),Time related underemployment rate(%),30.946699652059603
+2022,Q3,Youth (16-30),Time related underemployment rate(%),36.14831899029843
+2022,Q4,Youth (16-30),Time related underemployment rate(%),31.63876935644769
+2023,Q1,Youth (16-30),Time related underemployment rate(%),29.453200688392684
+2023,Q2,Youth (16-30),Time related underemployment rate(%),29.433416249624457
+2023,Q3,Youth (16-30),Time related underemployment rate(%),31.11919713914231
+2023,Q4,Youth (16-30),Time related underemployment rate(%),29.947963106636674
+2024,Q1,Youth (16-30),Time related underemployment rate(%),29.390759721658743
+2024,Q2,Youth (16-30),Time related underemployment rate(%),31.57610580612217
+2024,Q3,Youth (16-30),Time related underemployment rate(%),35.83289839935842
+2024,Q4,Youth (16-30),Time related underemployment rate(%),34.88343501984321
+2025,Q1,Youth (16-30),Time related underemployment rate(%),35.05469965458073
+2025,Q2,Youth (16-30),Time related underemployment rate(%),36.047097724155755
+2025,Q3,Youth (16-30),Time related underemployment rate(%),35.87021178350134
+2025,Q4,Youth (16-30),Time related underemployment rate(%),36.73861247259692
+2019,Q1,Youth (16-30),LU1-Unemployment rate (%),19.295436813765164
+2019,Q2,Youth (16-30),LU1-Unemployment rate (%),18.19930598837144
+2019,Q3,Youth (16-30),LU1-Unemployment rate (%),20.569067617335893
+2019,Q4,Youth (16-30),LU1-Unemployment rate (%),19.561448785652995
+2020,Q1,Youth (16-30),LU1-Unemployment rate (%),17.280149523904267
+2020,Q2,Youth (16-30),LU1-Unemployment rate (%),27.157384668080354
+2020,Q3,Youth (16-30),LU1-Unemployment rate (%),20.55662609347171
+2020,Q4,Youth (16-30),LU1-Unemployment rate (%),24.564371996622288
+2021,Q1,Youth (16-30),LU1-Unemployment rate (%),21.672903696386758
+2021,Q2,Youth (16-30),LU1-Unemployment rate (%),27.982202591201627
+2021,Q3,Youth (16-30),LU1-Unemployment rate (%),25.533164578409735
+2021,Q4,Youth (16-30),LU1-Unemployment rate (%),29.764932079369235
+2022,Q1,Youth (16-30),LU1-Unemployment rate (%),21.53375635239837
+2022,Q2,Youth (16-30),LU1-Unemployment rate (%),28.354274874226302
+2022,Q3,Youth (16-30),LU1-Unemployment rate (%),22.584878662930535
+2022,Q4,Youth (16-30),LU1-Unemployment rate (%),29.682893484002744
+2023,Q1,Youth (16-30),LU1-Unemployment rate (%),20.433613952138646
+2023,Q2,Youth (16-30),LU1-Unemployment rate (%),21.53892930076692
+2023,Q3,Youth (16-30),LU1-Unemployment rate (%),20.974265582207387
+2023,Q4,Youth (16-30),LU1-Unemployment rate (%),20.308493472372234
+2024,Q1,Youth (16-30),LU1-Unemployment rate (%),16.607061533276283
+2024,Q2,Youth (16-30),LU1-Unemployment rate (%),20.498467869212234
+2024,Q3,Youth (16-30),LU1-Unemployment rate (%),18.826819285738082
+2024,Q4,Youth (16-30),LU1-Unemployment rate (%),17.984570446320724
+2025,Q1,Youth (16-30),LU1-Unemployment rate (%),13.571987709512687
+2025,Q2,Youth (16-30),LU1-Unemployment rate (%),15.442275442595932
+2025,Q3,Youth (16-30),LU1-Unemployment rate (%),15.542518385471261
+2025,Q4,Youth (16-30),LU1-Unemployment rate (%),14.125172401899636
+2019,Q1,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),43.8808164614834
+2019,Q2,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),39.9746925085656
+2019,Q3,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),42.446621086573295
+2019,Q4,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),39.49447958333446
+2020,Q1,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),45.78778692424039
+2020,Q2,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),0.0
+2020,Q3,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),43.47821933586073
+2020,Q4,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),50.13171207165272
+2021,Q1,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),47.886870535834134
+2021,Q2,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),52.107946901384665
+2021,Q3,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),48.908595534888455
+2021,Q4,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),52.04458712088653
+2022,Q1,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),45.50096894104122
+2022,Q2,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),50.52626224243969
+2022,Q3,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),50.56914367058099
+2022,Q4,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),51.93036063272677
+2023,Q1,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),43.86846131531653
+2023,Q2,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),44.632702833584325
+2023,Q3,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),45.566439666335306
+2023,Q4,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),44.17447644638915
+2024,Q1,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),41.11687970286178
+2024,Q2,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),45.60195577231799
+2024,Q3,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),47.913522658607164
+2024,Q4,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),46.59436952092372
+2025,Q1,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),43.86906783536713
+2025,Q2,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),45.92288104712583
+2025,Q3,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),45.83759590761443
+2025,Q4,Youth (16-30),LU2-Combined rate of unemployment and time-related underemployment(%),45.674392524676435
+2019,Q1,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),42.72581525372299
+2019,Q2,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),41.502795975546086
+2019,Q3,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),43.9940966666602
+2019,Q4,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),42.742405283093305
+2020,Q1,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),39.89107412720979
+2020,Q2,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),27.157384668080354
+2020,Q3,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),43.843359740493185
+2020,Q4,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),43.60759923807734
+2021,Q1,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),44.14548539498684
+2021,Q2,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),43.317319226313856
+2021,Q3,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),49.27419222261222
+2021,Q4,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),42.787715745989814
+2022,Q1,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),39.92536368377168
+2022,Q2,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),45.92345122002302
+2022,Q3,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),42.43537970426305
+2022,Q4,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),44.27841375660458
+2023,Q1,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),39.567828757787574
+2023,Q2,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),38.95144882119331
+2023,Q3,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),40.2235064145293
+2023,Q4,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),36.68758882191363
+2024,Q1,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),32.813394799973246
+2024,Q2,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),34.435958660029954
+2024,Q3,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),37.466538884032765
+2024,Q4,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),33.36840455552578
+2025,Q1,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),29.889836941375307
+2025,Q2,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),33.00842810558927
+2025,Q3,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),34.23340554153184
+2025,Q4,Youth (16-30),LU3-Combined rate of unemployment and potential labour force(%),32.22867732486646
+2019,Q1,Youth (16-30),LU4 - Composite measure of labour underutilization(%),60.17349752109872
+2019,Q2,Youth (16-30),LU4 - Composite measure of labour underutilization(%),57.07478156043686
+2019,Q3,Youth (16-30),LU4 - Composite measure of labour underutilization(%),59.41972630506414
+2019,Q4,Youth (16-30),LU4 - Composite measure of labour underutilization(%),56.93109194717758
+2020,Q1,Youth (16-30),LU4 - Composite measure of labour underutilization(%),60.60633719215416
+2020,Q3,Youth (16-30),LU4 - Composite measure of labour underutilization(%),60.04609135410868
+2020,Q4,Youth (16-30),LU4 - Composite measure of labour underutilization(%),62.72063277526648
+2021,Q1,Youth (16-30),LU4 - Composite measure of labour underutilization(%),62.83848517138353
+2021,Q2,Youth (16-30),LU4 - Composite measure of labour underutilization(%),62.30584584563271
+2021,Q3,Youth (16-30),LU4 - Composite measure of labour underutilization(%),65.19722172559761
+2021,Q4,Youth (16-30),LU4 - Composite measure of labour underutilization(%),60.93634142621299
+2022,Q1,Youth (16-30),LU4 - Composite measure of labour underutilization(%),58.27493048912056
+2022,Q2,Youth (16-30),LU4 - Composite measure of labour underutilization(%),62.658358353161994
+2022,Q3,Youth (16-30),LU4 - Composite measure of labour underutilization(%),63.24402227432011
+2022,Q4,Youth (16-30),LU4 - Composite measure of labour underutilization(%),61.90803790990654
+2023,Q1,Youth (16-30),LU4 - Composite measure of labour underutilization(%),57.36703743410953
+2023,Q2,Youth (16-30),LU4 - Composite measure of labour underutilization(%),56.9201230040165
+2023,Q3,Youth (16-30),LU4 - Composite measure of labour underutilization(%),58.825471296258684
+2023,Q4,Youth (16-30),LU4 - Composite measure of labour underutilization(%),55.64836636344905
+2024,Q1,Youth (16-30),LU4 - Composite measure of labour underutilization(%),52.560048499452584
+2024,Q2,Youth (16-30),LU4 - Composite measure of labour underutilization(%),55.138529724308576
+2024,Q3,Youth (16-30),LU4 - Composite measure of labour underutilization(%),59.87409047131961
+2024,Q4,Youth (16-30),LU4 - Composite measure of labour underutilization(%),56.611793855083754
+2025,Q1,Youth (16-30),LU4 - Composite measure of labour underutilization(%),54.466744028913006
+2025,Q2,Youth (16-30),LU4 - Composite measure of labour underutilization(%),57.15694549331557
+2025,Q3,Youth (16-30),LU4 - Composite measure of labour underutilization(%),57.824022256580825
+2025,Q4,Youth (16-30),LU4 - Composite measure of labour underutilization(%),57.126920930036974
+2019,Q1,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),34.38732129381896
+2019,Q2,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),32.77785949233816
+2019,Q3,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),35.70038875036537
+2019,Q4,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),34.44182716309909
+2020,Q1,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),34.17071893109924
+2020,Q3,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),31.81104548047341
+2020,Q4,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),34.737038126898625
+2021,Q1,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),34.378188703931144
+2021,Q2,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),37.197242721164635
+2021,Q3,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),37.71319787990954
+2021,Q4,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),33.02787372526502
+2022,Q1,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),31.603079201977224
+2022,Q2,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),36.23023141803243
+2022,Q3,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),32.89365791705811
+2022,Q4,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),36.02664273851771
+2023,Q1,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),33.18449771412091
+2023,Q2,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),33.65044311183286
+2023,Q3,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),33.1907181324535
+2023,Q4,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),31.464716745769476
+2024,Q1,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),28.421622991983043
+2024,Q2,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),28.994632427632418
+2024,Q3,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),29.13118674245647
+2024,Q4,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),27.258419121384655
+2025,Q1,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),23.022515032631492
+2025,Q2,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),24.6421982571202
+2025,Q3,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),25.59335719804968
+2025,Q4,Youth (16-30),NEET rate-Youth  not in employment nor currently in education or training(%),24.88968564151604
+2019,Q1,Youth (16-30),Median monthly earnings at main job,20800.0
+2019,Q2,Youth (16-30),Median monthly earnings at main job,20000.0
+2019,Q3,Youth (16-30),Median monthly earnings at main job,20800.0
+2019,Q4,Youth (16-30),Median monthly earnings at main job,20800.0
+2020,Q1,Youth (16-30),Median monthly earnings at main job,20800.0
+2020,Q3,Youth (16-30),Median monthly earnings at main job,26000.0
+2020,Q4,Youth (16-30),Median monthly earnings at main job,26000.0
+2021,Q1,Youth (16-30),Median monthly earnings at main job,20800.0
+2021,Q2,Youth (16-30),Median monthly earnings at main job,24000.0
+2021,Q3,Youth (16-30),Median monthly earnings at main job,26000.0
+2021,Q4,Youth (16-30),Median monthly earnings at main job,26000.0
+2022,Q1,Youth (16-30),Median monthly earnings at main job,24000.0
+2022,Q2,Youth (16-30),Median monthly earnings at main job,26000.0
+2022,Q3,Youth (16-30),Median monthly earnings at main job,26000.0
+2022,Q4,Youth (16-30),Median monthly earnings at main job,26000.0
+2023,Q1,Youth (16-30),Median monthly earnings at main job,26000.0
+2023,Q2,Youth (16-30),Median monthly earnings at main job,26000.0
+2023,Q3,Youth (16-30),Median monthly earnings at main job,30000.0
+2023,Q4,Youth (16-30),Median monthly earnings at main job,26000.0
+2024,Q1,Youth (16-30),Median monthly earnings at main job,31200.0
+2024,Q2,Youth (16-30),Median monthly earnings at main job,31200.0
+2024,Q3,Youth (16-30),Median monthly earnings at main job,39000.0
+2024,Q4,Youth (16-30),Median monthly earnings at main job,31200.0
+2025,Q1,Youth (16-30),Median monthly earnings at main job,31500.0
+2025,Q2,Youth (16-30),Median monthly earnings at main job,39000.0
+2025,Q3,Youth (16-30),Median monthly earnings at main job,39000.0
+2025,Q4,Youth (16-30),Median monthly earnings at main job,39000.0
+2019,Q1,Adult (31+),Labour force participation rate(%),54.23230600752464
+2019,Q2,Adult (31+),Labour force participation rate(%),55.9455258814332
+2019,Q3,Adult (31+),Labour force participation rate(%),53.953333228040975
+2019,Q4,Adult (31+),Labour force participation rate(%),56.69131918670861
+2020,Q1,Adult (31+),Labour force participation rate(%),57.598108195844155
+2020,Q2,Adult (31+),Labour force participation rate(%),56.79906986503717
+2020,Q3,Adult (31+),Labour force participation rate(%),57.9815785326147
+2020,Q4,Adult (31+),Labour force participation rate(%),57.95578643975947
+2021,Q1,Adult (31+),Labour force participation rate(%),54.42283420955795
+2021,Q2,Adult (31+),Labour force participation rate(%),55.35081887605973
+2021,Q3,Adult (31+),Labour force participation rate(%),54.215510643079426
+2021,Q4,Adult (31+),Labour force participation rate(%),64.18960064618946
+2022,Q1,Adult (31+),Labour force participation rate(%),58.54387516595906
+2022,Q2,Adult (31+),Labour force participation rate(%),58.927622468910215
+2022,Q3,Adult (31+),Labour force participation rate(%),59.61247976028706
+2022,Q4,Adult (31+),Labour force participation rate(%),62.49881478819003
+2023,Q1,Adult (31+),Labour force participation rate(%),60.41685803236045
+2023,Q2,Adult (31+),Labour force participation rate(%),63.18273603274424
+2023,Q3,Adult (31+),Labour force participation rate(%),60.708685154932056
+2023,Q4,Adult (31+),Labour force participation rate(%),62.13563331860019
+2024,Q1,Adult (31+),Labour force participation rate(%),64.00617245052288
+2024,Q2,Adult (31+),Labour force participation rate(%),65.01130939117493
+2024,Q3,Adult (31+),Labour force participation rate(%),63.45255123422555
+2024,Q4,Adult (31+),Labour force participation rate(%),66.5610449440266
+2025,Q1,Adult (31+),Labour force participation rate(%),66.42830884396669
+2025,Q2,Adult (31+),Labour force participation rate(%),65.33187556700811
+2025,Q3,Adult (31+),Labour force participation rate(%),64.90657847065883
+2025,Q4,Adult (31+),Labour force participation rate(%),66.68030457503511
+2019,Q1,Adult (31+),Employment-to-population ratio(%),48.33189747983378
+2019,Q2,Adult (31+),Employment-to-population ratio(%),48.92910327087232
+2019,Q3,Adult (31+),Employment-to-population ratio(%),47.25910050361406
+2019,Q4,Adult (31+),Employment-to-population ratio(%),49.80567498344522
+2020,Q1,Adult (31+),Employment-to-population ratio(%),51.93235304111616
+2020,Q2,Adult (31+),Employment-to-population ratio(%),46.75734518471829
+2020,Q3,Adult (31+),Employment-to-population ratio(%),51.00971843673598
+2020,Q4,Adult (31+),Employment-to-population ratio(%),48.202467133182694
+2021,Q1,Adult (31+),Employment-to-population ratio(%),46.97993049317912
+2021,Q2,Adult (31+),Employment-to-population ratio(%),44.29987245357185
+2021,Q3,Adult (31+),Employment-to-population ratio(%),46.11757532894339
+2021,Q4,Adult (31+),Employment-to-population ratio(%),51.7800391640895
+2022,Q1,Adult (31+),Employment-to-population ratio(%),50.88892526585593
+2022,Q2,Adult (31+),Employment-to-population ratio(%),47.50613287007511
+2022,Q3,Adult (31+),Employment-to-population ratio(%),50.6970741621804
+2022,Q4,Adult (31+),Employment-to-population ratio(%),49.66713127046332
+2023,Q1,Adult (31+),Employment-to-population ratio(%),51.29027125479445
+2023,Q2,Adult (31+),Employment-to-population ratio(%),54.50571043282332
+2023,Q3,Adult (31+),Employment-to-population ratio(%),51.077346152611085
+2023,Q4,Adult (31+),Employment-to-population ratio(%),53.21554019663155
+2024,Q1,Adult (31+),Employment-to-population ratio(%),57.396889781145305
+2024,Q2,Adult (31+),Employment-to-population ratio(%),55.829436647024146
+2024,Q3,Adult (31+),Employment-to-population ratio(%),55.61538265174464
+2024,Q4,Adult (31+),Employment-to-population ratio(%),58.385194451571664
+2025,Q1,Adult (31+),Employment-to-population ratio(%),60.093482289386976
+2025,Q2,Adult (31+),Employment-to-population ratio(%),57.43803051848521
+2025,Q3,Adult (31+),Employment-to-population ratio(%),57.33507160368712
+2025,Q4,Adult (31+),Employment-to-population ratio(%),60.02006941048411
+2019,Q1,Adult (31+),Out of labour force (Inactivity rate(%)),45.76769399247536
+2019,Q2,Adult (31+),Out of labour force (Inactivity rate(%)),44.05447411856681
+2019,Q3,Adult (31+),Out of labour force (Inactivity rate(%)),46.04666677195903
+2019,Q4,Adult (31+),Out of labour force (Inactivity rate(%)),43.30868081329138
+2020,Q1,Adult (31+),Out of labour force (Inactivity rate(%)),42.401891804155845
+2020,Q2,Adult (31+),Out of labour force (Inactivity rate(%)),43.20093013496283
+2020,Q3,Adult (31+),Out of labour force (Inactivity rate(%)),42.0184214673853
+2020,Q4,Adult (31+),Out of labour force (Inactivity rate(%)),42.04421356024053
+2021,Q1,Adult (31+),Out of labour force (Inactivity rate(%)),45.57716579044205
+2021,Q2,Adult (31+),Out of labour force (Inactivity rate(%)),44.64918112394027
+2021,Q3,Adult (31+),Out of labour force (Inactivity rate(%)),45.784489356920574
+2021,Q4,Adult (31+),Out of labour force (Inactivity rate(%)),35.81039935381053
+2022,Q1,Adult (31+),Out of labour force (Inactivity rate(%)),41.45612483404094
+2022,Q2,Adult (31+),Out of labour force (Inactivity rate(%)),41.072377531089785
+2022,Q3,Adult (31+),Out of labour force (Inactivity rate(%)),40.387520239712934
+2022,Q4,Adult (31+),Out of labour force (Inactivity rate(%)),37.501185211809975
+2023,Q1,Adult (31+),Out of labour force (Inactivity rate(%)),39.58314196763955
+2023,Q2,Adult (31+),Out of labour force (Inactivity rate(%)),36.81726396725576
+2023,Q3,Adult (31+),Out of labour force (Inactivity rate(%)),39.291314845067944
+2023,Q4,Adult (31+),Out of labour force (Inactivity rate(%)),37.86436668139981
+2024,Q1,Adult (31+),Out of labour force (Inactivity rate(%)),35.99382754947711
+2024,Q2,Adult (31+),Out of labour force (Inactivity rate(%)),34.98869060882506
+2024,Q3,Adult (31+),Out of labour force (Inactivity rate(%)),36.54744876577445
+2024,Q4,Adult (31+),Out of labour force (Inactivity rate(%)),33.43895505597339
+2025,Q1,Adult (31+),Out of labour force (Inactivity rate(%)),33.57169115603331
+2025,Q2,Adult (31+),Out of labour force (Inactivity rate(%)),34.66812443299188
+2025,Q3,Adult (31+),Out of labour force (Inactivity rate(%)),35.09342152934117
+2025,Q4,Adult (31+),Out of labour force (Inactivity rate(%)),33.31969542496489
+2019,Q1,Adult (31+),Time related underemployment rate(%),27.789085640059817
+2019,Q2,Adult (31+),Time related underemployment rate(%),26.375045734652787
+2019,Q3,Adult (31+),Time related underemployment rate(%),26.699346156304493
+2019,Q4,Adult (31+),Time related underemployment rate(%),25.917858765845224
+2020,Q1,Adult (31+),Time related underemployment rate(%),30.868805376483024
+2020,Q2,Adult (31+),Time related underemployment rate(%),0.0
+2020,Q3,Adult (31+),Time related underemployment rate(%),26.84654597894493
+2020,Q4,Adult (31+),Time related underemployment rate(%),31.27821968578202
+2021,Q1,Adult (31+),Time related underemployment rate(%),31.38411078894902
+2021,Q2,Adult (31+),Time related underemployment rate(%),29.84543994967755
+2021,Q3,Adult (31+),Time related underemployment rate(%),29.37644425906855
+2021,Q4,Adult (31+),Time related underemployment rate(%),30.464270849611555
+2022,Q1,Adult (31+),Time related underemployment rate(%),27.07060122577585
+2022,Q2,Adult (31+),Time related underemployment rate(%),33.41436854655733
+2022,Q3,Adult (31+),Time related underemployment rate(%),32.16983195670443
+2022,Q4,Adult (31+),Time related underemployment rate(%),32.78576193202982
+2023,Q1,Adult (31+),Time related underemployment rate(%),27.779088995268538
+2023,Q2,Adult (31+),Time related underemployment rate(%),28.84007006805542
+2023,Q3,Adult (31+),Time related underemployment rate(%),28.984473761686463
+2023,Q4,Adult (31+),Time related underemployment rate(%),30.581978605264347
+2024,Q1,Adult (31+),Time related underemployment rate(%),27.18637612634075
+2024,Q2,Adult (31+),Time related underemployment rate(%),31.724260769487188
+2024,Q3,Adult (31+),Time related underemployment rate(%),35.45832952603771
+2024,Q4,Adult (31+),Time related underemployment rate(%),34.50430549587581
+2025,Q1,Adult (31+),Time related underemployment rate(%),34.95308470756267
+2025,Q2,Adult (31+),Time related underemployment rate(%),37.283667553433126
+2025,Q3,Adult (31+),Time related underemployment rate(%),35.04594006543046
+2025,Q4,Adult (31+),Time related underemployment rate(%),37.437670125483194
+2019,Q1,Adult (31+),LU1-Unemployment rate (%),10.879877626579617
+2019,Q2,Adult (31+),LU1-Unemployment rate (%),12.54152588614676
+2019,Q3,Adult (31+),LU1-Unemployment rate (%),12.40744977911346
+2019,Q4,Adult (31+),LU1-Unemployment rate (%),12.14585284315936
+2020,Q1,Adult (31+),LU1-Unemployment rate (%),9.836703551900335
+2020,Q2,Adult (31+),LU1-Unemployment rate (%),17.679382257807166
+2020,Q3,Adult (31+),LU1-Unemployment rate (%),12.024267486882993
+2020,Q4,Adult (31+),LU1-Unemployment rate (%),16.828896484244233
+2021,Q1,Adult (31+),LU1-Unemployment rate (%),13.676067820576094
+2021,Q2,Adult (31+),LU1-Unemployment rate (%),19.965280815868162
+2021,Q3,Adult (31+),LU1-Unemployment rate (%),14.93656560287279
+2021,Q4,Adult (31+),LU1-Unemployment rate (%),19.332666595794812
+2022,Q1,Adult (31+),LU1-Unemployment rate (%),13.075577724233359
+2022,Q2,Adult (31+),LU1-Unemployment rate (%),19.382233866402796
+2022,Q3,Adult (31+),LU1-Unemployment rate (%),14.955602642193664
+2022,Q4,Adult (31+),LU1-Unemployment rate (%),20.531082967274806
+2023,Q1,Adult (31+),LU1-Unemployment rate (%),15.106026819000787
+2023,Q2,Adult (31+),LU1-Unemployment rate (%),13.733222308423104
+2023,Q3,Adult (31+),LU1-Unemployment rate (%),15.864845331011939
+2023,Q4,Adult (31+),LU1-Unemployment rate (%),14.35584164118985
+2024,Q1,Adult (31+),LU1-Unemployment rate (%),10.326008283789495
+2024,Q2,Adult (31+),LU1-Unemployment rate (%),14.123500711088896
+2024,Q3,Adult (31+),LU1-Unemployment rate (%),12.351226908987764
+2024,Q4,Adult (31+),LU1-Unemployment rate (%),12.283236387485037
+2025,Q1,Adult (31+),LU1-Unemployment rate (%),9.53633573520526
+2025,Q2,Adult (31+),LU1-Unemployment rate (%),12.082685488535418
+2025,Q3,Adult (31+),LU1-Unemployment rate (%),11.665238016504631
+2025,Q4,Adult (31+),LU1-Unemployment rate (%),9.988309452090546
+2019,Q1,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),35.64554475545551
+2019,Q2,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),35.608738432505014
+2019,Q3,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),35.79408796972282
+2019,Q4,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),34.91576662320715
+2020,Q1,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),37.669036053485655
+2020,Q2,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),0.0
+2020,Q3,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),35.642712966330556
+2020,Q4,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),42.84333695699149
+2021,Q1,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),40.76806633314371
+2021,Q2,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),43.85199486886129
+2021,Q3,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),39.92517799339421
+2021,Q4,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),43.90738153121106
+2022,Q1,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),36.60654144631562
+2022,Q2,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),46.32015135628465
+2022,Q3,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),42.314242360791944
+2022,Q4,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),46.58557291558638
+2023,Q1,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),38.688799180569966
+2023,Q2,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),38.612621440127484
+2023,Q3,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),40.25097716039911
+2023,Q4,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),40.54751982713989
+2024,Q1,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),34.70511695926213
+2024,Q2,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),41.367185285209864
+2024,Q3,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),43.43001769712795
+2024,Q4,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),42.54929647544243
+2025,Q1,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),41.15617693524406
+2025,Q2,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),44.86148475289609
+2025,Q3,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),42.622985758181066
+2025,Q4,Adult (31+),LU2-Combined rate of unemployment and time-related underemployment(%),43.68658923378763
+2019,Q1,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),36.49594811495055
+2019,Q2,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),36.8548243707045
+2019,Q3,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),38.63844856642995
+2019,Q4,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),35.78892364939677
+2020,Q1,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),34.14001028398669
+2020,Q2,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),17.679382257807166
+2020,Q3,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),35.681361765265564
+2020,Q4,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),37.933931826490685
+2021,Q1,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),36.134411607129664
+2021,Q2,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),40.40250368270174
+2021,Q3,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),37.666867139745364
+2021,Q4,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),33.22262467952929
+2022,Q1,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),29.972433686858366
+2022,Q2,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),37.135064381246224
+2022,Q3,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),33.2685156520609
+2022,Q4,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),35.811057096620004
+2023,Q1,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),33.7845609056691
+2023,Q2,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),30.632323290692888
+2023,Q3,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),34.584817951659986
+2023,Q4,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),32.467787665841065
+2024,Q1,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),27.774081434932857
+2024,Q2,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),31.286395671664774
+2024,Q3,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),32.63591546024855
+2024,Q4,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),29.489719792284554
+2025,Q1,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),27.952948507313963
+2025,Q2,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),31.427389366068226
+2025,Q3,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),31.993286750867604
+2025,Q4,Adult (31+),LU3-Combined rate of unemployment and potential labour force(%),29.754620020909773
+2019,Q1,Adult (31+),LU4 - Composite measure of labour underutilization(%),54.14314347819497
+2019,Q2,Adult (31+),LU4 - Composite measure of labour underutilization(%),53.50939332215801
+2019,Q3,Adult (31+),LU4 - Composite measure of labour underutilization(%),55.021581590557645
+2019,Q4,Adult (31+),LU4 - Composite measure of labour underutilization(%),52.43105972997515
+2020,Q1,Adult (31+),LU4 - Composite measure of labour underutilization(%),54.47020233039458
+2020,Q3,Adult (31+),LU4 - Composite measure of labour underutilization(%),52.9486945519848
+2020,Q4,Adult (31+),LU4 - Composite measure of labour underutilization(%),57.34709298012816
+2021,Q1,Adult (31+),LU4 - Composite measure of labour underutilization(%),56.17805862436225
+2021,Q2,Adult (31+),LU4 - Composite measure of labour underutilization(%),58.18963865759228
+2021,Q3,Adult (31+),LU4 - Composite measure of labour underutilization(%),55.97812516936921
+2021,Q4,Adult (31+),LU4 - Composite measure of labour underutilization(%),53.56586516341915
+2022,Q1,Adult (31+),LU4 - Composite measure of labour underutilization(%),48.92931691160468
+2022,Q2,Adult (31+),LU4 - Composite measure of labour underutilization(%),58.1409856554526
+2022,Q3,Adult (31+),LU4 - Composite measure of labour underutilization(%),54.735922029007426
+2022,Q4,Adult (31+),LU4 - Composite measure of labour underutilization(%),56.85589110360872
+2023,Q1,Adult (31+),LU4 - Composite measure of labour underutilization(%),52.178606660291116
+2023,Q2,Adult (31+),LU4 - Composite measure of labour underutilization(%),50.63800985823922
+2023,Q3,Adult (31+),LU4 - Composite measure of labour underutilization(%),53.54506422862053
+2023,Q4,Adult (31+),LU4 - Composite measure of labour underutilization(%),53.12047439353524
+2024,Q1,Adult (31+),LU4 - Composite measure of labour underutilization(%),47.409691316736584
+2024,Q2,Adult (31+),LU4 - Composite measure of labour underutilization(%),53.08527869289948
+2024,Q3,Adult (31+),LU4 - Composite measure of labour underutilization(%),56.52209453855224
+2024,Q4,Adult (31+),LU4 - Composite measure of labour underutilization(%),53.81880228115275
+2025,Q1,Adult (31+),LU4 - Composite measure of labour underutilization(%),53.135615444853805
+2025,Q2,Adult (31+),LU4 - Composite measure of labour underutilization(%),56.99377354753348
+2025,Q3,Adult (31+),LU4 - Composite measure of labour underutilization(%),55.8268787166277
+2025,Q4,Adult (31+),LU4 - Composite measure of labour underutilization(%),56.05285365587379
+2019,Q1,Adult (31+),Median monthly earnings at main job,24000.0
+2019,Q2,Adult (31+),Median monthly earnings at main job,26000.0
+2019,Q3,Adult (31+),Median monthly earnings at main job,26000.0
+2019,Q4,Adult (31+),Median monthly earnings at main job,26000.0
+2020,Q1,Adult (31+),Median monthly earnings at main job,26000.0
+2020,Q3,Adult (31+),Median monthly earnings at main job,26000.0
+2020,Q4,Adult (31+),Median monthly earnings at main job,26000.0
+2021,Q1,Adult (31+),Median monthly earnings at main job,26000.0
+2021,Q2,Adult (31+),Median monthly earnings at main job,26000.0
+2021,Q3,Adult (31+),Median monthly earnings at main job,26000.0
+2021,Q4,Adult (31+),Median monthly earnings at main job,26000.0
+2022,Q1,Adult (31+),Median monthly earnings at main job,26000.0
+2022,Q2,Adult (31+),Median monthly earnings at main job,26000.0
+2022,Q3,Adult (31+),Median monthly earnings at main job,26000.0
+2022,Q4,Adult (31+),Median monthly earnings at main job,26000.0
+2023,Q1,Adult (31+),Median monthly earnings at main job,26000.0
+2023,Q2,Adult (31+),Median monthly earnings at main job,26000.0
+2023,Q3,Adult (31+),Median monthly earnings at main job,31200.0
+2023,Q4,Adult (31+),Median monthly earnings at main job,31200.0
+2024,Q1,Adult (31+),Median monthly earnings at main job,31200.0
+2024,Q2,Adult (31+),Median monthly earnings at main job,39000.0
+2024,Q3,Adult (31+),Median monthly earnings at main job,39000.0
+2024,Q4,Adult (31+),Median monthly earnings at main job,39000.0
+2025,Q1,Adult (31+),Median monthly earnings at main job,39000.0
+2025,Q2,Adult (31+),Median monthly earnings at main job,39000.0
+2025,Q3,Adult (31+),Median monthly earnings at main job,39000.0
+2025,Q4,Adult (31+),Median monthly earnings at main job,39000.0

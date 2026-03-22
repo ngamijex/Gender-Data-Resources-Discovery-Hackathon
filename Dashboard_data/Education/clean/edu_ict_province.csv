@@ -1,0 +1,55 @@
+province,age_group,sex,pct_nat,pct_urb,pct_rur
+Rwanda,10+,Both sexes,13.7,32.8,6.2
+Rwanda,10+,Male,16.6,37.2,8.1
+Rwanda,10+,Female,11.2,28.6,4.6
+City of Kigali,10+,Both sexes,40.4,44.4,10.7
+City of Kigali,10+,Male,44.6,48.6,13.3
+City of Kigali,10+,Female,36.2,40.0,8.3
+Southern Province,10+,Both sexes,9.1,28.6,5.8
+Southern Province,10+,Male,10.7,31.9,7.1
+Southern Province,10+,Female,7.6,25.6,4.6
+Western Province,10+,Both sexes,9.1,21.8,5.5
+Western Province,10+,Male,11.7,26.0,7.5
+Western Province,10+,Female,6.9,18.0,3.9
+Northern Province,10+,Both sexes,9.4,24.7,6.2
+Northern Province,10+,Male,11.8,28.9,8.2
+Northern Province,10+,Female,7.3,21.0,4.5
+Eastern Province,10+,Both sexes,10.1,23.0,6.8
+Eastern Province,10+,Male,12.6,26.7,9.0
+Eastern Province,10+,Female,7.9,19.7,4.9
+Rwanda,16+,Both sexes,16.2,37.3,7.4
+Rwanda,16+,Male,19.9,42.5,10.0
+Rwanda,16+,Female,12.9,32.3,5.2
+City of Kigali,16+,Both sexes,44.9,48.8,12.9
+City of Kigali,16+,Male,49.5,53.4,16.2
+City of Kigali,16+,Female,40.1,44.0,9.7
+Southern Province,16+,Both sexes,10.6,32.6,6.8
+Southern Province,16+,Male,12.9,36.8,8.7
+Southern Province,16+,Female,8.7,28.9,5.2
+Western Province,16+,Both sexes,11.0,25.9,6.7
+Western Province,16+,Male,14.5,31.4,9.4
+Western Province,16+,Female,8.1,21.0,4.5
+Northern Province,16+,Both sexes,10.9,28.4,7.2
+Northern Province,16+,Male,14.1,33.7,9.9
+Northern Province,16+,Female,8.2,23.7,5.0
+Eastern Province,16+,Both sexes,12.2,26.9,8.2
+Eastern Province,16+,Male,15.5,31.6,11.1
+Eastern Province,16+,Female,9.3,22.7,5.7
+Rwanda,21+,Both sexes,16.9,39.4,7.3
+Rwanda,21+,Male,21.3,44.9,10.3
+Rwanda,21+,Female,13.1,34.2,4.9
+City of Kigali,21+,Both sexes,47.1,51.2,13.0
+City of Kigali,21+,Male,51.5,55.3,16.9
+City of Kigali,21+,Female,42.5,46.7,9.5
+Southern Province,21+,Both sexes,10.8,34.7,6.6
+Southern Province,21+,Male,13.6,39.4,8.9
+Southern Province,21+,Female,8.4,30.6,4.7
+Western Province,21+,Both sexes,11.3,27.2,6.7
+Western Province,21+,Male,15.5,33.8,10.0
+Western Province,21+,Female,8.0,21.6,4.2
+Northern Province,21+,Both sexes,11.3,30.1,7.2
+Northern Province,21+,Male,15.0,36.2,10.4
+Northern Province,21+,Female,8.2,24.9,4.7
+Eastern Province,21+,Both sexes,12.4,28.4,8.1
+Eastern Province,21+,Male,16.2,33.5,11.4
+Eastern Province,21+,Female,9.1,23.7,5.3

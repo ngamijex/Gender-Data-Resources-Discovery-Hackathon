@@ -7,6 +7,10 @@ library(plotly)
 library(httr)
 library(jsonlite)
 
+
+
+
+
 source("R/constants.R")
 source("R/reference_data.R")
 source("R/data_load.R")
@@ -17,8 +21,11 @@ source("R/finscope_data.R")
 source("R/governance_data.R")
 source("R/demography_data.R")
 source("R/employment_data.R")
+source("R/education_data.R")
 source("R/ui.R")
 source("R/server.R")
+
+
 
 # Build search corpus once after all modules are loaded
 .catalog_corpus_cache <- tryCatch(
@@ -89,6 +96,20 @@ if (!is.null(.employment_data)) {
   message("[EMP] Employment ready.")
 } else {
   message("[EMP] Employment data unavailable — Employment dashboard will show a notice.")
+}
+
+# ── Load Education dashboard tables once at startup ───────────────────────────
+.education_data <- tryCatch(
+  load_education_data(),
+  error = function(e) {
+    message("[EDU] Startup load failed: ", e$message)
+    NULL
+  }
+)
+if (!is.null(.education_data)) {
+  message("[EDU] Education ready.")
+} else {
+  message("[EDU] Education data unavailable — Education dashboard will show a notice.")
 }
 
 shinyApp(ui = ui, server = server)

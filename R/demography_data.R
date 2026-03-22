@@ -29,9 +29,43 @@ norm_text <- function(x) {
   z
 }
 
-load_demography_data <- function() {
-  rel_dir <- file.path("dashboard_data", "Demography", "clean")
+# Flatten matrix-like columns when helpers.R is loaded (avoids subset errors on deploy).
+norm_demo_df <- function(df) {
+  if (!is.data.frame(df)) return(df)
+  fn <- get0("normalize_df_for_indexing", ifnotfound = NULL, inherits = TRUE)
+  if (is.null(fn)) return(df)
+  fn(df)
+}
 
+norm_demo_list <- function(L) {
+  if (!is.list(L)) return(L)
+  for (nm in names(L)) {
+    if (inherits(L[[nm]], "data.frame")) L[[nm]] <- norm_demo_df(L[[nm]])
+  }
+  L
+}
+
+# If Dashboard_data/ vs dashboard_data/ path fails, locate clean/ by marker file (Linux deploys).
+find_demography_clean_dir_fallback <- function(roots) {
+  roots <- unique(roots[!is.na(roots) & nzchar(as.character(roots))])
+  for (r in roots) {
+    r0 <- suppressWarnings(normalizePath(r, winslash = "/", mustWork = FALSE))
+    if (is.na(r0) || r0 == "" || !dir.exists(r0)) next
+    hits <- suppressWarnings(list.files(
+      r0,
+      pattern = "^demo_population_geo_by_sex\\.csv$",
+      recursive = TRUE,
+      full.names = TRUE,
+      ignore.case = TRUE
+    ))
+    if (length(hits) >= 1L) {
+      return(dirname(hits[[1]]))
+    }
+  }
+  NULL
+}
+
+load_demography_data <- function() {
   # Robust base roots (deployed Shiny working directory can differ).
   app_path <- tryCatch(shiny::getCurrentAppPath(), error = function(e) NULL)
   if (is.null(app_path) || !dir.exists(app_path)) {
@@ -48,28 +82,16 @@ load_demography_data <- function() {
 
   search_roots <- unique(c(app_path, getwd(), project_root))
 
-  find_dir <- function(roots, dir_rel, max_up = 6) {
-    for (r in roots) {
-      r0 <- suppressWarnings(normalizePath(r, winslash = "/", mustWork = FALSE))
-      if (is.na(r0) || r0 == "") next
-      cur <- r0
-      for (i in seq_len(max_up + 1)) {
-        cand <- file.path(cur, dir_rel)
-        if (dir.exists(cand)) return(cand)
-        parent <- dirname(cur)
-        if (identical(parent, cur)) break
-        cur <- parent
-      }
-    }
-    NULL
+  clean_dir <- find_dashboard_path(search_roots, c("Demography", "clean"), is_dir = TRUE)
+  if (is.null(clean_dir)) {
+    clean_dir <- find_demography_clean_dir_fallback(search_roots)
   }
-
-  clean_dir <- NULL
-  if (!is.null(project_root)) {
-    cand <- file.path(project_root, rel_dir)
-    if (dir.exists(cand)) clean_dir <- cand
+  if (is.null(clean_dir)) {
+    message("[DEMO] Demography clean/ not found under: ",
+            paste(search_roots, collapse = " | "))
+  } else {
+    message("[DEMO] Using Demography clean dir: ", clean_dir)
   }
-  if (is.null(clean_dir)) clean_dir <- find_dir(search_roots, rel_dir)
 
   read_csv_rel <- function(fname) {
     if (is.null(clean_dir)) return(NULL)
@@ -93,6 +115,34 @@ load_demography_data <- function() {
     sheet_manifest = read_csv_rel("demo_sheet_manifest.csv")
   )
 
+  # Stable types for charts (read_csv may infer character on Linux / edge rows).
+  coerce_demography_tables <- function(L) {
+    if (!is.null(L$population_change)) {
+      d <- L$population_change
+      if ("year" %in% names(d)) d$year <- suppressWarnings(as.integer(as.numeric(d$year)))
+      if ("value" %in% names(d)) d$value <- suppressWarnings(as.numeric(d$value))
+      L$population_change <- d
+    }
+    if (!is.null(L$population_geo)) {
+      d <- L$population_geo
+      if ("value" %in% names(d)) d$value <- suppressWarnings(as.numeric(d$value))
+      for (nm in c("geo", "geo_type", "province", "sex")) {
+        if (nm %in% names(d)) d[[nm]] <- trimws(as.character(d[[nm]]))
+      }
+      L$population_geo <- d
+    }
+    if (!is.null(L$internet_use)) {
+      d <- L$internet_use
+      if ("value" %in% names(d)) d$value <- suppressWarnings(as.numeric(d$value))
+      for (nm in c("age_group", "province", "residence", "sex")) {
+        if (nm %in% names(d)) d[[nm]] <- trimws(as.character(d[[nm]]))
+      }
+      L$internet_use <- d
+    }
+    L
+  }
+  clean <- coerce_demography_tables(clean)
+
   required_missing <- any(sapply(clean[c(
     "population_geo",
     "population_change",
@@ -111,30 +161,16 @@ load_demography_data <- function() {
       clean$geo_province_district_map <- unique(mp)
     }
     clean$clean_dir_path <- clean_dir
-    return(clean)
+    return(norm_demo_list(clean))
   }
 
   # ── Fallback: read from the original Excel ────────────────────────────────
-  rel_excel <- file.path("dashboard_data", "Demography", "PHC5-2022_Main_Indicators.xlsx")
-
-  find_excel <- function(roots, rel_path, max_up = 6) {
-    for (r in roots) {
-      r0 <- suppressWarnings(normalizePath(r, winslash = "/", mustWork = FALSE))
-      if (is.na(r0) || r0 == "") next
-      cur <- r0
-      for (i in seq_len(max_up + 1)) {
-        cand <- file.path(cur, rel_path)
-        if (file.exists(cand)) return(cand)
-        parent <- dirname(cur)
-        if (identical(parent, cur)) break
-        cur <- parent
-      }
-    }
-    NULL
-  }
-
   search_roots <- unique(c(app_path, getwd(), project_root))
-  excel_path <- find_excel(search_roots, rel_excel)
+  excel_path <- find_dashboard_path(
+    search_roots,
+    c("Demography", "PHC5-2022_Main_Indicators.xlsx"),
+    is_dir = FALSE
+  )
 
   if (is.null(excel_path)) {
     # Last attempt: filename search.
@@ -670,6 +706,6 @@ load_demography_data <- function() {
 
   out$clean_dir_path <- file.path(dirname(excel_path), "clean")
 
-  out
+  norm_demo_list(coerce_demography_tables(out))
 }
 
