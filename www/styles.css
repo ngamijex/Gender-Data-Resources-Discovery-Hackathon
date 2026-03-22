@@ -3,51 +3,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
 
 
-/* ─── CSS CUSTOM PROPERTIES ──────────────────────────────────────────────── */
+/* â”€â”€â”€ CSS CUSTOM PROPERTIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 :root {
 
-  /* ── BACKGROUNDS ──────────────────────────────────────────── */
-  --color-bg-page          : #ffffff;       /* pure white — main canvas            */
-  --color-bg-surface       : #fdf0ec;       /* very light blush — card surfaces    */
-  --color-bg-inset         : #f8d6c6;       /* salmon — inset panels, section bgs  */
+  /* â”€â”€ BACKGROUNDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  --color-bg-page          : #ffffff;       /* pure white â€” main canvas            */
+  --color-bg-surface       : #fdf0ec;       /* very light blush â€” card surfaces    */
+  --color-bg-inset         : #f8d6c6;       /* salmon â€” inset panels, section bgs  */
   --color-bg-white         : #ffffff;       /* alias for white                     */
 
-  /* ── PRIMARY BRAND — Vivid Red (#d62027) ─────────────────── */
-  --color-primary-900      : #8b0d11;       /* deepest red — rarely used           */
-  --color-primary-700      : #b01a1f;       /* dark red — hover states             */
-  --color-primary-500      : #d62027;       /* vivid red — main brand color        */
-  --color-primary-400      : #d86367;       /* medium coral-red — secondary uses   */
-  --color-primary-200      : #f4d2d3;       /* light pink — borders, tints         */
-  --color-primary-100      : #f8d6c6;       /* salmon — label backgrounds          */
-  --color-primary-050      : #fdf0ec;       /* blush whisper — subtle fills        */
+  /* â”€â”€ PRIMARY BRAND â€” Vivid Red (#d62027) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  --color-primary-900      : #8b0d11;       /* deepest red â€” rarely used           */
+  --color-primary-700      : #b01a1f;       /* dark red â€” hover states             */
+  --color-primary-500      : #d62027;       /* vivid red â€” main brand color        */
+  --color-primary-400      : #d86367;       /* medium coral-red â€” secondary uses   */
+  --color-primary-200      : #f4d2d3;       /* light pink â€” borders, tints         */
+  --color-primary-100      : #f8d6c6;       /* salmon â€” label backgrounds          */
+  --color-primary-050      : #fdf0ec;       /* blush whisper â€” subtle fills        */
 
-  /* ── SECONDARY — Salmon / Rose ───────────────────────────── */
+  /* â”€â”€ SECONDARY â€” Salmon / Rose â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --color-secondary-700    : #a84a50;       /* deep rose                           */
-  --color-secondary-500    : #d86367;       /* coral-red — icons, accents          */
-  --color-secondary-300    : #f4a8ab;       /* soft rose — dividers, borders       */
-  --color-secondary-100    : #f8d6c6;       /* salmon — section label bg           */
+  --color-secondary-500    : #d86367;       /* coral-red â€” icons, accents          */
+  --color-secondary-300    : #f4a8ab;       /* soft rose â€” dividers, borders       */
+  --color-secondary-100    : #f8d6c6;       /* salmon â€” section label bg           */
 
-  /* ── INK — Near-black text ────────────────────────────────── */
-  --color-ink-900          : #1a0f0f;       /* near-black — primary text           */
-  --color-ink-700          : #2d1c1c;       /* dark — headings                     */
-  --color-ink-500          : #5c3c3c;       /* mid — secondary text                */
-  --color-ink-300          : #9a7070;       /* muted — captions, placeholders      */
-  --color-ink-100          : #d9c4c4;       /* pale — hairlines, disabled          */
+  /* â”€â”€ INK â€” Near-black text â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  --color-ink-900          : #1a0f0f;       /* near-black â€” primary text           */
+  --color-ink-700          : #2d1c1c;       /* dark â€” headings                     */
+  --color-ink-500          : #5c3c3c;       /* mid â€” secondary text                */
+  --color-ink-300          : #9a7070;       /* muted â€” captions, placeholders      */
+  --color-ink-100          : #d9c4c4;       /* pale â€” hairlines, disabled          */
 
-  /* ── ACCENT — Warm Neutral (replaces gold) ─────────────────  */
-  --color-accent-700       : #7a4040;       /* deep warm — premium accents         */
+  /* â”€â”€ ACCENT â€” Warm Neutral (replaces gold) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€  */
+  --color-accent-700       : #7a4040;       /* deep warm â€” premium accents         */
   --color-accent-500       : #d86367;       /* reuses coral-red                    */
   --color-accent-300       : #f4a8ab;       /* light rose                          */
   --color-accent-100       : #f8d6c6;       /* salmon                              */
 
-  /* ── FUNCTIONAL STATES ────────────────────────────────────── */
+  /* â”€â”€ FUNCTIONAL STATES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --color-success          : #2d6e44;
   --color-warning          : #c07718;
   --color-error            : #d62027;
   --color-info             : #1a5c8a;
 
-  /* ── SEMANTIC ALIASES ─────────────────────────────────────── */
+  /* â”€â”€ SEMANTIC ALIASES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --color-text-primary     : var(--color-ink-900);
   --color-text-secondary   : var(--color-ink-500);
   --color-text-muted       : var(--color-ink-300);
@@ -64,7 +64,7 @@
   --color-brand-light      : var(--color-primary-100);
 
 
-  /* ── TYPOGRAPHY ───────────────────────────────────────────── */
+  /* â”€â”€ TYPOGRAPHY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
   /* Fonts */
   --font-display           : 'Playfair Display', Georgia, serif;
@@ -73,7 +73,7 @@
   --font-ui                : 'DM Sans', 'Helvetica Neue', sans-serif;
   --font-label             : var(--font-script);       /* section eyebrows    */
 
-  /* Type scale — Major Third (1.250) */
+  /* Type scale â€” Major Third (1.250) */
   --text-xs                : 0.640rem;     /*  ~10px */
   --text-sm                : 0.800rem;     /*  ~13px */
   --text-base              : 1.000rem;     /*   16px */
@@ -108,7 +108,7 @@
   --tracking-widest        : 0.20em;
 
 
-  /* ── SPACING ─────────────────────────────────────────────── */
+  /* â”€â”€ SPACING â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --space-1                : 0.25rem;
   --space-2                : 0.50rem;
   --space-3                : 0.75rem;
@@ -126,7 +126,7 @@
   --space-32               : 8.00rem;
 
 
-  /* ── LAYOUT ──────────────────────────────────────────────── */
+  /* â”€â”€ LAYOUT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --container-sm           : 640px;
   --container-md           : 768px;
   --container-lg           : 1024px;
@@ -142,7 +142,7 @@
   --grid-sidebar-right     : 2fr 1fr;
 
 
-  /* ── BORDERS & RADIUS ────────────────────────────────────── */
+  /* â”€â”€ BORDERS & RADIUS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --radius-sm              : 2px;
   --radius-base            : 4px;
   --radius-md              : 6px;
@@ -158,7 +158,7 @@
   --border-box             : 2px solid var(--color-primary-400);
 
 
-  /* ── SHADOWS ─────────────────────────────────────────────── */
+  /* â”€â”€ SHADOWS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --shadow-xs   : 0 1px 2px rgba(214, 32, 39, 0.06);
   --shadow-sm   : 0 2px 6px rgba(214, 32, 39, 0.09), 0 1px 2px rgba(0,0,0,0.04);
   --shadow-md   : 0 4px 14px rgba(214, 32, 39, 0.10), 0 2px 4px rgba(0,0,0,0.05);
@@ -168,7 +168,7 @@
   --shadow-brand: 0 4px 20px rgba(214, 32, 39, 0.28);
 
 
-  /* ── TRANSITIONS ─────────────────────────────────────────── */
+  /* â”€â”€ TRANSITIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --ease-in                : cubic-bezier(0.4, 0, 1, 1);
   --ease-out               : cubic-bezier(0, 0, 0.2, 1);
   --ease-in-out            : cubic-bezier(0.4, 0, 0.2, 1);
@@ -184,7 +184,7 @@
   --transition-spring      : var(--duration-slow) var(--ease-spring);
 
 
-  /* ── Z-INDEX ─────────────────────────────────────────────── */
+  /* â”€â”€ Z-INDEX â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   --z-below                : -1;
   --z-base                 : 0;
   --z-raised               : 10;
@@ -196,9 +196,9 @@
   --z-tooltip              : 600;
 
 
-  /* ── DECORATIVE / COMPONENT-SPECIFIC ─────────────────────── */
+  /* â”€â”€ DECORATIVE / COMPONENT-SPECIFIC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-  /* Section label banner — script font on salmon bg (mirrors the flyer)   */
+  /* Section label banner â€” script font on salmon bg (mirrors the flyer)   */
   --label-bg               : var(--color-primary-100);   /* salmon fill      */
   --label-bg-important     : var(--color-primary-500);   /* red fill         */
   --label-color            : var(--color-ink-700);
@@ -244,7 +244,7 @@
 }
 
 
-/* ─── RESET & BASE ───────────────────────────────────────────────────────── */
+/* â”€â”€â”€ RESET & BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin    : 0;
@@ -268,7 +268,7 @@ body {
   -moz-osx-font-smoothing  : grayscale;
 }
 
-/* Decorative corner blobs — fixed behind all content, echoing the poster */
+/* Decorative corner blobs â€” fixed behind all content, echoing the poster */
 body::before {
   content       : '';
   position      : fixed;
@@ -311,7 +311,7 @@ p  { line-height: var(--leading-relaxed); }
 ul, ol { list-style: none; }
 
 
-/* ─── TYPOGRAPHY UTILITY CLASSES ─────────────────────────────────────────── */
+/* â”€â”€â”€ TYPOGRAPHY UTILITY CLASSES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .type-page-title {
   font-family   : var(--font-display);
@@ -330,7 +330,7 @@ ul, ol { list-style: none; }
   color         : var(--color-text-heading);
 }
 
-/* The key flyer element — script font on salmon band */
+/* The key flyer element â€” script font on salmon band */
 .type-label-banner {
   display       : inline-block;
   font-family   : var(--font-script);
@@ -375,7 +375,7 @@ ul, ol { list-style: none; }
 }
 
 
-/* ─── COMPONENT CLASSES ──────────────────────────────────────────────────── */
+/* â”€â”€â”€ COMPONENT CLASSES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 /* Label banner (section heading strip) */
 .label-banner {
@@ -449,7 +449,7 @@ ul, ol { list-style: none; }
 }
 
 
-/* ─── BUTTONS ────────────────────────────────────────────────────────────── */
+/* â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .btn {
   display       : inline-flex;
@@ -491,7 +491,7 @@ ul, ol { list-style: none; }
   background    : var(--color-primary-050);
 }
 
-/* ─── GRID & CONTAINERS ──────────────────────────────────────────────────── */
+/* â”€â”€â”€ GRID & CONTAINERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .container   { max-width: var(--container-xl); margin: 0 auto; padding: 0 var(--page-margin); }
 .container-sm{ max-width: var(--container-sm); margin: 0 auto; }
@@ -504,7 +504,7 @@ ul, ol { list-style: none; }
 }
 
 
-/* ─── UTILITY CLASSES ────────────────────────────────────────────────────── */
+/* â”€â”€â”€ UTILITY CLASSES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .text-center  { text-align: center; }
 .text-right   { text-align: right; }
 .text-muted   { color: var(--color-text-muted); }
@@ -539,7 +539,7 @@ ul, ol { list-style: none; }
 .border-red { border: 2px solid var(--color-brand); }
 
 
-/* ─── PRINT STYLES ───────────────────────────────────────────────────────── */
+/* â”€â”€â”€ PRINT STYLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media print {
   body { background: #fff; color: #000; font-size: 11pt; }
   .label-banner { background: var(--color-primary-100); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -548,14 +548,14 @@ ul, ol { list-style: none; }
 }
 
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   GDDP — SHINY APPLICATION STYLES
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   GDDP â€” SHINY APPLICATION STYLES
    All component classes for R/ui.R and R/helpers.R.
    References the :root tokens defined above.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 
-/* ── Bootstrap / Shiny Navbar ────────────────────────────────────────────── */
+/* â”€â”€ Bootstrap / Shiny Navbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .navbar {
   background    : #ffffff !important;
@@ -615,7 +615,7 @@ ul, ol { list-style: none; }
   transition     : color 220ms ease !important;
 }
 
-/* Brushstroke highlight — SVG paint splash behind active/hovered items */
+/* Brushstroke highlight â€” SVG paint splash behind active/hovered items */
 .navbar-nav > li > a::before {
   content          : '';
   position         : absolute;
@@ -666,7 +666,7 @@ ul, ol { list-style: none; }
 .container-fluid          { padding: 0 !important; }
 
 
-/* ── Form Controls ───────────────────────────────────────────────────────── */
+/* â”€â”€ Form Controls â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .form-control,
 .selectize-input {
@@ -711,7 +711,7 @@ ul, ol { list-style: none; }
 label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !important; font-weight: var(--weight-medium) !important; color: var(--color-text-heading) !important; }
 
 
-/* ── App Button Variants ─────────────────────────────────────────────────── */
+/* â”€â”€ App Button Variants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .action-button.btn--lg-hero {
   background    : var(--color-brand) !important;
@@ -793,12 +793,12 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
 }
 
 
-/* ── Modal — base z-index fix (must stay above Bootstrap backdrop at 1040) ── */
+/* â”€â”€ Modal â€” base z-index fix (must stay above Bootstrap backdrop at 1040) â”€â”€ */
 .modal         { z-index: 1050 !important; }
 .modal-backdrop{ z-index: 1040 !important; }
 
 
-/* ── HOME TAB ────────────────────────────────────────────────────────────── */
+/* â”€â”€ HOME TAB â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .hero {
   background    : #ffffff;
@@ -807,7 +807,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   position      : relative;
 }
 
-/* No hero-level blobs — the fixed body blobs handle corner decoration */
+/* No hero-level blobs â€” the fixed body blobs handle corner decoration */
 .hero::before, .hero::after { display: none; }
 
 .hero__eyebrow {
@@ -926,14 +926,14 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
 .home-sec      { padding: var(--space-14) var(--space-12); background: #ffffff; }
 .home-sec--alt { background: #ffffff; }
 
-/* ── Problem / Mission / Vision — staggered services layout ─────────────── */
+/* â”€â”€ Problem / Mission / Vision â€” staggered services layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .home-pmv {
   padding    : var(--space-14) var(--space-12);
   background : #ffffff;
 }
 
-/* Header row — title left, intro right */
+/* Header row â€” title left, intro right */
 .pmv-header {
   display               : grid;
   grid-template-columns : 1fr 2fr;
@@ -975,7 +975,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   align-items   : flex-start;
 }
 
-/* No offset — all columns start at the same level */
+/* No offset â€” all columns start at the same level */
 .pmv-item--offset {
   margin-top: 0;
 }
@@ -1012,7 +1012,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   margin-bottom : var(--space-6);
 }
 
-/* Item image — same size and centred across all three columns */
+/* Item image â€” same size and centred across all three columns */
 .pmv-item__img {
   width         : 80%;
   height        : 200px;
@@ -1034,7 +1034,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   border-left   : 2px solid var(--color-primary-200);
 }
 
-/* Section eyebrow — script font with brushstroke background */
+/* Section eyebrow â€” script font with brushstroke background */
 .sec-eyebrow {
   display        : inline-block;
   position       : relative;
@@ -1174,7 +1174,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
 }
 
 
-/* ── Site footer — full-bleed image + glass overlay ─────────────────────── */
+/* â”€â”€ Site footer â€” full-bleed image + glass overlay â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .site-footer {
   position      : relative;
@@ -1235,7 +1235,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   margin        : var(--space-2) 0;
 }
 
-/* Body row — two blocks side by side */
+/* Body row â€” two blocks side by side */
 .footer-body {
   display       : flex;
   align-items   : flex-start;
@@ -1333,11 +1333,11 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
 }
 
 
-/* ══════════════════════════════════════════════════════════════════════════
-   DATA DISCOVERY — Google-style search engine
-   ══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   DATA DISCOVERY â€” Google-style search engine
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── Page wrapper ── */
+/* â”€â”€ Page wrapper â”€â”€ */
 .sep-page {
   min-height    : calc(100vh - 58px);
   background    : #ffffff;
@@ -1345,7 +1345,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   flex-direction: column;
 }
 
-/* ── Search section (hero → compact transition) ── */
+/* â”€â”€ Search section (hero â†’ compact transition) â”€â”€ */
 .sep-search-section {
   display         : flex;
   flex-direction  : column;
@@ -1578,7 +1578,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   background      : #fdf0ec !important;
 }
 
-/* ── Filter strip (hidden until active) ── */
+/* â”€â”€ Filter strip (hidden until active) â”€â”€ */
 .sep-filters-strip {
   display         : flex;
   align-items     : center;
@@ -1675,7 +1675,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   background      : #fdf0ec !important;
 }
 
-/* ── Advanced panel (collapsible) ── */
+/* â”€â”€ Advanced panel (collapsible) â”€â”€ */
 .sep-adv-panel {
   max-height      : 0;
   overflow        : hidden;
@@ -1716,7 +1716,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   color           : var(--color-text-body);
 }
 
-/* ── Meta bar ── */
+/* â”€â”€ Meta bar â”€â”€ */
 .sep-results-area {
   flex            : 1;
   padding         : 0 var(--space-10);
@@ -1754,7 +1754,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   color           : var(--color-text-muted);
 }
 
-/* ── Landing body (shown when no query) ── */
+/* â”€â”€ Landing body (shown when no query) â”€â”€ */
 .sep-landing-body {
   padding         : var(--space-6) 0;
   display         : flex;
@@ -1816,7 +1816,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   max-width       : 560px;
 }
 
-/* ── No results state ── */
+/* â”€â”€ No results state â”€â”€ */
 .sep-no-results {
   padding         : var(--space-16) 0;
   text-align      : center;
@@ -1864,14 +1864,14 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   color           : var(--color-text-body);
 }
 
-/* ── Result list ── */
+/* â”€â”€ Result list â”€â”€ */
 .sep-result-list {
   padding-bottom  : var(--space-6);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   STUDY DETAIL PANEL  (replaces modal — renders below results)
-   ══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   STUDY DETAIL PANEL  (replaces modal â€” renders below results)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .study-detail-panel {
   border            : 1.5px solid #f4d2d3;
@@ -2057,7 +2057,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   .dp-col--meta { border-right: none; border-bottom: 1px solid #f4d2d3; }
 }
 
-/* ── Individual result item ── */
+/* â”€â”€ Individual result item â”€â”€ */
 .sep-result {
   padding         : var(--space-5) 0;
   border-bottom   : 1px solid #f4d2d3;
@@ -2068,7 +2068,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
 
 .sep-result:hover { background: transparent; }
 
-/* URL path — green like Google */
+/* URL path â€” green like Google */
 .sep-result__path {
   font-family     : var(--font-ui);
   font-size       : 12px;
@@ -2090,7 +2090,7 @@ label { font-family: var(--font-ui) !important; font-size: var(--text-sm) !impor
   margin-bottom: var(--space-2);
 }
 
-/* Title link — primary red, underline on hover */
+/* Title link â€” primary red, underline on hover */
 a.sep-result__title,
 .sep-result__title {
   display         : block;
@@ -2211,7 +2211,7 @@ mark.sep-hl {
 }
 
 
-/* ── STUDY CARDS ─────────────────────────────────────────────────────────── */
+/* â”€â”€ STUDY CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .study-grid {
   display               : grid;
@@ -2281,7 +2281,7 @@ mark.sep-hl {
 .scard__actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
 
 
-/* ── Collection Type Tags ─────────────────────────────────────────────────── */
+/* â”€â”€ Collection Type Tags â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .ctag {
   display       : inline-block;
@@ -2306,7 +2306,7 @@ mark.sep-hl {
 .ctag--year   { background: var(--color-ink-900);      color: #ffffff;                   border-color: var(--color-ink-900); }
 
 
-/* ── Quality Pills ───────────────────────────────────────────────────────── */
+/* â”€â”€ Quality Pills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .qpill {
   display       : inline-block;
@@ -2324,7 +2324,7 @@ mark.sep-hl {
 .qpill--bad  { background: var(--color-primary-050); color: var(--color-primary-700); }
 
 
-/* ── Gender Relevance Bar ────────────────────────────────────────────────── */
+/* â”€â”€ Gender Relevance Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .gsbar {
   display       : flex;
@@ -2356,7 +2356,7 @@ mark.sep-hl {
 }
 
 
-/* ── Empty State ─────────────────────────────────────────────────────────── */
+/* â”€â”€ Empty State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .no-results {
   text-align    : center;
@@ -2370,11 +2370,11 @@ mark.sep-hl {
 .no-resources-note { font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text-muted); font-style: italic; }
 
 
-/* ── DASHBOARD TAB ───────────────────────────────────────────────────────── */
+/* â”€â”€ DASHBOARD TAB â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .dash-page { padding: var(--space-10) var(--space-12); background: #ffffff; }
 
-/* Overlays — sit above body blobs but don't fight Bootstrap modal stack */
+/* Overlays â€” sit above body blobs but don't fight Bootstrap modal stack */
 .shiny-notification { z-index: 1060 !important; }
 .selectize-dropdown { z-index: 1070 !important; }
 .dash-hdr  { margin-bottom: var(--space-8); }
@@ -2503,7 +2503,7 @@ mark.sep-hl {
 .indicator-switcher { margin-bottom: var(--space-6); }
 
 
-/* ── DETAIL MODAL CONTENT ────────────────────────────────────────────────── */
+/* â”€â”€ DETAIL MODAL CONTENT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .det-grid3 {
   display               : grid;
@@ -2596,9 +2596,9 @@ mark.sep-hl {
 .res-row a:hover { color: var(--color-brand-dark); text-decoration: underline; }
 
 
-/* ══════════════════════════════════════════════════════════════════════════
-   AI OVERVIEW COMPONENT  — uses brand CSS variables only
-   ══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   AI OVERVIEW COMPONENT  â€” uses brand CSS variables only
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .ai-ov {
   margin        : var(--space-4) 0 var(--space-2);
@@ -2622,7 +2622,7 @@ mark.sep-hl {
   box-shadow : none;
 }
 
-/* ── Header bar ───────────────────────────────────────────────────────────── */
+/* â”€â”€ Header bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-ov__header {
   display        : flex;
   align-items    : center;
@@ -2686,7 +2686,7 @@ mark.sep-hl {
   color      : rgba(255,255,255,0.78);
 }
 
-/* ── Body ─────────────────────────────────────────────────────────────────── */
+/* â”€â”€ Body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-ov__body {
   padding: var(--space-5) var(--space-5) var(--space-4);
 }
@@ -2701,7 +2701,7 @@ mark.sep-hl {
   border-left  : 3px solid var(--color-primary-500);
 }
 
-/* ── Recommendations section ─────────────────────────────────────────────── */
+/* â”€â”€ Recommendations section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-ov__recs {
   margin-top: var(--space-2);
 }
@@ -2724,7 +2724,7 @@ mark.sep-hl {
   gap                  : var(--space-3);
 }
 
-/* ── Single recommendation card ──────────────────────────────────────────── */
+/* â”€â”€ Single recommendation card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-rec {
   background    : var(--color-bg-white);
   border        : 1.5px solid var(--color-primary-200);
@@ -2811,7 +2811,7 @@ mark.sep-hl {
   opacity: 0.8;
 }
 
-/* ── Dataset details row ─────────────────────────────────────────────────── */
+/* â”€â”€ Dataset details row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-rec__details {
   display    : flex;
   flex-wrap  : wrap;
@@ -2833,7 +2833,7 @@ mark.sep-hl {
   font-weight: var(--weight-semibold);
 }
 
-/* ── Abstract snippet ────────────────────────────────────────────────────── */
+/* â”€â”€ Abstract snippet â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-rec__abstract {
   font-family  : var(--font-body);
   font-size    : var(--text-xs);
@@ -2844,7 +2844,7 @@ mark.sep-hl {
   border-top   : 1px solid var(--color-primary-200);
 }
 
-/* ── Action buttons row ──────────────────────────────────────────────────── */
+/* â”€â”€ Action buttons row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-rec__actions {
   display   : flex;
   gap       : var(--space-2);
@@ -2887,14 +2887,14 @@ mark.sep-hl {
   color     : var(--color-primary-700);
 }
 
-/* ── Chip score variants ─────────────────────────────────────────────────── */
+/* â”€â”€ Chip score variants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-rec__chip--score-hi  { background: #ecfdf5; color: var(--color-success); }
 .ai-rec__chip--score-mid { background: var(--color-primary-100); color: var(--color-primary-700); }
 .ai-rec__chip--score-lo  { background: var(--color-bg-inset); color: var(--color-ink-500); }
 .ai-rec__chip--public    { background: #ecfdf5; color: var(--color-success); }
 .ai-rec__chip--licensed  { background: var(--color-primary-100); color: var(--color-primary-700); }
 
-/* ── Footer disclaimer ───────────────────────────────────────────────────── */
+/* â”€â”€ Footer disclaimer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-ov__footer {
   padding    : var(--space-2) var(--space-5);
   background : var(--color-primary-050);
@@ -2907,9 +2907,9 @@ mark.sep-hl {
   gap        : var(--space-1);
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    LOADING / SKELETON STATES
-   ══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Shared shimmer animation */
 @keyframes shimmer {
@@ -2933,7 +2933,7 @@ mark.sep-hl {
   border-radius: var(--radius-sm);
 }
 
-/* ── AI overview loading card ─────────────────────────────────────────────── */
+/* â”€â”€ AI overview loading card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ai-ov-loading {
   margin        : var(--space-4) 0 var(--space-2);
   border        : 1.5px solid var(--color-primary-200);
@@ -3017,7 +3017,7 @@ mark.sep-hl {
 .ai-sk-line { height: 12px; }
 .ai-sk-line--sm { height: 10px; width: 80%; }
 
-/* ── Search results skeleton ──────────────────────────────────────────────── */
+/* â”€â”€ Search results skeleton â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .sep-results-loading {
   display       : flex;
   flex-direction: column;
@@ -3041,9 +3041,9 @@ mark.sep-hl {
 .sep-sk-text  { height: 12px; width: 90%;   border-radius: 4px; }
 .sep-sk-text--s { width: 60%; }
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    STUDY DETAIL MODAL POPUP
-   ══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Dialog size & scrollability */
 .modal-dialog {
@@ -3096,7 +3096,7 @@ mark.sep-hl {
   line-height: 1.3;
 }
 
-/* Close × */
+/* Close Ã— */
 .modal-header .close,
 .modal-header button[data-dismiss="modal"] {
   color      : rgba(255,255,255,0.85) !important;
@@ -3113,7 +3113,7 @@ mark.sep-hl {
   color: #ffffff !important;
 }
 
-/* Body — scrollable independently so header/footer stay fixed */
+/* Body â€” scrollable independently so header/footer stay fixed */
 .modal-body {
   flex         : 1 1 auto;
   overflow-y   : auto;
@@ -3186,7 +3186,7 @@ mark.sep-hl {
   color       : var(--color-ink-700);
 }
 
-/* ── Responsive ──────────────────────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 @media (max-width: 1024px) {
   .dash-kpi-row { grid-template-columns: 1fr 1fr; }
@@ -3206,17 +3206,17 @@ mark.sep-hl {
   .dash-page    { padding: var(--space-8) var(--space-6); }
 }
 
-/* ══════════════════════════════════════════════════════════════════════════════
-   VISUALIZATION CENTER — Word Cloud + Full-Screen Sector Panel
-   ══════════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   VISUALIZATION CENTER â€” Word Cloud + Full-Screen Sector Panel
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── Outer page wrapper ─────────────────────────────────────────────────────── */
+/* â”€â”€ Outer page wrapper â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .vizc-page {
   min-height    : 100vh;
     background    : #fff;
 }
 
-/* ── Hero / cloud section ───────────────────────────────────────────────────── */
+/* â”€â”€ Hero / cloud section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .vizc-hero {
   background    : #fff;
   padding       : var(--space-14) var(--space-8) var(--space-10);
@@ -3251,7 +3251,7 @@ mark.sep-hl {
   line-height   : 1.65;
 }
 
-/* ── Word cloud ─────────────────────────────────────────────────────────────── */
+/* â”€â”€ Word cloud â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .vizc-cloud {
   max-width      : 860px;
   margin         : 0 auto var(--space-6);
@@ -3272,7 +3272,7 @@ mark.sep-hl {
   margin         : 0.4rem 0;
 }
 
-/* ── Individual word ────────────────────────────────────────────────────────── */
+/* â”€â”€ Individual word â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .vizc-word {
   font-family    : var(--font-display);
   font-weight    : var(--weight-bold);
@@ -3283,7 +3283,7 @@ mark.sep-hl {
   transition     : color 0.18s, transform 0.18s, opacity 0.18s;
 }
 
-/* Sizes — S1 (tiny) to S7 (giant) */
+/* Sizes â€” S1 (tiny) to S7 (giant) */
 .vizc-word--s1 { font-size: 0.72rem;  font-weight: var(--weight-medium); }
 .vizc-word--s2 { font-size: 0.90rem;  }
 .vizc-word--s3 { font-size: 1.15rem;  }
@@ -3297,7 +3297,7 @@ mark.sep-hl {
 .vizc-word--red  { color: var(--color-primary-500); }
 .vizc-word--gray { color: #AAAAAA; }
 
-/* Vertical (rotated) words — like "graphics", "website" in the reference */
+/* Vertical (rotated) words â€” like "graphics", "website" in the reference */
 .vizc-word--vert {
   writing-mode   : vertical-rl;
   transform      : rotate(180deg);
@@ -3342,7 +3342,7 @@ mark.sep-hl {
   color          : var(--color-primary-500) !important;
 }
 
-/* Coming soon — muted, not clickable */
+/* Coming soon â€” muted, not clickable */
 .vizc-word--soon {
   opacity        : 0.42;
   pointer-events : none;
@@ -3360,9 +3360,9 @@ mark.sep-hl {
   color          : #333;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FULL-SCREEN SECTOR PANEL
-   ══════════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 body.panel-open {
   overflow       : hidden;
 }
@@ -3389,12 +3389,12 @@ body.panel-open {
   pointer-events : auto;
 }
 
-/* Backdrop hidden — this IS the page, no overlay needed */
+/* Backdrop hidden â€” this IS the page, no overlay needed */
 .vizc-panel__backdrop {
   display        : none !important;
 }
 
-/* Page content — slides in from the right */
+/* Page content â€” slides in from the right */
 .vizc-panel__content {
   position       : absolute;
   inset          : 0;
@@ -3413,7 +3413,7 @@ body.panel-open {
 }
 
 /* Panel top bar */
-/* Page top bar — looks like a real browser page header */
+/* Page top bar â€” looks like a real browser page header */
 .vizc-panel__bar {
   flex-shrink    : 0;
   z-index        : 10;
@@ -3458,7 +3458,7 @@ body.panel-open {
   white-space    : nowrap;
 }
 
-/* ← Back button (replaces the old × close button) */
+/* â† Back button (replaces the old Ã— close button) */
 .vizc-panel__close {
   display        : flex;
   align-items    : center;
@@ -3483,11 +3483,11 @@ body.panel-open {
   transform      : none;            /* cancel the old rotate effect */
 }
 
-/* ══════════════════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FINANCIAL INCLUSION DASHBOARD
-   ══════════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ━━━ Outer container: flex ROW — sidebar | main ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* â”â”â” Outer container: flex ROW â€” sidebar | main â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 .fi-dash {
   flex           : 1;
   display        : flex;
@@ -3496,7 +3496,7 @@ body.panel-open {
   min-height     : 0;
 }
 
-/* ━━━ LEFT SIDEBAR — tabs only, no content ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* â”â”â” LEFT SIDEBAR â€” tabs only, no content â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 .fi-sb {
   width          : 190px;
   min-width      : 190px;
@@ -3560,7 +3560,7 @@ body.panel-open {
 .gov-sb__tabtn .fa-fw        { font-size: 0.82em; opacity: 0.7; }
 .gov-sb__tabtn--active .fa-fw { opacity: 1; }
 
-/* Governance: multiple nav items — compact spacing */
+/* Governance: multiple nav items â€” compact spacing */
 .fi-sb__tabnav--gov {
   padding-top    : 10px;
   padding-bottom : 8px;
@@ -3602,7 +3602,7 @@ body.panel-open {
 .demo-sb__tabtn .fa-fw        { font-size: 0.82em; opacity: 0.7; }
 .demo-sb__tabtn--active .fa-fw { opacity: 1; }
 
-/* ━━━ RIGHT: FLEX COLUMN — filter bar on top, charts below ━━━━━━━━━━━━━━━━━ */
+/* â”â”â” RIGHT: FLEX COLUMN â€” filter bar on top, charts below â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 .fi-main {
   flex           : 1;
   display        : flex;
@@ -3613,7 +3613,7 @@ body.panel-open {
   background     : #F4F6F9;
 }
 
-/* ── All Filters bar ─────────────────────────────────────────────────────── */
+/* â”€â”€ All Filters bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-gbar {
   flex-shrink    : 0;
   background     : #fff;
@@ -3709,7 +3709,7 @@ body.panel-open {
   color          : #fff !important;
 }
 
-/* ── Scrollable charts area ──────────────────────────────────────────────── */
+/* â”€â”€ Scrollable charts area â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-charts {
   flex           : 1;
   overflow-y     : auto;
@@ -3717,7 +3717,7 @@ body.panel-open {
   min-height     : 0;
 }
 
-/* ── Tab section header (compact) ────────────────────────────────────────── */
+/* â”€â”€ Tab section header (compact) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-tab-hdr {
   display        : flex;
   align-items    : baseline;
@@ -3746,7 +3746,7 @@ body.panel-open {
   line-height    : 1.2;
 }
 
-/* ── 2-column chart grid ─────────────────────────────────────────────────── */
+/* â”€â”€ 2-column chart grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-charts-grid {
   display              : grid;
   grid-template-columns: 1fr 1fr;
@@ -3758,7 +3758,7 @@ body.panel-open {
   margin-bottom  : 22px;
 }
 
-/* ── Chart card ─────────────────────────────────────────────────────────────── */
+/* â”€â”€ Chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-chart-card {
   background     : #fff;
   border         : 1px solid #F0EAE8;
@@ -3784,7 +3784,7 @@ body.panel-open {
   border-bottom  : 1px solid #F5F5F5;
 }
 
-/* ── KPI Cards ──────────────────────────────────────────────────────────────── */
+/* â”€â”€ KPI Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-kpis-row {
   display        : grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -3885,7 +3885,7 @@ body.panel-open {
 .fi-kpi__gap--ok      { background: #D1FAE5; color: #065F46; }
 .fi-kpi__gap--neutral { background: #F3F4F6; color: #6B7280; }
 
-/* ── No data notice ─────────────────────────────────────────────────────────── */
+/* â”€â”€ No data notice â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-nodata {
   text-align     : center;
   padding        : var(--space-16) var(--space-8);
@@ -3893,7 +3893,7 @@ body.panel-open {
   font-size      : var(--text-base);
 }
 
-/* ── Data source footnote ───────────────────────────────────────────────────── */
+/* â”€â”€ Data source footnote â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fi-data-note {
   font-size      : var(--text-xs);
   color          : var(--color-text-muted);
@@ -3905,7 +3905,7 @@ body.panel-open {
   line-height    : 1.6;
 }
 
-/* ── Responsive ─────────────────────────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 960px) {
   .vizc-hero           { padding: var(--space-10) var(--space-4) var(--space-8); }
   .vizc-word--s7       { font-size: 2.2rem; }
@@ -3939,7 +3939,7 @@ body.panel-open {
   .fi-charts-grid          { grid-template-columns: 1fr; }
 }
 
-/* ── Demography overview: Rwanda gender snapshot cards ─────────────────────── */
+/* â”€â”€ Demography overview: Rwanda gender snapshot cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .demo-overview-kpis {
   margin-bottom            : var(--space-8);
 }
@@ -4013,9 +4013,9 @@ body.panel-open {
   .fi-kpis-row--demo-overview { grid-template-columns: 1fr; }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   EMPLOYMENT DASHBOARD — sidebar tabs, KPI cards, chart overrides
-   ═══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   EMPLOYMENT DASHBOARD â€” sidebar tabs, KPI cards, chart overrides
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Employment sidebar tab buttons */
 .emp-sb__tabtn {
@@ -4077,10 +4077,15 @@ body.panel-open {
 .fi-kpi--emp .fi-kpi__label   { font-size: 12px; font-weight: 600; color: #6B7280;
                                   text-transform: uppercase; letter-spacing: .04em;
                                   margin-bottom: 6px; }
-.fi-kpi--emp .fi-kpi__values  { display: flex; align-items: center; gap: 6px;
-                                  flex-wrap: wrap; margin-bottom: 5px; }
-.fi-kpi__val--female          { font-size: 16px; font-weight: 700; color: #E85A4F; }
-.fi-kpi__val--male            { font-size: 16px; font-weight: 700; color: #3B82F6; }
+.fi-kpi--emp .fi-kpi__values  {
+  display        : flex;
+  flex-direction : column;
+  align-items    : flex-start;
+  gap            : 3px;
+  margin-bottom  : 5px;
+}
+.fi-kpi__val--female          { font-size: 15px; font-weight: 700; color: #E85A4F; white-space: nowrap; }
+.fi-kpi__val--male            { font-size: 15px; font-weight: 700; color: #3B82F6; white-space: nowrap; }
 .fi-kpi__sep                  { color: #D1D5DB; font-size: 14px; }
 .fi-kpi__delta                { font-size: 12px; font-weight: 600; display: inline-flex;
                                   align-items: center; gap: 3px; }
@@ -4089,10 +4094,10 @@ body.panel-open {
 .fi-kpi__delta-lbl            { font-weight: 400; color: #9CA3AF; }
 .fi-kpi__note                 { font-size: 11px; color: #9CA3AF; margin-top: 4px; }
 
-/* Employment KPI row — 4-up grid */
+/* Employment KPI row â€” 4-up grid */
 .fi-kpi-row {
   display               : grid;
-  grid-template-columns : repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns : repeat(auto-fill, minmax(210px, 1fr));
   gap                   : 14px;
   padding               : 16px 20px 4px;
 }
@@ -4107,9 +4112,9 @@ body.panel-open {
   .fi-kpi-row { grid-template-columns: 1fr; }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   EDUCATION DASHBOARD — sidebar tabs
-   ══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   EDUCATION DASHBOARD â€” sidebar tabs
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .fi-sb__tabnav--edu           { gap: 3px; padding: 6px 10px; }
 .edu-sb__tabtn {
   display       : flex;
@@ -4134,7 +4139,7 @@ body.panel-open {
 .edu-sb__tabtn .fa-fw       { font-size: 0.82em; opacity: 0.7; }
 .edu-sb__tabtn--active .fa-fw { opacity: 1; }
 
-/* Education KPI cards — same structure as Employment */
+/* Education KPI cards â€” same structure as Employment */
 .fi-kpi--edu {
   display        : flex;
   align-items    : flex-start;
@@ -4174,10 +4179,10 @@ body.panel-open {
 }
 .fi-kpi--edu .fi-kpi__vals  {
   display        : flex;
-  align-items    : center;
-  gap            : 6px;
-  flex-wrap      : wrap;
-  margin-bottom  : 5px;
+  flex-direction : column;
+  align-items    : flex-start;
+  gap            : 3px;
+  margin-bottom  : 6px;
 }
 .fi-kpi--edu .fi-kpi__gap   { font-size: 12px; font-weight: 600; color: #6B7280; }
 .fi-kpi--edu .fi-kpi__gap--pos { color: #059669; }
@@ -4188,9 +4193,9 @@ body.panel-open {
   .fi-sb__tabnav--edu .edu-sb__tabtn { font-size: 11.5px; padding: 7px 10px; }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   AGRICULTURE DASHBOARD — sidebar tabs
-   ══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   AGRICULTURE DASHBOARD â€” sidebar tabs
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .fi-sb__tabnav--agri { gap: 3px; padding: 6px 10px; }
 .agri-sb__tabtn {
   display        : flex;
@@ -4213,9 +4218,9 @@ body.panel-open {
 .agri-sb__tabtn .fa-fw       { font-size: 0.82em; opacity: 0.7; }
 .agri-sb__tabtn--active .fa-fw { opacity: 1; }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   AGRICULTURE DASHBOARD — KPI cards
-   ══════════════════════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   AGRICULTURE DASHBOARD â€” KPI cards
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .fi-kpi--agri {
   display        : flex;
   align-items    : flex-start;
@@ -4247,10 +4252,10 @@ body.panel-open {
 }
 .fi-kpi--agri .fi-kpi__vals  {
   display        : flex;
-  align-items    : center;
-  gap            : 6px;
-  flex-wrap      : wrap;
-  margin-bottom  : 5px;
+  flex-direction : column;
+  align-items    : flex-start;
+  gap            : 3px;
+  margin-bottom  : 6px;
 }
 .fi-kpi--agri .fi-kpi__gap   { font-size: 12px; font-weight: 600; color: #6B7280; }
 .fi-kpi--agri .fi-kpi__gap--pos { color: #059669; }
@@ -4268,3 +4273,683 @@ body.panel-open {
   .fi-sb__tabnav--agri .agri-sb__tabtn { font-size: 11.5px; padding: 7px 10px; }
 }
 
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   GENDER DATA CATALOGUE â€” SELF-SERVICE PORTAL
+   Uses only CSS :root design tokens. No gradients. No glow effects.
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* Page shell */
+.dh-page {
+  min-height    : 100vh;
+  background    : var(--color-bg-page);
+  font-family   : var(--font-body);
+}
+
+/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.dh-hero {
+  background    : var(--color-ink-900);
+  border-bottom : 4px solid var(--color-primary-500);
+  padding       : 56px 48px 48px;
+}
+.dh-hero__inner  { max-width: 900px; margin: 0 auto; }
+
+.dh-hero__badge  {
+  display       : inline-flex;
+  align-items   : center;
+  gap           : 8px;
+  background    : transparent;
+  border        : 1px solid var(--color-primary-500);
+  border-radius : 4px;
+  padding       : 4px 14px;
+  font-size     : 11px;
+  font-weight   : 700;
+  color         : var(--color-primary-100);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom : 22px;
+}
+.dh-hero__title  {
+  font-size     : 2.5rem;
+  font-weight   : 800;
+  color         : #ffffff;
+  line-height   : 1.15;
+  margin        : 0 0 14px;
+  letter-spacing: -.02em;
+}
+.dh-hero__sub    {
+  font-size     : .97rem;
+  color         : var(--color-ink-300);
+  line-height   : 1.7;
+  margin        : 0 0 40px;
+  max-width     : 620px;
+}
+.dh-hero__stats  {
+  display       : flex;
+  flex-wrap     : wrap;
+  border-top    : 1px solid var(--color-ink-700);
+  padding-top   : 28px;
+  gap           : 0;
+}
+.dh-hero__stat   {
+  display       : flex;
+  flex-direction: column;
+  gap           : 5px;
+  padding-right : 40px;
+  margin-right  : 40px;
+  border-right  : 1px solid var(--color-ink-700);
+}
+.dh-hero__stat:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+.dh-hero__stat-n {
+  font-size     : 2rem;
+  font-weight   : 800;
+  color         : var(--color-primary-500);
+  line-height   : 1;
+}
+.dh-hero__stat-l {
+  font-size     : 11px;
+  color         : var(--color-ink-500);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-weight   : 600;
+}
+
+/* â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.dh-body {
+  display        : flex;
+  flex-direction : column;
+  min-height     : calc(100vh - 200px);
+}
+
+/* Full-width wizard panel (top) */
+.dh-wizard-panel {
+  width          : 100%;
+  background     : var(--color-bg-surface);
+  border-bottom  : 2px solid var(--color-border-default);
+  padding        : 28px 40px 24px;
+  display        : flex;
+  flex-direction : column;
+  gap            : 0;
+}
+
+/* ── Wizard progress track ──────────────────────────────────────────────────── */
+.dh-progress {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  padding        : 0 0 22px;
+  margin-bottom  : 8px;
+  border-bottom  : 1px solid var(--color-border-default);
+  max-width      : 640px;
+  margin-left    : auto;
+  margin-right   : auto;
+  width          : 100%;
+}
+.dh-prog__step {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  gap            : 6px;
+  flex           : 1;
+}
+.dh-prog__num {
+  width          : 32px;
+  height         : 32px;
+  border-radius  : 50%;
+  background     : var(--color-bg-page);
+  border         : 2px solid var(--color-border-default);
+  color          : var(--color-ink-400);
+  font-size      : 13px;
+  font-weight    : 800;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  transition     : background .2s, border-color .2s, color .2s;
+}
+.dh-prog__label {
+  font-size      : 11px;
+  font-weight    : 700;
+  color          : var(--color-ink-400);
+  text-transform : uppercase;
+  letter-spacing : .06em;
+  white-space    : nowrap;
+  transition     : color .2s;
+}
+/* Active step */
+.dh-prog__step--active .dh-prog__num {
+  background     : var(--color-primary-500);
+  border-color   : var(--color-primary-500);
+  color          : #fff;
+}
+.dh-prog__step--active .dh-prog__label { color: var(--color-primary-500); font-weight: 800; }
+/* Completed step */
+.dh-prog__step--done .dh-prog__num {
+  background     : var(--color-ink-900);
+  border-color   : var(--color-ink-900);
+  color          : #fff;
+}
+.dh-prog__step--done .dh-prog__label { color: var(--color-ink-600); }
+/* Connector line between steps */
+.dh-prog__connector {
+  flex           : 1;
+  height         : 2px;
+  background     : var(--color-border-default);
+  margin-bottom  : 18px;
+  min-width      : 32px;
+  max-width      : 80px;
+}
+.dh-prog__connector--done { background: var(--color-ink-900); }
+
+/* ── Wizard body (page content area) ───────────────────────────────────────── */
+.dh-wizard-body {
+  padding        : 8px 0 4px;
+  max-width      : 900px;
+  margin         : 0 auto;
+  width          : 100%;
+}
+.dh-page {
+  animation      : dhPageIn .22s ease both;
+}
+@keyframes dhPageIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+.dh-page__hdr {
+  margin-bottom  : 24px;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  text-align     : center;
+  gap            : 6px;
+}
+.dh-page__title {
+  font-size      : 16px;
+  font-weight    : 800;
+  color          : var(--color-ink-800);
+  margin         : 0 0 4px;
+  display        : flex;
+  align-items    : center;
+  gap            : 7px;
+}
+.dh-page__sub {
+  font-size      : 12px;
+  color          : var(--color-ink-500);
+  margin         : 0;
+  line-height    : 1.5;
+  display        : flex;
+  align-items    : center;
+  flex-wrap      : wrap;
+  gap            : 4px;
+}
+/* Sector chip inside page subtitle */
+.dh-page__chip {
+  display        : inline-flex;
+  align-items    : center;
+  gap            : 4px;
+  font-size      : 11px;
+  font-weight    : 700;
+  padding        : 2px 8px;
+  border-radius  : 4px;
+}
+/* Selection confirmation bar on page 1 */
+.dh-page__selection {
+  display        : flex;
+  align-items    : center;
+  gap            : 6px;
+  font-size      : 12px;
+  font-weight    : 600;
+  color          : #16a34a;
+  background     : #f0fdf4;
+  border         : 1px solid #bbf7d0;
+  border-radius  : 6px;
+  padding        : 8px 12px;
+  margin-top     : 12px;
+}
+
+/* ── Nav buttons (Back / Next) — Back left, Next right on full-width bar ───── */
+.dh-nav {
+  display        : flex;
+  align-items    : center;
+  gap            : 10px;
+  padding-top    : 18px;
+  margin-top     : 8px;
+  border-top     : 1px solid var(--color-border-default);
+  max-width      : 900px;
+  margin-left    : auto;
+  margin-right   : auto;
+  width          : 100%;
+}
+.dh-nav__btn--back { margin-right: auto; }
+.dh-nav__btn--next,
+.dh-nav__btn--off { margin-left: auto; }
+.dh-nav .dh-nav__btn--back + .dh-nav__btn--next,
+.dh-nav .dh-nav__btn--back + .dh-nav__btn--off { margin-left: 0; }
+.dh-nav__btn {
+  display        : inline-flex;
+  align-items    : center;
+  gap            : 6px;
+  padding        : 8px 18px;
+  border-radius  : 6px;
+  font-size      : 13px;
+  font-weight    : 700;
+  border         : none;
+  cursor         : pointer;
+  transition     : background .15s, color .15s, opacity .15s;
+  white-space    : nowrap;
+}
+.dh-nav__btn--back {
+  background     : var(--color-bg-page);
+  border         : 1px solid var(--color-border-default);
+  color          : var(--color-ink-600);
+}
+.dh-nav__btn--back:hover { background: var(--color-bg-surface); color: var(--color-ink-800); }
+.dh-nav__btn--next {
+  background     : var(--color-primary-500);
+  color          : #fff;
+  box-shadow     : 0 1px 4px rgba(0,0,0,.12);
+}
+.dh-nav__btn--next:hover { background: var(--color-ink-900); }
+.dh-nav__btn--off {
+  opacity        : 0.4;
+  cursor         : not-allowed;
+  background     : var(--color-bg-page);
+  border         : 1px solid var(--color-border-default);
+  color          : var(--color-ink-500);
+  box-shadow     : none;
+}
+/* Shiny actionButton override */
+.dh-nav .btn { box-shadow: none !important; outline: none !important; }
+
+/* ── "No filterable columns" message ───────────────────────────────────────── */
+.dh-filter-none {
+  display        : flex;
+  align-items    : center;
+  gap            : 8px;
+  font-size      : 13px;
+  color          : #16a34a;
+  font-weight    : 600;
+  background     : #f0fdf4;
+  border         : 1px solid #bbf7d0;
+  border-radius  : 6px;
+  padding        : 10px 14px;
+  margin-top     : 8px;
+}
+
+/* Empty state panel */
+.dh-empty {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  text-align     : center;
+  padding        : 60px 24px;
+  height         : 100%;
+  min-height     : 400px;
+}
+.dh-empty__icon {
+  width          : 64px;
+  height         : 64px;
+  border-radius  : 16px;
+  background     : var(--color-primary-050);
+  border         : 2px solid var(--color-border-default);
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  font-size      : 26px;
+  color          : var(--color-primary-500);
+  margin-bottom  : 20px;
+}
+.dh-empty__title {
+  font-size      : 18px;
+  font-weight    : 800;
+  color          : var(--color-ink-700);
+  margin         : 0 0 8px;
+}
+.dh-empty__sub {
+  font-size      : 13.5px;
+  color          : var(--color-ink-500);
+  max-width      : 380px;
+  margin         : 0 auto 28px;
+  line-height    : 1.6;
+}
+.dh-empty__steps {
+  display        : flex;
+  align-items    : center;
+  gap            : 8px;
+  flex-wrap      : wrap;
+  justify-content: center;
+}
+.dh-empty__step {
+  display        : flex;
+  align-items    : center;
+  gap            : 6px;
+  font-size      : 12px;
+  font-weight    : 600;
+  color          : var(--color-ink-600);
+  background     : var(--color-bg-surface);
+  border         : 1px solid var(--color-border-default);
+  border-radius  : 6px;
+  padding        : 6px 10px;
+}
+.dh-empty__step-n {
+  width          : 20px;
+  height         : 20px;
+  border-radius  : 50%;
+  background     : var(--color-primary-500);
+  color          : #fff;
+  font-size      : 11px;
+  font-weight    : 800;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+.dh-empty__arrow {
+  color          : var(--color-ink-300);
+  font-size      : 18px;
+  font-weight    : 300;
+}
+
+/* Sector grid — 6 columns at full width */
+.dh-sector-grid  {
+  display        : grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap            : 12px;
+}
+.dh-sector-card  {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  gap            : 10px;
+  padding        : 20px 12px;
+  border         : 1.5px solid var(--color-border-default);
+  border-radius  : 8px;
+  background     : var(--color-bg-page);
+  cursor         : pointer;
+  transition     : border-color .15s, background .15s, transform .12s;
+  font-family    : inherit;
+  text-align     : center;
+}
+.dh-sector-card:hover {
+  border-color   : var(--color-primary-500);
+  background     : var(--color-primary-050);
+  transform      : translateY(-2px);
+}
+.dh-sector-card--active {
+  border-color   : var(--color-primary-500) !important;
+  border-width   : 2px !important;
+  background     : var(--color-primary-050) !important;
+}
+.dh-sector-card__icon  { font-size: 1.6rem; color: var(--color-ink-300); }
+.dh-sector-card--active .dh-sector-card__icon,
+.dh-sector-card:hover  .dh-sector-card__icon { color: var(--color-primary-500); }
+.dh-sector-card__label {
+  font-size      : 12px;
+  font-weight    : 700;
+  color          : var(--color-ink-500);
+  line-height    : 1.25;
+}
+.dh-sector-card--active .dh-sector-card__label { color: var(--color-primary-500); }
+
+#dh_sector { display: none !important; }
+
+.dh-placeholder  {
+  font-size      : 12.5px;
+  color          : var(--color-ink-300);
+  padding        : 6px 0;
+  font-style     : italic;
+}
+
+.dh-vars-actions {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  gap            : 8px;
+  margin-bottom  : 14px;
+  font-size      : 12px;
+  color          : var(--color-ink-300);
+}
+.dh-link-btn {
+  background     : none;
+  border         : none;
+  cursor         : pointer;
+  color          : var(--color-primary-500);
+  font-size      : 12px;
+  font-weight    : 700;
+  padding        : 0;
+  text-decoration: underline;
+  font-family    : inherit;
+}
+.dh-link-btn:hover { color: var(--color-primary-700); }
+
+/* Variables checkbox grid — multi-column at full width */
+#dh_vars .shiny-input-checkboxgroup > .checkbox,
+#dh_vars .shiny-options-group      > .checkbox {
+  display        : inline-block;
+  width          : 200px;
+  margin-right   : 8px;
+  vertical-align : top;
+}
+#dh_vars .shiny-options-group {
+  column-count   : auto;
+  column-width   : 200px;
+  column-gap     : 8px;
+}
+
+/* Filters: 2-column grid */
+.dh-filters-grid {
+  display        : grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap            : 0 24px;
+}
+.dh-filter-item  { margin-bottom: 12px; }
+
+/* ── Full-width preview panel (below wizard) ─────────────────────────────────*/
+.dh-preview-panel {
+  flex           : 1;
+  padding        : 28px 40px 40px;
+  display        : flex;
+  flex-direction : column;
+  gap            : 14px;
+  background     : var(--color-bg-page);
+}
+
+/* Status bar */
+.dh-status {
+  display        : flex;
+  align-items    : center;
+  gap            : 10px;
+  padding        : 10px 16px;
+  border-radius  : 4px;
+  font-size      : 13px;
+  flex-wrap      : wrap;
+  border         : 1px solid var(--color-border-default);
+}
+.dh-status--idle  {
+  background     : var(--color-bg-surface);
+  color          : var(--color-ink-300);
+  font-style     : italic;
+}
+.dh-status--active { background: var(--color-bg-page); }
+
+.dh-status__chip  {
+  display        : inline-flex;
+  align-items    : center;
+  gap            : 5px;
+  padding        : 2px 10px;
+  border-radius  : 3px;
+  font-size      : 12px;
+  font-weight    : 700;
+}
+.dh-status__sep   { color: var(--color-ink-100); font-size: 16px; }
+.dh-status__ds    { font-weight: 700; color: var(--color-ink-700); }
+.dh-status__count {
+  margin-left    : auto;
+  font-size      : 12px;
+  color          : var(--color-ink-500);
+  background     : var(--color-bg-surface);
+  border         : 1px solid var(--color-border-default);
+  padding        : 2px 10px;
+  border-radius  : 3px;
+  font-weight    : 600;
+}
+
+/* Info card */
+.dh-info-card    {
+  display        : flex;
+  gap            : 16px;
+  background     : var(--color-bg-page);
+  border         : 1px solid var(--color-border-default);
+  border-left    : 4px solid var(--color-primary-500);
+  border-radius  : 4px;
+  padding        : 16px 18px;
+}
+.dh-info-card__left   { flex-shrink: 0; }
+.dh-info-card__icon   {
+  width          : 44px;
+  height         : 44px;
+  border-radius  : 6px;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  font-size      : 1.25rem;
+}
+.dh-info-card__body   { flex: 1; min-width: 0; }
+.dh-info-card__title  {
+  font-size      : 14px;
+  font-weight    : 800;
+  color          : var(--color-ink-700);
+  margin-bottom  : 5px;
+}
+.dh-info-card__desc   {
+  font-size      : 13px;
+  color          : var(--color-ink-500);
+  line-height    : 1.55;
+  margin-bottom  : 8px;
+}
+.dh-info-card__meta   {
+  font-size      : 11.5px;
+  color          : var(--color-ink-300);
+  display        : flex;
+  align-items    : center;
+  gap            : 8px;
+  flex-wrap      : wrap;
+}
+.dh-info-card__tags   { display: flex; gap: 5px; flex-wrap: wrap; }
+.dh-tag               {
+  background     : var(--color-primary-050);
+  color          : var(--color-primary-500);
+  border         : 1px solid var(--color-primary-200);
+  border-radius  : 3px;
+  padding        : 2px 7px;
+  font-size      : 11px;
+  font-weight    : 700;
+}
+
+/* Download bar */
+.dh-download-bar {
+  display        : flex;
+  align-items    : center;
+  gap            : 10px;
+  padding        : 12px 16px;
+  background     : var(--color-bg-surface);
+  border         : 1px solid var(--color-border-default);
+  border-radius  : 4px;
+  flex-wrap      : wrap;
+}
+.dh-download-bar__label {
+  font-size      : 13px;
+  font-weight    : 700;
+  color          : var(--color-ink-700);
+  display        : flex;
+  align-items    : center;
+  gap            : 7px;
+  margin-right   : 4px;
+}
+.dh-dl-btn {
+  display        : inline-flex !important;
+  align-items    : center;
+  gap            : 6px;
+  padding        : 7px 16px !important;
+  border-radius  : 4px !important;
+  font-size      : 13px !important;
+  font-weight    : 700 !important;
+  cursor         : pointer;
+  transition     : background .15s;
+  text-decoration: none !important;
+  border         : 1px solid transparent !important;
+}
+.dh-dl-btn--csv  { background: #DCFCE7 !important; color: #166534 !important; border-color: #86efac !important; }
+.dh-dl-btn--csv:hover  { background: #bbf7d0 !important; }
+.dh-dl-btn--xlsx { background: #DBEAFE !important; color: #1d4ed8 !important; border-color: #93c5fd !important; }
+.dh-dl-btn--xlsx:hover { background: #bfdbfe !important; }
+.dh-dl-btn--json { background: #FEF3C7 !important; color: #92400e !important; border-color: #fcd34d !important; }
+.dh-dl-btn--json:hover { background: #fde68a !important; }
+
+.dh-row-badge    {
+  margin-left    : auto;
+  background     : var(--color-ink-900);
+  color          : var(--color-primary-100);
+  font-size      : 12px;
+  font-weight    : 700;
+  padding        : 4px 13px;
+  border-radius  : 3px;
+}
+
+/* Preview table */
+.dh-table-wrap   {
+  background     : var(--color-bg-page);
+  border         : 1px solid var(--color-border-default);
+  border-radius  : 4px;
+  overflow       : hidden;
+  flex           : 1;
+}
+.dh-dt { font-size: 13px; }
+table.dh-dt.dataTable thead th {
+  background     : var(--color-ink-900);
+  border-bottom  : 3px solid var(--color-primary-500) !important;
+  color          : var(--color-primary-100);
+  font-weight    : 700;
+  font-size      : 11.5px;
+  text-transform : uppercase;
+  letter-spacing : .05em;
+  padding        : 11px 14px !important;
+  white-space    : nowrap;
+}
+table.dh-dt.dataTable tbody tr:nth-child(even) { background: var(--color-bg-surface) !important; }
+table.dh-dt.dataTable tbody tr:hover           { background: var(--color-primary-050) !important; }
+table.dh-dt.dataTable tbody td {
+  padding        : 9px 14px !important;
+  color          : var(--color-ink-700);
+  border-bottom  : 1px solid var(--color-border-default) !important;
+  font-size      : 13px;
+}
+.dataTables_wrapper .dataTables_filter input {
+  border         : 1px solid var(--color-border-default) !important;
+  border-radius  : 4px !important;
+  padding        : 5px 10px !important;
+  font-family    : inherit !important;
+  font-size      : 13px !important;
+  outline        : none;
+}
+.dataTables_wrapper .dataTables_filter input:focus {
+  border-color   : var(--color-primary-500) !important;
+}
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_length { font-size: 12.5px; color: var(--color-ink-300); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .dh-wizard-panel { padding: 20px 20px 16px; }
+  .dh-preview-panel { padding: 20px; }
+  .dh-hero__title { font-size: 2rem; }
+  .dh-hero       { padding: 40px 28px; }
+  .dh-sector-grid { grid-template-columns: repeat(3, 1fr); }
+  .dh-progress   { max-width: 100%; }
+}
+@media (max-width: 560px) {
+  .dh-hero       { padding: 30px 20px; }
+  .dh-hero__title { font-size: 1.7rem; }
+  .dh-sector-grid { grid-template-columns: 1fr 1fr; }
+  .dh-preview-panel { padding: 16px; }
+  .dh-hero__stat  { padding-right: 20px; margin-right: 20px; }
+}

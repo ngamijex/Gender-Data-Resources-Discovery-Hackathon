@@ -5416,4 +5416,431 @@ server <- function(input, output, session) {
                      xaxis = list(tickfont = list(size = 10)))
   })
 
+  # ╔═══════════════════════════════════════════════════════════════════════════╗
+  # ║               DATA CATALOGUE — PAGE WIZARD                               ║
+  # ╚═══════════════════════════════════════════════════════════════════════════╝
+
+  # ── page state (1 = Sector, 2 = Dataset, 3 = Variables, 4 = Filters) ─────────
+  dh_page <- reactiveVal(1)
+
+  # ── reactive: current sector ─────────────────────────────────────────────────
+  dh_sector <- reactive({
+    s <- input$dh_sector
+    if (is.null(s) || nchar(trimws(s)) == 0) return(NULL)
+    trimws(s)
+  })
+
+  # ── reactive: raw loaded dataframe ───────────────────────────────────────────
+  dh_raw <- reactive({
+    sec <- dh_sector()
+    ds  <- input$dh_dataset
+    if (is.null(sec) || is.null(ds) || nchar(ds) == 0) return(NULL)
+    datahub_load(sec, ds)
+  })
+
+  # ── reactive: filtered dataframe ─────────────────────────────────────────────
+  dh_filtered <- reactive({
+    df   <- dh_raw()
+    vars <- input$dh_vars
+    if (is.null(df) || is.null(vars) || length(vars) == 0) return(df)
+    vars <- intersect(vars, names(df))
+    if (length(vars) == 0) return(df)
+    df <- df[, vars, drop = FALSE]
+    for (col in vars) {
+      vals     <- df[[col]]
+      filt_val <- input[[paste0("dh_f_", col)]]
+      if (is.null(filt_val) || is.null(vals)) next
+      if (is.numeric(vals) && length(filt_val) == 2)
+        df <- df[!is.na(vals) & vals >= filt_val[1] & vals <= filt_val[2], , drop = FALSE]
+      else if (is.character(filt_val) && length(filt_val) > 0)
+        df <- df[as.character(vals) %in% filt_val | is.na(vals), , drop = FALSE]
+    }
+    df
+  })
+
+  # ── Next button handler ───────────────────────────────────────────────────────
+  observeEvent(input$dh_next, {
+    p <- dh_page()
+    if      (p == 1 && !is.null(dh_sector()))                              dh_page(2)
+    else if (p == 2 && !is.null(input$dh_dataset) && nchar(input$dh_dataset) > 0) dh_page(3)
+    else if (p == 3 && !is.null(input$dh_vars)    && length(input$dh_vars) > 0)   dh_page(4)
+  }, ignoreInit = TRUE)
+
+  # ── Back button handler ───────────────────────────────────────────────────────
+  observeEvent(input$dh_back, {
+    p <- dh_page()
+    if (p > 1) dh_page(p - 1)
+  }, ignoreInit = TRUE)
+
+  # ── Reset to page 1 when sector card clicked (fresh selection) ────────────────
+  observeEvent(input$dh_sector, {
+    dh_page(1)
+  }, ignoreInit = TRUE, ignoreNULL = TRUE)
+
+
+  # ── SIDEBAR: progress track ───────────────────────────────────────────────────
+  output$dh_progress <- shiny::renderUI({
+    p   <- dh_page()
+    sec <- dh_sector()
+    ds  <- input$dh_dataset
+    steps <- list(
+      list(n = 1, label = "Sector",    done = !is.null(sec)),
+      list(n = 2, label = "Dataset",   done = !is.null(ds) && nchar(ds) > 0),
+      list(n = 3, label = "Variables", done = p > 3),
+      list(n = 4, label = "Filters",   done = FALSE)
+    )
+    items <- lapply(seq_along(steps), function(i) {
+      s   <- steps[[i]]
+      cls <- paste0("dh-prog__step",
+        if      (s$n == p)            " dh-prog__step--active"
+        else if (s$done || s$n < p)   " dh-prog__step--done"
+        else                          " dh-prog__step--pending"
+      )
+      shiny::tagList(
+        shiny::div(class = cls,
+          shiny::div(class = "dh-prog__num",
+            if (s$done && s$n < p) shiny::tags$i(class = "fas fa-check") else as.character(s$n)
+          ),
+          shiny::div(class = "dh-prog__label", s$label)
+        ),
+        if (i < length(steps)) shiny::div(class = "dh-prog__connector")
+      )
+    })
+    shiny::div(class = "dh-progress", items)
+  })
+
+  # ── SIDEBAR: page content ─────────────────────────────────────────────────────
+  output$dh_wizard_page <- shiny::renderUI({
+    p <- dh_page()
+
+    # PAGE 1 — Choose Sector
+    if (p == 1) {
+      sec <- dh_sector()
+      shiny::div(class = "dh-page",
+        shiny::div(class = "dh-page__hdr",
+          shiny::tags$h3(class = "dh-page__title",
+            shiny::tags$i(class = "fas fa-th-large"), " Choose a Sector"),
+          shiny::tags$p(class = "dh-page__sub",
+            "Select the sector you want to explore, then press Next.")
+        ),
+        shiny::div(class = "dh-sector-grid",
+          shiny::tags$button(
+            class = paste0("dh-sector-card", if (!is.null(sec) && sec == "agriculture") " dh-sector-card--active"),
+            `data-sector` = "agriculture", onclick = "dhSelectSector('agriculture')",
+            shiny::tags$i(class = "fas fa-seedling dh-sector-card__icon"),
+            shiny::tags$span(class = "dh-sector-card__label", "Agriculture")
+          ),
+          shiny::tags$button(
+            class = paste0("dh-sector-card", if (!is.null(sec) && sec == "demography") " dh-sector-card--active"),
+            `data-sector` = "demography", onclick = "dhSelectSector('demography')",
+            shiny::tags$i(class = "fas fa-users dh-sector-card__icon"),
+            shiny::tags$span(class = "dh-sector-card__label", "Demography")
+          ),
+          shiny::tags$button(
+            class = paste0("dh-sector-card", if (!is.null(sec) && sec == "education") " dh-sector-card--active"),
+            `data-sector` = "education", onclick = "dhSelectSector('education')",
+            shiny::tags$i(class = "fas fa-graduation-cap dh-sector-card__icon"),
+            shiny::tags$span(class = "dh-sector-card__label", "Education")
+          ),
+          shiny::tags$button(
+            class = paste0("dh-sector-card", if (!is.null(sec) && sec == "employment") " dh-sector-card--active"),
+            `data-sector` = "employment", onclick = "dhSelectSector('employment')",
+            shiny::tags$i(class = "fas fa-briefcase dh-sector-card__icon"),
+            shiny::tags$span(class = "dh-sector-card__label", "Employment")
+          ),
+          shiny::tags$button(
+            class = paste0("dh-sector-card", if (!is.null(sec) && sec == "governance") " dh-sector-card--active"),
+            `data-sector` = "governance", onclick = "dhSelectSector('governance')",
+            shiny::tags$i(class = "fas fa-landmark dh-sector-card__icon"),
+            shiny::tags$span(class = "dh-sector-card__label", "Governance")
+          ),
+          shiny::tags$button(
+            class = paste0("dh-sector-card", if (!is.null(sec) && sec == "financial_inclusion") " dh-sector-card--active"),
+            `data-sector` = "financial_inclusion", onclick = "dhSelectSector('financial_inclusion')",
+            shiny::tags$i(class = "fas fa-wallet dh-sector-card__icon"),
+            shiny::tags$span(class = "dh-sector-card__label", "Financial Inclusion")
+          )
+        )
+      )
+
+    # PAGE 2 — Choose Dataset
+    } else if (p == 2) {
+      sec      <- dh_sector()
+      sec_info <- DATAHUB_CATALOG[[sec]]
+      choices  <- datahub_dataset_choices(sec)
+      prev_ds  <- isolate(input$dh_dataset)
+      shiny::div(class = "dh-page",
+        shiny::div(class = "dh-page__hdr",
+          shiny::tags$h3(class = "dh-page__title",
+            shiny::tags$i(class = sec_info$icon), " Choose a Dataset"),
+          shiny::tags$p(class = "dh-page__sub",
+            sec_info$label, " — ", length(sec_info$datasets), " datasets available.")
+        ),
+        shiny::selectInput("dh_dataset", NULL,
+          choices  = c("— select a dataset —" = "", choices),
+          selected = if (!is.null(prev_ds)) prev_ds else "",
+          width    = "100%", selectize = TRUE
+        )
+      )
+
+    # PAGE 3 — Select Variables
+    } else if (p == 3) {
+      df   <- dh_raw()
+      cols <- if (!is.null(df)) names(df) else character(0)
+      shiny::div(class = "dh-page",
+        shiny::div(class = "dh-page__hdr",
+          shiny::tags$h3(class = "dh-page__title",
+            shiny::tags$i(class = "fas fa-columns"), " Select Variables"),
+          shiny::tags$p(class = "dh-page__sub",
+            length(cols), " columns available. Uncheck any you don't need.")
+        ),
+        shiny::div(class = "dh-vars-actions",
+          shiny::tags$button(class = "dh-link-btn",
+            onclick = paste0(
+              "var cbs=document.querySelectorAll('#dh_vars input[type=checkbox]');",
+              "cbs.forEach(function(c){c.checked=true;$(c).trigger('change');});"
+            ), "All"),
+          shiny::tags$span(class = "dh-vars-sep", "\u00b7"),
+          shiny::tags$button(class = "dh-link-btn",
+            onclick = paste0(
+              "var cbs=document.querySelectorAll('#dh_vars input[type=checkbox]');",
+              "cbs.forEach(function(c){c.checked=false;$(c).trigger('change');});"
+            ), "None")
+        ),
+        shiny::checkboxGroupInput("dh_vars", NULL,
+          choices  = setNames(cols, cols),
+          selected = cols,
+          width    = "100%"
+        )
+      )
+
+    # PAGE 4 — Filters + Download
+    } else if (p == 4) {
+      df   <- dh_raw()
+      vars <- isolate(input$dh_vars)
+      if (is.null(df)) return(shiny::div(class = "dh-page",
+        shiny::tags$p(class = "dh-page__sub", "No data loaded.")))
+
+      filt_vars <- if (!is.null(vars)) intersect(vars, names(df)) else names(df)
+      widgets <- lapply(filt_vars, function(col) {
+        vals <- df[[col]]
+        if (is.null(vals)) return(NULL)
+        if (is.numeric(vals) && length(unique(na.omit(vals))) > 6) {
+          rng <- range(vals, na.rm = TRUE)
+          if (rng[1] == rng[2]) return(NULL)
+          shiny::div(class = "dh-filter-item",
+            shiny::sliderInput(paste0("dh_f_", col), label = col,
+              min = floor(rng[1]), max = ceiling(rng[2]),
+              value = c(floor(rng[1]), ceiling(rng[2])),
+              step = if (max(abs(rng)) <= 100) 0.1 else 1, width = "100%")
+          )
+        } else {
+          uniq <- sort(unique(na.omit(as.character(vals))))
+          if (length(uniq) == 0 || length(uniq) > 40) return(NULL)
+          shiny::div(class = "dh-filter-item",
+            shiny::checkboxGroupInput(paste0("dh_f_", col), label = col,
+              choices = uniq, selected = uniq, width = "100%")
+          )
+        }
+      })
+      widgets <- Filter(Negate(is.null), widgets)
+      shiny::div(class = "dh-page",
+        shiny::div(class = "dh-page__hdr",
+          shiny::tags$h3(class = "dh-page__title",
+            shiny::tags$i(class = "fas fa-filter"), " Apply Filters"),
+          shiny::tags$p(class = "dh-page__sub",
+            if (length(widgets) > 0) "Narrow the data using the controls below."
+            else "No filterable columns in this dataset.")
+        ),
+        if (length(widgets) > 0) shiny::div(class = "dh-filters-grid", widgets)
+        else shiny::div(class = "dh-filter-none",
+          shiny::tags$i(class = "fas fa-check-circle"), " Ready to download")
+      )
+    }
+  })
+
+  # ── SIDEBAR: Back / Next navigation ──────────────────────────────────────────
+  output$dh_nav_btns <- shiny::renderUI({
+    p    <- dh_page()
+    sec  <- dh_sector()
+    ds   <- input$dh_dataset
+    vars <- input$dh_vars
+
+    can_next <- switch(as.character(p),
+      "1" = !is.null(sec),
+      "2" = !is.null(ds) && nchar(ds) > 0,
+      "3" = !is.null(vars) && length(vars) > 0,
+      "4" = FALSE
+    )
+
+    shiny::div(class = "dh-nav",
+      # Back button (pages 2–4)
+      if (p > 1)
+        shiny::actionButton("dh_back", class = "dh-nav__btn dh-nav__btn--back",
+          label = shiny::tagList(shiny::tags$i(class = "fas fa-arrow-left"), " Back")),
+      # Next button (pages 1–3)
+      if (p < 4) {
+        if (can_next)
+          shiny::actionButton("dh_next", class = "dh-nav__btn dh-nav__btn--next",
+            label = shiny::tagList("Next ", shiny::tags$i(class = "fas fa-arrow-right")))
+        else
+          shiny::tags$button(class = "dh-nav__btn dh-nav__btn--next dh-nav__btn--off",
+            disabled = NA,
+            shiny::tags$i(class = "fas fa-arrow-right"), " Next")
+      }
+    )
+  })
+
+  # ── RIGHT PANEL: empty state ──────────────────────────────────────────────────
+  output$dh_empty_state <- shiny::renderUI({
+    if (!is.null(dh_raw())) return(NULL)
+    shiny::div(class = "dh-empty",
+      shiny::div(class = "dh-empty__icon",
+        shiny::tags$i(class = "fas fa-book-open")
+      ),
+      shiny::tags$h3(class = "dh-empty__title", "Rwanda Gender Data Catalogue"),
+      shiny::tags$p(class = "dh-empty__sub",
+        "Use the wizard on the left to select a sector and dataset.",
+        shiny::tags$br(),
+        "A live preview will appear here as soon as data is loaded."
+      ),
+      shiny::div(class = "dh-empty__steps",
+        shiny::div(class = "dh-empty__step",
+          shiny::tags$span(class = "dh-empty__step-n", "1"), "Sector"),
+        shiny::tags$span(class = "dh-empty__arrow", "\u2192"),
+        shiny::div(class = "dh-empty__step",
+          shiny::tags$span(class = "dh-empty__step-n", "2"), "Dataset"),
+        shiny::tags$span(class = "dh-empty__arrow", "\u2192"),
+        shiny::div(class = "dh-empty__step",
+          shiny::tags$span(class = "dh-empty__step-n", "3"), "Variables"),
+        shiny::tags$span(class = "dh-empty__arrow", "\u2192"),
+        shiny::div(class = "dh-empty__step",
+          shiny::tags$span(class = "dh-empty__step-n", "4"), "Filters & Download")
+      )
+    )
+  })
+
+  # ── RIGHT PANEL: status bar ───────────────────────────────────────────────────
+  output$dh_status_bar <- shiny::renderUI({
+    df  <- dh_filtered()
+    sec <- dh_sector()
+    ds  <- input$dh_dataset
+    if (is.null(df) || is.null(sec)) return(NULL)
+    sec_info <- DATAHUB_CATALOG[[sec]]
+    ds_label <- sec_info$datasets[[ds]]$label %||% ds
+    shiny::div(class = "dh-status dh-status--active",
+      shiny::tags$span(class = "dh-status__chip",
+        style = paste0("background:", sec_info$bg, "; color:", sec_info$color),
+        shiny::tags$i(class = sec_info$icon), " ", sec_info$label
+      ),
+      shiny::tags$span(class = "dh-status__sep", "\u203a"),
+      shiny::tags$span(class = "dh-status__ds", ds_label),
+      shiny::tags$span(class = "dh-status__count",
+        shiny::tags$i(class = "fas fa-table fa-xs"),
+        sprintf(" %s rows \u00d7 %s cols", format(nrow(df), big.mark = ","), ncol(df))
+      )
+    )
+  })
+
+  # ── RIGHT PANEL: info card ────────────────────────────────────────────────────
+  output$dh_info_card <- shiny::renderUI({
+    sec <- dh_sector()
+    ds  <- input$dh_dataset
+    if (is.null(dh_raw()) || is.null(sec) || is.null(ds)) return(NULL)
+    entry    <- DATAHUB_CATALOG[[sec]]$datasets[[ds]]
+    sec_info <- DATAHUB_CATALOG[[sec]]
+    if (is.null(entry)) return(NULL)
+    shiny::div(class = "dh-info-card",
+      shiny::div(class = "dh-info-card__left",
+        shiny::div(class = "dh-info-card__icon",
+          style = paste0("background:", sec_info$bg, "; color:", sec_info$color),
+          shiny::tags$i(class = sec_info$icon)
+        )
+      ),
+      shiny::div(class = "dh-info-card__body",
+        shiny::div(class = "dh-info-card__title", entry$label),
+        shiny::div(class = "dh-info-card__desc",  entry$desc),
+        shiny::div(class = "dh-info-card__meta",
+          shiny::tags$i(class = "fas fa-database fa-xs"), " ", sec_info$source,
+          shiny::tags$span(class = "dh-info-card__tags",
+            lapply(entry$tags, function(t) shiny::tags$span(class = "dh-tag", t)))
+        )
+      )
+    )
+  })
+
+  # ── RIGHT PANEL: download bar ─────────────────────────────────────────────────
+  output$dh_download_ui <- shiny::renderUI({
+    df <- dh_filtered()
+    if (is.null(df)) return(NULL)
+    shiny::div(class = "dh-download-bar",
+      shiny::tags$span(class = "dh-download-bar__label",
+        shiny::tags$i(class = "fas fa-download"), " Download as:"
+      ),
+      shiny::downloadButton("dh_dl_csv",   label = "CSV",   class = "dh-dl-btn dh-dl-btn--csv"),
+      shiny::downloadButton("dh_dl_excel", label = "Excel", class = "dh-dl-btn dh-dl-btn--xlsx"),
+      shiny::downloadButton("dh_dl_json",  label = "JSON",  class = "dh-dl-btn dh-dl-btn--json"),
+      shiny::tags$span(class = "dh-row-badge",
+        format(nrow(df), big.mark = ","), " rows")
+    )
+  })
+
+  # ── RIGHT PANEL: live preview ─────────────────────────────────────────────────
+  output$dh_preview_ui <- shiny::renderUI({
+    if (is.null(dh_filtered())) return(NULL)
+    shiny::div(class = "dh-table-wrap",
+      DT::dataTableOutput("dh_preview", height = "100%")
+    )
+  })
+
+  output$dh_preview <- DT::renderDataTable({
+    df <- dh_filtered()
+    if (is.null(df) || nrow(df) == 0) return(DT::datatable(
+      data.frame(Message = "No rows match the current filters."),
+      options = list(dom = "t", paging = FALSE), rownames = FALSE, class = "dh-dt"
+    ))
+    DT::datatable(df,
+      rownames   = FALSE, class = "dh-dt display nowrap",
+      filter     = "top", extensions = c("Buttons", "Scroller"),
+      options    = list(
+        dom = "Bfrtip", buttons = list(),
+        scrollX = TRUE, scrollY = "400px",
+        scroller = TRUE, deferRender = TRUE, pageLength = 25,
+        autoWidth = FALSE,
+        columnDefs = list(list(className = "dt-center", targets = "_all")),
+        language   = list(
+          search = "Search:", zeroRecords = "No matching records",
+          info   = "Showing _START_ to _END_ of _TOTAL_ rows"
+        )
+      )
+    ) |> DT::formatStyle(names(df), fontSize = "13px")
+  }, server = TRUE)
+
+  # ── download handlers ─────────────────────────────────────────────────────────
+  dh_filename <- reactive({
+    paste0("GDRD_", dh_sector() %||% "data", "_",
+           input$dh_dataset %||% "dataset", "_",
+           format(Sys.Date(), "%Y%m%d"))
+  })
+  output$dh_dl_csv <- shiny::downloadHandler(
+    filename = function() paste0(dh_filename(), ".csv"),
+    content  = function(file) { df <- dh_filtered(); if (!is.null(df)) readr::write_csv(df, file) }
+  )
+  output$dh_dl_excel <- shiny::downloadHandler(
+    filename = function() paste0(dh_filename(), ".xlsx"),
+    content  = function(file) { df <- dh_filtered(); if (!is.null(df)) writexl::write_xlsx(df, file) }
+  )
+  output$dh_dl_json <- shiny::downloadHandler(
+    filename = function() paste0(dh_filename(), ".json"),
+    content  = function(file) {
+      df <- dh_filtered()
+      if (!is.null(df)) writeLines(jsonlite::toJSON(list(
+        source   = "Rwanda GDRD Data Catalogue",
+        sector   = dh_sector(), dataset = input$dh_dataset,
+        exported = format(Sys.time(), "%Y-%m-%d %H:%M:%S"),
+        rows     = nrow(df), columns = names(df), data = df
+      ), pretty = TRUE, na = "null"), file)
+    }
+  )
+
 }

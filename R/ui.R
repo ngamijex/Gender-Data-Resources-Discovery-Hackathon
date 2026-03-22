@@ -266,15 +266,15 @@ ui <- shiny::tagList(
                   shiny::div(class = "footer-member__name", "Ngamije Didier")
                 ),
                 shiny::div(class = "footer-member",
-                  shiny::div(class = "footer-member__role", "UI / UX Designer"),
+                  shiny::div(class = "footer-member__role", "Statistician"),
                   shiny::div(class = "footer-member__name", "Dan Munyaneza")
                 ),
                 shiny::div(class = "footer-member",
-                  shiny::div(class = "footer-member__role", "Front-End Developer"),
+                  shiny::div(class = "footer-member__role", "Data Analyst"),
                   shiny::div(class = "footer-member__name", "Gatete Bugingo Jimmy")
                 ),
                 shiny::div(class = "footer-member",
-                  shiny::div(class = "footer-member__role", "Back-End Developer"),
+                  shiny::div(class = "footer-member__role", "Research Associate"),
                   shiny::div(class = "footer-member__name", "Ishimwe Sibomana Christian")
                 )
               )
@@ -645,6 +645,16 @@ ui <- shiny::tagList(
           function closeSectorPanel() {
             document.getElementById('fi-fullscreen-panel').classList.remove('is-open');
             document.body.style.overflow = '';          // restore scroll
+          }
+
+          /* ── Data Hub sector card selection ── */
+          function dhSelectSector(sector) {
+            var inp = document.getElementById('dh_sector');
+            if (inp) { inp.value = sector; $(inp).trigger('change'); }
+            document.querySelectorAll('.dh-sector-card').forEach(function(c) {
+              c.classList.remove('dh-sector-card--active');
+              if (c.getAttribute('data-sector') === sector) c.classList.add('dh-sector-card--active');
+            });
           }
 
           $(document).ready(function() {
@@ -3008,6 +3018,90 @@ ui <- shiny::tagList(
 
       ) # end vizc-page
     )   # end Dashboard tabPanel
+
+    # ╔═══════════════════════════════════════════════════════════════════════╗
+    # ║                  DATA CATALOGUE TAB                                   ║
+    # ╚═══════════════════════════════════════════════════════════════════════╝
+    ,shiny::tabPanel(
+      title = shiny::tagList(
+        shiny::tags$i(class = "fas fa-book-open"), " Data Catalogue"
+      ),
+      value = "datahub",
+
+      shiny::div(class = "dh-page",
+
+        # ── HERO BANNER ────────────────────────────────────────────────────
+        shiny::div(class = "dh-hero",
+          shiny::div(class = "dh-hero__inner",
+            shiny::div(class = "dh-hero__badge",
+              shiny::tags$i(class = "fas fa-book-open"), " Self-Service Data Portal"
+            ),
+            shiny::tags$h1(class = "dh-hero__title",
+              "Rwanda Gender Data Catalogue"
+            ),
+            shiny::tags$p(class = "dh-hero__sub",
+              "A curated catalogue of gender-disaggregated datasets across all sectors of Rwanda.",
+              shiny::tags$br(),
+              "Select a sector \u2192 choose a dataset \u2192 pick your variables \u2192 filter \u2192 preview \u2192 download."
+            ),
+            shiny::div(class = "dh-hero__stats",
+              shiny::div(class = "dh-hero__stat",
+                shiny::tags$span(class = "dh-hero__stat-n", "6"),
+                shiny::tags$span(class = "dh-hero__stat-l", "Sectors")
+              ),
+              shiny::div(class = "dh-hero__stat",
+                shiny::tags$span(class = "dh-hero__stat-n", "45+"),
+                shiny::tags$span(class = "dh-hero__stat-l", "Datasets")
+              ),
+              shiny::div(class = "dh-hero__stat",
+                shiny::tags$span(class = "dh-hero__stat-n", "3"),
+                shiny::tags$span(class = "dh-hero__stat-l", "Export Formats")
+              ),
+              shiny::div(class = "dh-hero__stat",
+                shiny::tags$span(class = "dh-hero__stat-n", "100%"),
+                shiny::tags$span(class = "dh-hero__stat-l", "Free Access")
+              )
+            )
+          )
+        ),
+
+        # ── MAIN BODY ──────────────────────────────────────────────────────
+        shiny::div(class = "dh-body",
+
+          # ── TOP: FULL-WIDTH PAGE WIZARD ───────────────────────────────────
+          shiny::div(class = "dh-wizard-panel",
+
+            # Progress track
+            shiny::uiOutput("dh_progress"),
+
+            # Current page content
+            shiny::div(class = "dh-wizard-body",
+              shiny::uiOutput("dh_wizard_page")
+            ),
+
+            # Back / Next navigation bar
+            shiny::uiOutput("dh_nav_btns"),
+
+            # Hidden: sector value written by dhSelectSector() JS
+            shiny::div(style = "display:none;",
+              shiny::textInput("dh_sector", NULL, value = "")
+            )
+
+          ), # end dh-wizard-panel
+
+          # ── BOTTOM: FULL-WIDTH PREVIEW ────────────────────────────────────
+          shiny::div(class = "dh-preview-panel",
+
+            shiny::uiOutput("dh_empty_state"),
+            shiny::uiOutput("dh_status_bar"),
+            shiny::uiOutput("dh_info_card"),
+            shiny::uiOutput("dh_download_ui"),
+            shiny::uiOutput("dh_preview_ui")
+
+          ) # end dh-preview-panel
+        ) # end dh-body
+      ) # end dh-page
+    ) # end Data Hub tabPanel
 
   ) # end navbarPage
 ) # end tagList

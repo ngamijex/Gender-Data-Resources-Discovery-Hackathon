@@ -6,8 +6,8 @@ library(stringr)
 library(plotly)
 library(httr)
 library(jsonlite)
-
-
+library(DT)
+library(writexl)
 
 
 
@@ -23,6 +23,7 @@ source("R/demography_data.R")
 source("R/employment_data.R")
 source("R/education_data.R")
 source("R/agriculture_data.R")
+source("R/datahub_catalog.R")
 source("R/ui.R")
 source("R/server.R")
 
