@@ -683,12 +683,10 @@ ui <- shiny::tagList(
             # Row 1 — top
             shiny::div(class = "vizc-row",
               shiny::span(class = "vizc-word vizc-word--s2 vizc-word--gray", "poverty"),
-              shiny::span(class = "vizc-word vizc-word--s4 vizc-word--red vizc-word--vert vizc-word--soon", "Agriculture"),
               shiny::span(class = "vizc-word vizc-word--s2 vizc-word--dark", "indicators"),
               shiny::span(class = "vizc-word vizc-word--s3 vizc-word--gray", "surveys"),
               shiny::span(class = "vizc-word vizc-word--s5 vizc-word--red vizc-word--vert vizc-word--soon", "Health"),
               shiny::span(class = "vizc-word vizc-word--s2 vizc-word--gray", "microdata"),
-              shiny::span(class = "vizc-word vizc-word--s3 vizc-word--dark vizc-word--soon", "Education"),
               shiny::span(class = "vizc-word vizc-word--s1 vizc-word--gray", "gender gap")
             ),
 
