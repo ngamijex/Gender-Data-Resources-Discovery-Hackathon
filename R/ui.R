@@ -598,6 +598,17 @@ ui <- shiny::tagList(
             setTimeout(function() { $(window).trigger('resize'); }, 150);
           }
 
+          /* ── Agriculture inner tab switching ── */
+          function switchAgriTab(tab) {
+            var inp = document.getElementById('agri_tab');
+            if (inp) { inp.value = tab; $(inp).trigger('change'); }
+            document.querySelectorAll('.agri-sb__tabtn').forEach(function(b) {
+              b.classList.remove('agri-sb__tabtn--active');
+              if (b.getAttribute('data-tab') === tab) b.classList.add('agri-sb__tabtn--active');
+            });
+            setTimeout(function() { $(window).trigger('resize'); }, 150);
+          }
+
           /* ── Education inner tab switching ── */
           function switchEduTab(tab) {
             var inp = document.getElementById('edu_tab');
@@ -624,6 +635,8 @@ ui <- shiny::tagList(
               switchEmpTab('overview');
             } else if (sector === 'edu') {
               switchEduTab('overview');
+            } else if (sector === 'agri') {
+              switchAgriTab('overview');
             } else {
               switchFiTab('overview');
             }
@@ -719,6 +732,11 @@ ui <- shiny::tagList(
                 class         = "vizc-word vizc-word--s4 vizc-word--dark vizc-word--live",
                 `data-sector` = "edu",
                 "Education"
+              ),
+              shiny::tags$span(
+                class         = "vizc-word vizc-word--s3 vizc-word--green vizc-word--live",
+                `data-sector` = "agri",
+                "Agriculture"
               )
             )
           ),
@@ -733,8 +751,10 @@ ui <- shiny::tagList(
             shiny::tags$strong("Demography"),
             ", ",
             shiny::tags$strong("Employment"),
-            ", or ",
+            ", ",
             shiny::tags$strong("Education"),
+            ", or ",
+            shiny::tags$strong("Agriculture"),
             " to open the dashboard"
           )
         ),
@@ -772,6 +792,11 @@ ui <- shiny::tagList(
                     shiny::tags$i(class = "fas fa-graduation-cap fa-xs"), " Education"
                   )
                 ),
+                shiny::conditionalPanel("input.active_sector == 'agri'",
+                  shiny::tags$span(class = "vizc-panel__sector-badge",
+                    shiny::tags$i(class = "fas fa-seedling fa-xs"), " Agriculture"
+                  )
+                ),
 
                 shiny::conditionalPanel("input.active_sector == 'finc'",
                   shiny::tags$span(class = "vizc-panel__bar-title",
@@ -796,6 +821,11 @@ ui <- shiny::tagList(
                 shiny::conditionalPanel("input.active_sector == 'edu'",
                   shiny::tags$span(class = "vizc-panel__bar-title",
                     "Rwanda PHC 2022 \u00b7 Gender & Education"
+                  )
+                ),
+                shiny::conditionalPanel("input.active_sector == 'agri'",
+                  shiny::tags$span(class = "vizc-panel__bar-title",
+                    "Rwanda AHS 2020 \u00b7 Gender & Agriculture"
                   )
                 )
               ),
@@ -1046,6 +1076,47 @@ ui <- shiny::tagList(
                     class = "edu-sb__tabtn", `data-tab` = "disability",
                     onclick = "switchEduTab('disability')",
                     shiny::tags$i(class = "fas fa-wheelchair fa-fw"), " Disability"
+                  )
+                )
+              )
+
+              ,shiny::conditionalPanel("input.active_sector == 'agri'",
+                shiny::div(class = "fi-sb__tabnav fi-sb__tabnav--agri",
+                  shiny::textInput("agri_tab", NULL, value = "overview"),
+                  shiny::tags$button(
+                    class = "agri-sb__tabtn agri-sb__tabtn--active", `data-tab` = "overview",
+                    onclick = "switchAgriTab('overview')",
+                    shiny::tags$i(class = "fas fa-tachometer-alt fa-fw"), " Overview"
+                  ),
+                  shiny::tags$button(
+                    class = "agri-sb__tabtn", `data-tab` = "land",
+                    onclick = "switchAgriTab('land')",
+                    shiny::tags$i(class = "fas fa-map fa-fw"), " Land Access"
+                  ),
+                  shiny::tags$button(
+                    class = "agri-sb__tabtn", `data-tab` = "extension",
+                    onclick = "switchAgriTab('extension')",
+                    shiny::tags$i(class = "fas fa-chalkboard-teacher fa-fw"), " Extension Services"
+                  ),
+                  shiny::tags$button(
+                    class = "agri-sb__tabtn", `data-tab` = "inputs",
+                    onclick = "switchAgriTab('inputs')",
+                    shiny::tags$i(class = "fas fa-flask fa-fw"), " Inputs & Practices"
+                  ),
+                  shiny::tags$button(
+                    class = "agri-sb__tabtn", `data-tab` = "workers",
+                    onclick = "switchAgriTab('workers')",
+                    shiny::tags$i(class = "fas fa-chart-line fa-fw"), " Workers Trend"
+                  ),
+                  shiny::tags$button(
+                    class = "agri-sb__tabtn", `data-tab` = "livestock",
+                    onclick = "switchAgriTab('livestock')",
+                    shiny::tags$i(class = "fas fa-horse fa-fw"), " Livestock"
+                  ),
+                  shiny::tags$button(
+                    class = "agri-sb__tabtn", `data-tab` = "programs",
+                    onclick = "switchAgriTab('programs')",
+                    shiny::tags$i(class = "fas fa-hand-holding-heart fa-fw"), " Programs"
                   )
                 )
               )
@@ -2642,6 +2713,294 @@ ui <- shiny::tagList(
 
                 ) # end edu fi-charts
               ) # end conditionalPanel edu
+
+              # ━━━ AGRICULTURE SECTOR ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+              ,shiny::conditionalPanel("input.active_sector == 'agri'",
+                shiny::div(class = "fi-charts",
+
+                  # ── OVERVIEW tab ────────────────────────────────────────────
+                  shiny::conditionalPanel("input.agri_tab == 'overview'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-tachometer-alt fa-xs"), " Overview"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__title",
+                        "Gender & Agriculture \u2014 Key Indicators"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__sub",
+                        "Rwanda Agricultural Household Survey (AHS) 2020 \u00b7 PHC 2022"
+                      )
+                    ),
+                    shiny::uiOutput("agri_overview_kpis"),
+                    shiny::fluidRow(
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-home fa-xs"),
+                          "\u00a0 Agricultural Households by Sex of Head"
+                        ),
+                        plotly::plotlyOutput("agri_hh_bar", height = "300px")
+                      )),
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-pie fa-xs"),
+                          "\u00a0 Share of Agricultural HH (Male vs Female Headed)"
+                        ),
+                        plotly::plotlyOutput("agri_hh_donut", height = "300px")
+                      ))
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(12, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-line fa-xs"),
+                          "\u00a0 Agricultural Workers Trend 2017\u20132022 (% of working-age population)"
+                        ),
+                        plotly::plotlyOutput("agri_workers_overview", height = "320px")
+                      ))
+                    )
+                  ),
+
+                  # ── LAND ACCESS tab ─────────────────────────────────────────
+                  shiny::conditionalPanel("input.agri_tab == 'land'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-map fa-xs"), " Land Access"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__title",
+                        "Land Ownership, Access & Rights by Gender"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__sub",
+                        "NLA \u00b7 AHS 2020"
+                      )
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-map fa-xs"),
+                          "\u00a0 Land Ownership by Category (2018 vs 2021)"
+                        ),
+                        plotly::plotlyOutput("agri_land_ownership", height = "300px")
+                      )),
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-key fa-xs"),
+                          "\u00a0 Land Rights by Sex (Access & Right to Sell)"
+                        ),
+                        plotly::plotlyOutput("agri_land_rights", height = "300px")
+                      ))
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(12, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-tractor fa-xs"),
+                          "\u00a0 Agricultural Land Access by Type & Sex of HH Head"
+                        ),
+                        plotly::plotlyOutput("agri_land_access", height = "320px")
+                      ))
+                    )
+                  ),
+
+                  # ── EXTENSION SERVICES tab ──────────────────────────────────
+                  shiny::conditionalPanel("input.agri_tab == 'extension'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-chalkboard-teacher fa-xs"),
+                        " Extension Services"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__title",
+                        "Agricultural Extension Services Received by Gender"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__sub",
+                        "AHS 2020 \u00b7 % of agricultural households supported"
+                      )
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(12, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-list fa-xs"),
+                          "\u00a0 Extension Coverage by Service Type \u2014 Female vs Male HH"
+                        ),
+                        plotly::plotlyOutput("agri_extension_bar", height = "420px")
+                      ))
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-percentage fa-xs"),
+                          "\u00a0 Total Reach (% of all agricultural HH)"
+                        ),
+                        plotly::plotlyOutput("agri_extension_total", height = "280px")
+                      )),
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-venus-mars fa-xs"),
+                          "\u00a0 Gender Gap in Extension (F \u2212 M, pp)"
+                        ),
+                        plotly::plotlyOutput("agri_extension_gap", height = "280px")
+                      ))
+                    )
+                  ),
+
+                  # ── INPUTS & PRACTICES tab ─────────────────────────────────
+                  shiny::conditionalPanel("input.agri_tab == 'inputs'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-flask fa-xs"), " Inputs & Practices"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__title",
+                        "Agricultural Inputs & Community Group Participation"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__sub",
+                        "AHS 2020 \u00b7 % of agricultural households"
+                      )
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(12, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-seedling fa-xs"),
+                          "\u00a0 Agricultural Inputs by Province & Sex of HH Head"
+                        ),
+                        shiny::selectInput("agri_input_type", NULL,
+                          choices = c(
+                            "Improved Seeds"     = "improved_seeds",
+                            "Organic Fertilizer" = "organic_fert",
+                            "Inorganic Fertilizer" = "inorganic_fert",
+                            "Pesticides"         = "pesticides"
+                          ), width = "260px"
+                        ),
+                        plotly::plotlyOutput("agri_inputs_chart", height = "340px")
+                      ))
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(12, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-users fa-xs"),
+                          "\u00a0 Community Group Membership by Sex of HH Head"
+                        ),
+                        plotly::plotlyOutput("agri_community_groups", height = "300px")
+                      ))
+                    )
+                  ),
+
+                  # ── WORKERS TREND tab ───────────────────────────────────────
+                  shiny::conditionalPanel("input.agri_tab == 'workers'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-chart-line fa-xs"), " Workers Trend"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__title",
+                        "Agricultural Workers as % of Working-Age Population (2017\u20132022)"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__sub",
+                        "RLFS datasets 2017\u20132022 \u00b7 16 years and above"
+                      )
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(12, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-filter fa-xs"),
+                          "\u00a0 Worker Type:"
+                        ),
+                        shiny::selectInput("agri_worker_type", NULL,
+                          choices = c(
+                            "All: Market-oriented + Subsistence" = "Market-oriented + Subsistence",
+                            "Market-oriented Only"               = "Market-oriented",
+                            "Subsistence Only"                   = "Subsistence"
+                          ), width = "360px"
+                        ),
+                        plotly::plotlyOutput("agri_workers_trend", height = "360px")
+                      ))
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-venus fa-xs"),
+                          "\u00a0 Female Agricultural Workers by Type (2017\u20132022)"
+                        ),
+                        plotly::plotlyOutput("agri_workers_female", height = "280px")
+                      )),
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-mars fa-xs"),
+                          "\u00a0 Male Agricultural Workers by Type (2017\u20132022)"
+                        ),
+                        plotly::plotlyOutput("agri_workers_male", height = "280px")
+                      ))
+                    )
+                  ),
+
+                  # ── LIVESTOCK tab ───────────────────────────────────────────
+                  shiny::conditionalPanel("input.agri_tab == 'livestock'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-horse fa-xs"), " Livestock"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__title",
+                        "Livestock Ownership by Type & Sex of HH Head"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__sub",
+                        "AHS 2020 \u00b7 % of households raising each livestock type"
+                      )
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(12, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-list fa-xs"),
+                          "\u00a0 Livestock Ownership Rates: Male vs Female Headed HH"
+                        ),
+                        plotly::plotlyOutput("agri_livestock_bar", height = "360px")
+                      ))
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-venus-mars fa-xs"),
+                          "\u00a0 Gender Gap in Livestock Ownership (Male \u2212 Female HH, pp)"
+                        ),
+                        plotly::plotlyOutput("agri_livestock_gap", height = "300px")
+                      )),
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-chart-pie fa-xs"),
+                          "\u00a0 Livestock Portfolio Composition (% share per sex)"
+                        ),
+                        plotly::plotlyOutput("agri_livestock_donut", height = "300px")
+                      ))
+                    )
+                  ),
+
+                  # ── PROGRAMS tab ────────────────────────────────────────────
+                  shiny::conditionalPanel("input.agri_tab == 'programs'",
+                    shiny::div(class = "fi-tab-hdr",
+                      shiny::tags$span(class = "fi-tab-hdr__eyebrow",
+                        shiny::tags$i(class = "fas fa-hand-holding-heart fa-xs"), " Programs"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__title",
+                        "Girinka Programme \u2014 Gender Participation & Outcomes"
+                      ),
+                      shiny::tags$span(class = "fi-tab-hdr__sub",
+                        "AHS 2020 \u00b7 % of agricultural households"
+                      )
+                    ),
+                    shiny::fluidRow(
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-award fa-xs"),
+                          "\u00a0 Girinka Beneficiaries & Retention by Sex"
+                        ),
+                        plotly::plotlyOutput("agri_girinka_bar", height = "300px")
+                      )),
+                      shiny::column(6, shiny::div(class = "dash-chart-card",
+                        shiny::div(class = "dash-chart-title",
+                          shiny::tags$i(class = "fas fa-building fa-xs"),
+                          "\u00a0 Provider Type Distribution (Govt vs NGO/Company)"
+                        ),
+                        plotly::plotlyOutput("agri_girinka_provider", height = "300px")
+                      ))
+                    )
+                  )
+
+                ) # end agri fi-charts
+              ) # end conditionalPanel agri
 
               ) # end fi-main
 

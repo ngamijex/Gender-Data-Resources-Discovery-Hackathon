@@ -1,0 +1,277 @@
+group,year,sex,count,pct,level
+Total school teaching staff,2017,Male,36822.0,0.518,All levels
+Total school teaching staff,2017,Female,34219.0,0.482,All levels
+Total school teaching staff,2018,Male,36744.0,0.513,All levels
+Total school teaching staff,2018,Female,34913.0,0.487,All levels
+Total school teaching staff,2019,Male,37496.0,0.504,All levels
+Total school teaching staff,2019,Female,36898.0,0.496,All levels
+Total school teaching staff,2020/21,Male,46317.0,0.476,All levels
+Total school teaching staff,2020/21,Female,50961.0,0.524,All levels
+Total school teaching staff,2021/22,Male,48252.0,0.482,All levels
+Total school teaching staff,2021/22,Female,51764.0,0.518,All levels
+Total school teaching staff,2022/23,Male,52965.0,0.479,All levels
+Total school teaching staff,2022/23,Female,57495.0,0.521,All levels
+Staff in Public schools,2017,Male,10983.0,,All levels
+Staff in Public schools,2017,Female,9011.0,,All levels
+Staff in Public schools,2018,Male,10910.0,,All levels
+Staff in Public schools,2018,Female,9104.0,,All levels
+Staff in Public schools,2019,Male,11306.0,,All levels
+Staff in Public schools,2019,Female,9833.0,,All levels
+Staff in Public schools,2020/21,Male,16211.0,,All levels
+Staff in Public schools,2020/21,Female,17498.0,,All levels
+Staff in Public schools,2021/22,Male,17627.0,,All levels
+Staff in Public schools,2021/22,Female,18619.0,,All levels
+Staff in Public schools,2022/23,Male,19467.0,,All levels
+Staff in Public schools,2022/23,Female,20769.0,,All levels
+Staff in Government-subsidized schools,2017,Male,19841.0,,All levels
+Staff in Government-subsidized schools,2017,Female,20288.0,,All levels
+Staff in Government-subsidized schools,2018,Male,19769.0,,All levels
+Staff in Government-subsidized schools,2018,Female,20820.0,,All levels
+Staff in Government-subsidized schools,2019,Male,19976.0,,All levels
+Staff in Government-subsidized schools,2019,Female,21572.0,,All levels
+Staff in Government-subsidized schools,2020/21,Male,23141.0,,All levels
+Staff in Government-subsidized schools,2020/21,Female,27611.0,,All levels
+Staff in Government-subsidized schools,2021/22,Male,24402.0,,All levels
+Staff in Government-subsidized schools,2021/22,Female,28322.0,,All levels
+Staff in Government-subsidized schools,2022/23,Male,26135.0,,All levels
+Staff in Government-subsidized schools,2022/23,Female,31016.0,,All levels
+Staff in Private schools,2017,Male,5998.0,,All levels
+Staff in Private schools,2017,Female,4920.0,,All levels
+Staff in Private schools,2018,Male,6065.0,,All levels
+Staff in Private schools,2018,Female,4989.0,,All levels
+Staff in Private schools,2019,Male,6214.0,,All levels
+Staff in Private schools,2019,Female,5493.0,,All levels
+Staff in Private schools,2020/21,Male,6965.0,,All levels
+Staff in Private schools,2020/21,Female,5852.0,,All levels
+Staff in Private schools,2021/22,Male,6223.0,,All levels
+Staff in Private schools,2021/22,Female,4823.0,,All levels
+Staff in Private schools,2022/23,Male,7363.0,,All levels
+Staff in Private schools,2022/23,Female,5710.0,,All levels
+Total school teaching staff,2017,Male,956.0,0.158,Preprimary
+Total school teaching staff,2017,Female,5083.0,0.842,Preprimary
+Total school teaching staff,2018,Male,994.0,0.158,Preprimary
+Total school teaching staff,2018,Female,5286.0,0.842,Preprimary
+Total school teaching staff,2019,Male,1059.0,0.153,Preprimary
+Total school teaching staff,2019,Female,5872.0,0.847,Preprimary
+Total school teaching staff,2020/21,Male,1154.0,0.144,Preprimary
+Total school teaching staff,2020/21,Female,6880.0,0.856,Preprimary
+Total school teaching staff,2021/22,Male,1555.0,0.212,Preprimary
+Total school teaching staff,2021/22,Female,5796.0,0.788,Preprimary
+Total school teaching staff,2022/23,Male,1685.0,0.182,Preprimary
+Total school teaching staff,2022/23,Female,7595.0,0.818,Preprimary
+Staff in Public schools,2017,Male,117.0,,Preprimary
+Staff in Public schools,2017,Female,589.0,,Preprimary
+Staff in Public schools,2018,Male,92.0,,Preprimary
+Staff in Public schools,2018,Female,541.0,,Preprimary
+Staff in Public schools,2019,Male,104.0,,Preprimary
+Staff in Public schools,2019,Female,630.0,,Preprimary
+Staff in Public schools,2020/21,Male,242.0,,Preprimary
+Staff in Public schools,2020/21,Female,1479.0,,Preprimary
+Staff in Public schools,2021/22,Male,541.0,,Preprimary
+Staff in Public schools,2021/22,Female,1362.0,,Preprimary
+Staff in Public schools,2022/23,Male,534.0,,Preprimary
+Staff in Public schools,2022/23,Female,2053.0,,Preprimary
+Staff in Government-subsidized schools,2017,Male,362.0,,Preprimary
+Staff in Government-subsidized schools,2017,Female,1741.0,,Preprimary
+Staff in Government-subsidized schools,2018,Male,370.0,,Preprimary
+Staff in Government-subsidized schools,2018,Female,2014.0,,Preprimary
+Staff in Government-subsidized schools,2019,Male,351.0,,Preprimary
+Staff in Government-subsidized schools,2019,Female,2046.0,,Preprimary
+Staff in Government-subsidized schools,2020/21,Male,284.0,,Preprimary
+Staff in Government-subsidized schools,2020/21,Female,2258.0,,Preprimary
+Staff in Government-subsidized schools,2021/22,Male,661.0,,Preprimary
+Staff in Government-subsidized schools,2021/22,Female,2086.0,,Preprimary
+Staff in Government-subsidized schools,2022/23,Male,749.0,,Preprimary
+Staff in Government-subsidized schools,2022/23,Female,3046.0,,Preprimary
+Staff in Private schools,2017,Male,477.0,,Preprimary
+Staff in Private schools,2017,Female,2753.0,,Preprimary
+Staff in Private schools,2018,Male,532.0,,Preprimary
+Staff in Private schools,2018,Female,2731.0,,Preprimary
+Staff in Private schools,2019,Male,604.0,,Preprimary
+Staff in Private schools,2019,Female,3196.0,,Preprimary
+Staff in Private schools,2020/21,Male,628.0,,Preprimary
+Staff in Private schools,2020/21,Female,3143.0,,Preprimary
+Staff in Private schools,2021/22,Male,353.0,,Preprimary
+Staff in Private schools,2021/22,Female,2348.0,,Preprimary
+Staff in Private schools,2022/23,Male,402.0,,Preprimary
+Staff in Private schools,2022/23,Female,2496.0,,Preprimary
+Total school teaching staff,2017,Male,18898.0,0.455,Primary
+Total school teaching staff,2017,Female,22675.0,0.545,Primary
+Total school teaching staff,2018,Male,18990.0,0.451,Primary
+Total school teaching staff,2018,Female,23083.0,0.549,Primary
+Total school teaching staff,2019,Male,19534.0,0.445,Primary
+Total school teaching staff,2019,Female,24344.0,0.555,Primary
+Total school teaching staff,2020/21,Male,25667.0,0.423,Primary
+Total school teaching staff,2020/21,Female,34999.0,0.577,Primary
+Total school teaching staff,2021/22,Male,26833.0,0.426,Primary
+Total school teaching staff,2021/22,Female,36213.0,0.574,Primary
+Total school teaching staff,2022/23,Male,29101.0,0.431,Primary
+Total school teaching staff,2022/23,Female,38438.0,0.569,Primary
+Teaching staff in public schools,2017,Male,5603.0,,Primary
+Teaching staff in public schools,2017,Female,6292.0,,Primary
+Teaching staff in public schools,2018,Male,5589.0,,Primary
+Teaching staff in public schools,2018,Female,6441.0,,Primary
+Teaching staff in public schools,2019,Male,5839.0,,Primary
+Teaching staff in public schools,2019,Female,7016.0,,Primary
+Teaching staff in public schools,2020/21,Male,9209.0,,Primary
+Teaching staff in public schools,2020/21,Female,12750.0,,Primary
+Teaching staff in public schools,2021/22,Male,10007.0,,Primary
+Teaching staff in public schools,2021/22,Female,13582.0,,Primary
+Teaching staff in public schools,2022/23,Male,10724.0,,Primary
+Teaching staff in public schools,2022/23,Female,14378.0,,Primary
+Teaching staff in Government-subsidized schools,2017,Male,10916.0,,Primary
+Teaching staff in Government-subsidized schools,2017,Female,14981.0,,Primary
+Teaching staff in Government-subsidized schools,2018,Male,10869.0,,Primary
+Teaching staff in Government-subsidized schools,2018,Female,15169.0,,Primary
+Teaching staff in Government-subsidized schools,2019,Male,10979.0,,Primary
+Teaching staff in Government-subsidized schools,2019,Female,15792.0,,Primary
+Teaching staff in Government-subsidized schools,2020/21,Male,13093.0,,Primary
+Teaching staff in Government-subsidized schools,2020/21,Female,20416.0,,Primary
+Teaching staff in Government-subsidized schools,2021/22,Male,13625.0,,Primary
+Teaching staff in Government-subsidized schools,2021/22,Female,20898.0,,Primary
+Teaching staff in Government-subsidized schools,2022/23,Male,14329.0,,Primary
+Teaching staff in Government-subsidized schools,2022/23,Female,21791.0,,Primary
+Teaching staff in Private schools,2017,Male,2379.0,,Primary
+Teaching staff in Private schools,2017,Female,1402.0,,Primary
+Teaching staff in Private schools,2018,Male,2532.0,,Primary
+Teaching staff in Private schools,2018,Female,1473.0,,Primary
+Teaching staff in Private schools,2019,Male,2716.0,,Primary
+Teaching staff in Private schools,2019,Female,1536.0,,Primary
+Teaching staff in Private schools,2020/21,Male,3365.0,,Primary
+Teaching staff in Private schools,2020/21,Female,1833.0,,Primary
+Teaching staff in Private schools,2021/22,Male,3201.0,,Primary
+Teaching staff in Private schools,2021/22,Female,1733.0,,Primary
+Teaching staff in Private schools,2022/23,Male,4048.0,,Primary
+Teaching staff in Private schools,2022/23,Female,2269.0,,Primary
+Total teaching staff,2017,Male,13772.0,0.715,Upper Secondary
+Total teaching staff,2017,Female,5496.0,0.285,Upper Secondary
+Total teaching staff,2018,Male,13883.0,0.71,Upper Secondary
+Total teaching staff,2018,Female,5680.0,0.29,Upper Secondary
+Total teaching staff,2019,Male,14007.0,0.708,Upper Secondary
+Total teaching staff,2019,Female,5786.0,0.292,Upper Secondary
+Total teaching staff,2020/21,Male,16422.0,0.673,Upper Secondary
+Total teaching staff,2020/21,Female,7981.0,0.327,Upper Secondary
+Total teaching staff,2021/22,Male,16937.0,0.665,Upper Secondary
+Total teaching staff,2021/22,Female,8531.0,0.335,Upper Secondary
+Total teaching staff,2022/23,Male,18341.0,0.652,Upper Secondary
+Total teaching staff,2022/23,Female,9799.0,0.348,Upper Secondary
+teaching Staff in Public schools,2017,Male,4413.0,,Upper Secondary
+teaching Staff in Public schools,2017,Female,1806.0,,Upper Secondary
+teaching Staff in Public schools,2018,Male,4387.0,,Upper Secondary
+teaching Staff in Public schools,2018,Female,1864.0,,Upper Secondary
+teaching Staff in Public schools,2019,Male,4472.0,,Upper Secondary
+teaching Staff in Public schools,2019,Female,1898.0,,Upper Secondary
+teaching Staff in Public schools,2020/21,Male,5821.0,,Upper Secondary
+teaching Staff in Public schools,2020/21,Female,2904.0,,Upper Secondary
+teaching Staff in Public schools,2021/22,Male,5972.0,,Upper Secondary
+teaching Staff in Public schools,2021/22,Female,3113.0,,Upper Secondary
+teaching Staff in Public schools,2022/23,Male,6702.0,,Upper Secondary
+teaching Staff in Public schools,2022/23,Female,3593.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2017,Male,8139.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2017,Female,3439.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2018,Male,8088.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2018,Female,3498.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2019,Male,8144.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2019,Female,3579.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2020/21,Male,9185.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2020/21,Female,4728.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2021/22,Male,9387.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2021/22,Female,5050.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2022/23,Male,10060.0,,Upper Secondary
+teaching Staff in Government-subsidized schools,2022/23,Female,5739.0,,Upper Secondary
+teaching Staff in Private schools,2017,Male,1220.0,,Upper Secondary
+teaching Staff in Private schools,2017,Female,251.0,,Upper Secondary
+teaching Staff in Private schools,2018,Male,1408.0,,Upper Secondary
+teaching Staff in Private schools,2018,Female,318.0,,Upper Secondary
+teaching Staff in Private schools,2019,Male,1391.0,,Upper Secondary
+teaching Staff in Private schools,2019,Female,309.0,,Upper Secondary
+teaching Staff in Private schools,2020/21,Male,1416.0,,Upper Secondary
+teaching Staff in Private schools,2020/21,Female,349.0,,Upper Secondary
+teaching Staff in Private schools,2021/22,Male,1578.0,,Upper Secondary
+teaching Staff in Private schools,2021/22,Female,368.0,,Upper Secondary
+teaching Staff in Private schools,2022/23,Male,1579.0,,Upper Secondary
+teaching Staff in Private schools,2022/23,Female,467.0,,Upper Secondary
+Total teaching staff in TVET,2017,Male,3196.0,0.768,TVET
+Total teaching staff in TVET,2017,Female,965.0,0.232,TVET
+Total teaching staff in TVET,2018,Male,2877.0,0.769,TVET
+Total teaching staff in TVET,2018,Female,864.0,0.231,TVET
+Total teaching staff in TVET,2019,Male,2896.0,0.764,TVET
+Total teaching staff in TVET,2019,Female,896.0,0.236,TVET
+Total teaching staff in TVET,2020/21,Male,3074.0,0.736,TVET
+Total teaching staff in TVET,2020/21,Female,1101.0,0.264,TVET
+Total teaching staff in TVET,2021/22,Male,2927.0,0.705,TVET
+Total teaching staff in TVET,2021/22,Female,1224.0,0.295,TVET
+Total teaching staff in TVET,2022/23,Male,3838.0,0.698,TVET
+Total teaching staff in TVET,2022/23,Female,1663.0,0.302,TVET
+Teaching Staff in Public schools,2017,Male,850.0,,TVET
+Teaching Staff in Public schools,2017,Female,324.0,,TVET
+Teaching Staff in Public schools,2018,Male,842.0,,TVET
+Teaching Staff in Public schools,2018,Female,258.0,,TVET
+Teaching Staff in Public schools,2019,Male,891.0,,TVET
+Teaching Staff in Public schools,2019,Female,289.0,,TVET
+Teaching Staff in Public schools,2020/21,Male,939.0,,TVET
+Teaching Staff in Public schools,2020/21,Female,365.0,,TVET
+Teaching Staff in Public schools,2021/22,Male,1107.0,,TVET
+Teaching Staff in Public schools,2021/22,Female,562.0,,TVET
+Teaching Staff in Public schools,2022/23,Male,1507.0,,TVET
+Teaching Staff in Public schools,2022/23,Female,745.0,,TVET
+Teaching Staff in Government-subsidized schools,2017,Male,424.0,,TVET
+Teaching Staff in Government-subsidized schools,2017,Female,127.0,,TVET
+Teaching Staff in Government-subsidized schools,2018,Male,442.0,,TVET
+Teaching Staff in Government-subsidized schools,2018,Female,139.0,,TVET
+Teaching Staff in Government-subsidized schools,2019,Male,502.0,,TVET
+Teaching Staff in Government-subsidized schools,2019,Female,155.0,,TVET
+Teaching Staff in Government-subsidized schools,2020/21,Male,579.0,,TVET
+Teaching Staff in Government-subsidized schools,2020/21,Female,209.0,,TVET
+Teaching Staff in Government-subsidized schools,2021/22,Male,729.0,,TVET
+Teaching Staff in Government-subsidized schools,2021/22,Female,288.0,,TVET
+Teaching Staff in Government-subsidized schools,2022/23,Male,997.0,,TVET
+Teaching Staff in Government-subsidized schools,2022/23,Female,440.0,,TVET
+Teaching Staff in Private schools,2017,Male,1922.0,,TVET
+Teaching Staff in Private schools,2017,Female,514.0,,TVET
+Teaching Staff in Private schools,2018,Male,1593.0,,TVET
+Teaching Staff in Private schools,2018,Female,467.0,,TVET
+Teaching Staff in Private schools,2019,Male,1503.0,,TVET
+Teaching Staff in Private schools,2019,Female,452.0,,TVET
+Teaching Staff in Private schools,2020/21,Male,1556.0,,TVET
+Teaching Staff in Private schools,2020/21,Female,527.0,,TVET
+Teaching Staff in Private schools,2021/22,Male,1091.0,,TVET
+Teaching Staff in Private schools,2021/22,Female,374.0,,TVET
+Teaching Staff in Private schools,2022/23,Male,1334.0,,TVET
+Teaching Staff in Private schools,2022/23,Female,478.0,,TVET
+Total academic staff,2017,Male,3294.0,0.805,Higher Education
+Total academic staff,2017,Female,800.0,0.195,Higher Education
+Total academic staff,2018,Male,3324.0,0.814,Higher Education
+Total academic staff,2018,Female,762.0,0.186,Higher Education
+Total academic staff,2019,Male,3500.0,0.81,Higher Education
+Total academic staff,2019,Female,822.0,0.19,Higher Education
+Total academic staff,2020/21,Male,3492.0,0.812,Higher Education
+Total academic staff,2020/21,Female,809.0,0.188,Higher Education
+Total academic staff,2021/22,Male,3479.0,0.809,Higher Education
+Total academic staff,2021/22,Female,823.0,0.191,Higher Education
+Total academic staff,2022/23,Male,3491.0,0.7981252857796067,Higher Education
+Total academic staff,2022/23,Female,883.0,0.20187471422039324,Higher Education
+Academic staff in public institutions,2017,Male,1556.0,0.787,Higher Education
+Academic staff in public institutions,2017,Female,421.0,0.213,Higher Education
+Academic staff in public institutions,2018,Male,1665.0,0.806,Higher Education
+Academic staff in public institutions,2018,Female,401.0,0.194,Higher Education
+Academic staff in public institutions,2019,Male,1734.0,0.804,Higher Education
+Academic staff in public institutions,2019,Female,424.0,0.197,Higher Education
+Academic staff in public institutions,2020/21,Male,1764.0,0.809,Higher Education
+Academic staff in public institutions,2020/21,Female,416.0,0.191,Higher Education
+Academic staff in public institutions,2021/22,Male,1735.0,0.8,Higher Education
+Academic staff in public institutions,2021/22,Female,434.0,0.2,Higher Education
+Academic staff in public institutions,2022/23,Male,1737.0,0.7931506849315069,Higher Education
+Academic staff in public institutions,2022/23,Female,453.0,0.20684931506849316,Higher Education
+Academic staff in Private institutions,2017,Male,1738.0,0.821,Higher Education
+Academic staff in Private institutions,2017,Female,379.0,0.179,Higher Education
+Academic staff in Private institutions,2018,Male,1659.0,0.821,Higher Education
+Academic staff in Private institutions,2018,Female,361.0,0.179,Higher Education
+Academic staff in Private institutions,2019,Male,1766.0,0.816,Higher Education
+Academic staff in Private institutions,2019,Female,398.0,0.184,Higher Education
+Academic staff in Private institutions,2020/21,Male,1728.0,0.815,Higher Education
+Academic staff in Private institutions,2020/21,Female,393.0,0.185,Higher Education
+Academic staff in Private institutions,2021/22,Male,1744.0,0.818,Higher Education
+Academic staff in Private institutions,2021/22,Female,389.0,0.182,Higher Education
+Academic staff in Private institutions,2022/23,Male,1754.0,0.8031135531135531,Higher Education
+Academic staff in Private institutions,2022/23,Female,430.0,0.19688644688644688,Higher Education

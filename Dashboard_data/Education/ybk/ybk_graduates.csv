@@ -1,0 +1,109 @@
+group,year,sex,count,pct,level
+Total graduates in Higher Education,2015/16,Male,12774.0,0.54,Higher Education
+Total graduates in Higher Education,2015/16,Female,10861.0,0.46,Higher Education
+Total graduates in Higher Education,2016/17,Male,12718.0,0.551,Higher Education
+Total graduates in Higher Education,2016/17,Female,10382.0,0.449,Higher Education
+Total graduates in Higher Education,2017/18,Male,11354.0,0.553,Higher Education
+Total graduates in Higher Education,2017/18,Female,9179.0,0.447,Higher Education
+Total graduates in Higher Education,2019/20,Male,13043.0,0.561,Higher Education
+Total graduates in Higher Education,2019/20,Female,10203.0,0.439,Higher Education
+Total graduates in Higher Education,2020/21,Male,12897.0,0.552,Higher Education
+Total graduates in Higher Education,2020/21,Female,10458.0,0.448,Higher Education
+Total graduates in Higher Education,2021/22,Male,13382.0,0.554,Higher Education
+Total graduates in Higher Education,2021/22,Female,10754.0,0.446,Higher Education
+In Public institutions,2015/16,Male,7185.0,0.67,Higher Education
+In Public institutions,2015/16,Female,3535.0,0.33,Higher Education
+In Public institutions,2016/17,Male,7245.0,0.65,Higher Education
+In Public institutions,2016/17,Female,3895.0,0.35,Higher Education
+In Public institutions,2017/18,Male,6039.0,0.667,Higher Education
+In Public institutions,2017/18,Female,3021.0,0.333,Higher Education
+In Public institutions,2019/20,Male,7962.0,0.656,Higher Education
+In Public institutions,2019/20,Female,4174.0,0.344,Higher Education
+In Public institutions,2020/21,Male,6172.0,0.661,Higher Education
+In Public institutions,2020/21,Female,3161.0,0.339,Higher Education
+In Public institutions,2021/22,Male,7217.0,0.65,Higher Education
+In Public institutions,2021/22,Female,3890.0,0.35,Higher Education
+In Private institutions,2015/16,Male,5589.0,0.433,Higher Education
+In Private institutions,2015/16,Female,7326.0,0.567,Higher Education
+In Private institutions,2016/17,Male,5473.0,0.458,Higher Education
+In Private institutions,2016/17,Female,6487.0,0.542,Higher Education
+In Private institutions,2017/18,Male,5315.0,0.463,Higher Education
+In Private institutions,2017/18,Female,6158.0,0.537,Higher Education
+In Private institutions,2019/20,Male,5081.0,0.457,Higher Education
+In Private institutions,2019/20,Female,6029.0,0.543,Higher Education
+In Private institutions,2020/21,Male,6725.0,0.48,Higher Education
+In Private institutions,2020/21,Female,7297.0,0.52,Higher Education
+In Private institutions,2021/22,Male,6165.0,0.473,Higher Education
+In Private institutions,2021/22,Female,6864.0,0.527,Higher Education
+Total graduates in Polytechnics,2015/16,Male,1543.0,0.749,Polytechnics
+Total graduates in Polytechnics,2015/16,Female,516.0,0.251,Polytechnics
+Total graduates in Polytechnics,2016/17,Male,2013.0,0.747,Polytechnics
+Total graduates in Polytechnics,2016/17,Female,682.0,0.253,Polytechnics
+Total graduates in Polytechnics,2017/18,Male,1748.0,0.761,Polytechnics
+Total graduates in Polytechnics,2017/18,Female,550.0,0.239,Polytechnics
+Total graduates in Polytechnics,2019/20,Male,2978.0,0.66,Polytechnics
+Total graduates in Polytechnics,2019/20,Female,1531.0,0.34,Polytechnics
+Total graduates in Polytechnics,2020/21,Male,2717.0,0.678,Polytechnics
+Total graduates in Polytechnics,2020/21,Female,1291.0,0.322,Polytechnics
+Total graduates in Polytechnics,2021/22,Male,2812.0,0.663,Polytechnics
+Total graduates in Polytechnics,2021/22,Female,1427.0,0.337,Polytechnics
+In Public institutions,2015/16,Male,1477.0,,Polytechnics
+In Public institutions,2015/16,Female,342.0,,Polytechnics
+In Public institutions,2016/17,Male,1812.0,,Polytechnics
+In Public institutions,2016/17,Female,502.0,,Polytechnics
+In Public institutions,2017/18,Male,1264.0,,Polytechnics
+In Public institutions,2017/18,Female,285.0,,Polytechnics
+In Public institutions,2019/20,Male,2399.0,,Polytechnics
+In Public institutions,2019/20,Female,829.0,,Polytechnics
+In Public institutions,2020/21,Male,2204.0,,Polytechnics
+In Public institutions,2020/21,Female,691.0,,Polytechnics
+In Public institutions,2021/22,Male,2154.0,,Polytechnics
+In Public institutions,2021/22,Female,632.0,,Polytechnics
+In Private institutions,2015/16,Male,66.0,,Polytechnics
+In Private institutions,2015/16,Female,174.0,,Polytechnics
+In Private institutions,2016/17,Male,201.0,,Polytechnics
+In Private institutions,2016/17,Female,180.0,,Polytechnics
+In Private institutions,2017/18,Male,484.0,,Polytechnics
+In Private institutions,2017/18,Female,265.0,,Polytechnics
+In Private institutions,2019/20,Male,579.0,,Polytechnics
+In Private institutions,2019/20,Female,702.0,,Polytechnics
+In Private institutions,2020/21,Male,513.0,,Polytechnics
+In Private institutions,2020/21,Female,600.0,,Polytechnics
+In Private institutions,2021/22,Male,658.0,,Polytechnics
+In Private institutions,2021/22,Female,795.0,,Polytechnics
+Total graduates in General Higher Education,2015/16,Male,11231.0,0.521,General HE
+Total graduates in General Higher Education,2015/16,Female,10345.0,0.479,General HE
+Total graduates in General Higher Education,2016/17,Male,10705.0,0.525,General HE
+Total graduates in General Higher Education,2016/17,Female,9700.0,0.475,General HE
+Total graduates in General Higher Education,2017/18,Male,9606.0,0.527,General HE
+Total graduates in General Higher Education,2017/18,Female,8629.0,0.473,General HE
+Total graduates in General Higher Education,2019/20,Male,10065.0,0.537,General HE
+Total graduates in General Higher Education,2019/20,Female,8672.0,0.463,General HE
+Total graduates in General Higher Education,2020/21,Male,10180.0,0.526,General HE
+Total graduates in General Higher Education,2020/21,Female,9167.0,0.474,General HE
+Total graduates in General Higher Education,2021/22,Male,10570.0,0.531,General HE
+Total graduates in General Higher Education,2021/22,Female,9327.0,0.469,General HE
+In Public institution,2015/16,Male,5708.0,,General HE
+In Public institution,2015/16,Female,3193.0,,General HE
+In Public institution,2016/17,Male,5433.0,,General HE
+In Public institution,2016/17,Female,3393.0,,General HE
+In Public institution,2017/18,Male,4775.0,,General HE
+In Public institution,2017/18,Female,2736.0,,General HE
+In Public institution,2019/20,Male,5563.0,,General HE
+In Public institution,2019/20,Female,3345.0,,General HE
+In Public institution,2020/21,Male,3968.0,,General HE
+In Public institution,2020/21,Female,2470.0,,General HE
+In Public institution,2021/22,Male,5063.0,,General HE
+In Public institution,2021/22,Female,3258.0,,General HE
+In Private institutions,2015/16,Male,5523.0,,General HE
+In Private institutions,2015/16,Female,7152.0,,General HE
+In Private institutions,2016/17,Male,5272.0,,General HE
+In Private institutions,2016/17,Female,6307.0,,General HE
+In Private institutions,2017/18,Male,4831.0,,General HE
+In Private institutions,2017/18,Female,5893.0,,General HE
+In Private institutions,2019/20,Male,4502.0,,General HE
+In Private institutions,2019/20,Female,5327.0,,General HE
+In Private institutions,2020/21,Male,6212.0,,General HE
+In Private institutions,2020/21,Female,6697.0,,General HE
+In Private institutions,2021/22,Male,5507.0,,General HE
+In Private institutions,2021/22,Female,6069.0,,General HE

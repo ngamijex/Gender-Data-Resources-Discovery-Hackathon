@@ -1,0 +1,37 @@
+worker_type,sex,year,pct
+Market-oriented,Female,2017,18.9
+Market-oriented,Male,2017,18.1
+Market-oriented,Female,2018,18.7
+Market-oriented,Male,2018,17.6
+Market-oriented,Female,2019,17.2
+Market-oriented,Male,2019,16.6
+Market-oriented,Female,2020,18.9
+Market-oriented,Male,2020,18.5
+Market-oriented,Female,2021,20.1
+Market-oriented,Male,2021,20.5
+Market-oriented,Female,2022,20.8
+Market-oriented,Male,2022,21.1
+Subsistence,Female,2017,42.9
+Subsistence,Male,2017,33.3
+Subsistence,Female,2018,42.2
+Subsistence,Male,2018,31.3
+Subsistence,Female,2019,40.5
+Subsistence,Male,2019,29.7
+Subsistence,Female,2020,41.6
+Subsistence,Male,2020,34.8
+Subsistence,Female,2021,31.3
+Subsistence,Male,2021,24.5
+Subsistence,Female,2022,30.2
+Subsistence,Male,2022,23.7
+Market-oriented + Subsistence,Female,2017,61.8
+Market-oriented + Subsistence,Male,2017,51.5
+Market-oriented + Subsistence,Female,2018,60.8
+Market-oriented + Subsistence,Male,2018,48.9
+Market-oriented + Subsistence,Female,2019,57.7
+Market-oriented + Subsistence,Male,2019,46.3
+Market-oriented + Subsistence,Female,2020,60.6
+Market-oriented + Subsistence,Male,2020,53.3
+Market-oriented + Subsistence,Female,2021,51.4
+Market-oriented + Subsistence,Male,2021,51.4
+Market-oriented + Subsistence,Female,2022,50.9
+Market-oriented + Subsistence,Male,2022,44.7

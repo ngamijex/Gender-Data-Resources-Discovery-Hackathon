@@ -1,0 +1,418 @@
+location,province,geo_type,year,count,level
+Gisagara,South,District,2021/22,91.0,Preprimary
+Gisagara,South,District,2022/23,93.0,Preprimary
+Huye,South,District,2021/22,107.0,Preprimary
+Huye,South,District,2022/23,110.0,Preprimary
+Kamonyi,South,District,2021/22,149.0,Preprimary
+Kamonyi,South,District,2022/23,150.0,Preprimary
+Muhanga,South,District,2021/22,149.0,Preprimary
+Muhanga,South,District,2022/23,150.0,Preprimary
+Nyamagabe,South,District,2021/22,109.0,Preprimary
+Nyamagabe,South,District,2022/23,126.0,Preprimary
+Nyanza,South,District,2021/22,103.0,Preprimary
+Nyanza,South,District,2022/23,104.0,Preprimary
+Nyaruguru,South,District,2021/22,102.0,Preprimary
+Nyaruguru,South,District,2022/23,102.0,Preprimary
+Ruhango,South,District,2021/22,96.0,Preprimary
+Ruhango,South,District,2022/23,99.0,Preprimary
+South,South,Province,2021/22,906.0,Preprimary
+South,South,Province,2022/23,934.0,Preprimary
+Karongi,West,District,2021/22,151.0,Preprimary
+Karongi,West,District,2022/23,156.0,Preprimary
+Ngororero,West,District,2021/22,115.0,Preprimary
+Ngororero,West,District,2022/23,116.0,Preprimary
+Nyabihu,West,District,2021/22,98.0,Preprimary
+Nyabihu,West,District,2022/23,100.0,Preprimary
+Nyamasheke,West,District,2021/22,142.0,Preprimary
+Nyamasheke,West,District,2022/23,157.0,Preprimary
+Rubavu,West,District,2021/22,132.0,Preprimary
+Rubavu,West,District,2022/23,147.0,Preprimary
+Rusizi,West,District,2021/22,142.0,Preprimary
+Rusizi,West,District,2022/23,146.0,Preprimary
+Rutsiro,West,District,2021/22,106.0,Preprimary
+Rutsiro,West,District,2022/23,112.0,Preprimary
+West,West,Province,2021/22,886.0,Preprimary
+West,West,Province,2022/23,934.0,Preprimary
+Bugesera,East,District,2021/22,132.0,Preprimary
+Bugesera,East,District,2022/23,152.0,Preprimary
+Gatsibo,East,District,2021/22,175.0,Preprimary
+Gatsibo,East,District,2022/23,178.0,Preprimary
+Kayonza,East,District,2021/22,62.0,Preprimary
+Kayonza,East,District,2022/23,106.0,Preprimary
+Kirehe,East,District,2021/22,114.0,Preprimary
+Kirehe,East,District,2022/23,117.0,Preprimary
+Ngoma,East,District,2021/22,96.0,Preprimary
+Ngoma,East,District,2022/23,102.0,Preprimary
+Nyagatare,East,District,2021/22,211.0,Preprimary
+Nyagatare,East,District,2022/23,250.0,Preprimary
+Rwamagana,East,District,2021/22,101.0,Preprimary
+Rwamagana,East,District,2022/23,108.0,Preprimary
+East,East,Province,2021/22,891.0,Preprimary
+East,East,Province,2022/23,1013.0,Preprimary
+Burera,North,District,2021/22,124.0,Preprimary
+Burera,North,District,2022/23,126.0,Preprimary
+Gakenke,North,District,2021/22,131.0,Preprimary
+Gakenke,North,District,2022/23,133.0,Preprimary
+Gicumbi,North,District,2021/22,131.0,Preprimary
+Gicumbi,North,District,2022/23,133.0,Preprimary
+Musanze,North,District,2021/22,142.0,Preprimary
+Musanze,North,District,2022/23,154.0,Preprimary
+Rulindo,North,District,2021/22,109.0,Preprimary
+Rulindo,North,District,2022/23,112.0,Preprimary
+North,North,Province,2021/22,637.0,Preprimary
+North,North,Province,2022/23,658.0,Preprimary
+Gasabo,Kigali City,District,2021/22,248.0,Preprimary
+Gasabo,Kigali City,District,2022/23,261.0,Preprimary
+Kicukiro,Kigali City,District,2021/22,143.0,Preprimary
+Kicukiro,Kigali City,District,2022/23,148.0,Preprimary
+Nyarugenge,Kigali City,District,2021/22,97.0,Preprimary
+Nyarugenge,Kigali City,District,2022/23,103.0,Preprimary
+Kigali City,Kigali City,Province,2021/22,488.0,Preprimary
+Kigali City,Kigali City,Province,2022/23,512.0,Preprimary
+Rwanda,Rwanda,National,2021/22,3808.0,Preprimary
+Rwanda,Rwanda,National,2022/23,4051.0,Preprimary
+Gisagara,South,District,2021/22,95.0,Primary
+Gisagara,South,District,2022/23,95.0,Primary
+Huye,South,District,2021/22,111.0,Primary
+Huye,South,District,2022/23,112.0,Primary
+Kamonyi,South,District,2021/22,142.0,Primary
+Kamonyi,South,District,2022/23,144.0,Primary
+Muhanga,South,District,2021/22,138.0,Primary
+Muhanga,South,District,2022/23,140.0,Primary
+Nyamagabe,South,District,2021/22,134.0,Primary
+Nyamagabe,South,District,2022/23,135.0,Primary
+Nyanza,South,District,2021/22,99.0,Primary
+Nyanza,South,District,2022/23,100.0,Primary
+Nyaruguru,South,District,2021/22,102.0,Primary
+Nyaruguru,South,District,2022/23,102.0,Primary
+Ruhango,South,District,2021/22,97.0,Primary
+Ruhango,South,District,2022/23,97.0,Primary
+South,South,Province,2021/22,918.0,Primary
+South,South,Province,2022/23,925.0,Primary
+Karongi,West,District,2021/22,153.0,Primary
+Karongi,West,District,2022/23,156.0,Primary
+Ngororero,West,District,2021/22,116.0,Primary
+Ngororero,West,District,2022/23,116.0,Primary
+Nyabihu,West,District,2021/22,100.0,Primary
+Nyabihu,West,District,2022/23,102.0,Primary
+Nyamasheke,West,District,2021/22,160.0,Primary
+Nyamasheke,West,District,2022/23,162.0,Primary
+Rubavu,West,District,2021/22,123.0,Primary
+Rubavu,West,District,2022/23,128.0,Primary
+Rusizi,West,District,2021/22,148.0,Primary
+Rusizi,West,District,2022/23,149.0,Primary
+Rutsiro,West,District,2021/22,112.0,Primary
+Rutsiro,West,District,2022/23,113.0,Primary
+West,West,Province,2021/22,912.0,Primary
+West,West,Province,2022/23,926.0,Primary
+Bugesera,East,District,2021/22,153.0,Primary
+Bugesera,East,District,2022/23,157.0,Primary
+Gatsibo,East,District,2021/22,147.0,Primary
+Gatsibo,East,District,2022/23,147.0,Primary
+Kayonza,East,District,2021/22,130.0,Primary
+Kayonza,East,District,2022/23,142.0,Primary
+Kirehe,East,District,2021/22,121.0,Primary
+Kirehe,East,District,2022/23,122.0,Primary
+Ngoma,East,District,2021/22,102.0,Primary
+Ngoma,East,District,2022/23,103.0,Primary
+Nyagatare,East,District,2021/22,249.0,Primary
+Nyagatare,East,District,2022/23,252.0,Primary
+Rwamagana,East,District,2021/22,107.0,Primary
+Rwamagana,East,District,2022/23,111.0,Primary
+East,East,Province,2021/22,1009.0,Primary
+East,East,Province,2022/23,1034.0,Primary
+Burera,North,District,2021/22,124.0,Primary
+Burera,North,District,2022/23,124.0,Primary
+Gakenke,North,District,2021/22,131.0,Primary
+Gakenke,North,District,2022/23,132.0,Primary
+Gicumbi,North,District,2021/22,129.0,Primary
+Gicumbi,North,District,2022/23,130.0,Primary
+Musanze,North,District,2021/22,124.0,Primary
+Musanze,North,District,2022/23,133.0,Primary
+Rulindo,North,District,2021/22,107.0,Primary
+Rulindo,North,District,2022/23,110.0,Primary
+North,North,Province,2021/22,615.0,Primary
+North,North,Province,2022/23,629.0,Primary
+Gasabo,Kigali City,District,2021/22,204.0,Primary
+Gasabo,Kigali City,District,2022/23,227.0,Primary
+Kicukiro,Kigali City,District,2021/22,111.0,Primary
+Kicukiro,Kigali City,District,2022/23,124.0,Primary
+Nyarugenge,Kigali City,District,2021/22,62.0,Primary
+Nyarugenge,Kigali City,District,2022/23,67.0,Primary
+Kigali City,Kigali City,Province,2021/22,377.0,Primary
+Kigali City,Kigali City,Province,2022/23,418.0,Primary
+Rwanda,Rwanda,National,2021/22,3831.0,Primary
+Rwanda,Rwanda,National,2022/23,3932.0,Primary
+Gisagara,South,District,2021/22,53.0,Secondary
+Gisagara,South,District,2022/23,55.0,Secondary
+Huye,South,District,2021/22,51.0,Secondary
+Huye,South,District,2022/23,51.0,Secondary
+Kamonyi,South,District,2021/22,70.0,Secondary
+Kamonyi,South,District,2022/23,70.0,Secondary
+Muhanga,South,District,2021/22,65.0,Secondary
+Muhanga,South,District,2022/23,65.0,Secondary
+Nyamagabe,South,District,2021/22,60.0,Secondary
+Nyamagabe,South,District,2022/23,60.0,Secondary
+Nyanza,South,District,2021/22,60.0,Secondary
+Nyanza,South,District,2022/23,60.0,Secondary
+Nyaruguru,South,District,2021/22,51.0,Secondary
+Nyaruguru,South,District,2022/23,53.0,Secondary
+Ruhango,South,District,2021/22,57.0,Secondary
+Ruhango,South,District,2022/23,57.0,Secondary
+South,South,Province,2021/22,467.0,Secondary
+South,South,Province,2022/23,471.0,Secondary
+Karongi,West,District,2021/22,93.0,Secondary
+Karongi,West,District,2022/23,95.0,Secondary
+Ngororero,West,District,2021/22,53.0,Secondary
+Ngororero,West,District,2022/23,53.0,Secondary
+Nyabihu,West,District,2021/22,45.0,Secondary
+Nyabihu,West,District,2022/23,45.0,Secondary
+Nyamasheke,West,District,2021/22,78.0,Secondary
+Nyamasheke,West,District,2022/23,80.0,Secondary
+Rubavu,West,District,2021/22,64.0,Secondary
+Rubavu,West,District,2022/23,65.0,Secondary
+Rusizi,West,District,2021/22,83.0,Secondary
+Rusizi,West,District,2022/23,85.0,Secondary
+Rutsiro,West,District,2021/22,64.0,Secondary
+Rutsiro,West,District,2022/23,64.0,Secondary
+West,West,Province,2021/22,480.0,Secondary
+West,West,Province,2022/23,487.0,Secondary
+Bugesera,East,District,2021/22,73.0,Secondary
+Bugesera,East,District,2022/23,76.0,Secondary
+Gatsibo,East,District,2021/22,99.0,Secondary
+Gatsibo,East,District,2022/23,100.0,Secondary
+Kayonza,East,District,2021/22,56.0,Secondary
+Kayonza,East,District,2022/23,56.0,Secondary
+Kirehe,East,District,2021/22,64.0,Secondary
+Kirehe,East,District,2022/23,64.0,Secondary
+Ngoma,East,District,2021/22,62.0,Secondary
+Ngoma,East,District,2022/23,62.0,Secondary
+Nyagatare,East,District,2021/22,97.0,Secondary
+Nyagatare,East,District,2022/23,97.0,Secondary
+Rwamagana,East,District,2021/22,72.0,Secondary
+Rwamagana,East,District,2022/23,72.0,Secondary
+East,East,Province,2021/22,523.0,Secondary
+East,East,Province,2022/23,527.0,Secondary
+Burera,North,District,2021/22,54.0,Secondary
+Burera,North,District,2022/23,54.0,Secondary
+Gakenke,North,District,2021/22,64.0,Secondary
+Gakenke,North,District,2022/23,64.0,Secondary
+Gicumbi,North,District,2021/22,87.0,Secondary
+Gicumbi,North,District,2022/23,88.0,Secondary
+Musanze,North,District,2021/22,65.0,Secondary
+Musanze,North,District,2022/23,66.0,Secondary
+Rulindo,North,District,2021/22,81.0,Secondary
+Rulindo,North,District,2022/23,83.0,Secondary
+North,North,Province,2021/22,351.0,Secondary
+North,North,Province,2022/23,355.0,Secondary
+Gasabo,Kigali City,District,2021/22,65.0,Secondary
+Gasabo,Kigali City,District,2022/23,65.0,Secondary
+Kicukiro,Kigali City,District,2021/22,39.0,Secondary
+Kicukiro,Kigali City,District,2022/23,40.0,Secondary
+Nyarugenge,Kigali City,District,2021/22,30.0,Secondary
+Nyarugenge,Kigali City,District,2022/23,32.0,Secondary
+Kigali City,Kigali City,Province,2021/22,134.0,Secondary
+Kigali City,Kigali City,Province,2022/23,137.0,Secondary
+Rwanda,Rwanda,National,2021/22,1955.0,Secondary
+Rwanda,Rwanda,National,2022/23,1977.0,Secondary
+Gisagara,South,District,2021/22,14.0,TVET
+Gisagara,South,District,2022/23,12.0,TVET
+Huye,South,District,2021/22,12.0,TVET
+Huye,South,District,2022/23,16.0,TVET
+Kamonyi,South,District,2021/22,15.0,TVET
+Kamonyi,South,District,2022/23,13.0,TVET
+Muhanga,South,District,2021/22,20.0,TVET
+Muhanga,South,District,2022/23,22.0,TVET
+Nyamagabe,South,District,2021/22,10.0,TVET
+Nyamagabe,South,District,2022/23,12.0,TVET
+Nyanza,South,District,2021/22,13.0,TVET
+Nyanza,South,District,2022/23,15.0,TVET
+Nyaruguru,South,District,2021/22,10.0,TVET
+Nyaruguru,South,District,2022/23,11.0,TVET
+Ruhango,South,District,2021/22,10.0,TVET
+Ruhango,South,District,2022/23,17.0,TVET
+South,South,Province,2021/22,104.0,TVET
+South,South,Province,2022/23,118.0,TVET
+Karongi,West,District,2021/22,18.0,TVET
+Karongi,West,District,2022/23,19.0,TVET
+Ngororero,West,District,2021/22,11.0,TVET
+Ngororero,West,District,2022/23,13.0,TVET
+Nyabihu,West,District,2021/22,12.0,TVET
+Nyabihu,West,District,2022/23,13.0,TVET
+Nyamasheke,West,District,2021/22,18.0,TVET
+Nyamasheke,West,District,2022/23,15.0,TVET
+Rubavu,West,District,2021/22,14.0,TVET
+Rubavu,West,District,2022/23,18.0,TVET
+Rusizi,West,District,2021/22,18.0,TVET
+Rusizi,West,District,2022/23,19.0,TVET
+Rutsiro,West,District,2021/22,11.0,TVET
+Rutsiro,West,District,2022/23,12.0,TVET
+West,West,Province,2021/22,102.0,TVET
+West,West,Province,2022/23,109.0,TVET
+Bugesera,East,District,2021/22,14.0,TVET
+Bugesera,East,District,2022/23,15.0,TVET
+Gatsibo,East,District,2021/22,14.0,TVET
+Gatsibo,East,District,2022/23,17.0,TVET
+Kayonza,East,District,2021/22,11.0,TVET
+Kayonza,East,District,2022/23,13.0,TVET
+Kirehe,East,District,2021/22,10.0,TVET
+Kirehe,East,District,2022/23,12.0,TVET
+Ngoma,East,District,2021/22,15.0,TVET
+Ngoma,East,District,2022/23,18.0,TVET
+Nyagatare,East,District,2021/22,15.0,TVET
+Nyagatare,East,District,2022/23,14.0,TVET
+Rwamagana,East,District,2021/22,12.0,TVET
+Rwamagana,East,District,2022/23,16.0,TVET
+East,East,Province,2021/22,91.0,TVET
+East,East,Province,2022/23,105.0,TVET
+Burera,North,District,2021/22,23.0,TVET
+Burera,North,District,2022/23,13.0,TVET
+Gakenke,North,District,2021/22,13.0,TVET
+Gakenke,North,District,2022/23,15.0,TVET
+Gicumbi,North,District,2021/22,17.0,TVET
+Gicumbi,North,District,2022/23,22.0,TVET
+Musanze,North,District,2021/22,12.0,TVET
+Musanze,North,District,2022/23,13.0,TVET
+Rulindo,North,District,2021/22,12.0,TVET
+Rulindo,North,District,2022/23,18.0,TVET
+North,North,Province,2021/22,77.0,TVET
+North,North,Province,2022/23,81.0,TVET
+Gasabo,Kigali City,District,2021/22,15.0,TVET
+Gasabo,Kigali City,District,2022/23,19.0,TVET
+Kicukiro,Kigali City,District,2021/22,13.0,TVET
+Kicukiro,Kigali City,District,2022/23,22.0,TVET
+Nyarugenge,Kigali City,District,2021/22,20.0,TVET
+Nyarugenge,Kigali City,District,2022/23,16.0,TVET
+Kigali City,Kigali City,Province,2021/22,48.0,TVET
+Kigali City,Kigali City,Province,2022/23,57.0,TVET
+Rwanda,Rwanda,National,2021/22,422.0,TVET
+Rwanda,Rwanda,National,2022/23,470.0,TVET
+Gisagara,South,District,2021/22,1.0,Higher Education
+Gisagara,South,District,2022/23,1.0,Higher Education
+Huye,South,District,2021/22,7.0,Higher Education
+Huye,South,District,2022/23,6.0,Higher Education
+Muhanga,South,District,2021/22,2.0,Higher Education
+Muhanga,South,District,2022/23,2.0,Higher Education
+Nyamagabe,South,District,2021/22,1.0,Higher Education
+Nyamagabe,South,District,2022/23,1.0,Higher Education
+Nyanza,South,District,2021/22,3.0,Higher Education
+Nyanza,South,District,2022/23,3.0,Higher Education
+Ruhango,South,District,2021/22,1.0,Higher Education
+Ruhango,South,District,2022/23,1.0,Higher Education
+South,South,Province,2021/22,15.0,Higher Education
+South,South,Province,2022/23,14.0,Higher Education
+Karongi,West,District,2021/22,3.0,Higher Education
+Karongi,West,District,2022/23,3.0,Higher Education
+Nyamasheke,West,District,2021/22,2.0,Higher Education
+Nyamasheke,West,District,2022/23,1.0,Higher Education
+Rubavu,West,District,2021/22,2.0,Higher Education
+Rubavu,West,District,2022/23,2.0,Higher Education
+Rusizi,West,District,2021/22,1.0,Higher Education
+Rusizi,West,District,2022/23,1.0,Higher Education
+West,West,Province,2021/22,8.0,Higher Education
+West,West,Province,2022/23,7.0,Higher Education
+Bugesera,East,District,2021/22,3.0,Higher Education
+Bugesera,East,District,2022/23,3.0,Higher Education
+Gatsibo,East,District,2021/22,1.0,Higher Education
+Gatsibo,East,District,2022/23,1.0,Higher Education
+Kayonza,East,District,2021/22,1.0,Higher Education
+Kayonza,East,District,2022/23,1.0,Higher Education
+Kirehe,East,District,2022/23,1.0,Higher Education
+Ngoma,East,District,2021/22,2.0,Higher Education
+Ngoma,East,District,2022/23,1.0,Higher Education
+Nyagatare,East,District,2021/22,2.0,Higher Education
+Nyagatare,East,District,2022/23,3.0,Higher Education
+Rwamagana,East,District,2021/22,3.0,Higher Education
+Rwamagana,East,District,2022/23,3.0,Higher Education
+East,East,Province,2021/22,12.0,Higher Education
+East,East,Province,2022/23,13.0,Higher Education
+Burera,North,District,2021/22,1.0,Higher Education
+Burera,North,District,2022/23,1.0,Higher Education
+Gakenke,North,District,2021/22,1.0,Higher Education
+Gakenke,North,District,2022/23,1.0,Higher Education
+Gicumbi,North,District,2021/22,1.0,Higher Education
+Gicumbi,North,District,2022/23,1.0,Higher Education
+Musanze,North,District,2021/22,7.0,Higher Education
+Musanze,North,District,2022/23,7.0,Higher Education
+Rulindo,North,District,2021/22,2.0,Higher Education
+Rulindo,North,District,2022/23,2.0,Higher Education
+Gasabo,Kigali City,District,2021/22,11.0,Higher Education
+Gasabo,Kigali City,District,2022/23,10.0,Higher Education
+Kicukiro,Kigali City,District,2021/22,7.0,Higher Education
+Kicukiro,Kigali City,District,2022/23,9.0,Higher Education
+Nyarugenge,Kigali City,District,2021/22,6.0,Higher Education
+Nyarugenge,Kigali City,District,2022/23,6.0,Higher Education
+Kigali City,Kigali City,Province,2021/22,24.0,Higher Education
+Kigali City,Kigali City,Province,2022/23,25.0,Higher Education
+Gisagara,South,District,2021/22,98.0,Adult Literacy
+Gisagara,South,District,2022/23,105.0,Adult Literacy
+Huye,South,District,2021/22,101.0,Adult Literacy
+Huye,South,District,2022/23,103.0,Adult Literacy
+Kamonyi,South,District,2021/22,157.0,Adult Literacy
+Kamonyi,South,District,2022/23,140.0,Adult Literacy
+Muhanga,South,District,2021/22,149.0,Adult Literacy
+Muhanga,South,District,2022/23,157.0,Adult Literacy
+Nyamagabe,South,District,2021/22,261.0,Adult Literacy
+Nyamagabe,South,District,2022/23,263.0,Adult Literacy
+Nyanza,South,District,2021/22,130.0,Adult Literacy
+Nyanza,South,District,2022/23,131.0,Adult Literacy
+Nyaruguru,South,District,2021/22,103.0,Adult Literacy
+Nyaruguru,South,District,2022/23,104.0,Adult Literacy
+Ruhango,South,District,2021/22,129.0,Adult Literacy
+Ruhango,South,District,2022/23,119.0,Adult Literacy
+South,South,Province,2021/22,1128.0,Adult Literacy
+South,South,Province,2022/23,1122.0,Adult Literacy
+Karongi,West,District,2021/22,242.0,Adult Literacy
+Karongi,West,District,2022/23,204.0,Adult Literacy
+Ngororero,West,District,2021/22,200.0,Adult Literacy
+Ngororero,West,District,2022/23,207.0,Adult Literacy
+Nyabihu,West,District,2021/22,156.0,Adult Literacy
+Nyabihu,West,District,2022/23,161.0,Adult Literacy
+Nyamasheke,West,District,2021/22,310.0,Adult Literacy
+Nyamasheke,West,District,2022/23,307.0,Adult Literacy
+Rubavu,West,District,2021/22,218.0,Adult Literacy
+Rubavu,West,District,2022/23,251.0,Adult Literacy
+Rusizi,West,District,2021/22,190.0,Adult Literacy
+Rusizi,West,District,2022/23,190.0,Adult Literacy
+Rutsiro,West,District,2021/22,283.0,Adult Literacy
+Rutsiro,West,District,2022/23,284.0,Adult Literacy
+West,West,Province,2021/22,1599.0,Adult Literacy
+West,West,Province,2022/23,1604.0,Adult Literacy
+Bugesera,East,District,2021/22,193.0,Adult Literacy
+Bugesera,East,District,2022/23,170.0,Adult Literacy
+Gatsibo,East,District,2021/22,207.0,Adult Literacy
+Gatsibo,East,District,2022/23,232.0,Adult Literacy
+Kayonza,East,District,2021/22,77.0,Adult Literacy
+Kayonza,East,District,2022/23,77.0,Adult Literacy
+Kirehe,East,District,2021/22,110.0,Adult Literacy
+Kirehe,East,District,2022/23,112.0,Adult Literacy
+Ngoma,East,District,2021/22,104.0,Adult Literacy
+Ngoma,East,District,2022/23,122.0,Adult Literacy
+Nyagatare,East,District,2021/22,216.0,Adult Literacy
+Nyagatare,East,District,2022/23,205.0,Adult Literacy
+Rwamagana,East,District,2021/22,167.0,Adult Literacy
+Rwamagana,East,District,2022/23,163.0,Adult Literacy
+East,East,Province,2021/22,1074.0,Adult Literacy
+East,East,Province,2022/23,1081.0,Adult Literacy
+Burera,North,District,2021/22,203.0,Adult Literacy
+Burera,North,District,2022/23,191.0,Adult Literacy
+Gakenke,North,District,2021/22,312.0,Adult Literacy
+Gakenke,North,District,2022/23,237.0,Adult Literacy
+Gicumbi,North,District,2021/22,306.0,Adult Literacy
+Gicumbi,North,District,2022/23,295.0,Adult Literacy
+Musanze,North,District,2021/22,137.0,Adult Literacy
+Musanze,North,District,2022/23,145.0,Adult Literacy
+Rulindo,North,District,2021/22,168.0,Adult Literacy
+Rulindo,North,District,2022/23,177.0,Adult Literacy
+North,North,Province,2021/22,1126.0,Adult Literacy
+North,North,Province,2022/23,1045.0,Adult Literacy
+Gasabo,Kigali City,District,2021/22,57.0,Adult Literacy
+Gasabo,Kigali City,District,2022/23,60.0,Adult Literacy
+Kicukiro,Kigali City,District,2021/22,45.0,Adult Literacy
+Kicukiro,Kigali City,District,2022/23,45.0,Adult Literacy
+Nyarugenge,Kigali City,District,2021/22,47.0,Adult Literacy
+Nyarugenge,Kigali City,District,2022/23,46.0,Adult Literacy
+Kigali City,Kigali City,Province,2021/22,149.0,Adult Literacy
+Kigali City,Kigali City,Province,2022/23,151.0,Adult Literacy
+Rwanda,Rwanda,National,2021/22,5076.0,Adult Literacy
+Rwanda,Rwanda,National,2022/23,5003.0,Adult Literacy

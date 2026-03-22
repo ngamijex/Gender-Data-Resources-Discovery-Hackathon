@@ -1,0 +1,371 @@
+group,year,sex,count,pct,level
+Total children in ECDs,2017,Male,110978.0,0.492,ECD
+Total children in ECDs,2017,Female,114691.0,0.508,ECD
+Total children in ECDs,2018,Male,115243.0,0.494,ECD
+Total children in ECDs,2018,Female,117954.0,0.506,ECD
+Total children in ECDs,2019,Male,142201.0,0.492,ECD
+Total children in ECDs,2019,Female,146917.0,0.508,ECD
+Total children in ECDs,2020/21,Male,144646.0,0.487,ECD
+Total children in ECDs,2020/21,Female,152375.0,0.513,ECD
+Total children in ECDs,2021/22,Male,496439.0,0.481,ECD
+Total children in ECDs,2021/22,Female,536572.0,0.519,ECD
+Total children in ECDs,2022/23,Male,548014.0,0.483,ECD
+Total children in ECDs,2022/23,Female,586899.0,0.517,ECD
+Total children in ECED centers,2017,Male,2516.0,,ECD
+Total children in ECED centers,2017,Female,2718.0,,ECD
+Total children in ECED centers,2018,Male,3199.0,,ECD
+Total children in ECED centers,2018,Female,3292.0,,ECD
+Total children in ECED centers,2019,Male,3290.0,,ECD
+Total children in ECED centers,2019,Female,3400.0,,ECD
+Total children in ECED centers,2020/21,Male,1586.0,,ECD
+Total children in ECED centers,2020/21,Female,1612.0,,ECD
+Total children in ECED centers,2021/22,Male,318916.0,,ECD
+Total children in ECED centers,2021/22,Female,358770.0,,ECD
+Total children in ECED centers,2022/23,Male,276170.0,,ECD
+Total children in ECED centers,2022/23,Female,317745.0,,ECD
+ECED children in Formal centers,2017,Male,2516.0,,ECD
+ECED children in Formal centers,2017,Female,2718.0,,ECD
+ECED children in Formal centers,2018,Male,3199.0,,ECD
+ECED children in Formal centers,2018,Female,3292.0,,ECD
+ECED children in Formal centers,2019,Male,3290.0,,ECD
+ECED children in Formal centers,2019,Female,3400.0,,ECD
+ECED children in Formal centers,2020/21,Male,1586.0,,ECD
+ECED children in Formal centers,2020/21,Female,1612.0,,ECD
+ECED children in Formal centers,2021/22,Male,11784.0,,ECD
+ECED children in Formal centers,2021/22,Female,13272.0,,ECD
+ECED children in Formal centers,2022/23,Male,11557.0,,ECD
+ECED children in Formal centers,2022/23,Female,13068.0,,ECD
+ECED children in non-formal centers*,2021/22,Male,307132.0,,ECD
+ECED children in non-formal centers*,2021/22,Female,345498.0,,ECD
+ECED children in non-formal centers*,2022/23,Male,264613.0,,ECD
+ECED children in non-formal centers*,2022/23,Female,304677.0,,ECD
+Total pupils in Preprimary level,2017,Male,108462.0,,ECD
+Total pupils in Preprimary level,2018,Male,112044.0,,ECD
+Total pupils in Preprimary level,2019,Male,138911.0,,ECD
+Total pupils in Preprimary level,2020/21,Male,143060.0,,ECD
+Total pupils in Preprimary level,2021/22,Male,177523.0,,ECD
+Total pupils in Preprimary level,2022/23,Male,271844.0,,ECD
+Total pupils,2017,Male,108462.0,0.492,Preprimary
+Total pupils,2017,Female,111973.0,0.508,Preprimary
+Total pupils,2018,Male,112044.0,0.494,Preprimary
+Total pupils,2018,Female,114662.0,0.506,Preprimary
+Total pupils,2019,Male,138911.0,0.492,Preprimary
+Total pupils,2019,Female,143517.0,0.508,Preprimary
+Total pupils,2020/21,Male,143060.0,0.487,Preprimary
+Total pupils,2020/21,Female,150763.0,0.513,Preprimary
+Total pupils,2021/22,Male,177523.0,0.5,Preprimary
+Total pupils,2021/22,Female,177802.0,0.5,Preprimary
+Total pupils,2022/23,Male,271844.0,0.502,Preprimary
+Total pupils,2022/23,Female,269154.0,0.498,Preprimary
+Pupils in Public schools,2017,Male,15765.0,,Preprimary
+Pupils in Public schools,2017,Female,16516.0,,Preprimary
+Pupils in Public schools,2018,Male,15978.0,,Preprimary
+Pupils in Public schools,2018,Female,15962.0,,Preprimary
+Pupils in Public schools,2019,Male,20531.0,,Preprimary
+Pupils in Public schools,2019,Female,21115.0,,Preprimary
+Pupils in Public schools,2020/21,Male,37600.0,,Preprimary
+Pupils in Public schools,2020/21,Female,40293.0,,Preprimary
+Pupils in Public schools,2021/22,Male,53184.0,,Preprimary
+Pupils in Public schools,2021/22,Female,54263.0,,Preprimary
+Pupils in Public schools,2022/23,Male,93940.0,,Preprimary
+Pupils in Public schools,2022/23,Female,93609.0,,Preprimary
+Pupils in Government-subsidized schools,2017,Male,47431.0,,Preprimary
+Pupils in Government-subsidized schools,2017,Female,49795.0,,Preprimary
+Pupils in Government-subsidized schools,2018,Male,53386.0,,Preprimary
+Pupils in Government-subsidized schools,2018,Female,55364.0,,Preprimary
+Pupils in Government-subsidized schools,2019,Male,61610.0,,Preprimary
+Pupils in Government-subsidized schools,2019,Female,64048.0,,Preprimary
+Pupils in Government-subsidized schools,2020/21,Male,59455.0,,Preprimary
+Pupils in Government-subsidized schools,2020/21,Female,63896.0,,Preprimary
+Pupils in Government-subsidized schools,2021/22,Male,83850.0,,Preprimary
+Pupils in Government-subsidized schools,2021/22,Female,84996.0,,Preprimary
+Pupils in Government-subsidized schools,2022/23,Male,133361.0,,Preprimary
+Pupils in Government-subsidized schools,2022/23,Female,132887.0,,Preprimary
+Pupils in Private schools,2017,Male,45266.0,,Preprimary
+Pupils in Private schools,2017,Female,45662.0,,Preprimary
+Pupils in Private schools,2018,Male,42680.0,,Preprimary
+Pupils in Private schools,2018,Female,43336.0,,Preprimary
+Pupils in Private schools,2019,Male,56770.0,,Preprimary
+Pupils in Private schools,2019,Female,58354.0,,Preprimary
+Pupils in Private schools,2020/21,Male,46005.0,,Preprimary
+Pupils in Private schools,2020/21,Female,46574.0,,Preprimary
+Pupils in Private schools,2021/22,Male,40489.0,,Preprimary
+Pupils in Private schools,2021/22,Female,38543.0,,Preprimary
+Pupils in Private schools,2022/23,Male,44543.0,,Preprimary
+Pupils in Private schools,2022/23,Female,42658.0,,Preprimary
+Total primary pupils,2017,Male,1272842.0,0.501,Primary
+Total primary pupils,2017,Female,1267532.0,0.499,Primary
+Total primary pupils,2018,Male,1259344.0,0.503,Primary
+Total primary pupils,2018,Female,1244361.0,0.497,Primary
+Total primary pupils,2019,Male,1268996.0,0.505,Primary
+Total primary pupils,2019,Female,1243469.0,0.495,Primary
+Total primary pupils,2020/21,Male,1370022.0,0.502,Primary
+Total primary pupils,2020/21,Female,1359094.0,0.498,Primary
+Total primary pupils,2021/22,Male,1384332.0,0.505,Primary
+Total primary pupils,2021/22,Female,1358219.0,0.495,Primary
+Total primary pupils,2022/23,Male,1445412.0,0.509,Primary
+Total primary pupils,2022/23,Female,1392931.0,0.491,Primary
+Pupils in Public schools,2017,Male,398902.0,,Primary
+Pupils in Public schools,2017,Female,397997.0,,Primary
+Pupils in Public schools,2018,Male,397253.0,,Primary
+Pupils in Public schools,2018,Female,393653.0,,Primary
+Pupils in Public schools,2019,Male,409920.0,,Primary
+Pupils in Public schools,2019,Female,402157.0,,Primary
+Pupils in Public schools,2020/21,Male,534244.0,,Primary
+Pupils in Public schools,2020/21,Female,529373.0,,Primary
+Pupils in Public schools,2021/22,Male,553802.0,,Primary
+Pupils in Public schools,2021/22,Female,543651.0,,Primary
+Pupils in Public schools,2022/23,Male,582517.0,,Primary
+Pupils in Public schools,2022/23,Female,561330.0,,Primary
+Pupils in Government-subsidized schools,2017,Male,825558.0,,Primary
+Pupils in Government-subsidized schools,2017,Female,821940.0,,Primary
+Pupils in Government-subsidized schools,2018,Male,810129.0,,Primary
+Pupils in Government-subsidized schools,2018,Female,799342.0,,Primary
+Pupils in Government-subsidized schools,2019,Male,804421.0,,Primary
+Pupils in Government-subsidized schools,2019,Female,787721.0,,Primary
+Pupils in Government-subsidized schools,2020/21,Male,768918.0,,Primary
+Pupils in Government-subsidized schools,2020/21,Female,763542.0,,Primary
+Pupils in Government-subsidized schools,2021/22,Male,761619.0,,Primary
+Pupils in Government-subsidized schools,2021/22,Female,746137.0,,Primary
+Pupils in Government-subsidized schools,2022/23,Male,783814.0,,Primary
+Pupils in Government-subsidized schools,2022/23,Female,753945.0,,Primary
+Pupils in Private schools,2017,Male,48382.0,,Primary
+Pupils in Private schools,2017,Female,47595.0,,Primary
+Pupils in Private schools,2018,Male,51962.0,,Primary
+Pupils in Private schools,2018,Female,51366.0,,Primary
+Pupils in Private schools,2019,Male,54655.0,,Primary
+Pupils in Private schools,2019,Female,53591.0,,Primary
+Pupils in Private schools,2020/21,Male,66860.0,,Primary
+Pupils in Private schools,2020/21,Female,66179.0,,Primary
+Pupils in Private schools,2021/22,Male,68911.0,,Primary
+Pupils in Private schools,2021/22,Female,68431.0,,Primary
+Pupils in Private schools,2022/23,Male,79081.0,,Primary
+Pupils in Private schools,2022/23,Female,77656.0,,Primary
+Total Lower secondary Students,2017,Male,176797.0,0.462,Lower Secondary
+Total Lower secondary Students,2017,Female,205864.0,0.538,Lower Secondary
+Total Lower secondary Students,2018,Male,194314.0,0.46,Lower Secondary
+Total Lower secondary Students,2018,Female,227779.0,0.54,Lower Secondary
+Total Lower secondary Students,2019,Male,219915.0,0.457,Lower Secondary
+Total Lower secondary Students,2019,Female,261223.0,0.543,Lower Secondary
+Total Lower secondary Students,2020/21,Male,239474.0,0.459,Lower Secondary
+Total Lower secondary Students,2020/21,Female,282157.0,0.541,Lower Secondary
+Total Lower secondary Students,2021/22,Male,245840.0,0.455,Lower Secondary
+Total Lower secondary Students,2021/22,Female,294794.0,0.545,Lower Secondary
+Total Lower secondary Students,2022/23,Male,243281.0,0.454,Lower Secondary
+Total Lower secondary Students,2022/23,Female,293146.0,0.546,Lower Secondary
+Students in Public schools,2017,Male,58857.0,,Lower Secondary
+Students in Public schools,2017,Female,66196.0,,Lower Secondary
+Students in Public schools,2018,Male,64617.0,,Lower Secondary
+Students in Public schools,2018,Female,73865.0,,Lower Secondary
+Students in Public schools,2019,Male,74384.0,,Lower Secondary
+Students in Public schools,2019,Female,85650.0,,Lower Secondary
+Students in Public schools,2020/21,Male,88199.0,,Lower Secondary
+Students in Public schools,2020/21,Female,101889.0,,Lower Secondary
+Students in Public schools,2021/22,Male,91989.0,,Lower Secondary
+Students in Public schools,2021/22,Female,107260.0,,Lower Secondary
+Students in Public schools,2022/23,Male,94524.0,,Lower Secondary
+Students in Public schools,2022/23,Female,110742.0,,Lower Secondary
+Students in Government-subsidized schools,2017,Male,104640.0,,Lower Secondary
+Students in Government-subsidized schools,2017,Female,128234.0,,Lower Secondary
+Students in Government-subsidized schools,2018,Male,116232.0,,Lower Secondary
+Students in Government-subsidized schools,2018,Female,142428.0,,Lower Secondary
+Students in Government-subsidized schools,2019,Male,131872.0,,Lower Secondary
+Students in Government-subsidized schools,2019,Female,164080.0,,Lower Secondary
+Students in Government-subsidized schools,2020/21,Male,136416.0,,Lower Secondary
+Students in Government-subsidized schools,2020/21,Female,167648.0,,Lower Secondary
+Students in Government-subsidized schools,2021/22,Male,139144.0,,Lower Secondary
+Students in Government-subsidized schools,2021/22,Female,174593.0,,Lower Secondary
+Students in Government-subsidized schools,2022/23,Male,136086.0,,Lower Secondary
+Students in Government-subsidized schools,2022/23,Female,171254.0,,Lower Secondary
+Students in Private schools,2017,Male,13300.0,,Lower Secondary
+Students in Private schools,2017,Female,11434.0,,Lower Secondary
+Students in Private schools,2018,Male,13465.0,,Lower Secondary
+Students in Private schools,2018,Female,11486.0,,Lower Secondary
+Students in Private schools,2019,Male,13659.0,,Lower Secondary
+Students in Private schools,2019,Female,11493.0,,Lower Secondary
+Students in Private schools,2020/21,Male,14859.0,,Lower Secondary
+Students in Private schools,2020/21,Female,12620.0,,Lower Secondary
+Students in Private schools,2021/22,Male,14707.0,,Lower Secondary
+Students in Private schools,2021/22,Female,12941.0,,Lower Secondary
+Students in Private schools,2022/23,Male,12671.0,,Lower Secondary
+Students in Private schools,2022/23,Female,11150.0,,Lower Secondary
+Total Students,2017,Male,66248.0,0.445,Upper Secondary
+Total Students,2017,Female,82468.0,0.555,Upper Secondary
+Total Students,2018,Male,70468.0,0.449,Upper Secondary
+Total Students,2018,Female,86336.0,0.551,Upper Secondary
+Total Students,2019,Male,75203.0,0.448,Upper Secondary
+Total Students,2019,Female,92606.0,0.552,Upper Secondary
+Total Students,2020/21,Male,76222.0,0.443,Upper Secondary
+Total Students,2020/21,Female,95772.0,0.557,Upper Secondary
+Total Students,2021/22,Male,79198.0,0.418,Upper Secondary
+Total Students,2021/22,Female,110462.0,0.582,Upper Secondary
+Total Students,2022/23,Male,78699.0,0.407,Upper Secondary
+Total Students,2022/23,Female,114872.0,0.593,Upper Secondary
+Students in Public schools,2017,Male,23292.0,,Upper Secondary
+Students in Public schools,2017,Female,25972.0,,Upper Secondary
+Students in Public schools,2018,Male,24948.0,,Upper Secondary
+Students in Public schools,2018,Female,27257.0,,Upper Secondary
+Students in Public schools,2019,Male,26566.0,,Upper Secondary
+Students in Public schools,2019,Female,29317.0,,Upper Secondary
+Students in Public schools,2020/21,Male,27250.0,,Upper Secondary
+Students in Public schools,2020/21,Female,31673.0,,Upper Secondary
+Students in Public schools,2021/22,Male,27992.0,,Upper Secondary
+Students in Public schools,2021/22,Female,35066.0,,Upper Secondary
+Students in Public schools,2022/23,Male,28669.0,,Upper Secondary
+Students in Public schools,2022/23,Female,37746.0,,Upper Secondary
+Students in Government-subsidized schools,2017,Male,37541.0,,Upper Secondary
+Students in Government-subsidized schools,2017,Female,50123.0,,Upper Secondary
+Students in Government-subsidized schools,2018,Male,40136.0,,Upper Secondary
+Students in Government-subsidized schools,2018,Female,53130.0,,Upper Secondary
+Students in Government-subsidized schools,2019,Male,42941.0,,Upper Secondary
+Students in Government-subsidized schools,2019,Female,57230.0,,Upper Secondary
+Students in Government-subsidized schools,2020/21,Male,42851.0,,Upper Secondary
+Students in Government-subsidized schools,2020/21,Female,57183.0,,Upper Secondary
+Students in Government-subsidized schools,2021/22,Male,44711.0,,Upper Secondary
+Students in Government-subsidized schools,2021/22,Female,64006.0,,Upper Secondary
+Students in Government-subsidized schools,2022/23,Male,43148.0,,Upper Secondary
+Students in Government-subsidized schools,2022/23,Female,65535.0,,Upper Secondary
+Students in Private schools,2017,Male,5415.0,,Upper Secondary
+Students in Private schools,2017,Female,6373.0,,Upper Secondary
+Students in Private schools,2018,Male,5384.0,,Upper Secondary
+Students in Private schools,2018,Female,5949.0,,Upper Secondary
+Students in Private schools,2019,Male,5696.0,,Upper Secondary
+Students in Private schools,2019,Female,6059.0,,Upper Secondary
+Students in Private schools,2020/21,Male,6121.0,,Upper Secondary
+Students in Private schools,2020/21,Female,6916.0,,Upper Secondary
+Students in Private schools,2021/22,Male,6495.0,,Upper Secondary
+Students in Private schools,2021/22,Female,11390.0,,Upper Secondary
+Students in Private schools,2022/23,Male,6882.0,,Upper Secondary
+Students in Private schools,2022/23,Female,11591.0,,Upper Secondary
+Total trainees,2017,Male,43500.0,0.547,TVET
+Total trainees,2017,Female,36095.0,0.453,TVET
+Total trainees,2018,Male,43585.0,0.549,TVET
+Total trainees,2018,Female,35803.0,0.451,TVET
+Total trainees,2019,Male,46573.0,0.56,TVET
+Total trainees,2019,Female,36584.0,0.44,TVET
+Total trainees,2020/21,Male,47518.0,0.533,TVET
+Total trainees,2020/21,Female,41703.0,0.467,TVET
+Total trainees,2021/22,Male,48623.0,0.583,TVET
+Total trainees,2021/22,Female,34835.0,0.417,TVET
+Total trainees,2022/23,Male,58611.0,0.566,TVET
+Total trainees,2022/23,Female,44944.0,0.434,TVET
+Trainees in Public schools,2017,Male,12368.0,,TVET
+Trainees in Public schools,2017,Female,8266.0,,TVET
+Trainees in Public schools,2018,Male,12849.0,,TVET
+Trainees in Public schools,2018,Female,8714.0,,TVET
+Trainees in Public schools,2019,Male,15952.0,,TVET
+Trainees in Public schools,2019,Female,8719.0,,TVET
+Trainees in Public schools,2020/21,Male,14292.0,,TVET
+Trainees in Public schools,2020/21,Female,9969.0,,TVET
+Trainees in Public schools,2021/22,Male,15006.0,,TVET
+Trainees in Public schools,2021/22,Female,10185.0,,TVET
+Trainees in Public schools,2022/23,Male,18861.0,,TVET
+Trainees in Public schools,2022/23,Female,14073.0,,TVET
+Trainees in Government-subsidized schools,2017,Male,6853.0,,TVET
+Trainees in Government-subsidized schools,2017,Female,5355.0,,TVET
+Trainees in Government-subsidized schools,2018,Male,6595.0,,TVET
+Trainees in Government-subsidized schools,2018,Female,5575.0,,TVET
+Trainees in Government-subsidized schools,2019,Male,6682.0,,TVET
+Trainees in Government-subsidized schools,2019,Female,5729.0,,TVET
+Trainees in Government-subsidized schools,2020/21,Male,7741.0,,TVET
+Trainees in Government-subsidized schools,2020/21,Female,7315.0,,TVET
+Trainees in Government-subsidized schools,2021/22,Male,9253.0,,TVET
+Trainees in Government-subsidized schools,2021/22,Female,7019.0,,TVET
+Trainees in Government-subsidized schools,2022/23,Male,13081.0,,TVET
+Trainees in Government-subsidized schools,2022/23,Female,10015.0,,TVET
+Trainees in Private schools,2017,Male,24279.0,,TVET
+Trainees in Private schools,2017,Female,22474.0,,TVET
+Trainees in Private schools,2018,Male,24141.0,,TVET
+Trainees in Private schools,2018,Female,21514.0,,TVET
+Trainees in Private schools,2019,Male,23939.0,,TVET
+Trainees in Private schools,2019,Female,22136.0,,TVET
+Trainees in Private schools,2020/21,Male,25485.0,,TVET
+Trainees in Private schools,2020/21,Female,24419.0,,TVET
+Trainees in Private schools,2021/22,Male,24364.0,,TVET
+Trainees in Private schools,2021/22,Female,17631.0,,TVET
+Trainees in Private schools,2022/23,Male,26669.0,,TVET
+Trainees in Private schools,2022/23,Female,20856.0,,TVET
+Total number of students,2017,Male,49908.0,0.547,Higher Education
+Total number of students,2017,Female,41285.0,0.453,Higher Education
+Total number of students,2018,Male,51119.0,0.573,Higher Education
+Total number of students,2018,Female,38041.0,0.427,Higher Education
+Total number of students,2019,Male,49090.0,0.569,Higher Education
+Total number of students,2019,Female,37116.0,0.431,Higher Education
+Total number of students,2020/21,Male,48757.0,0.551,Higher Education
+Total number of students,2020/21,Female,39691.0,0.449,Higher Education
+Total number of students,2021/22,Male,53771.0,0.561,Higher Education
+Total number of students,2021/22,Female,42092.0,0.439,Higher Education
+Total number of students,2022/23,Male,66856.0,0.558,Higher Education
+Total number of students,2022/23,Female,52860.0,0.442,Higher Education
+Students in Public HEIs,2017,Male,25518.0,0.661,Higher Education
+Students in Public HEIs,2017,Female,13077.0,0.339,Higher Education
+Students in Public HEIs,2018,Male,26247.0,0.685,Higher Education
+Students in Public HEIs,2018,Female,12091.0,0.315,Higher Education
+Students in Public HEIs,2019,Male,24364.0,0.682,Higher Education
+Students in Public HEIs,2019,Female,11355.0,0.318,Higher Education
+Students in Public HEIs,2020/21,Male,24657.0,0.663,Higher Education
+Students in Public HEIs,2020/21,Female,12520.0,0.337,Higher Education
+Students in Public HEIs,2021/22,Male,27373.0,0.64,Higher Education
+Students in Public HEIs,2021/22,Female,15380.0,0.36,Higher Education
+Students in Public HEIs,2022/23,Male,26904.0,0.636,Higher Education
+Students in Public HEIs,2022/23,Female,15430.0,0.364,Higher Education
+Students in Private HEIs,2017,Male,24390.0,0.464,Higher Education
+Students in Private HEIs,2017,Female,28208.0,0.536,Higher Education
+Students in Private HEIs,2018,Male,24872.0,0.489,Higher Education
+Students in Private HEIs,2018,Female,25950.0,0.511,Higher Education
+Students in Private HEIs,2019,Male,24726.0,0.49,Higher Education
+Students in Private HEIs,2019,Female,25761.0,0.51,Higher Education
+Students in Private HEIs,2020/21,Male,24100.0,0.47,Higher Education
+Students in Private HEIs,2020/21,Female,27171.0,0.53,Higher Education
+Students in Private HEIs,2021/22,Male,26398.0,0.497,Higher Education
+Students in Private HEIs,2021/22,Female,26712.0,0.503,Higher Education
+Students in Private HEIs,2022/23,Male,39952.0,0.516,Higher Education
+Students in Private HEIs,2022/23,Female,37430.0,0.484,Higher Education
+Total learners,2017,Male,61556.0,0.405,Adult Literacy
+Total learners,2017,Female,90459.0,0.595,Adult Literacy
+Total learners,2018,Male,51220.0,0.387,Adult Literacy
+Total learners,2018,Female,81145.0,0.613,Adult Literacy
+Total learners,2019,Male,49096.0,0.386,Adult Literacy
+Total learners,2019,Female,78021.0,0.614,Adult Literacy
+Total learners,2020/21,Male,44776.0,0.352,Adult Literacy
+Total learners,2020/21,Female,82278.0,0.648,Adult Literacy
+Total learners,2021/22,Male,44097.0,0.38,Adult Literacy
+Total learners,2021/22,Female,71931.0,0.62,Adult Literacy
+Total learners,2022/23,Male,38700.0,0.35440858639510603,Adult Literacy
+Total learners,2022/23,Female,70496.0,0.6455914136048939,Adult Literacy
+Learners in Public centers,2017,Male,17431.0,,Adult Literacy
+Learners in Public centers,2017,Female,26360.0,,Adult Literacy
+Learners in Public centers,2018,Male,14169.0,,Adult Literacy
+Learners in Public centers,2018,Female,22851.0,,Adult Literacy
+Learners in Public centers,2019,Male,16312.0,,Adult Literacy
+Learners in Public centers,2019,Female,25426.0,,Adult Literacy
+Learners in Public centers,2020/21,Male,19468.0,,Adult Literacy
+Learners in Public centers,2020/21,Female,34853.0,,Adult Literacy
+Learners in Public centers,2021/22,Male,22593.0,,Adult Literacy
+Learners in Public centers,2021/22,Female,32559.0,,Adult Literacy
+Learners in Public centers,2022/23,Male,16983.0,,Adult Literacy
+Learners in Public centers,2022/23,Female,30319.0,,Adult Literacy
+Learners in Government-subsidized centers,2017,Male,29226.0,,Adult Literacy
+Learners in Government-subsidized centers,2017,Female,43955.0,,Adult Literacy
+Learners in Government-subsidized centers,2018,Male,30020.0,,Adult Literacy
+Learners in Government-subsidized centers,2018,Female,47239.0,,Adult Literacy
+Learners in Government-subsidized centers,2019,Male,24068.0,,Adult Literacy
+Learners in Government-subsidized centers,2019,Female,38750.0,,Adult Literacy
+Learners in Government-subsidized centers,2020/21,Male,20718.0,,Adult Literacy
+Learners in Government-subsidized centers,2020/21,Female,38329.0,,Adult Literacy
+Learners in Government-subsidized centers,2021/22,Male,19508.0,,Adult Literacy
+Learners in Government-subsidized centers,2021/22,Female,34872.0,,Adult Literacy
+Learners in Government-subsidized centers,2022/23,Male,20151.0,,Adult Literacy
+Learners in Government-subsidized centers,2022/23,Female,36488.0,,Adult Literacy
+Learners in Private centers,2017,Male,14899.0,,Adult Literacy
+Learners in Private centers,2017,Female,20144.0,,Adult Literacy
+Learners in Private centers,2018,Male,7031.0,,Adult Literacy
+Learners in Private centers,2018,Female,11055.0,,Adult Literacy
+Learners in Private centers,2019,Male,8716.0,,Adult Literacy
+Learners in Private centers,2019,Female,13845.0,,Adult Literacy
+Learners in Private centers,2020/21,Male,4590.0,,Adult Literacy
+Learners in Private centers,2020/21,Female,9096.0,,Adult Literacy
+Learners in Private centers,2021/22,Male,1996.0,,Adult Literacy
+Learners in Private centers,2021/22,Female,4500.0,,Adult Literacy
+Learners in Private centers,2022/23,Male,1566.0,,Adult Literacy
+Learners in Private centers,2022/23,Female,3689.0,,Adult Literacy

@@ -1,0 +1,109 @@
+group,year,sex,count,pct
+Total number of orphans students,2017,Male,129545.0,0.5
+Total number of orphans students,2017,Female,129294.0,0.5
+Total number of orphans students,2018,Male,115491.0,0.503
+Total number of orphans students,2018,Female,114168.0,0.497
+Total number of orphans students,2019,Male,107348.0,0.504
+Total number of orphans students,2019,Female,105629.0,0.496
+Total number of orphans students,2020/21,Male,96297.0,0.503
+Total number of orphans students,2020/21,Female,95120.0,0.497
+Total number of orphans students,2021/22,Male,89678.0,0.496
+Total number of orphans students,2021/22,Female,91002.0,0.504
+Total number of orphans students,2022/23,Male,85708.0,0.498
+Total number of orphans students,2022/23,Female,86266.0,0.502
+In Preprimary,2017,Male,2874.0,
+In Preprimary,2017,Female,3030.0,
+In Preprimary,2018,Male,2644.0,
+In Preprimary,2018,Female,2670.0,
+In Preprimary,2019,Male,5158.0,
+In Preprimary,2019,Female,5140.0,
+In Preprimary,2020/21,Male,3603.0,
+In Preprimary,2020/21,Female,3720.0,
+In Preprimary,2021/22,Male,2540.0,
+In Preprimary,2021/22,Female,2682.0,
+In Preprimary,2022/23,Male,3389.0,
+In Preprimary,2022/23,Female,3439.0,
+In Primary,2017,Male,83773.0,
+In Primary,2017,Female,82251.0,
+In Primary,2018,Male,75580.0,
+In Primary,2018,Female,73190.0,
+In Primary,2019,Male,66543.0,
+In Primary,2019,Female,63510.0,
+In Primary,2020/21,Male,62689.0,
+In Primary,2020/21,Female,60367.0,
+In Primary,2021/22,Male,59058.0,
+In Primary,2021/22,Female,57380.0,
+In Primary,2022/23,Male,56009.0,
+In Primary,2022/23,Female,53425.0,
+Gen and prof. secondary,2017,Male,39935.0,
+Gen and prof. secondary,2017,Female,41417.0,
+Gen and prof. secondary,2018,Male,31216.0,
+Gen and prof. secondary,2018,Female,33310.0,
+Gen and prof. secondary,2019,Male,30126.0,
+Gen and prof. secondary,2019,Female,32336.0,
+Gen and prof. secondary,2020/21,Male,24765.0,
+Gen and prof. secondary,2020/21,Female,26320.0,
+Gen and prof. secondary,2021/22,Male,23984.0,
+Gen and prof. secondary,2021/22,Female,27763.0,
+Gen and prof. secondary,2022/23,Male,22172.0,
+Gen and prof. secondary,2022/23,Female,25862.0,
+In TVET L1 to L5,2017,Male,2963.0,
+In TVET L1 to L5,2017,Female,2596.0,
+In TVET L1 to L5,2018,Male,6051.0,
+In TVET L1 to L5,2018,Female,4998.0,
+In TVET L1 to L5,2019,Male,5521.0,
+In TVET L1 to L5,2019,Female,4643.0,
+In TVET L1 to L5,2020/21,Male,5240.0,
+In TVET L1 to L5,2020/21,Female,4713.0,
+In TVET L1 to L5,2021/22,Male,4096.0,
+In TVET L1 to L5,2021/22,Female,3177.0,
+In TVET L1 to L5,2022/23,Male,4138.0,
+In TVET L1 to L5,2022/23,Female,3540.0,
+Total number of orphan students,2017,Male,129545.0,0.5
+Total number of orphan students,2017,Female,129294.0,0.5
+Total number of orphan students,2018,Male,115491.0,0.503
+Total number of orphan students,2018,Female,114168.0,0.497
+Total number of orphan students,2019,Male,107348.0,0.504
+Total number of orphan students,2019,Female,105629.0,0.496
+Total number of orphan students,2020/21,Male,96297.0,0.503
+Total number of orphan students,2020/21,Female,95120.0,0.497
+Total number of orphan students,2021/22,Male,89678.0,0.496
+Total number of orphan students,2021/22,Female,91002.0,0.504
+Total number of orphan students,2022/23,Male,85708.0,0.498
+Total number of orphan students,2022/23,Female,86266.0,0.502
+Mother deceased,2017,Male,37566.0,
+Mother deceased,2017,Female,37275.0,
+Mother deceased,2018,Male,35703.0,
+Mother deceased,2018,Female,34983.0,
+Mother deceased,2019,Male,33755.0,
+Mother deceased,2019,Female,33558.0,
+Mother deceased,2020/21,Male,31569.0,
+Mother deceased,2020/21,Female,31683.0,
+Mother deceased,2021/22,Male,27740.0,
+Mother deceased,2021/22,Female,27882.0,
+Mother deceased,2022/23,Male,26926.0,
+Mother deceased,2022/23,Female,26899.0,
+Father deceased,2017,Male,74416.0,
+Father deceased,2017,Female,75108.0,
+Father deceased,2018,Male,65188.0,
+Father deceased,2018,Female,65124.0,
+Father deceased,2019,Male,60841.0,
+Father deceased,2019,Female,60135.0,
+Father deceased,2020/21,Male,50548.0,
+Father deceased,2020/21,Female,49792.0,
+Father deceased,2021/22,Male,49646.0,
+Father deceased,2021/22,Female,51309.0,
+Father deceased,2022/23,Male,47487.0,
+Father deceased,2022/23,Female,48473.0,
+Both parents deceased,2017,Male,17563.0,
+Both parents deceased,2017,Female,16911.0,
+Both parents deceased,2018,Male,14600.0,
+Both parents deceased,2018,Female,14061.0,
+Both parents deceased,2019,Male,12752.0,
+Both parents deceased,2019,Female,11936.0,
+Both parents deceased,2020/21,Male,14180.0,
+Both parents deceased,2020/21,Female,13645.0,
+Both parents deceased,2021/22,Male,12292.0,
+Both parents deceased,2021/22,Female,11811.0,
+Both parents deceased,2022/23,Male,11295.0,
+Both parents deceased,2022/23,Female,10894.0,

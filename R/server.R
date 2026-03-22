@@ -4881,4 +4881,539 @@ server <- function(input, output, session) {
       plotly::layout(xaxis = list(tickangle = -20, tickfont = list(size = 9)))
   })
 
+  # ╔═══════════════════════════════════════════════════════════════════════════╗
+  # ║                    AGRICULTURE DASHBOARD                                  ║
+  # ╚═══════════════════════════════════════════════════════════════════════════╝
+
+  # ── color guide (aligned with all dashboards) ────────────────────────────────
+  AGRI_MALE    <- "#3B82F6"   # blue   — male
+  AGRI_FEMALE  <- "#E85A4F"   # red    — female
+  AGRI_BOTH    <- "#8B5CF6"   # purple — combined
+  AGRI_GREEN   <- "#2d6e44"   # green  — agriculture accent
+  AGRI_AMBER   <- "#F59E0B"   # amber  — secondary highlight
+
+  AGRI_PROVINCE_COLORS <- c(
+    "City of Kigali"    = "#3B82F6",
+    "Southern Province" = "#E85A4F",
+    "Western Province"  = "#8B5CF6",
+    "Northern Province" = "#F59E0B",
+    "Eastern Province"  = "#2d6e44",
+    "Rwanda"            = "#6B7280"
+  )
+
+  # ── plotly theme ─────────────────────────────────────────────────────────────
+  agri_plotly_theme <- function(p, xlab = "", ylab = "", title = "") {
+    p |>
+      plotly::layout(
+        paper_bgcolor = "#ffffff",
+        plot_bgcolor  = "#ffffff",
+        font          = list(family = "Inter, system-ui, sans-serif", size = 12, color = "#374151"),
+        xaxis         = list(title = list(text = xlab, font = list(size = 11)),
+                             gridcolor = "#F3F4F6", zerolinecolor = "#E5E7EB",
+                             tickfont  = list(size = 10)),
+        yaxis         = list(title = list(text = ylab, font = list(size = 11)),
+                             gridcolor = "#F3F4F6", zerolinecolor = "#E5E7EB",
+                             tickfont  = list(size = 10)),
+        legend        = list(orientation = "h", x = 0.01, y = -0.18,
+                             bgcolor = "rgba(0,0,0,0)",
+                             font = list(size = 11)),
+        margin        = list(l = 10, r = 10, t = 30, b = 10),
+        hoverlabel    = list(bgcolor = "#1E293B", font = list(color = "#F8FAFC", size = 12))
+      ) |>
+      plotly::config(displayModeBar = FALSE)
+  }
+
+  agri_no_data <- function(msg = "No data available") {
+    plotly::plot_ly(type = "scatter", mode = "markers") |>
+      plotly::layout(
+        paper_bgcolor = "#F9FAFB", plot_bgcolor = "#F9FAFB",
+        xaxis = list(visible = FALSE), yaxis = list(visible = FALSE),
+        annotations = list(list(
+          text = msg, x = 0.5, y = 0.5, xref = "paper", yref = "paper",
+          showarrow = FALSE, font = list(size = 13, color = "#9CA3AF")
+        ))
+      ) |> plotly::config(displayModeBar = FALSE)
+  }
+
+  # ── safe data loader ─────────────────────────────────────────────────────────
+  agri_data_once <- NULL
+  if (exists(".agriculture_data", envir = globalenv(), inherits = FALSE)) {
+    agri_data_once <- tryCatch(
+      get(".agriculture_data", envir = globalenv(), inherits = FALSE),
+      error = function(e) NULL
+    )
+  }
+  if (is.null(agri_data_once)) {
+    agri_data_once <- tryCatch(load_agriculture_data(), error = function(e) {
+      message("[AGRI] load_agriculture_data() error: ", conditionMessage(e)); NULL
+    })
+  }
+  agri_tbls <- reactive({ agri_data_once })
+
+  # ── KPI helper ───────────────────────────────────────────────────────────────
+  agri_kpi <- function(title, icon_cls, male_val, female_val, suffix = "%", note = NULL) {
+    gap     <- if (!is.na(male_val) && !is.na(female_val)) female_val - male_val else NA
+    gap_lbl <- if (!is.na(gap)) sprintf("%+.1f pp", gap) else "N/A"
+    gap_cls <- if (!is.na(gap) && gap >= 0) "fi-kpi__gap--pos" else "fi-kpi__gap--neg"
+    shiny::div(class = "fi-kpi fi-kpi--agri",
+      shiny::div(class = "fi-kpi__icon", shiny::tags$i(class = icon_cls)),
+      shiny::div(class = "fi-kpi__body",
+        shiny::div(class = "fi-kpi__title", title),
+        shiny::div(class = "fi-kpi__vals",
+          shiny::span(class = "fi-kpi__val fi-kpi__val--male",
+            shiny::tags$i(class = "fas fa-mars fa-xs"),
+            sprintf(" %.1f%s", male_val, suffix)
+          ),
+          shiny::span(class = "fi-kpi__val fi-kpi__val--female",
+            shiny::tags$i(class = "fas fa-venus fa-xs"),
+            sprintf(" %.1f%s", female_val, suffix)
+          )
+        ),
+        shiny::div(class = paste("fi-kpi__gap", gap_cls), "Gap (F\u2212M): ", gap_lbl),
+        if (!is.null(note)) shiny::div(class = "fi-kpi__note", note)
+      )
+    )
+  }
+
+  # ── OVERVIEW KPIs ────────────────────────────────────────────────────────────
+  output$agri_overview_kpis <- shiny::renderUI({
+    d <- agri_tbls()
+    if (is.null(d)) return(shiny::div(class = "fi-kpi-row",
+      shiny::p("Agriculture data not available.", style = "color:#9CA3AF")))
+
+    # % Agricultural HH
+    agri_pct_m <- tryCatch(
+      d$hh_summary$male_headed[d$hh_summary$hh_type == "% of Agricultural HH"], error = function(e) NA)
+    agri_pct_f <- tryCatch(
+      d$hh_summary$female_headed[d$hh_summary$hh_type == "% of Agricultural HH"], error = function(e) NA)
+
+    # Worker trend — latest year (2022)
+    wt <- d$workers_trend
+    wt22 <- wt[!is.na(wt$year) & wt$year == 2022 &
+                wt$worker_type == "Market-oriented + Subsistence", ]
+    wt_m <- if (nrow(wt22[wt22$sex == "Male",])) wt22$pct[wt22$sex == "Male"][1] else NA
+    wt_f <- if (nrow(wt22[wt22$sex == "Female",])) wt22$pct[wt22$sex == "Female"][1] else NA
+
+    # Extension services reach
+    ext_reach_m <- tryCatch(
+      d$extension$male_pct[d$extension$service == "Agricultural practices"][1], error = function(e) NA)
+    ext_reach_f <- tryCatch(
+      d$extension$female_pct[d$extension$service == "Agricultural practices"][1], error = function(e) NA)
+
+    # Livestock cattle
+    cat_m <- tryCatch(
+      d$livestock$male_headed[d$livestock$livestock == "Cattle"][1], error = function(e) NA)
+    cat_f <- tryCatch(
+      d$livestock$female_headed[d$livestock$livestock == "Cattle"][1], error = function(e) NA)
+
+    shiny::div(class = "fi-kpi-row",
+      if (!any(is.na(c(agri_pct_m, agri_pct_f))))
+        agri_kpi("% HH in Agriculture", "fas fa-tractor fa-lg",
+                 agri_pct_m, agri_pct_f, note = "PHC 2022"),
+      if (!any(is.na(c(wt_m, wt_f))))
+        agri_kpi("Agri Workers 2022 (% 16+)", "fas fa-user-tie fa-lg",
+                 wt_m, wt_f, note = "Market-oriented + Subsistence"),
+      if (!any(is.na(c(ext_reach_f, ext_reach_m))))
+        agri_kpi("Agri Practices Extension", "fas fa-chalkboard-teacher fa-lg",
+                 ext_reach_m, ext_reach_f, note = "% of supported HH"),
+      if (!any(is.na(c(cat_m, cat_f))))
+        agri_kpi("Cattle Ownership (%)", "fas fa-horse fa-lg",
+                 cat_m, cat_f, note = "% HH raising cattle")
+    )
+  })
+
+  # ── OVERVIEW: HH bar ────────────────────────────────────────────────────────
+  output$agri_hh_bar <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$hh_summary)) return(agri_no_data())
+    ds <- d$hh_summary[d$hh_summary$hh_type != "% of Agricultural HH", ]
+    ds_long <- data.frame(
+      category = rep(ds$hh_type, 2),
+      sex      = c(rep("Male Headed", nrow(ds)), rep("Female Headed", nrow(ds))),
+      value    = c(ds$male_headed, ds$female_headed)
+    )
+    plotly::plot_ly(ds_long, x = ~category, y = ~value, color = ~sex, type = "bar",
+      colors = c("Male Headed" = AGRI_MALE, "Female Headed" = AGRI_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:,.0f}<extra></extra>"
+    ) |> agri_plotly_theme(ylab = "Number of Households") |>
+      plotly::layout(barmode = "group",
+                     yaxis = list(tickformat = ",.0f"))
+  })
+
+  # ── OVERVIEW: HH donut ──────────────────────────────────────────────────────
+  output$agri_hh_donut <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$hh_summary)) return(agri_no_data())
+    row <- d$hh_summary[d$hh_summary$hh_type == "Total Agricultural HH", ]
+    if (nrow(row) == 0) return(agri_no_data())
+    df <- data.frame(
+      label = c("Male Headed", "Female Headed"),
+      value = c(row$male_headed, row$female_headed)
+    )
+    plotly::plot_ly(df, labels = ~label, values = ~value, type = "pie", hole = 0.55,
+      marker = list(colors = c(AGRI_MALE, AGRI_FEMALE),
+                    line   = list(color = "#ffffff", width = 2)),
+      textinfo = "percent+label",
+      hovertemplate = "%{label}<br>%{value:,.0f} households (%{percent})<extra></extra>"
+    ) |> agri_plotly_theme() |>
+      plotly::layout(showlegend = FALSE)
+  })
+
+  # ── OVERVIEW: workers trend overview ────────────────────────────────────────
+  output$agri_workers_overview <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$workers_trend)) return(agri_no_data())
+    ds <- d$workers_trend[d$workers_trend$worker_type == "Market-oriented + Subsistence", ]
+    if (nrow(ds) == 0) return(agri_no_data())
+    dm <- ds[ds$sex == "Male",   ]
+    df <- ds[ds$sex == "Female", ]
+    plotly::plot_ly(type = "scatter", mode = "lines+markers") |>
+      plotly::add_trace(data = dm, x = ~year, y = ~pct, name = "Male",
+        line = list(color = AGRI_MALE, width = 2.5),
+        marker = list(color = AGRI_MALE, size = 8),
+        fill = "tozeroy", fillcolor = paste0(AGRI_MALE, "18"),
+        hovertemplate = "<b>%{x}</b> \u00b7 Male<br>%{y:.1f}%<extra></extra>"
+      ) |>
+      plotly::add_trace(data = df, x = ~year, y = ~pct, name = "Female",
+        line = list(color = AGRI_FEMALE, width = 2.5),
+        marker = list(color = AGRI_FEMALE, size = 8),
+        fill = "tozeroy", fillcolor = paste0(AGRI_FEMALE, "18"),
+        hovertemplate = "<b>%{x}</b> \u00b7 Female<br>%{y:.1f}%<extra></extra>"
+      ) |>
+      agri_plotly_theme(ylab = "% of working-age population") |>
+      plotly::layout(yaxis = list(range = c(0, 75)),
+                     xaxis = list(dtick = 1))
+  })
+
+  # ── LAND ACCESS charts ───────────────────────────────────────────────────────
+  output$agri_land_ownership <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$land_ownership)) return(agri_no_data())
+    ds <- d$land_ownership
+    plotly::plot_ly(ds, x = ~pct_2018, y = ~owner_type, type = "bar",
+      name = "2018", orientation = "h",
+      marker = list(color = AGRI_MALE),
+      hovertemplate = "<b>%{y}</b> \u00b7 2018<br>%{x:.1f}%<extra></extra>"
+    ) |>
+      plotly::add_trace(x = ~pct_2021, y = ~owner_type, type = "bar",
+        name = "2021", orientation = "h",
+        marker = list(color = AGRI_GREEN),
+        hovertemplate = "<b>%{y}</b> \u00b7 2021<br>%{x:.1f}%<extra></extra>"
+      ) |>
+      agri_plotly_theme(xlab = "% of land") |>
+      plotly::layout(barmode = "group",
+                     yaxis = list(title = ""),
+                     xaxis = list(range = c(0, 75)))
+  })
+
+  output$agri_land_rights <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$land_rights)) return(agri_no_data())
+    ds <- d$land_rights
+    ds_long <- data.frame(
+      right = rep(ds$right_type, 3),
+      group = c(rep("Rwanda", nrow(ds)), rep("Male", nrow(ds)), rep("Female", nrow(ds))),
+      value = c(ds$rwanda, ds$male, ds$female)
+    )
+    ds_long$right <- factor(ds_long$right, levels = rev(unique(ds_long$right)))
+    plotly::plot_ly(ds_long, x = ~value, y = ~right, color = ~group, type = "bar",
+      orientation = "h",
+      colors = c("Rwanda" = AGRI_BOTH, "Male" = AGRI_MALE, "Female" = AGRI_FEMALE),
+      hovertemplate = "<b>%{y}</b> \u00b7 %{fullData.name}<br>%{x:.1f}%<extra></extra>"
+    ) |> agri_plotly_theme(xlab = "% of farmers") |>
+      plotly::layout(barmode = "group", yaxis = list(title = ""),
+                     xaxis = list(range = c(0, 100)))
+  })
+
+  output$agri_land_access <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$land_access)) return(agri_no_data())
+    ds <- d$land_access
+    access_long <- data.frame(
+      hh_type    = rep(ds$hh_type, 3),
+      access_type = c(rep("Own Land", nrow(ds)),
+                      rep("Rented Land", nrow(ds)),
+                      rep("Own + Rented", nrow(ds))),
+      value = c(ds$own_land, ds$rented_land, ds$complemented)
+    )
+    plotly::plot_ly(access_long, x = ~hh_type, y = ~value, color = ~access_type, type = "bar",
+      colors = c("Own Land" = AGRI_GREEN, "Rented Land" = AGRI_AMBER, "Own + Rented" = AGRI_BOTH),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> agri_plotly_theme(ylab = "% of agricultural households") |>
+      plotly::layout(barmode = "group",
+                     yaxis = list(range = c(0, 100)))
+  })
+
+  # ── EXTENSION SERVICES charts ────────────────────────────────────────────────
+  output$agri_extension_bar <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$extension)) return(agri_no_data())
+    ds <- d$extension
+    ds <- ds[order(ds$female_pct, decreasing = TRUE), ]
+    ds$service <- factor(ds$service, levels = rev(ds$service))
+    plotly::plot_ly(ds, y = ~service, x = ~female_pct, type = "bar",
+      name = "Female HH", orientation = "h",
+      marker = list(color = AGRI_FEMALE),
+      hovertemplate = "<b>%{y}</b><br>Female HH: %{x:.1f}%<extra></extra>"
+    ) |>
+      plotly::add_trace(x = ~male_pct, y = ~service, type = "bar",
+        name = "Male HH", orientation = "h",
+        marker = list(color = AGRI_MALE),
+        hovertemplate = "<b>%{y}</b><br>Male HH: %{x:.1f}%<extra></extra>"
+      ) |>
+      agri_plotly_theme(xlab = "% of sex-disaggregated supported HH") |>
+      plotly::layout(barmode = "group", yaxis = list(title = ""),
+                     xaxis = list(range = c(0, 70)))
+  })
+
+  output$agri_extension_total <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$extension)) return(agri_no_data())
+    ds <- d$extension
+    ds <- ds[order(ds$total_pct), ]
+    ds$service <- factor(ds$service, levels = ds$service)
+    ds$bar_col <- ifelse(ds$total_pct >= median(ds$total_pct, na.rm = TRUE),
+                         AGRI_GREEN, AGRI_AMBER)
+    plotly::plot_ly(ds, y = ~service, x = ~total_pct, type = "bar",
+      orientation = "h",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{y}</b><br>Total: %{x:.1f}% of all agri HH<extra></extra>"
+    ) |> agri_plotly_theme(xlab = "% of all agri HH") |>
+      plotly::layout(yaxis = list(title = ""))
+  })
+
+  output$agri_extension_gap <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$extension)) return(agri_no_data())
+    ds <- d$extension
+    ds$gap     <- ds$female_pct - ds$male_pct
+    ds         <- ds[order(ds$gap), ]
+    ds$service  <- factor(ds$service, levels = ds$service)
+    ds$bar_col  <- ifelse(ds$gap >= 0, AGRI_FEMALE, AGRI_MALE)
+    plotly::plot_ly(ds, y = ~service, x = ~gap, type = "bar",
+      orientation = "h",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{y}</b><br>Gap (F\u2212M): %{x:+.1f} pp<extra></extra>"
+    ) |> agri_plotly_theme(xlab = "Gender gap (Female \u2212 Male, pp)") |>
+      plotly::layout(
+        yaxis = list(title = ""),
+        shapes = list(list(type = "line", x0 = 0, x1 = 0, y0 = -0.5,
+                           y1 = nrow(ds) - 0.5,
+                           line = list(color = "#6B7280", width = 1, dash = "dot")))
+      )
+  })
+
+  # ── INPUTS & PRACTICES charts ─────────────────────────────────────────────────
+  output$agri_inputs_chart <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$inputs)) return(agri_no_data())
+    col_sel <- input$agri_input_type %||% "improved_seeds"
+    col_lbl <- switch(col_sel,
+      "improved_seeds" = "Improved Seeds (%)",
+      "organic_fert"   = "Organic Fertilizer (%)",
+      "inorganic_fert" = "Inorganic Fertilizer (%)",
+      "pesticides"     = "Pesticides (%)"
+    )
+    ds <- d$inputs[!is.na(d$inputs[[col_sel]]), ]
+    prov_order <- c("Rwanda","City of Kigali","Southern Province",
+                    "Western Province","Northern Province","Eastern Province",
+                    "Male-headed","Female-headed")
+    ds$category <- factor(ds$category, levels = rev(intersect(prov_order, ds$category)))
+    bar_colors <- ifelse(grepl("Male", ds$category), AGRI_MALE,
+                  ifelse(grepl("Female", ds$category), AGRI_FEMALE,
+                  unname(AGRI_PROVINCE_COLORS[as.character(ds$category)])))
+    bar_colors[is.na(bar_colors)] <- AGRI_GREEN
+    plotly::plot_ly(ds, y = ~category, x = ~.data[[col_sel]], type = "bar",
+      orientation = "h",
+      marker = list(color = bar_colors),
+      text  = ~paste0(.data[[col_sel]], "%"),
+      textposition = "outside",
+      hovertemplate = paste0("<b>%{y}</b><br>", col_lbl, " %{x:.1f}%<extra></extra>")
+    ) |> agri_plotly_theme(xlab = col_lbl) |>
+      plotly::layout(yaxis = list(title = ""),
+                     xaxis = list(range = c(0, 105)))
+  })
+
+  output$agri_community_groups <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$community_groups)) return(agri_no_data())
+    ds <- d$community_groups
+    grp_long <- data.frame(
+      hh_type = rep(ds$hh_type, 3),
+      group_type = c(rep("Cooperatives/Association", nrow(ds)),
+                     rep("Twigire Muhinzi", nrow(ds)),
+                     rep("Farmer Field School", nrow(ds))),
+      value = c(ds$cooperatives, ds$twigire_muhinzi, ds$farmer_field_school)
+    )
+    plotly::plot_ly(grp_long, x = ~hh_type, y = ~value, color = ~group_type, type = "bar",
+      colors = c("Cooperatives/Association" = AGRI_MALE,
+                 "Twigire Muhinzi"          = AGRI_FEMALE,
+                 "Farmer Field School"      = AGRI_GREEN),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> agri_plotly_theme(ylab = "% of agricultural households") |>
+      plotly::layout(barmode = "group", yaxis = list(range = c(0, 30)))
+  })
+
+  # ── WORKERS TREND charts ──────────────────────────────────────────────────────
+  output$agri_workers_trend <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$workers_trend)) return(agri_no_data())
+    wtype <- input$agri_worker_type %||% "Market-oriented + Subsistence"
+    ds <- d$workers_trend[d$workers_trend$worker_type == wtype, ]
+    if (nrow(ds) == 0) return(agri_no_data())
+    dm <- ds[ds$sex == "Male",   ]
+    df <- ds[ds$sex == "Female", ]
+    plotly::plot_ly(type = "scatter", mode = "lines+markers") |>
+      plotly::add_trace(data = dm, x = ~year, y = ~pct, name = "Male",
+        line = list(color = AGRI_MALE, width = 2.5),
+        marker = list(color = AGRI_MALE, size = 9),
+        hovertemplate = "<b>%{x}</b> \u00b7 Male<br>%{y:.1f}%<extra></extra>"
+      ) |>
+      plotly::add_trace(data = df, x = ~year, y = ~pct, name = "Female",
+        line = list(color = AGRI_FEMALE, width = 2.5, dash = "dash"),
+        marker = list(color = AGRI_FEMALE, size = 9, symbol = "square"),
+        hovertemplate = "<b>%{x}</b> \u00b7 Female<br>%{y:.1f}%<extra></extra>"
+      ) |>
+      agri_plotly_theme(ylab = "% of working-age population") |>
+      plotly::layout(xaxis = list(dtick = 1))
+  })
+
+  output$agri_workers_female <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$workers_trend)) return(agri_no_data())
+    ds <- d$workers_trend[d$workers_trend$sex == "Female", ]
+    worker_colors <- c(
+      "Market-oriented"              = AGRI_FEMALE,
+      "Subsistence"                  = AGRI_AMBER,
+      "Market-oriented + Subsistence"= AGRI_BOTH
+    )
+    plotly::plot_ly(ds, x = ~year, y = ~pct, color = ~worker_type, type = "scatter",
+      mode = "lines+markers",
+      colors = worker_colors,
+      line = list(width = 2),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> agri_plotly_theme(ylab = "% of female working-age population") |>
+      plotly::layout(xaxis = list(dtick = 1))
+  })
+
+  output$agri_workers_male <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$workers_trend)) return(agri_no_data())
+    ds <- d$workers_trend[d$workers_trend$sex == "Male", ]
+    worker_colors <- c(
+      "Market-oriented"              = AGRI_MALE,
+      "Subsistence"                  = AGRI_AMBER,
+      "Market-oriented + Subsistence"= AGRI_BOTH
+    )
+    plotly::plot_ly(ds, x = ~year, y = ~pct, color = ~worker_type, type = "scatter",
+      mode = "lines+markers",
+      colors = worker_colors,
+      line = list(width = 2),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> agri_plotly_theme(ylab = "% of male working-age population") |>
+      plotly::layout(xaxis = list(dtick = 1))
+  })
+
+  # ── LIVESTOCK charts ──────────────────────────────────────────────────────────
+  output$agri_livestock_bar <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$livestock)) return(agri_no_data())
+    ds <- d$livestock
+    ds <- ds[order(ds$total, decreasing = FALSE), ]
+    ds$livestock <- factor(ds$livestock, levels = ds$livestock)
+    plotly::plot_ly(ds, y = ~livestock, x = ~male_headed, type = "bar",
+      name = "Male Headed", orientation = "h",
+      marker = list(color = AGRI_MALE),
+      hovertemplate = "<b>%{y}</b> \u00b7 Male HH<br>%{x:.1f}%<extra></extra>"
+    ) |>
+      plotly::add_trace(x = ~female_headed, y = ~livestock, type = "bar",
+        name = "Female Headed", orientation = "h",
+        marker = list(color = AGRI_FEMALE),
+        hovertemplate = "<b>%{y}</b> \u00b7 Female HH<br>%{x:.1f}%<extra></extra>"
+      ) |>
+      agri_plotly_theme(xlab = "% of households owning livestock") |>
+      plotly::layout(barmode = "group", yaxis = list(title = ""))
+  })
+
+  output$agri_livestock_gap <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$livestock)) return(agri_no_data())
+    ds <- d$livestock
+    ds$gap <- ds$male_headed - ds$female_headed
+    ds     <- ds[order(ds$gap), ]
+    ds$livestock <- factor(ds$livestock, levels = ds$livestock)
+    ds$bar_col   <- ifelse(ds$gap >= 0, AGRI_MALE, AGRI_FEMALE)
+    plotly::plot_ly(ds, y = ~livestock, x = ~gap, type = "bar",
+      orientation = "h",
+      marker = list(color = ~bar_col),
+      hovertemplate = "<b>%{y}</b><br>Gap (M\u2212F): %{x:+.1f} pp<extra></extra>"
+    ) |> agri_plotly_theme(xlab = "Gap (Male \u2212 Female HH, pp)") |>
+      plotly::layout(
+        yaxis = list(title = ""),
+        shapes = list(list(type = "line", x0 = 0, x1 = 0, y0 = -0.5,
+                           y1 = nrow(ds) - 0.5,
+                           line = list(color = "#6B7280", width = 1, dash = "dot")))
+      )
+  })
+
+  output$agri_livestock_donut <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$livestock)) return(agri_no_data())
+    ds <- d$livestock
+    ds <- ds[order(ds$total, decreasing = TRUE), ]
+    plotly::plot_ly(ds, labels = ~livestock, values = ~total,
+      type = "pie", hole = 0.5,
+      textinfo = "percent+label",
+      hovertemplate = "<b>%{label}</b><br>Total: %{value:.1f}% of HH<extra></extra>",
+      marker = list(
+        colors = c(AGRI_GREEN, AGRI_MALE, AGRI_FEMALE, AGRI_AMBER, AGRI_BOTH,
+                   "#6B7280","#10B981","#F97316","#EC4899"),
+        line   = list(color = "#ffffff", width = 2)
+      )
+    ) |> agri_plotly_theme() |>
+      plotly::layout(showlegend = TRUE,
+                     legend = list(orientation = "v", x = 1, y = 0.5))
+  })
+
+  # ── GIRINKA PROGRAM charts ───────────────────────────────────────────────────
+  output$agri_girinka_bar <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$girinka)) return(agri_no_data())
+    ds <- d$girinka[d$girinka$indicator %in%
+                    c("Benefited from Girinka (2020)", "Still have cow from Girinka"), ]
+    ds_long <- data.frame(
+      indicator = rep(ds$indicator, 3),
+      group     = c(rep("Rwanda", nrow(ds)),
+                    rep("Male HH", nrow(ds)),
+                    rep("Female HH", nrow(ds))),
+      value     = c(ds$rwanda, ds$male, ds$female)
+    )
+    plotly::plot_ly(ds_long, x = ~indicator, y = ~value, color = ~group, type = "bar",
+      colors = c("Rwanda" = AGRI_BOTH, "Male HH" = AGRI_MALE, "Female HH" = AGRI_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> agri_plotly_theme(ylab = "% of agricultural HH") |>
+      plotly::layout(barmode = "group",
+                     xaxis = list(tickfont = list(size = 10)))
+  })
+
+  output$agri_girinka_provider <- plotly::renderPlotly({
+    d <- agri_tbls()
+    if (is.null(d) || is.null(d$girinka)) return(agri_no_data())
+    ds <- d$girinka[grepl("Provider|Govt|NGO|Government|Company", d$girinka$indicator), ]
+    if (nrow(ds) == 0)
+      ds <- d$girinka[3:4, ]
+    ds_long <- data.frame(
+      indicator = rep(ds$indicator, 3),
+      group     = c(rep("Rwanda", nrow(ds)), rep("Male HH", nrow(ds)),
+                    rep("Female HH", nrow(ds))),
+      value     = c(ds$rwanda, ds$male, ds$female)
+    )
+    plotly::plot_ly(ds_long, x = ~indicator, y = ~value, color = ~group, type = "bar",
+      colors = c("Rwanda" = AGRI_BOTH, "Male HH" = AGRI_MALE, "Female HH" = AGRI_FEMALE),
+      hovertemplate = "<b>%{x}</b> \u00b7 %{fullData.name}<br>%{y:.1f}%<extra></extra>"
+    ) |> agri_plotly_theme(ylab = "% of Girinka beneficiaries") |>
+      plotly::layout(barmode = "group",
+                     xaxis = list(tickfont = list(size = 10)))
+  })
+
 }

@@ -1,0 +1,51 @@
+group,year,sex,count,pct
+Total Refugee Students,2018,Male,20628.0,0.521
+Total Refugee Students,2018,Female,18951.0,0.479
+Total Refugee Students,2019,Male,20579.0,0.513
+Total Refugee Students,2019,Female,19572.0,0.487
+Total Refugee Students,2020/21,Male,20932.0,0.502
+Total Refugee Students,2020/21,Female,20752.0,0.498
+Total Refugee Students,2021/22,Male,20297.0,0.516
+Total Refugee Students,2021/22,Female,19032.0,0.484
+Total Refugee Students,2022/23,Male,20417.0,0.514
+Total Refugee Students,2022/23,Female,19311.0,0.486
+In Preprimary,2018,Male,998.0,
+In Preprimary,2018,Female,984.0,
+In Preprimary,2019,Male,859.0,
+In Preprimary,2019,Female,871.0,
+In Preprimary,2020/21,Male,1340.0,
+In Preprimary,2020/21,Female,1317.0,
+In Preprimary,2021/22,Male,1801.0,
+In Preprimary,2021/22,Female,1774.0,
+In Preprimary,2022/23,Male,2149.0,
+In Preprimary,2022/23,Female,2140.0,
+In Primary,2018,Male,13883.0,
+In Primary,2018,Female,13236.0,
+In Primary,2019,Male,13437.0,
+In Primary,2019,Female,13077.0,
+In Primary,2020/21,Male,13370.0,
+In Primary,2020/21,Female,13448.0,
+In Primary,2021/22,Male,11584.0,
+In Primary,2021/22,Female,11468.0,
+In Primary,2022/23,Male,11660.0,
+In Primary,2022/23,Female,11459.0,
+Gen and prof. secondary,2018,Male,5486.0,
+Gen and prof. secondary,2018,Female,4529.0,
+Gen and prof. secondary,2019,Male,6078.0,
+Gen and prof. secondary,2019,Female,5473.0,
+Gen and prof. secondary,2020/21,Male,6001.0,
+Gen and prof. secondary,2020/21,Female,5793.0,
+Gen and prof. secondary,2021/22,Male,6570.0,
+Gen and prof. secondary,2021/22,Female,5598.0,
+Gen and prof. secondary,2022/23,Male,6148.0,
+Gen and prof. secondary,2022/23,Female,5415.0,
+In TVET L1 to L5,2018,Male,261.0,
+In TVET L1 to L5,2018,Female,202.0,
+In TVET L1 to L5,2019,Male,205.0,
+In TVET L1 to L5,2019,Female,151.0,
+In TVET L1 to L5,2020/21,Male,221.0,
+In TVET L1 to L5,2020/21,Female,194.0,
+In TVET L1 to L5,2021/22,Male,342.0,
+In TVET L1 to L5,2021/22,Female,192.0,
+In TVET L1 to L5,2022/23,Male,460.0,
+In TVET L1 to L5,2022/23,Female,297.0,

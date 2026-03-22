@@ -22,6 +22,7 @@ source("R/governance_data.R")
 source("R/demography_data.R")
 source("R/employment_data.R")
 source("R/education_data.R")
+source("R/agriculture_data.R")
 source("R/ui.R")
 source("R/server.R")
 
@@ -110,6 +111,20 @@ if (!is.null(.education_data)) {
   message("[EDU] Education ready.")
 } else {
   message("[EDU] Education data unavailable — Education dashboard will show a notice.")
+}
+
+# ── Load Agriculture dashboard tables once at startup ─────────────────────────
+.agriculture_data <- tryCatch(
+  load_agriculture_data(),
+  error = function(e) {
+    message("[AGRI] Startup load failed: ", e$message)
+    NULL
+  }
+)
+if (!is.null(.agriculture_data)) {
+  message("[AGRI] Agriculture ready.")
+} else {
+  message("[AGRI] Agriculture data unavailable — Agriculture dashboard will show a notice.")
 }
 
 shinyApp(ui = ui, server = server)

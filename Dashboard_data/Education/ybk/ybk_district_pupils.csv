@@ -1,0 +1,847 @@
+location,province,geo_type,year,sex,count,level
+Gisagara,South,District,2021/22,Male,4458.0,Preprimary
+Gisagara,South,District,2022/23,Male,7407.0,Preprimary
+Gisagara,South,District,2021/22,Female,4713.0,Preprimary
+Gisagara,South,District,2022/23,Female,7758.0,Preprimary
+Huye,South,District,2021/22,Male,6141.0,Preprimary
+Huye,South,District,2022/23,Male,8368.0,Preprimary
+Huye,South,District,2021/22,Female,6180.0,Preprimary
+Huye,South,District,2022/23,Female,7898.0,Preprimary
+Kamonyi,South,District,2021/22,Male,8308.0,Preprimary
+Kamonyi,South,District,2022/23,Male,11492.0,Preprimary
+Kamonyi,South,District,2021/22,Female,8197.0,Preprimary
+Kamonyi,South,District,2022/23,Female,11108.0,Preprimary
+Muhanga,South,District,2021/22,Male,6779.0,Preprimary
+Muhanga,South,District,2022/23,Male,8252.0,Preprimary
+Muhanga,South,District,2021/22,Female,6645.0,Preprimary
+Muhanga,South,District,2022/23,Female,8031.0,Preprimary
+Nyamagabe,South,District,2021/22,Male,4457.0,Preprimary
+Nyamagabe,South,District,2022/23,Male,6562.0,Preprimary
+Nyamagabe,South,District,2021/22,Female,4593.0,Preprimary
+Nyamagabe,South,District,2022/23,Female,6547.0,Preprimary
+Nyanza,South,District,2021/22,Male,6088.0,Preprimary
+Nyanza,South,District,2022/23,Male,8629.0,Preprimary
+Nyanza,South,District,2021/22,Female,6202.0,Preprimary
+Nyanza,South,District,2022/23,Female,8785.0,Preprimary
+Nyaruguru,South,District,2021/22,Male,4645.0,Preprimary
+Nyaruguru,South,District,2022/23,Male,6673.0,Preprimary
+Nyaruguru,South,District,2021/22,Female,5210.0,Preprimary
+Nyaruguru,South,District,2022/23,Female,7062.0,Preprimary
+Ruhango,South,District,2021/22,Male,4404.0,Preprimary
+Ruhango,South,District,2022/23,Male,7430.0,Preprimary
+Ruhango,South,District,2021/22,Female,4341.0,Preprimary
+Ruhango,South,District,2022/23,Female,7425.0,Preprimary
+South,South,Province,2021/22,Male,45280.0,Preprimary
+South,South,Province,2022/23,Male,64813.0,Preprimary
+South,South,Province,2021/22,Female,46081.0,Preprimary
+South,South,Province,2022/23,Female,64614.0,Preprimary
+Karongi,West,District,2021/22,Male,6464.0,Preprimary
+Karongi,West,District,2022/23,Male,10266.0,Preprimary
+Karongi,West,District,2021/22,Female,6603.0,Preprimary
+Karongi,West,District,2022/23,Female,10360.0,Preprimary
+Ngororero,West,District,2021/22,Male,6135.0,Preprimary
+Ngororero,West,District,2022/23,Male,8814.0,Preprimary
+Ngororero,West,District,2021/22,Female,6328.0,Preprimary
+Ngororero,West,District,2022/23,Female,8854.0,Preprimary
+Nyabihu,West,District,2021/22,Male,3974.0,Preprimary
+Nyabihu,West,District,2022/23,Male,6046.0,Preprimary
+Nyabihu,West,District,2021/22,Female,4092.0,Preprimary
+Nyabihu,West,District,2022/23,Female,6001.0,Preprimary
+Nyamasheke,West,District,2021/22,Male,5711.0,Preprimary
+Nyamasheke,West,District,2022/23,Male,7964.0,Preprimary
+Nyamasheke,West,District,2021/22,Female,5723.0,Preprimary
+Nyamasheke,West,District,2022/23,Female,8052.0,Preprimary
+Rubavu,West,District,2021/22,Male,5165.0,Preprimary
+Rubavu,West,District,2022/23,Male,8294.0,Preprimary
+Rubavu,West,District,2021/22,Female,5184.0,Preprimary
+Rubavu,West,District,2022/23,Female,8667.0,Preprimary
+Rusizi,West,District,2021/22,Male,6323.0,Preprimary
+Rusizi,West,District,2022/23,Male,10658.0,Preprimary
+Rusizi,West,District,2021/22,Female,6365.0,Preprimary
+Rusizi,West,District,2022/23,Female,10613.0,Preprimary
+Rutsiro,West,District,2021/22,Male,3930.0,Preprimary
+Rutsiro,West,District,2022/23,Male,6609.0,Preprimary
+Rutsiro,West,District,2021/22,Female,3953.0,Preprimary
+Rutsiro,West,District,2022/23,Female,6649.0,Preprimary
+West,West,Province,2021/22,Male,37702.0,Preprimary
+West,West,Province,2022/23,Male,58651.0,Preprimary
+West,West,Province,2021/22,Female,38248.0,Preprimary
+West,West,Province,2022/23,Female,59196.0,Preprimary
+Bugesera,East,District,2021/22,Male,6525.0,Preprimary
+Bugesera,East,District,2022/23,Male,12070.0,Preprimary
+Bugesera,East,District,2021/22,Female,6632.0,Preprimary
+Bugesera,East,District,2022/23,Female,12337.0,Preprimary
+Gatsibo,East,District,2021/22,Male,8155.0,Preprimary
+Gatsibo,East,District,2022/23,Male,14327.0,Preprimary
+Gatsibo,East,District,2021/22,Female,8419.0,Preprimary
+Gatsibo,East,District,2022/23,Female,14043.0,Preprimary
+Kayonza,East,District,2021/22,Male,2933.0,Preprimary
+Kayonza,East,District,2022/23,Male,6037.0,Preprimary
+Kayonza,East,District,2021/22,Female,3116.0,Preprimary
+Kayonza,East,District,2022/23,Female,6069.0,Preprimary
+Kirehe,East,District,2021/22,Male,5242.0,Preprimary
+Kirehe,East,District,2022/23,Male,8680.0,Preprimary
+Kirehe,East,District,2021/22,Female,5370.0,Preprimary
+Kirehe,East,District,2022/23,Female,8357.0,Preprimary
+Ngoma,East,District,2021/22,Male,4755.0,Preprimary
+Ngoma,East,District,2022/23,Male,7807.0,Preprimary
+Ngoma,East,District,2021/22,Female,4874.0,Preprimary
+Ngoma,East,District,2022/23,Female,7894.0,Preprimary
+Nyagatare,East,District,2021/22,Male,8804.0,Preprimary
+Nyagatare,East,District,2022/23,Male,16127.0,Preprimary
+Nyagatare,East,District,2021/22,Female,8530.0,Preprimary
+Nyagatare,East,District,2022/23,Female,15790.0,Preprimary
+Rwamagana,East,District,2021/22,Male,4977.0,Preprimary
+Rwamagana,East,District,2022/23,Male,8018.0,Preprimary
+Rwamagana,East,District,2021/22,Female,4785.0,Preprimary
+Rwamagana,East,District,2022/23,Female,7949.0,Preprimary
+East,East,Province,2021/22,Male,41391.0,Preprimary
+East,East,Province,2022/23,Male,73066.0,Preprimary
+East,East,Province,2021/22,Female,41726.0,Preprimary
+East,East,Province,2022/23,Female,72439.0,Preprimary
+Burera,North,District,2021/22,Male,4886.0,Preprimary
+Burera,North,District,2022/23,Male,8215.0,Preprimary
+Burera,North,District,2021/22,Female,5139.0,Preprimary
+Burera,North,District,2022/23,Female,8168.0,Preprimary
+Gakenke,North,District,2021/22,Male,5104.0,Preprimary
+Gakenke,North,District,2022/23,Male,7421.0,Preprimary
+Gakenke,North,District,2021/22,Female,4983.0,Preprimary
+Gakenke,North,District,2022/23,Female,7153.0,Preprimary
+Gicumbi,North,District,2021/22,Male,7154.0,Preprimary
+Gicumbi,North,District,2022/23,Male,10310.0,Preprimary
+Gicumbi,North,District,2021/22,Female,7104.0,Preprimary
+Gicumbi,North,District,2022/23,Female,10031.0,Preprimary
+Musanze,North,District,2021/22,Male,7602.0,Preprimary
+Musanze,North,District,2022/23,Male,13232.0,Preprimary
+Musanze,North,District,2021/22,Female,7229.0,Preprimary
+Musanze,North,District,2022/23,Female,12859.0,Preprimary
+Rulindo,North,District,2021/22,Male,6282.0,Preprimary
+Rulindo,North,District,2022/23,Male,8037.0,Preprimary
+Rulindo,North,District,2021/22,Female,6166.0,Preprimary
+Rulindo,North,District,2022/23,Female,7824.0,Preprimary
+North,North,Province,2021/22,Male,31028.0,Preprimary
+North,North,Province,2022/23,Male,47215.0,Preprimary
+North,North,Province,2021/22,Female,30621.0,Preprimary
+North,North,Province,2022/23,Female,46035.0,Preprimary
+Gasabo,Kigali City,District,2021/22,Male,11666.0,Preprimary
+Gasabo,Kigali City,District,2022/23,Male,14918.0,Preprimary
+Gasabo,Kigali City,District,2021/22,Female,10853.0,Preprimary
+Gasabo,Kigali City,District,2022/23,Female,14136.0,Preprimary
+Kicukiro,Kigali City,District,2021/22,Male,6208.0,Preprimary
+Kicukiro,Kigali City,District,2022/23,Male,7344.0,Preprimary
+Kicukiro,Kigali City,District,2021/22,Female,6014.0,Preprimary
+Kicukiro,Kigali City,District,2022/23,Female,7086.0,Preprimary
+Nyarugenge,Kigali City,District,2021/22,Male,4248.0,Preprimary
+Nyarugenge,Kigali City,District,2022/23,Male,5837.0,Preprimary
+Nyarugenge,Kigali City,District,2021/22,Female,4259.0,Preprimary
+Nyarugenge,Kigali City,District,2022/23,Female,5648.0,Preprimary
+Kigali City,Kigali City,Province,2021/22,Male,22122.0,Preprimary
+Kigali City,Kigali City,Province,2022/23,Male,28099.0,Preprimary
+Kigali City,Kigali City,Province,2021/22,Female,21126.0,Preprimary
+Kigali City,Kigali City,Province,2022/23,Female,26870.0,Preprimary
+Rwanda,Rwanda,National,2021/22,Male,177523.0,Preprimary
+Rwanda,Rwanda,National,2022/23,Male,271844.0,Preprimary
+Rwanda,Rwanda,National,2021/22,Female,177802.0,Preprimary
+Rwanda,Rwanda,National,2022/23,Female,269154.0,Preprimary
+Gisagara,South,District,2021/22,Male,43436.0,Primary
+Gisagara,South,District,2022/23,Male,43506.0,Primary
+Gisagara,South,District,2021/22,Female,42959.0,Primary
+Gisagara,South,District,2022/23,Female,42207.0,Primary
+Huye,South,District,2021/22,Male,38069.0,Primary
+Huye,South,District,2022/23,Male,37808.0,Primary
+Huye,South,District,2021/22,Female,37080.0,Primary
+Huye,South,District,2022/23,Female,36591.0,Primary
+Kamonyi,South,District,2021/22,Male,49069.0,Primary
+Kamonyi,South,District,2022/23,Male,49237.0,Primary
+Kamonyi,South,District,2021/22,Female,47260.0,Primary
+Kamonyi,South,District,2022/23,Female,46366.0,Primary
+Muhanga,South,District,2021/22,Male,35768.0,Primary
+Muhanga,South,District,2022/23,Male,35121.0,Primary
+Muhanga,South,District,2021/22,Female,34219.0,Primary
+Muhanga,South,District,2022/23,Female,33170.0,Primary
+Nyamagabe,South,District,2021/22,Male,43288.0,Primary
+Nyamagabe,South,District,2022/23,Male,44699.0,Primary
+Nyamagabe,South,District,2021/22,Female,41682.0,Primary
+Nyamagabe,South,District,2022/23,Female,42706.0,Primary
+Nyanza,South,District,2021/22,Male,39478.0,Primary
+Nyanza,South,District,2022/23,Male,39344.0,Primary
+Nyanza,South,District,2021/22,Female,39722.0,Primary
+Nyanza,South,District,2022/23,Female,38458.0,Primary
+Nyaruguru,South,District,2021/22,Male,39124.0,Primary
+Nyaruguru,South,District,2022/23,Male,40184.0,Primary
+Nyaruguru,South,District,2021/22,Female,38605.0,Primary
+Nyaruguru,South,District,2022/23,Female,38937.0,Primary
+Ruhango,South,District,2021/22,Male,40702.0,Primary
+Ruhango,South,District,2022/23,Male,41463.0,Primary
+Ruhango,South,District,2021/22,Female,38153.0,Primary
+Ruhango,South,District,2022/23,Female,38647.0,Primary
+South,South,Province,2021/22,Male,328934.0,Primary
+South,South,Province,2022/23,Male,331362.0,Primary
+South,South,Province,2021/22,Female,319680.0,Primary
+South,South,Province,2022/23,Female,317082.0,Primary
+Karongi,West,District,2021/22,Male,43811.0,Primary
+Karongi,West,District,2022/23,Male,44255.0,Primary
+Karongi,West,District,2021/22,Female,41149.0,Primary
+Karongi,West,District,2022/23,Female,41034.0,Primary
+Ngororero,West,District,2021/22,Male,42818.0,Primary
+Ngororero,West,District,2022/23,Male,46959.0,Primary
+Ngororero,West,District,2021/22,Female,42587.0,Primary
+Ngororero,West,District,2022/23,Female,45488.0,Primary
+Nyabihu,West,District,2021/22,Male,35981.0,Primary
+Nyabihu,West,District,2022/23,Male,38145.0,Primary
+Nyabihu,West,District,2021/22,Female,36684.0,Primary
+Nyabihu,West,District,2022/23,Female,38406.0,Primary
+Nyamasheke,West,District,2021/22,Male,52565.0,Primary
+Nyamasheke,West,District,2022/23,Male,56893.0,Primary
+Nyamasheke,West,District,2021/22,Female,51176.0,Primary
+Nyamasheke,West,District,2022/23,Female,54199.0,Primary
+Rubavu,West,District,2021/22,Male,54065.0,Primary
+Rubavu,West,District,2022/23,Male,55948.0,Primary
+Rubavu,West,District,2021/22,Female,54453.0,Primary
+Rubavu,West,District,2022/23,Female,55146.0,Primary
+Rusizi,West,District,2021/22,Male,54129.0,Primary
+Rusizi,West,District,2022/23,Male,59516.0,Primary
+Rusizi,West,District,2021/22,Female,52071.0,Primary
+Rusizi,West,District,2022/23,Female,56211.0,Primary
+Rutsiro,West,District,2021/22,Male,41982.0,Primary
+Rutsiro,West,District,2022/23,Male,43057.0,Primary
+Rutsiro,West,District,2021/22,Female,40986.0,Primary
+Rutsiro,West,District,2022/23,Female,41759.0,Primary
+West,West,Province,2021/22,Male,325351.0,Primary
+West,West,Province,2022/23,Male,344773.0,Primary
+West,West,Province,2021/22,Female,319106.0,Primary
+West,West,Province,2022/23,Female,332243.0,Primary
+Bugesera,East,District,2021/22,Male,60705.0,Primary
+Bugesera,East,District,2022/23,Male,64648.0,Primary
+Bugesera,East,District,2021/22,Female,59496.0,Primary
+Bugesera,East,District,2022/23,Female,62234.0,Primary
+Gatsibo,East,District,2021/22,Male,61185.0,Primary
+Gatsibo,East,District,2022/23,Male,65404.0,Primary
+Gatsibo,East,District,2021/22,Female,61937.0,Primary
+Gatsibo,East,District,2022/23,Female,64703.0,Primary
+Kayonza,East,District,2021/22,Male,52823.0,Primary
+Kayonza,East,District,2022/23,Male,55161.0,Primary
+Kayonza,East,District,2021/22,Female,52020.0,Primary
+Kayonza,East,District,2022/23,Female,53302.0,Primary
+Kirehe,East,District,2021/22,Male,55390.0,Primary
+Kirehe,East,District,2022/23,Male,55621.0,Primary
+Kirehe,East,District,2021/22,Female,53519.0,Primary
+Kirehe,East,District,2022/23,Female,53185.0,Primary
+Ngoma,East,District,2021/22,Male,44390.0,Primary
+Ngoma,East,District,2022/23,Male,45888.0,Primary
+Ngoma,East,District,2021/22,Female,43403.0,Primary
+Ngoma,East,District,2022/23,Female,44094.0,Primary
+Nyagatare,East,District,2021/22,Male,66808.0,Primary
+Nyagatare,East,District,2022/23,Male,73274.0,Primary
+Nyagatare,East,District,2021/22,Female,66363.0,Primary
+Nyagatare,East,District,2022/23,Female,71679.0,Primary
+Rwamagana,East,District,2021/22,Male,48886.0,Primary
+Rwamagana,East,District,2022/23,Male,52312.0,Primary
+Rwamagana,East,District,2021/22,Female,48119.0,Primary
+Rwamagana,East,District,2022/23,Female,50094.0,Primary
+East,East,Province,2021/22,Male,390187.0,Primary
+East,East,Province,2022/23,Male,412308.0,Primary
+East,East,Province,2021/22,Female,384857.0,Primary
+East,East,Province,2022/23,Female,399291.0,Primary
+Burera,North,District,2021/22,Male,44073.0,Primary
+Burera,North,District,2022/23,Male,46773.0,Primary
+Burera,North,District,2021/22,Female,45118.0,Primary
+Burera,North,District,2022/23,Female,46974.0,Primary
+Gakenke,North,District,2021/22,Male,38101.0,Primary
+Gakenke,North,District,2022/23,Male,38147.0,Primary
+Gakenke,North,District,2021/22,Female,36845.0,Primary
+Gakenke,North,District,2022/23,Female,36083.0,Primary
+Gicumbi,North,District,2021/22,Male,46727.0,Primary
+Gicumbi,North,District,2022/23,Male,49817.0,Primary
+Gicumbi,North,District,2021/22,Female,45889.0,Primary
+Gicumbi,North,District,2022/23,Female,47565.0,Primary
+Musanze,North,District,2021/22,Male,46347.0,Primary
+Musanze,North,District,2022/23,Male,48992.0,Primary
+Musanze,North,District,2021/22,Female,46071.0,Primary
+Musanze,North,District,2022/23,Female,47447.0,Primary
+Rulindo,North,District,2021/22,Male,35071.0,Primary
+Rulindo,North,District,2022/23,Male,36325.0,Primary
+Rulindo,North,District,2021/22,Female,34395.0,Primary
+Rulindo,North,District,2022/23,Female,35178.0,Primary
+North,North,Province,2021/22,Male,210319.0,Primary
+North,North,Province,2022/23,Male,220054.0,Primary
+North,North,Province,2021/22,Female,208318.0,Primary
+North,North,Province,2022/23,Female,213247.0,Primary
+Gasabo,Kigali City,District,2021/22,Male,68091.0,Primary
+Gasabo,Kigali City,District,2022/23,Male,72150.0,Primary
+Gasabo,Kigali City,District,2021/22,Female,66646.0,Primary
+Gasabo,Kigali City,District,2022/23,Female,68854.0,Primary
+Kicukiro,Kigali City,District,2021/22,Male,32404.0,Primary
+Kicukiro,Kigali City,District,2022/23,Male,33870.0,Primary
+Kicukiro,Kigali City,District,2021/22,Female,31341.0,Primary
+Kicukiro,Kigali City,District,2022/23,Female,32215.0,Primary
+Nyarugenge,Kigali City,District,2021/22,Male,29046.0,Primary
+Nyarugenge,Kigali City,District,2022/23,Male,30895.0,Primary
+Nyarugenge,Kigali City,District,2021/22,Female,28271.0,Primary
+Nyarugenge,Kigali City,District,2022/23,Female,29999.0,Primary
+Kigali City,Kigali City,Province,2021/22,Male,129541.0,Primary
+Kigali City,Kigali City,Province,2022/23,Male,136915.0,Primary
+Kigali City,Kigali City,Province,2021/22,Female,126258.0,Primary
+Kigali City,Kigali City,Province,2022/23,Female,131068.0,Primary
+Rwanda,Rwanda,National,2021/22,Male,1384332.0,Primary
+Rwanda,Rwanda,National,2022/23,Male,1445412.0,Primary
+Rwanda,Rwanda,National,2021/22,Female,1358219.0,Primary
+Rwanda,Rwanda,National,2022/23,Female,1392931.0,Primary
+Gisagara,South,District,2021/22,Male,9661.0,Secondary
+Gisagara,South,District,2022/23,Male,9641.0,Secondary
+Gisagara,South,District,2021/22,Female,12097.0,Secondary
+Gisagara,South,District,2022/23,Female,12436.0,Secondary
+Huye,South,District,2021/22,Male,10398.0,Secondary
+Huye,South,District,2022/23,Male,10494.0,Secondary
+Huye,South,District,2021/22,Female,12790.0,Secondary
+Huye,South,District,2022/23,Female,12686.0,Secondary
+Kamonyi,South,District,2021/22,Male,12232.0,Secondary
+Kamonyi,South,District,2022/23,Male,11214.0,Secondary
+Kamonyi,South,District,2021/22,Female,16569.0,Secondary
+Kamonyi,South,District,2022/23,Female,15293.0,Secondary
+Muhanga,South,District,2021/22,Male,11677.0,Secondary
+Muhanga,South,District,2022/23,Male,10828.0,Secondary
+Muhanga,South,District,2021/22,Female,15644.0,Secondary
+Muhanga,South,District,2022/23,Female,14677.0,Secondary
+Nyamagabe,South,District,2021/22,Male,11290.0,Secondary
+Nyamagabe,South,District,2022/23,Male,11738.0,Secondary
+Nyamagabe,South,District,2021/22,Female,13916.0,Secondary
+Nyamagabe,South,District,2022/23,Female,14633.0,Secondary
+Nyanza,South,District,2021/22,Male,12345.0,Secondary
+Nyanza,South,District,2022/23,Male,11530.0,Secondary
+Nyanza,South,District,2021/22,Female,14927.0,Secondary
+Nyanza,South,District,2022/23,Female,13915.0,Secondary
+Nyaruguru,South,District,2021/22,Male,9383.0,Secondary
+Nyaruguru,South,District,2022/23,Male,9147.0,Secondary
+Nyaruguru,South,District,2021/22,Female,12605.0,Secondary
+Nyaruguru,South,District,2022/23,Female,12489.0,Secondary
+Ruhango,South,District,2021/22,Male,10963.0,Secondary
+Ruhango,South,District,2022/23,Male,11730.0,Secondary
+Ruhango,South,District,2021/22,Female,13972.0,Secondary
+Ruhango,South,District,2022/23,Female,14989.0,Secondary
+South,South,Province,2021/22,Male,87949.0,Secondary
+South,South,Province,2022/23,Male,86322.0,Secondary
+South,South,Province,2021/22,Female,112520.0,Secondary
+South,South,Province,2022/23,Female,111118.0,Secondary
+Karongi,West,District,2021/22,Male,11302.0,Secondary
+Karongi,West,District,2022/23,Male,11010.0,Secondary
+Karongi,West,District,2021/22,Female,14536.0,Secondary
+Karongi,West,District,2022/23,Female,14577.0,Secondary
+Ngororero,West,District,2021/22,Male,7627.0,Secondary
+Ngororero,West,District,2022/23,Male,8121.0,Secondary
+Ngororero,West,District,2021/22,Female,11495.0,Secondary
+Ngororero,West,District,2022/23,Female,12667.0,Secondary
+Nyabihu,West,District,2021/22,Male,8521.0,Secondary
+Nyabihu,West,District,2022/23,Male,8081.0,Secondary
+Nyabihu,West,District,2021/22,Female,11310.0,Secondary
+Nyabihu,West,District,2022/23,Female,10989.0,Secondary
+Nyamasheke,West,District,2021/22,Male,12588.0,Secondary
+Nyamasheke,West,District,2022/23,Male,12490.0,Secondary
+Nyamasheke,West,District,2021/22,Female,17027.0,Secondary
+Nyamasheke,West,District,2022/23,Female,17405.0,Secondary
+Rubavu,West,District,2021/22,Male,12781.0,Secondary
+Rubavu,West,District,2022/23,Male,12094.0,Secondary
+Rubavu,West,District,2021/22,Female,12916.0,Secondary
+Rubavu,West,District,2022/23,Female,12453.0,Secondary
+Rusizi,West,District,2021/22,Male,12062.0,Secondary
+Rusizi,West,District,2022/23,Male,12338.0,Secondary
+Rusizi,West,District,2021/22,Female,14539.0,Secondary
+Rusizi,West,District,2022/23,Female,14825.0,Secondary
+Rutsiro,West,District,2021/22,Male,9302.0,Secondary
+Rutsiro,West,District,2022/23,Male,9043.0,Secondary
+Rutsiro,West,District,2021/22,Female,11387.0,Secondary
+Rutsiro,West,District,2022/23,Female,11381.0,Secondary
+West,West,Province,2021/22,Male,74183.0,Secondary
+West,West,Province,2022/23,Male,73177.0,Secondary
+West,West,Province,2021/22,Female,93210.0,Secondary
+West,West,Province,2022/23,Female,94297.0,Secondary
+Bugesera,East,District,2021/22,Male,10866.0,Secondary
+Bugesera,East,District,2022/23,Male,10961.0,Secondary
+Bugesera,East,District,2021/22,Female,13771.0,Secondary
+Bugesera,East,District,2022/23,Female,14100.0,Secondary
+Gatsibo,East,District,2021/22,Male,14645.0,Secondary
+Gatsibo,East,District,2022/23,Male,14890.0,Secondary
+Gatsibo,East,District,2021/22,Female,16636.0,Secondary
+Gatsibo,East,District,2022/23,Female,17566.0,Secondary
+Kayonza,East,District,2021/22,Male,11108.0,Secondary
+Kayonza,East,District,2022/23,Male,10839.0,Secondary
+Kayonza,East,District,2021/22,Female,13431.0,Secondary
+Kayonza,East,District,2022/23,Female,13490.0,Secondary
+Kirehe,East,District,2021/22,Male,12578.0,Secondary
+Kirehe,East,District,2022/23,Male,11985.0,Secondary
+Kirehe,East,District,2021/22,Female,13354.0,Secondary
+Kirehe,East,District,2022/23,Female,13117.0,Secondary
+Ngoma,East,District,2021/22,Male,8562.0,Secondary
+Ngoma,East,District,2022/23,Male,8490.0,Secondary
+Ngoma,East,District,2021/22,Female,10140.0,Secondary
+Ngoma,East,District,2022/23,Female,10273.0,Secondary
+Nyagatare,East,District,2021/22,Male,14422.0,Secondary
+Nyagatare,East,District,2022/23,Male,15336.0,Secondary
+Nyagatare,East,District,2021/22,Female,15887.0,Secondary
+Nyagatare,East,District,2022/23,Female,17275.0,Secondary
+Rwamagana,East,District,2021/22,Male,11259.0,Secondary
+Rwamagana,East,District,2022/23,Male,11066.0,Secondary
+Rwamagana,East,District,2021/22,Female,15644.0,Secondary
+Rwamagana,East,District,2022/23,Female,15323.0,Secondary
+East,East,Province,2021/22,Male,83440.0,Secondary
+East,East,Province,2022/23,Male,83567.0,Secondary
+East,East,Province,2021/22,Female,98863.0,Secondary
+East,East,Province,2022/23,Female,101144.0,Secondary
+Burera,North,District,2021/22,Male,10210.0,Secondary
+Burera,North,District,2022/23,Male,11094.0,Secondary
+Burera,North,District,2021/22,Female,12260.0,Secondary
+Burera,North,District,2022/23,Female,13633.0,Secondary
+Gakenke,North,District,2021/22,Male,8680.0,Secondary
+Gakenke,North,District,2022/23,Male,8933.0,Secondary
+Gakenke,North,District,2021/22,Female,11394.0,Secondary
+Gakenke,North,District,2022/23,Female,11839.0,Secondary
+Gicumbi,North,District,2021/22,Male,11443.0,Secondary
+Gicumbi,North,District,2022/23,Male,11544.0,Secondary
+Gicumbi,North,District,2021/22,Female,16308.0,Secondary
+Gicumbi,North,District,2022/23,Female,16659.0,Secondary
+Musanze,North,District,2021/22,Male,10490.0,Secondary
+Musanze,North,District,2022/23,Male,9742.0,Secondary
+Musanze,North,District,2021/22,Female,14540.0,Secondary
+Musanze,North,District,2022/23,Female,13890.0,Secondary
+Rulindo,North,District,2021/22,Male,8560.0,Secondary
+Rulindo,North,District,2022/23,Male,8467.0,Secondary
+Rulindo,North,District,2021/22,Female,13008.0,Secondary
+Rulindo,North,District,2022/23,Female,13016.0,Secondary
+North,North,Province,2021/22,Male,49383.0,Secondary
+North,North,Province,2022/23,Male,49780.0,Secondary
+North,North,Province,2021/22,Female,67510.0,Secondary
+North,North,Province,2022/23,Female,69037.0,Secondary
+Gasabo,Kigali City,District,2021/22,Male,12802.0,Secondary
+Gasabo,Kigali City,District,2022/23,Male,12844.0,Secondary
+Gasabo,Kigali City,District,2021/22,Female,15283.0,Secondary
+Gasabo,Kigali City,District,2022/23,Female,15304.0,Secondary
+Kicukiro,Kigali City,District,2021/22,Male,8898.0,Secondary
+Kicukiro,Kigali City,District,2022/23,Male,8131.0,Secondary
+Kicukiro,Kigali City,District,2021/22,Female,9291.0,Secondary
+Kicukiro,Kigali City,District,2022/23,Female,8680.0,Secondary
+Nyarugenge,Kigali City,District,2021/22,Male,8386.0,Secondary
+Nyarugenge,Kigali City,District,2022/23,Male,8159.0,Secondary
+Nyarugenge,Kigali City,District,2021/22,Female,8580.0,Secondary
+Nyarugenge,Kigali City,District,2022/23,Female,8438.0,Secondary
+Kigali City,Kigali City,Province,2021/22,Male,30086.0,Secondary
+Kigali City,Kigali City,Province,2022/23,Male,29134.0,Secondary
+Kigali City,Kigali City,Province,2021/22,Female,33154.0,Secondary
+Kigali City,Kigali City,Province,2022/23,Female,32422.0,Secondary
+Rwanda,Rwanda,National,2021/22,Male,325041.0,Secondary
+Rwanda,Rwanda,National,2022/23,Male,321980.0,Secondary
+Rwanda,Rwanda,National,2021/22,Female,405257.0,Secondary
+Rwanda,Rwanda,National,2022/23,Female,408018.0,Secondary
+Gisagara,South,District,2021/22,Male,913.0,TVET
+Gisagara,South,District,2022/23,Male,1270.0,TVET
+Gisagara,South,District,2021/22,Female,531.0,TVET
+Gisagara,South,District,2022/23,Female,720.0,TVET
+Huye,South,District,2021/22,Male,1108.0,TVET
+Huye,South,District,2022/23,Male,1412.0,TVET
+Huye,South,District,2021/22,Female,1199.0,TVET
+Huye,South,District,2022/23,Female,1353.0,TVET
+Kamonyi,South,District,2021/22,Male,942.0,TVET
+Kamonyi,South,District,2022/23,Male,1184.0,TVET
+Kamonyi,South,District,2021/22,Female,978.0,TVET
+Kamonyi,South,District,2022/23,Female,1045.0,TVET
+Muhanga,South,District,2021/22,Male,3945.0,TVET
+Muhanga,South,District,2022/23,Male,3644.0,TVET
+Muhanga,South,District,2021/22,Female,2162.0,TVET
+Muhanga,South,District,2022/23,Female,2466.0,TVET
+Nyamagabe,South,District,2021/22,Male,1030.0,TVET
+Nyamagabe,South,District,2022/23,Male,1596.0,TVET
+Nyamagabe,South,District,2021/22,Female,777.0,TVET
+Nyamagabe,South,District,2022/23,Female,1123.0,TVET
+Nyanza,South,District,2021/22,Male,3481.0,TVET
+Nyanza,South,District,2022/23,Male,4274.0,TVET
+Nyanza,South,District,2021/22,Female,1608.0,TVET
+Nyanza,South,District,2022/23,Female,2245.0,TVET
+Nyaruguru,South,District,2021/22,Male,937.0,TVET
+Nyaruguru,South,District,2022/23,Male,1263.0,TVET
+Nyaruguru,South,District,2021/22,Female,545.0,TVET
+Nyaruguru,South,District,2022/23,Female,822.0,TVET
+Ruhango,South,District,2021/22,Male,3793.0,TVET
+Ruhango,South,District,2022/23,Male,5244.0,TVET
+Ruhango,South,District,2021/22,Female,2272.0,TVET
+Ruhango,South,District,2022/23,Female,3417.0,TVET
+South,South,Province,2021/22,Male,16149.0,TVET
+South,South,Province,2022/23,Male,19887.0,TVET
+South,South,Province,2021/22,Female,10072.0,TVET
+South,South,Province,2022/23,Female,13191.0,TVET
+Karongi,West,District,2021/22,Male,1073.0,TVET
+Karongi,West,District,2022/23,Male,1298.0,TVET
+Karongi,West,District,2021/22,Female,1246.0,TVET
+Karongi,West,District,2022/23,Female,1546.0,TVET
+Ngororero,West,District,2021/22,Male,1249.0,TVET
+Ngororero,West,District,2022/23,Male,1468.0,TVET
+Ngororero,West,District,2021/22,Female,702.0,TVET
+Ngororero,West,District,2022/23,Female,936.0,TVET
+Nyabihu,West,District,2021/22,Male,1094.0,TVET
+Nyabihu,West,District,2022/23,Male,1424.0,TVET
+Nyabihu,West,District,2021/22,Female,902.0,TVET
+Nyabihu,West,District,2022/23,Female,1428.0,TVET
+Nyamasheke,West,District,2021/22,Male,901.0,TVET
+Nyamasheke,West,District,2022/23,Male,1223.0,TVET
+Nyamasheke,West,District,2021/22,Female,651.0,TVET
+Nyamasheke,West,District,2022/23,Female,962.0,TVET
+Rubavu,West,District,2021/22,Male,1971.0,TVET
+Rubavu,West,District,2022/23,Male,2123.0,TVET
+Rubavu,West,District,2021/22,Female,1225.0,TVET
+Rubavu,West,District,2022/23,Female,1389.0,TVET
+Rusizi,West,District,2021/22,Male,2052.0,TVET
+Rusizi,West,District,2022/23,Male,2520.0,TVET
+Rusizi,West,District,2021/22,Female,887.0,TVET
+Rusizi,West,District,2022/23,Female,1321.0,TVET
+Rutsiro,West,District,2021/22,Male,641.0,TVET
+Rutsiro,West,District,2022/23,Male,849.0,TVET
+Rutsiro,West,District,2021/22,Female,529.0,TVET
+Rutsiro,West,District,2022/23,Female,627.0,TVET
+West,West,Province,2021/22,Male,8981.0,TVET
+West,West,Province,2022/23,Male,10905.0,TVET
+West,West,Province,2021/22,Female,6142.0,TVET
+West,West,Province,2022/23,Female,8209.0,TVET
+Bugesera,East,District,2021/22,Male,1357.0,TVET
+Bugesera,East,District,2022/23,Male,1543.0,TVET
+Bugesera,East,District,2021/22,Female,897.0,TVET
+Bugesera,East,District,2022/23,Female,1205.0,TVET
+Gatsibo,East,District,2021/22,Male,1367.0,TVET
+Gatsibo,East,District,2022/23,Male,1886.0,TVET
+Gatsibo,East,District,2021/22,Female,1425.0,TVET
+Gatsibo,East,District,2022/23,Female,1966.0,TVET
+Kayonza,East,District,2021/22,Male,945.0,TVET
+Kayonza,East,District,2022/23,Male,1276.0,TVET
+Kayonza,East,District,2021/22,Female,1293.0,TVET
+Kayonza,East,District,2022/23,Female,1508.0,TVET
+Kirehe,East,District,2021/22,Male,940.0,TVET
+Kirehe,East,District,2022/23,Male,992.0,TVET
+Kirehe,East,District,2021/22,Female,559.0,TVET
+Kirehe,East,District,2022/23,Female,581.0,TVET
+Ngoma,East,District,2021/22,Male,1232.0,TVET
+Ngoma,East,District,2022/23,Male,1651.0,TVET
+Ngoma,East,District,2021/22,Female,883.0,TVET
+Ngoma,East,District,2022/23,Female,1352.0,TVET
+Nyagatare,East,District,2021/22,Male,834.0,TVET
+Nyagatare,East,District,2022/23,Male,1045.0,TVET
+Nyagatare,East,District,2021/22,Female,856.0,TVET
+Nyagatare,East,District,2022/23,Female,997.0,TVET
+Rwamagana,East,District,2021/22,Male,1249.0,TVET
+Rwamagana,East,District,2022/23,Male,1776.0,TVET
+Rwamagana,East,District,2021/22,Female,1203.0,TVET
+Rwamagana,East,District,2022/23,Female,1550.0,TVET
+East,East,Province,2021/22,Male,7924.0,TVET
+East,East,Province,2022/23,Male,10169.0,TVET
+East,East,Province,2021/22,Female,7116.0,TVET
+East,East,Province,2022/23,Female,9159.0,TVET
+Burera,North,District,2021/22,Male,1593.0,TVET
+Burera,North,District,2022/23,Male,1757.0,TVET
+Burera,North,District,2021/22,Female,835.0,TVET
+Burera,North,District,2022/23,Female,1018.0,TVET
+Gakenke,North,District,2021/22,Male,733.0,TVET
+Gakenke,North,District,2022/23,Male,1194.0,TVET
+Gakenke,North,District,2021/22,Female,666.0,TVET
+Gakenke,North,District,2022/23,Female,1193.0,TVET
+Gicumbi,North,District,2021/22,Male,1669.0,TVET
+Gicumbi,North,District,2022/23,Male,2104.0,TVET
+Gicumbi,North,District,2021/22,Female,1113.0,TVET
+Gicumbi,North,District,2022/23,Female,1290.0,TVET
+Musanze,North,District,2021/22,Male,3204.0,TVET
+Musanze,North,District,2022/23,Male,3010.0,TVET
+Musanze,North,District,2021/22,Female,2270.0,TVET
+Musanze,North,District,2022/23,Female,2812.0,TVET
+Rulindo,North,District,2021/22,Male,1764.0,TVET
+Rulindo,North,District,2022/23,Male,2240.0,TVET
+Rulindo,North,District,2021/22,Female,1363.0,TVET
+Rulindo,North,District,2022/23,Female,1848.0,TVET
+North,North,Province,2021/22,Male,8963.0,TVET
+North,North,Province,2022/23,Male,10305.0,TVET
+North,North,Province,2021/22,Female,6247.0,TVET
+North,North,Province,2022/23,Female,8161.0,TVET
+Gasabo,Kigali City,District,2021/22,Male,1246.0,TVET
+Gasabo,Kigali City,District,2022/23,Male,2090.0,TVET
+Gasabo,Kigali City,District,2021/22,Female,1285.0,TVET
+Gasabo,Kigali City,District,2022/23,Female,1899.0,TVET
+Kicukiro,Kigali City,District,2021/22,Male,3762.0,TVET
+Kicukiro,Kigali City,District,2022/23,Male,3321.0,TVET
+Kicukiro,Kigali City,District,2021/22,Female,2313.0,TVET
+Kicukiro,Kigali City,District,2022/23,Female,2227.0,TVET
+Nyarugenge,Kigali City,District,2021/22,Male,1599.0,TVET
+Nyarugenge,Kigali City,District,2022/23,Male,1934.0,TVET
+Nyarugenge,Kigali City,District,2021/22,Female,1660.0,TVET
+Nyarugenge,Kigali City,District,2022/23,Female,2098.0,TVET
+Kigali City,Kigali City,Province,2021/22,Male,6607.0,TVET
+Kigali City,Kigali City,Province,2022/23,Male,7345.0,TVET
+Kigali City,Kigali City,Province,2021/22,Female,5258.0,TVET
+Kigali City,Kigali City,Province,2022/23,Female,6224.0,TVET
+Rwanda,Rwanda,National,2021/22,Male,48624.0,TVET
+Rwanda,Rwanda,National,2022/23,Male,58611.0,TVET
+Rwanda,Rwanda,National,2021/22,Female,34835.0,TVET
+Rwanda,Rwanda,National,2022/23,Female,44944.0,TVET
+Gisagara,South,District,2021/22,Male,245.0,Higher Education
+Gisagara,South,District,2022/23,Male,164.0,Higher Education
+Gisagara,South,District,2021/22,Female,336.0,Higher Education
+Gisagara,South,District,2022/23,Female,241.0,Higher Education
+Huye,South,District,2021/22,Male,6241.0,Higher Education
+Huye,South,District,2022/23,Male,6645.0,Higher Education
+Huye,South,District,2021/22,Female,4160.0,Higher Education
+Huye,South,District,2022/23,Female,4864.0,Higher Education
+Kamonyi,South,District,2021/22,Male,0.0,Higher Education
+Kamonyi,South,District,2021/22,Female,0.0,Higher Education
+Muhanga,South,District,2021/22,Male,699.0,Higher Education
+Muhanga,South,District,2022/23,Male,1615.0,Higher Education
+Muhanga,South,District,2021/22,Female,700.0,Higher Education
+Muhanga,South,District,2022/23,Female,1676.0,Higher Education
+Nyamagabe,South,District,2021/22,Male,288.0,Higher Education
+Nyamagabe,South,District,2022/23,Male,371.0,Higher Education
+Nyamagabe,South,District,2021/22,Female,144.0,Higher Education
+Nyamagabe,South,District,2022/23,Female,255.0,Higher Education
+Nyanza,South,District,2021/22,Male,832.0,Higher Education
+Nyanza,South,District,2022/23,Male,965.0,Higher Education
+Nyanza,South,District,2021/22,Female,965.0,Higher Education
+Nyanza,South,District,2022/23,Female,877.0,Higher Education
+Nyaruguru,South,District,2021/22,Male,0.0,Higher Education
+Nyaruguru,South,District,2021/22,Female,0.0,Higher Education
+Ruhango,South,District,2021/22,Male,353.0,Higher Education
+Ruhango,South,District,2022/23,Male,517.0,Higher Education
+Ruhango,South,District,2021/22,Female,398.0,Higher Education
+Ruhango,South,District,2022/23,Female,613.0,Higher Education
+South,South,Province,2021/22,Male,8658.0,Higher Education
+South,South,Province,2022/23,Male,10277.0,Higher Education
+South,South,Province,2021/22,Female,6703.0,Higher Education
+South,South,Province,2022/23,Female,8526.0,Higher Education
+Karongi,West,District,2021/22,Male,805.0,Higher Education
+Karongi,West,District,2022/23,Male,873.0,Higher Education
+Karongi,West,District,2021/22,Female,512.0,Higher Education
+Karongi,West,District,2022/23,Female,710.0,Higher Education
+Ngororero,West,District,2021/22,Male,0.0,Higher Education
+Ngororero,West,District,2021/22,Female,0.0,Higher Education
+Nyabihu,West,District,2021/22,Male,0.0,Higher Education
+Nyabihu,West,District,2021/22,Female,0.0,Higher Education
+Nyamasheke,West,District,2021/22,Male,2063.0,Higher Education
+Nyamasheke,West,District,2022/23,Male,3787.0,Higher Education
+Nyamasheke,West,District,2021/22,Female,1714.0,Higher Education
+Nyamasheke,West,District,2022/23,Female,3324.0,Higher Education
+Rubavu,West,District,2021/22,Male,195.0,Higher Education
+Rubavu,West,District,2022/23,Male,1049.0,Higher Education
+Rubavu,West,District,2021/22,Female,212.0,Higher Education
+Rubavu,West,District,2022/23,Female,1198.0,Higher Education
+Rusizi,West,District,2021/22,Male,223.0,Higher Education
+Rusizi,West,District,2022/23,Male,118.0,Higher Education
+Rusizi,West,District,2021/22,Female,159.0,Higher Education
+Rusizi,West,District,2022/23,Female,88.0,Higher Education
+Rutsiro,West,District,2021/22,Male,0.0,Higher Education
+Rutsiro,West,District,2021/22,Female,0.0,Higher Education
+West,West,Province,2021/22,Male,3286.0,Higher Education
+West,West,Province,2022/23,Male,5827.0,Higher Education
+West,West,Province,2021/22,Female,2597.0,Higher Education
+West,West,Province,2022/23,Female,5320.0,Higher Education
+Bugesera,East,District,2021/22,Male,211.0,Higher Education
+Bugesera,East,District,2022/23,Male,1063.0,Higher Education
+Bugesera,East,District,2021/22,Female,95.0,Higher Education
+Bugesera,East,District,2022/23,Female,227.0,Higher Education
+Gatsibo,East,District,2021/22,Male,392.0,Higher Education
+Gatsibo,East,District,2022/23,Male,600.0,Higher Education
+Gatsibo,East,District,2021/22,Female,322.0,Higher Education
+Gatsibo,East,District,2022/23,Female,458.0,Higher Education
+Kayonza,East,District,2021/22,Male,2380.0,Higher Education
+Kayonza,East,District,2022/23,Male,2037.0,Higher Education
+Kayonza,East,District,2021/22,Female,1759.0,Higher Education
+Kayonza,East,District,2022/23,Female,1589.0,Higher Education
+Kirehe,East,District,2021/22,Male,0.0,Higher Education
+Kirehe,East,District,2022/23,Male,9.0,Higher Education
+Kirehe,East,District,2021/22,Female,0.0,Higher Education
+Kirehe,East,District,2022/23,Female,7.0,Higher Education
+Ngoma,East,District,2021/22,Male,922.0,Higher Education
+Ngoma,East,District,2022/23,Male,824.0,Higher Education
+Ngoma,East,District,2021/22,Female,348.0,Higher Education
+Ngoma,East,District,2022/23,Female,430.0,Higher Education
+Nyagatare,East,District,2021/22,Male,3828.0,Higher Education
+Nyagatare,East,District,2022/23,Male,2819.0,Higher Education
+Nyagatare,East,District,2021/22,Female,2674.0,Higher Education
+Nyagatare,East,District,2022/23,Female,1770.0,Higher Education
+Rwamagana,East,District,2021/22,Male,1606.0,Higher Education
+Rwamagana,East,District,2022/23,Male,1658.0,Higher Education
+Rwamagana,East,District,2021/22,Female,922.0,Higher Education
+Rwamagana,East,District,2022/23,Female,1014.0,Higher Education
+East,East,Province,2021/22,Male,9339.0,Higher Education
+East,East,Province,2022/23,Male,9010.0,Higher Education
+East,East,Province,2021/22,Female,6120.0,Higher Education
+East,East,Province,2022/23,Female,5495.0,Higher Education
+Burera,North,District,2021/22,Male,55.0,Higher Education
+Burera,North,District,2022/23,Male,83.0,Higher Education
+Burera,North,District,2021/22,Female,102.0,Higher Education
+Burera,North,District,2022/23,Female,132.0,Higher Education
+Gakenke,North,District,2021/22,Male,82.0,Higher Education
+Gakenke,North,District,2022/23,Male,84.0,Higher Education
+Gakenke,North,District,2021/22,Female,237.0,Higher Education
+Gakenke,North,District,2022/23,Female,236.0,Higher Education
+Gicumbi,North,District,2021/22,Male,3711.0,Higher Education
+Gicumbi,North,District,2022/23,Male,5655.0,Higher Education
+Gicumbi,North,District,2021/22,Female,3194.0,Higher Education
+Gicumbi,North,District,2022/23,Female,5113.0,Higher Education
+Musanze,North,District,2021/22,Male,5702.0,Higher Education
+Musanze,North,District,2022/23,Male,6754.0,Higher Education
+Musanze,North,District,2021/22,Female,4192.0,Higher Education
+Musanze,North,District,2022/23,Female,4855.0,Higher Education
+Rulindo,North,District,2021/22,Male,557.0,Higher Education
+Rulindo,North,District,2022/23,Male,589.0,Higher Education
+Rulindo,North,District,2021/22,Female,169.0,Higher Education
+Rulindo,North,District,2022/23,Female,189.0,Higher Education
+Gasabo,Kigali City,District,2021/22,Male,11328.0,Higher Education
+Gasabo,Kigali City,District,2022/23,Male,14040.0,Higher Education
+Gasabo,Kigali City,District,2021/22,Female,10985.0,Higher Education
+Gasabo,Kigali City,District,2022/23,Female,11520.0,Higher Education
+Kicukiro,Kigali City,District,2021/22,Male,6759.0,Higher Education
+Kicukiro,Kigali City,District,2022/23,Male,9880.0,Higher Education
+Kicukiro,Kigali City,District,2021/22,Female,5751.0,Higher Education
+Kicukiro,Kigali City,District,2022/23,Female,9055.0,Higher Education
+Nyarugenge,Kigali City,District,2021/22,Male,4294.0,Higher Education
+Nyarugenge,Kigali City,District,2022/23,Male,4657.0,Higher Education
+Nyarugenge,Kigali City,District,2021/22,Female,2042.0,Higher Education
+Nyarugenge,Kigali City,District,2022/23,Female,2419.0,Higher Education
+Kigali City,Kigali City,Province,2021/22,Male,22381.0,Higher Education
+Kigali City,Kigali City,Province,2022/23,Male,28577.0,Higher Education
+Kigali City,Kigali City,Province,2021/22,Female,18778.0,Higher Education
+Kigali City,Kigali City,Province,2022/23,Female,22994.0,Higher Education
+Gisagara,South,District,2021/22,Male,1469.0,Adult Literacy
+Gisagara,South,District,2022/23,Male,1992.0,Adult Literacy
+Gisagara,South,District,2021/22,Female,2602.0,Adult Literacy
+Gisagara,South,District,2022/23,Female,2708.0,Adult Literacy
+Huye,South,District,2021/22,Male,628.0,Adult Literacy
+Huye,South,District,2022/23,Male,707.0,Adult Literacy
+Huye,South,District,2021/22,Female,1907.0,Adult Literacy
+Huye,South,District,2022/23,Female,2298.0,Adult Literacy
+Kamonyi,South,District,2021/22,Male,1268.0,Adult Literacy
+Kamonyi,South,District,2022/23,Male,1104.0,Adult Literacy
+Kamonyi,South,District,2021/22,Female,2378.0,Adult Literacy
+Kamonyi,South,District,2022/23,Female,2006.0,Adult Literacy
+Muhanga,South,District,2021/22,Male,1314.0,Adult Literacy
+Muhanga,South,District,2022/23,Male,1442.0,Adult Literacy
+Muhanga,South,District,2021/22,Female,2381.0,Adult Literacy
+Muhanga,South,District,2022/23,Female,2279.0,Adult Literacy
+Nyamagabe,South,District,2021/22,Male,1872.0,Adult Literacy
+Nyamagabe,South,District,2022/23,Male,1938.0,Adult Literacy
+Nyamagabe,South,District,2021/22,Female,3196.0,Adult Literacy
+Nyamagabe,South,District,2022/23,Female,3818.0,Adult Literacy
+Nyanza,South,District,2021/22,Male,1397.0,Adult Literacy
+Nyanza,South,District,2022/23,Male,1416.0,Adult Literacy
+Nyanza,South,District,2021/22,Female,2595.0,Adult Literacy
+Nyanza,South,District,2022/23,Female,2483.0,Adult Literacy
+Nyaruguru,South,District,2021/22,Male,716.0,Adult Literacy
+Nyaruguru,South,District,2022/23,Male,712.0,Adult Literacy
+Nyaruguru,South,District,2021/22,Female,1888.0,Adult Literacy
+Nyaruguru,South,District,2022/23,Female,1862.0,Adult Literacy
+Ruhango,South,District,2021/22,Male,1705.0,Adult Literacy
+Ruhango,South,District,2022/23,Male,1230.0,Adult Literacy
+Ruhango,South,District,2021/22,Female,1989.0,Adult Literacy
+Ruhango,South,District,2022/23,Female,1534.0,Adult Literacy
+South,South,Province,2021/22,Male,10369.0,Adult Literacy
+South,South,Province,2022/23,Male,10541.0,Adult Literacy
+South,South,Province,2021/22,Female,18936.0,Adult Literacy
+South,South,Province,2022/23,Female,18988.0,Adult Literacy
+Karongi,West,District,2021/22,Male,1213.0,Adult Literacy
+Karongi,West,District,2022/23,Male,997.0,Adult Literacy
+Karongi,West,District,2021/22,Female,2770.0,Adult Literacy
+Karongi,West,District,2022/23,Female,2106.0,Adult Literacy
+Ngororero,West,District,2021/22,Male,1198.0,Adult Literacy
+Ngororero,West,District,2022/23,Male,1261.0,Adult Literacy
+Ngororero,West,District,2021/22,Female,2062.0,Adult Literacy
+Ngororero,West,District,2022/23,Female,2152.0,Adult Literacy
+Nyabihu,West,District,2021/22,Male,1176.0,Adult Literacy
+Nyabihu,West,District,2022/23,Male,1224.0,Adult Literacy
+Nyabihu,West,District,2021/22,Female,4226.0,Adult Literacy
+Nyabihu,West,District,2022/23,Female,3698.0,Adult Literacy
+Nyamasheke,West,District,2021/22,Male,1770.0,Adult Literacy
+Nyamasheke,West,District,2022/23,Male,1276.0,Adult Literacy
+Nyamasheke,West,District,2021/22,Female,2502.0,Adult Literacy
+Nyamasheke,West,District,2022/23,Female,1893.0,Adult Literacy
+Rubavu,West,District,2021/22,Male,1464.0,Adult Literacy
+Rubavu,West,District,2022/23,Male,1721.0,Adult Literacy
+Rubavu,West,District,2021/22,Female,4169.0,Adult Literacy
+Rubavu,West,District,2022/23,Female,4701.0,Adult Literacy
+Rusizi,West,District,2021/22,Male,1346.0,Adult Literacy
+Rusizi,West,District,2022/23,Male,1346.0,Adult Literacy
+Rusizi,West,District,2021/22,Female,1983.0,Adult Literacy
+Rusizi,West,District,2022/23,Female,1983.0,Adult Literacy
+Rutsiro,West,District,2021/22,Male,3304.0,Adult Literacy
+Rutsiro,West,District,2022/23,Male,3627.0,Adult Literacy
+Rutsiro,West,District,2021/22,Female,4196.0,Adult Literacy
+Rutsiro,West,District,2022/23,Female,4447.0,Adult Literacy
+West,West,Province,2021/22,Male,11471.0,Adult Literacy
+West,West,Province,2022/23,Male,11452.0,Adult Literacy
+West,West,Province,2021/22,Female,21908.0,Adult Literacy
+West,West,Province,2022/23,Female,20980.0,Adult Literacy
+Bugesera,East,District,2021/22,Male,1158.0,Adult Literacy
+Bugesera,East,District,2022/23,Male,1044.0,Adult Literacy
+Bugesera,East,District,2021/22,Female,2273.0,Adult Literacy
+Bugesera,East,District,2022/23,Female,1621.0,Adult Literacy
+Gatsibo,East,District,2021/22,Male,1495.0,Adult Literacy
+Gatsibo,East,District,2022/23,Male,1785.0,Adult Literacy
+Gatsibo,East,District,2021/22,Female,2137.0,Adult Literacy
+Gatsibo,East,District,2022/23,Female,2720.0,Adult Literacy
+Kayonza,East,District,2021/22,Male,818.0,Adult Literacy
+Kayonza,East,District,2022/23,Male,863.0,Adult Literacy
+Kayonza,East,District,2021/22,Female,2523.0,Adult Literacy
+Kayonza,East,District,2022/23,Female,2569.0,Adult Literacy
+Kirehe,East,District,2021/22,Male,785.0,Adult Literacy
+Kirehe,East,District,2022/23,Male,587.0,Adult Literacy
+Kirehe,East,District,2021/22,Female,1201.0,Adult Literacy
+Kirehe,East,District,2022/23,Female,1240.0,Adult Literacy
+Ngoma,East,District,2021/22,Male,806.0,Adult Literacy
+Ngoma,East,District,2022/23,Male,956.0,Adult Literacy
+Ngoma,East,District,2021/22,Female,1303.0,Adult Literacy
+Ngoma,East,District,2022/23,Female,1789.0,Adult Literacy
+Nyagatare,East,District,2021/22,Male,2905.0,Adult Literacy
+Nyagatare,East,District,2022/23,Male,2260.0,Adult Literacy
+Nyagatare,East,District,2021/22,Female,2543.0,Adult Literacy
+Nyagatare,East,District,2022/23,Female,3996.0,Adult Literacy
+Rwamagana,East,District,2021/22,Male,1189.0,Adult Literacy
+Rwamagana,East,District,2022/23,Male,1138.0,Adult Literacy
+Rwamagana,East,District,2021/22,Female,2444.0,Adult Literacy
+Rwamagana,East,District,2022/23,Female,2394.0,Adult Literacy
+East,East,Province,2021/22,Male,9156.0,Adult Literacy
+East,East,Province,2022/23,Male,8633.0,Adult Literacy
+East,East,Province,2021/22,Female,14424.0,Adult Literacy
+East,East,Province,2022/23,Female,16329.0,Adult Literacy
+Burera,North,District,2021/22,Male,1922.0,Adult Literacy
+Burera,North,District,2022/23,Male,1670.0,Adult Literacy
+Burera,North,District,2021/22,Female,3545.0,Adult Literacy
+Burera,North,District,2022/23,Female,3050.0,Adult Literacy
+Gakenke,North,District,2021/22,Male,2072.0,Adult Literacy
+Gakenke,North,District,2022/23,Male,1469.0,Adult Literacy
+Gakenke,North,District,2021/22,Female,2644.0,Adult Literacy
+Gakenke,North,District,2022/23,Female,1993.0,Adult Literacy
+Gicumbi,North,District,2021/22,Male,1477.0,Adult Literacy
+Gicumbi,North,District,2022/23,Male,1327.0,Adult Literacy
+Gicumbi,North,District,2021/22,Female,2172.0,Adult Literacy
+Gicumbi,North,District,2022/23,Female,1864.0,Adult Literacy
+Musanze,North,District,2021/22,Male,1173.0,Adult Literacy
+Musanze,North,District,2022/23,Male,1268.0,Adult Literacy
+Musanze,North,District,2021/22,Female,2875.0,Adult Literacy
+Musanze,North,District,2022/23,Female,2640.0,Adult Literacy
+Rulindo,North,District,2021/22,Male,1247.0,Adult Literacy
+Rulindo,North,District,2022/23,Male,1359.0,Adult Literacy
+Rulindo,North,District,2021/22,Female,2224.0,Adult Literacy
+Rulindo,North,District,2022/23,Female,2441.0,Adult Literacy
+North,North,Province,2021/22,Male,7891.0,Adult Literacy
+North,North,Province,2022/23,Male,7093.0,Adult Literacy
+North,North,Province,2021/22,Female,13460.0,Adult Literacy
+North,North,Province,2022/23,Female,11988.0,Adult Literacy
+Gasabo,Kigali City,District,2021/22,Male,450.0,Adult Literacy
+Gasabo,Kigali City,District,2022/23,Male,352.0,Adult Literacy
+Gasabo,Kigali City,District,2021/22,Female,1064.0,Adult Literacy
+Gasabo,Kigali City,District,2022/23,Female,840.0,Adult Literacy
+Kicukiro,Kigali City,District,2021/22,Male,180.0,Adult Literacy
+Kicukiro,Kigali City,District,2022/23,Male,231.0,Adult Literacy
+Kicukiro,Kigali City,District,2021/22,Female,711.0,Adult Literacy
+Kicukiro,Kigali City,District,2022/23,Female,547.0,Adult Literacy
+Nyarugenge,Kigali City,District,2021/22,Male,305.0,Adult Literacy
+Nyarugenge,Kigali City,District,2022/23,Male,398.0,Adult Literacy
+Nyarugenge,Kigali City,District,2021/22,Female,663.0,Adult Literacy
+Nyarugenge,Kigali City,District,2022/23,Female,824.0,Adult Literacy
+Kigali City,Kigali City,Province,2021/22,Male,935.0,Adult Literacy
+Kigali City,Kigali City,Province,2022/23,Male,981.0,Adult Literacy
+Kigali City,Kigali City,Province,2021/22,Female,2438.0,Adult Literacy
+Kigali City,Kigali City,Province,2022/23,Female,2211.0,Adult Literacy
+Rwanda,Rwanda,National,2021/22,Male,39822.0,Adult Literacy
+Rwanda,Rwanda,National,2022/23,Male,38700.0,Adult Literacy
+Rwanda,Rwanda,National,2021/22,Female,71166.0,Adult Literacy
+Rwanda,Rwanda,National,2022/23,Female,70496.0,Adult Literacy

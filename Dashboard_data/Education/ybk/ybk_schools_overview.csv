@@ -1,0 +1,45 @@
+indicator,year,value,category
+Schools with Preprimary level,2021/22,3808.0,Schools
+Schools with Preprimary level,2022/23,4051.0,Schools
+Schools with Primary level,2021/22,3831.0,Schools
+Schools with Primary level,2022/23,3932.0,Schools
+Schools with General and professional secondary level,2021/22,1955.0,Schools
+Schools with General and professional secondary level,2022/23,1977.0,Schools
+Schools with TVET L1_L5,2021/22,422.0,Schools
+Schools with TVET L1_L5,2022/23,470.0,Schools
+Polytechnics,2021/22,8.0,Schools
+Polytechnics,2022/23,8.0,Schools
+General Higher education,2021/22,31.0,Schools
+General Higher education,2022/23,32.0,Schools
+Adult Literacy,2021/22,5076.0,Schools
+Adult Literacy,2022/23,5003.0,Schools
+Preprimary,2021/22,8358.0,Classrooms
+Preprimary,2022/23,10726.0,Classrooms
+Primary,2021/22,46010.0,Classrooms
+Primary,2022/23,49561.0,Classrooms
+Lower secondary,2021/22,12783.0,Classrooms
+Lower secondary,2022/23,13189.0,Classrooms
+General and professional upper secondary,2021/22,7182.0,Classrooms
+General and professional upper secondary,2022/23,7506.0,Classrooms
+TVET L1_L2,2021/22,536.0,Classrooms
+TVET L1_L2,2022/23,533.0,Classrooms
+TVET L3_L5,2021/22,2760.0,Classrooms
+TVET L3_L5,2022/23,3220.0,Classrooms
+Total,2021/22,77629.0,Classrooms
+Total,2022/23,84735.0,Classrooms
+Preprimary,2021/22,355325.0,Learners
+Preprimary,2022/23,540998.0,Learners
+Primary,2021/22,2742901.0,Learners
+Primary,2022/23,2838343.0,Learners
+Lower Secondary,2021/22,540671.0,Learners
+Lower Secondary,2022/23,536427.0,Learners
+Upper secondary,2021/22,259822.0,Learners
+Upper secondary,2022/23,283287.0,Learners
+General upper secondary,2021/22,168595.0,Learners
+General upper secondary,2022/23,170399.0,Learners
+Sciences,2021/22,99630.0,Learners
+Sciences,2022/23,104668.0,Learners
+Humanities,2021/22,32671.0,Learners
+Humanities,2022/23,33943.0,Learners
+Languages,2021/22,36294.0,Learners
+Languages,2022/23,31788.0,Learners

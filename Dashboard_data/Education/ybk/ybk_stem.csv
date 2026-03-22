@@ -1,0 +1,145 @@
+group,year,sex,count,pct,metric
+Total STEM Students,2017,Male,62455.0,0.524,count
+Total STEM Students,2017,Female,56637.0,0.476,count
+Total STEM Students,2018,Male,76141.0,0.544,count
+Total STEM Students,2018,Female,63915.0,0.456,count
+Total STEM Students,2019,Male,80867.0,0.553,count
+Total STEM Students,2019,Female,65450.0,0.447,count
+Total STEM Students,2020/21,Male,77397.0,0.538,count
+Total STEM Students,2020/21,Female,66553.0,0.462,count
+Total STEM Students,2021/22,Male,83098.0,0.523,count
+Total STEM Students,2021/22,Female,75711.0,0.477,count
+Total STEM Students,2022/23,Male,93318.0,0.52,count
+Total STEM Students,2022/23,Female,86140.0,0.48,count
+Students in Public schools,2017,Male,18782.0,,count
+Students in Public schools,2017,Female,17492.0,,count
+Students in Public schools,2018,Male,24773.0,,count
+Students in Public schools,2018,Female,20015.0,,count
+Students in Public schools,2019,Male,28236.0,,count
+Students in Public schools,2019,Female,20622.0,,count
+Students in Public schools,2020/21,Male,22200.0,,count
+Students in Public schools,2020/21,Female,20027.0,,count
+Students in Public schools,2021/22,Male,26583.0,,count
+Students in Public schools,2021/22,Female,24542.0,,count
+Students in Public schools,2022/23,Male,31660.0,,count
+Students in Public schools,2022/23,Female,29214.0,,count
+Students in Government-subsidized schools,2017,Male,24504.0,,count
+Students in Government-subsidized schools,2017,Female,29181.0,,count
+Students in Government-subsidized schools,2018,Male,26749.0,,count
+Students in Government-subsidized schools,2018,Female,31356.0,,count
+Students in Government-subsidized schools,2019,Male,28271.0,,count
+Students in Government-subsidized schools,2019,Female,34096.0,,count
+Students in Government-subsidized schools,2020/21,Male,29024.0,,count
+Students in Government-subsidized schools,2020/21,Female,34014.0,,count
+Students in Government-subsidized schools,2021/22,Male,31717.0,,count
+Students in Government-subsidized schools,2021/22,Female,38661.0,,count
+Students in Government-subsidized schools,2022/23,Male,35370.0,,count
+Students in Government-subsidized schools,2022/23,Female,42335.0,,count
+Students in Private schools,2017,Male,19169.0,,count
+Students in Private schools,2017,Female,9964.0,,count
+Students in Private schools,2018,Male,24619.0,,count
+Students in Private schools,2018,Female,12544.0,,count
+Students in Private schools,2019,Male,24360.0,,count
+Students in Private schools,2019,Female,10732.0,,count
+Students in Private schools,2020/21,Male,26173.0,,count
+Students in Private schools,2020/21,Female,12512.0,,count
+Students in Private schools,2021/22,Male,24798.0,,count
+Students in Private schools,2021/22,Female,12508.0,,count
+Students in Private schools,2022/23,Male,26288.0,,count
+Students in Private schools,2022/23,Female,14591.0,,count
+Description/Year,2017,Male,0.56,,pct_of_secondary
+Description/Year,2017,Female,0.529,,pct_of_secondary
+Description/Year,2018,Male,0.572,,pct_of_secondary
+Description/Year,2018,Female,0.534,,pct_of_secondary
+Description/Year,2019,Male,0.57,,pct_of_secondary
+Description/Year,2019,Female,0.542,,pct_of_secondary
+Description/Year,2020/21,Male,0.574,,pct_of_secondary
+Description/Year,2020/21,Female,0.527,,pct_of_secondary
+Description/Year,2021/22,Male,0.624,,pct_of_secondary
+Description/Year,2021/22,Female,0.577,,pct_of_secondary
+Description/Year,2022/23,Male,0.638,,pct_of_secondary
+Description/Year,2022/23,Female,0.566,,pct_of_secondary
+Students in Private schools,2017,Male,0.754,,pct_of_secondary
+Students in Private schools,2017,Female,0.42,,pct_of_secondary
+Students in Private schools,2018,Male,0.833,,pct_of_secondary
+Students in Private schools,2018,Female,0.429,,pct_of_secondary
+Students in Private schools,2019,Male,0.822,,pct_of_secondary
+Students in Private schools,2019,Female,0.381,,pct_of_secondary
+Students in Private schools,2020/21,Male,0.828,,pct_of_secondary
+Students in Private schools,2020/21,Female,0.399,,pct_of_secondary
+Students in Private schools,2021/22,Male,0.912,,pct_of_secondary
+Students in Private schools,2021/22,Female,0.515,,pct_of_secondary
+Students in Private schools,2022/23,Male,0.859,,pct_of_secondary
+Students in Private schools,2022/23,Female,0.517,,pct_of_secondary
+Total STEM Students,2017,Male,24032.0,0.667,count_he
+Total STEM Students,2017,Female,12014.0,0.333,count_he
+Total STEM Students,2018,Male,24508.0,0.689,count_he
+Total STEM Students,2018,Female,11084.0,0.311,count_he
+Total STEM Students,2019,Male,25158.0,0.679,count_he
+Total STEM Students,2019,Female,11897.0,0.321,count_he
+Total STEM Students,2020/21,Male,28113.0,0.649,count_he
+Total STEM Students,2020/21,Female,15235.0,0.352,count_he
+Total STEM Students,2021/22,Male,30327.0,0.636,count_he
+Total STEM Students,2021/22,Female,17328.0,0.364,count_he
+Total STEM Students,2022/23,Male,33684.0,0.631,count_he
+Total STEM Students,2022/23,Female,19688.0,0.369,count_he
+STEM Students in Public Institutions,2017,Male,15037.0,,count_he
+STEM Students in Public Institutions,2017,Female,6546.0,,count_he
+STEM Students in Public Institutions,2018,Male,15476.0,,count_he
+STEM Students in Public Institutions,2018,Female,5707.0,,count_he
+STEM Students in Public Institutions,2019,Male,15902.0,,count_he
+STEM Students in Public Institutions,2019,Female,6007.0,,count_he
+STEM Students in Public Institutions,2020/21,Male,18176.0,,count_he
+STEM Students in Public Institutions,2020/21,Female,7840.0,,count_he
+STEM Students in Public Institutions,2021/22,Male,20261.0,,count_he
+STEM Students in Public Institutions,2021/22,Female,10500.0,,count_he
+STEM Students in Public Institutions,2022/23,Male,19287.0,,count_he
+STEM Students in Public Institutions,2022/23,Female,10047.0,,count_he
+STEM Students in Private Institutions,2017,Male,8995.0,,count_he
+STEM Students in Private Institutions,2017,Female,5468.0,,count_he
+STEM Students in Private Institutions,2018,Male,9032.0,,count_he
+STEM Students in Private Institutions,2018,Female,5377.0,,count_he
+STEM Students in Private Institutions,2019,Male,9256.0,,count_he
+STEM Students in Private Institutions,2019,Female,5890.0,,count_he
+STEM Students in Private Institutions,2020/21,Male,9937.0,,count_he
+STEM Students in Private Institutions,2020/21,Female,7395.0,,count_he
+STEM Students in Private Institutions,2021/22,Male,10066.0,,count_he
+STEM Students in Private Institutions,2021/22,Female,6828.0,,count_he
+STEM Students in Private Institutions,2022/23,Male,14397.0,,count_he
+STEM Students in Private Institutions,2022/23,Female,9641.0,,count_he
+Total Students,2017,Male,0.482,,pct_he
+Total Students,2017,Female,0.291,,pct_he
+Total Students,2018,Male,0.479,,pct_he
+Total Students,2018,Female,0.291,,pct_he
+Total Students,2019,Male,0.512,,pct_he
+Total Students,2019,Female,0.321,,pct_he
+Total Students,2020/21,Male,0.577,,pct_he
+Total Students,2020/21,Female,0.384,,pct_he
+Total Students,2021/22,Male,0.692,,pct_he
+Total Students,2021/22,Female,0.448,,pct_he
+Total Students,2022/23,Male,0.59,,pct_he
+Total Students,2022/23,Female,0.402,,pct_he
+Students in Public Institutions,2017,Male,0.589,,pct_he
+Students in Public Institutions,2017,Female,0.501,,pct_he
+Students in Public Institutions,2018,Male,0.59,,pct_he
+Students in Public Institutions,2018,Female,0.472,,pct_he
+Students in Public Institutions,2019,Male,0.653,,pct_he
+Students in Public Institutions,2019,Female,0.529,,pct_he
+Students in Public Institutions,2020/21,Male,0.737,,pct_he
+Students in Public Institutions,2020/21,Female,0.626,,pct_he
+Students in Public Institutions,2021/22,Male,0.74,,pct_he
+Students in Public Institutions,2021/22,Female,0.683,,pct_he
+Students in Public Institutions,2022/23,Male,0.717,,pct_he
+Students in Public Institutions,2022/23,Female,0.651,,pct_he
+Students in Private Institutions,2017,Male,0.369,,pct_he
+Students in Private Institutions,2017,Female,0.194,,pct_he
+Students in Private Institutions,2018,Male,0.363,,pct_he
+Students in Private Institutions,2018,Female,0.207,,pct_he
+Students in Private Institutions,2019,Male,0.374,,pct_he
+Students in Private Institutions,2019,Female,0.229,,pct_he
+Students in Private Institutions,2020/21,Male,0.412,,pct_he
+Students in Private Institutions,2020/21,Female,0.272,,pct_he
+Students in Private Institutions,2021/22,Male,0.381,,pct_he
+Students in Private Institutions,2021/22,Female,0.256,,pct_he
+Students in Private Institutions,2022/23,Male,0.36,,pct_he
+Students in Private Institutions,2022/23,Female,0.258,,pct_he

@@ -1,0 +1,121 @@
+group,year,sex,count,pct,level
+Gross Enrolment Rate (Overall),2017,Male,0.667,,National
+Gross Enrolment Rate (Overall),2017,Female,0.676,,National
+Gross Enrolment Rate (Overall),2018,Male,0.668,,National
+Gross Enrolment Rate (Overall),2018,Female,0.675,,National
+Gross Enrolment Rate (Overall),2019,Male,0.7,,National
+Gross Enrolment Rate (Overall),2019,Female,0.708,,National
+Gross Enrolment Rate (Overall),2020/21,Male,0.734,,National
+Gross Enrolment Rate (Overall),2020/21,Female,0.755,,National
+Gross Enrolment Rate (Overall),2021/22,Male,0.729,,National
+Gross Enrolment Rate (Overall),2021/22,Female,0.744,,National
+Gross Enrolment Rate (Overall),2022/23,Male,0.799,,National
+Gross Enrolment Rate (Overall),2022/23,Female,0.806,,National
+Net Enrolment Rate (Overall),2017,Male,0.5,,National
+Net Enrolment Rate (Overall),2017,Female,0.518,,National
+Net Enrolment Rate (Overall),2018,Male,0.502,,National
+Net Enrolment Rate (Overall),2018,Female,0.493,,National
+Net Enrolment Rate (Overall),2019,Male,0.482,,National
+Net Enrolment Rate (Overall),2019,Female,0.501,,National
+Net Enrolment Rate (Overall),2020/21,Male,0.518,,National
+Net Enrolment Rate (Overall),2020/21,Female,0.545,,National
+Net Enrolment Rate (Overall),2021/22,Male,0.5,,National
+Net Enrolment Rate (Overall),2021/22,Female,0.527,,National
+Net Enrolment Rate (Overall),2022/23,Male,0.562,,National
+Net Enrolment Rate (Overall),2022/23,Female,0.608,,National
+Gross Enrolment Rate (Overall),2017,Male,0.237,,Preprimary
+Gross Enrolment Rate (Overall),2017,Female,0.245,,Preprimary
+Gross Enrolment Rate (Overall),2018,Male,0.24,,Preprimary
+Gross Enrolment Rate (Overall),2018,Female,0.248,,Preprimary
+Gross Enrolment Rate (Overall),2019,Male,0.291,,Preprimary
+Gross Enrolment Rate (Overall),2019,Female,0.306,,Preprimary
+Gross Enrolment Rate (Overall),2020/21,Male,0.29,,Preprimary
+Gross Enrolment Rate (Overall),2020/21,Female,0.311,,Preprimary
+Gross Enrolment Rate (Overall),2021/22,Male,0.332,,Preprimary
+Gross Enrolment Rate (Overall),2021/22,Female,0.334,,Preprimary
+Gross Enrolment Rate (Overall),2022/23,Male,0.532,,Preprimary
+Gross Enrolment Rate (Overall),2022/23,Female,0.528,,Preprimary
+Net Enrolment Rate (Overall),2017,Male,0.202,,Preprimary
+Net Enrolment Rate (Overall),2017,Female,0.209,,Preprimary
+Net Enrolment Rate (Overall),2018,Male,0.204,,Preprimary
+Net Enrolment Rate (Overall),2018,Female,0.212,,Preprimary
+Net Enrolment Rate (Overall),2019,Male,0.24,,Preprimary
+Net Enrolment Rate (Overall),2019,Female,0.251,,Preprimary
+Net Enrolment Rate (Overall),2020/21,Male,0.25,,Preprimary
+Net Enrolment Rate (Overall),2020/21,Female,0.268,,Preprimary
+Net Enrolment Rate (Overall),2021/22,Male,0.278,,Preprimary
+Net Enrolment Rate (Overall),2021/22,Female,0.28,,Preprimary
+Net Enrolment Rate (Overall),2022/23,Male,0.444,,Preprimary
+Net Enrolment Rate (Overall),2022/23,Female,0.439,,Preprimary
+Gross Enrolment Rate (Overall),2017,Male,1.401,,Primary
+Gross Enrolment Rate (Overall),2017,Female,1.382,,Primary
+Gross Enrolment Rate (Overall),2018,Male,1.39,,Primary
+Gross Enrolment Rate (Overall),2018,Female,1.361,,Primary
+Gross Enrolment Rate (Overall),2019,Male,1.408,,Primary
+Gross Enrolment Rate (Overall),2019,Female,1.367,,Primary
+Gross Enrolment Rate (Overall),2020/21,Male,1.505,,Primary
+Gross Enrolment Rate (Overall),2020/21,Female,1.491,,Primary
+Gross Enrolment Rate (Overall),2021/22,Male,1.46,,Primary
+Gross Enrolment Rate (Overall),2021/22,Female,1.435,,Primary
+Gross Enrolment Rate (Overall),2022/23,Male,1.46,,Primary
+Gross Enrolment Rate (Overall),2022/23,Female,1.409,,Primary
+Net Enrolment Rate (Overall),2017,Male,0.978,,Primary
+Net Enrolment Rate (Overall),2017,Female,0.981,,Primary
+Net Enrolment Rate (Overall),2018,Male,0.98,,Primary
+Net Enrolment Rate (Overall),2018,Female,0.985,,Primary
+Net Enrolment Rate (Overall),2019,Male,0.984,,Primary
+Net Enrolment Rate (Overall),2019,Female,0.986,,Primary
+Net Enrolment Rate (Overall),2020/21,Male,0.987,,Primary
+Net Enrolment Rate (Overall),2020/21,Female,0.991,,Primary
+Net Enrolment Rate (Overall),2021/22,Male,0.952,,Primary
+Net Enrolment Rate (Overall),2021/22,Female,0.953,,Primary
+Net Enrolment Rate (Overall),2022/23,Male,0.963,,Primary
+Net Enrolment Rate (Overall),2022/23,Female,0.954,,Primary
+Gross Enrolment Rate (Overall),2017,Male,0.419,,Lower Secondary
+Gross Enrolment Rate (Overall),2017,Female,0.479,,Lower Secondary
+Gross Enrolment Rate (Overall),2018,Male,0.443,,Lower Secondary
+Gross Enrolment Rate (Overall),2018,Female,0.512,,Lower Secondary
+Gross Enrolment Rate (Overall),2019,Male,0.487,,Lower Secondary
+Gross Enrolment Rate (Overall),2019,Female,0.572,,Lower Secondary
+Gross Enrolment Rate (Overall),2020/21,Male,0.525,,Lower Secondary
+Gross Enrolment Rate (Overall),2020/21,Female,0.612,,Lower Secondary
+Gross Enrolment Rate (Overall),2021/22,Male,0.519,,Lower Secondary
+Gross Enrolment Rate (Overall),2021/22,Female,0.619,,Lower Secondary
+Gross Enrolment Rate (Overall),2022/23,Male,0.531,,Lower Secondary
+Gross Enrolment Rate (Overall),2022/23,Female,0.64,,Lower Secondary
+Net Enrolment Rate (Overall),2017,Male,0.218,,Lower Secondary
+Net Enrolment Rate (Overall),2017,Female,0.27,,Lower Secondary
+Net Enrolment Rate (Overall),2018,Male,0.242,,Lower Secondary
+Net Enrolment Rate (Overall),2018,Female,0.302,,Lower Secondary
+Net Enrolment Rate (Overall),2019,Male,0.277,,Lower Secondary
+Net Enrolment Rate (Overall),2019,Female,0.353,,Lower Secondary
+Net Enrolment Rate (Overall),2020/21,Male,0.289,,Lower Secondary
+Net Enrolment Rate (Overall),2020/21,Female,0.337,,Lower Secondary
+Net Enrolment Rate (Overall),2021/22,Male,0.186,,Lower Secondary
+Net Enrolment Rate (Overall),2021/22,Female,0.266,,Lower Secondary
+Net Enrolment Rate (Overall),2022/23,Male,0.202,,Lower Secondary
+Net Enrolment Rate (Overall),2022/23,Female,0.285,,Lower Secondary
+Gross Enrolment Rate (Overall),2017,Male,0.299,,Upper Secondary
+Gross Enrolment Rate (Overall),2017,Female,0.313,,Upper Secondary
+Gross Enrolment Rate (Overall),2018,Male,0.298,,Upper Secondary
+Gross Enrolment Rate (Overall),2018,Female,0.31,,Upper Secondary
+Gross Enrolment Rate (Overall),2019,Male,0.303,,Upper Secondary
+Gross Enrolment Rate (Overall),2019,Female,0.314,,Upper Secondary
+Gross Enrolment Rate (Overall),2020/21,Male,0.283,,Upper Secondary
+Gross Enrolment Rate (Overall),2020/21,Female,0.31,,Upper Secondary
+Gross Enrolment Rate (Overall),2021/22,Male,0.266,,Upper Secondary
+Gross Enrolment Rate (Overall),2021/22,Female,0.3,,Upper Secondary
+Gross Enrolment Rate (Overall),2022/23,Male,0.283,,Upper Secondary
+Gross Enrolment Rate (Overall),2022/23,Female,0.326,,Upper Secondary
+Net Enrolment Rate (Overall),2017,Male,0.229,,Upper Secondary
+Net Enrolment Rate (Overall),2017,Female,0.246,,Upper Secondary
+Net Enrolment Rate (Overall),2018,Male,0.207,,Upper Secondary
+Net Enrolment Rate (Overall),2018,Female,0.232,,Upper Secondary
+Net Enrolment Rate (Overall),2019,Male,0.158,,Upper Secondary
+Net Enrolment Rate (Overall),2019,Female,0.172,,Upper Secondary
+Net Enrolment Rate (Overall),2020/21,Male,0.126,,Upper Secondary
+Net Enrolment Rate (Overall),2020/21,Female,0.148,,Upper Secondary
+Net Enrolment Rate (Overall),2021/22,Male,0.089,,Upper Secondary
+Net Enrolment Rate (Overall),2021/22,Female,0.123,,Upper Secondary
+Net Enrolment Rate (Overall),2022/23,Male,0.101,,Upper Secondary
+Net Enrolment Rate (Overall),2022/23,Female,0.142,,Upper Secondary

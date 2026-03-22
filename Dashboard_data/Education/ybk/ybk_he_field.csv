@@ -1,0 +1,121 @@
+field,year,sex,count
+Education,2017,Male,6892.0
+Education,2018,Male,5513.0
+Education,2019,Male,6402.0
+Education,2020/21,Male,8149.0
+Education,2021/22,Male,11524.0
+Education,2022/23,Male,15224.0
+Education,2017,Female,4014.0
+Education,2018,Female,3425.0
+Education,2019,Female,4473.0
+Education,2020/21,Female,5872.0
+Education,2021/22,Female,8752.0
+Education,2022/23,Female,13009.0
+Arts and Humanities,2017,Male,737.0
+Arts and Humanities,2018,Male,924.0
+Arts and Humanities,2019,Male,590.0
+Arts and Humanities,2020/21,Male,2459.0
+Arts and Humanities,2021/22,Male,3476.0
+Arts and Humanities,2022/23,Male,5550.0
+Arts and Humanities,2017,Female,2004.0
+Arts and Humanities,2018,Female,609.0
+Arts and Humanities,2019,Female,383.0
+Arts and Humanities,2020/21,Female,1649.0
+Arts and Humanities,2021/22,Female,2297.0
+Arts and Humanities,2022/23,Female,4132.0
+"Social Sciences, Journalism and Information",2017,Male,2065.0
+"Social Sciences, Journalism and Information",2018,Male,2861.0
+"Social Sciences, Journalism and Information",2019,Male,3151.0
+"Social Sciences, Journalism and Information",2020/21,Male,1446.0
+"Social Sciences, Journalism and Information",2021/22,Male,1165.0
+"Social Sciences, Journalism and Information",2022/23,Male,1549.0
+"Social Sciences, Journalism and Information",2017,Female,2244.0
+"Social Sciences, Journalism and Information",2018,Female,2140.0
+"Social Sciences, Journalism and Information",2019,Female,3107.0
+"Social Sciences, Journalism and Information",2020/21,Female,1461.0
+"Social Sciences, Journalism and Information",2021/22,Female,964.0
+"Social Sciences, Journalism and Information",2022/23,Female,1153.0
+"Business, Administration and Law",2017,Male,12999.0
+"Business, Administration and Law",2018,Male,13361.0
+"Business, Administration and Law",2019,Male,11481.0
+"Business, Administration and Law",2020/21,Male,8346.0
+"Business, Administration and Law",2021/22,Male,9409.0
+"Business, Administration and Law",2022/23,Male,12654.0
+"Business, Administration and Law",2017,Female,17361.0
+"Business, Administration and Law",2018,Female,16047.0
+"Business, Administration and Law",2019,Female,14227.0
+"Business, Administration and Law",2020/21,Female,13091.0
+"Business, Administration and Law",2021/22,Female,13050.0
+"Business, Administration and Law",2022/23,Female,14915.0
+"Natural Sciences, Mathematics and Statistics",2017,Male,2614.0
+"Natural Sciences, Mathematics and Statistics",2018,Male,2020.0
+"Natural Sciences, Mathematics and Statistics",2019,Male,2461.0
+"Natural Sciences, Mathematics and Statistics",2020/21,Male,3251.0
+"Natural Sciences, Mathematics and Statistics",2021/22,Male,3117.0
+"Natural Sciences, Mathematics and Statistics",2022/23,Male,2936.0
+"Natural Sciences, Mathematics and Statistics",2017,Female,1363.0
+"Natural Sciences, Mathematics and Statistics",2018,Female,964.0
+"Natural Sciences, Mathematics and Statistics",2019,Female,1314.0
+"Natural Sciences, Mathematics and Statistics",2020/21,Female,2570.0
+"Natural Sciences, Mathematics and Statistics",2021/22,Female,2685.0
+"Natural Sciences, Mathematics and Statistics",2022/23,Female,2468.0
+Information and Communication Technologies,2017,Male,5984.0
+Information and Communication Technologies,2018,Male,4930.0
+Information and Communication Technologies,2019,Male,5888.0
+Information and Communication Technologies,2020/21,Male,5631.0
+Information and Communication Technologies,2021/22,Male,6528.0
+Information and Communication Technologies,2022/23,Male,7040.0
+Information and Communication Technologies,2017,Female,3325.0
+Information and Communication Technologies,2018,Female,2610.0
+Information and Communication Technologies,2019,Female,3539.0
+Information and Communication Technologies,2020/21,Female,3540.0
+Information and Communication Technologies,2021/22,Female,3640.0
+Information and Communication Technologies,2022/23,Female,3842.0
+"Engineering, Manufacturing and Construction",2017,Male,9292.0
+"Engineering, Manufacturing and Construction",2018,Male,11391.0
+"Engineering, Manufacturing and Construction",2019,Male,11423.0
+"Engineering, Manufacturing and Construction",2020/21,Male,10402.0
+"Engineering, Manufacturing and Construction",2021/22,Male,10296.0
+"Engineering, Manufacturing and Construction",2022/23,Male,11881.0
+"Engineering, Manufacturing and Construction",2017,Female,1936.0
+"Engineering, Manufacturing and Construction",2018,Female,2850.0
+"Engineering, Manufacturing and Construction",2019,Female,2797.0
+"Engineering, Manufacturing and Construction",2020/21,Female,2618.0
+"Engineering, Manufacturing and Construction",2021/22,Female,2809.0
+"Engineering, Manufacturing and Construction",2022/23,Female,3396.0
+"Agriculture, Forestry, Fisheries and Veterinary",2017,Male,2597.0
+"Agriculture, Forestry, Fisheries and Veterinary",2018,Male,1725.0
+"Agriculture, Forestry, Fisheries and Veterinary",2019,Male,1909.0
+"Agriculture, Forestry, Fisheries and Veterinary",2020/21,Male,2514.0
+"Agriculture, Forestry, Fisheries and Veterinary",2021/22,Male,2771.0
+"Agriculture, Forestry, Fisheries and Veterinary",2022/23,Male,2901.0
+"Agriculture, Forestry, Fisheries and Veterinary",2017,Female,1705.0
+"Agriculture, Forestry, Fisheries and Veterinary",2018,Female,851.0
+"Agriculture, Forestry, Fisheries and Veterinary",2019,Female,998.0
+"Agriculture, Forestry, Fisheries and Veterinary",2020/21,Female,1646.0
+"Agriculture, Forestry, Fisheries and Veterinary",2021/22,Female,1970.0
+"Agriculture, Forestry, Fisheries and Veterinary",2022/23,Female,2205.0
+Health and Welfare,2017,Male,3545.0
+Health and Welfare,2018,Male,4442.0
+Health and Welfare,2019,Male,3477.0
+Health and Welfare,2020/21,Male,3297.0
+Health and Welfare,2021/22,Male,3910.0
+Health and Welfare,2022/23,Male,4896.0
+Health and Welfare,2017,Female,3685.0
+Health and Welfare,2018,Female,3809.0
+Health and Welfare,2019,Female,3249.0
+Health and Welfare,2020/21,Female,2999.0
+Health and Welfare,2021/22,Female,3715.0
+Health and Welfare,2022/23,Female,4558.0
+Services,2017,Male,3183.0
+Services,2018,Male,3952.0
+Services,2019,Male,2308.0
+Services,2020/21,Male,3262.0
+Services,2021/22,Male,1575.0
+Services,2022/23,Male,2225.0
+Services,2017,Female,3648.0
+Services,2018,Female,4736.0
+Services,2019,Female,3029.0
+Services,2020/21,Female,4245.0
+Services,2021/22,Female,2210.0
+Services,2022/23,Female,3182.0
