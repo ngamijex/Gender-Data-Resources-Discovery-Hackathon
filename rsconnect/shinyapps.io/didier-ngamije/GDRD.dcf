@@ -5,7 +5,7 @@ account: didier-ngamije
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 16942720
-bundleId: 11742583
+bundleId: 11742866
 url: https://didier-ngamije.shinyapps.io/GDRD/
 version: 1
 asMultiple: FALSE
